@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.security.oauth2.server.resource.autoconfigure;
+package io.github.kotlinmania.spring.boot.security.oauth2.server.resource.autoconfigure;
 
 import org.springframework.security.oauth2.server.resource.introspection.SpringOpaqueTokenIntrospector;
 import org.springframework.security.oauth2.server.resource.introspection.SpringOpaqueTokenIntrospector.Builder;

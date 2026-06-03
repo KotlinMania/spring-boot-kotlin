@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.devtools.remote.client;
+package io.github.kotlinmania.spring.boot.devtools.remote.client;
 
 import java.io.IOException;
 

@@ -1,1 +1,1 @@
-org.springframework.boot.jackson.autoconfigure.JacksonTesterTestAutoConfiguration
+io.github.kotlinmania.spring.boot.jackson.autoconfigure.JacksonTesterTestAutoConfiguration

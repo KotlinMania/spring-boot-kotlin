@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.webflux.test.autoconfigure;
+package io.github.kotlinmania.spring.boot.webflux.test.autoconfigure;
 
 import reactor.core.publisher.Mono;
 
-import org.springframework.boot.webflux.error.ErrorWebExceptionHandler;
+import io.github.kotlinmania.spring.boot.webflux.error.ErrorWebExceptionHandler;
 import org.springframework.core.annotation.Order;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Component;

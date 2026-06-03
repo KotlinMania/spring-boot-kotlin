@@ -18,6 +18,6 @@
  * Low level support for Cloud deployments.
  */
 @NullMarked
-package org.springframework.boot.cloud;
+package io.github.kotlinmania.spring.boot.cloud;
 
 import org.jspecify.annotations.NullMarked;

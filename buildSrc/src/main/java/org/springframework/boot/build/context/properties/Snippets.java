@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.build.context.properties;
+package io.github.kotlinmania.spring.boot.build.context.properties;
 
 import java.io.IOException;
 import java.io.OutputStream;
@@ -30,7 +30,7 @@ import java.util.stream.Collectors;
 
 import org.gradle.api.file.FileCollection;
 
-import org.springframework.boot.build.context.properties.ConfigurationProperty.Deprecation;
+import io.github.kotlinmania.spring.boot.build.context.properties.ConfigurationProperty.Deprecation;
 
 /**
  * Configuration properties snippets.

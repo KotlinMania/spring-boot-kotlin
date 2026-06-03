@@ -14,16 +14,16 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.hateoas.autoconfigure;
+package io.github.kotlinmania.spring.boot.hateoas.autoconfigure;
 
 import java.util.Optional;
 
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.autoconfigure.ImportAutoConfiguration;
-import org.springframework.boot.hateoas.autoconfigure.HypermediaAutoConfiguration.HypermediaConfiguration;
-import org.springframework.boot.test.context.FilteredClassLoader;
-import org.springframework.boot.test.context.runner.WebApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.autoconfigure.ImportAutoConfiguration;
+import io.github.kotlinmania.spring.boot.hateoas.autoconfigure.HypermediaAutoConfiguration.HypermediaConfiguration;
+import io.github.kotlinmania.spring.boot.test.context.FilteredClassLoader;
+import io.github.kotlinmania.spring.boot.test.context.runner.WebApplicationContextRunner;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.hateoas.MediaTypes;
 import org.springframework.hateoas.RepresentationModel;

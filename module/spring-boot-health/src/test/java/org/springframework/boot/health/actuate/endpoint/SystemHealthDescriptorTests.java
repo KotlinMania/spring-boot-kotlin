@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.health.actuate.endpoint;
+package io.github.kotlinmania.spring.boot.health.actuate.endpoint;
 
 import java.util.Arrays;
 import java.util.LinkedHashMap;
@@ -26,9 +26,9 @@ import org.junit.jupiter.api.Test;
 import tools.jackson.databind.MapperFeature;
 import tools.jackson.databind.json.JsonMapper;
 
-import org.springframework.boot.actuate.endpoint.ApiVersion;
-import org.springframework.boot.health.contributor.Health;
-import org.springframework.boot.health.contributor.Status;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.ApiVersion;
+import io.github.kotlinmania.spring.boot.health.contributor.Health;
+import io.github.kotlinmania.spring.boot.health.contributor.Status;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.quartz.autoconfigure;
+package io.github.kotlinmania.spring.boot.quartz.autoconfigure;
 
 import java.util.Collections;
 import java.util.Set;
@@ -22,11 +22,11 @@ import java.util.Set;
 import org.junit.jupiter.api.Test;
 import org.quartz.Scheduler;
 
-import org.springframework.boot.actuate.endpoint.Show;
-import org.springframework.boot.autoconfigure.AutoConfigurations;
-import org.springframework.boot.quartz.actuate.endpoint.QuartzEndpoint;
-import org.springframework.boot.quartz.actuate.endpoint.QuartzEndpointWebExtension;
-import org.springframework.boot.test.context.runner.ApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.Show;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurations;
+import io.github.kotlinmania.spring.boot.quartz.actuate.endpoint.QuartzEndpoint;
+import io.github.kotlinmania.spring.boot.quartz.actuate.endpoint.QuartzEndpointWebExtension;
+import io.github.kotlinmania.spring.boot.test.context.runner.ApplicationContextRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.test.util.ReflectionTestUtils;

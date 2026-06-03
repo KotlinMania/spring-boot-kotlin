@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.actuate.audit;
+package io.github.kotlinmania.spring.boot.actuate.audit;
 
 import java.time.Instant;
 import java.time.OffsetDateTime;
@@ -22,9 +22,9 @@ import java.util.List;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.actuate.endpoint.OperationResponseBody;
-import org.springframework.boot.actuate.endpoint.annotation.Endpoint;
-import org.springframework.boot.actuate.endpoint.annotation.ReadOperation;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.OperationResponseBody;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.annotation.Endpoint;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.annotation.ReadOperation;
 import org.springframework.util.Assert;
 
 /**

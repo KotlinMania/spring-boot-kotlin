@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.mustache.reactive.view;
+package io.github.kotlinmania.spring.boot.mustache.reactive.view;
 
 import java.nio.charset.StandardCharsets;
 import java.time.Duration;
@@ -24,7 +24,7 @@ import com.samskivert.mustache.Mustache;
 import org.junit.jupiter.api.Test;
 import reactor.test.StepVerifier;
 
-import org.springframework.boot.testsupport.classpath.resources.WithResource;
+import io.github.kotlinmania.spring.boot.testsupport.classpath.resources.WithResource;
 import org.springframework.context.support.StaticApplicationContext;
 import org.springframework.http.MediaType;
 import org.springframework.mock.http.server.reactive.MockServerHttpRequest;

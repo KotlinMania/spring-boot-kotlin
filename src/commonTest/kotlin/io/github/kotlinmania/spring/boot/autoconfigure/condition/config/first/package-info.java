@@ -15,6 +15,6 @@
  */
 
 @NullMarked
-package org.springframework.boot.autoconfigure.condition.config.first;
+package io.github.kotlinmania.spring.boot.autoconfigure.condition.config.first;
 
 import org.jspecify.annotations.NullMarked;

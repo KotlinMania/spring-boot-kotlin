@@ -14,15 +14,15 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.actuate.web.mappings;
+package io.github.kotlinmania.spring.boot.actuate.web.mappings;
 
 import java.util.Collections;
 
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.actuate.web.mappings.MappingsEndpoint.ApplicationMappingsDescriptor;
-import org.springframework.boot.actuate.web.mappings.MappingsEndpoint.ContextMappingsDescriptor;
-import org.springframework.boot.test.context.runner.ApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.actuate.web.mappings.MappingsEndpoint.ApplicationMappingsDescriptor;
+import io.github.kotlinmania.spring.boot.actuate.web.mappings.MappingsEndpoint.ContextMappingsDescriptor;
+import io.github.kotlinmania.spring.boot.test.context.runner.ApplicationContextRunner;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

@@ -16,9 +16,9 @@
 
 package smoketest.config;
 
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.context.properties.EnableConfigurationProperties;
+import io.github.kotlinmania.spring.boot.SpringApplication;
+import io.github.kotlinmania.spring.boot.autoconfigure.SpringBootApplication;
+import io.github.kotlinmania.spring.boot.context.properties.EnableConfigurationProperties;
 
 @SpringBootApplication
 @EnableConfigurationProperties(FromEnvConfigurationProperties.class)

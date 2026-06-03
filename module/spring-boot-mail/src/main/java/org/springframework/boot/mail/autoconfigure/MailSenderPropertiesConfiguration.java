@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.mail.autoconfigure;
+package io.github.kotlinmania.spring.boot.mail.autoconfigure;
 
 import java.util.Map;
 import java.util.Properties;
@@ -22,11 +22,11 @@ import java.util.Properties;
 import org.jspecify.annotations.Nullable;
 
 import org.springframework.beans.factory.ObjectProvider;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
-import org.springframework.boot.mail.autoconfigure.MailProperties.Ssl;
-import org.springframework.boot.ssl.SslBundle;
-import org.springframework.boot.ssl.SslBundles;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnMissingBean;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnProperty;
+import io.github.kotlinmania.spring.boot.mail.autoconfigure.MailProperties.Ssl;
+import io.github.kotlinmania.spring.boot.ssl.SslBundle;
+import io.github.kotlinmania.spring.boot.ssl.SslBundles;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.mail.MailSender;

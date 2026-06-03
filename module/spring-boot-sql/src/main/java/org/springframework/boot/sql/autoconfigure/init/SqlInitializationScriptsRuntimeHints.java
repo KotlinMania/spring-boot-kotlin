@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.sql.autoconfigure.init;
+package io.github.kotlinmania.spring.boot.sql.autoconfigure.init;
 
 import org.jspecify.annotations.Nullable;
 

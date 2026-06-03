@@ -19,7 +19,7 @@ package sample;
 import jakarta.validation.Valid;
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.context.properties.ConfigurationProperties;
+import io.github.kotlinmania.spring.boot.context.properties.ConfigurationProperties;
 
 /**
  * Test that a valid type is generated if an annotation is present.

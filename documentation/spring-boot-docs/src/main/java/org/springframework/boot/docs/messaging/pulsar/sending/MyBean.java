@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.messaging.pulsar.sending;
+package io.github.kotlinmania.spring.boot.docs.messaging.pulsar.sending;
 
 import org.springframework.pulsar.core.PulsarTemplate;
 import org.springframework.stereotype.Component;

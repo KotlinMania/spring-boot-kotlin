@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.data.mongodb.autoconfigure;
+package io.github.kotlinmania.spring.boot.data.mongodb.autoconfigure;
 
 import java.util.Optional;
 
@@ -27,16 +27,16 @@ import org.bson.codecs.configuration.CodecRegistry;
 import org.jspecify.annotations.Nullable;
 import reactor.core.publisher.Mono;
 
-import org.springframework.boot.autoconfigure.AutoConfiguration;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
-import org.springframework.boot.context.properties.EnableConfigurationProperties;
-import org.springframework.boot.data.mongodb.autoconfigure.DataMongoProperties.Gridfs;
-import org.springframework.boot.mongodb.autoconfigure.MongoConnectionDetails;
-import org.springframework.boot.mongodb.autoconfigure.MongoProperties;
-import org.springframework.boot.mongodb.autoconfigure.MongoReactiveAutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.EnableAutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnBean;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnClass;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnMissingBean;
+import io.github.kotlinmania.spring.boot.context.properties.EnableConfigurationProperties;
+import io.github.kotlinmania.spring.boot.data.mongodb.autoconfigure.DataMongoProperties.Gridfs;
+import io.github.kotlinmania.spring.boot.mongodb.autoconfigure.MongoConnectionDetails;
+import io.github.kotlinmania.spring.boot.mongodb.autoconfigure.MongoProperties;
+import io.github.kotlinmania.spring.boot.mongodb.autoconfigure.MongoReactiveAutoConfiguration;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Import;
 import org.springframework.core.io.buffer.DataBufferFactory;

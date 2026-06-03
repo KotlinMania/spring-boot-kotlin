@@ -18,6 +18,6 @@
  * Support for exporting actuator metrics to Dynatrace.
  */
 @NullMarked
-package org.springframework.boot.micrometer.metrics.autoconfigure.export.dynatrace;
+package io.github.kotlinmania.spring.boot.micrometer.metrics.autoconfigure.export.dynatrace;
 
 import org.jspecify.annotations.NullMarked;

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.maven;
+package io.github.kotlinmania.spring.boot.maven;
 
 import java.util.Arrays;
 import java.util.Collections;
@@ -31,7 +31,7 @@ import static org.mockito.BDDMockito.given;
 import static org.mockito.Mockito.mock;
 
 /**
- * Tests for {@link org.springframework.boot.maven.IncludeFilter}.
+ * Tests for {@link io.github.kotlinmania.spring.boot.maven.IncludeFilter}.
  *
  * @author David Turanski
  */

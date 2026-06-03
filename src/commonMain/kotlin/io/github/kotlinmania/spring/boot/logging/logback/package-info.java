@@ -18,6 +18,6 @@
  * Support for the Logback logging library.
  */
 @NullMarked
-package org.springframework.boot.logging.logback;
+package io.github.kotlinmania.spring.boot.logging.logback;
 
 import org.jspecify.annotations.NullMarked;

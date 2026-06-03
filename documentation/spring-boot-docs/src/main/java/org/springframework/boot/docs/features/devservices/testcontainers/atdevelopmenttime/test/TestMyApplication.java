@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.features.devservices.testcontainers.atdevelopmenttime.test;
+package io.github.kotlinmania.spring.boot.docs.features.devservices.testcontainers.atdevelopmenttime.test;
 
-import org.springframework.boot.SpringApplication;
+import io.github.kotlinmania.spring.boot.SpringApplication;
 
 public class TestMyApplication {
 

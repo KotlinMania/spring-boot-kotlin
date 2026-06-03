@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.data.redis.health;
+package io.github.kotlinmania.spring.boot.data.redis.health;
 
 import java.util.Properties;
 
-import org.springframework.boot.health.contributor.Health;
+import io.github.kotlinmania.spring.boot.health.contributor.Health;
 import org.springframework.data.redis.connection.ClusterInfo;
 
 /**

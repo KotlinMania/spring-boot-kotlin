@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.health.actuate.endpoint;
+package io.github.kotlinmania.spring.boot.health.actuate.endpoint;
 
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.health.contributor.Status;
+import io.github.kotlinmania.spring.boot.health.contributor.Status;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

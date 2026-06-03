@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.appendix.configurationmetadata.manualhints.valuehint;
+package io.github.kotlinmania.spring.boot.docs.appendix.configurationmetadata.manualhints.valuehint;
 
 import java.util.Map;
 
-import org.springframework.boot.context.properties.ConfigurationProperties;
+import io.github.kotlinmania.spring.boot.context.properties.ConfigurationProperties;
 
 @ConfigurationProperties("my")
 public class MyProperties {

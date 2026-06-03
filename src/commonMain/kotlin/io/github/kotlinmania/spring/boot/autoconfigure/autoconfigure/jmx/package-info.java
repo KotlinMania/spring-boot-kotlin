@@ -18,6 +18,6 @@
  * Auto-configuration for JMX.
  */
 @NullMarked
-package org.springframework.boot.autoconfigure.jmx;
+package io.github.kotlinmania.spring.boot.autoconfigure.jmx;
 
 import org.jspecify.annotations.NullMarked;

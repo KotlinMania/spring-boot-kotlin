@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.test.autoconfigure.data.cassandra;
+package io.github.kotlinmania.spring.boot.test.autoconfigure.data.cassandra;
 
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.data.cassandra.test.autoconfigure.DataCassandraTest;
+import io.github.kotlinmania.spring.boot.autoconfigure.SpringBootApplication;
+import io.github.kotlinmania.spring.boot.data.cassandra.test.autoconfigure.DataCassandraTest;
 
 /**
  * Example {@link SpringBootApplication @SpringBootApplication} used with

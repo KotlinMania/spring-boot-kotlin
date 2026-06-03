@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.logging.log4j2;
+package io.github.kotlinmania.spring.boot.logging.log4j2;
 
 import java.io.PrintWriter;
 import java.io.StringWriter;
@@ -23,7 +23,7 @@ import org.apache.logging.log4j.core.LogEvent;
 import org.jspecify.annotations.Nullable;
 import org.slf4j.event.LoggingEvent;
 
-import org.springframework.boot.logging.StackTracePrinter;
+import io.github.kotlinmania.spring.boot.logging.StackTracePrinter;
 
 /**
  * Functions to extract items from {@link LoggingEvent}.

@@ -18,6 +18,6 @@
  * Auto-Configuration for Spring's Reactive HTTP Service Interface Clients.
  */
 @NullMarked
-package org.springframework.boot.webclient.autoconfigure.service;
+package io.github.kotlinmania.spring.boot.webclient.autoconfigure.service;
 
 import org.jspecify.annotations.NullMarked;

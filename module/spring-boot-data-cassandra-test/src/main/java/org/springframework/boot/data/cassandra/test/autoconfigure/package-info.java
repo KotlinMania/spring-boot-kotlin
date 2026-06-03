@@ -18,6 +18,6 @@
  * Auto-configuration for Data Cassandra tests.
  */
 @NullMarked
-package org.springframework.boot.data.cassandra.test.autoconfigure;
+package io.github.kotlinmania.spring.boot.data.cassandra.test.autoconfigure;
 
 import org.jspecify.annotations.NullMarked;

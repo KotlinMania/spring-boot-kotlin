@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.buildpack.platform.build;
+package io.github.kotlinmania.spring.boot.buildpack.platform.build;
 
 import java.io.IOException;
 
-import org.springframework.boot.buildpack.platform.docker.type.Layer;
-import org.springframework.boot.buildpack.platform.io.IOConsumer;
+import io.github.kotlinmania.spring.boot.buildpack.platform.docker.type.Layer;
+import io.github.kotlinmania.spring.boot.buildpack.platform.io.IOConsumer;
 
 /**
  * A Buildpack that should be invoked by the builder during image building.

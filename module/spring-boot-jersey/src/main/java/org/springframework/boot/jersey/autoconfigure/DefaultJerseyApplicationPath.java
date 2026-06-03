@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.jersey.autoconfigure;
+package io.github.kotlinmania.spring.boot.jersey.autoconfigure;
 
 import jakarta.ws.rs.ApplicationPath;
 import org.glassfish.jersey.server.ResourceConfig;

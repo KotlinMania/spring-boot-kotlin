@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.testing.testcontainers.dynamicproperties;
+package io.github.kotlinmania.spring.boot.docs.testing.testcontainers.dynamicproperties;
 
 import org.junit.jupiter.api.Test;
 import org.testcontainers.junit.jupiter.Container;
 import org.testcontainers.junit.jupiter.Testcontainers;
 import org.testcontainers.neo4j.Neo4jContainer;
 
-import org.springframework.boot.test.context.SpringBootTest;
+import io.github.kotlinmania.spring.boot.test.context.SpringBootTest;
 import org.springframework.test.context.DynamicPropertyRegistry;
 import org.springframework.test.context.DynamicPropertySource;
 

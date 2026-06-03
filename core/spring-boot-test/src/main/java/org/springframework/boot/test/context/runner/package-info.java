@@ -18,6 +18,6 @@
  * Test utilities to run application contexts for testing.
  */
 @NullMarked
-package org.springframework.boot.test.context.runner;
+package io.github.kotlinmania.spring.boot.test.context.runner;
 
 import org.jspecify.annotations.NullMarked;

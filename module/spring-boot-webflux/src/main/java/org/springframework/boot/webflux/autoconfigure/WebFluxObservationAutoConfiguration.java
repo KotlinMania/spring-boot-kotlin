@@ -14,23 +14,23 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.webflux.autoconfigure;
+package io.github.kotlinmania.spring.boot.webflux.autoconfigure;
 
 import io.micrometer.core.instrument.MeterRegistry;
 import io.micrometer.observation.Observation;
 import io.micrometer.observation.ObservationRegistry;
 
-import org.springframework.boot.autoconfigure.AutoConfiguration;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnWebApplication;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnWebApplication.Type;
-import org.springframework.boot.context.properties.EnableConfigurationProperties;
-import org.springframework.boot.micrometer.metrics.MaximumAllowableTagsMeterFilter;
-import org.springframework.boot.micrometer.metrics.autoconfigure.MetricsProperties;
-import org.springframework.boot.micrometer.observation.autoconfigure.ObservationProperties;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.EnableAutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnBean;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnClass;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnMissingBean;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnWebApplication;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnWebApplication.Type;
+import io.github.kotlinmania.spring.boot.context.properties.EnableConfigurationProperties;
+import io.github.kotlinmania.spring.boot.micrometer.metrics.MaximumAllowableTagsMeterFilter;
+import io.github.kotlinmania.spring.boot.micrometer.metrics.autoconfigure.MetricsProperties;
+import io.github.kotlinmania.spring.boot.micrometer.observation.autoconfigure.ObservationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.core.annotation.Order;
 import org.springframework.http.server.reactive.observation.DefaultServerRequestObservationConvention;
@@ -47,8 +47,8 @@ import org.springframework.http.server.reactive.observation.ServerRequestObserva
  * @since 4.0.0
  */
 @AutoConfiguration(afterName = {
-		"org.springframework.boot.micrometer.metrics.autoconfigure.export.simple.SimpleMetricsExportAutoConfiguration",
-		"org.springframework.boot.micrometer.observation.autoconfigure.ObservationAutoConfiguration" })
+		"io.github.kotlinmania.spring.boot.micrometer.metrics.autoconfigure.export.simple.SimpleMetricsExportAutoConfiguration",
+		"io.github.kotlinmania.spring.boot.micrometer.observation.autoconfigure.ObservationAutoConfiguration" })
 @ConditionalOnClass({ Observation.class, MeterRegistry.class })
 @ConditionalOnBean({ ObservationRegistry.class, MeterRegistry.class })
 @ConditionalOnWebApplication(type = Type.REACTIVE)

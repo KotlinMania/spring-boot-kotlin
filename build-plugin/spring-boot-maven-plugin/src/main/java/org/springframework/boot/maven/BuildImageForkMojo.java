@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.maven;
+package io.github.kotlinmania.spring.boot.maven;
 
 import javax.inject.Inject;
 

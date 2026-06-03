@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.io.restclient.httpservice.customization;
+package io.github.kotlinmania.spring.boot.docs.io.restclient.httpservice.customization;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

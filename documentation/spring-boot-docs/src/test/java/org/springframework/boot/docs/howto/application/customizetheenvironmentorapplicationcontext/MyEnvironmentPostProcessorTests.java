@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.howto.application.customizetheenvironmentorapplicationcontext;
+package io.github.kotlinmania.spring.boot.docs.howto.application.customizetheenvironmentorapplicationcontext;
 
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.SpringApplication;
+import io.github.kotlinmania.spring.boot.SpringApplication;
 import org.springframework.core.env.StandardEnvironment;
 
 import static org.assertj.core.api.Assertions.assertThat;

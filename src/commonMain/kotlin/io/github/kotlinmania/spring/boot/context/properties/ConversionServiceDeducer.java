@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.context.properties;
+package io.github.kotlinmania.spring.boot.context.properties;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -23,7 +23,7 @@ import java.util.Map;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.convert.ApplicationConversionService;
+import io.github.kotlinmania.spring.boot.convert.ApplicationConversionService;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.core.convert.ConversionService;

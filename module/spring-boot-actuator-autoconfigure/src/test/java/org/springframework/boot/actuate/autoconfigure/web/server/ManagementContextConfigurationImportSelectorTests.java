@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.actuate.autoconfigure.web.server;
+package io.github.kotlinmania.spring.boot.actuate.autoconfigure.web.server;
 
 import java.util.HashSet;
 import java.util.List;
@@ -23,9 +23,9 @@ import java.util.stream.Stream;
 
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.actuate.autoconfigure.web.ManagementContextConfiguration;
-import org.springframework.boot.actuate.autoconfigure.web.ManagementContextType;
-import org.springframework.boot.context.annotation.ImportCandidates;
+import io.github.kotlinmania.spring.boot.actuate.autoconfigure.web.ManagementContextConfiguration;
+import io.github.kotlinmania.spring.boot.actuate.autoconfigure.web.ManagementContextType;
+import io.github.kotlinmania.spring.boot.context.annotation.ImportCandidates;
 import org.springframework.core.annotation.Order;
 import org.springframework.core.type.AnnotationMetadata;
 
@@ -74,7 +74,7 @@ class ManagementContextConfigurationImportSelectorTests {
 		// Remove JerseySameManagementContextConfiguration, as it specifies
 		// ManagementContextType.SAME and we asked for ManagementContextType.CHILD
 		expected.remove(
-				"org.springframework.boot.jersey.actuate.autoconfigure.web.JerseySameManagementContextConfiguration");
+				"io.github.kotlinmania.spring.boot.jersey.actuate.autoconfigure.web.JerseySameManagementContextConfiguration");
 		assertThat(imports).containsExactlyInAnyOrderElementsOf(expected);
 	}
 

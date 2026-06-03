@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.quartz.actuate.endpoint;
+package io.github.kotlinmania.spring.boot.quartz.actuate.endpoint;
 
 import java.security.Principal;
 import java.util.Collections;
@@ -26,13 +26,13 @@ import org.junit.jupiter.api.Test;
 import org.springframework.aot.hint.MemberCategory;
 import org.springframework.aot.hint.RuntimeHints;
 import org.springframework.aot.hint.predicate.RuntimeHintsPredicates;
-import org.springframework.boot.actuate.endpoint.SecurityContext;
-import org.springframework.boot.actuate.endpoint.Show;
-import org.springframework.boot.quartz.actuate.endpoint.QuartzEndpoint.QuartzGroupsDescriptor;
-import org.springframework.boot.quartz.actuate.endpoint.QuartzEndpoint.QuartzJobDetailsDescriptor;
-import org.springframework.boot.quartz.actuate.endpoint.QuartzEndpoint.QuartzJobGroupSummaryDescriptor;
-import org.springframework.boot.quartz.actuate.endpoint.QuartzEndpoint.QuartzTriggerGroupSummaryDescriptor;
-import org.springframework.boot.quartz.actuate.endpoint.QuartzEndpointWebExtension.QuartzEndpointWebExtensionRuntimeHints;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.SecurityContext;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.Show;
+import io.github.kotlinmania.spring.boot.quartz.actuate.endpoint.QuartzEndpoint.QuartzGroupsDescriptor;
+import io.github.kotlinmania.spring.boot.quartz.actuate.endpoint.QuartzEndpoint.QuartzJobDetailsDescriptor;
+import io.github.kotlinmania.spring.boot.quartz.actuate.endpoint.QuartzEndpoint.QuartzJobGroupSummaryDescriptor;
+import io.github.kotlinmania.spring.boot.quartz.actuate.endpoint.QuartzEndpoint.QuartzTriggerGroupSummaryDescriptor;
+import io.github.kotlinmania.spring.boot.quartz.actuate.endpoint.QuartzEndpointWebExtension.QuartzEndpointWebExtensionRuntimeHints;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.BDDMockito.given;

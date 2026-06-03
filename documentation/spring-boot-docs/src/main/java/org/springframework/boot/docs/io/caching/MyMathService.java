@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.io.caching;
+package io.github.kotlinmania.spring.boot.docs.io.caching;
 
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Component;

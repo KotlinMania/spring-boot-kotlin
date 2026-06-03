@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.test.context;
+package io.github.kotlinmania.spring.boot.test.context;
 
 import java.util.stream.Stream;
 
@@ -25,8 +25,8 @@ import org.springframework.aot.generate.InMemoryGeneratedFiles;
 import org.springframework.aot.test.generate.CompilerFiles;
 import org.springframework.beans.factory.config.BeanDefinition;
 import org.springframework.beans.factory.support.GenericBeanDefinition;
-import org.springframework.boot.SpringBootConfiguration;
-import org.springframework.boot.test.context.SpringBootTest.WebEnvironment;
+import io.github.kotlinmania.spring.boot.SpringBootConfiguration;
+import io.github.kotlinmania.spring.boot.test.context.SpringBootTest.WebEnvironment;
 import org.springframework.context.ApplicationContextInitializer;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.Import;

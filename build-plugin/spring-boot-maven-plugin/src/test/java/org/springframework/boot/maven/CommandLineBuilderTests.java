@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.maven;
+package io.github.kotlinmania.spring.boot.maven;
 
 import java.io.File;
 import java.io.IOException;
@@ -34,8 +34,8 @@ import org.junit.jupiter.api.condition.EnabledOnOs;
 import org.junit.jupiter.api.condition.OS;
 import org.junit.jupiter.api.io.TempDir;
 
-import org.springframework.boot.loader.tools.JavaExecutable;
-import org.springframework.boot.maven.sample.ClassWithMainMethod;
+import io.github.kotlinmania.spring.boot.loader.tools.JavaExecutable;
+import io.github.kotlinmania.spring.boot.maven.sample.ClassWithMainMethod;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

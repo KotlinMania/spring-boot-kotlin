@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.using.usingthespringbootapplicationannotation.individualannotations;
+package io.github.kotlinmania.spring.boot.docs.using.usingthespringbootapplicationannotation.individualannotations;
 
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.SpringBootConfiguration;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
+import io.github.kotlinmania.spring.boot.SpringApplication;
+import io.github.kotlinmania.spring.boot.SpringBootConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.context.annotation.Import;
 
 @SpringBootConfiguration(proxyBeanMethods = false)

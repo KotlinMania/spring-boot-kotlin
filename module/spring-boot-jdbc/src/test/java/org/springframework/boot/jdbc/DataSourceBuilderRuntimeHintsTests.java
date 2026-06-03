@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.jdbc;
+package io.github.kotlinmania.spring.boot.jdbc;
 
 import java.util.Set;
 import java.util.stream.Stream;

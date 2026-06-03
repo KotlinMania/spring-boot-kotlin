@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.bootstrap;
+package io.github.kotlinmania.spring.boot.bootstrap;
 
 import org.springframework.context.ApplicationEvent;
 import org.springframework.context.ConfigurableApplicationContext;

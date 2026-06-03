@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.convert;
+package io.github.kotlinmania.spring.boot.convert;
 
 import java.net.InetAddress;
 import java.net.UnknownHostException;

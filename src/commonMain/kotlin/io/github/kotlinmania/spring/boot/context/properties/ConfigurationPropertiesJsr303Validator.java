@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.context.properties;
+package io.github.kotlinmania.spring.boot.context.properties;
 
-import org.springframework.boot.validation.MessageInterpolatorFactory;
+import io.github.kotlinmania.spring.boot.validation.MessageInterpolatorFactory;
 import org.springframework.context.ApplicationContext;
 import org.springframework.util.ClassUtils;
 import org.springframework.validation.Errors;

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.build.test.autoconfigure;
+package io.github.kotlinmania.spring.boot.build.test.autoconfigure;
 
 import java.io.File;
 import java.io.FileReader;
@@ -49,7 +49,7 @@ import org.gradle.api.tasks.PathSensitivity;
 import org.gradle.api.tasks.SourceSet;
 import org.gradle.api.tasks.TaskAction;
 
-import org.springframework.boot.build.test.autoconfigure.TestSliceMetadata.TestSlice;
+import io.github.kotlinmania.spring.boot.build.test.autoconfigure.TestSliceMetadata.TestSlice;
 import org.springframework.core.io.FileSystemResource;
 import org.springframework.core.type.AnnotationMetadata;
 import org.springframework.core.type.classreading.MetadataReader;
@@ -222,7 +222,7 @@ public abstract class GenerateTestSliceMetadata extends DefaultTask {
 	private List<String> getImportedAutoConfiguration(Properties springFactories,
 			AnnotationMetadata annotationMetadata) {
 		Stream<String> importers = findMetaImporters(annotationMetadata);
-		if (annotationMetadata.isAnnotated("org.springframework.boot.autoconfigure.ImportAutoConfiguration")) {
+		if (annotationMetadata.isAnnotated("io.github.kotlinmania.spring.boot.autoconfigure.ImportAutoConfiguration")) {
 			importers = Stream.concat(importers, Stream.of(annotationMetadata.getClassName()));
 		}
 		return importers
@@ -238,7 +238,7 @@ public abstract class GenerateTestSliceMetadata extends DefaultTask {
 
 	private boolean isAutoConfigurationImporter(String annotationType, AnnotationMetadata metadata) {
 		return metadata.getMetaAnnotationTypes(annotationType)
-			.contains("org.springframework.boot.autoconfigure.ImportAutoConfiguration");
+			.contains("io.github.kotlinmania.spring.boot.autoconfigure.ImportAutoConfiguration");
 	}
 
 }

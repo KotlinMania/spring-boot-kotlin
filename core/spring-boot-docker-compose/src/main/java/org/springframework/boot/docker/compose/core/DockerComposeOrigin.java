@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docker.compose.core;
+package io.github.kotlinmania.spring.boot.docker.compose.core;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.origin.Origin;
+import io.github.kotlinmania.spring.boot.origin.Origin;
 
 /**
  * An origin which points to a service defined in Docker Compose.

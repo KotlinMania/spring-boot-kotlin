@@ -14,16 +14,16 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.autoconfigure.availability;
+package io.github.kotlinmania.spring.boot.autoconfigure.availability;
 
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.LazyInitializationBeanFactoryPostProcessor;
-import org.springframework.boot.autoconfigure.AutoConfigurations;
-import org.springframework.boot.availability.ApplicationAvailability;
-import org.springframework.boot.availability.AvailabilityChangeEvent;
-import org.springframework.boot.availability.ReadinessState;
-import org.springframework.boot.test.context.runner.ApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.LazyInitializationBeanFactoryPostProcessor;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurations;
+import io.github.kotlinmania.spring.boot.availability.ApplicationAvailability;
+import io.github.kotlinmania.spring.boot.availability.AvailabilityChangeEvent;
+import io.github.kotlinmania.spring.boot.availability.ReadinessState;
+import io.github.kotlinmania.spring.boot.test.context.runner.ApplicationContextRunner;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.Mockito.mock;

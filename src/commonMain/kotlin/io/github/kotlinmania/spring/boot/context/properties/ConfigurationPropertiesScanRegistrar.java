@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.context.properties;
+package io.github.kotlinmania.spring.boot.context.properties;
 
 import java.util.Arrays;
 import java.util.LinkedHashSet;
@@ -25,7 +25,7 @@ import org.jspecify.annotations.Nullable;
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.config.BeanDefinition;
 import org.springframework.beans.factory.support.BeanDefinitionRegistry;
-import org.springframework.boot.context.TypeExcludeFilter;
+import io.github.kotlinmania.spring.boot.context.TypeExcludeFilter;
 import org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider;
 import org.springframework.context.annotation.ImportBeanDefinitionRegistrar;
 import org.springframework.core.annotation.AnnotationAttributes;

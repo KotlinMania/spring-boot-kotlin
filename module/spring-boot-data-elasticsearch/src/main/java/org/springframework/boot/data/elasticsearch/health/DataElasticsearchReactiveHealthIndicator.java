@@ -14,16 +14,16 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.data.elasticsearch.health;
+package io.github.kotlinmania.spring.boot.data.elasticsearch.health;
 
 import co.elastic.clients.elasticsearch._types.HealthStatus;
 import co.elastic.clients.elasticsearch.cluster.HealthResponse;
 import reactor.core.publisher.Mono;
 
-import org.springframework.boot.health.contributor.AbstractReactiveHealthIndicator;
-import org.springframework.boot.health.contributor.Health;
-import org.springframework.boot.health.contributor.HealthIndicator;
-import org.springframework.boot.health.contributor.Status;
+import io.github.kotlinmania.spring.boot.health.contributor.AbstractReactiveHealthIndicator;
+import io.github.kotlinmania.spring.boot.health.contributor.Health;
+import io.github.kotlinmania.spring.boot.health.contributor.HealthIndicator;
+import io.github.kotlinmania.spring.boot.health.contributor.Status;
 import org.springframework.data.elasticsearch.client.elc.ReactiveElasticsearchClient;
 
 /**

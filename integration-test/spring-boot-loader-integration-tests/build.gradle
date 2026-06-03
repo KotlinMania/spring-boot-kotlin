@@ -16,7 +16,7 @@
 
 plugins {
 	id "java"
-	id "org.springframework.boot.docker-test"
+	id "io.github.kotlinmania.spring.boot.docker-test"
 	id "de.undercouch.download"
 }
 
@@ -46,7 +46,7 @@ tasks.register("syncMavenRepository", Sync) {
 	into layout.buildDirectory.dir("docker-test-maven-repository")
 }
 
-tasks.register("syncAppSource", org.springframework.boot.build.SyncAppSource) {
+tasks.register("syncAppSource", io.github.kotlinmania.spring.boot.build.SyncAppSource) {
 	sourceDirectory = file("spring-boot-loader-tests-app")
 	destinationDirectory = file(layout.buildDirectory.dir("spring-boot-loader-tests-app"))
 }
@@ -58,7 +58,7 @@ tasks.register("buildApp", GradleBuild) {
 	tasks  = ["build"]
 }
 
-tasks.register("syncSignedJarAppSource", org.springframework.boot.build.SyncAppSource) {
+tasks.register("syncSignedJarAppSource", io.github.kotlinmania.spring.boot.build.SyncAppSource) {
 	sourceDirectory = file("spring-boot-loader-tests-signed-jar")
 	destinationDirectory = file(layout.buildDirectory.dir("spring-boot-loader-tests-signed-jar"))
 }
@@ -70,7 +70,7 @@ tasks.register("buildSignedJarApp", GradleBuild) {
 	tasks  = ["build"]
 }
 
-tasks.register("syncSignedJarRsaAppSource", org.springframework.boot.build.SyncAppSource) {
+tasks.register("syncSignedJarRsaAppSource", io.github.kotlinmania.spring.boot.build.SyncAppSource) {
 	sourceDirectory = file("spring-boot-loader-tests-signed-jar-rsa")
 	destinationDirectory = file(layout.buildDirectory.dir("spring-boot-loader-tests-signed-jar-rsa"))
 }

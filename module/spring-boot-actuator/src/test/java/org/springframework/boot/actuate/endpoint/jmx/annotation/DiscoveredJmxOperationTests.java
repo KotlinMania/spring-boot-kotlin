@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.actuate.endpoint.jmx.annotation;
+package io.github.kotlinmania.spring.boot.actuate.endpoint.jmx.annotation;
 
 import java.lang.reflect.Method;
 import java.time.Instant;
@@ -26,11 +26,11 @@ import java.util.Map;
 import org.jspecify.annotations.Nullable;
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.actuate.endpoint.EndpointId;
-import org.springframework.boot.actuate.endpoint.OperationType;
-import org.springframework.boot.actuate.endpoint.annotation.DiscoveredOperationMethod;
-import org.springframework.boot.actuate.endpoint.invoke.OperationInvoker;
-import org.springframework.boot.actuate.endpoint.jmx.JmxOperationParameter;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.EndpointId;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.OperationType;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.annotation.DiscoveredOperationMethod;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.invoke.OperationInvoker;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.jmx.JmxOperationParameter;
 import org.springframework.context.ApplicationContext;
 import org.springframework.core.annotation.AnnotationAttributes;
 import org.springframework.jmx.export.annotation.ManagedOperation;

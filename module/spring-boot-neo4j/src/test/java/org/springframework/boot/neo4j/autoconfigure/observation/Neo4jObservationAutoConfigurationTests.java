@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.neo4j.autoconfigure.observation;
+package io.github.kotlinmania.spring.boot.neo4j.autoconfigure.observation;
 
 import io.micrometer.observation.tck.TestObservationRegistry;
 import org.junit.jupiter.api.Test;
@@ -22,9 +22,9 @@ import org.neo4j.driver.Driver;
 import org.neo4j.driver.internal.observation.NoopObservationProvider;
 import org.neo4j.driver.observation.micrometer.MicrometerObservationProvider;
 
-import org.springframework.boot.autoconfigure.AutoConfigurations;
-import org.springframework.boot.neo4j.autoconfigure.Neo4jAutoConfiguration;
-import org.springframework.boot.test.context.runner.ApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurations;
+import io.github.kotlinmania.spring.boot.neo4j.autoconfigure.Neo4jAutoConfiguration;
+import io.github.kotlinmania.spring.boot.test.context.runner.ApplicationContextRunner;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.data.mongodb.alt;
+package io.github.kotlinmania.spring.boot.data.mongodb.alt;
 
-import org.springframework.boot.data.mongodb.autoconfigure.domain.city.City;
+import io.github.kotlinmania.spring.boot.data.mongodb.autoconfigure.domain.city.City;
 import org.springframework.data.repository.reactive.ReactiveCrudRepository;
 
 public interface ReactiveCityMongoDbRepository extends ReactiveCrudRepository<City, Long> {

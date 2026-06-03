@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.micrometer.tracing.opentelemetry.autoconfigure;
+package io.github.kotlinmania.spring.boot.micrometer.tracing.opentelemetry.autoconfigure;
 
 import java.time.Duration;
 
-import org.springframework.boot.context.properties.ConfigurationProperties;
+import io.github.kotlinmania.spring.boot.context.properties.ConfigurationProperties;
 
 /**
  * Configuration properties for tracing with OpenTelemetry.

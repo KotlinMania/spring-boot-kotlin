@@ -18,6 +18,6 @@
  * Jersey support for actuator endpoints.
  */
 @NullMarked
-package org.springframework.boot.jersey.actuate.endpoint.web;
+package io.github.kotlinmania.spring.boot.jersey.actuate.endpoint.web;
 
 import org.jspecify.annotations.NullMarked;

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.r2dbc.health;
+package io.github.kotlinmania.spring.boot.r2dbc.health;
 
 import java.time.Duration;
 import java.util.Collections;
@@ -32,8 +32,8 @@ import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 import reactor.test.StepVerifier;
 
-import org.springframework.boot.health.contributor.ReactiveHealthIndicator;
-import org.springframework.boot.health.contributor.Status;
+import io.github.kotlinmania.spring.boot.health.contributor.ReactiveHealthIndicator;
+import io.github.kotlinmania.spring.boot.health.contributor.Status;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.entry;

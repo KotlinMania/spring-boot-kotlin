@@ -19,7 +19,7 @@ package smoketest.actuator;
 import org.junit.jupiter.api.Test;
 
 import org.springframework.beans.factory.BeanCreationException;
-import org.springframework.boot.SpringApplication;
+import io.github.kotlinmania.spring.boot.SpringApplication;
 
 import static org.assertj.core.api.Assertions.assertThatExceptionOfType;
 

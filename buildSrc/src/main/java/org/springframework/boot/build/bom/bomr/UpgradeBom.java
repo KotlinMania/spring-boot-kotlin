@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.build.bom.bomr;
+package io.github.kotlinmania.spring.boot.build.bom.bomr;
 
 import java.util.List;
 
@@ -25,9 +25,9 @@ import org.gradle.api.artifacts.ArtifactRepositoryContainer;
 import org.gradle.api.artifacts.dsl.RepositoryHandler;
 import org.gradle.api.artifacts.repositories.MavenArtifactRepository;
 
-import org.springframework.boot.build.bom.BomExtension;
-import org.springframework.boot.build.bom.Library;
-import org.springframework.boot.build.properties.BuildProperties;
+import io.github.kotlinmania.spring.boot.build.bom.BomExtension;
+import io.github.kotlinmania.spring.boot.build.bom.Library;
+import io.github.kotlinmania.spring.boot.build.properties.BuildProperties;
 
 /**
  * {@link Task} to upgrade the libraries managed by a bom.

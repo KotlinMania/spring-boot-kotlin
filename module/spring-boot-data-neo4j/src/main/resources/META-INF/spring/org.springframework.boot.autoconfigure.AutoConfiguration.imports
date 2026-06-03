@@ -1,4 +1,4 @@
-org.springframework.boot.data.neo4j.autoconfigure.DataNeo4jAutoConfiguration
-org.springframework.boot.data.neo4j.autoconfigure.DataNeo4jReactiveAutoConfiguration
-org.springframework.boot.data.neo4j.autoconfigure.DataNeo4jReactiveRepositoriesAutoConfiguration
-org.springframework.boot.data.neo4j.autoconfigure.DataNeo4jRepositoriesAutoConfiguration
+io.github.kotlinmania.spring.boot.data.neo4j.autoconfigure.DataNeo4jAutoConfiguration
+io.github.kotlinmania.spring.boot.data.neo4j.autoconfigure.DataNeo4jReactiveAutoConfiguration
+io.github.kotlinmania.spring.boot.data.neo4j.autoconfigure.DataNeo4jReactiveRepositoriesAutoConfiguration
+io.github.kotlinmania.spring.boot.data.neo4j.autoconfigure.DataNeo4jRepositoriesAutoConfiguration

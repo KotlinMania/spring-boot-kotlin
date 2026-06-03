@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.data.neo4j.autoconfigure;
+package io.github.kotlinmania.spring.boot.data.neo4j.autoconfigure;
 
 import java.lang.annotation.Annotation;
 
-import org.springframework.boot.autoconfigure.data.AbstractRepositoryConfigurationSourceSupport;
+import io.github.kotlinmania.spring.boot.autoconfigure.data.AbstractRepositoryConfigurationSourceSupport;
 import org.springframework.context.annotation.ImportBeanDefinitionRegistrar;
 import org.springframework.data.neo4j.repository.config.EnableReactiveNeo4jRepositories;
 import org.springframework.data.neo4j.repository.config.ReactiveNeo4jRepositoryConfigurationExtension;

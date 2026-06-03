@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.json;
+package io.github.kotlinmania.spring.boot.json;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -32,8 +32,8 @@ import java.util.function.UnaryOperator;
 import org.jspecify.annotations.NonNull;
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.json.JsonValueWriter.Series;
-import org.springframework.boot.json.JsonWriter.Member.ValueExtractor;
+import io.github.kotlinmania.spring.boot.json.JsonValueWriter.Series;
+import io.github.kotlinmania.spring.boot.json.JsonWriter.Member.ValueExtractor;
 import org.springframework.util.Assert;
 import org.springframework.util.ObjectUtils;
 import org.springframework.util.StringUtils;

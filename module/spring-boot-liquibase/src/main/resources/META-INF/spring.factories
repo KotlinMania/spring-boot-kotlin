@@ -1,12 +1,12 @@
 # Connection Details Factories
-org.springframework.boot.autoconfigure.service.connection.ConnectionDetailsFactory=\
-org.springframework.boot.liquibase.docker.compose.JdbcAdaptingLiquibaseConnectionDetailsFactory,\
-org.springframework.boot.liquibase.testcontainers.LiquibaseContainerConnectionDetailsFactory
+io.github.kotlinmania.spring.boot.autoconfigure.service.connection.ConnectionDetailsFactory=\
+io.github.kotlinmania.spring.boot.liquibase.docker.compose.JdbcAdaptingLiquibaseConnectionDetailsFactory,\
+io.github.kotlinmania.spring.boot.liquibase.testcontainers.LiquibaseContainerConnectionDetailsFactory
 
 # Failure Analyzers
-org.springframework.boot.diagnostics.FailureAnalyzer=\
-org.springframework.boot.liquibase.LiquibaseChangelogMissingFailureAnalyzer
+io.github.kotlinmania.spring.boot.diagnostics.FailureAnalyzer=\
+io.github.kotlinmania.spring.boot.liquibase.LiquibaseChangelogMissingFailureAnalyzer
 
 # Database Initializer Detectors
-org.springframework.boot.sql.init.dependency.DatabaseInitializerDetector=\
-org.springframework.boot.liquibase.LiquibaseDatabaseInitializerDetector
+io.github.kotlinmania.spring.boot.sql.init.dependency.DatabaseInitializerDetector=\
+io.github.kotlinmania.spring.boot.liquibase.LiquibaseDatabaseInitializerDetector

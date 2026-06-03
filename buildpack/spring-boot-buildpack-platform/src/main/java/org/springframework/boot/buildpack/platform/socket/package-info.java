@@ -18,6 +18,6 @@
  * Low-level {@link java.net.Socket} implementations required for local Docker access.
  */
 @NullMarked
-package org.springframework.boot.buildpack.platform.socket;
+package io.github.kotlinmania.spring.boot.buildpack.platform.socket;
 
 import org.jspecify.annotations.NullMarked;

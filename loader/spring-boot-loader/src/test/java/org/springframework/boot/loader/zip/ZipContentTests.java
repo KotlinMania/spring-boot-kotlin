@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.loader.zip;
+package io.github.kotlinmania.spring.boot.loader.zip;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
@@ -46,9 +46,9 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.io.TempDir;
 
-import org.springframework.boot.loader.testsupport.TestJar;
-import org.springframework.boot.loader.zip.ZipContent.Entry;
-import org.springframework.boot.loader.zip.ZipContent.Kind;
+import io.github.kotlinmania.spring.boot.loader.testsupport.TestJar;
+import io.github.kotlinmania.spring.boot.loader.zip.ZipContent.Entry;
+import io.github.kotlinmania.spring.boot.loader.zip.ZipContent.Kind;
 import org.springframework.util.FileCopyUtils;
 import org.springframework.util.StreamUtils;
 

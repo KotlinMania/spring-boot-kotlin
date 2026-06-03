@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.webmvc.error;
+package io.github.kotlinmania.spring.boot.webmvc.error;
 
 import java.io.PrintWriter;
 import java.io.StringWriter;
@@ -28,9 +28,9 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.web.error.Error;
-import org.springframework.boot.web.error.ErrorAttributeOptions;
-import org.springframework.boot.web.error.ErrorAttributeOptions.Include;
+import io.github.kotlinmania.spring.boot.web.error.Error;
+import io.github.kotlinmania.spring.boot.web.error.ErrorAttributeOptions;
+import io.github.kotlinmania.spring.boot.web.error.ErrorAttributeOptions.Include;
 import org.springframework.core.Ordered;
 import org.springframework.core.annotation.Order;
 import org.springframework.http.HttpStatus;

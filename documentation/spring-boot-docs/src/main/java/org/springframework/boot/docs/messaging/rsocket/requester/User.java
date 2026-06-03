@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.messaging.rsocket.requester;
+package io.github.kotlinmania.spring.boot.docs.messaging.rsocket.requester;
 
 class User {
 

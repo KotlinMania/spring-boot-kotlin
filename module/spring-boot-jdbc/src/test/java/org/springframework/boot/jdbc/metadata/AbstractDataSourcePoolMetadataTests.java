@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.jdbc.metadata;
+package io.github.kotlinmania.spring.boot.jdbc.metadata;
 
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.jdbc.DataSourceBuilder;
+import io.github.kotlinmania.spring.boot.jdbc.DataSourceBuilder;
 import org.springframework.jdbc.core.ConnectionCallback;
 import org.springframework.jdbc.core.JdbcTemplate;
 

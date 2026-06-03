@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.loader.nio.file;
+package io.github.kotlinmania.spring.boot.loader.nio.file;
 
 import java.io.File;
 import java.net.URI;
@@ -28,9 +28,9 @@ import java.util.List;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.io.TempDir;
 
-import org.springframework.boot.loader.net.protocol.jar.JarUrl;
-import org.springframework.boot.loader.testsupport.TestJar;
-import org.springframework.boot.loader.zip.AssertFileChannelDataBlocksClosed;
+import io.github.kotlinmania.spring.boot.loader.net.protocol.jar.JarUrl;
+import io.github.kotlinmania.spring.boot.loader.testsupport.TestJar;
+import io.github.kotlinmania.spring.boot.loader.zip.AssertFileChannelDataBlocksClosed;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

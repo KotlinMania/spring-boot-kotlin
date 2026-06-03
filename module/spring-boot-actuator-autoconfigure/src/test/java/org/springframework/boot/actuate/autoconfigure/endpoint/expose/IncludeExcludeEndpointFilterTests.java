@@ -14,17 +14,17 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.actuate.autoconfigure.endpoint.expose;
+package io.github.kotlinmania.spring.boot.actuate.autoconfigure.endpoint.expose;
 
 import org.jspecify.annotations.Nullable;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.junit.jupiter.MockitoExtension;
 
-import org.springframework.boot.actuate.endpoint.EndpointFilter;
-import org.springframework.boot.actuate.endpoint.EndpointId;
-import org.springframework.boot.actuate.endpoint.ExposableEndpoint;
-import org.springframework.boot.actuate.endpoint.web.ExposableWebEndpoint;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.EndpointFilter;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.EndpointId;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.ExposableEndpoint;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.web.ExposableWebEndpoint;
 import org.springframework.mock.env.MockEnvironment;
 
 import static org.assertj.core.api.Assertions.assertThat;

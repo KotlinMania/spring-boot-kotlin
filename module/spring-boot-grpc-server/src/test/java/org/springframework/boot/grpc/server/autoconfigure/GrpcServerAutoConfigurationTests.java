@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.grpc.server.autoconfigure;
+package io.github.kotlinmania.spring.boot.grpc.server.autoconfigure;
 
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -35,17 +35,17 @@ import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 
-import org.springframework.boot.autoconfigure.AutoConfigurations;
-import org.springframework.boot.autoconfigure.ssl.SslAutoConfiguration;
-import org.springframework.boot.grpc.server.GrpcServletRegistration;
-import org.springframework.boot.grpc.server.autoconfigure.GrpcServerAutoConfiguration.GrpcAdviceConfiguration;
-import org.springframework.boot.test.context.FilteredClassLoader;
-import org.springframework.boot.test.context.assertj.ApplicationContextAssertProvider;
-import org.springframework.boot.test.context.runner.AbstractApplicationContextRunner;
-import org.springframework.boot.test.context.runner.ApplicationContextRunner;
-import org.springframework.boot.test.context.runner.ContextConsumer;
-import org.springframework.boot.test.context.runner.WebApplicationContextRunner;
-import org.springframework.boot.web.servlet.ServletRegistrationBean;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurations;
+import io.github.kotlinmania.spring.boot.autoconfigure.ssl.SslAutoConfiguration;
+import io.github.kotlinmania.spring.boot.grpc.server.GrpcServletRegistration;
+import io.github.kotlinmania.spring.boot.grpc.server.autoconfigure.GrpcServerAutoConfiguration.GrpcAdviceConfiguration;
+import io.github.kotlinmania.spring.boot.test.context.FilteredClassLoader;
+import io.github.kotlinmania.spring.boot.test.context.assertj.ApplicationContextAssertProvider;
+import io.github.kotlinmania.spring.boot.test.context.runner.AbstractApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.test.context.runner.ApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.test.context.runner.ContextConsumer;
+import io.github.kotlinmania.spring.boot.test.context.runner.WebApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.web.servlet.ServletRegistrationBean;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -342,7 +342,7 @@ class GrpcServerAutoConfigurationTests {
 	void nettyServerFactoryAutoConfiguredWithSsl() {
 		this.contextRunner.withPropertyValues("spring.grpc.server.address=192.168.0.1", "spring.grpc.server.port=6160",
 				"spring.grpc.server.ssl.bundle=ssltest",
-				"spring.ssl.bundle.jks.ssltest.keystore.location=classpath:org/springframework/boot/grpc/server/autoconfigure/test.jks",
+				"spring.ssl.bundle.jks.ssltest.keystore.location=classpath:io.github.kotlinmania.spring.boot.grpc/server/autoconfigure/test.jks",
 				"spring.ssl.bundle.jks.ssltest.keystore.password=secret",
 				"spring.ssl.bundle.jks.ssltest.key.password=password")
 			.withClassLoader(new FilteredClassLoader(io.grpc.netty.shaded.io.grpc.netty.NettyServerBuilder.class))

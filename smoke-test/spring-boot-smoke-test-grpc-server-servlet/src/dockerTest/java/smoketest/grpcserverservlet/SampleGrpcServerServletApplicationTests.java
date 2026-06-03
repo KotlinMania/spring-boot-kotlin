@@ -22,9 +22,9 @@ import org.testcontainers.containers.startupcheck.IndefiniteWaitOneShotStartupCh
 import org.testcontainers.junit.jupiter.Testcontainers;
 import org.testcontainers.utility.DockerImageName;
 
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.boot.test.context.SpringBootTest.WebEnvironment;
-import org.springframework.boot.test.web.server.LocalServerPort;
+import io.github.kotlinmania.spring.boot.test.context.SpringBootTest;
+import io.github.kotlinmania.spring.boot.test.context.SpringBootTest.WebEnvironment;
+import io.github.kotlinmania.spring.boot.test.web.server.LocalServerPort;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

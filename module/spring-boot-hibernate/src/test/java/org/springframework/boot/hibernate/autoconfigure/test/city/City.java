@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.hibernate.autoconfigure.test.city;
+package io.github.kotlinmania.spring.boot.hibernate.autoconfigure.test.city;
 
 import java.io.Serializable;
 

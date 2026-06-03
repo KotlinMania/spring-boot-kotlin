@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.actuate.autoconfigure.condition;
+package io.github.kotlinmania.spring.boot.actuate.autoconfigure.condition;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -28,13 +28,13 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.actuate.endpoint.OperationResponseBody;
-import org.springframework.boot.actuate.endpoint.annotation.Endpoint;
-import org.springframework.boot.actuate.endpoint.annotation.ReadOperation;
-import org.springframework.boot.autoconfigure.condition.ConditionEvaluationReport;
-import org.springframework.boot.autoconfigure.condition.ConditionEvaluationReport.ConditionAndOutcome;
-import org.springframework.boot.autoconfigure.condition.ConditionEvaluationReport.ConditionAndOutcomes;
-import org.springframework.boot.autoconfigure.condition.ConditionOutcome;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.OperationResponseBody;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.annotation.Endpoint;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.annotation.ReadOperation;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionEvaluationReport;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionEvaluationReport.ConditionAndOutcome;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionEvaluationReport.ConditionAndOutcomes;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionOutcome;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.Condition;

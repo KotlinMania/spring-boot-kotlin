@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.jetty;
+package io.github.kotlinmania.spring.boot.jetty;
 
 import java.net.InetSocketAddress;
 import java.util.ArrayList;
@@ -30,13 +30,13 @@ import org.eclipse.jetty.util.ssl.SslContextFactory;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.condition.OS;
 
-import org.springframework.boot.testsupport.classpath.resources.WithPackageResources;
-import org.springframework.boot.testsupport.junit.DisabledOnOs;
-import org.springframework.boot.testsupport.ssl.MockPkcs11Security;
-import org.springframework.boot.testsupport.ssl.MockPkcs11SecurityProvider;
-import org.springframework.boot.web.server.Http2;
-import org.springframework.boot.web.server.Ssl;
-import org.springframework.boot.web.server.WebServerSslBundle;
+import io.github.kotlinmania.spring.boot.testsupport.classpath.resources.WithPackageResources;
+import io.github.kotlinmania.spring.boot.testsupport.junit.DisabledOnOs;
+import io.github.kotlinmania.spring.boot.testsupport.ssl.MockPkcs11Security;
+import io.github.kotlinmania.spring.boot.testsupport.ssl.MockPkcs11SecurityProvider;
+import io.github.kotlinmania.spring.boot.web.server.Http2;
+import io.github.kotlinmania.spring.boot.web.server.Ssl;
+import io.github.kotlinmania.spring.boot.web.server.WebServerSslBundle;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatIllegalStateException;

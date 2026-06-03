@@ -18,6 +18,6 @@
  * Auto-configuration for actuator HTTP exchanges.
  */
 @NullMarked
-package org.springframework.boot.actuate.autoconfigure.web.exchanges;
+package io.github.kotlinmania.spring.boot.actuate.autoconfigure.web.exchanges;
 
 import org.jspecify.annotations.NullMarked;

@@ -14,18 +14,18 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.autoconfigure.jmx;
+package io.github.kotlinmania.spring.boot.autoconfigure.jmx;
 
 import javax.management.MBeanServer;
 
 import org.springframework.beans.factory.BeanFactory;
-import org.springframework.boot.autoconfigure.AutoConfiguration;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnBooleanProperty;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
-import org.springframework.boot.autoconfigure.condition.SearchStrategy;
-import org.springframework.boot.context.properties.EnableConfigurationProperties;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.EnableAutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnBooleanProperty;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnClass;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnMissingBean;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.SearchStrategy;
+import io.github.kotlinmania.spring.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.EnableMBeanExport;
 import org.springframework.context.annotation.Primary;

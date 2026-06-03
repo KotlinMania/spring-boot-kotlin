@@ -18,6 +18,6 @@
  * Auto-configuration for SSL bundles.
  */
 @NullMarked
-package org.springframework.boot.autoconfigure.ssl;
+package io.github.kotlinmania.spring.boot.autoconfigure.ssl;
 
 import org.jspecify.annotations.NullMarked;

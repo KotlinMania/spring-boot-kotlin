@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package org.springframework.boot;
+package io.github.kotlinmania.spring.boot.
 
-import org.springframework.boot.bootstrap.BootstrapContext;
-import org.springframework.boot.bootstrap.BootstrapRegistry;
-import org.springframework.boot.bootstrap.ConfigurableBootstrapContext;
-import org.springframework.boot.logging.DeferredLogFactory;
+import io.github.kotlinmania.spring.boot.bootstrap.BootstrapContext;
+import io.github.kotlinmania.spring.boot.bootstrap.BootstrapRegistry;
+import io.github.kotlinmania.spring.boot.bootstrap.ConfigurableBootstrapContext;
+import io.github.kotlinmania.spring.boot.logging.DeferredLogFactory;
 import org.springframework.core.env.ConfigurableEnvironment;
 import org.springframework.core.env.Environment;
 

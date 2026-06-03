@@ -14,16 +14,16 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.buildpack.platform.build;
+package io.github.kotlinmania.spring.boot.buildpack.platform.build;
 
 import java.io.IOException;
 import java.util.Collections;
 
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.buildpack.platform.docker.type.Image;
-import org.springframework.boot.buildpack.platform.docker.type.ImageConfig;
-import org.springframework.boot.buildpack.platform.json.AbstractJsonTests;
+import io.github.kotlinmania.spring.boot.buildpack.platform.docker.type.Image;
+import io.github.kotlinmania.spring.boot.buildpack.platform.docker.type.ImageConfig;
+import io.github.kotlinmania.spring.boot.buildpack.platform.json.AbstractJsonTests;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatIllegalArgumentException;

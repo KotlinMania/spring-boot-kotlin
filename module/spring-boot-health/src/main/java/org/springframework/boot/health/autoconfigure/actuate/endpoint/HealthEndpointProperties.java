@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.health.autoconfigure.actuate.endpoint;
+package io.github.kotlinmania.spring.boot.health.autoconfigure.actuate.endpoint;
 
 import java.time.Duration;
 import java.util.LinkedHashMap;
@@ -23,9 +23,9 @@ import java.util.Set;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.actuate.endpoint.Show;
-import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.boot.health.actuate.endpoint.HealthEndpoint;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.Show;
+import io.github.kotlinmania.spring.boot.context.properties.ConfigurationProperties;
+import io.github.kotlinmania.spring.boot.health.actuate.endpoint.HealthEndpoint;
 
 /**
  * Configuration properties for {@link HealthEndpoint}.

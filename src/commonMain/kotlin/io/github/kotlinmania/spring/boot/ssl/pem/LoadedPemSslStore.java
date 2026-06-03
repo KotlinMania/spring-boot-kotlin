@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.ssl.pem;
+package io.github.kotlinmania.spring.boot.ssl.pem;
 
 import java.io.IOException;
 import java.io.UncheckedIOException;

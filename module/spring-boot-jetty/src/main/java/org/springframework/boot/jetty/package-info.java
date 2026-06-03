@@ -17,10 +17,10 @@
 /**
  * Reactive and servlet web server implementations backed by Jetty.
  *
- * @see org.springframework.boot.jetty.servlet.JettyServletWebServerFactory
- * @see org.springframework.boot.jetty.reactive.JettyReactiveWebServerFactory
+ * @see io.github.kotlinmania.spring.boot.jetty.servlet.JettyServletWebServerFactory
+ * @see io.github.kotlinmania.spring.boot.jetty.reactive.JettyReactiveWebServerFactory
  */
 @NullMarked
-package org.springframework.boot.jetty;
+package io.github.kotlinmania.spring.boot.jetty;
 
 import org.jspecify.annotations.NullMarked;

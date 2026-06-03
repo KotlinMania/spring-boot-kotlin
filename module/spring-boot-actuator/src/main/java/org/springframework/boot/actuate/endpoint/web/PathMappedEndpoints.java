@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.actuate.endpoint.web;
+package io.github.kotlinmania.spring.boot.actuate.endpoint.web;
 
 import java.util.Collection;
 import java.util.Collections;
@@ -26,8 +26,8 @@ import java.util.stream.Stream;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.actuate.endpoint.EndpointId;
-import org.springframework.boot.actuate.endpoint.EndpointsSupplier;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.EndpointId;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.EndpointsSupplier;
 import org.springframework.lang.Contract;
 import org.springframework.util.Assert;
 import org.springframework.util.CollectionUtils;

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.grpc.server.health;
+package io.github.kotlinmania.spring.boot.grpc.server.health;
 
 /**
  * A single gRPC component that can be checked for health.

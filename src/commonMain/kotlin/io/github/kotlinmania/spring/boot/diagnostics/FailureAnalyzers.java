@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.diagnostics;
+package io.github.kotlinmania.spring.boot.diagnostics;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -25,7 +25,7 @@ import org.apache.commons.logging.LogFactory;
 import org.jspecify.annotations.Nullable;
 
 import org.springframework.beans.factory.BeanFactory;
-import org.springframework.boot.SpringBootExceptionReporter;
+import io.github.kotlinmania.spring.boot.SpringBootExceptionReporter;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.core.env.Environment;
 import org.springframework.core.io.support.SpringFactoriesLoader;

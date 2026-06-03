@@ -14,18 +14,18 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.cli;
+package io.github.kotlinmania.spring.boot.cli;
 
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 
-import org.springframework.boot.cli.command.Command;
-import org.springframework.boot.cli.command.CommandFactory;
-import org.springframework.boot.cli.command.core.VersionCommand;
-import org.springframework.boot.cli.command.encodepassword.EncodePasswordCommand;
-import org.springframework.boot.cli.command.init.InitCommand;
+import io.github.kotlinmania.spring.boot.cli.command.Command;
+import io.github.kotlinmania.spring.boot.cli.command.CommandFactory;
+import io.github.kotlinmania.spring.boot.cli.command.core.VersionCommand;
+import io.github.kotlinmania.spring.boot.cli.command.encodepassword.EncodePasswordCommand;
+import io.github.kotlinmania.spring.boot.cli.command.init.InitCommand;
 
 /**
  * Default implementation of {@link CommandFactory}.

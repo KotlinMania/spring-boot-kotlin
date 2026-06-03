@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.testsupport.junit;
+package io.github.kotlinmania.spring.boot.testsupport.junit;
 
 import java.util.Locale;
 

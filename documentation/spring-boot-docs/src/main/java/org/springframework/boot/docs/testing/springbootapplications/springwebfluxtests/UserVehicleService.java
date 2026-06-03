@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.testing.springbootapplications.springwebfluxtests;
+package io.github.kotlinmania.spring.boot.docs.testing.springbootapplications.springwebfluxtests;
 
 class UserVehicleService {
 

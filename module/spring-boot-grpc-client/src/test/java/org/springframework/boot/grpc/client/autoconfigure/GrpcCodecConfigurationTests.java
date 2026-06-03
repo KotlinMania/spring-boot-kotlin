@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.grpc.client.autoconfigure;
+package io.github.kotlinmania.spring.boot.grpc.client.autoconfigure;
 
 import io.grpc.Codec;
 import io.grpc.Compressor;
@@ -23,9 +23,9 @@ import io.grpc.Decompressor;
 import io.grpc.DecompressorRegistry;
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.autoconfigure.AutoConfigurations;
-import org.springframework.boot.test.context.FilteredClassLoader;
-import org.springframework.boot.test.context.runner.ApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurations;
+import io.github.kotlinmania.spring.boot.test.context.FilteredClassLoader;
+import io.github.kotlinmania.spring.boot.test.context.runner.ApplicationContextRunner;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.BDDMockito.given;

@@ -105,7 +105,7 @@
     },
     {
       "name": "spring.flyway.locations",
-      "sourceType": "org.springframework.boot.flyway.autoconfigure.FlywayProperties",
+      "sourceType": "io.github.kotlinmania.spring.boot.flyway.autoconfigure.FlywayProperties",
       "defaultValue": [
         "classpath:db/migration"
       ]
@@ -164,7 +164,7 @@
     },
     {
       "name": "spring.flyway.sql-migration-suffixes",
-      "sourceType": "org.springframework.boot.flyway.autoconfigure.FlywayProperties",
+      "sourceType": "io.github.kotlinmania.spring.boot.flyway.autoconfigure.FlywayProperties",
       "defaultValue": [
         ".sql"
       ]

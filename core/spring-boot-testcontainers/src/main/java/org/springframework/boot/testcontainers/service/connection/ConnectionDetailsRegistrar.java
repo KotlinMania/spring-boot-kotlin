@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.testcontainers.service.connection;
+package io.github.kotlinmania.spring.boot.testcontainers.service.connection;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -32,11 +32,11 @@ import org.springframework.beans.factory.aot.BeanRegistrationExcludeFilter;
 import org.springframework.beans.factory.support.BeanDefinitionRegistry;
 import org.springframework.beans.factory.support.RegisteredBean;
 import org.springframework.beans.factory.support.RootBeanDefinition;
-import org.springframework.boot.autoconfigure.container.ContainerImageMetadata;
-import org.springframework.boot.autoconfigure.service.connection.ConnectionDetails;
-import org.springframework.boot.autoconfigure.service.connection.ConnectionDetailsFactories;
-import org.springframework.boot.autoconfigure.service.connection.ConnectionDetailsFactoryNotFoundException;
-import org.springframework.boot.autoconfigure.service.connection.ConnectionDetailsNotFoundException;
+import io.github.kotlinmania.spring.boot.autoconfigure.container.ContainerImageMetadata;
+import io.github.kotlinmania.spring.boot.autoconfigure.service.connection.ConnectionDetails;
+import io.github.kotlinmania.spring.boot.autoconfigure.service.connection.ConnectionDetailsFactories;
+import io.github.kotlinmania.spring.boot.autoconfigure.service.connection.ConnectionDetailsFactoryNotFoundException;
+import io.github.kotlinmania.spring.boot.autoconfigure.service.connection.ConnectionDetailsNotFoundException;
 import org.springframework.core.log.LogMessage;
 import org.springframework.util.ClassUtils;
 import org.springframework.util.ObjectUtils;

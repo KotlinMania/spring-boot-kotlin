@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.buildpack.platform.docker;
+package io.github.kotlinmania.spring.boot.buildpack.platform.docker;
 
 import java.util.Arrays;
 import java.util.HashMap;
@@ -22,7 +22,7 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.function.Consumer;
 
-import org.springframework.boot.buildpack.platform.docker.ProgressUpdateEvent.ProgressDetail;
+import io.github.kotlinmania.spring.boot.buildpack.platform.docker.ProgressUpdateEvent.ProgressDetail;
 
 /**
  * {@link UpdateListener} that calculates the total progress of the entire image operation

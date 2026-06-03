@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.context.properties.bind;
+package io.github.kotlinmania.spring.boot.context.properties.bind;
 
 import java.util.function.Consumer;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.context.properties.source.ConfigurationProperty;
-import org.springframework.boot.context.properties.source.ConfigurationPropertyName;
+import io.github.kotlinmania.spring.boot.context.properties.source.ConfigurationProperty;
+import io.github.kotlinmania.spring.boot.context.properties.source.ConfigurationPropertyName;
 import org.springframework.util.Assert;
 
 /**

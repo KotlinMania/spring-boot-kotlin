@@ -1,3 +1,3 @@
-org.springframework.boot.ldap.autoconfigure.LdapAutoConfiguration
-org.springframework.boot.ldap.autoconfigure.embedded.EmbeddedLdapAutoConfiguration
-org.springframework.boot.ldap.autoconfigure.health.LdapHealthContributorAutoConfiguration
+io.github.kotlinmania.spring.boot.ldap.autoconfigure.LdapAutoConfiguration
+io.github.kotlinmania.spring.boot.ldap.autoconfigure.embedded.EmbeddedLdapAutoConfiguration
+io.github.kotlinmania.spring.boot.ldap.autoconfigure.health.LdapHealthContributorAutoConfiguration

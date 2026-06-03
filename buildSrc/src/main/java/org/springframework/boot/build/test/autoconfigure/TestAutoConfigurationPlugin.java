@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.build.test.autoconfigure;
+package io.github.kotlinmania.spring.boot.build.test.autoconfigure;
 
 import org.gradle.api.Plugin;
 import org.gradle.api.Project;

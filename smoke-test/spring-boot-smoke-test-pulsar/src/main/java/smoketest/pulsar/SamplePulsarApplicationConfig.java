@@ -19,7 +19,7 @@ package smoketest.pulsar;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
-import org.springframework.boot.ApplicationRunner;
+import io.github.kotlinmania.spring.boot.ApplicationRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.pulsar.annotation.PulsarListener;

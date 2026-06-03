@@ -24,10 +24,10 @@ import smoketest.grpcclienttest.proto.HelloReply;
 import smoketest.grpcclienttest.proto.HelloRequest;
 import smoketest.grpcclienttest.proto.HelloWorldGrpc;
 
-import org.springframework.boot.grpc.test.autoconfigure.AutoConfigureTestGrpcTransport;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.boot.test.system.CapturedOutput;
-import org.springframework.boot.test.system.OutputCaptureExtension;
+import io.github.kotlinmania.spring.boot.grpc.test.autoconfigure.AutoConfigureTestGrpcTransport;
+import io.github.kotlinmania.spring.boot.test.context.SpringBootTest;
+import io.github.kotlinmania.spring.boot.test.system.CapturedOutput;
+import io.github.kotlinmania.spring.boot.test.system.OutputCaptureExtension;
 import org.springframework.context.annotation.Import;
 
 import static org.assertj.core.api.Assertions.assertThat;

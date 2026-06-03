@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.sql.autoconfigure.init;
+package io.github.kotlinmania.spring.boot.sql.autoconfigure.init;
 
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.autoconfigure.condition.ConditionOutcome;
-import org.springframework.boot.test.util.TestPropertyValues;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionOutcome;
+import io.github.kotlinmania.spring.boot.test.util.TestPropertyValues;
 import org.springframework.context.annotation.ConditionContext;
 import org.springframework.core.type.AnnotatedTypeMetadata;
 import org.springframework.mock.env.MockEnvironment;

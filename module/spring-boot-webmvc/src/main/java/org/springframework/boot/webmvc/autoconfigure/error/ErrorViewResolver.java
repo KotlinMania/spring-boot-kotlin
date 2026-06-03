@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.webmvc.autoconfigure.error;
+package io.github.kotlinmania.spring.boot.webmvc.autoconfigure.error;
 
 import java.util.Map;
 

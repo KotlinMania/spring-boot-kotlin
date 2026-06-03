@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.web.server;
+package io.github.kotlinmania.spring.boot.web.server;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -22,7 +22,7 @@ import java.nio.file.Path;
 
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.web.server.AbstractConfigurableWebServerFactory.TempDirs;
+import io.github.kotlinmania.spring.boot.web.server.AbstractConfigurableWebServerFactory.TempDirs;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

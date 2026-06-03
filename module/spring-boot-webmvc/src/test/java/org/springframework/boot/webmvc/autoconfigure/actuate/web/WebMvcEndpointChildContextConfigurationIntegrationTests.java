@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.webmvc.autoconfigure.actuate.web;
+package io.github.kotlinmania.spring.boot.webmvc.autoconfigure.actuate.web;
 
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
@@ -29,24 +29,24 @@ import org.assertj.core.api.InstanceOfAssertFactories;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.io.TempDir;
 
-import org.springframework.boot.actuate.autoconfigure.endpoint.EndpointAutoConfiguration;
-import org.springframework.boot.actuate.autoconfigure.endpoint.web.WebEndpointAutoConfiguration;
-import org.springframework.boot.actuate.autoconfigure.web.server.ManagementContextAutoConfiguration;
-import org.springframework.boot.actuate.endpoint.annotation.Endpoint;
-import org.springframework.boot.actuate.endpoint.annotation.ReadOperation;
-import org.springframework.boot.autoconfigure.AutoConfigurations;
-import org.springframework.boot.convert.ApplicationConversionService;
-import org.springframework.boot.env.ConfigTreePropertySource;
-import org.springframework.boot.servlet.autoconfigure.actuate.web.ServletManagementContextAutoConfiguration;
-import org.springframework.boot.test.context.assertj.AssertableWebApplicationContext;
-import org.springframework.boot.test.context.runner.ContextConsumer;
-import org.springframework.boot.test.context.runner.WebApplicationContextRunner;
-import org.springframework.boot.tomcat.autoconfigure.actuate.web.server.TomcatServletManagementContextAutoConfiguration;
-import org.springframework.boot.tomcat.autoconfigure.servlet.TomcatServletWebServerAutoConfiguration;
-import org.springframework.boot.web.server.context.ServerPortInfoApplicationContextInitializer;
-import org.springframework.boot.web.server.servlet.context.AnnotationConfigServletWebServerApplicationContext;
-import org.springframework.boot.webmvc.autoconfigure.DispatcherServletAutoConfiguration;
-import org.springframework.boot.webmvc.autoconfigure.error.ErrorMvcAutoConfiguration;
+import io.github.kotlinmania.spring.boot.actuate.autoconfigure.endpoint.EndpointAutoConfiguration;
+import io.github.kotlinmania.spring.boot.actuate.autoconfigure.endpoint.web.WebEndpointAutoConfiguration;
+import io.github.kotlinmania.spring.boot.actuate.autoconfigure.web.server.ManagementContextAutoConfiguration;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.annotation.Endpoint;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.annotation.ReadOperation;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurations;
+import io.github.kotlinmania.spring.boot.convert.ApplicationConversionService;
+import io.github.kotlinmania.spring.boot.env.ConfigTreePropertySource;
+import io.github.kotlinmania.spring.boot.servlet.autoconfigure.actuate.web.ServletManagementContextAutoConfiguration;
+import io.github.kotlinmania.spring.boot.test.context.assertj.AssertableWebApplicationContext;
+import io.github.kotlinmania.spring.boot.test.context.runner.ContextConsumer;
+import io.github.kotlinmania.spring.boot.test.context.runner.WebApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.tomcat.autoconfigure.actuate.web.server.TomcatServletManagementContextAutoConfiguration;
+import io.github.kotlinmania.spring.boot.tomcat.autoconfigure.servlet.TomcatServletWebServerAutoConfiguration;
+import io.github.kotlinmania.spring.boot.web.server.context.ServerPortInfoApplicationContextInitializer;
+import io.github.kotlinmania.spring.boot.web.server.servlet.context.AnnotationConfigServletWebServerApplicationContext;
+import io.github.kotlinmania.spring.boot.webmvc.autoconfigure.DispatcherServletAutoConfiguration;
+import io.github.kotlinmania.spring.boot.webmvc.autoconfigure.error.ErrorMvcAutoConfiguration;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.core.convert.support.ConfigurableConversionService;
@@ -218,7 +218,7 @@ class WebMvcEndpointChildContextConfigurationIntegrationTests {
 
 	}
 
-	@org.springframework.boot.actuate.endpoint.web.annotation.RestControllerEndpoint(id = "failController")
+	@io.github.kotlinmania.spring.boot.actuate.endpoint.web.annotation.RestControllerEndpoint(id = "failController")
 	@SuppressWarnings("removal")
 	static class FailingControllerEndpoint {
 

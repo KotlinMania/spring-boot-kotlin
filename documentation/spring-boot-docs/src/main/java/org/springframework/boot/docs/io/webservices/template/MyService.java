@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.io.webservices.template;
+package io.github.kotlinmania.spring.boot.docs.io.webservices.template;
 
-import org.springframework.boot.webservices.client.WebServiceTemplateBuilder;
+import io.github.kotlinmania.spring.boot.webservices.client.WebServiceTemplateBuilder;
 import org.springframework.stereotype.Service;
 import org.springframework.ws.client.core.WebServiceTemplate;
 import org.springframework.ws.soap.client.core.SoapActionCallback;

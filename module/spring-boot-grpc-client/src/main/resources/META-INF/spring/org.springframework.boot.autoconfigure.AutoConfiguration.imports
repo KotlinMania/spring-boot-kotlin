@@ -1,3 +1,3 @@
-org.springframework.boot.grpc.client.autoconfigure.CompositeChannelFactoryAutoConfiguration
-org.springframework.boot.grpc.client.autoconfigure.GrpcClientAutoConfiguration
-org.springframework.boot.grpc.client.autoconfigure.GrpcClientObservationAutoConfiguration
+io.github.kotlinmania.spring.boot.grpc.client.autoconfigure.CompositeChannelFactoryAutoConfiguration
+io.github.kotlinmania.spring.boot.grpc.client.autoconfigure.GrpcClientAutoConfiguration
+io.github.kotlinmania.spring.boot.grpc.client.autoconfigure.GrpcClientObservationAutoConfiguration

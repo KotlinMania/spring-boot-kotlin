@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.security.autoconfigure.web;
+package io.github.kotlinmania.spring.boot.security.autoconfigure.web;
 
 import java.util.Arrays;
 import java.util.stream.Stream;

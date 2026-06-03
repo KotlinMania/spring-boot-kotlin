@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.actuate.startup;
+package io.github.kotlinmania.spring.boot.actuate.startup;
 
 import org.jspecify.annotations.Nullable;
 
@@ -22,19 +22,19 @@ import org.springframework.aot.hint.MemberCategory;
 import org.springframework.aot.hint.RuntimeHints;
 import org.springframework.aot.hint.RuntimeHintsRegistrar;
 import org.springframework.aot.hint.TypeReference;
-import org.springframework.boot.SpringBootVersion;
-import org.springframework.boot.actuate.endpoint.OperationResponseBody;
-import org.springframework.boot.actuate.endpoint.annotation.Endpoint;
-import org.springframework.boot.actuate.endpoint.annotation.ReadOperation;
-import org.springframework.boot.actuate.endpoint.annotation.WriteOperation;
-import org.springframework.boot.actuate.startup.StartupEndpoint.StartupEndpointRuntimeHints;
-import org.springframework.boot.context.metrics.buffering.BufferingApplicationStartup;
-import org.springframework.boot.context.metrics.buffering.StartupTimeline;
+import io.github.kotlinmania.spring.boot.SpringBootVersion;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.OperationResponseBody;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.annotation.Endpoint;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.annotation.ReadOperation;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.annotation.WriteOperation;
+import io.github.kotlinmania.spring.boot.actuate.startup.StartupEndpoint.StartupEndpointRuntimeHints;
+import io.github.kotlinmania.spring.boot.context.metrics.buffering.BufferingApplicationStartup;
+import io.github.kotlinmania.spring.boot.context.metrics.buffering.StartupTimeline;
 import org.springframework.context.annotation.ImportRuntimeHints;
 
 /**
  * {@link Endpoint @Endpoint} to expose the timeline of the
- * {@link org.springframework.boot.context.metrics.buffering.BufferingApplicationStartup
+ * {@link io.github.kotlinmania.spring.boot.context.metrics.buffering.BufferingApplicationStartup
  * application startup}.
  *
  * @author Brian Clozel
@@ -95,10 +95,10 @@ public class StartupEndpoint {
 	static class StartupEndpointRuntimeHints implements RuntimeHintsRegistrar {
 
 		private static final TypeReference DEFAULT_TAG = TypeReference
-			.of("org.springframework.boot.context.metrics.buffering.BufferedStartupStep$DefaultTag");
+			.of("io.github.kotlinmania.spring.boot.context.metrics.buffering.BufferedStartupStep$DefaultTag");
 
 		private static final TypeReference BUFFERED_STARTUP_STEP = TypeReference
-			.of("org.springframework.boot.context.metrics.buffering.BufferedStartupStep");
+			.of("io.github.kotlinmania.spring.boot.context.metrics.buffering.BufferedStartupStep");
 
 		private static final TypeReference FLIGHT_RECORDER_TAG = TypeReference
 			.of("org.springframework.core.metrics.jfr.FlightRecorderStartupStep$FlightRecorderTag");

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.health.autoconfigure.actuate.endpoint;
+package io.github.kotlinmania.spring.boot.health.autoconfigure.actuate.endpoint;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -25,8 +25,8 @@ import java.util.Set;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.actuate.endpoint.Show;
-import org.springframework.boot.context.properties.NestedConfigurationProperty;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.Show;
+import io.github.kotlinmania.spring.boot.context.properties.NestedConfigurationProperty;
 import org.springframework.util.CollectionUtils;
 
 /**

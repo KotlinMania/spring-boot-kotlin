@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.web.servlet.springmvc.messageconverters;
+package io.github.kotlinmania.spring.boot.docs.web.servlet.springmvc.messageconverters;
 
 import java.text.SimpleDateFormat;
 
 import tools.jackson.databind.json.JsonMapper;
 
-import org.springframework.boot.http.converter.autoconfigure.ClientHttpMessageConvertersCustomizer;
-import org.springframework.boot.http.converter.autoconfigure.ServerHttpMessageConvertersCustomizer;
+import io.github.kotlinmania.spring.boot.http.converter.autoconfigure.ClientHttpMessageConvertersCustomizer;
+import io.github.kotlinmania.spring.boot.http.converter.autoconfigure.ServerHttpMessageConvertersCustomizer;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.converter.HttpMessageConverters.ClientBuilder;

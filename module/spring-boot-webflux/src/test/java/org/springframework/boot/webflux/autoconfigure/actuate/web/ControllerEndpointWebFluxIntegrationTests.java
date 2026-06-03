@@ -14,25 +14,25 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.webflux.autoconfigure.actuate.web;
+package io.github.kotlinmania.spring.boot.webflux.autoconfigure.actuate.web;
 
 import org.jspecify.annotations.Nullable;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.actuate.autoconfigure.audit.AuditAutoConfiguration;
-import org.springframework.boot.actuate.autoconfigure.beans.BeansEndpointAutoConfiguration;
-import org.springframework.boot.actuate.autoconfigure.endpoint.EndpointAutoConfiguration;
-import org.springframework.boot.actuate.autoconfigure.endpoint.web.WebEndpointAutoConfiguration;
-import org.springframework.boot.actuate.autoconfigure.web.server.ManagementContextAutoConfiguration;
-import org.springframework.boot.actuate.endpoint.web.annotation.ControllerEndpoint;
-import org.springframework.boot.actuate.endpoint.web.annotation.RestControllerEndpoint;
-import org.springframework.boot.autoconfigure.ImportAutoConfiguration;
-import org.springframework.boot.autoconfigure.context.PropertyPlaceholderAutoConfiguration;
-import org.springframework.boot.jackson.autoconfigure.JacksonAutoConfiguration;
-import org.springframework.boot.test.util.TestPropertyValues;
-import org.springframework.boot.web.context.reactive.AnnotationConfigReactiveWebApplicationContext;
-import org.springframework.boot.webflux.autoconfigure.WebFluxAutoConfiguration;
+import io.github.kotlinmania.spring.boot.actuate.autoconfigure.audit.AuditAutoConfiguration;
+import io.github.kotlinmania.spring.boot.actuate.autoconfigure.beans.BeansEndpointAutoConfiguration;
+import io.github.kotlinmania.spring.boot.actuate.autoconfigure.endpoint.EndpointAutoConfiguration;
+import io.github.kotlinmania.spring.boot.actuate.autoconfigure.endpoint.web.WebEndpointAutoConfiguration;
+import io.github.kotlinmania.spring.boot.actuate.autoconfigure.web.server.ManagementContextAutoConfiguration;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.web.annotation.ControllerEndpoint;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.web.annotation.RestControllerEndpoint;
+import io.github.kotlinmania.spring.boot.autoconfigure.ImportAutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.context.PropertyPlaceholderAutoConfiguration;
+import io.github.kotlinmania.spring.boot.jackson.autoconfigure.JacksonAutoConfiguration;
+import io.github.kotlinmania.spring.boot.test.util.TestPropertyValues;
+import io.github.kotlinmania.spring.boot.web.context.reactive.AnnotationConfigReactiveWebApplicationContext;
+import io.github.kotlinmania.spring.boot.webflux.autoconfigure.WebFluxAutoConfiguration;
 import org.springframework.test.web.reactive.server.WebTestClient;
 import org.springframework.web.bind.annotation.GetMapping;
 

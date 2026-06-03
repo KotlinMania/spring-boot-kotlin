@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.restclient.autoconfigure;
+package io.github.kotlinmania.spring.boot.restclient.autoconfigure;
 
 import java.util.function.Consumer;
 
-import org.springframework.boot.http.client.ClientHttpRequestFactoryBuilder;
-import org.springframework.boot.http.client.HttpClientSettings;
-import org.springframework.boot.ssl.NoSuchSslBundleException;
-import org.springframework.boot.ssl.SslBundle;
+import io.github.kotlinmania.spring.boot.http.client.ClientHttpRequestFactoryBuilder;
+import io.github.kotlinmania.spring.boot.http.client.HttpClientSettings;
+import io.github.kotlinmania.spring.boot.ssl.NoSuchSslBundleException;
+import io.github.kotlinmania.spring.boot.ssl.SslBundle;
 import org.springframework.http.client.ClientHttpRequestFactory;
 import org.springframework.web.client.RestClient;
 

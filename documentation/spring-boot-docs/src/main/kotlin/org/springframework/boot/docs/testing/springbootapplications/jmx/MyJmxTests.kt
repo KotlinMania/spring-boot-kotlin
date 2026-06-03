@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.testing.springbootapplications.jmx
+package io.github.kotlinmania.spring.boot.docs.testing.springbootapplications.jmx
 
 import javax.management.MBeanServer
 
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Test
 import org.springframework.beans.factory.annotation.Autowired
-import org.springframework.boot.test.context.SpringBootTest
+import io.github.kotlinmania.spring.boot.test.context.SpringBootTest
 import org.springframework.test.annotation.DirtiesContext
 
 @SpringBootTest(properties = ["spring.jmx.enabled=true"])

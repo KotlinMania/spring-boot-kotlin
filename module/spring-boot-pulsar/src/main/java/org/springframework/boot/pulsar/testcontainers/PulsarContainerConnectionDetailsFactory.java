@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.pulsar.testcontainers;
+package io.github.kotlinmania.spring.boot.pulsar.testcontainers;
 
 import org.testcontainers.pulsar.PulsarContainer;
 
-import org.springframework.boot.pulsar.autoconfigure.PulsarConnectionDetails;
-import org.springframework.boot.testcontainers.service.connection.ContainerConnectionDetailsFactory;
-import org.springframework.boot.testcontainers.service.connection.ContainerConnectionSource;
-import org.springframework.boot.testcontainers.service.connection.ServiceConnection;
+import io.github.kotlinmania.spring.boot.pulsar.autoconfigure.PulsarConnectionDetails;
+import io.github.kotlinmania.spring.boot.testcontainers.service.connection.ContainerConnectionDetailsFactory;
+import io.github.kotlinmania.spring.boot.testcontainers.service.connection.ContainerConnectionSource;
+import io.github.kotlinmania.spring.boot.testcontainers.service.connection.ServiceConnection;
 
 /**
  * {@link ContainerConnectionDetailsFactory} to create {@link PulsarConnectionDetails}

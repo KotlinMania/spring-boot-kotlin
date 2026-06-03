@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.servlet.autoconfigure.actuate.web;
+package io.github.kotlinmania.spring.boot.servlet.autoconfigure.actuate.web;
 
 import org.springframework.beans.factory.ListableBeanFactory;
-import org.springframework.boot.actuate.autoconfigure.web.server.ManagementServerProperties;
-import org.springframework.boot.actuate.autoconfigure.web.server.ManagementWebServerFactoryCustomizer;
-import org.springframework.boot.web.server.autoconfigure.ServerProperties;
-import org.springframework.boot.web.server.servlet.ConfigurableServletWebServerFactory;
+import io.github.kotlinmania.spring.boot.actuate.autoconfigure.web.server.ManagementServerProperties;
+import io.github.kotlinmania.spring.boot.actuate.autoconfigure.web.server.ManagementWebServerFactoryCustomizer;
+import io.github.kotlinmania.spring.boot.web.server.autoconfigure.ServerProperties;
+import io.github.kotlinmania.spring.boot.web.server.servlet.ConfigurableServletWebServerFactory;
 import org.springframework.util.StringUtils;
 
 /**

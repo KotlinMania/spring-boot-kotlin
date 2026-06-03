@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.diagnostics.analyzer;
+package io.github.kotlinmania.spring.boot.diagnostics.analyzer;
 
-import org.springframework.boot.diagnostics.AbstractFailureAnalyzer;
-import org.springframework.boot.diagnostics.FailureAnalysis;
+import io.github.kotlinmania.spring.boot.diagnostics.AbstractFailureAnalyzer;
+import io.github.kotlinmania.spring.boot.diagnostics.FailureAnalysis;
 import org.springframework.web.util.pattern.PatternParseException;
 
 /**

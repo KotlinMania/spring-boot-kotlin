@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.test.context.runner;
+package io.github.kotlinmania.spring.boot.test.context.runner;
 
-import org.springframework.boot.test.context.assertj.AssertableReactiveWebApplicationContext;
-import org.springframework.boot.web.context.reactive.AnnotationConfigReactiveWebApplicationContext;
-import org.springframework.boot.web.context.reactive.ConfigurableReactiveWebApplicationContext;
+import io.github.kotlinmania.spring.boot.test.context.assertj.AssertableReactiveWebApplicationContext;
+import io.github.kotlinmania.spring.boot.web.context.reactive.AnnotationConfigReactiveWebApplicationContext;
+import io.github.kotlinmania.spring.boot.web.context.reactive.ConfigurableReactiveWebApplicationContext;
 
 /**
  * Tests for {@link ReactiveWebApplicationContextRunner}.

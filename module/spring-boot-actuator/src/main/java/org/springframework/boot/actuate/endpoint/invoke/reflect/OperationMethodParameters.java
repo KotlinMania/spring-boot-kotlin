@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.actuate.endpoint.invoke.reflect;
+package io.github.kotlinmania.spring.boot.actuate.endpoint.invoke.reflect;
 
 import java.lang.reflect.Method;
 import java.lang.reflect.Parameter;
@@ -26,8 +26,8 @@ import java.util.stream.Stream;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.actuate.endpoint.invoke.OperationParameter;
-import org.springframework.boot.actuate.endpoint.invoke.OperationParameters;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.invoke.OperationParameter;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.invoke.OperationParameters;
 import org.springframework.core.ParameterNameDiscoverer;
 import org.springframework.util.Assert;
 

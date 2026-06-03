@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.build.antora;
+package io.github.kotlinmania.spring.boot.build.antora;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -25,15 +25,15 @@ import java.util.function.Function;
 
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.build.bom.Library;
-import org.springframework.boot.build.bom.Library.BomAlignment;
-import org.springframework.boot.build.bom.Library.Group;
-import org.springframework.boot.build.bom.Library.LibraryVersion;
-import org.springframework.boot.build.bom.Library.Link;
-import org.springframework.boot.build.bom.Library.ProhibitedVersion;
-import org.springframework.boot.build.bom.Library.VersionAlignment;
-import org.springframework.boot.build.bom.bomr.version.DependencyVersion;
-import org.springframework.boot.build.properties.BuildType;
+import io.github.kotlinmania.spring.boot.build.bom.Library;
+import io.github.kotlinmania.spring.boot.build.bom.Library.BomAlignment;
+import io.github.kotlinmania.spring.boot.build.bom.Library.Group;
+import io.github.kotlinmania.spring.boot.build.bom.Library.LibraryVersion;
+import io.github.kotlinmania.spring.boot.build.bom.Library.Link;
+import io.github.kotlinmania.spring.boot.build.bom.Library.ProhibitedVersion;
+import io.github.kotlinmania.spring.boot.build.bom.Library.VersionAlignment;
+import io.github.kotlinmania.spring.boot.build.bom.bomr.version.DependencyVersion;
+import io.github.kotlinmania.spring.boot.build.properties.BuildType;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -221,7 +221,7 @@ class AntoraAsciidocAttributesTests {
 		Map<String, String> attributes = new AntoraAsciidocAttributes("1.2.3-SNAPSHOT", true, BuildType.OPEN_SOURCE,
 				null, mockDependencyVersions(), null)
 			.get();
-		assertThat(attributes).containsEntry("include-java", "ROOT:example$java/org/springframework/boot/docs");
+		assertThat(attributes).containsEntry("include-java", "ROOT:example$java/io.github.kotlinmania.spring.boot.docs");
 		assertThat(attributes).containsEntry("url-spring-data-cassandra-site",
 				"https://spring.io/projects/spring-data-cassandra");
 		List<String> keys = new ArrayList<>(attributes.keySet());

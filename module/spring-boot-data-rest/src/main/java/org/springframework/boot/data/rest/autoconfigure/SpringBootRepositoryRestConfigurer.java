@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.data.rest.autoconfigure;
+package io.github.kotlinmania.spring.boot.data.rest.autoconfigure;
 
 import java.util.List;
 
 import tools.jackson.databind.cfg.MapperBuilder;
 import tools.jackson.databind.json.JsonMapper;
 
-import org.springframework.boot.jackson.autoconfigure.JsonMapperBuilderCustomizer;
+import io.github.kotlinmania.spring.boot.jackson.autoconfigure.JsonMapperBuilderCustomizer;
 import org.springframework.core.annotation.Order;
 import org.springframework.data.rest.core.config.RepositoryRestConfiguration;
 import org.springframework.data.rest.webmvc.config.RepositoryRestConfigurer;

@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.howto.webserver.enablemultipleconnectors.jetty;
+package io.github.kotlinmania.spring.boot.docs.howto.webserver.enablemultipleconnectors.jetty;
 
 import org.eclipse.jetty.server.ServerConnector;
 
-import org.springframework.boot.jetty.ConfigurableJettyWebServerFactory;
-import org.springframework.boot.web.server.WebServerFactoryCustomizer;
+import io.github.kotlinmania.spring.boot.jetty.ConfigurableJettyWebServerFactory;
+import io.github.kotlinmania.spring.boot.web.server.WebServerFactoryCustomizer;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 

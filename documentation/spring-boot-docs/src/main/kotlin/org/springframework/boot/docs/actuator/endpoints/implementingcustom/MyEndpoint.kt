@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.actuator.endpoints.implementingcustom
+package io.github.kotlinmania.spring.boot.docs.actuator.endpoints.implementingcustom
 
-import org.springframework.boot.actuate.endpoint.annotation.Endpoint
-import org.springframework.boot.actuate.endpoint.annotation.ReadOperation
-import org.springframework.boot.actuate.endpoint.annotation.WriteOperation
+import io.github.kotlinmania.spring.boot.actuate.endpoint.annotation.Endpoint
+import io.github.kotlinmania.spring.boot.actuate.endpoint.annotation.ReadOperation
+import io.github.kotlinmania.spring.boot.actuate.endpoint.annotation.WriteOperation
 
 @Endpoint(id = "custom")
 @Suppress("UNUSED_PARAMETER")

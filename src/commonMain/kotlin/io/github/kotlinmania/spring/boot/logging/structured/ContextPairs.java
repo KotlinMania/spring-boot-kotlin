@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.logging.structured;
+package io.github.kotlinmania.spring.boot.logging.structured;
 
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
@@ -26,8 +26,8 @@ import java.util.function.Function;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.json.JsonWriter;
-import org.springframework.boot.json.JsonWriter.PairExtractor;
+import io.github.kotlinmania.spring.boot.json.JsonWriter;
+import io.github.kotlinmania.spring.boot.json.JsonWriter.PairExtractor;
 import org.springframework.util.Assert;
 import org.springframework.util.StringUtils;
 

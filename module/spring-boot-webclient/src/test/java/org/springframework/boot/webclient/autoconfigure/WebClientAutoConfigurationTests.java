@@ -14,17 +14,17 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.webclient.autoconfigure;
+package io.github.kotlinmania.spring.boot.webclient.autoconfigure;
 
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.autoconfigure.AutoConfigurations;
-import org.springframework.boot.autoconfigure.ssl.SslAutoConfiguration;
-import org.springframework.boot.http.client.autoconfigure.HttpClientAutoConfiguration;
-import org.springframework.boot.http.client.autoconfigure.reactive.ReactiveHttpClientAutoConfiguration;
-import org.springframework.boot.http.codec.CodecCustomizer;
-import org.springframework.boot.test.context.runner.ApplicationContextRunner;
-import org.springframework.boot.webclient.WebClientCustomizer;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurations;
+import io.github.kotlinmania.spring.boot.autoconfigure.ssl.SslAutoConfiguration;
+import io.github.kotlinmania.spring.boot.http.client.autoconfigure.HttpClientAutoConfiguration;
+import io.github.kotlinmania.spring.boot.http.client.autoconfigure.reactive.ReactiveHttpClientAutoConfiguration;
+import io.github.kotlinmania.spring.boot.http.codec.CodecCustomizer;
+import io.github.kotlinmania.spring.boot.test.context.runner.ApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.webclient.WebClientCustomizer;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.codec.CodecConfigurer;

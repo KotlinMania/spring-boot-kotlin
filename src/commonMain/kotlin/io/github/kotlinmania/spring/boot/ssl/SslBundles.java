@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.ssl;
+package io.github.kotlinmania.spring.boot.ssl;
 
 import java.util.List;
 import java.util.function.BiConsumer;

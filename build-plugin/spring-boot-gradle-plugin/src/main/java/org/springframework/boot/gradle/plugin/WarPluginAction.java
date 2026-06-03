@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.gradle.plugin;
+package io.github.kotlinmania.spring.boot.gradle.plugin;
 
 import java.util.concurrent.Callable;
 
@@ -33,8 +33,8 @@ import org.gradle.api.tasks.SourceSetContainer;
 import org.gradle.api.tasks.TaskProvider;
 import org.gradle.api.tasks.bundling.War;
 
-import org.springframework.boot.gradle.tasks.bundling.BootBuildImage;
-import org.springframework.boot.gradle.tasks.bundling.BootWar;
+import io.github.kotlinmania.spring.boot.gradle.tasks.bundling.BootBuildImage;
+import io.github.kotlinmania.spring.boot.gradle.tasks.bundling.BootWar;
 
 /**
  * {@link Action} that is executed in response to the {@link WarPlugin} being applied.

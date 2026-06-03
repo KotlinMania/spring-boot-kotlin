@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.sql.init;
+package io.github.kotlinmania.spring.boot.sql.init;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
@@ -24,7 +24,7 @@ import java.util.Arrays;
 
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.testsupport.classpath.resources.WithResource;
+import io.github.kotlinmania.spring.boot.testsupport.classpath.resources.WithResource;
 import org.springframework.dao.DataAccessException;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -54,11 +54,11 @@ public abstract class AbstractScriptDatabaseInitializerTests<T extends AbstractS
 	@Test
 	void whenDatabaseIsInitializedWithDirectoryLocationsThenFailureIsHelpful() {
 		DatabaseInitializationSettings settings = new DatabaseInitializationSettings();
-		settings.setSchemaLocations(Arrays.asList("/org/springframework/boot/sql/init"));
-		settings.setDataLocations(Arrays.asList("/org/springframework/boot/sql/init"));
+		settings.setSchemaLocations(Arrays.asList("/io.github.kotlinmania.spring.boot.sql/init"));
+		settings.setDataLocations(Arrays.asList("/io.github.kotlinmania.spring.boot.sql/init"));
 		T initializer = createEmbeddedDatabaseInitializer(settings);
 		assertThatIllegalStateException().isThrownBy(initializer::initializeDatabase)
-			.withMessage("No schema scripts found at location '/org/springframework/boot/sql/init'");
+			.withMessage("No schema scripts found at location '/io.github.kotlinmania.spring.boot.sql/init'");
 	}
 
 	@Test

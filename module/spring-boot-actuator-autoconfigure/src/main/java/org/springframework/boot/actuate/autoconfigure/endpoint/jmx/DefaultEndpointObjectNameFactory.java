@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.actuate.autoconfigure.endpoint.jmx;
+package io.github.kotlinmania.spring.boot.actuate.autoconfigure.endpoint.jmx;
 
 import javax.management.MBeanServer;
 import javax.management.MalformedObjectNameException;
@@ -22,9 +22,9 @@ import javax.management.ObjectName;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.actuate.endpoint.jmx.EndpointObjectNameFactory;
-import org.springframework.boot.actuate.endpoint.jmx.ExposableJmxEndpoint;
-import org.springframework.boot.autoconfigure.jmx.JmxProperties;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.jmx.EndpointObjectNameFactory;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.jmx.ExposableJmxEndpoint;
+import io.github.kotlinmania.spring.boot.autoconfigure.jmx.JmxProperties;
 import org.springframework.jmx.support.ObjectNameManager;
 import org.springframework.util.Assert;
 import org.springframework.util.ObjectUtils;
@@ -78,7 +78,7 @@ class DefaultEndpointObjectNameFactory implements EndpointObjectNameFactory {
 		if (StringUtils.hasText(this.jmxProperties.getDefaultDomain())) {
 			return this.jmxProperties.getDefaultDomain();
 		}
-		return "org.springframework.boot";
+		return "io.github.kotlinmania.spring.boot.;
 	}
 
 	private boolean hasMBean(String baseObjectName) throws MalformedObjectNameException {

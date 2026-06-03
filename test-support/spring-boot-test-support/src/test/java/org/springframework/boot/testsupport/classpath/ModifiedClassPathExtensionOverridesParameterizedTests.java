@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.testsupport.classpath;
+package io.github.kotlinmania.spring.boot.testsupport.classpath;
 
 import java.util.stream.Stream;
 

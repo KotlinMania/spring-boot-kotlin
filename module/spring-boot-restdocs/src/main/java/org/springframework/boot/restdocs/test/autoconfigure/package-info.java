@@ -18,6 +18,6 @@
  * Auto-configuration for tests using Spring REST Docs.
  */
 @NullMarked
-package org.springframework.boot.restdocs.test.autoconfigure;
+package io.github.kotlinmania.spring.boot.restdocs.test.autoconfigure;
 
 import org.jspecify.annotations.NullMarked;

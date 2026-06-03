@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.webmvc.actuate.endpoint.web;
+package io.github.kotlinmania.spring.boot.webmvc.actuate.endpoint.web;
 
 import java.util.Collection;
 import java.util.Collections;
@@ -22,13 +22,13 @@ import java.util.Set;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.actuate.endpoint.web.EndpointMapping;
-import org.springframework.boot.actuate.endpoint.web.EndpointMediaTypes;
-import org.springframework.boot.actuate.endpoint.web.ExposableWebEndpoint;
-import org.springframework.boot.actuate.endpoint.web.WebOperation;
-import org.springframework.boot.actuate.endpoint.web.WebOperationRequestPredicate;
-import org.springframework.boot.health.actuate.endpoint.AdditionalHealthEndpointPath;
-import org.springframework.boot.health.actuate.endpoint.HealthEndpointGroup;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.web.EndpointMapping;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.web.EndpointMediaTypes;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.web.ExposableWebEndpoint;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.web.WebOperation;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.web.WebOperationRequestPredicate;
+import io.github.kotlinmania.spring.boot.health.actuate.endpoint.AdditionalHealthEndpointPath;
+import io.github.kotlinmania.spring.boot.health.actuate.endpoint.HealthEndpointGroup;
 import org.springframework.web.servlet.HandlerMapping;
 
 /**

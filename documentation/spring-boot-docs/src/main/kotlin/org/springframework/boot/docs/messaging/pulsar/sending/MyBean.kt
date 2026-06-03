@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.messaging.pulsar.sending
+package io.github.kotlinmania.spring.boot.docs.messaging.pulsar.sending
 
 import org.apache.pulsar.client.api.PulsarClientException
 import org.springframework.pulsar.core.PulsarTemplate

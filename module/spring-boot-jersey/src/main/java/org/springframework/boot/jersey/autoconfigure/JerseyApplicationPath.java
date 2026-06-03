@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.jersey.autoconfigure;
+package io.github.kotlinmania.spring.boot.jersey.autoconfigure;
 
-import org.springframework.boot.web.servlet.ServletRegistrationBean;
+import io.github.kotlinmania.spring.boot.web.servlet.ServletRegistrationBean;
 
 /**
  * Interface that can be used by auto-configurations that need path details Jersey's

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.web.servlet.support;
+package io.github.kotlinmania.spring.boot.web.servlet.support;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -39,9 +39,9 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.web.error.ErrorPage;
-import org.springframework.boot.web.error.ErrorPageRegistrar;
-import org.springframework.boot.web.error.ErrorPageRegistry;
+import io.github.kotlinmania.spring.boot.web.error.ErrorPage;
+import io.github.kotlinmania.spring.boot.web.error.ErrorPageRegistrar;
+import io.github.kotlinmania.spring.boot.web.error.ErrorPageRegistry;
 import org.springframework.core.Ordered;
 import org.springframework.util.ClassUtils;
 import org.springframework.web.filter.OncePerRequestFilter;

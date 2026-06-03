@@ -16,7 +16,7 @@
 
 plugins {
 	id "java"
-	id "org.springframework.boot.integration-test"
+	id "io.github.kotlinmania.spring.boot.integration-test"
 }
 
 description = "Spring Boot SNI Integration Tests"
@@ -48,7 +48,7 @@ tasks.register("syncMavenRepository", Sync) {
 	into layout.buildDirectory.dir("int-test-maven-repository")
 }
 
-tasks.register("syncReactiveServerAppSource", org.springframework.boot.build.SyncAppSource) {
+tasks.register("syncReactiveServerAppSource", io.github.kotlinmania.spring.boot.build.SyncAppSource) {
 	sourceDirectory = file("spring-boot-sni-reactive-app")
 	destinationDirectory = file(layout.buildDirectory.dir("spring-boot-sni-reactive-app"))
 }
@@ -63,7 +63,7 @@ tasks.register("buildReactiveServerApps", GradleBuild) {
 	]
 }
 
-tasks.register("syncServletServerAppSource", org.springframework.boot.build.SyncAppSource) {
+tasks.register("syncServletServerAppSource", io.github.kotlinmania.spring.boot.build.SyncAppSource) {
 	sourceDirectory = file("spring-boot-sni-servlet-app")
 	destinationDirectory = file(layout.buildDirectory.dir("spring-boot-sni-servlet-app"))
 }
@@ -77,7 +77,7 @@ tasks.register("buildServletServerApps", GradleBuild) {
 	]
 }
 
-tasks.register("syncClientAppSource", org.springframework.boot.build.SyncAppSource) {
+tasks.register("syncClientAppSource", io.github.kotlinmania.spring.boot.build.SyncAppSource) {
 	sourceDirectory = file("spring-boot-sni-client-app")
 	destinationDirectory = file(layout.buildDirectory.dir("spring-boot-sni-client-app"))
 }

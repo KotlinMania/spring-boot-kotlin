@@ -19,8 +19,8 @@ package smoketest.test.domain;
 import org.junit.jupiter.api.Test;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.data.jpa.test.autoconfigure.DataJpaTest;
-import org.springframework.boot.jpa.test.autoconfigure.TestEntityManager;
+import io.github.kotlinmania.spring.boot.data.jpa.test.autoconfigure.DataJpaTest;
+import io.github.kotlinmania.spring.boot.jpa.test.autoconfigure.TestEntityManager;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

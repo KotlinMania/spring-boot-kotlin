@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.build.bom;
+package io.github.kotlinmania.spring.boot.build.bom;
 
 import java.io.File;
 import java.net.URI;
@@ -39,16 +39,16 @@ import org.gradle.api.artifacts.dsl.DependencyHandler;
 import org.w3c.dom.Document;
 import org.w3c.dom.NodeList;
 
-import org.springframework.boot.build.bom.Library.Group;
-import org.springframework.boot.build.bom.Library.ImportedBom;
-import org.springframework.boot.build.bom.Library.Link;
-import org.springframework.boot.build.bom.Library.Module;
-import org.springframework.boot.build.bom.ResolvedBom.Bom;
-import org.springframework.boot.build.bom.ResolvedBom.Id;
-import org.springframework.boot.build.bom.ResolvedBom.JavadocLink;
-import org.springframework.boot.build.bom.ResolvedBom.Links;
-import org.springframework.boot.build.bom.ResolvedBom.ResolvedLibrary;
-import org.springframework.boot.build.xml.XmlDocument;
+import io.github.kotlinmania.spring.boot.build.bom.Library.Group;
+import io.github.kotlinmania.spring.boot.build.bom.Library.ImportedBom;
+import io.github.kotlinmania.spring.boot.build.bom.Library.Link;
+import io.github.kotlinmania.spring.boot.build.bom.Library.Module;
+import io.github.kotlinmania.spring.boot.build.bom.ResolvedBom.Bom;
+import io.github.kotlinmania.spring.boot.build.bom.ResolvedBom.Id;
+import io.github.kotlinmania.spring.boot.build.bom.ResolvedBom.JavadocLink;
+import io.github.kotlinmania.spring.boot.build.bom.ResolvedBom.Links;
+import io.github.kotlinmania.spring.boot.build.bom.ResolvedBom.ResolvedLibrary;
+import io.github.kotlinmania.spring.boot.build.xml.XmlDocument;
 
 /**
  * Creates a {@link ResolvedBom resolved bom}.

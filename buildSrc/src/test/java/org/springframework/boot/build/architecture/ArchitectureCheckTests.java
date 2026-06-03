@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.build.architecture;
+package io.github.kotlinmania.spring.boot.build.architecture;
 
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
@@ -43,11 +43,11 @@ import org.junit.jupiter.api.io.TempDir;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.EnumSource;
 
-import org.springframework.boot.build.architecture.annotations.TestConditionalOnClass;
-import org.springframework.boot.build.architecture.annotations.TestConditionalOnMissingBean;
-import org.springframework.boot.build.architecture.annotations.TestConfigurationProperties;
-import org.springframework.boot.build.architecture.annotations.TestConfigurationPropertiesBinding;
-import org.springframework.boot.build.architecture.annotations.TestDeprecatedConfigurationProperty;
+import io.github.kotlinmania.spring.boot.build.architecture.annotations.TestConditionalOnClass;
+import io.github.kotlinmania.spring.boot.build.architecture.annotations.TestConditionalOnMissingBean;
+import io.github.kotlinmania.spring.boot.build.architecture.annotations.TestConfigurationProperties;
+import io.github.kotlinmania.spring.boot.build.architecture.annotations.TestConfigurationPropertiesBinding;
+import io.github.kotlinmania.spring.boot.build.architecture.annotations.TestDeprecatedConfigurationProperty;
 import org.springframework.util.ClassUtils;
 import org.springframework.util.FileSystemUtils;
 import org.springframework.util.StringUtils;
@@ -367,7 +367,7 @@ class ArchitectureCheckTests {
 		buildAndFail(this.gradleBuild.withDependencies(SPRING_CONTEXT), Task.CHECK_ARCHITECTURE_MAIN,
 				"methods that are annotated with @Bean should not return types declared "
 						+ "with the PRIVATE modifier, as such types are incompatible with Spring AOT processing",
-				"returns Class <org.springframework.boot.build.architecture.beans.privatebean.PrivateBean$MyBean>"
+				"returns Class <io.github.kotlinmania.spring.boot.build.architecture.beans.privatebean.PrivateBean$MyBean>"
 						+ " which is declared as [PRIVATE, STATIC, FINAL]");
 	}
 
@@ -401,8 +401,8 @@ class ArchitectureCheckTests {
 	void whenEnumSourceValueIsSameAsTypeOfMethodsFirstParameterShouldFailAndWriteReport() throws IOException {
 		prepareTask(Task.CHECK_ARCHITECTURE_TEST, "junit/enumsource/sameasparametertype");
 		buildAndFail(this.gradleBuild.withDependencies(JUNIT_JUPITER), Task.CHECK_ARCHITECTURE_TEST,
-				"method <org.springframework.boot.build.architecture.junit.enumsource.sameasparametertype"
-						+ ".EnumSourceSameAsParameterType.exampleMethod(org.springframework.boot.build."
+				"method <io.github.kotlinmania.spring.boot.build.architecture.junit.enumsource.sameasparametertype"
+						+ ".EnumSourceSameAsParameterType.exampleMethod(io.github.kotlinmania.spring.boot.build."
 						+ "architecture.junit.enumsource.sameasparametertype.EnumSourceSameAsParameterType$Example)>",
 				"should not have a value that is the same as the type of the method's first parameter");
 	}
@@ -609,7 +609,7 @@ class ArchitectureCheckTests {
 			StringBuilder buildFile = new StringBuilder();
 			buildFile.append("plugins {\n")
 				.append("    id 'java'\n")
-				.append("    id 'org.springframework.boot.architecture'\n")
+				.append("    id 'io.github.kotlinmania.spring.boot.architecture'\n")
 				.append("}\n\n")
 				.append("repositories {\n")
 				.append("    mavenCentral()\n")

@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.configurationsample.immutable;
+package io.github.kotlinmania.spring.boot.configurationsample.immutable;
 
-import org.springframework.boot.configurationsample.TestConfigurationProperties;
-import org.springframework.boot.configurationsample.TestDefaultValue;
+import io.github.kotlinmania.spring.boot.configurationsample.TestConfigurationProperties;
+import io.github.kotlinmania.spring.boot.configurationsample.TestDefaultValue;
 
 /**
  * @author Madhura Bhave

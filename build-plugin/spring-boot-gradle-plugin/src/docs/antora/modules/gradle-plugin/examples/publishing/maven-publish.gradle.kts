@@ -1,7 +1,7 @@
 plugins {
 	java
 	`maven-publish`
-	id("org.springframework.boot") version "{version-spring-boot}"
+	id("io.github.kotlinmania.spring.boot.) version "{version-spring-boot}"
 }
 
 // tag::publishing[]

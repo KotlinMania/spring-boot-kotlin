@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.jdbc.autoconfigure;
+package io.github.kotlinmania.spring.boot.jdbc.autoconfigure;
 
 import java.util.Optional;
 
@@ -23,8 +23,8 @@ import org.junit.jupiter.api.Test;
 
 import org.springframework.aot.hint.RuntimeHints;
 import org.springframework.aot.hint.predicate.RuntimeHintsPredicates;
-import org.springframework.boot.jdbc.autoconfigure.DataSourcePoolMetadataProvidersConfiguration.HikariDataSourcePoolMetadataRuntimeHints;
-import org.springframework.boot.jdbc.autoconfigure.DataSourcePoolMetadataProvidersConfiguration.HikariPoolDataSourceMetadataProviderConfiguration;
+import io.github.kotlinmania.spring.boot.jdbc.autoconfigure.DataSourcePoolMetadataProvidersConfiguration.HikariDataSourcePoolMetadataRuntimeHints;
+import io.github.kotlinmania.spring.boot.jdbc.autoconfigure.DataSourcePoolMetadataProvidersConfiguration.HikariPoolDataSourceMetadataProviderConfiguration;
 import org.springframework.context.annotation.ImportRuntimeHints;
 import org.springframework.core.annotation.MergedAnnotations;
 

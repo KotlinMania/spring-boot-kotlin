@@ -18,9 +18,9 @@
  * External configuration support allowing 'application.properties' to be loaded and used
  * within a Spring Boot application.
  *
- * @see org.springframework.boot.context.config.ConfigDataEnvironmentPostProcessor
+ * @see io.github.kotlinmania.spring.boot.context.config.ConfigDataEnvironmentPostProcessor
  */
 @NullMarked
-package org.springframework.boot.context.config;
+package io.github.kotlinmania.spring.boot.context.config;
 
 import org.jspecify.annotations.NullMarked;

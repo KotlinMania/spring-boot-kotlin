@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.jersey.autoconfigure.actuate.endpoint.web;
+package io.github.kotlinmania.spring.boot.jersey.autoconfigure.actuate.endpoint.web;
 
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
@@ -32,15 +32,15 @@ import com.fasterxml.jackson.databind.ser.std.StdScalarSerializer;
 import org.glassfish.jersey.server.ResourceConfig;
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.actuate.autoconfigure.beans.BeansEndpointAutoConfiguration;
-import org.springframework.boot.actuate.autoconfigure.endpoint.EndpointAutoConfiguration;
-import org.springframework.boot.actuate.autoconfigure.endpoint.web.WebEndpointAutoConfiguration;
-import org.springframework.boot.actuate.autoconfigure.web.server.ManagementContextAutoConfiguration;
-import org.springframework.boot.autoconfigure.AutoConfigurations;
-import org.springframework.boot.jersey.autoconfigure.JerseyAutoConfiguration;
-import org.springframework.boot.test.context.runner.WebApplicationContextRunner;
-import org.springframework.boot.tomcat.autoconfigure.servlet.TomcatServletWebServerAutoConfiguration;
-import org.springframework.boot.web.server.servlet.context.AnnotationConfigServletWebServerApplicationContext;
+import io.github.kotlinmania.spring.boot.actuate.autoconfigure.beans.BeansEndpointAutoConfiguration;
+import io.github.kotlinmania.spring.boot.actuate.autoconfigure.endpoint.EndpointAutoConfiguration;
+import io.github.kotlinmania.spring.boot.actuate.autoconfigure.endpoint.web.WebEndpointAutoConfiguration;
+import io.github.kotlinmania.spring.boot.actuate.autoconfigure.web.server.ManagementContextAutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurations;
+import io.github.kotlinmania.spring.boot.jersey.autoconfigure.JerseyAutoConfiguration;
+import io.github.kotlinmania.spring.boot.test.context.runner.WebApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.tomcat.autoconfigure.servlet.TomcatServletWebServerAutoConfiguration;
+import io.github.kotlinmania.spring.boot.web.server.servlet.context.AnnotationConfigServletWebServerApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.test.web.reactive.server.WebTestClient;
@@ -135,7 +135,7 @@ class JerseyEndpointIntegrationTests {
 	@SuppressWarnings("removal")
 	private Class<?>[] getAutoconfigurations(Class<?>... additional) {
 		List<Class<?>> autoconfigurations = new ArrayList<>(
-				Arrays.asList(org.springframework.boot.jackson2.autoconfigure.Jackson2AutoConfiguration.class,
+				Arrays.asList(io.github.kotlinmania.spring.boot.jackson2.autoconfigure.Jackson2AutoConfiguration.class,
 						JerseyAutoConfiguration.class, EndpointAutoConfiguration.class,
 						TomcatServletWebServerAutoConfiguration.class, WebEndpointAutoConfiguration.class,
 						ManagementContextAutoConfiguration.class, BeansEndpointAutoConfiguration.class));
@@ -143,13 +143,13 @@ class JerseyEndpointIntegrationTests {
 		return autoconfigurations.toArray(new Class<?>[0]);
 	}
 
-	@org.springframework.boot.actuate.endpoint.web.annotation.ControllerEndpoint(id = "controller")
+	@io.github.kotlinmania.spring.boot.actuate.endpoint.web.annotation.ControllerEndpoint(id = "controller")
 	@SuppressWarnings("removal")
 	static class TestControllerEndpoint {
 
 	}
 
-	@org.springframework.boot.actuate.endpoint.web.annotation.RestControllerEndpoint(id = "restcontroller")
+	@io.github.kotlinmania.spring.boot.actuate.endpoint.web.annotation.RestControllerEndpoint(id = "restcontroller")
 	@SuppressWarnings("removal")
 	static class TestRestControllerEndpoint {
 
@@ -185,7 +185,7 @@ class JerseyEndpointIntegrationTests {
 	static class EndpointObjectMapperConfiguration {
 
 		@Bean
-		org.springframework.boot.actuate.endpoint.jackson.EndpointJackson2ObjectMapper endpointJackson2ObjectMapper() {
+		io.github.kotlinmania.spring.boot.actuate.endpoint.jackson.EndpointJackson2ObjectMapper endpointJackson2ObjectMapper() {
 			SimpleModule module = new SimpleModule();
 			module.addSerializer(String.class, new ReverseStringSerializer());
 			ObjectMapper objectMapper = new ObjectMapper();

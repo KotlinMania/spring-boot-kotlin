@@ -18,6 +18,6 @@
  * Auto-configuration for RestClient.
  */
 @NullMarked
-package org.springframework.boot.restclient.autoconfigure;
+package io.github.kotlinmania.spring.boot.restclient.autoconfigure;
 
 import org.jspecify.annotations.NullMarked;

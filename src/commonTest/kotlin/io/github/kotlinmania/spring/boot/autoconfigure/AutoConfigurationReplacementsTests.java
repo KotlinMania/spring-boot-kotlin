@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.autoconfigure;
+package io.github.kotlinmania.spring.boot.autoconfigure;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
@@ -27,7 +27,7 @@ import java.util.Set;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.testsupport.classpath.resources.WithResource;
+import io.github.kotlinmania.spring.boot.testsupport.classpath.resources.WithResource;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -37,7 +37,7 @@ import static org.assertj.core.api.Assertions.assertThat;
  * @author Phillip Webb
  */
 @WithResource(
-		name = "META-INF/spring/org.springframework.boot.autoconfigure.AutoConfigurationReplacementsTests$TestAutoConfigurationReplacements.replacements",
+		name = "META-INF/spring/io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurationReplacementsTests$TestAutoConfigurationReplacements.replacements",
 		content = """
 				com.example.A1=com.example.A2
 				com.example.B1=com.example.B2

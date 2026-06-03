@@ -14,17 +14,17 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.actuate.context.properties;
+package io.github.kotlinmania.spring.boot.actuate.context.properties;
 
 import java.util.Set;
 
-import org.springframework.boot.actuate.context.properties.ConfigurationPropertiesReportEndpoint.ConfigurationPropertiesDescriptor;
-import org.springframework.boot.actuate.endpoint.SecurityContext;
-import org.springframework.boot.actuate.endpoint.Show;
-import org.springframework.boot.actuate.endpoint.annotation.ReadOperation;
-import org.springframework.boot.actuate.endpoint.annotation.Selector;
-import org.springframework.boot.actuate.endpoint.web.WebEndpointResponse;
-import org.springframework.boot.actuate.endpoint.web.annotation.EndpointWebExtension;
+import io.github.kotlinmania.spring.boot.actuate.context.properties.ConfigurationPropertiesReportEndpoint.ConfigurationPropertiesDescriptor;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.SecurityContext;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.Show;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.annotation.ReadOperation;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.annotation.Selector;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.web.WebEndpointResponse;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.web.annotation.EndpointWebExtension;
 
 /**
  * {@link EndpointWebExtension @EndpointWebExtension} for the

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.http.client.reactive;
+package io.github.kotlinmania.spring.boot.http.client.reactive;
 
 import org.eclipse.jetty.client.HttpClient;
 import org.eclipse.jetty.client.HttpClientTransport;
@@ -23,9 +23,9 @@ import org.eclipse.jetty.io.ClientConnector;
 import org.eclipse.jetty.util.SocketAddressResolver;
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.http.client.HttpClientSettings;
-import org.springframework.boot.http.client.InetAddressFilter;
-import org.springframework.boot.http.client.JettyHttpClientBuilder;
+import io.github.kotlinmania.spring.boot.http.client.HttpClientSettings;
+import io.github.kotlinmania.spring.boot.http.client.InetAddressFilter;
+import io.github.kotlinmania.spring.boot.http.client.JettyHttpClientBuilder;
 import org.springframework.http.client.reactive.JettyClientHttpConnector;
 import org.springframework.test.util.ReflectionTestUtils;
 

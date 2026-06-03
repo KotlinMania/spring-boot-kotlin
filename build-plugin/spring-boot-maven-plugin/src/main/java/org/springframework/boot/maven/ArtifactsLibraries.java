@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.maven;
+package io.github.kotlinmania.spring.boot.maven;
 
 import java.io.File;
 import java.io.IOException;
@@ -31,11 +31,11 @@ import org.apache.maven.plugin.logging.Log;
 import org.apache.maven.project.MavenProject;
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.loader.tools.Libraries;
-import org.springframework.boot.loader.tools.Library;
-import org.springframework.boot.loader.tools.LibraryCallback;
-import org.springframework.boot.loader.tools.LibraryCoordinates;
-import org.springframework.boot.loader.tools.LibraryScope;
+import io.github.kotlinmania.spring.boot.loader.tools.Libraries;
+import io.github.kotlinmania.spring.boot.loader.tools.Library;
+import io.github.kotlinmania.spring.boot.loader.tools.LibraryCallback;
+import io.github.kotlinmania.spring.boot.loader.tools.LibraryCoordinates;
+import io.github.kotlinmania.spring.boot.loader.tools.LibraryScope;
 
 /**
  * {@link Libraries} backed by Maven {@link Artifact}s.

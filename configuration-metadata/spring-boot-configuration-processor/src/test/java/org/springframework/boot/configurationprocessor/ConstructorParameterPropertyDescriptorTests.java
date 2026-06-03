@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.configurationprocessor;
+package io.github.kotlinmania.spring.boot.configurationprocessor;
 
 import java.util.Arrays;
 import java.util.List;
@@ -27,12 +27,12 @@ import javax.lang.model.util.ElementFilter;
 
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.configurationsample.immutable.ImmutableCollectionProperties;
-import org.springframework.boot.configurationsample.immutable.ImmutableInnerClassProperties;
-import org.springframework.boot.configurationsample.immutable.ImmutablePrimitiveProperties;
-import org.springframework.boot.configurationsample.immutable.ImmutablePrimitiveWithDefaultsProperties;
-import org.springframework.boot.configurationsample.immutable.ImmutablePrimitiveWrapperWithDefaultsProperties;
-import org.springframework.boot.configurationsample.immutable.ImmutableSimpleProperties;
+import io.github.kotlinmania.spring.boot.configurationsample.immutable.ImmutableCollectionProperties;
+import io.github.kotlinmania.spring.boot.configurationsample.immutable.ImmutableInnerClassProperties;
+import io.github.kotlinmania.spring.boot.configurationsample.immutable.ImmutablePrimitiveProperties;
+import io.github.kotlinmania.spring.boot.configurationsample.immutable.ImmutablePrimitiveWithDefaultsProperties;
+import io.github.kotlinmania.spring.boot.configurationsample.immutable.ImmutablePrimitiveWrapperWithDefaultsProperties;
+import io.github.kotlinmania.spring.boot.configurationsample.immutable.ImmutableSimpleProperties;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -127,7 +127,7 @@ class ConstructorParameterPropertyDescriptorTests extends PropertyDescriptorTest
 			ConstructorParameterPropertyDescriptor property = createPropertyDescriptor(ownerElement, "first");
 			assertItemMetadata(metadataEnv, property).isGroup()
 				.hasName("test.first")
-				.hasType("org.springframework.boot.configurationsample.immutable.ImmutableInnerClassProperties$Foo")
+				.hasType("io.github.kotlinmania.spring.boot.configurationsample.immutable.ImmutableInnerClassProperties$Foo")
 				.hasSourceType(ImmutableInnerClassProperties.class)
 				.hasSourceMethod("getFirst()")
 				.hasNoDescription()

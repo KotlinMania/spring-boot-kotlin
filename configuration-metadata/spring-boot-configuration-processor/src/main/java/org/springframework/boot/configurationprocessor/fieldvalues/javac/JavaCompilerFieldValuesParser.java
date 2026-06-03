@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.configurationprocessor.fieldvalues.javac;
+package io.github.kotlinmania.spring.boot.configurationprocessor.fieldvalues.javac;
 
 import java.util.Collections;
 import java.util.HashMap;
@@ -27,9 +27,9 @@ import javax.annotation.processing.ProcessingEnvironment;
 import javax.lang.model.element.Modifier;
 import javax.lang.model.element.TypeElement;
 
-import org.springframework.boot.configurationprocessor.fieldvalues.FieldValuesParser;
-import org.springframework.boot.configurationprocessor.fieldvalues.javac.ExpressionTree.Member;
-import org.springframework.boot.configurationprocessor.support.ConventionUtils;
+import io.github.kotlinmania.spring.boot.configurationprocessor.fieldvalues.FieldValuesParser;
+import io.github.kotlinmania.spring.boot.configurationprocessor.fieldvalues.javac.ExpressionTree.Member;
+import io.github.kotlinmania.spring.boot.configurationprocessor.support.ConventionUtils;
 
 /**
  * {@link FieldValuesParser} implementation for the standard Java compiler.

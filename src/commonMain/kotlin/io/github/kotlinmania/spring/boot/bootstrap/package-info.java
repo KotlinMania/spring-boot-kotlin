@@ -19,6 +19,6 @@
  * the application starts.
  */
 @NullMarked
-package org.springframework.boot.bootstrap;
+package io.github.kotlinmania.spring.boot.bootstrap;
 
 import org.jspecify.annotations.NullMarked;

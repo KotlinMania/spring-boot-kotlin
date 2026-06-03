@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.amqp.autoconfigure;
+package io.github.kotlinmania.spring.boot.amqp.autoconfigure;
 
 import org.springframework.amqp.rabbit.config.DirectRabbitListenerContainerFactory;
 import org.springframework.amqp.rabbit.connection.ConnectionFactory;
-import org.springframework.boot.context.properties.PropertyMapper;
+import io.github.kotlinmania.spring.boot.context.properties.PropertyMapper;
 
 /**
  * Configure {@link DirectRabbitListenerContainerFactory} with sensible defaults tuned

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.buildpack.platform.docker.transport;
+package io.github.kotlinmania.spring.boot.buildpack.platform.docker.transport;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
@@ -40,9 +40,9 @@ import org.apache.hc.core5.http.io.entity.AbstractHttpEntity;
 import org.jspecify.annotations.Nullable;
 import tools.jackson.core.JacksonException;
 
-import org.springframework.boot.buildpack.platform.io.Content;
-import org.springframework.boot.buildpack.platform.io.IOConsumer;
-import org.springframework.boot.buildpack.platform.json.SharedJsonMapper;
+import io.github.kotlinmania.spring.boot.buildpack.platform.io.Content;
+import io.github.kotlinmania.spring.boot.buildpack.platform.io.IOConsumer;
+import io.github.kotlinmania.spring.boot.buildpack.platform.json.SharedJsonMapper;
 import org.springframework.util.Assert;
 import org.springframework.util.StringUtils;
 

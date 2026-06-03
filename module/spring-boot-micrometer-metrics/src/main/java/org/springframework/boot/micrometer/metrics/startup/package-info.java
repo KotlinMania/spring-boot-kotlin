@@ -18,6 +18,6 @@
  * Support for startup metrics.
  */
 @NullMarked
-package org.springframework.boot.micrometer.metrics.startup;
+package io.github.kotlinmania.spring.boot.micrometer.metrics.startup;
 
 import org.jspecify.annotations.NullMarked;

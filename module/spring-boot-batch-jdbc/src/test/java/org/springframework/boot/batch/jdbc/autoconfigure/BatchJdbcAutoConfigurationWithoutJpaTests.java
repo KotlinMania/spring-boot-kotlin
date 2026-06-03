@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.batch.jdbc.autoconfigure;
+package io.github.kotlinmania.spring.boot.batch.jdbc.autoconfigure;
 
 import javax.sql.DataSource;
 
@@ -23,17 +23,17 @@ import org.junit.jupiter.api.Test;
 import org.springframework.batch.core.job.parameters.JobParameters;
 import org.springframework.batch.core.launch.JobOperator;
 import org.springframework.batch.core.repository.JobRepository;
-import org.springframework.boot.autoconfigure.AutoConfigurations;
-import org.springframework.boot.autoconfigure.TestAutoConfigurationPackage;
-import org.springframework.boot.batch.jdbc.autoconfigure.BatchJdbcAutoConfiguration.SpringBootBatchJdbcConfiguration;
-import org.springframework.boot.batch.jdbc.autoconfigure.domain.City;
-import org.springframework.boot.jdbc.autoconfigure.DataSourceTransactionManagerAutoConfiguration;
-import org.springframework.boot.jdbc.autoconfigure.EmbeddedDataSourceConfiguration;
-import org.springframework.boot.sql.init.DatabaseInitializationMode;
-import org.springframework.boot.test.context.runner.ApplicationContextRunner;
-import org.springframework.boot.testsupport.classpath.ClassPathExclusions;
-import org.springframework.boot.testsupport.classpath.resources.WithPackageResources;
-import org.springframework.boot.transaction.autoconfigure.TransactionAutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurations;
+import io.github.kotlinmania.spring.boot.autoconfigure.TestAutoConfigurationPackage;
+import io.github.kotlinmania.spring.boot.batch.jdbc.autoconfigure.BatchJdbcAutoConfiguration.SpringBootBatchJdbcConfiguration;
+import io.github.kotlinmania.spring.boot.batch.jdbc.autoconfigure.domain.City;
+import io.github.kotlinmania.spring.boot.jdbc.autoconfigure.DataSourceTransactionManagerAutoConfiguration;
+import io.github.kotlinmania.spring.boot.jdbc.autoconfigure.EmbeddedDataSourceConfiguration;
+import io.github.kotlinmania.spring.boot.sql.init.DatabaseInitializationMode;
+import io.github.kotlinmania.spring.boot.test.context.runner.ApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.testsupport.classpath.ClassPathExclusions;
+import io.github.kotlinmania.spring.boot.testsupport.classpath.resources.WithPackageResources;
+import io.github.kotlinmania.spring.boot.transaction.autoconfigure.TransactionAutoConfiguration;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.transaction.annotation.Isolation;
 

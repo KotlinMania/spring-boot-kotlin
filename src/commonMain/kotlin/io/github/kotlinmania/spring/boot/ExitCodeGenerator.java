@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot;
+package io.github.kotlinmania.spring.boot.
 
 /**
  * Interface used to generate an 'exit code' from a running command line

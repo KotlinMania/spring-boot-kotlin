@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.grpc.client.autoconfigure.test.scan;
+package io.github.kotlinmania.spring.boot.grpc.client.autoconfigure.test.scan;
 
 import io.grpc.CallOptions;
 import io.grpc.Channel;

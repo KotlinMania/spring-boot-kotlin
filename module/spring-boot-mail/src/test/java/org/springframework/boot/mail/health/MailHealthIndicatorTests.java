@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.mail.health;
+package io.github.kotlinmania.spring.boot.mail.health;
 
 import java.util.Properties;
 
@@ -29,8 +29,8 @@ import jakarta.mail.URLName;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.health.contributor.Health;
-import org.springframework.boot.health.contributor.Status;
+import io.github.kotlinmania.spring.boot.health.contributor.Health;
+import io.github.kotlinmania.spring.boot.health.contributor.Status;
 import org.springframework.mail.javamail.JavaMailSenderImpl;
 
 import static org.assertj.core.api.Assertions.assertThat;

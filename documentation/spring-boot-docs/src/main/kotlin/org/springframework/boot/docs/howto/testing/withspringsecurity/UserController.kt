@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.howto.testing.withspringsecurity
+package io.github.kotlinmania.spring.boot.docs.howto.testing.withspringsecurity
 
 class UserController
 

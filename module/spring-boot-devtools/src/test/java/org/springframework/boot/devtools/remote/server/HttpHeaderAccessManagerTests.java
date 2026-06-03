@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.devtools.remote.server;
+package io.github.kotlinmania.spring.boot.devtools.remote.server;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

@@ -15,6 +15,6 @@
  */
 
 @NullMarked
-package org.springframework.boot.test.context.example.scan;
+package io.github.kotlinmania.spring.boot.test.context.example.scan;
 
 import org.jspecify.annotations.NullMarked;

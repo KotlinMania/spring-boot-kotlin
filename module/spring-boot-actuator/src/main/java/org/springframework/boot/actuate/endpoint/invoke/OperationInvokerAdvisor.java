@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.actuate.endpoint.invoke;
+package io.github.kotlinmania.spring.boot.actuate.endpoint.invoke;
 
-import org.springframework.boot.actuate.endpoint.EndpointId;
-import org.springframework.boot.actuate.endpoint.OperationType;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.EndpointId;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.OperationType;
 
 /**
  * Allows additional functionality to be applied to an {@link OperationInvoker}.

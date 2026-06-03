@@ -14,21 +14,21 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.actuate.autoconfigure.audit;
+package io.github.kotlinmania.spring.boot.actuate.autoconfigure.audit;
 
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.actuate.audit.AuditEvent;
-import org.springframework.boot.actuate.audit.AuditEventRepository;
-import org.springframework.boot.actuate.audit.InMemoryAuditEventRepository;
-import org.springframework.boot.actuate.audit.listener.AbstractAuditListener;
-import org.springframework.boot.actuate.audit.listener.AuditListener;
-import org.springframework.boot.actuate.security.AbstractAuthenticationAuditListener;
-import org.springframework.boot.actuate.security.AbstractAuthorizationAuditListener;
-import org.springframework.boot.actuate.security.AuthenticationAuditListener;
-import org.springframework.boot.actuate.security.AuthorizationAuditListener;
-import org.springframework.boot.autoconfigure.AutoConfigurations;
-import org.springframework.boot.test.context.runner.WebApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.actuate.audit.AuditEvent;
+import io.github.kotlinmania.spring.boot.actuate.audit.AuditEventRepository;
+import io.github.kotlinmania.spring.boot.actuate.audit.InMemoryAuditEventRepository;
+import io.github.kotlinmania.spring.boot.actuate.audit.listener.AbstractAuditListener;
+import io.github.kotlinmania.spring.boot.actuate.audit.listener.AuditListener;
+import io.github.kotlinmania.spring.boot.actuate.security.AbstractAuthenticationAuditListener;
+import io.github.kotlinmania.spring.boot.actuate.security.AbstractAuthorizationAuditListener;
+import io.github.kotlinmania.spring.boot.actuate.security.AuthenticationAuditListener;
+import io.github.kotlinmania.spring.boot.actuate.security.AuthorizationAuditListener;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurations;
+import io.github.kotlinmania.spring.boot.test.context.runner.WebApplicationContextRunner;
 import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.loader.net.protocol.jar;
+package io.github.kotlinmania.spring.boot.loader.net.protocol.jar;
 
 import java.io.IOException;
 import java.util.jar.Attributes;
@@ -23,7 +23,7 @@ import java.util.jar.Manifest;
 
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.loader.net.protocol.jar.UrlJarManifest.ManifestSupplier;
+import io.github.kotlinmania.spring.boot.loader.net.protocol.jar.UrlJarManifest.ManifestSupplier;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.BDDMockito.then;

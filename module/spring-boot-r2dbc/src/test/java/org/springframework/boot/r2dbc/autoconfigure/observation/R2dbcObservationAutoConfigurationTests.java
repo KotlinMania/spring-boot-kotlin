@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.r2dbc.autoconfigure.observation;
+package io.github.kotlinmania.spring.boot.r2dbc.autoconfigure.observation;
 
 import java.util.UUID;
 import java.util.concurrent.atomic.AtomicReference;
@@ -28,13 +28,13 @@ import org.hamcrest.Matchers;
 import org.junit.jupiter.api.Test;
 import reactor.core.publisher.Mono;
 
-import org.springframework.boot.autoconfigure.AutoConfigurations;
-import org.springframework.boot.r2dbc.ConnectionFactoryBuilder;
-import org.springframework.boot.r2dbc.ConnectionFactoryDecorator;
-import org.springframework.boot.r2dbc.autoconfigure.ProxyConnectionFactoryCustomizer;
-import org.springframework.boot.r2dbc.autoconfigure.R2dbcProxyAutoConfiguration;
-import org.springframework.boot.test.context.assertj.AssertableApplicationContext;
-import org.springframework.boot.test.context.runner.ApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurations;
+import io.github.kotlinmania.spring.boot.r2dbc.ConnectionFactoryBuilder;
+import io.github.kotlinmania.spring.boot.r2dbc.ConnectionFactoryDecorator;
+import io.github.kotlinmania.spring.boot.r2dbc.autoconfigure.ProxyConnectionFactoryCustomizer;
+import io.github.kotlinmania.spring.boot.r2dbc.autoconfigure.R2dbcProxyAutoConfiguration;
+import io.github.kotlinmania.spring.boot.test.context.assertj.AssertableApplicationContext;
+import io.github.kotlinmania.spring.boot.test.context.runner.ApplicationContextRunner;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

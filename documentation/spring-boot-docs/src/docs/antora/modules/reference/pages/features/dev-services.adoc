@@ -23,7 +23,7 @@ Add the module dependency to your build, as shown in the following listings for 
 ----
 <dependencies>
 	<dependency>
-		<groupId>org.springframework.boot</groupId>
+		<groupId>io.github.kotlinmania.spring.boot./groupId>
 		<artifactId>spring-boot-docker-compose</artifactId>
 		<optional>true</optional>
 	</dependency>
@@ -34,7 +34,7 @@ Add the module dependency to your build, as shown in the following listings for 
 [source,gradle]
 ----
 dependencies {
-	developmentOnly("org.springframework.boot:spring-boot-docker-compose")
+	developmentOnly("io.github.kotlinmania.spring.boot.spring-boot-docker-compose")
 }
 ----
 
@@ -83,58 +83,58 @@ The following service connections are currently supported:
 |===
 | Connection Details | Matched on
 
-| javadoc:org.springframework.boot.activemq.autoconfigure.ActiveMQConnectionDetails[]
+| javadoc:io.github.kotlinmania.spring.boot.activemq.autoconfigure.ActiveMQConnectionDetails[]
 | Containers named "symptoma/activemq", "apache/activemq-classic" or "apache/activemq"
 
-| javadoc:org.springframework.boot.artemis.autoconfigure.ArtemisConnectionDetails[]
+| javadoc:io.github.kotlinmania.spring.boot.artemis.autoconfigure.ArtemisConnectionDetails[]
 | Containers named "apache/activemq-artemis" or "apache/artemis"
 
-| javadoc:org.springframework.boot.cassandra.autoconfigure.CassandraConnectionDetails[]
+| javadoc:io.github.kotlinmania.spring.boot.cassandra.autoconfigure.CassandraConnectionDetails[]
 | Containers named "cassandra"
 
-| javadoc:org.springframework.boot.elasticsearch.autoconfigure.ElasticsearchConnectionDetails[]
+| javadoc:io.github.kotlinmania.spring.boot.elasticsearch.autoconfigure.ElasticsearchConnectionDetails[]
 | Containers named "elasticsearch" or "elasticsearch/elasticsearch"
 
-| javadoc:org.springframework.boot.hazelcast.autoconfigure.HazelcastConnectionDetails[]
+| javadoc:io.github.kotlinmania.spring.boot.hazelcast.autoconfigure.HazelcastConnectionDetails[]
 | Containers named "hazelcast/hazelcast".
 
-| javadoc:org.springframework.boot.jdbc.autoconfigure.JdbcConnectionDetails[]
+| javadoc:io.github.kotlinmania.spring.boot.jdbc.autoconfigure.JdbcConnectionDetails[]
 | Containers named "clickhouse/clickhouse-server", "gvenzl/oracle-free", "gvenzl/oracle-xe", "mariadb", "mssql/server", "mysql", or "postgres"
 
-| javadoc:org.springframework.boot.ldap.autoconfigure.LdapConnectionDetails[]
+| javadoc:io.github.kotlinmania.spring.boot.ldap.autoconfigure.LdapConnectionDetails[]
 | Containers named "osixia/openldap", "lldap/lldap"
 
-| javadoc:org.springframework.boot.mongodb.autoconfigure.MongoConnectionDetails[]
+| javadoc:io.github.kotlinmania.spring.boot.mongodb.autoconfigure.MongoConnectionDetails[]
 | Containers named "mongo"
 
-| javadoc:org.springframework.boot.neo4j.autoconfigure.Neo4jConnectionDetails[]
+| javadoc:io.github.kotlinmania.spring.boot.neo4j.autoconfigure.Neo4jConnectionDetails[]
 | Containers named "neo4j"
 
-| javadoc:org.springframework.boot.opentelemetry.autoconfigure.logging.otlp.OtlpLoggingConnectionDetails[]
+| javadoc:io.github.kotlinmania.spring.boot.opentelemetry.autoconfigure.logging.otlp.OtlpLoggingConnectionDetails[]
 | Containers named "otel/opentelemetry-collector-contrib", "grafana/otel-lgtm"
 
-| javadoc:org.springframework.boot.micrometer.metrics.autoconfigure.export.otlp.OtlpMetricsConnectionDetails[]
+| javadoc:io.github.kotlinmania.spring.boot.micrometer.metrics.autoconfigure.export.otlp.OtlpMetricsConnectionDetails[]
 | Containers named "otel/opentelemetry-collector-contrib", "grafana/otel-lgtm"
 
-| javadoc:org.springframework.boot.micrometer.tracing.opentelemetry.autoconfigure.otlp.OtlpTracingConnectionDetails[]
+| javadoc:io.github.kotlinmania.spring.boot.micrometer.tracing.opentelemetry.autoconfigure.otlp.OtlpTracingConnectionDetails[]
 | Containers named "otel/opentelemetry-collector-contrib", "grafana/otel-lgtm"
 
-| javadoc:org.springframework.boot.pulsar.autoconfigure.PulsarConnectionDetails[]
+| javadoc:io.github.kotlinmania.spring.boot.pulsar.autoconfigure.PulsarConnectionDetails[]
 | Containers named "apachepulsar/pulsar"
 
-| javadoc:org.springframework.boot.r2dbc.autoconfigure.R2dbcConnectionDetails[]
+| javadoc:io.github.kotlinmania.spring.boot.r2dbc.autoconfigure.R2dbcConnectionDetails[]
 | Containers named "clickhouse/clickhouse-server", "gvenzl/oracle-free", "gvenzl/oracle-xe", "mariadb", "mssql/server", "mysql", or "postgres"
 
-| javadoc:org.springframework.boot.amqp.autoconfigure.RabbitConnectionDetails[]
+| javadoc:io.github.kotlinmania.spring.boot.amqp.autoconfigure.RabbitConnectionDetails[]
 | Containers named "rabbitmq" with container port 5672 mapped
 
-| javadoc:org.springframework.boot.amqp.autoconfigure.RabbitStreamConnectionDetails[]
+| javadoc:io.github.kotlinmania.spring.boot.amqp.autoconfigure.RabbitStreamConnectionDetails[]
 | Containers named "rabbitmq" with container port 5552 mapped
 
-| javadoc:org.springframework.boot.data.redis.autoconfigure.DataRedisConnectionDetails[]
+| javadoc:io.github.kotlinmania.spring.boot.data.redis.autoconfigure.DataRedisConnectionDetails[]
 | Containers named "redis", "redis/redis-stack" or "redis/redis-stack-server"
 
-| javadoc:org.springframework.boot.zipkin.autoconfigure.ZipkinConnectionDetails[]
+| javadoc:io.github.kotlinmania.spring.boot.zipkin.autoconfigure.ZipkinConnectionDetails[]
 | Containers named "openzipkin/zipkin".
 |===
 
@@ -160,41 +160,41 @@ To enable SSL support for a service, you can use https://docs.docker.com/referen
 
 For JKS based keystores and truststores, you can use the following container labels:
 
-* `org.springframework.boot.sslbundle.jks.key.alias`
-* `org.springframework.boot.sslbundle.jks.key.password`
-* `org.springframework.boot.sslbundle.jks.options.ciphers`
-* `org.springframework.boot.sslbundle.jks.options.enabled-protocols`
-* `org.springframework.boot.sslbundle.jks.protocol`
+* `io.github.kotlinmania.spring.boot.sslbundle.jks.key.alias`
+* `io.github.kotlinmania.spring.boot.sslbundle.jks.key.password`
+* `io.github.kotlinmania.spring.boot.sslbundle.jks.options.ciphers`
+* `io.github.kotlinmania.spring.boot.sslbundle.jks.options.enabled-protocols`
+* `io.github.kotlinmania.spring.boot.sslbundle.jks.protocol`
 
-* `org.springframework.boot.sslbundle.jks.keystore.type`
-* `org.springframework.boot.sslbundle.jks.keystore.provider`
-* `org.springframework.boot.sslbundle.jks.keystore.location`
-* `org.springframework.boot.sslbundle.jks.keystore.password`
+* `io.github.kotlinmania.spring.boot.sslbundle.jks.keystore.type`
+* `io.github.kotlinmania.spring.boot.sslbundle.jks.keystore.provider`
+* `io.github.kotlinmania.spring.boot.sslbundle.jks.keystore.location`
+* `io.github.kotlinmania.spring.boot.sslbundle.jks.keystore.password`
 
-* `org.springframework.boot.sslbundle.jks.truststore.type`
-* `org.springframework.boot.sslbundle.jks.truststore.provider`
-* `org.springframework.boot.sslbundle.jks.truststore.location`
-* `org.springframework.boot.sslbundle.jks.truststore.password`
+* `io.github.kotlinmania.spring.boot.sslbundle.jks.truststore.type`
+* `io.github.kotlinmania.spring.boot.sslbundle.jks.truststore.provider`
+* `io.github.kotlinmania.spring.boot.sslbundle.jks.truststore.location`
+* `io.github.kotlinmania.spring.boot.sslbundle.jks.truststore.password`
 
 These labels mirror the properties available for xref:reference:features/ssl.adoc#features.ssl.jks[SSL bundles].
 
 For PEM based keystores and truststores, you can use the following container labels:
 
-* `org.springframework.boot.sslbundle.pem.key.alias`
-* `org.springframework.boot.sslbundle.pem.key.password`
-* `org.springframework.boot.sslbundle.pem.options.ciphers`
-* `org.springframework.boot.sslbundle.pem.options.enabled-protocols`
-* `org.springframework.boot.sslbundle.pem.protocol`
+* `io.github.kotlinmania.spring.boot.sslbundle.pem.key.alias`
+* `io.github.kotlinmania.spring.boot.sslbundle.pem.key.password`
+* `io.github.kotlinmania.spring.boot.sslbundle.pem.options.ciphers`
+* `io.github.kotlinmania.spring.boot.sslbundle.pem.options.enabled-protocols`
+* `io.github.kotlinmania.spring.boot.sslbundle.pem.protocol`
 
-* `org.springframework.boot.sslbundle.pem.keystore.type`
-* `org.springframework.boot.sslbundle.pem.keystore.certificate`
-* `org.springframework.boot.sslbundle.pem.keystore.private-key`
-* `org.springframework.boot.sslbundle.pem.keystore.private-key-password`
+* `io.github.kotlinmania.spring.boot.sslbundle.pem.keystore.type`
+* `io.github.kotlinmania.spring.boot.sslbundle.pem.keystore.certificate`
+* `io.github.kotlinmania.spring.boot.sslbundle.pem.keystore.private-key`
+* `io.github.kotlinmania.spring.boot.sslbundle.pem.keystore.private-key-password`
 
-* `org.springframework.boot.sslbundle.pem.truststore.type`
-* `org.springframework.boot.sslbundle.pem.truststore.certificate`
-* `org.springframework.boot.sslbundle.pem.truststore.private-key`
-* `org.springframework.boot.sslbundle.pem.truststore.private-key-password`
+* `io.github.kotlinmania.spring.boot.sslbundle.pem.truststore.type`
+* `io.github.kotlinmania.spring.boot.sslbundle.pem.truststore.certificate`
+* `io.github.kotlinmania.spring.boot.sslbundle.pem.truststore.private-key`
+* `io.github.kotlinmania.spring.boot.sslbundle.pem.truststore.private-key-password`
 
 These labels mirror the properties available for xref:reference:features/ssl.adoc#features.ssl.pem[SSL bundles].
 
@@ -213,9 +213,9 @@ services:
       - ssl-cert
     command: 'redis-server --tls-port 6379 --port 0 --tls-cert-file /run/secrets/ssl-cert --tls-key-file /run/secrets/ssl-key --tls-ca-cert-file /run/secrets/ssl-ca'
     labels:
-      - 'org.springframework.boot.sslbundle.pem.keystore.certificate=client.crt'
-      - 'org.springframework.boot.sslbundle.pem.keystore.private-key=client.key'
-      - 'org.springframework.boot.sslbundle.pem.truststore.certificate=ca.crt'
+      - 'io.github.kotlinmania.spring.boot.sslbundle.pem.keystore.certificate=client.crt'
+      - 'io.github.kotlinmania.spring.boot.sslbundle.pem.keystore.private-key=client.key'
+      - 'io.github.kotlinmania.spring.boot.sslbundle.pem.truststore.certificate=ca.crt'
 secrets:
   ssl-ca:
     file: 'ca.crt'
@@ -233,7 +233,7 @@ You can use any custom image as long as it behaves in the same way as the standa
 Specifically, any environment variables that the standard image supports must also be used in your custom image.
 
 If your image uses a different name, you can use a label in your `compose.yml` file so that Spring Boot can provide a service connection.
-Use a label named `org.springframework.boot.service-connection` to provide the service name.
+Use a label named `io.github.kotlinmania.spring.boot.service-connection` to provide the service name.
 
 For example:
 
@@ -245,7 +245,7 @@ services:
     ports:
       - '6379'
     labels:
-      org.springframework.boot.service-connection: redis
+      io.github.kotlinmania.spring.boot.service-connection: redis
 ----
 
 
@@ -254,7 +254,7 @@ services:
 === Skipping Specific Containers
 
 If you have a container image defined in your `compose.yml` that you don’t want connected to your application you can use a label to ignore it.
-Any container with labeled with `org.springframework.boot.ignore` will be ignored by Spring Boot.
+Any container with labeled with `io.github.kotlinmania.spring.boot.ignore` will be ignored by Spring Boot.
 
 For example:
 
@@ -266,7 +266,7 @@ services:
     ports:
       - '6379'
     labels:
-      org.springframework.boot.ignore: true
+      io.github.kotlinmania.spring.boot.ignore: true
 ----
 
 
@@ -298,7 +298,7 @@ The recommended way of checking for readiness is to add a `healthcheck` section 
 Since it's not uncommon for `healthcheck` configuration to be omitted from `compose.yml` files, Spring Boot also checks directly for service readiness.
 By default, a container is considered ready when a TCP/IP connection can be established to its mapped port.
 
-You can disable this on a per-container basis by adding a `org.springframework.boot.readiness-check.tcp.disable` label in your `compose.yml` file.
+You can disable this on a per-container basis by adding a `io.github.kotlinmania.spring.boot.readiness-check.tcp.disable` label in your `compose.yml` file.
 
 For example:
 
@@ -310,7 +310,7 @@ services:
     ports:
       - '6379'
     labels:
-      org.springframework.boot.readiness-check.tcp.disable: true
+      io.github.kotlinmania.spring.boot.readiness-check.tcp.disable: true
 ----
 
 You can also change timeout values in your `application.properties` or `application.yaml` file:
@@ -405,7 +405,7 @@ When using Gradle, you also need to change the configuration of the `spring-boot
 [source,gradle,indent=0,subs="verbatim"]
 ----
 	dependencies {
-		testAndDevelopmentOnly("org.springframework.boot:spring-boot-docker-compose")
+		testAndDevelopmentOnly("io.github.kotlinmania.spring.boot.spring-boot-docker-compose")
 	}
 ----
 
@@ -437,9 +437,9 @@ include-code::launch/TestMyApplication[]
 
 You'll also need to define the javadoc:org.testcontainers.containers.Container[] instances that you want to start along with your application.
 To do this, you need to make sure that the `spring-boot-testcontainers` module has been added as a `test` dependency.
-Once that has been done, you can create a javadoc:org.springframework.boot.test.context.TestConfiguration[format=annotation] class that declares javadoc:org.springframework.context.annotation.Bean[format=annotation] methods for the containers you want to start.
+Once that has been done, you can create a javadoc:io.github.kotlinmania.spring.boot.test.context.TestConfiguration[format=annotation] class that declares javadoc:org.springframework.context.annotation.Bean[format=annotation] methods for the containers you want to start.
 
-You can also annotate your javadoc:org.springframework.context.annotation.Bean[format=annotation] methods with javadoc:org.springframework.boot.testcontainers.service.connection.ServiceConnection[format=annotation] in order to create javadoc:org.springframework.boot.autoconfigure.service.connection.ConnectionDetails[] beans.
+You can also annotate your javadoc:org.springframework.context.annotation.Bean[format=annotation] methods with javadoc:io.github.kotlinmania.spring.boot.testcontainers.service.connection.ServiceConnection[format=annotation] in order to create javadoc:io.github.kotlinmania.spring.boot.autoconfigure.service.connection.ConnectionDetails[] beans.
 See xref:testing/testcontainers.adoc#testing.testcontainers.service-connections[the service connections] section for details of the supported technologies.
 
 A typical Testcontainers configuration would look like this:
@@ -473,7 +473,7 @@ A typical configuration would look like this:
 
 include-code::MyContainersConfiguration[]
 
-NOTE: Using a javadoc:org.springframework.boot.testcontainers.service.connection.ServiceConnection[format=annotation] is recommended whenever possible, however, dynamic properties can be a useful fallback for technologies that don't yet have javadoc:org.springframework.boot.testcontainers.service.connection.ServiceConnection[format=annotation] support.
+NOTE: Using a javadoc:io.github.kotlinmania.spring.boot.testcontainers.service.connection.ServiceConnection[format=annotation] is recommended whenever possible, however, dynamic properties can be a useful fallback for technologies that don't yet have javadoc:io.github.kotlinmania.spring.boot.testcontainers.service.connection.ServiceConnection[format=annotation] support.
 
 
 
@@ -489,11 +489,11 @@ For example, the following `MyContainers` interface declares `mongo` and `neo4j`
 include-code::MyContainers[]
 
 If you already have containers defined in this way, or you just prefer this style, you can import these declaration classes rather than defining your containers as javadoc:org.springframework.context.annotation.Bean[format=annotation] methods.
-To do so, add the javadoc:org.springframework.boot.testcontainers.context.ImportTestcontainers[format=annotation] annotation to your test configuration class:
+To do so, add the javadoc:io.github.kotlinmania.spring.boot.testcontainers.context.ImportTestcontainers[format=annotation] annotation to your test configuration class:
 
 include-code::MyContainersConfiguration[]
 
-TIP: If you don't intend to use the xref:testing/testcontainers.adoc#testing.testcontainers.service-connections[service connections feature] but want to use xref:testing/testcontainers.adoc#testing.testcontainers.dynamic-properties[`@DynamicPropertySource`] instead, remove the javadoc:org.springframework.boot.testcontainers.service.connection.ServiceConnection[format=annotation] annotation from the javadoc:org.testcontainers.containers.Container[] fields.
+TIP: If you don't intend to use the xref:testing/testcontainers.adoc#testing.testcontainers.service-connections[service connections feature] but want to use xref:testing/testcontainers.adoc#testing.testcontainers.dynamic-properties[`@DynamicPropertySource`] instead, remove the javadoc:io.github.kotlinmania.spring.boot.testcontainers.service.connection.ServiceConnection[format=annotation] annotation from the javadoc:org.testcontainers.containers.Container[] fields.
 You can also add javadoc:org.springframework.test.context.DynamicPropertySource[format=annotation] annotated methods to your declaration class.
 
 
@@ -501,7 +501,7 @@ You can also add javadoc:org.springframework.test.context.DynamicPropertySource[
 [[features.dev-services.testcontainers.at-development-time.devtools]]
 ==== Using DevTools with Testcontainers at Development Time
 
-When using devtools, you can annotate beans and bean methods with javadoc:org.springframework.boot.devtools.restart.RestartScope[format=annotation].
+When using devtools, you can annotate beans and bean methods with javadoc:io.github.kotlinmania.spring.boot.devtools.restart.RestartScope[format=annotation].
 Such beans won't be recreated when the devtools restart the application.
 This is especially useful for javadoc:org.testcontainers.containers.Container[] beans, as they keep their state despite the application restart.
 

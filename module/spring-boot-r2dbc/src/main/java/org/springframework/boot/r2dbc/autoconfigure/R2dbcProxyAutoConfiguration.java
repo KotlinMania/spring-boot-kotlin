@@ -14,16 +14,16 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.r2dbc.autoconfigure;
+package io.github.kotlinmania.spring.boot.r2dbc.autoconfigure;
 
 import io.r2dbc.proxy.ProxyConnectionFactory;
 import io.r2dbc.spi.ConnectionFactory;
 
 import org.springframework.beans.factory.ObjectProvider;
-import org.springframework.boot.autoconfigure.AutoConfiguration;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
-import org.springframework.boot.r2dbc.ConnectionFactoryDecorator;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.EnableAutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnClass;
+import io.github.kotlinmania.spring.boot.r2dbc.ConnectionFactoryDecorator;
 import org.springframework.context.annotation.Bean;
 
 /**

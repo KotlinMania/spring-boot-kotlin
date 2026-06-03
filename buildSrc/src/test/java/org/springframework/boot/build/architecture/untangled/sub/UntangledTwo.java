@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.build.architecture.untangled.sub;
+package io.github.kotlinmania.spring.boot.build.architecture.untangled.sub;
 
 public final class UntangledTwo {
 

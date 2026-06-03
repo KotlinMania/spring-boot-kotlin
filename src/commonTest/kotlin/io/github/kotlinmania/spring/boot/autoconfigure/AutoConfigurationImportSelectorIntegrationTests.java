@@ -14,15 +14,15 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.autoconfigure;
+package io.github.kotlinmania.spring.boot.autoconfigure;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.test.context.assertj.AssertableApplicationContext;
-import org.springframework.boot.test.context.runner.ApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.test.context.assertj.AssertableApplicationContext;
+import io.github.kotlinmania.spring.boot.test.context.runner.ApplicationContextRunner;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.util.ClassUtils;
 

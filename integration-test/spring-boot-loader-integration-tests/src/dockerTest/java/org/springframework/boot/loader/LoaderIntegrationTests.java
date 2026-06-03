@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.loader;
+package io.github.kotlinmania.spring.boot.loader;
 
 import java.io.File;
 import java.time.Duration;
@@ -32,8 +32,8 @@ import org.testcontainers.images.builder.ImageFromDockerfile;
 import org.testcontainers.utility.DockerImageName;
 import org.testcontainers.utility.MountableFile;
 
-import org.springframework.boot.system.JavaVersion;
-import org.springframework.boot.testsupport.container.DisabledIfDockerUnavailable;
+import io.github.kotlinmania.spring.boot.system.JavaVersion;
+import io.github.kotlinmania.spring.boot.testsupport.container.DisabledIfDockerUnavailable;
 import org.springframework.util.Assert;
 
 import static org.assertj.core.api.Assertions.assertThat;

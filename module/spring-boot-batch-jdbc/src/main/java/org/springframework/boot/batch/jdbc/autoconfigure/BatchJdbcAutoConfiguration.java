@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.batch.jdbc.autoconfigure;
+package io.github.kotlinmania.spring.boot.batch.jdbc.autoconfigure;
 
 import java.util.List;
 
@@ -29,21 +29,21 @@ import org.springframework.batch.core.converter.JobParametersConverter;
 import org.springframework.batch.core.launch.JobOperator;
 import org.springframework.batch.core.repository.ExecutionContextSerializer;
 import org.springframework.beans.factory.ObjectProvider;
-import org.springframework.boot.autoconfigure.AutoConfiguration;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
-import org.springframework.boot.batch.autoconfigure.BatchAutoConfiguration;
-import org.springframework.boot.batch.autoconfigure.BatchConversionServiceCustomizer;
-import org.springframework.boot.batch.autoconfigure.BatchJobLauncherAutoConfiguration;
-import org.springframework.boot.batch.autoconfigure.BatchTaskExecutor;
-import org.springframework.boot.batch.autoconfigure.BatchTransactionManager;
-import org.springframework.boot.context.properties.EnableConfigurationProperties;
-import org.springframework.boot.jdbc.autoconfigure.DataSourceAutoConfiguration;
-import org.springframework.boot.sql.autoconfigure.init.OnDatabaseInitializationCondition;
-import org.springframework.boot.sql.init.dependency.DatabaseInitializationDependencyConfigurer;
-import org.springframework.boot.transaction.autoconfigure.TransactionAutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.EnableAutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnBean;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnClass;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnMissingBean;
+import io.github.kotlinmania.spring.boot.batch.autoconfigure.BatchAutoConfiguration;
+import io.github.kotlinmania.spring.boot.batch.autoconfigure.BatchConversionServiceCustomizer;
+import io.github.kotlinmania.spring.boot.batch.autoconfigure.BatchJobLauncherAutoConfiguration;
+import io.github.kotlinmania.spring.boot.batch.autoconfigure.BatchTaskExecutor;
+import io.github.kotlinmania.spring.boot.batch.autoconfigure.BatchTransactionManager;
+import io.github.kotlinmania.spring.boot.context.properties.EnableConfigurationProperties;
+import io.github.kotlinmania.spring.boot.jdbc.autoconfigure.DataSourceAutoConfiguration;
+import io.github.kotlinmania.spring.boot.sql.autoconfigure.init.OnDatabaseInitializationCondition;
+import io.github.kotlinmania.spring.boot.sql.init.dependency.DatabaseInitializationDependencyConfigurer;
+import io.github.kotlinmania.spring.boot.transaction.autoconfigure.TransactionAutoConfiguration;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Conditional;
 import org.springframework.context.annotation.Configuration;
@@ -68,7 +68,7 @@ import org.springframework.transaction.annotation.Isolation;
  */
 @AutoConfiguration(before = { BatchAutoConfiguration.class, BatchJobLauncherAutoConfiguration.class },
 		after = { DataSourceAutoConfiguration.class, TransactionAutoConfiguration.class },
-		afterName = "org.springframework.boot.hibernate.autoconfigure.HibernateJpaAutoConfiguration")
+		afterName = "io.github.kotlinmania.spring.boot.hibernate.autoconfigure.HibernateJpaAutoConfiguration")
 @ConditionalOnClass({ JobOperator.class, DataSource.class, DatabasePopulator.class })
 @ConditionalOnBean({ DataSource.class, PlatformTransactionManager.class })
 @ConditionalOnMissingBean(value = DefaultBatchConfiguration.class, annotation = EnableBatchProcessing.class)

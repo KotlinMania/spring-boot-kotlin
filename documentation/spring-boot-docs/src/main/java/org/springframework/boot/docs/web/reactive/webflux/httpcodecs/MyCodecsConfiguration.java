@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.web.reactive.webflux.httpcodecs;
+package io.github.kotlinmania.spring.boot.docs.web.reactive.webflux.httpcodecs;
 
-import org.springframework.boot.http.codec.CodecCustomizer;
+import io.github.kotlinmania.spring.boot.http.codec.CodecCustomizer;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.codec.ServerSentEventHttpMessageReader;

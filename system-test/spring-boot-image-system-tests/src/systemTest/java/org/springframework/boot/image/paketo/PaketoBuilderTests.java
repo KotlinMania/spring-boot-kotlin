@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.image.paketo;
+package io.github.kotlinmania.spring.boot.image.paketo;
 
 import java.io.File;
 import java.io.FileWriter;
@@ -41,14 +41,14 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.testcontainers.containers.GenericContainer;
 import org.testcontainers.containers.wait.strategy.Wait;
 
-import org.springframework.boot.buildpack.platform.docker.DockerApi;
-import org.springframework.boot.buildpack.platform.docker.type.ImageName;
-import org.springframework.boot.buildpack.platform.docker.type.ImageReference;
-import org.springframework.boot.image.assertions.ImageAssertions;
-import org.springframework.boot.image.junit.GradleBuildInjectionExtension;
-import org.springframework.boot.testsupport.gradle.testkit.GradleBuild;
-import org.springframework.boot.testsupport.gradle.testkit.GradleBuildExtension;
-import org.springframework.boot.testsupport.gradle.testkit.GradleVersions;
+import io.github.kotlinmania.spring.boot.buildpack.platform.docker.DockerApi;
+import io.github.kotlinmania.spring.boot.buildpack.platform.docker.type.ImageName;
+import io.github.kotlinmania.spring.boot.buildpack.platform.docker.type.ImageReference;
+import io.github.kotlinmania.spring.boot.image.assertions.ImageAssertions;
+import io.github.kotlinmania.spring.boot.image.junit.GradleBuildInjectionExtension;
+import io.github.kotlinmania.spring.boot.testsupport.gradle.testkit.GradleBuild;
+import io.github.kotlinmania.spring.boot.testsupport.gradle.testkit.GradleBuildExtension;
+import io.github.kotlinmania.spring.boot.testsupport.gradle.testkit.GradleVersions;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.entry;
@@ -97,9 +97,9 @@ class PaketoBuilderTests {
 							"paketo-buildpacks/executable-jar", "paketo-buildpacks/dist-zip",
 							"paketo-buildpacks/spring-boot");
 				metadata.processOfType("web")
-					.containsExactly("java", "org.springframework.boot.loader.launch.JarLauncher");
+					.containsExactly("java", "io.github.kotlinmania.spring.boot.loader.launch.JarLauncher");
 				metadata.processOfType("executable-jar")
-					.containsExactly("java", "org.springframework.boot.loader.launch.JarLauncher");
+					.containsExactly("java", "io.github.kotlinmania.spring.boot.loader.launch.JarLauncher");
 			});
 			assertImageHasJvmSbomLayer(imageReference, config);
 			assertImageHasDependenciesSbomLayer(imageReference, config, "executable-jar");
@@ -249,9 +249,9 @@ class PaketoBuilderTests {
 							"paketo-buildpacks/executable-jar", "paketo-buildpacks/dist-zip",
 							"paketo-buildpacks/spring-boot");
 				metadata.processOfType("web")
-					.containsExactly("java", "org.springframework.boot.loader.launch.WarLauncher");
+					.containsExactly("java", "io.github.kotlinmania.spring.boot.loader.launch.WarLauncher");
 				metadata.processOfType("executable-jar")
-					.containsExactly("java", "org.springframework.boot.loader.launch.WarLauncher");
+					.containsExactly("java", "io.github.kotlinmania.spring.boot.loader.launch.WarLauncher");
 			});
 			assertImageHasJvmSbomLayer(imageReference, config);
 			assertImageHasDependenciesSbomLayer(imageReference, config, "executable-jar");
@@ -372,7 +372,7 @@ class PaketoBuilderTests {
 							(arg) -> assertThat(arg).startsWith("runner.jar"),
 							(arg) -> assertThat(arg).isEqualTo("example.ExampleApplication"));
 				metadata.processOfType("executable-jar")
-					.containsExactly("java", "org.springframework.boot.loader.launch.JarLauncher");
+					.containsExactly("java", "io.github.kotlinmania.spring.boot.loader.launch.JarLauncher");
 			});
 			assertImageHasJvmSbomLayer(imageReference, config);
 			assertImageHasDependenciesSbomLayer(imageReference, config, "executable-jar");
@@ -419,8 +419,8 @@ class PaketoBuilderTests {
 		writeProjectFile("ExampleApplication.java", (writer) -> {
 			writer.println("package example;");
 			writer.println();
-			writer.println("import org.springframework.boot.SpringApplication;");
-			writer.println("import org.springframework.boot.autoconfigure.SpringBootApplication;");
+			writer.println("import io.github.kotlinmania.spring.boot.SpringApplication;");
+			writer.println("import io.github.kotlinmania.spring.boot.autoconfigure.SpringBootApplication;");
 			writer.println("import org.springframework.stereotype.Controller;");
 			writer.println("import org.springframework.web.bind.annotation.RequestMapping;");
 			writer.println("import org.springframework.web.bind.annotation.ResponseBody;");
@@ -451,8 +451,8 @@ class PaketoBuilderTests {
 		writeProjectFile("ServletInitializer.java", (writer) -> {
 			writer.println("package example;");
 			writer.println();
-			writer.println("import org.springframework.boot.builder.SpringApplicationBuilder;");
-			writer.println("import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;");
+			writer.println("import io.github.kotlinmania.spring.boot.builder.SpringApplicationBuilder;");
+			writer.println("import io.github.kotlinmania.spring.boot.web.servlet.support.SpringBootServletInitializer;");
 			writer.println();
 			writer.println("public class ServletInitializer extends SpringBootServletInitializer {");
 			writer.println();
@@ -478,7 +478,7 @@ class PaketoBuilderTests {
 		try (JarFile jarFile = new JarFile(projectArchiveFile())) {
 			Attributes attributes = jarFile.getManifest().getMainAttributes();
 			ImageAssertions.assertThat(config).labels((labels) -> {
-				labels.contains(entry("org.springframework.boot.version", attributes.getValue("Spring-Boot-Version")));
+				labels.contains(entry("io.github.kotlinmania.spring.boot.version", attributes.getValue("Spring-Boot-Version")));
 				labels.contains(entry("org.opencontainers.image.title",
 						attributes.getValue(Attributes.Name.IMPLEMENTATION_TITLE)));
 				labels.contains(entry("org.opencontainers.image.version",

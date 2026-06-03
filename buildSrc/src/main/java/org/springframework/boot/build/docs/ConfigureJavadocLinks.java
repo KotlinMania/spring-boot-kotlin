@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.build.docs;
+package io.github.kotlinmania.spring.boot.build.docs;
 
 import java.net.URI;
 import java.util.ArrayList;
@@ -26,8 +26,8 @@ import org.gradle.api.file.FileCollection;
 import org.gradle.api.tasks.javadoc.Javadoc;
 import org.gradle.external.javadoc.StandardJavadocDocletOptions;
 
-import org.springframework.boot.build.bom.ResolvedBom;
-import org.springframework.boot.build.bom.ResolvedBom.JavadocLink;
+import io.github.kotlinmania.spring.boot.build.bom.ResolvedBom;
+import io.github.kotlinmania.spring.boot.build.bom.ResolvedBom.JavadocLink;
 
 /**
  * An {@link Action} to configure the links option of a {@link Javadoc} task.

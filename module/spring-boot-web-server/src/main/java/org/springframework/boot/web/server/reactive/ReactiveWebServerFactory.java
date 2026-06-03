@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.web.server.reactive;
+package io.github.kotlinmania.spring.boot.web.server.reactive;
 
-import org.springframework.boot.web.server.WebServer;
-import org.springframework.boot.web.server.WebServerFactory;
+import io.github.kotlinmania.spring.boot.web.server.WebServer;
+import io.github.kotlinmania.spring.boot.web.server.WebServerFactory;
 import org.springframework.http.server.reactive.HttpHandler;
 
 /**

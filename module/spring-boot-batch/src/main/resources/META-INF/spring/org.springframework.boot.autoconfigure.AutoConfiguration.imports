@@ -1,3 +1,3 @@
-org.springframework.boot.batch.autoconfigure.BatchAutoConfiguration
-org.springframework.boot.batch.autoconfigure.BatchJobLauncherAutoConfiguration
-org.springframework.boot.batch.autoconfigure.observation.BatchObservationAutoConfiguration
+io.github.kotlinmania.spring.boot.batch.autoconfigure.BatchAutoConfiguration
+io.github.kotlinmania.spring.boot.batch.autoconfigure.BatchJobLauncherAutoConfiguration
+io.github.kotlinmania.spring.boot.batch.autoconfigure.observation.BatchObservationAutoConfiguration

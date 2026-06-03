@@ -1,2 +1,2 @@
-org.springframework.boot.data.autoconfigure.metrics.DataRepositoryMetricsAutoConfiguration
-org.springframework.boot.data.autoconfigure.web.DataWebAutoConfiguration
+io.github.kotlinmania.spring.boot.data.autoconfigure.metrics.DataRepositoryMetricsAutoConfiguration
+io.github.kotlinmania.spring.boot.data.autoconfigure.web.DataWebAutoConfiguration

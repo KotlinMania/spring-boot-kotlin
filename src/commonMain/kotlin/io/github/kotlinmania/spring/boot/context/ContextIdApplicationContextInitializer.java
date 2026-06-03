@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.context;
+package io.github.kotlinmania.spring.boot.context;
 
 import java.util.concurrent.atomic.AtomicLong;
 

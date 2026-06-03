@@ -24,7 +24,7 @@ import org.testcontainers.utility.DockerImageName;
 import smoketest.grpcservernettyshaded.SampleGrpcServerNettyShadedApplicationTests.GrpcServerStartedEventListener;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
+import io.github.kotlinmania.spring.boot.test.context.SpringBootTest;
 import org.springframework.context.ApplicationListener;
 import org.springframework.context.annotation.Import;
 import org.springframework.grpc.server.lifecycle.GrpcServerStartedEvent;

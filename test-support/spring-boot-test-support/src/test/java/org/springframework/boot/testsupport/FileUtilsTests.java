@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.testsupport;
+package io.github.kotlinmania.spring.boot.testsupport;
 
 import java.io.File;
 import java.io.FileOutputStream;

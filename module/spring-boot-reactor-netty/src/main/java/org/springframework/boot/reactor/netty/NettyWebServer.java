@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.reactor.netty;
+package io.github.kotlinmania.spring.boot.reactor.netty;
 
 import java.time.Duration;
 import java.util.Collections;
@@ -38,12 +38,12 @@ import reactor.netty.http.server.HttpServerResponse;
 import reactor.netty.http.server.HttpServerRoutes;
 import reactor.netty.resources.LoopResources;
 
-import org.springframework.boot.web.server.GracefulShutdownCallback;
-import org.springframework.boot.web.server.GracefulShutdownResult;
-import org.springframework.boot.web.server.PortInUseException;
-import org.springframework.boot.web.server.Shutdown;
-import org.springframework.boot.web.server.WebServer;
-import org.springframework.boot.web.server.WebServerException;
+import io.github.kotlinmania.spring.boot.web.server.GracefulShutdownCallback;
+import io.github.kotlinmania.spring.boot.web.server.GracefulShutdownResult;
+import io.github.kotlinmania.spring.boot.web.server.PortInUseException;
+import io.github.kotlinmania.spring.boot.web.server.Shutdown;
+import io.github.kotlinmania.spring.boot.web.server.WebServer;
+import io.github.kotlinmania.spring.boot.web.server.WebServerException;
 import org.springframework.http.client.ReactorResourceFactory;
 import org.springframework.http.server.reactive.ReactorHttpHandlerAdapter;
 import org.springframework.util.Assert;

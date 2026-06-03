@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.tomcat.metrics;
+package io.github.kotlinmania.spring.boot.tomcat.metrics;
 
 import java.util.Collections;
 
@@ -27,10 +27,10 @@ import org.apache.catalina.Manager;
 import org.jspecify.annotations.Nullable;
 
 import org.springframework.beans.factory.DisposableBean;
-import org.springframework.boot.context.event.ApplicationStartedEvent;
-import org.springframework.boot.tomcat.TomcatWebServer;
-import org.springframework.boot.web.server.WebServer;
-import org.springframework.boot.web.server.context.WebServerApplicationContext;
+import io.github.kotlinmania.spring.boot.context.event.ApplicationStartedEvent;
+import io.github.kotlinmania.spring.boot.tomcat.TomcatWebServer;
+import io.github.kotlinmania.spring.boot.web.server.WebServer;
+import io.github.kotlinmania.spring.boot.web.server.context.WebServerApplicationContext;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationListener;
 

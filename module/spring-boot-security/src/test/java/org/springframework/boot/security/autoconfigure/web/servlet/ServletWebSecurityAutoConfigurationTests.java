@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.security.autoconfigure.web.servlet;
+package io.github.kotlinmania.spring.boot.security.autoconfigure.web.servlet;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
@@ -28,20 +28,20 @@ import org.assertj.core.api.InstanceOfAssertFactories;
 import org.jspecify.annotations.Nullable;
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.autoconfigure.AutoConfigurations;
-import org.springframework.boot.autoconfigure.context.PropertyPlaceholderAutoConfiguration;
-import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.boot.context.properties.ConfigurationPropertiesBinding;
-import org.springframework.boot.context.properties.EnableConfigurationProperties;
-import org.springframework.boot.convert.ApplicationConversionService;
-import org.springframework.boot.security.autoconfigure.SecurityAutoConfiguration;
-import org.springframework.boot.servlet.filter.OrderedFilter;
-import org.springframework.boot.test.context.FilteredClassLoader;
-import org.springframework.boot.test.context.runner.WebApplicationContextRunner;
-import org.springframework.boot.testsupport.classpath.resources.WithResource;
-import org.springframework.boot.web.servlet.DelegatingFilterProxyRegistrationBean;
-import org.springframework.boot.webmvc.autoconfigure.DispatcherServletPath;
-import org.springframework.boot.webmvc.autoconfigure.WebMvcAutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurations;
+import io.github.kotlinmania.spring.boot.autoconfigure.context.PropertyPlaceholderAutoConfiguration;
+import io.github.kotlinmania.spring.boot.context.properties.ConfigurationProperties;
+import io.github.kotlinmania.spring.boot.context.properties.ConfigurationPropertiesBinding;
+import io.github.kotlinmania.spring.boot.context.properties.EnableConfigurationProperties;
+import io.github.kotlinmania.spring.boot.convert.ApplicationConversionService;
+import io.github.kotlinmania.spring.boot.security.autoconfigure.SecurityAutoConfiguration;
+import io.github.kotlinmania.spring.boot.servlet.filter.OrderedFilter;
+import io.github.kotlinmania.spring.boot.test.context.FilteredClassLoader;
+import io.github.kotlinmania.spring.boot.test.context.runner.WebApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.testsupport.classpath.resources.WithResource;
+import io.github.kotlinmania.spring.boot.web.servlet.DelegatingFilterProxyRegistrationBean;
+import io.github.kotlinmania.spring.boot.webmvc.autoconfigure.DispatcherServletPath;
+import io.github.kotlinmania.spring.boot.webmvc.autoconfigure.WebMvcAutoConfiguration;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

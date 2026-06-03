@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.loader.zip;
+package io.github.kotlinmania.spring.boot.loader.zip;
 
 import java.io.Closeable;
 

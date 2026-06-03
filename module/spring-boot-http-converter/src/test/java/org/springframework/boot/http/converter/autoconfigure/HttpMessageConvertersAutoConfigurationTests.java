@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.http.converter.autoconfigure;
+package io.github.kotlinmania.spring.boot.http.converter.autoconfigure;
 
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
@@ -32,19 +32,19 @@ import tools.jackson.databind.json.JsonMapper;
 import tools.jackson.dataformat.xml.XmlMapper;
 
 import org.springframework.beans.factory.support.DefaultListableBeanFactory;
-import org.springframework.boot.autoconfigure.AutoConfigurations;
-import org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener;
-import org.springframework.boot.http.converter.autoconfigure.GsonHttpMessageConvertersConfiguration.GsonHttpConvertersCustomizer;
-import org.springframework.boot.http.converter.autoconfigure.JacksonHttpMessageConvertersConfiguration.JacksonJsonHttpMessageConvertersCustomizer;
-import org.springframework.boot.http.converter.autoconfigure.JacksonHttpMessageConvertersConfiguration.JacksonXmlHttpMessageConvertersCustomizer;
-import org.springframework.boot.http.converter.autoconfigure.JsonbHttpMessageConvertersConfiguration.JsonbHttpMessageConvertersCustomizer;
-import org.springframework.boot.http.converter.autoconfigure.KotlinSerializationHttpMessageConvertersConfiguration.KotlinSerializationJsonConvertersCustomizer;
-import org.springframework.boot.logging.LogLevel;
-import org.springframework.boot.test.context.FilteredClassLoader;
-import org.springframework.boot.test.context.assertj.AssertableApplicationContext;
-import org.springframework.boot.test.context.runner.ApplicationContextRunner;
-import org.springframework.boot.test.context.runner.ReactiveWebApplicationContextRunner;
-import org.springframework.boot.test.context.runner.WebApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurations;
+import io.github.kotlinmania.spring.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener;
+import io.github.kotlinmania.spring.boot.http.converter.autoconfigure.GsonHttpMessageConvertersConfiguration.GsonHttpConvertersCustomizer;
+import io.github.kotlinmania.spring.boot.http.converter.autoconfigure.JacksonHttpMessageConvertersConfiguration.JacksonJsonHttpMessageConvertersCustomizer;
+import io.github.kotlinmania.spring.boot.http.converter.autoconfigure.JacksonHttpMessageConvertersConfiguration.JacksonXmlHttpMessageConvertersCustomizer;
+import io.github.kotlinmania.spring.boot.http.converter.autoconfigure.JsonbHttpMessageConvertersConfiguration.JsonbHttpMessageConvertersCustomizer;
+import io.github.kotlinmania.spring.boot.http.converter.autoconfigure.KotlinSerializationHttpMessageConvertersConfiguration.KotlinSerializationJsonConvertersCustomizer;
+import io.github.kotlinmania.spring.boot.logging.LogLevel;
+import io.github.kotlinmania.spring.boot.test.context.FilteredClassLoader;
+import io.github.kotlinmania.spring.boot.test.context.assertj.AssertableApplicationContext;
+import io.github.kotlinmania.spring.boot.test.context.runner.ApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.test.context.runner.ReactiveWebApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.test.context.runner.WebApplicationContextRunner;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

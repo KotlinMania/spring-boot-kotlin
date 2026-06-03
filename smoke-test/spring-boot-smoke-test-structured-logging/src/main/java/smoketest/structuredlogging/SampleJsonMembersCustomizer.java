@@ -20,9 +20,9 @@ import java.util.function.UnaryOperator;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.json.JsonWriter.Members;
-import org.springframework.boot.json.JsonWriter.ValueProcessor;
-import org.springframework.boot.logging.structured.StructuredLoggingJsonMembersCustomizer;
+import io.github.kotlinmania.spring.boot.json.JsonWriter.Members;
+import io.github.kotlinmania.spring.boot.json.JsonWriter.ValueProcessor;
+import io.github.kotlinmania.spring.boot.logging.structured.StructuredLoggingJsonMembersCustomizer;
 
 public class SampleJsonMembersCustomizer implements StructuredLoggingJsonMembersCustomizer<Object> {
 

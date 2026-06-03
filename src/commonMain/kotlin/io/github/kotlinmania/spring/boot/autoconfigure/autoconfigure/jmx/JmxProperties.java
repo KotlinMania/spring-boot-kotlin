@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.autoconfigure.jmx;
+package io.github.kotlinmania.spring.boot.autoconfigure.jmx;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.context.properties.ConfigurationProperties;
+import io.github.kotlinmania.spring.boot.context.properties.ConfigurationProperties;
 import org.springframework.jmx.support.RegistrationPolicy;
 
 /**

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.kafka.autoconfigure;
+package io.github.kotlinmania.spring.boot.kafka.autoconfigure;
 
 import java.io.File;
 import java.time.Duration;
@@ -48,17 +48,17 @@ import org.junit.jupiter.params.provider.ValueSource;
 import org.springframework.aot.hint.MemberCategory;
 import org.springframework.aot.hint.RuntimeHints;
 import org.springframework.aot.hint.predicate.RuntimeHintsPredicates;
-import org.springframework.boot.autoconfigure.AutoConfigurations;
-import org.springframework.boot.autoconfigure.ssl.SslAutoConfiguration;
-import org.springframework.boot.kafka.autoconfigure.KafkaProperties.Retry;
-import org.springframework.boot.kafka.autoconfigure.KafkaProperties.Template;
-import org.springframework.boot.ssl.SslBundle;
-import org.springframework.boot.ssl.SslStoreBundle;
-import org.springframework.boot.test.context.assertj.AssertableApplicationContext;
-import org.springframework.boot.test.context.runner.ApplicationContextRunner;
-import org.springframework.boot.test.context.runner.ContextConsumer;
-import org.springframework.boot.testsupport.assertj.SimpleAsyncTaskExecutorAssert;
-import org.springframework.boot.testsupport.classpath.resources.WithResource;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurations;
+import io.github.kotlinmania.spring.boot.autoconfigure.ssl.SslAutoConfiguration;
+import io.github.kotlinmania.spring.boot.kafka.autoconfigure.KafkaProperties.Retry;
+import io.github.kotlinmania.spring.boot.kafka.autoconfigure.KafkaProperties.Template;
+import io.github.kotlinmania.spring.boot.ssl.SslBundle;
+import io.github.kotlinmania.spring.boot.ssl.SslStoreBundle;
+import io.github.kotlinmania.spring.boot.test.context.assertj.AssertableApplicationContext;
+import io.github.kotlinmania.spring.boot.test.context.runner.ApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.test.context.runner.ContextConsumer;
+import io.github.kotlinmania.spring.boot.testsupport.assertj.SimpleAsyncTaskExecutorAssert;
+import io.github.kotlinmania.spring.boot.testsupport.classpath.resources.WithResource;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.task.AsyncTaskExecutor;
@@ -233,7 +233,7 @@ class KafkaAutoConfigurationTests {
 			DefaultKafkaConsumerFactory<?, ?> consumerFactory = context.getBean(DefaultKafkaConsumerFactory.class);
 			Map<String, Object> configs = consumerFactory.getConfigurationProperties();
 			assertThat(configs).containsEntry("ssl.engine.factory.class", SslBundleSslEngineFactory.class);
-			assertThat(configs).containsEntry("org.springframework.boot.ssl.SslBundle", sslBundle);
+			assertThat(configs).containsEntry("io.github.kotlinmania.spring.boot.ssl.SslBundle", sslBundle);
 		});
 	}
 
@@ -328,7 +328,7 @@ class KafkaAutoConfigurationTests {
 			DefaultKafkaProducerFactory<?, ?> producerFactory = context.getBean(DefaultKafkaProducerFactory.class);
 			Map<String, Object> configs = producerFactory.getConfigurationProperties();
 			assertThat(configs).containsEntry("ssl.engine.factory.class", SslBundleSslEngineFactory.class);
-			assertThat(configs).containsEntry("org.springframework.boot.ssl.SslBundle", sslBundle);
+			assertThat(configs).containsEntry("io.github.kotlinmania.spring.boot.ssl.SslBundle", sslBundle);
 		});
 	}
 
@@ -413,7 +413,7 @@ class KafkaAutoConfigurationTests {
 			KafkaAdmin admin = context.getBean(KafkaAdmin.class);
 			Map<String, Object> configs = admin.getConfigurationProperties();
 			assertThat(configs).containsEntry("ssl.engine.factory.class", SslBundleSslEngineFactory.class);
-			assertThat(configs).containsEntry("org.springframework.boot.ssl.SslBundle", sslBundle);
+			assertThat(configs).containsEntry("io.github.kotlinmania.spring.boot.ssl.SslBundle", sslBundle);
 		});
 	}
 
@@ -533,7 +533,7 @@ class KafkaAutoConfigurationTests {
 							KafkaStreamsConfiguration.class)
 					.asProperties();
 				assertThat(configs).containsEntry("ssl.engine.factory.class", SslBundleSslEngineFactory.class);
-				assertThat(configs).containsEntry("org.springframework.boot.ssl.SslBundle", sslBundle);
+				assertThat(configs).containsEntry("io.github.kotlinmania.spring.boot.ssl.SslBundle", sslBundle);
 			});
 	}
 

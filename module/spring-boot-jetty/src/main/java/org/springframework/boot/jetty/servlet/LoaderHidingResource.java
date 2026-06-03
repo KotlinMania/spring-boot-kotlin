@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.jetty.servlet;
+package io.github.kotlinmania.spring.boot.jetty.servlet;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -40,7 +40,7 @@ import org.jspecify.annotations.Nullable;
  */
 final class LoaderHidingResource extends Resource {
 
-	private static final String LOADER_RESOURCE_PATH_PREFIX = "/org/springframework/boot/";
+	private static final String LOADER_RESOURCE_PATH_PREFIX = "/io.github.kotlinmania.spring.boot.";
 
 	private final Path loaderBasePath;
 

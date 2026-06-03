@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.buildpack.platform.docker.ssl;
+package io.github.kotlinmania.spring.boot.buildpack.platform.docker.ssl;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -28,10 +28,10 @@ import java.nio.file.Path;
 final class SslSource {
 
 	private static final Path BUILDPACK_LOCATION = Path
-		.of("src/main/java/org/springframework/boot/buildpack/platform/docker/ssl");
+		.of("src/main/java/io.github.kotlinmania.spring.boot.buildpack/platform/docker/ssl");
 
 	private static final Path SPRINGBOOT_LOCATION = Path
-		.of("../../core/spring-boot/src/main/java/org/springframework/boot/ssl/pem");
+		.of("../../core/spring-boot/src/main/java/io.github.kotlinmania.spring.boot.ssl/pem");
 
 	private SslSource() {
 	}

@@ -18,6 +18,6 @@
  * Auto-configuration for common web concerns.
  */
 @NullMarked
-package org.springframework.boot.autoconfigure.web;
+package io.github.kotlinmania.spring.boot.autoconfigure.web;
 
 import org.jspecify.annotations.NullMarked;

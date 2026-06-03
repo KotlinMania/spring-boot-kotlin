@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.security.oauth2.client.autoconfigure.servlet;
+package io.github.kotlinmania.spring.boot.security.oauth2.client.autoconfigure.servlet;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -23,12 +23,12 @@ import jakarta.servlet.Filter;
 import org.jspecify.annotations.Nullable;
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.autoconfigure.AutoConfigurations;
-import org.springframework.boot.test.context.FilteredClassLoader;
-import org.springframework.boot.test.context.assertj.AssertableWebApplicationContext;
-import org.springframework.boot.test.context.runner.WebApplicationContextRunner;
-import org.springframework.boot.tomcat.servlet.TomcatServletWebServerFactory;
-import org.springframework.boot.webmvc.autoconfigure.WebMvcAutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurations;
+import io.github.kotlinmania.spring.boot.test.context.FilteredClassLoader;
+import io.github.kotlinmania.spring.boot.test.context.assertj.AssertableWebApplicationContext;
+import io.github.kotlinmania.spring.boot.test.context.runner.WebApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.tomcat.servlet.TomcatServletWebServerFactory;
+import io.github.kotlinmania.spring.boot.webmvc.autoconfigure.WebMvcAutoConfiguration;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;

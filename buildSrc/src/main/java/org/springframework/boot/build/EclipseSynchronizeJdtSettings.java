@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.build;
+package io.github.kotlinmania.spring.boot.build;
 
 import java.util.Properties;
 
@@ -22,7 +22,7 @@ import org.gradle.api.Task;
 import org.gradle.api.internal.PropertiesTransformer;
 import org.gradle.plugins.ide.api.PropertiesGeneratorTask;
 
-import org.springframework.boot.build.EclipseSynchronizeJdtSettings.Configuration;
+import io.github.kotlinmania.spring.boot.build.EclipseSynchronizeJdtSettings.Configuration;
 
 /**
  * {@link Task} to synchronize Eclipse JDT settings.

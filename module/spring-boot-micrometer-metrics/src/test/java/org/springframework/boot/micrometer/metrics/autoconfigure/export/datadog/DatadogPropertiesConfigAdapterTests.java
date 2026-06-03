@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.micrometer.metrics.autoconfigure.export.datadog;
+package io.github.kotlinmania.spring.boot.micrometer.metrics.autoconfigure.export.datadog;
 
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.micrometer.metrics.autoconfigure.export.properties.StepRegistryPropertiesConfigAdapterTests;
+import io.github.kotlinmania.spring.boot.micrometer.metrics.autoconfigure.export.properties.StepRegistryPropertiesConfigAdapterTests;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

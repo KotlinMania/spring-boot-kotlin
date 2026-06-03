@@ -14,15 +14,15 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.loader.net.protocol.nested;
+package io.github.kotlinmania.spring.boot.loader.net.protocol.nested;
 
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.UncheckedIOException;
 
-import org.springframework.boot.loader.ref.Cleaner;
-import org.springframework.boot.loader.zip.CloseableDataBlock;
-import org.springframework.boot.loader.zip.ZipContent;
+import io.github.kotlinmania.spring.boot.loader.ref.Cleaner;
+import io.github.kotlinmania.spring.boot.loader.zip.CloseableDataBlock;
+import io.github.kotlinmania.spring.boot.loader.zip.ZipContent;
 
 /**
  * Resources created managed and cleaned by a {@link NestedUrlConnection} instance and

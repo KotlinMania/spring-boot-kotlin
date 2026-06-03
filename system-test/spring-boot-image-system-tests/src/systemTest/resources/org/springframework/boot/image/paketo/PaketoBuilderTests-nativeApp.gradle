@@ -15,8 +15,8 @@
  */
 
 plugins {
-	id 'org.springframework.boot' version '{bootVersion}'
-	id 'org.springframework.boot.aot' version '{bootVersion}'
+	id 'io.github.kotlinmania.spring.boot. version '{bootVersion}'
+	id 'io.github.kotlinmania.spring.boot.aot' version '{bootVersion}'
 	id 'io.spring.dependency-management' version '{dependencyManagementPluginVersion}'
 	id 'org.graalvm.buildtools.native' version '{nativeBuildToolsVersion}'
 	id 'java'
@@ -30,7 +30,7 @@ repositories {
 			}
 		}
 		filter {
-			includeGroup "org.springframework.boot"
+			includeGroup "io.github.kotlinmania.spring.boot.
 		}
 	}
 	mavenCentral()
@@ -42,7 +42,7 @@ tasks.named("bootBuildImage") {
 }
 
 dependencies {
-	implementation("org.springframework.boot:spring-boot-starter-webmvc:{bootVersion}")
+	implementation("io.github.kotlinmania.spring.boot.spring-boot-starter-webmvc:{bootVersion}")
 }
 
 bootJar {

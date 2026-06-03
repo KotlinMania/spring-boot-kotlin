@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.r2dbc.autoconfigure.observation;
+package io.github.kotlinmania.spring.boot.r2dbc.autoconfigure.observation;
 
-import org.springframework.boot.context.properties.ConfigurationProperties;
+import io.github.kotlinmania.spring.boot.context.properties.ConfigurationProperties;
 
 /**
  * Configuration properties for R2DBC observability.

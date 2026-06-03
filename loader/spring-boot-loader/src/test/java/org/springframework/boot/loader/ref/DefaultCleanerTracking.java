@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.loader.ref;
+package io.github.kotlinmania.spring.boot.loader.ref;
 
 import java.lang.ref.Cleaner.Cleanable;
 import java.util.function.BiConsumer;

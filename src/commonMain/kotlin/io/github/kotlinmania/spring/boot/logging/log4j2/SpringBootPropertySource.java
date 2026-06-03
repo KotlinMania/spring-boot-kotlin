@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.logging.log4j2;
+package io.github.kotlinmania.spring.boot.logging.log4j2;
 
 import java.util.Collection;
 import java.util.Collections;

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.autoconfigureprocessor;
+package io.github.kotlinmania.spring.boot.autoconfigureprocessor;
 
 import javax.lang.model.element.Element;
 import javax.lang.model.element.TypeElement;

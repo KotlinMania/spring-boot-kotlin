@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.ssl.jks;
+package io.github.kotlinmania.spring.boot.ssl.jks;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -26,8 +26,8 @@ import java.security.cert.CertificateException;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.io.ApplicationResourceLoader;
-import org.springframework.boot.ssl.SslStoreBundle;
+import io.github.kotlinmania.spring.boot.io.ApplicationResourceLoader;
+import io.github.kotlinmania.spring.boot.ssl.SslStoreBundle;
 import org.springframework.core.io.ResourceLoader;
 import org.springframework.core.style.ToStringCreator;
 import org.springframework.util.Assert;

@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.using.autoconfiguration.disablingspecific
+package io.github.kotlinmania.spring.boot.docs.using.autoconfiguration.disablingspecific
 
-import org.springframework.boot.autoconfigure.SpringBootApplication
-import org.springframework.boot.jdbc.autoconfigure.DataSourceAutoConfiguration
+import io.github.kotlinmania.spring.boot.autoconfigure.SpringBootApplication
+import io.github.kotlinmania.spring.boot.jdbc.autoconfigure.DataSourceAutoConfiguration
 
 @SpringBootApplication(exclude = [DataSourceAutoConfiguration::class])
 class MyApplication

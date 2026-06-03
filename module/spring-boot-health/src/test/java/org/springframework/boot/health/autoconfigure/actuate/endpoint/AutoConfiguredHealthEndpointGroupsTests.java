@@ -14,26 +14,26 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.health.autoconfigure.actuate.endpoint;
+package io.github.kotlinmania.spring.boot.health.autoconfigure.actuate.endpoint;
 
 import java.util.Collections;
 
 import org.junit.jupiter.api.Test;
 
 import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.boot.actuate.endpoint.EndpointId;
-import org.springframework.boot.actuate.endpoint.SecurityContext;
-import org.springframework.boot.actuate.endpoint.web.AdditionalPathsMapper;
-import org.springframework.boot.actuate.endpoint.web.WebServerNamespace;
-import org.springframework.boot.autoconfigure.AutoConfigurations;
-import org.springframework.boot.context.properties.EnableConfigurationProperties;
-import org.springframework.boot.health.actuate.endpoint.HealthEndpoint;
-import org.springframework.boot.health.actuate.endpoint.HealthEndpointGroup;
-import org.springframework.boot.health.actuate.endpoint.HealthEndpointGroups;
-import org.springframework.boot.health.actuate.endpoint.HttpCodeStatusMapper;
-import org.springframework.boot.health.actuate.endpoint.StatusAggregator;
-import org.springframework.boot.health.contributor.Status;
-import org.springframework.boot.test.context.runner.ApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.EndpointId;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.SecurityContext;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.web.AdditionalPathsMapper;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.web.WebServerNamespace;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurations;
+import io.github.kotlinmania.spring.boot.context.properties.EnableConfigurationProperties;
+import io.github.kotlinmania.spring.boot.health.actuate.endpoint.HealthEndpoint;
+import io.github.kotlinmania.spring.boot.health.actuate.endpoint.HealthEndpointGroup;
+import io.github.kotlinmania.spring.boot.health.actuate.endpoint.HealthEndpointGroups;
+import io.github.kotlinmania.spring.boot.health.actuate.endpoint.HttpCodeStatusMapper;
+import io.github.kotlinmania.spring.boot.health.actuate.endpoint.StatusAggregator;
+import io.github.kotlinmania.spring.boot.health.contributor.Status;
+import io.github.kotlinmania.spring.boot.test.context.runner.ApplicationContextRunner;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

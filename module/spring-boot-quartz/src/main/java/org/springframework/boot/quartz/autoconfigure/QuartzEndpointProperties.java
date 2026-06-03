@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.quartz.autoconfigure;
+package io.github.kotlinmania.spring.boot.quartz.autoconfigure;
 
 import java.util.HashSet;
 import java.util.Set;
 
-import org.springframework.boot.actuate.endpoint.Show;
-import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.boot.quartz.actuate.endpoint.QuartzEndpoint;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.Show;
+import io.github.kotlinmania.spring.boot.context.properties.ConfigurationProperties;
+import io.github.kotlinmania.spring.boot.quartz.actuate.endpoint.QuartzEndpoint;
 
 /**
  * Configuration properties for {@link QuartzEndpoint}.

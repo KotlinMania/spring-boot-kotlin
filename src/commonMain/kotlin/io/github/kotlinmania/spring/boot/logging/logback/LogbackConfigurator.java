@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.logging.logback;
+package io.github.kotlinmania.spring.boot.logging.logback;
 
 import java.util.HashMap;
 import java.util.Map;

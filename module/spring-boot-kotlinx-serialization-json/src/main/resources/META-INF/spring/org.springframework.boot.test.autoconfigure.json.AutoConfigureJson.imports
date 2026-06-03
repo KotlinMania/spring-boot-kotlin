@@ -1,1 +1,1 @@
-optional:org.springframework.boot.kotlinx.serialization.json.autoconfigure.KotlinxSerializationJsonAutoConfiguration
+optional:io.github.kotlinmania.spring.boot.kotlinx.serialization.json.autoconfigure.KotlinxSerializationJsonAutoConfiguration

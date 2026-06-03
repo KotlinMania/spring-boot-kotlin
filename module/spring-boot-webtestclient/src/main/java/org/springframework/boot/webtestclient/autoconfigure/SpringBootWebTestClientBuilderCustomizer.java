@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.webtestclient.autoconfigure;
+package io.github.kotlinmania.spring.boot.webtestclient.autoconfigure;
 
 import java.time.Duration;
 import java.util.Collection;
@@ -22,7 +22,7 @@ import java.util.function.Consumer;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.http.codec.CodecCustomizer;
+import io.github.kotlinmania.spring.boot.http.codec.CodecCustomizer;
 import org.springframework.http.codec.ClientCodecConfigurer;
 import org.springframework.test.web.reactive.server.WebTestClient;
 import org.springframework.test.web.reactive.server.WebTestClient.Builder;

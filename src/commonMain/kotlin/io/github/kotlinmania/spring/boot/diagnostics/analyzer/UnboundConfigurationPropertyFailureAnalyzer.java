@@ -14,15 +14,15 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.diagnostics.analyzer;
+package io.github.kotlinmania.spring.boot.diagnostics.analyzer;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.context.properties.bind.BindException;
-import org.springframework.boot.context.properties.bind.UnboundConfigurationPropertiesException;
-import org.springframework.boot.context.properties.source.ConfigurationProperty;
-import org.springframework.boot.diagnostics.AbstractFailureAnalyzer;
-import org.springframework.boot.diagnostics.FailureAnalysis;
+import io.github.kotlinmania.spring.boot.context.properties.bind.BindException;
+import io.github.kotlinmania.spring.boot.context.properties.bind.UnboundConfigurationPropertiesException;
+import io.github.kotlinmania.spring.boot.context.properties.source.ConfigurationProperty;
+import io.github.kotlinmania.spring.boot.diagnostics.AbstractFailureAnalyzer;
+import io.github.kotlinmania.spring.boot.diagnostics.FailureAnalysis;
 import org.springframework.util.Assert;
 
 /**

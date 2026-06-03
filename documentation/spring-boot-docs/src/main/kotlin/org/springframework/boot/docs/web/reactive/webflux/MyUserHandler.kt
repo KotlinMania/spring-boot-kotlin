@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.web.reactive.webflux
+package io.github.kotlinmania.spring.boot.docs.web.reactive.webflux
 
 import org.springframework.stereotype.Component
 import org.springframework.web.reactive.function.server.ServerRequest

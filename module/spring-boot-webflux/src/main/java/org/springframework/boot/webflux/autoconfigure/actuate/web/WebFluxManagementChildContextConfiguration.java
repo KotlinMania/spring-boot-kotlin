@@ -14,20 +14,20 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.webflux.autoconfigure.actuate.web;
+package io.github.kotlinmania.spring.boot.webflux.autoconfigure.actuate.web;
 
 import java.util.Collections;
 import java.util.Map;
 
 import org.springframework.beans.factory.ListableBeanFactory;
-import org.springframework.boot.actuate.autoconfigure.web.ManagementContextConfiguration;
-import org.springframework.boot.actuate.autoconfigure.web.ManagementContextType;
-import org.springframework.boot.actuate.autoconfigure.web.server.ManagementServerProperties;
-import org.springframework.boot.actuate.autoconfigure.web.server.ManagementWebServerFactoryCustomizer;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnWebApplication;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnWebApplication.Type;
-import org.springframework.boot.web.server.ConfigurableWebServerFactory;
+import io.github.kotlinmania.spring.boot.actuate.autoconfigure.web.ManagementContextConfiguration;
+import io.github.kotlinmania.spring.boot.actuate.autoconfigure.web.ManagementContextType;
+import io.github.kotlinmania.spring.boot.actuate.autoconfigure.web.server.ManagementServerProperties;
+import io.github.kotlinmania.spring.boot.actuate.autoconfigure.web.server.ManagementWebServerFactoryCustomizer;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnClass;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnWebApplication;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnWebApplication.Type;
+import io.github.kotlinmania.spring.boot.web.server.ConfigurableWebServerFactory;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.http.server.reactive.ContextPathCompositeHandler;

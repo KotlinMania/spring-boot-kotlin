@@ -19,9 +19,9 @@ package smoketest.layout;
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
 
-import org.springframework.boot.loader.tools.CustomLoaderLayout;
-import org.springframework.boot.loader.tools.Layouts;
-import org.springframework.boot.loader.tools.LoaderClassesWriter;
+import io.github.kotlinmania.spring.boot.loader.tools.CustomLoaderLayout;
+import io.github.kotlinmania.spring.boot.loader.tools.Layouts;
+import io.github.kotlinmania.spring.boot.loader.tools.LoaderClassesWriter;
 
 /**
  * An example layout.

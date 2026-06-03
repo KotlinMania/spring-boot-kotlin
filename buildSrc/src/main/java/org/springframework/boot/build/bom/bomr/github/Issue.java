@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.build.bom.bomr.github;
+package io.github.kotlinmania.spring.boot.build.bom.bomr.github;
 
 import java.util.Collections;
 import java.util.List;

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.reactor;
+package io.github.kotlinmania.spring.boot.reactor;
 
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Disabled;
@@ -24,7 +24,7 @@ import org.junit.jupiter.api.condition.JRE;
 import reactor.core.Scannable;
 import reactor.core.publisher.Flux;
 
-import org.springframework.boot.SpringApplication;
+import io.github.kotlinmania.spring.boot.SpringApplication;
 import org.springframework.mock.env.MockEnvironment;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -50,7 +50,7 @@ class ReactorEnvironmentPostProcessorTests {
 		InstrumentedFluxProvider fluxProvider = new InstrumentedFluxProvider();
 		Flux<Integer> flux = fluxProvider.newFluxJust();
 		assertThat(Scannable.from(flux).stepName())
-			.startsWith("Flux.just ⇢ at org.springframework.boot.reactor.InstrumentedFluxProvider.newFluxJust");
+			.startsWith("Flux.just ⇢ at io.github.kotlinmania.spring.boot.reactor.InstrumentedFluxProvider.newFluxJust");
 	}
 
 	@Test

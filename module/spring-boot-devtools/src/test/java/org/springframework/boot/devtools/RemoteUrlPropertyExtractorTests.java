@@ -14,15 +14,15 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.devtools;
+package io.github.kotlinmania.spring.boot.devtools;
 
 import ch.qos.logback.classic.Logger;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 import org.slf4j.LoggerFactory;
 
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.WebApplicationType;
+import io.github.kotlinmania.spring.boot.SpringApplication;
+import io.github.kotlinmania.spring.boot.WebApplicationType;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Configuration;
 

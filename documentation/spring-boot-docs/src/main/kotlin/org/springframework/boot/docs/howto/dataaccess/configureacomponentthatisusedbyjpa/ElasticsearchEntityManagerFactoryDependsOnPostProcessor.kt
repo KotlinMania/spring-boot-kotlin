@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.howto.dataaccess.configureacomponentthatisusedbyjpa
+package io.github.kotlinmania.spring.boot.docs.howto.dataaccess.configureacomponentthatisusedbyjpa
 
-import org.springframework.boot.jpa.autoconfigure.EntityManagerFactoryDependsOnPostProcessor
+import io.github.kotlinmania.spring.boot.jpa.autoconfigure.EntityManagerFactoryDependsOnPostProcessor
 import org.springframework.stereotype.Component
 
 @Component

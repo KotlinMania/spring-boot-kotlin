@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.build.antora;
+package io.github.kotlinmania.spring.boot.build.antora;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -31,15 +31,15 @@ import java.util.stream.Collectors;
 
 import org.gradle.api.Project;
 
-import org.springframework.boot.build.artifacts.ArtifactRelease;
-import org.springframework.boot.build.bom.BomExtension;
-import org.springframework.boot.build.bom.Library;
-import org.springframework.boot.build.bom.ResolvedBom;
-import org.springframework.boot.build.bom.ResolvedBom.Bom;
-import org.springframework.boot.build.bom.ResolvedBom.Id;
-import org.springframework.boot.build.bom.ResolvedBom.ResolvedLibrary;
-import org.springframework.boot.build.properties.BuildProperties;
-import org.springframework.boot.build.properties.BuildType;
+import io.github.kotlinmania.spring.boot.build.artifacts.ArtifactRelease;
+import io.github.kotlinmania.spring.boot.build.bom.BomExtension;
+import io.github.kotlinmania.spring.boot.build.bom.Library;
+import io.github.kotlinmania.spring.boot.build.bom.ResolvedBom;
+import io.github.kotlinmania.spring.boot.build.bom.ResolvedBom.Bom;
+import io.github.kotlinmania.spring.boot.build.bom.ResolvedBom.Id;
+import io.github.kotlinmania.spring.boot.build.bom.ResolvedBom.ResolvedLibrary;
+import io.github.kotlinmania.spring.boot.build.properties.BuildProperties;
+import io.github.kotlinmania.spring.boot.build.properties.BuildType;
 import org.springframework.util.Assert;
 
 /**

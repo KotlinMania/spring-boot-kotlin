@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.autoconfigure;
+package io.github.kotlinmania.spring.boot.autoconfigure;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -24,7 +24,7 @@ import java.util.Set;
 import java.util.function.UnaryOperator;
 import java.util.stream.Collectors;
 
-import org.springframework.boot.context.annotation.Configurations;
+import io.github.kotlinmania.spring.boot.context.annotation.Configurations;
 import org.springframework.core.Ordered;
 import org.springframework.core.type.classreading.SimpleMetadataReaderFactory;
 import org.springframework.util.ClassUtils;

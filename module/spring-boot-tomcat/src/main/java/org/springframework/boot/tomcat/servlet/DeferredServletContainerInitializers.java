@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.tomcat.servlet;
+package io.github.kotlinmania.spring.boot.tomcat.servlet;
 
 import java.util.Set;
 
@@ -25,8 +25,8 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.tomcat.TomcatEmbeddedContext;
-import org.springframework.boot.web.servlet.ServletContextInitializer;
+import io.github.kotlinmania.spring.boot.tomcat.TomcatEmbeddedContext;
+import io.github.kotlinmania.spring.boot.web.servlet.ServletContextInitializer;
 
 /**
  * {@link ServletContainerInitializer} used to trigger {@link ServletContextInitializer

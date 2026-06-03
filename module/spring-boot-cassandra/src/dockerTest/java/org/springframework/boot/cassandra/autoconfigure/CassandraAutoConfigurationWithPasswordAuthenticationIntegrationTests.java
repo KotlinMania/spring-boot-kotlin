@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.cassandra.autoconfigure;
+package io.github.kotlinmania.spring.boot.cassandra.autoconfigure;
 
 import java.net.InetSocketAddress;
 import java.nio.charset.StandardCharsets;
@@ -36,9 +36,9 @@ import org.testcontainers.junit.jupiter.Testcontainers;
 import org.testcontainers.utility.DockerImageName;
 
 import org.springframework.beans.factory.BeanCreationException;
-import org.springframework.boot.autoconfigure.AutoConfigurations;
-import org.springframework.boot.test.context.runner.ApplicationContextRunner;
-import org.springframework.boot.testsupport.container.TestImage;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurations;
+import io.github.kotlinmania.spring.boot.test.context.runner.ApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.testsupport.container.TestImage;
 import org.springframework.util.StreamUtils;
 
 import static org.assertj.core.api.Assertions.assertThat;

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.build;
+package io.github.kotlinmania.spring.boot.build;
 
 import javax.inject.Inject;
 

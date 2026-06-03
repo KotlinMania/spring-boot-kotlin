@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.test.context.filter.annotation;
+package io.github.kotlinmania.spring.boot.test.context.filter.annotation;
 
 import java.io.IOException;
 import java.lang.annotation.Annotation;

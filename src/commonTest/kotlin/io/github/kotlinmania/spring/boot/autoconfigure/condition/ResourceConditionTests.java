@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.autoconfigure.condition;
+package io.github.kotlinmania.spring.boot.autoconfigure.condition;
 
 import org.jspecify.annotations.Nullable;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.test.util.TestPropertyValues;
-import org.springframework.boot.testsupport.classpath.resources.WithResource;
+import io.github.kotlinmania.spring.boot.test.util.TestPropertyValues;
+import io.github.kotlinmania.spring.boot.testsupport.classpath.resources.WithResource;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.Bean;

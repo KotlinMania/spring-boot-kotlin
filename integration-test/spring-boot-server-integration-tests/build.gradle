@@ -16,7 +16,7 @@
 
 plugins {
 	id "java"
-	id "org.springframework.boot.integration-test"
+	id "io.github.kotlinmania.spring.boot.integration-test"
 }
 
 description = "Spring Boot Server Integration Tests"
@@ -49,7 +49,7 @@ tasks.register("syncTestRepository", Sync) {
 	}
 }
 
-tasks.register("syncAppSource", org.springframework.boot.build.SyncAppSource) {
+tasks.register("syncAppSource", io.github.kotlinmania.spring.boot.build.SyncAppSource) {
 	sourceDirectory = file("spring-boot-server-tests-app")
 	destinationDirectory = file(layout.buildDirectory.dir("spring-boot-server-tests-app"))
 }

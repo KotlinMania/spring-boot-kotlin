@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.integration.autoconfigure;
+package io.github.kotlinmania.spring.boot.integration.autoconfigure;
 
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.autoconfigure.AutoConfigurations;
-import org.springframework.boot.autoconfigure.jmx.JmxAutoConfiguration;
-import org.springframework.boot.integration.actuate.endpoint.IntegrationGraphEndpoint;
-import org.springframework.boot.test.context.runner.ApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurations;
+import io.github.kotlinmania.spring.boot.autoconfigure.jmx.JmxAutoConfiguration;
+import io.github.kotlinmania.spring.boot.integration.actuate.endpoint.IntegrationGraphEndpoint;
+import io.github.kotlinmania.spring.boot.test.context.runner.ApplicationContextRunner;
 import org.springframework.integration.graph.IntegrationGraphServer;
 
 import static org.assertj.core.api.Assertions.assertThat;

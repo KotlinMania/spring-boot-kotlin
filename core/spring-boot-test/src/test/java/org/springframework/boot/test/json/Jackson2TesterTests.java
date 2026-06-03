@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.test.json;
+package io.github.kotlinmania.spring.boot.test.json;
 
 import java.util.List;
 
@@ -68,23 +68,23 @@ class Jackson2TesterTests extends AbstractJsonMarshalTesterTests {
 
 	@Override
 	protected AbstractJsonMarshalTester<Object> createTester(Class<?> resourceLoadClass, ResolvableType type) {
-		return new org.springframework.boot.test.json.Jackson2Tester<>(resourceLoadClass, type, new ObjectMapper());
+		return new io.github.kotlinmania.spring.boot.test.json.Jackson2Tester<>(resourceLoadClass, type, new ObjectMapper());
 	}
 
 	abstract static class InitFieldsBaseClass {
 
-		public org.springframework.boot.test.json.@Nullable Jackson2Tester<ExampleObject> base;
+		public io.github.kotlinmania.spring.boot.test.json.@Nullable Jackson2Tester<ExampleObject> base;
 
-		public org.springframework.boot.test.json.Jackson2Tester<ExampleObject> baseSet = new org.springframework.boot.test.json.Jackson2Tester<>(
+		public io.github.kotlinmania.spring.boot.test.json.Jackson2Tester<ExampleObject> baseSet = new io.github.kotlinmania.spring.boot.test.json.Jackson2Tester<>(
 				InitFieldsBaseClass.class, ResolvableType.forClass(ExampleObject.class), new ObjectMapper());
 
 	}
 
 	static class InitFieldsTestClass extends InitFieldsBaseClass {
 
-		public org.springframework.boot.test.json.@Nullable Jackson2Tester<List<ExampleObject>> test;
+		public io.github.kotlinmania.spring.boot.test.json.@Nullable Jackson2Tester<List<ExampleObject>> test;
 
-		public org.springframework.boot.test.json.Jackson2Tester<ExampleObject> testSet = new org.springframework.boot.test.json.Jackson2Tester<>(
+		public io.github.kotlinmania.spring.boot.test.json.Jackson2Tester<ExampleObject> testSet = new io.github.kotlinmania.spring.boot.test.json.Jackson2Tester<>(
 				InitFieldsBaseClass.class, ResolvableType.forClass(ExampleObject.class), new ObjectMapper());
 
 	}

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.buildpack.platform.build;
+package io.github.kotlinmania.spring.boot.buildpack.platform.build;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -23,8 +23,8 @@ import java.util.List;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.buildpack.platform.docker.type.Layer;
-import org.springframework.boot.buildpack.platform.json.AbstractJsonTests;
+import io.github.kotlinmania.spring.boot.buildpack.platform.docker.type.Layer;
+import io.github.kotlinmania.spring.boot.buildpack.platform.json.AbstractJsonTests;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatIllegalStateException;

@@ -14,16 +14,16 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.configurationprocessor;
+package io.github.kotlinmania.spring.boot.configurationprocessor;
 
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.configurationprocessor.metadata.ConfigurationMetadata;
-import org.springframework.boot.configurationprocessor.metadata.Metadata;
-import org.springframework.boot.configurationsample.inheritance.ChildProperties;
-import org.springframework.boot.configurationsample.inheritance.ChildPropertiesConfig;
-import org.springframework.boot.configurationsample.inheritance.OverrideChildProperties;
-import org.springframework.boot.configurationsample.inheritance.OverrideChildPropertiesConfig;
+import io.github.kotlinmania.spring.boot.configurationprocessor.metadata.ConfigurationMetadata;
+import io.github.kotlinmania.spring.boot.configurationprocessor.metadata.Metadata;
+import io.github.kotlinmania.spring.boot.configurationsample.inheritance.ChildProperties;
+import io.github.kotlinmania.spring.boot.configurationsample.inheritance.ChildPropertiesConfig;
+import io.github.kotlinmania.spring.boot.configurationsample.inheritance.OverrideChildProperties;
+import io.github.kotlinmania.spring.boot.configurationsample.inheritance.OverrideChildPropertiesConfig;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

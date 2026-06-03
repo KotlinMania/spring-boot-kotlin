@@ -15,7 +15,7 @@
  */
 
 plugins {
-	id "org.springframework.boot.starter"
+	id "io.github.kotlinmania.spring.boot.starter"
 }
 
 description = "Starter for building web, including RESTful, applications using Spring MVC. Uses Tomcat as the default embedded container (deprecated in favor of spring-boot-starter-webmvc)"

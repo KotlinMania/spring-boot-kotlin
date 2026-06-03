@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.micrometer.metrics.autoconfigure.system;
+package io.github.kotlinmania.spring.boot.micrometer.metrics.autoconfigure.system;
 
 import java.io.File;
 import java.util.Collections;
@@ -28,16 +28,16 @@ import io.micrometer.core.instrument.binder.system.ProcessorMetrics;
 import io.micrometer.core.instrument.binder.system.UptimeMetrics;
 
 import org.springframework.beans.factory.ObjectProvider;
-import org.springframework.boot.autoconfigure.AutoConfiguration;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
-import org.springframework.boot.context.properties.EnableConfigurationProperties;
-import org.springframework.boot.micrometer.metrics.autoconfigure.CompositeMeterRegistryAutoConfiguration;
-import org.springframework.boot.micrometer.metrics.autoconfigure.MetricsAutoConfiguration;
-import org.springframework.boot.micrometer.metrics.autoconfigure.MetricsProperties;
-import org.springframework.boot.micrometer.metrics.system.DiskSpaceMetricsBinder;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.EnableAutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnBean;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnClass;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnMissingBean;
+import io.github.kotlinmania.spring.boot.context.properties.EnableConfigurationProperties;
+import io.github.kotlinmania.spring.boot.micrometer.metrics.autoconfigure.CompositeMeterRegistryAutoConfiguration;
+import io.github.kotlinmania.spring.boot.micrometer.metrics.autoconfigure.MetricsAutoConfiguration;
+import io.github.kotlinmania.spring.boot.micrometer.metrics.autoconfigure.MetricsProperties;
+import io.github.kotlinmania.spring.boot.micrometer.metrics.system.DiskSpaceMetricsBinder;
 import org.springframework.context.annotation.Bean;
 
 /**

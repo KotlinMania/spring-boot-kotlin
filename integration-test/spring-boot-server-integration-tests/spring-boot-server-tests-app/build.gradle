@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-import org.springframework.boot.gradle.tasks.bundling.BootJar
-import org.springframework.boot.gradle.tasks.bundling.BootWar
+import io.github.kotlinmania.spring.boot.gradle.tasks.bundling.BootJar
+import io.github.kotlinmania.spring.boot.gradle.tasks.bundling.BootWar
 
 plugins {
 	id "java"
-	id "org.springframework.boot"
+	id "io.github.kotlinmania.spring.boot.
 	id "war"
 }
 
@@ -64,16 +64,16 @@ tasks.register("resourcesJar", Jar) { jar ->
 
 dependencies {
 	compileOnly("org.springframework:spring-web")
-	compileOnly("org.springframework.boot:spring-boot-jetty")
+	compileOnly("io.github.kotlinmania.spring.boot.spring-boot-jetty")
 
-	implementation(platform(org.springframework.boot.gradle.plugin.SpringBootPlugin.BOM_COORDINATES))
-	implementation("org.springframework.boot:spring-boot-starter")
+	implementation(platform(io.github.kotlinmania.spring.boot.gradle.plugin.SpringBootPlugin.BOM_COORDINATES))
+	implementation("io.github.kotlinmania.spring.boot.spring-boot-starter")
 
 	app(files(resourcesJar))
 	app(files(sourceSets.main.output))
 	app("org.springframework:spring-web")
-	jetty("org.springframework.boot:spring-boot-starter-jetty")
-	tomcat("org.springframework.boot:spring-boot-starter-tomcat")
+	jetty("io.github.kotlinmania.spring.boot.spring-boot-starter-jetty")
+	tomcat("io.github.kotlinmania.spring.boot.spring-boot-starter-tomcat")
 }
 
 static boolean isWindows() {

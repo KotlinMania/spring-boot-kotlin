@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.data.jpa.test.autoconfigure;
+package io.github.kotlinmania.spring.boot.data.jpa.test.autoconfigure;
 
 import java.lang.annotation.Documented;
 import java.lang.annotation.ElementType;
@@ -23,8 +23,8 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
-import org.springframework.boot.autoconfigure.ImportAutoConfiguration;
-import org.springframework.boot.jdbc.test.autoconfigure.AutoConfigureJdbc;
+import io.github.kotlinmania.spring.boot.autoconfigure.ImportAutoConfiguration;
+import io.github.kotlinmania.spring.boot.jdbc.test.autoconfigure.AutoConfigureJdbc;
 
 /**
  * {@link ImportAutoConfiguration Auto-configuration imports} for typical Data JPA tests.

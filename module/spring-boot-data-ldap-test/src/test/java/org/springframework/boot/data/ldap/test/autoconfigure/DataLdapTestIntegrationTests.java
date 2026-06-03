@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.data.ldap.test.autoconfigure;
+package io.github.kotlinmania.spring.boot.data.ldap.test.autoconfigure;
 
 import java.util.Optional;
 
@@ -39,7 +39,7 @@ import static org.assertj.core.api.Assertions.assertThatExceptionOfType;
  */
 @DataLdapTest
 @TestPropertySource(properties = { "spring.ldap.embedded.base-dn=dc=spring,dc=org",
-		"spring.ldap.embedded.ldif=classpath:org/springframework/boot/data/ldap/test/autoconfigure/schema.ldif" })
+		"spring.ldap.embedded.ldif=classpath:io.github.kotlinmania.spring.boot.data/ldap/test/autoconfigure/schema.ldif" })
 class DataLdapTestIntegrationTests {
 
 	@Autowired

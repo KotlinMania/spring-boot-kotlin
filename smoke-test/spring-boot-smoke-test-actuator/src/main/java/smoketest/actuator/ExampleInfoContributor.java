@@ -18,8 +18,8 @@ package smoketest.actuator;
 
 import java.util.Collections;
 
-import org.springframework.boot.actuate.info.Info;
-import org.springframework.boot.actuate.info.InfoContributor;
+import io.github.kotlinmania.spring.boot.actuate.info.Info;
+import io.github.kotlinmania.spring.boot.actuate.info.InfoContributor;
 import org.springframework.stereotype.Component;
 
 @Component

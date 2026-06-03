@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.jackson.scan.b;
+package io.github.kotlinmania.spring.boot.jackson.scan.b;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-import org.springframework.boot.jackson.JacksonMixin;
-import org.springframework.boot.jackson.types.NameAndAge;
+import io.github.kotlinmania.spring.boot.jackson.JacksonMixin;
+import io.github.kotlinmania.spring.boot.jackson.types.NameAndAge;
 
 @JacksonMixin(type = NameAndAge.class)
 public abstract class RenameMixInAbstractClass {

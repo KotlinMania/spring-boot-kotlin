@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.autoconfigure.jmx;
+package io.github.kotlinmania.spring.boot.autoconfigure.jmx;
 
 import java.util.Hashtable;
 

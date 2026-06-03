@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.autoconfigure.task;
+package io.github.kotlinmania.spring.boot.autoconfigure.task;
 
 import java.lang.reflect.Method;
 import java.util.Arrays;
@@ -25,7 +25,7 @@ import java.util.concurrent.ScheduledExecutorService;
 
 import org.springframework.aop.framework.AopInfrastructureBean;
 import org.springframework.beans.factory.config.BeanDefinition;
-import org.springframework.boot.LazyInitializationExcludeFilter;
+import io.github.kotlinmania.spring.boot.LazyInitializationExcludeFilter;
 import org.springframework.core.MethodIntrospector;
 import org.springframework.core.annotation.AnnotatedElementUtils;
 import org.springframework.core.annotation.AnnotationUtils;

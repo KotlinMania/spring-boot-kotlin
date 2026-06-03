@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.jackson2.autoconfigure;
+package io.github.kotlinmania.spring.boot.jackson2.autoconfigure;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 

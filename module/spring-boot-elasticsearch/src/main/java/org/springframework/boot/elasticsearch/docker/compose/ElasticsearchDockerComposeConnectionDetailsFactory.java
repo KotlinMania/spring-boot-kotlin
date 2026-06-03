@@ -14,18 +14,18 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.elasticsearch.docker.compose;
+package io.github.kotlinmania.spring.boot.elasticsearch.docker.compose;
 
 import java.util.List;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.docker.compose.core.RunningService;
-import org.springframework.boot.docker.compose.service.connection.DockerComposeConnectionDetailsFactory;
-import org.springframework.boot.docker.compose.service.connection.DockerComposeConnectionSource;
-import org.springframework.boot.elasticsearch.autoconfigure.ElasticsearchConnectionDetails;
-import org.springframework.boot.elasticsearch.autoconfigure.ElasticsearchConnectionDetails.Node.Protocol;
-import org.springframework.boot.ssl.SslBundle;
+import io.github.kotlinmania.spring.boot.docker.compose.core.RunningService;
+import io.github.kotlinmania.spring.boot.docker.compose.service.connection.DockerComposeConnectionDetailsFactory;
+import io.github.kotlinmania.spring.boot.docker.compose.service.connection.DockerComposeConnectionSource;
+import io.github.kotlinmania.spring.boot.elasticsearch.autoconfigure.ElasticsearchConnectionDetails;
+import io.github.kotlinmania.spring.boot.elasticsearch.autoconfigure.ElasticsearchConnectionDetails.Node.Protocol;
+import io.github.kotlinmania.spring.boot.ssl.SslBundle;
 
 /**
  * {@link DockerComposeConnectionDetailsFactory} to create

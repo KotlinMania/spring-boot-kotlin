@@ -1,7 +1,7 @@
-org.springframework.boot.autoconfigure.context.MessageSourceAutoConfiguration
-org.springframework.boot.autoconfigure.task.TaskExecutionAutoConfiguration
-org.springframework.boot.servlet.autoconfigure.HttpEncodingAutoConfiguration
-org.springframework.boot.webmvc.autoconfigure.WebMvcAutoConfiguration
-org.springframework.boot.webmvc.autoconfigure.error.ErrorMvcAutoConfiguration
-optional:org.springframework.boot.http.converter.autoconfigure.HttpMessageConvertersAutoConfiguration
-optional:org.springframework.boot.validation.autoconfigure.ValidationAutoConfiguration
+io.github.kotlinmania.spring.boot.autoconfigure.context.MessageSourceAutoConfiguration
+io.github.kotlinmania.spring.boot.autoconfigure.task.TaskExecutionAutoConfiguration
+io.github.kotlinmania.spring.boot.servlet.autoconfigure.HttpEncodingAutoConfiguration
+io.github.kotlinmania.spring.boot.webmvc.autoconfigure.WebMvcAutoConfiguration
+io.github.kotlinmania.spring.boot.webmvc.autoconfigure.error.ErrorMvcAutoConfiguration
+optional:io.github.kotlinmania.spring.boot.http.converter.autoconfigure.HttpMessageConvertersAutoConfiguration
+optional:io.github.kotlinmania.spring.boot.validation.autoconfigure.ValidationAutoConfiguration

@@ -559,7 +559,7 @@
     },
     {
       "publisher" : "VMware, Inc.",
-      "group" : "org.springframework.boot",
+      "group" : "io.github.kotlinmania.spring.boot.,
       "name" : "spring-boot-test-autoconfigure",
       "version" : "3.2.1",
       "description" : "Spring Boot Test AutoConfigure",
@@ -604,7 +604,7 @@
           }
         }
       ],
-      "purl" : "pkg:maven/org.springframework.boot/spring-boot-test-autoconfigure@3.2.1?type=jar",
+      "purl" : "pkg:maven/io.github.kotlinmania.spring.boot.spring-boot-test-autoconfigure@3.2.1?type=jar",
       "modified" : false,
       "externalReferences" : [
         {
@@ -621,11 +621,11 @@
         }
       ],
       "type" : "library",
-      "bom-ref" : "pkg:maven/org.springframework.boot/spring-boot-test-autoconfigure@3.2.1?type=jar"
+      "bom-ref" : "pkg:maven/io.github.kotlinmania.spring.boot.spring-boot-test-autoconfigure@3.2.1?type=jar"
     },
     {
       "publisher" : "VMware, Inc.",
-      "group" : "org.springframework.boot",
+      "group" : "io.github.kotlinmania.spring.boot.,
       "name" : "spring-boot-starter-json",
       "version" : "3.2.1",
       "description" : "Starter for reading and writing json",
@@ -670,7 +670,7 @@
           }
         }
       ],
-      "purl" : "pkg:maven/org.springframework.boot/spring-boot-starter-json@3.2.1?type=jar",
+      "purl" : "pkg:maven/io.github.kotlinmania.spring.boot.spring-boot-starter-json@3.2.1?type=jar",
       "modified" : false,
       "externalReferences" : [
         {
@@ -687,7 +687,7 @@
         }
       ],
       "type" : "library",
-      "bom-ref" : "pkg:maven/org.springframework.boot/spring-boot-starter-json@3.2.1?type=jar"
+      "bom-ref" : "pkg:maven/io.github.kotlinmania.spring.boot.spring-boot-starter-json@3.2.1?type=jar"
     },
     {
       "group" : "com.fasterxml.jackson.datatype",
@@ -926,7 +926,7 @@
     },
     {
       "publisher" : "VMware, Inc.",
-      "group" : "org.springframework.boot",
+      "group" : "io.github.kotlinmania.spring.boot.,
       "name" : "spring-boot-actuator-autoconfigure",
       "version" : "3.2.1",
       "description" : "Spring Boot Actuator AutoConfigure",
@@ -971,7 +971,7 @@
           }
         }
       ],
-      "purl" : "pkg:maven/org.springframework.boot/spring-boot-actuator-autoconfigure@3.2.1?type=jar",
+      "purl" : "pkg:maven/io.github.kotlinmania.spring.boot.spring-boot-actuator-autoconfigure@3.2.1?type=jar",
       "modified" : false,
       "externalReferences" : [
         {
@@ -988,11 +988,11 @@
         }
       ],
       "type" : "library",
-      "bom-ref" : "pkg:maven/org.springframework.boot/spring-boot-actuator-autoconfigure@3.2.1?type=jar"
+      "bom-ref" : "pkg:maven/io.github.kotlinmania.spring.boot.spring-boot-actuator-autoconfigure@3.2.1?type=jar"
     },
     {
       "publisher" : "VMware, Inc.",
-      "group" : "org.springframework.boot",
+      "group" : "io.github.kotlinmania.spring.boot.,
       "name" : "spring-boot-starter-tomcat",
       "version" : "3.2.1",
       "description" : "Starter for using Tomcat as the embedded servlet container. Default servlet container starter used by spring-boot-starter-web",
@@ -1037,7 +1037,7 @@
           }
         }
       ],
-      "purl" : "pkg:maven/org.springframework.boot/spring-boot-starter-tomcat@3.2.1?type=jar",
+      "purl" : "pkg:maven/io.github.kotlinmania.spring.boot.spring-boot-starter-tomcat@3.2.1?type=jar",
       "modified" : false,
       "externalReferences" : [
         {
@@ -1054,7 +1054,7 @@
         }
       ],
       "type" : "library",
-      "bom-ref" : "pkg:maven/org.springframework.boot/spring-boot-starter-tomcat@3.2.1?type=jar"
+      "bom-ref" : "pkg:maven/io.github.kotlinmania.spring.boot.spring-boot-starter-tomcat@3.2.1?type=jar"
     },
     {
       "group" : "org.apache.logging.log4j",
@@ -1457,7 +1457,7 @@
     },
     {
       "publisher" : "VMware, Inc.",
-      "group" : "org.springframework.boot",
+      "group" : "io.github.kotlinmania.spring.boot.,
       "name" : "spring-boot-starter-logging",
       "version" : "3.2.1",
       "description" : "Starter for logging using Logback. Default logging starter",
@@ -1502,7 +1502,7 @@
           }
         }
       ],
-      "purl" : "pkg:maven/org.springframework.boot/spring-boot-starter-logging@3.2.1?type=jar",
+      "purl" : "pkg:maven/io.github.kotlinmania.spring.boot.spring-boot-starter-logging@3.2.1?type=jar",
       "modified" : false,
       "externalReferences" : [
         {
@@ -1519,11 +1519,11 @@
         }
       ],
       "type" : "library",
-      "bom-ref" : "pkg:maven/org.springframework.boot/spring-boot-starter-logging@3.2.1?type=jar"
+      "bom-ref" : "pkg:maven/io.github.kotlinmania.spring.boot.spring-boot-starter-logging@3.2.1?type=jar"
     },
     {
       "publisher" : "VMware, Inc.",
-      "group" : "org.springframework.boot",
+      "group" : "io.github.kotlinmania.spring.boot.,
       "name" : "spring-boot-actuator",
       "version" : "3.2.1",
       "description" : "Spring Boot Actuator",
@@ -1568,7 +1568,7 @@
           }
         }
       ],
-      "purl" : "pkg:maven/org.springframework.boot/spring-boot-actuator@3.2.1?type=jar",
+      "purl" : "pkg:maven/io.github.kotlinmania.spring.boot.spring-boot-actuator@3.2.1?type=jar",
       "modified" : false,
       "externalReferences" : [
         {
@@ -1585,7 +1585,7 @@
         }
       ],
       "type" : "library",
-      "bom-ref" : "pkg:maven/org.springframework.boot/spring-boot-actuator@3.2.1?type=jar"
+      "bom-ref" : "pkg:maven/io.github.kotlinmania.spring.boot.spring-boot-actuator@3.2.1?type=jar"
     },
     {
       "group" : "ch.qos.logback",
@@ -1646,7 +1646,7 @@
     },
     {
       "publisher" : "VMware, Inc.",
-      "group" : "org.springframework.boot",
+      "group" : "io.github.kotlinmania.spring.boot.,
       "name" : "spring-boot-test",
       "version" : "3.2.1",
       "description" : "Spring Boot Test",
@@ -1691,7 +1691,7 @@
           }
         }
       ],
-      "purl" : "pkg:maven/org.springframework.boot/spring-boot-test@3.2.1?type=jar",
+      "purl" : "pkg:maven/io.github.kotlinmania.spring.boot.spring-boot-test@3.2.1?type=jar",
       "modified" : false,
       "externalReferences" : [
         {
@@ -1708,7 +1708,7 @@
         }
       ],
       "type" : "library",
-      "bom-ref" : "pkg:maven/org.springframework.boot/spring-boot-test@3.2.1?type=jar"
+      "bom-ref" : "pkg:maven/io.github.kotlinmania.spring.boot.spring-boot-test@3.2.1?type=jar"
     },
     {
       "group" : "io.micrometer",
@@ -1871,7 +1871,7 @@
     },
     {
       "publisher" : "VMware, Inc.",
-      "group" : "org.springframework.boot",
+      "group" : "io.github.kotlinmania.spring.boot.,
       "name" : "spring-boot-autoconfigure",
       "version" : "3.2.1",
       "description" : "Spring Boot AutoConfigure",
@@ -1916,7 +1916,7 @@
           }
         }
       ],
-      "purl" : "pkg:maven/org.springframework.boot/spring-boot-autoconfigure@3.2.1?type=jar",
+      "purl" : "pkg:maven/io.github.kotlinmania.spring.boot.spring-boot-autoconfigure@3.2.1?type=jar",
       "modified" : false,
       "externalReferences" : [
         {
@@ -1933,7 +1933,7 @@
         }
       ],
       "type" : "library",
-      "bom-ref" : "pkg:maven/org.springframework.boot/spring-boot-autoconfigure@3.2.1?type=jar"
+      "bom-ref" : "pkg:maven/io.github.kotlinmania.spring.boot.spring-boot-autoconfigure@3.2.1?type=jar"
     },
     {
       "group" : "org.junit.jupiter",
@@ -2431,7 +2431,7 @@
     },
     {
       "publisher" : "VMware, Inc.",
-      "group" : "org.springframework.boot",
+      "group" : "io.github.kotlinmania.spring.boot.,
       "name" : "spring-boot-starter-web",
       "version" : "3.2.1",
       "description" : "Starter for building web, including RESTful, applications using Spring MVC. Uses Tomcat as the default embedded container",
@@ -2476,7 +2476,7 @@
           }
         }
       ],
-      "purl" : "pkg:maven/org.springframework.boot/spring-boot-starter-web@3.2.1?type=jar",
+      "purl" : "pkg:maven/io.github.kotlinmania.spring.boot.spring-boot-starter-web@3.2.1?type=jar",
       "modified" : false,
       "externalReferences" : [
         {
@@ -2493,11 +2493,11 @@
         }
       ],
       "type" : "library",
-      "bom-ref" : "pkg:maven/org.springframework.boot/spring-boot-starter-web@3.2.1?type=jar"
+      "bom-ref" : "pkg:maven/io.github.kotlinmania.spring.boot.spring-boot-starter-web@3.2.1?type=jar"
     },
     {
       "publisher" : "VMware, Inc.",
-      "group" : "org.springframework.boot",
+      "group" : "io.github.kotlinmania.spring.boot.,
       "name" : "spring-boot-starter-test",
       "version" : "3.2.1",
       "description" : "Starter for testing Spring Boot applications with libraries including JUnit Jupiter, Hamcrest and Mockito",
@@ -2542,7 +2542,7 @@
           }
         }
       ],
-      "purl" : "pkg:maven/org.springframework.boot/spring-boot-starter-test@3.2.1?type=jar",
+      "purl" : "pkg:maven/io.github.kotlinmania.spring.boot.spring-boot-starter-test@3.2.1?type=jar",
       "modified" : false,
       "externalReferences" : [
         {
@@ -2559,7 +2559,7 @@
         }
       ],
       "type" : "library",
-      "bom-ref" : "pkg:maven/org.springframework.boot/spring-boot-starter-test@3.2.1?type=jar"
+      "bom-ref" : "pkg:maven/io.github.kotlinmania.spring.boot.spring-boot-starter-test@3.2.1?type=jar"
     },
     {
       "group" : "jakarta.activation",
@@ -2841,7 +2841,7 @@
     },
     {
       "publisher" : "VMware, Inc.",
-      "group" : "org.springframework.boot",
+      "group" : "io.github.kotlinmania.spring.boot.,
       "name" : "spring-boot",
       "version" : "3.2.1",
       "description" : "Spring Boot",
@@ -2886,7 +2886,7 @@
           }
         }
       ],
-      "purl" : "pkg:maven/org.springframework.boot/spring-boot@3.2.1?type=jar",
+      "purl" : "pkg:maven/io.github.kotlinmania.spring.boot.spring-boot@3.2.1?type=jar",
       "modified" : false,
       "externalReferences" : [
         {
@@ -2903,7 +2903,7 @@
         }
       ],
       "type" : "library",
-      "bom-ref" : "pkg:maven/org.springframework.boot/spring-boot@3.2.1?type=jar"
+      "bom-ref" : "pkg:maven/io.github.kotlinmania.spring.boot.spring-boot@3.2.1?type=jar"
     },
     {
       "group" : "org.latencyutils",
@@ -3619,7 +3619,7 @@
     },
     {
       "publisher" : "VMware, Inc.",
-      "group" : "org.springframework.boot",
+      "group" : "io.github.kotlinmania.spring.boot.,
       "name" : "spring-boot-starter",
       "version" : "3.2.1",
       "description" : "Core starter, including auto-configuration support, logging and YAML",
@@ -3664,7 +3664,7 @@
           }
         }
       ],
-      "purl" : "pkg:maven/org.springframework.boot/spring-boot-starter@3.2.1?type=jar",
+      "purl" : "pkg:maven/io.github.kotlinmania.spring.boot.spring-boot-starter@3.2.1?type=jar",
       "modified" : false,
       "externalReferences" : [
         {
@@ -3681,7 +3681,7 @@
         }
       ],
       "type" : "library",
-      "bom-ref" : "pkg:maven/org.springframework.boot/spring-boot-starter@3.2.1?type=jar"
+      "bom-ref" : "pkg:maven/io.github.kotlinmania.spring.boot.spring-boot-starter@3.2.1?type=jar"
     },
     {
       "group" : "org.apache.tomcat.embed",
@@ -4042,7 +4042,7 @@
     },
     {
       "publisher" : "VMware, Inc.",
-      "group" : "org.springframework.boot",
+      "group" : "io.github.kotlinmania.spring.boot.,
       "name" : "spring-boot-starter-actuator",
       "version" : "3.2.1",
       "description" : "Starter for using Spring Boot's Actuator which provides production ready features to help you monitor and manage your application",
@@ -4087,7 +4087,7 @@
           }
         }
       ],
-      "purl" : "pkg:maven/org.springframework.boot/spring-boot-starter-actuator@3.2.1?type=jar",
+      "purl" : "pkg:maven/io.github.kotlinmania.spring.boot.spring-boot-starter-actuator@3.2.1?type=jar",
       "modified" : false,
       "externalReferences" : [
         {
@@ -4104,7 +4104,7 @@
         }
       ],
       "type" : "library",
-      "bom-ref" : "pkg:maven/org.springframework.boot/spring-boot-starter-actuator@3.2.1?type=jar"
+      "bom-ref" : "pkg:maven/io.github.kotlinmania.spring.boot.spring-boot-starter-actuator@3.2.1?type=jar"
     },
     {
       "publisher" : "Spring IO",
@@ -4186,11 +4186,11 @@
       ]
     },
     {
-      "ref" : "pkg:maven/org.springframework.boot/spring-boot-test-autoconfigure@3.2.1?type=jar",
+      "ref" : "pkg:maven/io.github.kotlinmania.spring.boot.spring-boot-test-autoconfigure@3.2.1?type=jar",
       "dependsOn" : [
-        "pkg:maven/org.springframework.boot/spring-boot-test@3.2.1?type=jar",
-        "pkg:maven/org.springframework.boot/spring-boot-autoconfigure@3.2.1?type=jar",
-        "pkg:maven/org.springframework.boot/spring-boot@3.2.1?type=jar"
+        "pkg:maven/io.github.kotlinmania.spring.boot.spring-boot-test@3.2.1?type=jar",
+        "pkg:maven/io.github.kotlinmania.spring.boot.spring-boot-autoconfigure@3.2.1?type=jar",
+        "pkg:maven/io.github.kotlinmania.spring.boot.spring-boot@3.2.1?type=jar"
       ]
     },
     {
@@ -4209,11 +4209,11 @@
       ]
     },
     {
-      "ref" : "pkg:maven/org.springframework.boot/spring-boot-starter-test@3.2.1?type=jar",
+      "ref" : "pkg:maven/io.github.kotlinmania.spring.boot.spring-boot-starter-test@3.2.1?type=jar",
       "dependsOn" : [
-        "pkg:maven/org.springframework.boot/spring-boot-starter@3.2.1?type=jar",
-        "pkg:maven/org.springframework.boot/spring-boot-test-autoconfigure@3.2.1?type=jar",
-        "pkg:maven/org.springframework.boot/spring-boot-test@3.2.1?type=jar",
+        "pkg:maven/io.github.kotlinmania.spring.boot.spring-boot-starter@3.2.1?type=jar",
+        "pkg:maven/io.github.kotlinmania.spring.boot.spring-boot-test-autoconfigure@3.2.1?type=jar",
+        "pkg:maven/io.github.kotlinmania.spring.boot.spring-boot-test@3.2.1?type=jar",
         "pkg:maven/com.jayway.jsonpath/json-path@2.8.0?type=jar",
         "pkg:maven/jakarta.xml.bind/jakarta.xml.bind-api@4.0.1?type=jar",
         "pkg:maven/net.minidev/json-smart@2.5.0?type=jar",
@@ -4237,11 +4237,11 @@
       ]
     },
     {
-      "ref" : "pkg:maven/org.springframework.boot/spring-boot-actuator-autoconfigure@3.2.1?type=jar",
+      "ref" : "pkg:maven/io.github.kotlinmania.spring.boot.spring-boot-actuator-autoconfigure@3.2.1?type=jar",
       "dependsOn" : [
-        "pkg:maven/org.springframework.boot/spring-boot-autoconfigure@3.2.1?type=jar",
-        "pkg:maven/org.springframework.boot/spring-boot-actuator@3.2.1?type=jar",
-        "pkg:maven/org.springframework.boot/spring-boot@3.2.1?type=jar",
+        "pkg:maven/io.github.kotlinmania.spring.boot.spring-boot-autoconfigure@3.2.1?type=jar",
+        "pkg:maven/io.github.kotlinmania.spring.boot.spring-boot-actuator@3.2.1?type=jar",
+        "pkg:maven/io.github.kotlinmania.spring.boot.spring-boot@3.2.1?type=jar",
         "pkg:maven/com.fasterxml.jackson.datatype/jackson-datatype-jsr310@2.15.3?type=jar",
         "pkg:maven/com.fasterxml.jackson.core/jackson-databind@2.15.3?type=jar"
       ]
@@ -4255,19 +4255,19 @@
       "dependsOn" : [ ]
     },
     {
-      "ref" : "pkg:maven/org.springframework.boot/spring-boot-starter-web@3.2.1?type=jar",
+      "ref" : "pkg:maven/io.github.kotlinmania.spring.boot.spring-boot-starter-web@3.2.1?type=jar",
       "dependsOn" : [
-        "pkg:maven/org.springframework.boot/spring-boot-starter-json@3.2.1?type=jar",
-        "pkg:maven/org.springframework.boot/spring-boot-starter@3.2.1?type=jar",
+        "pkg:maven/io.github.kotlinmania.spring.boot.spring-boot-starter-json@3.2.1?type=jar",
+        "pkg:maven/io.github.kotlinmania.spring.boot.spring-boot-starter@3.2.1?type=jar",
         "pkg:maven/org.springframework/spring-webmvc@6.1.2?type=jar",
         "pkg:maven/org.springframework/spring-web@6.1.2?type=jar",
-        "pkg:maven/org.springframework.boot/spring-boot-starter-tomcat@3.2.1?type=jar"
+        "pkg:maven/io.github.kotlinmania.spring.boot.spring-boot-starter-tomcat@3.2.1?type=jar"
       ]
     },
     {
-      "ref" : "pkg:maven/org.springframework.boot/spring-boot-test@3.2.1?type=jar",
+      "ref" : "pkg:maven/io.github.kotlinmania.spring.boot.spring-boot-test@3.2.1?type=jar",
       "dependsOn" : [
-        "pkg:maven/org.springframework.boot/spring-boot@3.2.1?type=jar"
+        "pkg:maven/io.github.kotlinmania.spring.boot.spring-boot@3.2.1?type=jar"
       ]
     },
     {
@@ -4339,7 +4339,7 @@
       ]
     },
     {
-      "ref" : "pkg:maven/org.springframework.boot/spring-boot-starter-logging@3.2.1?type=jar",
+      "ref" : "pkg:maven/io.github.kotlinmania.spring.boot.spring-boot-starter-logging@3.2.1?type=jar",
       "dependsOn" : [
         "pkg:maven/ch.qos.logback/logback-classic@1.4.14?type=jar",
         "pkg:maven/org.apache.logging.log4j/log4j-to-slf4j@2.21.1?type=jar",
@@ -4411,9 +4411,9 @@
       "dependsOn" : [ ]
     },
     {
-      "ref" : "pkg:maven/org.springframework.boot/spring-boot-autoconfigure@3.2.1?type=jar",
+      "ref" : "pkg:maven/io.github.kotlinmania.spring.boot.spring-boot-autoconfigure@3.2.1?type=jar",
       "dependsOn" : [
-        "pkg:maven/org.springframework.boot/spring-boot@3.2.1?type=jar"
+        "pkg:maven/io.github.kotlinmania.spring.boot.spring-boot@3.2.1?type=jar"
       ]
     },
     {
@@ -4467,7 +4467,7 @@
       ]
     },
     {
-      "ref" : "pkg:maven/org.springframework.boot/spring-boot-starter-tomcat@3.2.1?type=jar",
+      "ref" : "pkg:maven/io.github.kotlinmania.spring.boot.spring-boot-starter-tomcat@3.2.1?type=jar",
       "dependsOn" : [
         "pkg:maven/jakarta.annotation/jakarta.annotation-api@2.1.1?type=jar",
         "pkg:maven/org.apache.tomcat.embed/tomcat-embed-websocket@10.1.17?type=jar",
@@ -4482,13 +4482,13 @@
       ]
     },
     {
-      "ref" : "pkg:maven/org.springframework.boot/spring-boot-actuator@3.2.1?type=jar",
+      "ref" : "pkg:maven/io.github.kotlinmania.spring.boot.spring-boot-actuator@3.2.1?type=jar",
       "dependsOn" : [
-        "pkg:maven/org.springframework.boot/spring-boot@3.2.1?type=jar"
+        "pkg:maven/io.github.kotlinmania.spring.boot.spring-boot@3.2.1?type=jar"
       ]
     },
     {
-      "ref" : "pkg:maven/org.springframework.boot/spring-boot@3.2.1?type=jar",
+      "ref" : "pkg:maven/io.github.kotlinmania.spring.boot.spring-boot@3.2.1?type=jar",
       "dependsOn" : [
         "pkg:maven/org.springframework/spring-context@6.1.2?type=jar",
         "pkg:maven/org.springframework/spring-core@6.1.2?type=jar"
@@ -4505,9 +4505,9 @@
       "dependsOn" : [ ]
     },
     {
-      "ref" : "pkg:maven/org.springframework.boot/spring-boot-starter-json@3.2.1?type=jar",
+      "ref" : "pkg:maven/io.github.kotlinmania.spring.boot.spring-boot-starter-json@3.2.1?type=jar",
       "dependsOn" : [
-        "pkg:maven/org.springframework.boot/spring-boot-starter@3.2.1?type=jar",
+        "pkg:maven/io.github.kotlinmania.spring.boot.spring-boot-starter@3.2.1?type=jar",
         "pkg:maven/org.springframework/spring-web@6.1.2?type=jar",
         "pkg:maven/com.fasterxml.jackson.datatype/jackson-datatype-jdk8@2.15.3?type=jar",
         "pkg:maven/com.fasterxml.jackson.module/jackson-module-parameter-names@2.15.3?type=jar",
@@ -4548,11 +4548,11 @@
       ]
     },
     {
-      "ref" : "pkg:maven/org.springframework.boot/spring-boot-starter@3.2.1?type=jar",
+      "ref" : "pkg:maven/io.github.kotlinmania.spring.boot.spring-boot-starter@3.2.1?type=jar",
       "dependsOn" : [
-        "pkg:maven/org.springframework.boot/spring-boot-autoconfigure@3.2.1?type=jar",
-        "pkg:maven/org.springframework.boot/spring-boot@3.2.1?type=jar",
-        "pkg:maven/org.springframework.boot/spring-boot-starter-logging@3.2.1?type=jar",
+        "pkg:maven/io.github.kotlinmania.spring.boot.spring-boot-autoconfigure@3.2.1?type=jar",
+        "pkg:maven/io.github.kotlinmania.spring.boot.spring-boot@3.2.1?type=jar",
+        "pkg:maven/io.github.kotlinmania.spring.boot.spring-boot-starter-logging@3.2.1?type=jar",
         "pkg:maven/jakarta.annotation/jakarta.annotation-api@2.1.1?type=jar",
         "pkg:maven/org.springframework/spring-core@6.1.2?type=jar",
         "pkg:maven/org.yaml/snakeyaml@2.2?type=jar"
@@ -4584,10 +4584,10 @@
       "dependsOn" : [ ]
     },
     {
-      "ref" : "pkg:maven/org.springframework.boot/spring-boot-starter-actuator@3.2.1?type=jar",
+      "ref" : "pkg:maven/io.github.kotlinmania.spring.boot.spring-boot-starter-actuator@3.2.1?type=jar",
       "dependsOn" : [
-        "pkg:maven/org.springframework.boot/spring-boot-starter@3.2.1?type=jar",
-        "pkg:maven/org.springframework.boot/spring-boot-actuator-autoconfigure@3.2.1?type=jar",
+        "pkg:maven/io.github.kotlinmania.spring.boot.spring-boot-starter@3.2.1?type=jar",
+        "pkg:maven/io.github.kotlinmania.spring.boot.spring-boot-actuator-autoconfigure@3.2.1?type=jar",
         "pkg:maven/io.micrometer/micrometer-jakarta9@1.12.1?type=jar",
         "pkg:maven/io.micrometer/micrometer-observation@1.12.1?type=jar"
       ]
@@ -4602,9 +4602,9 @@
     {
       "ref" : "pkg:maven/org.example/cyclonedx@0.0.1-SNAPSHOT?type=jar",
       "dependsOn" : [
-        "pkg:maven/org.springframework.boot/spring-boot-starter-actuator@3.2.1?type=jar",
-        "pkg:maven/org.springframework.boot/spring-boot-starter-web@3.2.1?type=jar",
-        "pkg:maven/org.springframework.boot/spring-boot-starter-test@3.2.1?type=jar"
+        "pkg:maven/io.github.kotlinmania.spring.boot.spring-boot-starter-actuator@3.2.1?type=jar",
+        "pkg:maven/io.github.kotlinmania.spring.boot.spring-boot-starter-web@3.2.1?type=jar",
+        "pkg:maven/io.github.kotlinmania.spring.boot.spring-boot-starter-test@3.2.1?type=jar"
       ]
     },
     {

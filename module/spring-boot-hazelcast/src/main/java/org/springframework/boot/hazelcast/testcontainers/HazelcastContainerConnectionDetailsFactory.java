@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.hazelcast.testcontainers;
+package io.github.kotlinmania.spring.boot.hazelcast.testcontainers;
 
 import java.util.Map;
 
@@ -22,10 +22,10 @@ import com.hazelcast.client.config.ClientConfig;
 import org.testcontainers.containers.Container;
 import org.testcontainers.containers.GenericContainer;
 
-import org.springframework.boot.hazelcast.autoconfigure.HazelcastConnectionDetails;
-import org.springframework.boot.testcontainers.service.connection.ContainerConnectionDetailsFactory;
-import org.springframework.boot.testcontainers.service.connection.ContainerConnectionSource;
-import org.springframework.boot.testcontainers.service.connection.ServiceConnection;
+import io.github.kotlinmania.spring.boot.hazelcast.autoconfigure.HazelcastConnectionDetails;
+import io.github.kotlinmania.spring.boot.testcontainers.service.connection.ContainerConnectionDetailsFactory;
+import io.github.kotlinmania.spring.boot.testcontainers.service.connection.ContainerConnectionSource;
+import io.github.kotlinmania.spring.boot.testcontainers.service.connection.ServiceConnection;
 
 /**
  * {@link ContainerConnectionDetailsFactory} to create {@link HazelcastConnectionDetails}

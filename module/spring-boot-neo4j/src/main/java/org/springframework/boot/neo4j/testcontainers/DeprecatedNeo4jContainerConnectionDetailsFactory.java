@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.neo4j.testcontainers;
+package io.github.kotlinmania.spring.boot.neo4j.testcontainers;
 
 import java.net.URI;
 
@@ -22,10 +22,10 @@ import org.neo4j.driver.AuthToken;
 import org.neo4j.driver.AuthTokens;
 import org.testcontainers.containers.Neo4jContainer;
 
-import org.springframework.boot.neo4j.autoconfigure.Neo4jConnectionDetails;
-import org.springframework.boot.testcontainers.service.connection.ContainerConnectionDetailsFactory;
-import org.springframework.boot.testcontainers.service.connection.ContainerConnectionSource;
-import org.springframework.boot.testcontainers.service.connection.ServiceConnection;
+import io.github.kotlinmania.spring.boot.neo4j.autoconfigure.Neo4jConnectionDetails;
+import io.github.kotlinmania.spring.boot.testcontainers.service.connection.ContainerConnectionDetailsFactory;
+import io.github.kotlinmania.spring.boot.testcontainers.service.connection.ContainerConnectionSource;
+import io.github.kotlinmania.spring.boot.testcontainers.service.connection.ServiceConnection;
 
 /**
  * {@link ContainerConnectionDetailsFactory} to create {@link Neo4jConnectionDetails} from

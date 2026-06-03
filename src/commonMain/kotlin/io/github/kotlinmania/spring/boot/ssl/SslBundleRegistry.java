@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.ssl;
+package io.github.kotlinmania.spring.boot.ssl;
 
 /**
  * Interface that can be used to register an {@link SslBundle} for a given name.

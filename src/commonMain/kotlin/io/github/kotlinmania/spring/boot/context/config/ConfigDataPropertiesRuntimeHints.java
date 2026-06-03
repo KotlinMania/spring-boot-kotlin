@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.context.config;
+package io.github.kotlinmania.spring.boot.context.config;
 
 import java.lang.reflect.Method;
 
@@ -23,7 +23,7 @@ import org.jspecify.annotations.Nullable;
 import org.springframework.aot.hint.ExecutableMode;
 import org.springframework.aot.hint.RuntimeHints;
 import org.springframework.aot.hint.RuntimeHintsRegistrar;
-import org.springframework.boot.context.properties.bind.BindableRuntimeHintsRegistrar;
+import io.github.kotlinmania.spring.boot.context.properties.bind.BindableRuntimeHintsRegistrar;
 import org.springframework.util.Assert;
 import org.springframework.util.ReflectionUtils;
 

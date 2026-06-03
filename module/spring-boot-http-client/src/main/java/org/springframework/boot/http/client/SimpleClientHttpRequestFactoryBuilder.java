@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.http.client;
+package io.github.kotlinmania.spring.boot.http.client;
 
 import java.io.IOException;
 import java.net.HttpURLConnection;
@@ -29,8 +29,8 @@ import javax.net.ssl.SSLSocketFactory;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.context.properties.PropertyMapper;
-import org.springframework.boot.ssl.SslBundle;
+import io.github.kotlinmania.spring.boot.context.properties.PropertyMapper;
+import io.github.kotlinmania.spring.boot.ssl.SslBundle;
 import org.springframework.http.client.SimpleClientHttpRequestFactory;
 import org.springframework.util.Assert;
 

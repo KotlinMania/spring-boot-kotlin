@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.data.couchbase.test.autoconfigure;
+package io.github.kotlinmania.spring.boot.data.couchbase.test.autoconfigure;
 
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;

@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.autoconfigure.condition;
+package io.github.kotlinmania.spring.boot.autoconfigure.condition;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.condition.EnabledForJreRange;
 import org.junit.jupiter.api.condition.JRE;
 
-import org.springframework.boot.test.context.runner.ApplicationContextRunner;
-import org.springframework.boot.thread.Threading;
+import io.github.kotlinmania.spring.boot.test.context.runner.ApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.thread.Threading;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 

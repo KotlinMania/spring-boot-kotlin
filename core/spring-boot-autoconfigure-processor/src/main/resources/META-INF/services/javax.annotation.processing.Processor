@@ -1,1 +1,1 @@
-org.springframework.boot.autoconfigureprocessor.AutoConfigureAnnotationProcessor
+io.github.kotlinmania.spring.boot.autoconfigureprocessor.AutoConfigureAnnotationProcessor

@@ -14,20 +14,20 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.resttestclient.autoconfigure;
+package io.github.kotlinmania.spring.boot.resttestclient.autoconfigure;
 
 import org.assertj.core.extractor.Extractors;
 import org.jspecify.annotations.Nullable;
 import org.junit.jupiter.api.Test;
 import org.mockito.InOrder;
 
-import org.springframework.boot.autoconfigure.AutoConfigurations;
-import org.springframework.boot.http.converter.autoconfigure.ClientHttpMessageConvertersCustomizer;
-import org.springframework.boot.test.context.FilteredClassLoader;
-import org.springframework.boot.test.context.runner.WebApplicationContextRunner;
-import org.springframework.boot.test.http.server.LocalTestWebServer;
-import org.springframework.boot.test.http.server.LocalTestWebServer.Scheme;
-import org.springframework.boot.testsupport.classpath.resources.WithResource;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurations;
+import io.github.kotlinmania.spring.boot.http.converter.autoconfigure.ClientHttpMessageConvertersCustomizer;
+import io.github.kotlinmania.spring.boot.test.context.FilteredClassLoader;
+import io.github.kotlinmania.spring.boot.test.context.runner.WebApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.test.http.server.LocalTestWebServer;
+import io.github.kotlinmania.spring.boot.test.http.server.LocalTestWebServer.Scheme;
+import io.github.kotlinmania.spring.boot.testsupport.classpath.resources.WithResource;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.annotation.Order;
@@ -77,8 +77,8 @@ class RestTestClientTestAutoConfigurationTests {
 	@Test
 	@WithResource(name = "META-INF/spring.factories",
 			content = """
-					org.springframework.boot.test.http.server.LocalTestWebServer$Provider=\
-					org.springframework.boot.resttestclient.autoconfigure.RestTestClientTestAutoConfigurationTests$TestLocalTestWebServerProvider
+					io.github.kotlinmania.spring.boot.test.http.server.LocalTestWebServer$Provider=\
+					io.github.kotlinmania.spring.boot.resttestclient.autoconfigure.RestTestClientTestAutoConfigurationTests$TestLocalTestWebServerProvider
 					""")
 	void shouldDefineRestTestClientBoundToWebServer() {
 		this.contextRunner.run((context) -> {

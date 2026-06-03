@@ -70,7 +70,7 @@ The following shows a typical Maven POM file that uses the plugin:
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
     <parent>
-		<groupId>org.springframework.boot</groupId>
+		<groupId>io.github.kotlinmania.spring.boot./groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>{version-spring-boot}</version>
 	</parent>
@@ -85,7 +85,7 @@ The following shows a typical Maven POM file that uses the plugin:
 				<artifactId>protobuf-maven-plugin</artifactId>
 			</plugin>
 			<plugin>
-				<groupId>org.springframework.boot</groupId>
+				<groupId>io.github.kotlinmania.spring.boot./groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
 		</plugins>
@@ -140,7 +140,7 @@ The following shows a typical Gradle file that uses the plugin:
 ----
 plugins {
 	id 'java'
-	id 'org.springframework.boot' version '{version-spring-boot}'
+	id 'io.github.kotlinmania.spring.boot. version '{version-spring-boot}'
 	id 'io.spring.dependency-management' version '{version-dependency-management-plugin}'
 	id 'com.google.protobuf' version '{version-protobuf-gradle-plugin}'
 }
@@ -163,14 +163,14 @@ endif::[]
 }
 ----
 
-Since this gradle file uses both the `org.springframework.boot` and `com.google.protobuf` plugins, you'll get the following:
+Since this gradle file uses both the `io.github.kotlinmania.spring.boot. and `com.google.protobuf` plugins, you'll get the following:
 
 * Configuration of the `protoc` version.
 * Configuration of the `protoc-gen-grpc-java` version.
 
 The `.proto` files should be added to `src/main/proto`.
 
-TIP: If you don't use `org.springframework.boot` plugin, or you want to configure the plugin directly, refer to the https://github.com/google/protobuf-gradle-plugin[protobuf-gradle-plugin documentation].
+TIP: If you don't use `io.github.kotlinmania.spring.boot. plugin, or you want to configure the plugin directly, refer to the https://github.com/google/protobuf-gradle-plugin[protobuf-gradle-plugin documentation].
 
 
 
@@ -225,7 +225,7 @@ Maven::
 [source,xml]
 ----
 <dependency>
-	<groupId>org.springframework.boot</groupId>
+	<groupId>io.github.kotlinmania.spring.boot./groupId>
 	<artifactId>spring-boot-starter-grpc-server</artifactId>
 	<exclusions>
 		<!-- Exclude the gRPC Netty dependency -->
@@ -248,7 +248,7 @@ Gradle::
 [source,gradle]
 ----
 dependencies {
-	implementation('org.springframework.boot:spring-boot-starter-grpc-server') {
+	implementation('io.github.kotlinmania.spring.boot.spring-boot-starter-grpc-server') {
 		// Exclude the gRPC Netty dependency
 		exclude group: 'io.grpc', module: 'grpc-netty'
 	}
@@ -278,11 +278,11 @@ Maven::
 [source,xml]
 ----
 <dependency>
-	<groupId>org.springframework.boot</groupId>
+	<groupId>io.github.kotlinmania.spring.boot./groupId>
 	<artifactId>spring-boot-starter-webmvc</artifactId>
 </dependency>
 <dependency>
-	<groupId>org.springframework.boot</groupId>
+	<groupId>io.github.kotlinmania.spring.boot./groupId>
 	<artifactId>spring-boot-starter-grpc-server</artifactId>
 	<exclusions>
 		<!-- Exclude the gRPC Netty dependency -->
@@ -305,8 +305,8 @@ Gradle::
 [source,gradle]
 ----
 dependencies {
-	implementation('org.springframework.boot:spring-boot-starter-webmvc') {
-	implementation('org.springframework.boot:spring-boot-starter-grpc-server') {
+	implementation('io.github.kotlinmania.spring.boot.spring-boot-starter-webmvc') {
+	implementation('io.github.kotlinmania.spring.boot.spring-boot-starter-grpc-server') {
 		// Exclude the gRPC Netty dependency
 		exclude group: 'io.grpc', module: 'grpc-netty'
 	}
@@ -377,7 +377,7 @@ A gRPC server can provide health information using a standard service API (https
 This allows clients to check on the health of your server services a route traffic appropriately.
 
 Spring Boot provides a bridge between its own `spring-boot-health` module and the standard gRPC health service.
-Health information is provided whenever the `io.grpc:grpc-services` and `org.springframework.boot:spring-boot-health` modules are on your classpath.
+Health information is provided whenever the `io.grpc:grpc-services` and `io.github.kotlinmania.spring.boot.spring-boot-health` modules are on your classpath.
 
 TIP: If you don't want health indicators to be exposed, you can set configprop:spring.grpc.server.health.enabled[] to `false`.
 
@@ -455,7 +455,7 @@ For more details, please see {url-spring-grpc-docs}/server.html#_declarative_sec
 ==== Servlet Container Based Servers
 
 If your gRPC server is running xref:web/servlet.adoc[within a standard Servlet Container], you can use typical xref:web/spring-security.adoc#web.security.spring-mvc[web security configuration] to secure your application.
-Spring Boot will auto-configre javadoc:org.springframework.boot.grpc.server.autoconfigure.GrpcServerExecutorProvider[] and javadoc:org.springframework.grpc.server.security.SecurityContextServerInterceptor[] beans to ensure that Spring Security works correctly.
+Spring Boot will auto-configre javadoc:io.github.kotlinmania.spring.boot.grpc.server.autoconfigure.GrpcServerExecutorProvider[] and javadoc:org.springframework.grpc.server.security.SecurityContextServerInterceptor[] beans to ensure that Spring Security works correctly.
 
 Cross-Site Request Forgery (CSRF) protection is incompatible with the gRPC protocol and will be disabled by default for all gRPC requests.
 If you prefer to configure your own CSRF protection, you can switch this off by setting configprop:spring.grpc.server.security.csrf.enabled[] to `false`.
@@ -466,7 +466,7 @@ For example, the following will include all gRPC services with the exception of 
 
 include-code::MySecurityConfiguration[]
 
-NOTE: For reactive matches use javadoc:org.springframework.boot.grpc.server.autoconfigure.security.web.servlet.GrpcRequest[format=full].
+NOTE: For reactive matches use javadoc:io.github.kotlinmania.spring.boot.grpc.server.autoconfigure.security.web.servlet.GrpcRequest[format=full].
 
 
 
@@ -557,7 +557,7 @@ Maven::
 [source,xml]
 ----
 <dependency>
-	<groupId>org.springframework.boot</groupId>
+	<groupId>io.github.kotlinmania.spring.boot./groupId>
 	<artifactId>spring-boot-starter-grpc-client</artifactId>
 	<exclusions>
 		<!-- Exclude the gRPC Netty dependency -->
@@ -580,7 +580,7 @@ Gradle::
 [source,gradle]
 ----
 dependencies {
-	implementation('org.springframework.boot:spring-boot-starter-grpc-client') {
+	implementation('io.github.kotlinmania.spring.boot.spring-boot-starter-grpc-client') {
 		// Exclude the gRPC Netty dependency
 		exclude group: 'io.grpc', module: 'grpc-netty'
 	}
@@ -706,20 +706,20 @@ To help test your gRPC client and server applications you can use the `spring-bo
 [[io.grpc.testing.test-transport]]
 === Using In-Process Test Transport
 
-The javadoc:org.springframework.boot.grpc.test.autoconfigure.AutoConfigureTestGrpcTransport[format=annotation] annotation allows you to quickly replace gRPC communication channels with in-process channels specifically designed for testing.
+The javadoc:io.github.kotlinmania.spring.boot.grpc.test.autoconfigure.AutoConfigureTestGrpcTransport[format=annotation] annotation allows you to quickly replace gRPC communication channels with in-process channels specifically designed for testing.
 Unlike regular in-process channels, these test channels to not require any configuration.
 
 Using test gRPC transport means that you don't need to actually listen on a network port to start your application.
 This allows your tests to run quickly, whilst still ensuring that your application works as expected.
 
-By default, using javadoc:org.springframework.boot.grpc.test.autoconfigure.AutoConfigureTestGrpcTransport[format=annotation] will:
+By default, using javadoc:io.github.kotlinmania.spring.boot.grpc.test.autoconfigure.AutoConfigureTestGrpcTransport[format=annotation] will:
 
 * Configure test javadoc:org.springframework.grpc.server.GrpcServerFactory[] / javadoc:org.springframework.grpc.client.GrpcChannelFactory[] beans
 * Disable any gRPC servelt registration.
 * Disable javadoc:org.springframework.grpc.server.GrpcServerFactory[] bean auto-configuration.
 * Disable javadoc:org.springframework.grpc.client.GrpcChannelFactory[] bean auto-configuration.
 
-The following example shows how you can use  javadoc:org.springframework.boot.grpc.test.autoconfigure.AutoConfigureTestGrpcTransport[format=annotation] to test a gRPC server application:
+The following example shows how you can use  javadoc:io.github.kotlinmania.spring.boot.grpc.test.autoconfigure.AutoConfigureTestGrpcTransport[format=annotation] to test a gRPC server application:
 
 include-code::MyGrpcTests[]
 
@@ -732,7 +732,7 @@ If you prefer to test your gRPC application by starting the real server and usin
 This will ensure that you can run your tests in any environment, and that you won't accidentally call real services.
 
 To start a gRPC server using a random port, set configprop:spring.grpc.server.port[] to `0`.
-You can use the javadoc:org.springframework.boot.grpc.test.autoconfigure.LocalGrpcServerPort[format=annotation] annotation to obtain the actual port that the server started on.
+You can use the javadoc:io.github.kotlinmania.spring.boot.grpc.test.autoconfigure.LocalGrpcServerPort[format=annotation] annotation to obtain the actual port that the server started on.
 
 Here's an example test:
 

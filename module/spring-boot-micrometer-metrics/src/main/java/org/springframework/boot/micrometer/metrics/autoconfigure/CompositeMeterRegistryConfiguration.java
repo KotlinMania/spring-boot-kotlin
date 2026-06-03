@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.micrometer.metrics.autoconfigure;
+package io.github.kotlinmania.spring.boot.micrometer.metrics.autoconfigure;
 
 import java.util.List;
 
@@ -22,10 +22,10 @@ import io.micrometer.core.instrument.Clock;
 import io.micrometer.core.instrument.MeterRegistry;
 import io.micrometer.core.instrument.composite.CompositeMeterRegistry;
 
-import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnSingleCandidate;
-import org.springframework.boot.autoconfigure.condition.NoneNestedConditions;
-import org.springframework.boot.micrometer.metrics.autoconfigure.CompositeMeterRegistryConfiguration.MultipleNonPrimaryMeterRegistriesCondition;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnMissingBean;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnSingleCandidate;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.NoneNestedConditions;
+import io.github.kotlinmania.spring.boot.micrometer.metrics.autoconfigure.CompositeMeterRegistryConfiguration.MultipleNonPrimaryMeterRegistriesCondition;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Conditional;
 import org.springframework.context.annotation.Configuration;

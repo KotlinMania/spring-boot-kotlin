@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.autoconfigure;
+package io.github.kotlinmania.spring.boot.autoconfigure;
 
 import java.util.Collections;
 import java.util.List;
@@ -24,8 +24,8 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 
 import org.springframework.beans.factory.NoSuchBeanDefinitionException;
-import org.springframework.boot.autoconfigure.context.filtersample.ExampleConfiguration;
-import org.springframework.boot.autoconfigure.context.filtersample.ExampleFilteredAutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.context.filtersample.ExampleConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.context.filtersample.ExampleFilteredAutoConfiguration;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.health.contributor;
+package io.github.kotlinmania.spring.boot.health.contributor;
 
 import org.jspecify.annotations.Nullable;
 import reactor.core.scheduler.Schedulers;

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.features.externalconfig.typesafeconfigurationproperties.mergingcomplextypes.map
+package io.github.kotlinmania.spring.boot.docs.features.externalconfig.typesafeconfigurationproperties.mergingcomplextypes.map
 
 class MyPojo
 

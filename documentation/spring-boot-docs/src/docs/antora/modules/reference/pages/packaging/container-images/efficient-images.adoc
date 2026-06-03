@@ -19,7 +19,7 @@ The list of layers in the index is ordered based on the order in which the layer
 Out-of-the-box, the following layers are supported:
 
 * `dependencies` (for regular released dependencies)
-* `spring-boot-loader` (for everything under `org/springframework/boot/loader`)
+* `spring-boot-loader` (for everything under `io.github.kotlinmania.spring.boot.loader`)
 * `snapshot-dependencies` (for snapshot dependencies)
 * `application` (for application classes and resources)
 
@@ -31,7 +31,7 @@ The following shows an example of a `layers.idx` file:
   - BOOT-INF/lib/library1.jar
   - BOOT-INF/lib/library2.jar
 - "spring-boot-loader":
-  - org/springframework/boot/loader/launch/JarLauncher.class
+  - io.github.kotlinmania.spring.boot.loader/launch/JarLauncher.class
   - ... <other classes>
 - "snapshot-dependencies":
   - BOOT-INF/lib/library3-SNAPSHOT.jar

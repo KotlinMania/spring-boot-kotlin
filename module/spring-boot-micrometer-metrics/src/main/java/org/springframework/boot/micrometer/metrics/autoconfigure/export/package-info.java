@@ -18,6 +18,6 @@
  * Auto-configuration for metrics exporter.
  */
 @NullMarked
-package org.springframework.boot.micrometer.metrics.autoconfigure.export;
+package io.github.kotlinmania.spring.boot.micrometer.metrics.autoconfigure.export;
 
 import org.jspecify.annotations.NullMarked;

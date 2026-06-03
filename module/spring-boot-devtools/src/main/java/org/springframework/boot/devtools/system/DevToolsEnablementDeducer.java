@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.devtools.system;
+package io.github.kotlinmania.spring.boot.devtools.system;
 
 import java.util.Collections;
 import java.util.LinkedHashSet;
 import java.util.Set;
 
-import org.springframework.boot.SpringApplicationAotProcessor;
+import io.github.kotlinmania.spring.boot.SpringApplicationAotProcessor;
 import org.springframework.core.NativeDetector;
 
 /**
@@ -37,7 +37,7 @@ public final class DevToolsEnablementDeducer {
 		Set<String> skipped = new LinkedHashSet<>();
 		skipped.add("org.junit.runners.");
 		skipped.add("org.junit.platform.");
-		skipped.add("org.springframework.boot.test.");
+		skipped.add("io.github.kotlinmania.spring.boot.test.");
 		skipped.add(SpringApplicationAotProcessor.class.getName());
 		skipped.add("cucumber.runtime.");
 		SKIPPED_STACK_ELEMENTS = Collections.unmodifiableSet(skipped);

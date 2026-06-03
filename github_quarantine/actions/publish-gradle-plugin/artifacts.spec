@@ -8,7 +8,7 @@
               "@build.name": "${buildName}",
               "@build.number": "${buildNumber}",
               "path": {
-                "$match": "org/springframework/boot/spring-boot-gradle-plugin/*"
+                "$match": "io.github.kotlinmania.spring.boot.spring-boot-gradle-plugin/*"
               }
             }
           ]

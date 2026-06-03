@@ -17,4 +17,4 @@
 /**
  * Internal support classes used in Spring Boot tests related to logging.
  */
-package org.springframework.boot.testsupport.logging;
+package io.github.kotlinmania.spring.boot.testsupport.logging;

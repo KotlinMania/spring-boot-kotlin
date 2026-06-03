@@ -14,19 +14,19 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.webservices.autoconfigure.client;
+package io.github.kotlinmania.spring.boot.webservices.autoconfigure.client;
 
 import java.util.function.Consumer;
 
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.autoconfigure.AutoConfigurations;
-import org.springframework.boot.http.client.ClientHttpRequestFactoryBuilder;
-import org.springframework.boot.test.context.assertj.AssertableApplicationContext;
-import org.springframework.boot.test.context.runner.ApplicationContextRunner;
-import org.springframework.boot.test.context.runner.ContextConsumer;
-import org.springframework.boot.webservices.client.WebServiceTemplateBuilder;
-import org.springframework.boot.webservices.client.WebServiceTemplateCustomizer;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurations;
+import io.github.kotlinmania.spring.boot.http.client.ClientHttpRequestFactoryBuilder;
+import io.github.kotlinmania.spring.boot.test.context.assertj.AssertableApplicationContext;
+import io.github.kotlinmania.spring.boot.test.context.runner.ApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.test.context.runner.ContextConsumer;
+import io.github.kotlinmania.spring.boot.webservices.client.WebServiceTemplateBuilder;
+import io.github.kotlinmania.spring.boot.webservices.client.WebServiceTemplateCustomizer;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.client.SimpleClientHttpRequestFactory;

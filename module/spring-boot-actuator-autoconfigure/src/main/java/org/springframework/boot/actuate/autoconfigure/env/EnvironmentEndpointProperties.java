@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.actuate.autoconfigure.env;
+package io.github.kotlinmania.spring.boot.actuate.autoconfigure.env;
 
 import java.util.HashSet;
 import java.util.Set;
 
-import org.springframework.boot.actuate.endpoint.Show;
-import org.springframework.boot.actuate.env.EnvironmentEndpoint;
-import org.springframework.boot.context.properties.ConfigurationProperties;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.Show;
+import io.github.kotlinmania.spring.boot.actuate.env.EnvironmentEndpoint;
+import io.github.kotlinmania.spring.boot.context.properties.ConfigurationProperties;
 
 /**
  * Configuration properties for {@link EnvironmentEndpoint}.

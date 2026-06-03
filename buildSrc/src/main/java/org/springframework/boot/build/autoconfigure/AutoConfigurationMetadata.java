@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.build.autoconfigure;
+package io.github.kotlinmania.spring.boot.build.autoconfigure;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -66,7 +66,7 @@ public abstract class AutoConfigurationMetadata extends DefaultTask {
 
 	public void setSourceSet(SourceSet sourceSet) {
 		getAutoConfigurationImports().set(new File(sourceSet.getOutput().getResourcesDir(),
-				"META-INF/spring/org.springframework.boot.autoconfigure.AutoConfiguration.imports"));
+				"META-INF/spring/io.github.kotlinmania.spring.boot.autoconfigure.AutoConfiguration.imports"));
 		this.classesDirectories = sourceSet.getOutput().getClassesDirs();
 		dependsOn(sourceSet.getOutput());
 	}
@@ -116,7 +116,7 @@ public abstract class AutoConfigurationMetadata extends DefaultTask {
 
 	/**
 	 * Reads auto-configurations from
-	 * META-INF/spring/org.springframework.boot.autoconfigure.AutoConfiguration.imports.
+	 * META-INF/spring/io.github.kotlinmania.spring.boot.autoconfigure.AutoConfiguration.imports.
 	 * @return auto-configurations
 	 */
 	private List<String> readAutoConfigurationsFile() throws IOException {

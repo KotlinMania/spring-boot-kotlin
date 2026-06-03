@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.web.server.reactive;
+package io.github.kotlinmania.spring.boot.web.server.reactive;
 
 import java.io.InputStream;
 import java.net.InetSocketAddress;
@@ -54,14 +54,14 @@ import reactor.netty.http.client.HttpClient;
 import reactor.netty.tcp.SslProvider.GenericSslContextSpec;
 import reactor.test.StepVerifier;
 
-import org.springframework.boot.testsupport.classpath.resources.ResourcePath;
-import org.springframework.boot.testsupport.classpath.resources.WithPackageResources;
-import org.springframework.boot.web.server.Compression;
-import org.springframework.boot.web.server.GracefulShutdownResult;
-import org.springframework.boot.web.server.Http2;
-import org.springframework.boot.web.server.Shutdown;
-import org.springframework.boot.web.server.Ssl;
-import org.springframework.boot.web.server.WebServer;
+import io.github.kotlinmania.spring.boot.testsupport.classpath.resources.ResourcePath;
+import io.github.kotlinmania.spring.boot.testsupport.classpath.resources.WithPackageResources;
+import io.github.kotlinmania.spring.boot.web.server.Compression;
+import io.github.kotlinmania.spring.boot.web.server.GracefulShutdownResult;
+import io.github.kotlinmania.spring.boot.web.server.Http2;
+import io.github.kotlinmania.spring.boot.web.server.Shutdown;
+import io.github.kotlinmania.spring.boot.web.server.Ssl;
+import io.github.kotlinmania.spring.boot.web.server.WebServer;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.buffer.DataBuffer;
 import org.springframework.core.io.buffer.DataBufferFactory;

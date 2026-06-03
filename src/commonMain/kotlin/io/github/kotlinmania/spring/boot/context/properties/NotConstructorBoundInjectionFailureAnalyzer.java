@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.context.properties;
+package io.github.kotlinmania.spring.boot.context.properties;
 
 import java.lang.reflect.Constructor;
 
@@ -23,10 +23,10 @@ import org.jspecify.annotations.Nullable;
 import org.springframework.beans.factory.InjectionPoint;
 import org.springframework.beans.factory.NoSuchBeanDefinitionException;
 import org.springframework.beans.factory.UnsatisfiedDependencyException;
-import org.springframework.boot.context.properties.bind.BindMethod;
-import org.springframework.boot.context.properties.bind.ConstructorBinding;
-import org.springframework.boot.diagnostics.FailureAnalysis;
-import org.springframework.boot.diagnostics.analyzer.AbstractInjectionFailureAnalyzer;
+import io.github.kotlinmania.spring.boot.context.properties.bind.BindMethod;
+import io.github.kotlinmania.spring.boot.context.properties.bind.ConstructorBinding;
+import io.github.kotlinmania.spring.boot.diagnostics.FailureAnalysis;
+import io.github.kotlinmania.spring.boot.diagnostics.analyzer.AbstractInjectionFailureAnalyzer;
 import org.springframework.core.Ordered;
 import org.springframework.core.annotation.MergedAnnotations;
 import org.springframework.core.annotation.MergedAnnotations.SearchStrategy;

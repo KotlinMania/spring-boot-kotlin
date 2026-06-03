@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.web.server.reactive.context;
+package io.github.kotlinmania.spring.boot.web.server.reactive.context;
 
 import java.util.ArrayDeque;
 import java.util.ArrayList;
@@ -27,11 +27,11 @@ import reactor.core.publisher.Mono;
 
 import org.springframework.beans.factory.BeanCreationException;
 import org.springframework.beans.factory.support.RootBeanDefinition;
-import org.springframework.boot.availability.AvailabilityChangeEvent;
-import org.springframework.boot.availability.ReadinessState;
-import org.springframework.boot.web.server.WebServer;
-import org.springframework.boot.web.server.context.ServerPortInfoApplicationContextInitializer;
-import org.springframework.boot.web.server.reactive.MockReactiveWebServerFactory;
+import io.github.kotlinmania.spring.boot.availability.AvailabilityChangeEvent;
+import io.github.kotlinmania.spring.boot.availability.ReadinessState;
+import io.github.kotlinmania.spring.boot.web.server.WebServer;
+import io.github.kotlinmania.spring.boot.web.server.context.ServerPortInfoApplicationContextInitializer;
+import io.github.kotlinmania.spring.boot.web.server.reactive.MockReactiveWebServerFactory;
 import org.springframework.context.ApplicationContextException;
 import org.springframework.context.ApplicationEvent;
 import org.springframework.context.ApplicationListener;

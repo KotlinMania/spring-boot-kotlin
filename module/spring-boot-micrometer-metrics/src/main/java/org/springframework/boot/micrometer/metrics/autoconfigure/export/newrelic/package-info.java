@@ -18,6 +18,6 @@
  * Support for exporting actuator metrics to New Relic.
  */
 @NullMarked
-package org.springframework.boot.micrometer.metrics.autoconfigure.export.newrelic;
+package io.github.kotlinmania.spring.boot.micrometer.metrics.autoconfigure.export.newrelic;
 
 import org.jspecify.annotations.NullMarked;

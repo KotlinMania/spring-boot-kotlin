@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.autoconfigure;
+package io.github.kotlinmania.spring.boot.autoconfigure;
 
 import java.util.function.Supplier;
 
@@ -57,7 +57,7 @@ import org.springframework.core.type.classreading.MetadataReaderFactory;
 class SharedMetadataReaderFactoryContextInitializer implements
 		ApplicationContextInitializer<ConfigurableApplicationContext>, Ordered, BeanRegistrationExcludeFilter {
 
-	public static final String BEAN_NAME = "org.springframework.boot.autoconfigure."
+	public static final String BEAN_NAME = "io.github.kotlinmania.spring.boot.autoconfigure."
 			+ "internalCachingMetadataReaderFactory";
 
 	@Override

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.logging.logback;
+package io.github.kotlinmania.spring.boot.logging.logback;
 
 import java.io.Console;
 import java.nio.charset.Charset;
@@ -35,10 +35,10 @@ import ch.qos.logback.core.util.FileSize;
 import ch.qos.logback.core.util.OptionHelper;
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.ansi.AnsiColor;
-import org.springframework.boot.ansi.AnsiElement;
-import org.springframework.boot.ansi.AnsiStyle;
-import org.springframework.boot.logging.LogFile;
+import io.github.kotlinmania.spring.boot.ansi.AnsiColor;
+import io.github.kotlinmania.spring.boot.ansi.AnsiElement;
+import io.github.kotlinmania.spring.boot.ansi.AnsiStyle;
+import io.github.kotlinmania.spring.boot.logging.LogFile;
 import org.springframework.util.StringUtils;
 
 /**
@@ -122,7 +122,7 @@ class DefaultLogbackConfiguration {
 		config.logger("org.apache.tomcat.util.net.NioSelectorPool", Level.WARN);
 		config.logger("org.eclipse.jetty.util.component.AbstractLifeCycle", Level.ERROR);
 		config.logger("org.hibernate.validator.internal.util.Version", Level.WARN);
-		config.logger("org.springframework.boot.actuate.endpoint.jmx", Level.WARN);
+		config.logger("io.github.kotlinmania.spring.boot.actuate.endpoint.jmx", Level.WARN);
 	}
 
 	private String getConsoleCharset() {

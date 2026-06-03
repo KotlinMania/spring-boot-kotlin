@@ -15,6 +15,6 @@
  */
 
 @NullMarked
-package org.springframework.boot.test.context.nestedtests;
+package io.github.kotlinmania.spring.boot.test.context.nestedtests;
 
 import org.jspecify.annotations.NullMarked;

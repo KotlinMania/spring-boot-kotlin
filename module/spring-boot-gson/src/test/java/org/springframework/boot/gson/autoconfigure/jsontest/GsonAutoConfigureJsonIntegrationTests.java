@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.gson.autoconfigure.jsontest;
+package io.github.kotlinmania.spring.boot.gson.autoconfigure.jsontest;
 
 import com.google.gson.Gson;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.autoconfigure.json.AutoConfigureJson;
+import io.github.kotlinmania.spring.boot.test.autoconfigure.json.AutoConfigureJson;
 import org.springframework.context.ApplicationContext;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 

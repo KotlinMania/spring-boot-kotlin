@@ -17,4 +17,4 @@
 /**
  * Classes to help when testing SSL-related functionality.
  */
-package org.springframework.boot.testsupport.ssl;
+package io.github.kotlinmania.spring.boot.testsupport.ssl;

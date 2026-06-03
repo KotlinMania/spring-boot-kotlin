@@ -14,24 +14,24 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.data.neo4j.autoconfigure;
+package io.github.kotlinmania.spring.boot.data.neo4j.autoconfigure;
 
 import java.util.Set;
 
 import org.neo4j.driver.Driver;
 
 import org.springframework.beans.factory.ObjectProvider;
-import org.springframework.boot.autoconfigure.AutoConfiguration;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
-import org.springframework.boot.context.properties.EnableConfigurationProperties;
-import org.springframework.boot.neo4j.autoconfigure.Neo4jAutoConfiguration;
-import org.springframework.boot.persistence.autoconfigure.EntityScanner;
-import org.springframework.boot.transaction.autoconfigure.TransactionAutoConfiguration;
-import org.springframework.boot.transaction.autoconfigure.TransactionManagerCustomizationAutoConfiguration;
-import org.springframework.boot.transaction.autoconfigure.TransactionManagerCustomizers;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.EnableAutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnBean;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnClass;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnMissingBean;
+import io.github.kotlinmania.spring.boot.context.properties.EnableConfigurationProperties;
+import io.github.kotlinmania.spring.boot.neo4j.autoconfigure.Neo4jAutoConfiguration;
+import io.github.kotlinmania.spring.boot.persistence.autoconfigure.EntityScanner;
+import io.github.kotlinmania.spring.boot.transaction.autoconfigure.TransactionAutoConfiguration;
+import io.github.kotlinmania.spring.boot.transaction.autoconfigure.TransactionManagerCustomizationAutoConfiguration;
+import io.github.kotlinmania.spring.boot.transaction.autoconfigure.TransactionManagerCustomizers;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.data.neo4j.aot.Neo4jManagedTypes;

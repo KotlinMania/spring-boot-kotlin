@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.buildpack.platform.json;
+package io.github.kotlinmania.spring.boot.buildpack.platform.json;
 
 import java.io.IOException;
 import java.io.InputStream;

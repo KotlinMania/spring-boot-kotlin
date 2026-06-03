@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.appendix.configurationmetadata.annotationprocessor.automaticmetadatageneration;
+package io.github.kotlinmania.spring.boot.docs.appendix.configurationmetadata.annotationprocessor.automaticmetadatageneration;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import org.springframework.boot.context.properties.ConfigurationProperties;
+import io.github.kotlinmania.spring.boot.context.properties.ConfigurationProperties;
 
 @ConfigurationProperties("my.messaging")
 public class MyMessagingProperties {

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.kafka.autoconfigure;
+package io.github.kotlinmania.spring.boot.kafka.autoconfigure;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -35,8 +35,8 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.condition.DisabledOnOs;
 import org.junit.jupiter.api.condition.OS;
 
-import org.springframework.boot.autoconfigure.ssl.SslAutoConfiguration;
-import org.springframework.boot.test.util.TestPropertyValues;
+import io.github.kotlinmania.spring.boot.autoconfigure.ssl.SslAutoConfiguration;
+import io.github.kotlinmania.spring.boot.test.util.TestPropertyValues;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

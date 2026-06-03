@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.build.bom.bomr;
+package io.github.kotlinmania.spring.boot.build.bom.bomr;
 
-import org.springframework.boot.build.bom.Library;
+import io.github.kotlinmania.spring.boot.build.bom.Library;
 
 /**
  * An upgrade to change a {@link Library} to use a new version.

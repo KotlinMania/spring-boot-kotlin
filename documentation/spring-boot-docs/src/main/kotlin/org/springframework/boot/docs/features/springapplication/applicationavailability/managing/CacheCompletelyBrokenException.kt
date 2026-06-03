@@ -14,6 +14,6 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.features.springapplication.applicationavailability.managing
+package io.github.kotlinmania.spring.boot.docs.features.springapplication.applicationavailability.managing
 
 class CacheCompletelyBrokenException: RuntimeException()

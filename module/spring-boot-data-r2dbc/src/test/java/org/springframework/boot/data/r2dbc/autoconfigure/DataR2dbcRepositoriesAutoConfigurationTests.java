@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.data.r2dbc.autoconfigure;
+package io.github.kotlinmania.spring.boot.data.r2dbc.autoconfigure;
 
 import java.time.Duration;
 
@@ -23,15 +23,15 @@ import org.junit.jupiter.api.Test;
 import reactor.test.StepVerifier;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.autoconfigure.AutoConfigurations;
-import org.springframework.boot.autoconfigure.TestAutoConfigurationPackage;
-import org.springframework.boot.data.r2dbc.domain.city.City;
-import org.springframework.boot.data.r2dbc.domain.city.CityRepository;
-import org.springframework.boot.data.r2dbc.domain.empty.EmptyDataPackage;
-import org.springframework.boot.r2dbc.autoconfigure.R2dbcAutoConfiguration;
-import org.springframework.boot.test.context.FilteredClassLoader;
-import org.springframework.boot.test.context.runner.ApplicationContextRunner;
-import org.springframework.boot.testsupport.classpath.resources.WithResource;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurations;
+import io.github.kotlinmania.spring.boot.autoconfigure.TestAutoConfigurationPackage;
+import io.github.kotlinmania.spring.boot.data.r2dbc.domain.city.City;
+import io.github.kotlinmania.spring.boot.data.r2dbc.domain.city.CityRepository;
+import io.github.kotlinmania.spring.boot.data.r2dbc.domain.empty.EmptyDataPackage;
+import io.github.kotlinmania.spring.boot.r2dbc.autoconfigure.R2dbcAutoConfiguration;
+import io.github.kotlinmania.spring.boot.test.context.FilteredClassLoader;
+import io.github.kotlinmania.spring.boot.test.context.runner.ApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.testsupport.classpath.resources.WithResource;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.io.DefaultResourceLoader;
 import org.springframework.core.io.Resource;

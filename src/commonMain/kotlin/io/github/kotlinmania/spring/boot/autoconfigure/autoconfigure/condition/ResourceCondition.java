@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.autoconfigure.condition;
+package io.github.kotlinmania.spring.boot.autoconfigure.condition;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import org.springframework.boot.autoconfigure.condition.ConditionMessage.Builder;
-import org.springframework.boot.autoconfigure.condition.ConditionMessage.Style;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionMessage.Builder;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionMessage.Style;
 import org.springframework.context.annotation.ConditionContext;
 import org.springframework.core.io.Resource;
 import org.springframework.core.type.AnnotatedTypeMetadata;

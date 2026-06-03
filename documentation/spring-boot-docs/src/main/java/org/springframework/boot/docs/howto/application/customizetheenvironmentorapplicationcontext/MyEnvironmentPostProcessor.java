@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.howto.application.customizetheenvironmentorapplicationcontext;
+package io.github.kotlinmania.spring.boot.docs.howto.application.customizetheenvironmentorapplicationcontext;
 
 import java.io.IOException;
 
-import org.springframework.boot.EnvironmentPostProcessor;
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.env.YamlPropertySourceLoader;
+import io.github.kotlinmania.spring.boot.EnvironmentPostProcessor;
+import io.github.kotlinmania.spring.boot.SpringApplication;
+import io.github.kotlinmania.spring.boot.env.YamlPropertySourceLoader;
 import org.springframework.core.env.ConfigurableEnvironment;
 import org.springframework.core.env.PropertySource;
 import org.springframework.core.io.ClassPathResource;

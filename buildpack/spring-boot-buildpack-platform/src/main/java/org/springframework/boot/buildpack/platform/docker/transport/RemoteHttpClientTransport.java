@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.buildpack.platform.docker.transport;
+package io.github.kotlinmania.spring.boot.buildpack.platform.docker.transport;
 
 import java.net.URISyntaxException;
 import java.util.concurrent.TimeUnit;
@@ -32,9 +32,9 @@ import org.apache.hc.core5.http.io.SocketConfig;
 import org.apache.hc.core5.util.Timeout;
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.buildpack.platform.docker.configuration.DockerHost;
-import org.springframework.boot.buildpack.platform.docker.configuration.ResolvedDockerHost;
-import org.springframework.boot.buildpack.platform.docker.ssl.SslContextFactory;
+import io.github.kotlinmania.spring.boot.buildpack.platform.docker.configuration.DockerHost;
+import io.github.kotlinmania.spring.boot.buildpack.platform.docker.configuration.ResolvedDockerHost;
+import io.github.kotlinmania.spring.boot.buildpack.platform.docker.ssl.SslContextFactory;
 import org.springframework.util.Assert;
 import org.springframework.util.StringUtils;
 

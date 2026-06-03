@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.context.metrics.buffering;
+package io.github.kotlinmania.spring.boot.context.metrics.buffering;
 
 import java.time.Duration;
 import java.time.Instant;

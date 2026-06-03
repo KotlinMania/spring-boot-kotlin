@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.health.autoconfigure.actuate.endpoint;
+package io.github.kotlinmania.spring.boot.health.autoconfigure.actuate.endpoint;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -33,19 +33,19 @@ import org.springframework.beans.factory.BeanFactoryUtils;
 import org.springframework.beans.factory.ListableBeanFactory;
 import org.springframework.beans.factory.NoSuchBeanDefinitionException;
 import org.springframework.beans.factory.annotation.BeanFactoryAnnotationUtils;
-import org.springframework.boot.actuate.endpoint.EndpointId;
-import org.springframework.boot.actuate.endpoint.Show;
-import org.springframework.boot.actuate.endpoint.web.AdditionalPathsMapper;
-import org.springframework.boot.actuate.endpoint.web.WebServerNamespace;
-import org.springframework.boot.health.actuate.endpoint.AdditionalHealthEndpointPath;
-import org.springframework.boot.health.actuate.endpoint.HealthEndpoint;
-import org.springframework.boot.health.actuate.endpoint.HealthEndpointGroup;
-import org.springframework.boot.health.actuate.endpoint.HealthEndpointGroups;
-import org.springframework.boot.health.actuate.endpoint.HttpCodeStatusMapper;
-import org.springframework.boot.health.actuate.endpoint.StatusAggregator;
-import org.springframework.boot.health.autoconfigure.actuate.endpoint.HealthEndpointProperties.Group;
-import org.springframework.boot.health.autoconfigure.actuate.endpoint.HealthProperties.Status;
-import org.springframework.boot.health.autoconfigure.contributor.HealthContributorMembership;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.EndpointId;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.Show;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.web.AdditionalPathsMapper;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.web.WebServerNamespace;
+import io.github.kotlinmania.spring.boot.health.actuate.endpoint.AdditionalHealthEndpointPath;
+import io.github.kotlinmania.spring.boot.health.actuate.endpoint.HealthEndpoint;
+import io.github.kotlinmania.spring.boot.health.actuate.endpoint.HealthEndpointGroup;
+import io.github.kotlinmania.spring.boot.health.actuate.endpoint.HealthEndpointGroups;
+import io.github.kotlinmania.spring.boot.health.actuate.endpoint.HttpCodeStatusMapper;
+import io.github.kotlinmania.spring.boot.health.actuate.endpoint.StatusAggregator;
+import io.github.kotlinmania.spring.boot.health.autoconfigure.actuate.endpoint.HealthEndpointProperties.Group;
+import io.github.kotlinmania.spring.boot.health.autoconfigure.actuate.endpoint.HealthProperties.Status;
+import io.github.kotlinmania.spring.boot.health.autoconfigure.contributor.HealthContributorMembership;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.util.CollectionUtils;

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.actuate.logging;
+package io.github.kotlinmania.spring.boot.actuate.logging;
 
 import java.io.File;
 import java.io.IOException;
@@ -23,8 +23,8 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.io.TempDir;
 
-import org.springframework.boot.actuate.endpoint.web.test.WebEndpointTest;
-import org.springframework.boot.logging.LogFile;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.web.test.WebEndpointTest;
+import io.github.kotlinmania.spring.boot.logging.LogFile;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.MediaType;

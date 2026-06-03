@@ -14,15 +14,15 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.integration.actuate.endpoint;
+package io.github.kotlinmania.spring.boot.integration.actuate.endpoint;
 
 import java.util.Collection;
 import java.util.Map;
 
-import org.springframework.boot.actuate.endpoint.OperationResponseBody;
-import org.springframework.boot.actuate.endpoint.annotation.Endpoint;
-import org.springframework.boot.actuate.endpoint.annotation.ReadOperation;
-import org.springframework.boot.actuate.endpoint.annotation.WriteOperation;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.OperationResponseBody;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.annotation.Endpoint;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.annotation.ReadOperation;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.annotation.WriteOperation;
 import org.springframework.integration.graph.Graph;
 import org.springframework.integration.graph.IntegrationGraphServer;
 import org.springframework.integration.graph.IntegrationNode;

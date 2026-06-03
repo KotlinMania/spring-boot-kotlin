@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.data.cassandra.autoconfigure;
+package io.github.kotlinmania.spring.boot.data.cassandra.autoconfigure;
 
 import java.util.Collections;
 
@@ -22,11 +22,11 @@ import com.datastax.oss.driver.api.core.CqlSession;
 import org.jspecify.annotations.Nullable;
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.autoconfigure.AutoConfigurations;
-import org.springframework.boot.cassandra.autoconfigure.CassandraAutoConfiguration;
-import org.springframework.boot.data.cassandra.domain.city.City;
-import org.springframework.boot.persistence.autoconfigure.EntityScan;
-import org.springframework.boot.test.context.runner.ApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurations;
+import io.github.kotlinmania.spring.boot.cassandra.autoconfigure.CassandraAutoConfiguration;
+import io.github.kotlinmania.spring.boot.data.cassandra.domain.city.City;
+import io.github.kotlinmania.spring.boot.persistence.autoconfigure.EntityScan;
+import io.github.kotlinmania.spring.boot.test.context.runner.ApplicationContextRunner;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -127,7 +127,7 @@ class DataCassandraAutoConfigurationTests {
 	}
 
 	@Configuration(proxyBeanMethods = false)
-	@EntityScan("org.springframework.boot.data.cassandra.domain.city")
+	@EntityScan("io.github.kotlinmania.spring.boot.data.cassandra.domain.city")
 	static class EntityScanConfig {
 
 	}

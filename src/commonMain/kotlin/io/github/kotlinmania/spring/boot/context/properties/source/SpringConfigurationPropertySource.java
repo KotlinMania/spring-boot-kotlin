@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.context.properties.source;
+package io.github.kotlinmania.spring.boot.context.properties.source;
 
 import java.util.Locale;
 import java.util.Map;
@@ -22,9 +22,9 @@ import java.util.Random;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.context.properties.source.ConfigurationPropertyName.Form;
-import org.springframework.boot.origin.Origin;
-import org.springframework.boot.origin.PropertySourceOrigin;
+import io.github.kotlinmania.spring.boot.context.properties.source.ConfigurationPropertyName.Form;
+import io.github.kotlinmania.spring.boot.origin.Origin;
+import io.github.kotlinmania.spring.boot.origin.PropertySourceOrigin;
 import org.springframework.core.env.EnumerablePropertySource;
 import org.springframework.core.env.PropertySource;
 import org.springframework.core.env.StandardEnvironment;

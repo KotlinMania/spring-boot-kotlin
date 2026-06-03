@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.data.nosql.neo4j.repositories;
+package io.github.kotlinmania.spring.boot.docs.data.nosql.neo4j.repositories;
 
 import org.springframework.data.neo4j.repository.Neo4jRepository;
 

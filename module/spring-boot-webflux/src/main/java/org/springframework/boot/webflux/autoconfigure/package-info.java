@@ -18,6 +18,6 @@
  * Auto-configuration for reactive web servers and Spring WebFlux.
  */
 @NullMarked
-package org.springframework.boot.webflux.autoconfigure;
+package io.github.kotlinmania.spring.boot.webflux.autoconfigure;
 
 import org.jspecify.annotations.NullMarked;

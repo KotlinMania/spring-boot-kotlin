@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.actuate.autoconfigure.web.server;
+package io.github.kotlinmania.spring.boot.actuate.autoconfigure.web.server;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.web.server.WebServerFactory;
-import org.springframework.boot.web.server.WebServerFactoryCustomizer;
+import io.github.kotlinmania.spring.boot.web.server.WebServerFactory;
+import io.github.kotlinmania.spring.boot.web.server.WebServerFactoryCustomizer;
 import org.springframework.core.Ordered;
 import org.springframework.lang.Contract;
 

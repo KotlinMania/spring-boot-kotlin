@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.tomcat.autoconfigure;
+package io.github.kotlinmania.spring.boot.tomcat.autoconfigure;
 
 import org.apache.catalina.authenticator.NonLoginAuthenticator;
 import org.apache.tomcat.util.http.Rfc6265CookieProcessor;
 
-import org.springframework.boot.autoconfigure.preinitialize.BackgroundPreinitializer;
+import io.github.kotlinmania.spring.boot.autoconfigure.preinitialize.BackgroundPreinitializer;
 
 /**
  * {@link BackgroundPreinitializer} for Tomcat.

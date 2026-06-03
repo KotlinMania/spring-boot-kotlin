@@ -1,2 +1,2 @@
-org.springframework.boot.http.codec.autoconfigure.CodecsAutoConfiguration
-org.springframework.boot.webclient.autoconfigure.WebClientAutoConfiguration
+io.github.kotlinmania.spring.boot.http.codec.autoconfigure.CodecsAutoConfiguration
+io.github.kotlinmania.spring.boot.webclient.autoconfigure.WebClientAutoConfiguration

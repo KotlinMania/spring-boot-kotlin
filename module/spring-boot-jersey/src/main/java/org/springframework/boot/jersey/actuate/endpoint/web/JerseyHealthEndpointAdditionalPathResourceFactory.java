@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.jersey.actuate.endpoint.web;
+package io.github.kotlinmania.spring.boot.jersey.actuate.endpoint.web;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -24,14 +24,14 @@ import java.util.stream.Stream;
 
 import org.glassfish.jersey.server.model.Resource;
 
-import org.springframework.boot.actuate.endpoint.web.EndpointMapping;
-import org.springframework.boot.actuate.endpoint.web.ExposableWebEndpoint;
-import org.springframework.boot.actuate.endpoint.web.WebOperation;
-import org.springframework.boot.actuate.endpoint.web.WebOperationRequestPredicate;
-import org.springframework.boot.actuate.endpoint.web.WebServerNamespace;
-import org.springframework.boot.health.actuate.endpoint.AdditionalHealthEndpointPath;
-import org.springframework.boot.health.actuate.endpoint.HealthEndpointGroup;
-import org.springframework.boot.health.actuate.endpoint.HealthEndpointGroups;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.web.EndpointMapping;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.web.ExposableWebEndpoint;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.web.WebOperation;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.web.WebOperationRequestPredicate;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.web.WebServerNamespace;
+import io.github.kotlinmania.spring.boot.health.actuate.endpoint.AdditionalHealthEndpointPath;
+import io.github.kotlinmania.spring.boot.health.actuate.endpoint.HealthEndpointGroup;
+import io.github.kotlinmania.spring.boot.health.actuate.endpoint.HealthEndpointGroups;
 
 /**
  * A factory for creating Jersey {@link Resource Resources} for health groups with

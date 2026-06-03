@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.build.architecture;
+package io.github.kotlinmania.spring.boot.build.architecture;
 
 import java.net.URLDecoder;
 import java.net.URLEncoder;
@@ -80,7 +80,7 @@ import org.springframework.util.ResourceUtils;
  */
 final class ArchitectureRules {
 
-	private static final String AUTOCONFIGURATION_ANNOTATION = "org.springframework.boot.autoconfigure.AutoConfiguration";
+	private static final String AUTOCONFIGURATION_ANNOTATION = "io.github.kotlinmania.spring.boot.autoconfigure.AutoConfiguration";
 
 	private ArchitectureRules() {
 	}
@@ -185,8 +185,8 @@ final class ArchitectureRules {
 			.matching("(**)")
 			.should()
 			.beFreeOfCycles()
-			.ignoreDependency("org.springframework.boot.env.EnvironmentPostProcessor",
-					"org.springframework.boot.SpringApplication");
+			.ignoreDependency("io.github.kotlinmania.spring.boot.env.EnvironmentPostProcessor",
+					"io.github.kotlinmania.spring.boot.SpringApplication");
 	}
 
 	private static ArchRule allBeanPostProcessorBeanMethodsShouldBeStaticAndNotCausePrematureInitialization() {
@@ -286,7 +286,7 @@ final class ArchitectureRules {
 			.and(hasJavaCallTarget(hasNameOf("getFile")))
 			.and(hasJavaCallTarget(hasRawStringParameterType()));
 		return noClassesShould().callMethodWhere(resourceUtilsGetURL.or(resourceUtilsGetFile))
-			.because(shouldUse("org.springframework.boot.io.ApplicationResourceLoader"));
+			.because(shouldUse("io.github.kotlinmania.spring.boot.io.ApplicationResourceLoader"));
 	}
 
 	private static ArchRule noClassesShouldCallStringToUpperCaseWithoutLocale() {
@@ -393,7 +393,7 @@ final class ArchitectureRules {
 	}
 
 	private static ArchRule conditionsShouldNotBePublic() {
-		String springBootCondition = "org.springframework.boot.autoconfigure.condition.SpringBootCondition";
+		String springBootCondition = "io.github.kotlinmania.spring.boot.autoconfigure.condition.SpringBootCondition";
 		return ArchRuleDefinition.noClasses()
 			.that()
 			.areAssignableTo(springBootCondition)

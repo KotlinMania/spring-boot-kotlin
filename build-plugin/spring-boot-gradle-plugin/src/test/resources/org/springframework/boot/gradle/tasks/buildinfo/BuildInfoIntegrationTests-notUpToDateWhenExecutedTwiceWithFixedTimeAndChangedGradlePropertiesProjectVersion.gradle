@@ -15,10 +15,10 @@
  */
 
 plugins {
-	id 'org.springframework.boot' version '{version}' apply false
+	id 'io.github.kotlinmania.spring.boot. version '{version}' apply false
 }
 
-tasks.register("buildInfo", org.springframework.boot.gradle.tasks.buildinfo.BuildInfo) {
+tasks.register("buildInfo", io.github.kotlinmania.spring.boot.gradle.tasks.buildinfo.BuildInfo) {
 	excludes = ["time"]
 	properties {
 		artifact = 'example'

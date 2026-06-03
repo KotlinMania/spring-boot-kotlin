@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.jackson.autoconfigure.jsontest.app;
+package io.github.kotlinmania.spring.boot.jackson.autoconfigure.jsontest.app;
 
 import java.util.Date;
 import java.util.UUID;

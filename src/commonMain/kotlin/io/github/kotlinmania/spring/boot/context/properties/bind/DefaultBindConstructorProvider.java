@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.context.properties.bind;
+package io.github.kotlinmania.spring.boot.context.properties.bind;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Modifier;

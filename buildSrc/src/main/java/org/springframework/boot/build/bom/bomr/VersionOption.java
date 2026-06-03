@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.build.bom.bomr;
+package io.github.kotlinmania.spring.boot.build.bom.bomr;
 
 import java.util.List;
 
-import org.springframework.boot.build.bom.Library;
-import org.springframework.boot.build.bom.Library.LibraryVersion;
-import org.springframework.boot.build.bom.Library.VersionAlignment;
-import org.springframework.boot.build.bom.bomr.version.DependencyVersion;
+import io.github.kotlinmania.spring.boot.build.bom.Library;
+import io.github.kotlinmania.spring.boot.build.bom.Library.LibraryVersion;
+import io.github.kotlinmania.spring.boot.build.bom.Library.VersionAlignment;
+import io.github.kotlinmania.spring.boot.build.bom.bomr.version.DependencyVersion;
 import org.springframework.util.StringUtils;
 
 /**

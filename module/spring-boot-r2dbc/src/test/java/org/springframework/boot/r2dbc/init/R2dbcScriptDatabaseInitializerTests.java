@@ -14,16 +14,16 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.r2dbc.init;
+package io.github.kotlinmania.spring.boot.r2dbc.init;
 
 import java.util.UUID;
 
 import io.r2dbc.spi.ConnectionFactory;
 
-import org.springframework.boot.r2dbc.ConnectionFactoryBuilder;
-import org.springframework.boot.sql.init.AbstractScriptDatabaseInitializerTests;
-import org.springframework.boot.sql.init.DatabaseInitializationSettings;
-import org.springframework.boot.testsupport.BuildOutput;
+import io.github.kotlinmania.spring.boot.r2dbc.ConnectionFactoryBuilder;
+import io.github.kotlinmania.spring.boot.sql.init.AbstractScriptDatabaseInitializerTests;
+import io.github.kotlinmania.spring.boot.sql.init.DatabaseInitializationSettings;
+import io.github.kotlinmania.spring.boot.testsupport.BuildOutput;
 import org.springframework.r2dbc.core.DatabaseClient;
 
 import static org.assertj.core.api.Assertions.assertThat;

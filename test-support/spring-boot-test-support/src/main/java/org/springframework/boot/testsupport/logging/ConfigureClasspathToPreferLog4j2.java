@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.testsupport.logging;
+package io.github.kotlinmania.spring.boot.testsupport.logging;
 
 import java.lang.annotation.Documented;
 import java.lang.annotation.ElementType;
@@ -22,8 +22,8 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
-import org.springframework.boot.testsupport.classpath.ClassPathExclusions;
-import org.springframework.boot.testsupport.classpath.ClassPathOverrides;
+import io.github.kotlinmania.spring.boot.testsupport.classpath.ClassPathExclusions;
+import io.github.kotlinmania.spring.boot.testsupport.classpath.ClassPathOverrides;
 
 /**
  * Configures the classpath to prefer Log4j2. Other logging systems may still be on the

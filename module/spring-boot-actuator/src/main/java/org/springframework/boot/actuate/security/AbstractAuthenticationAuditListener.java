@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.actuate.security;
+package io.github.kotlinmania.spring.boot.actuate.security;
 
-import org.springframework.boot.actuate.audit.AuditEvent;
-import org.springframework.boot.actuate.audit.listener.AuditApplicationEvent;
+import io.github.kotlinmania.spring.boot.actuate.audit.AuditEvent;
+import io.github.kotlinmania.spring.boot.actuate.audit.listener.AuditApplicationEvent;
 import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.context.ApplicationEventPublisherAware;
 import org.springframework.context.ApplicationListener;

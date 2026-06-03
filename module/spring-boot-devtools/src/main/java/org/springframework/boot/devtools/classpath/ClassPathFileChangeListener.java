@@ -14,17 +14,17 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.devtools.classpath;
+package io.github.kotlinmania.spring.boot.devtools.classpath;
 
 import java.util.Set;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.devtools.filewatch.ChangedFile;
-import org.springframework.boot.devtools.filewatch.ChangedFiles;
-import org.springframework.boot.devtools.filewatch.FileChangeListener;
-import org.springframework.boot.devtools.filewatch.FileSystemWatcher;
-import org.springframework.boot.devtools.restart.AgentReloader;
+import io.github.kotlinmania.spring.boot.devtools.filewatch.ChangedFile;
+import io.github.kotlinmania.spring.boot.devtools.filewatch.ChangedFiles;
+import io.github.kotlinmania.spring.boot.devtools.filewatch.FileChangeListener;
+import io.github.kotlinmania.spring.boot.devtools.filewatch.FileSystemWatcher;
+import io.github.kotlinmania.spring.boot.devtools.restart.AgentReloader;
 import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.util.Assert;
 

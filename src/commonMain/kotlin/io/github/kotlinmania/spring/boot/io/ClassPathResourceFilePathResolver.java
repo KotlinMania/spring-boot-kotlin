@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.io;
+package io.github.kotlinmania.spring.boot.io;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.io.ApplicationResourceLoader.FilePathResolver;
+import io.github.kotlinmania.spring.boot.io.ApplicationResourceLoader.FilePathResolver;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.ResourceLoader;

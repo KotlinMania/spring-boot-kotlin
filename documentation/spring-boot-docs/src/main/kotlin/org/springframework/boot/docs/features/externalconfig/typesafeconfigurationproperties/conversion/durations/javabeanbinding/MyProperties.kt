@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.features.externalconfig.typesafeconfigurationproperties.conversion.durations.javabeanbinding
+package io.github.kotlinmania.spring.boot.docs.features.externalconfig.typesafeconfigurationproperties.conversion.durations.javabeanbinding
 
-import org.springframework.boot.context.properties.ConfigurationProperties
-import org.springframework.boot.convert.DurationUnit
+import io.github.kotlinmania.spring.boot.context.properties.ConfigurationProperties
+import io.github.kotlinmania.spring.boot.convert.DurationUnit
 import java.time.Duration
 import java.time.temporal.ChronoUnit
 

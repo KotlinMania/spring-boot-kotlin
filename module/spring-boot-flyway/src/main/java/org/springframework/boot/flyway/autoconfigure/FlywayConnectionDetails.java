@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.flyway.autoconfigure;
+package io.github.kotlinmania.spring.boot.flyway.autoconfigure;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.autoconfigure.service.connection.ConnectionDetails;
-import org.springframework.boot.jdbc.DatabaseDriver;
+import io.github.kotlinmania.spring.boot.autoconfigure.service.connection.ConnectionDetails;
+import io.github.kotlinmania.spring.boot.jdbc.DatabaseDriver;
 
 /**
  * Details required for Flyway to establish a connection to an SQL service using JDBC.

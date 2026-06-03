@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.r2dbc.docker.compose;
+package io.github.kotlinmania.spring.boot.r2dbc.docker.compose;
 
 import java.util.Map;
 

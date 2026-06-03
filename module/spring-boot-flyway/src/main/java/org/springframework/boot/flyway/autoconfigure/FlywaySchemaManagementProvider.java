@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.flyway.autoconfigure;
+package io.github.kotlinmania.spring.boot.flyway.autoconfigure;
 
 import java.util.stream.StreamSupport;
 
@@ -22,8 +22,8 @@ import javax.sql.DataSource;
 
 import org.flywaydb.core.Flyway;
 
-import org.springframework.boot.jdbc.SchemaManagement;
-import org.springframework.boot.jdbc.SchemaManagementProvider;
+import io.github.kotlinmania.spring.boot.jdbc.SchemaManagement;
+import io.github.kotlinmania.spring.boot.jdbc.SchemaManagementProvider;
 
 /**
  * A Flyway {@link SchemaManagementProvider} that determines if the schema is managed by

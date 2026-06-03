@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.build.bom.bomr.version;
+package io.github.kotlinmania.spring.boot.build.bom.bomr.version;
 
 import java.lang.annotation.Annotation;
 import java.lang.annotation.ElementType;

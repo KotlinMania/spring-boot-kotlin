@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.loader.tools;
+package io.github.kotlinmania.spring.boot.loader.tools;
 
 import java.io.ByteArrayInputStream;
 import java.io.IOException;

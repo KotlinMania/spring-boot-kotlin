@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.context.properties.bind.validation;
+package io.github.kotlinmania.spring.boot.context.properties.bind.validation;
 
 import org.jspecify.annotations.Nullable;
 

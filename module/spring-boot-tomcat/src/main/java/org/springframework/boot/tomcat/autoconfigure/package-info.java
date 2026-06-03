@@ -19,6 +19,6 @@
  * Tomcat.
  */
 @NullMarked
-package org.springframework.boot.tomcat.autoconfigure;
+package io.github.kotlinmania.spring.boot.tomcat.autoconfigure;
 
 import org.jspecify.annotations.NullMarked;

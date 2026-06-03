@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.grpc.client.autoconfigure;
+package io.github.kotlinmania.spring.boot.grpc.client.autoconfigure;
 
 import io.grpc.Channel;
 import io.grpc.netty.NettyChannelBuilder;
 
 import org.springframework.beans.factory.ObjectProvider;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnClass;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.env.Environment;

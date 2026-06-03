@@ -14,17 +14,17 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.actuate.autoconfigure.endpoint;
+package io.github.kotlinmania.spring.boot.actuate.autoconfigure.endpoint;
 
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.actuate.endpoint.Access;
-import org.springframework.boot.actuate.endpoint.EndpointAccessResolver;
-import org.springframework.boot.actuate.endpoint.EndpointId;
-import org.springframework.boot.context.properties.source.MutuallyExclusiveConfigurationPropertiesException;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.Access;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.EndpointAccessResolver;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.EndpointId;
+import io.github.kotlinmania.spring.boot.context.properties.source.MutuallyExclusiveConfigurationPropertiesException;
 import org.springframework.core.env.PropertyResolver;
 
 /**
@@ -73,8 +73,8 @@ public class PropertiesEndpointAccessResolver implements EndpointAccessResolver 
 			return defaultAccess;
 		}
 		if (endpointsEnabledByDefault != null) {
-			return endpointsEnabledByDefault ? org.springframework.boot.actuate.endpoint.Access.UNRESTRICTED
-					: org.springframework.boot.actuate.endpoint.Access.NONE;
+			return endpointsEnabledByDefault ? io.github.kotlinmania.spring.boot.actuate.endpoint.Access.UNRESTRICTED
+					: io.github.kotlinmania.spring.boot.actuate.endpoint.Access.NONE;
 		}
 		return null;
 	}

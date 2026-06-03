@@ -19,7 +19,7 @@ package smoketest.activemq.embedded;
 import jakarta.jms.Queue;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.CommandLineRunner;
+import io.github.kotlinmania.spring.boot.CommandLineRunner;
 import org.springframework.jms.core.JmsClient;
 import org.springframework.stereotype.Component;
 

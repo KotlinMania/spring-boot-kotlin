@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.autoconfigure.condition;
+package io.github.kotlinmania.spring.boot.autoconfigure.condition;
 
 import org.junit.jupiter.api.Test;
 
@@ -50,7 +50,7 @@ class ConditionalOnMissingClassTests {
 	}
 
 	@Configuration(proxyBeanMethods = false)
-	@ConditionalOnMissingClass("org.springframework.boot.autoconfigure.condition.ConditionalOnMissingClassTests")
+	@ConditionalOnMissingClass("io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnMissingClassTests")
 	static class BasicConfiguration {
 
 		@Bean

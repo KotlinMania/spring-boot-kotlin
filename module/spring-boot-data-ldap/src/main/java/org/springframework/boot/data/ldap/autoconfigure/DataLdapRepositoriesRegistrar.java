@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.data.ldap.autoconfigure;
+package io.github.kotlinmania.spring.boot.data.ldap.autoconfigure;
 
 import java.lang.annotation.Annotation;
 
-import org.springframework.boot.autoconfigure.data.AbstractRepositoryConfigurationSourceSupport;
+import io.github.kotlinmania.spring.boot.autoconfigure.data.AbstractRepositoryConfigurationSourceSupport;
 import org.springframework.context.annotation.ImportBeanDefinitionRegistrar;
 import org.springframework.data.ldap.repository.config.EnableLdapRepositories;
 import org.springframework.data.ldap.repository.config.LdapRepositoryConfigurationExtension;

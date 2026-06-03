@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.actuate.endpoint.jmx;
+package io.github.kotlinmania.spring.boot.actuate.endpoint.jmx;
 
 import javax.management.MalformedObjectNameException;
 import javax.management.ObjectName;

@@ -15,6 +15,6 @@
  */
 
 @NullMarked
-package org.springframework.boot.jackson.types;
+package io.github.kotlinmania.spring.boot.jackson.types;
 
 import org.jspecify.annotations.NullMarked;

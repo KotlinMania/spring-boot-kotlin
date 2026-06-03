@@ -14,19 +14,19 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.data.cassandra.autoconfigure;
+package io.github.kotlinmania.spring.boot.data.cassandra.autoconfigure;
 
 import com.datastax.oss.driver.api.core.CqlSessionBuilder;
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.autoconfigure.AutoConfigurations;
-import org.springframework.boot.autoconfigure.TestAutoConfigurationPackage;
-import org.springframework.boot.autoconfigure.context.PropertyPlaceholderAutoConfiguration;
-import org.springframework.boot.cassandra.autoconfigure.CassandraAutoConfiguration;
-import org.springframework.boot.data.cassandra.domain.city.City;
-import org.springframework.boot.data.cassandra.domain.city.ReactiveCityRepository;
-import org.springframework.boot.data.cassandra.domain.empty.EmptyDataPackage;
-import org.springframework.boot.test.context.runner.ApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurations;
+import io.github.kotlinmania.spring.boot.autoconfigure.TestAutoConfigurationPackage;
+import io.github.kotlinmania.spring.boot.autoconfigure.context.PropertyPlaceholderAutoConfiguration;
+import io.github.kotlinmania.spring.boot.cassandra.autoconfigure.CassandraAutoConfiguration;
+import io.github.kotlinmania.spring.boot.data.cassandra.domain.city.City;
+import io.github.kotlinmania.spring.boot.data.cassandra.domain.city.ReactiveCityRepository;
+import io.github.kotlinmania.spring.boot.data.cassandra.domain.empty.EmptyDataPackage;
+import io.github.kotlinmania.spring.boot.test.context.runner.ApplicationContextRunner;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;

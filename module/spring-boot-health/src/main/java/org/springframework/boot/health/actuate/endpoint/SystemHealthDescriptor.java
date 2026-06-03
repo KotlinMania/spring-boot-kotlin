@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.health.actuate.endpoint;
+package io.github.kotlinmania.spring.boot.health.actuate.endpoint;
 
 import java.util.Map;
 import java.util.Set;
@@ -23,8 +23,8 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.actuate.endpoint.ApiVersion;
-import org.springframework.boot.health.contributor.Status;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.ApiVersion;
+import io.github.kotlinmania.spring.boot.health.contributor.Status;
 
 /**
  * Description of overall system health.

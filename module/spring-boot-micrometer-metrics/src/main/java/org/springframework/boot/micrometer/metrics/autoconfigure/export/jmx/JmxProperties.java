@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.micrometer.metrics.autoconfigure.export.jmx;
+package io.github.kotlinmania.spring.boot.micrometer.metrics.autoconfigure.export.jmx;
 
 import java.time.Duration;
 
-import org.springframework.boot.context.properties.ConfigurationProperties;
+import io.github.kotlinmania.spring.boot.context.properties.ConfigurationProperties;
 
 /**
  * {@link ConfigurationProperties @ConfigurationProperties} for configuring JMX metrics

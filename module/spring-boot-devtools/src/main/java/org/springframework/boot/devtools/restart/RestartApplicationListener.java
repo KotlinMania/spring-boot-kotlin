@@ -14,16 +14,16 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.devtools.restart;
+package io.github.kotlinmania.spring.boot.devtools.restart;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
-import org.springframework.boot.context.event.ApplicationFailedEvent;
-import org.springframework.boot.context.event.ApplicationPreparedEvent;
-import org.springframework.boot.context.event.ApplicationReadyEvent;
-import org.springframework.boot.context.event.ApplicationStartingEvent;
-import org.springframework.boot.devtools.system.DevToolsEnablementDeducer;
+import io.github.kotlinmania.spring.boot.context.event.ApplicationFailedEvent;
+import io.github.kotlinmania.spring.boot.context.event.ApplicationPreparedEvent;
+import io.github.kotlinmania.spring.boot.context.event.ApplicationReadyEvent;
+import io.github.kotlinmania.spring.boot.context.event.ApplicationStartingEvent;
+import io.github.kotlinmania.spring.boot.devtools.system.DevToolsEnablementDeducer;
 import org.springframework.context.ApplicationEvent;
 import org.springframework.context.ApplicationListener;
 import org.springframework.core.Ordered;

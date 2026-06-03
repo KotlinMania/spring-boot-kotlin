@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.context.properties;
+package io.github.kotlinmania.spring.boot.context.properties;
 
 import java.util.Collections;
 import java.util.LinkedHashMap;
@@ -25,8 +25,8 @@ import org.jspecify.annotations.Nullable;
 import org.springframework.beans.factory.config.BeanDefinition;
 import org.springframework.beans.factory.support.BeanDefinitionBuilder;
 import org.springframework.beans.factory.support.BeanDefinitionRegistry;
-import org.springframework.boot.context.properties.source.ConfigurationProperty;
-import org.springframework.boot.context.properties.source.ConfigurationPropertyName;
+import io.github.kotlinmania.spring.boot.context.properties.source.ConfigurationProperty;
+import io.github.kotlinmania.spring.boot.context.properties.source.ConfigurationPropertyName;
 import org.springframework.context.ApplicationContext;
 import org.springframework.util.Assert;
 

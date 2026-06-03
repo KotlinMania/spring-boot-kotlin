@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.security.oauth2.client
+package io.github.kotlinmania.spring.boot.docs.security.oauth2.client
 
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration

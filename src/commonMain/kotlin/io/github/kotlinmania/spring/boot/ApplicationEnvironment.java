@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package org.springframework.boot;
+package io.github.kotlinmania.spring.boot.
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.context.properties.source.ConfigurationPropertySources;
+import io.github.kotlinmania.spring.boot.context.properties.source.ConfigurationPropertySources;
 import org.springframework.core.env.ConfigurablePropertyResolver;
 import org.springframework.core.env.MutablePropertySources;
 import org.springframework.core.env.StandardEnvironment;

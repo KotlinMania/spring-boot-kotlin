@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docker.compose.core;
+package io.github.kotlinmania.spring.boot.docker.compose.core;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -29,9 +29,9 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.docker.compose.core.DockerCliCommand.ComposeVersion;
-import org.springframework.boot.docker.compose.core.DockerCliCommand.Type;
-import org.springframework.boot.logging.LogLevel;
+import io.github.kotlinmania.spring.boot.docker.compose.core.DockerCliCommand.ComposeVersion;
+import io.github.kotlinmania.spring.boot.docker.compose.core.DockerCliCommand.Type;
+import io.github.kotlinmania.spring.boot.logging.LogLevel;
 import org.springframework.core.log.LogMessage;
 import org.springframework.util.CollectionUtils;
 

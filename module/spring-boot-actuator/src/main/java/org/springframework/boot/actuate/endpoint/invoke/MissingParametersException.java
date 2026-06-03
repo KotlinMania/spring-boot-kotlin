@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.actuate.endpoint.invoke;
+package io.github.kotlinmania.spring.boot.actuate.endpoint.invoke;
 
 import java.util.Set;
 import java.util.stream.Collectors;
 
-import org.springframework.boot.actuate.endpoint.InvalidEndpointRequestException;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.InvalidEndpointRequestException;
 import org.springframework.util.StringUtils;
 
 /**

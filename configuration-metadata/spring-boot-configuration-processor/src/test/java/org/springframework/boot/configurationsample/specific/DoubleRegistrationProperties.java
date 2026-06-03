@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.configurationsample.specific;
+package io.github.kotlinmania.spring.boot.configurationsample.specific;
 
-import org.springframework.boot.configurationsample.TestConfigurationProperties;
+import io.github.kotlinmania.spring.boot.configurationsample.TestConfigurationProperties;
 
 /**
  * Test that the same type can be registered several times if the prefix is different.

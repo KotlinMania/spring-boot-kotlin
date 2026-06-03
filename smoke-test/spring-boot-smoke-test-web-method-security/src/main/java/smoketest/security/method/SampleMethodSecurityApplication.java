@@ -18,9 +18,9 @@ package smoketest.security.method;
 
 import jakarta.servlet.DispatcherType;
 
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.builder.SpringApplicationBuilder;
-import org.springframework.boot.security.autoconfigure.actuate.web.servlet.EndpointRequest;
+import io.github.kotlinmania.spring.boot.autoconfigure.SpringBootApplication;
+import io.github.kotlinmania.spring.boot.builder.SpringApplicationBuilder;
+import io.github.kotlinmania.spring.boot.security.autoconfigure.actuate.web.servlet.EndpointRequest;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.Ordered;

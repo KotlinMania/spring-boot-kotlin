@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.transaction.jta.autoconfigure;
+package io.github.kotlinmania.spring.boot.transaction.jta.autoconfigure;
 
 import java.util.Arrays;
 import java.util.List;
@@ -43,8 +43,8 @@ import org.junit.jupiter.params.provider.MethodSource;
 import org.osjava.sj.loader.JndiLoader;
 
 import org.springframework.beans.factory.NoSuchBeanDefinitionException;
-import org.springframework.boot.test.util.TestPropertyValues;
-import org.springframework.boot.testsupport.classpath.ClassPathExclusions;
+import io.github.kotlinmania.spring.boot.test.util.TestPropertyValues;
+import io.github.kotlinmania.spring.boot.testsupport.classpath.ClassPathExclusions;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

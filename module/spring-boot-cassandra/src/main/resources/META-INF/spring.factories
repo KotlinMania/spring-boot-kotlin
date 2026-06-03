@@ -1,4 +1,4 @@
 # Connection Details Factories
-org.springframework.boot.autoconfigure.service.connection.ConnectionDetailsFactory=\
-org.springframework.boot.cassandra.docker.compose.CassandraDockerComposeConnectionDetailsFactory,\
-org.springframework.boot.cassandra.testcontainers.CassandraContainerConnectionDetailsFactory
+io.github.kotlinmania.spring.boot.autoconfigure.service.connection.ConnectionDetailsFactory=\
+io.github.kotlinmania.spring.boot.cassandra.docker.compose.CassandraDockerComposeConnectionDetailsFactory,\
+io.github.kotlinmania.spring.boot.cassandra.testcontainers.CassandraContainerConnectionDetailsFactory

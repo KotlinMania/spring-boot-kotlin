@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.mail.autoconfigure;
+package io.github.kotlinmania.spring.boot.mail.autoconfigure;
 
 import jakarta.mail.MessagingException;
 
-import org.springframework.boot.autoconfigure.AutoConfiguration;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnBooleanProperty;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnSingleCandidate;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.EnableAutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnBooleanProperty;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnSingleCandidate;
 import org.springframework.mail.javamail.JavaMailSenderImpl;
 
 /**

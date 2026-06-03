@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.jackson;
+package io.github.kotlinmania.spring.boot.jackson;
 
 import java.util.Arrays;
 import java.util.List;
@@ -26,13 +26,13 @@ import tools.jackson.databind.JacksonModule;
 import tools.jackson.databind.json.JsonMapper;
 
 import org.springframework.beans.factory.BeanCreationException;
-import org.springframework.boot.jackson.scan.a.RenameMixInClass;
-import org.springframework.boot.jackson.scan.b.RenameMixInAbstractClass;
-import org.springframework.boot.jackson.scan.c.RenameMixInInterface;
-import org.springframework.boot.jackson.scan.d.EmptyMixInClass;
-import org.springframework.boot.jackson.scan.f.EmptyMixIn;
-import org.springframework.boot.jackson.types.Name;
-import org.springframework.boot.jackson.types.NameAndAge;
+import io.github.kotlinmania.spring.boot.jackson.scan.a.RenameMixInClass;
+import io.github.kotlinmania.spring.boot.jackson.scan.b.RenameMixInAbstractClass;
+import io.github.kotlinmania.spring.boot.jackson.scan.c.RenameMixInInterface;
+import io.github.kotlinmania.spring.boot.jackson.scan.d.EmptyMixInClass;
+import io.github.kotlinmania.spring.boot.jackson.scan.f.EmptyMixIn;
+import io.github.kotlinmania.spring.boot.jackson.types.Name;
+import io.github.kotlinmania.spring.boot.jackson.types.NameAndAge;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.util.ClassUtils;
 
@@ -60,7 +60,7 @@ class JacksonMixinModuleTests {
 		assertThatExceptionOfType(BeanCreationException.class).isThrownBy(() -> load(EmptyMixIn.class))
 			.withMessageContaining("Error creating bean with name 'jacksonMixinModule'")
 			.withStackTraceContaining("@JacksonMixin annotation on class "
-					+ "'org.springframework.boot.jackson.scan.f.EmptyMixIn' does not specify any types");
+					+ "'io.github.kotlinmania.spring.boot.jackson.scan.f.EmptyMixIn' does not specify any types");
 	}
 
 	@Test

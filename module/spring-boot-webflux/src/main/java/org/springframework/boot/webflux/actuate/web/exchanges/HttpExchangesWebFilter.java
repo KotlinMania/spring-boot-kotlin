@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.webflux.actuate.web.exchanges;
+package io.github.kotlinmania.spring.boot.webflux.actuate.web.exchanges;
 
 import java.security.Principal;
 import java.util.Set;
@@ -22,9 +22,9 @@ import java.util.Set;
 import org.jspecify.annotations.Nullable;
 import reactor.core.publisher.Mono;
 
-import org.springframework.boot.actuate.web.exchanges.HttpExchange;
-import org.springframework.boot.actuate.web.exchanges.HttpExchangeRepository;
-import org.springframework.boot.actuate.web.exchanges.Include;
+import io.github.kotlinmania.spring.boot.actuate.web.exchanges.HttpExchange;
+import io.github.kotlinmania.spring.boot.actuate.web.exchanges.HttpExchangeRepository;
+import io.github.kotlinmania.spring.boot.actuate.web.exchanges.Include;
 import org.springframework.core.Ordered;
 import org.springframework.web.server.ServerWebExchange;
 import org.springframework.web.server.WebFilter;

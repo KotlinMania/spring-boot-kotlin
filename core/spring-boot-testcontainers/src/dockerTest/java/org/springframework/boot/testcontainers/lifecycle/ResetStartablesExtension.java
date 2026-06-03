@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.testcontainers.lifecycle;
+package io.github.kotlinmania.spring.boot.testcontainers.lifecycle;
 
 import java.lang.reflect.InaccessibleObjectException;
 import java.util.concurrent.atomic.AtomicLong;

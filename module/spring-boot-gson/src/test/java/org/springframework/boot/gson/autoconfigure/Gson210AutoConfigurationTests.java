@@ -14,16 +14,16 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.gson.autoconfigure;
+package io.github.kotlinmania.spring.boot.gson.autoconfigure;
 
 import com.google.gson.Gson;
 import org.jspecify.annotations.Nullable;
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.autoconfigure.AutoConfigurations;
-import org.springframework.boot.test.context.runner.ApplicationContextRunner;
-import org.springframework.boot.testsupport.classpath.ClassPathExclusions;
-import org.springframework.boot.testsupport.classpath.ClassPathOverrides;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurations;
+import io.github.kotlinmania.spring.boot.test.context.runner.ApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.testsupport.classpath.ClassPathExclusions;
+import io.github.kotlinmania.spring.boot.testsupport.classpath.ClassPathOverrides;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

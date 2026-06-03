@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.jetty.autoconfigure;
+package io.github.kotlinmania.spring.boot.jetty.autoconfigure;
 
 import org.eclipse.jetty.util.VirtualThreads;
 import org.eclipse.jetty.util.thread.VirtualThreadPool;
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.jetty.ConfigurableJettyWebServerFactory;
-import org.springframework.boot.web.server.WebServerFactoryCustomizer;
+import io.github.kotlinmania.spring.boot.jetty.ConfigurableJettyWebServerFactory;
+import io.github.kotlinmania.spring.boot.web.server.WebServerFactoryCustomizer;
 import org.springframework.core.Ordered;
 import org.springframework.util.Assert;
 

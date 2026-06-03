@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.micrometer.tracing.opentelemetry.autoconfigure;
+package io.github.kotlinmania.spring.boot.micrometer.tracing.opentelemetry.autoconfigure;
 
 import java.util.Arrays;
 import java.util.Collection;

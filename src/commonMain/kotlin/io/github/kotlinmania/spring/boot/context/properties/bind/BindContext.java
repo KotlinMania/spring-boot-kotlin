@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.context.properties.bind;
+package io.github.kotlinmania.spring.boot.context.properties.bind;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.context.properties.source.ConfigurationProperty;
-import org.springframework.boot.context.properties.source.ConfigurationPropertySource;
+import io.github.kotlinmania.spring.boot.context.properties.source.ConfigurationProperty;
+import io.github.kotlinmania.spring.boot.context.properties.source.ConfigurationPropertySource;
 
 /**
  * Context information for use by {@link BindHandler BindHandlers}.

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.features.developingautoconfiguration.testing;
+package io.github.kotlinmania.spring.boot.docs.features.developingautoconfiguration.testing;
 
 public class MyService {
 

@@ -14,15 +14,15 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.autoconfigure.logging;
+package io.github.kotlinmania.spring.boot.autoconfigure.logging;
 
 import java.util.function.Supplier;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.autoconfigure.condition.ConditionEvaluationReport;
-import org.springframework.boot.context.event.ApplicationFailedEvent;
-import org.springframework.boot.logging.LogLevel;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionEvaluationReport;
+import io.github.kotlinmania.spring.boot.context.event.ApplicationFailedEvent;
+import io.github.kotlinmania.spring.boot.logging.LogLevel;
 import org.springframework.context.ApplicationContextInitializer;
 import org.springframework.context.ApplicationEvent;
 import org.springframework.context.ConfigurableApplicationContext;

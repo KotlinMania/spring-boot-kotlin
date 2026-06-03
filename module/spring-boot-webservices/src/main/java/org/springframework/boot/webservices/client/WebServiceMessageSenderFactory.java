@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.webservices.client;
+package io.github.kotlinmania.spring.boot.webservices.client;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.http.client.ClientHttpRequestFactoryBuilder;
-import org.springframework.boot.http.client.HttpClientSettings;
+import io.github.kotlinmania.spring.boot.http.client.ClientHttpRequestFactoryBuilder;
+import io.github.kotlinmania.spring.boot.http.client.HttpClientSettings;
 import org.springframework.http.client.ClientHttpRequestFactory;
 import org.springframework.util.Assert;
 import org.springframework.ws.transport.WebServiceMessageSender;

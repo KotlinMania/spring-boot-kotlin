@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.context.properties.source;
+package io.github.kotlinmania.spring.boot.context.properties.source;
 
 import java.util.ArrayDeque;
 import java.util.Deque;
@@ -25,7 +25,7 @@ import java.util.function.Function;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.env.PropertySourceInfo;
+import io.github.kotlinmania.spring.boot.env.PropertySourceInfo;
 import org.springframework.core.env.ConfigurableEnvironment;
 import org.springframework.core.env.MutablePropertySources;
 import org.springframework.core.env.PropertySource;

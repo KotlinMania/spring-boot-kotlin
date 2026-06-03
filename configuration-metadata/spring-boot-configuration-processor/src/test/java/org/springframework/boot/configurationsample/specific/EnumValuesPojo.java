@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.configurationsample.specific;
+package io.github.kotlinmania.spring.boot.configurationsample.specific;
 
 import java.time.temporal.ChronoField;
 import java.time.temporal.ChronoUnit;
 
-import org.springframework.boot.configurationsample.TestConfigurationProperties;
+import io.github.kotlinmania.spring.boot.configurationsample.TestConfigurationProperties;
 
 /**
  * Sample config for enum and default values.

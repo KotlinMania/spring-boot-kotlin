@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.configurationsample.immutable;
+package io.github.kotlinmania.spring.boot.configurationsample.immutable;
 
-import org.springframework.boot.configurationsample.TestNestedConfigurationProperty;
-import org.springframework.boot.configurationsample.specific.SimplePojo;
+import io.github.kotlinmania.spring.boot.configurationsample.TestNestedConfigurationProperty;
+import io.github.kotlinmania.spring.boot.configurationsample.specific.SimplePojo;
 
 /**
  * Inner properties, in immutable format.

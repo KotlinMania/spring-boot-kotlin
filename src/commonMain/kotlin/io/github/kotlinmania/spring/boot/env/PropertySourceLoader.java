@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.env;
+package io.github.kotlinmania.spring.boot.env;
 
 import java.io.IOException;
 import java.nio.charset.Charset;

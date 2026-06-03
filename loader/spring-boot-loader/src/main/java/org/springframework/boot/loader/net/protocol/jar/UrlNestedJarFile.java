@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.loader.net.protocol.jar;
+package io.github.kotlinmania.spring.boot.loader.net.protocol.jar;
 
 import java.io.File;
 import java.io.IOException;
@@ -24,7 +24,7 @@ import java.util.jar.JarEntry;
 import java.util.jar.JarFile;
 import java.util.jar.Manifest;
 
-import org.springframework.boot.loader.jar.NestedJarFile;
+import io.github.kotlinmania.spring.boot.loader.jar.NestedJarFile;
 
 /**
  * {@link NestedJarFile} subclass returned from a {@link JarUrlConnection}.

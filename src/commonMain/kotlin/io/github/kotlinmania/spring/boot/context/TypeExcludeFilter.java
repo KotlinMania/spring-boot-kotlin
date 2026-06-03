@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.context;
+package io.github.kotlinmania.spring.boot.context;
 
 import java.io.IOException;
 import java.util.Collection;

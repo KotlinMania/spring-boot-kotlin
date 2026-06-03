@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.http.client.reactive;
+package io.github.kotlinmania.spring.boot.http.client.reactive;
 
 import java.util.Collection;
 import java.util.List;
@@ -22,8 +22,8 @@ import java.util.function.Consumer;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.http.client.HttpClientSettings;
-import org.springframework.boot.util.LambdaSafe;
+import io.github.kotlinmania.spring.boot.http.client.HttpClientSettings;
+import io.github.kotlinmania.spring.boot.util.LambdaSafe;
 import org.springframework.http.client.reactive.ClientHttpConnector;
 import org.springframework.http.client.reactive.HttpComponentsClientHttpConnector;
 import org.springframework.http.client.reactive.JdkClientHttpConnector;

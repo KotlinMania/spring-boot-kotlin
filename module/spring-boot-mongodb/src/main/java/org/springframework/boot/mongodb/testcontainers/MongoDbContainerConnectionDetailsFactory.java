@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.mongodb.testcontainers;
+package io.github.kotlinmania.spring.boot.mongodb.testcontainers;
 
 import org.testcontainers.mongodb.MongoDBContainer;
 
-import org.springframework.boot.mongodb.autoconfigure.MongoConnectionDetails;
-import org.springframework.boot.testcontainers.service.connection.ContainerConnectionDetailsFactory;
-import org.springframework.boot.testcontainers.service.connection.ServiceConnection;
+import io.github.kotlinmania.spring.boot.mongodb.autoconfigure.MongoConnectionDetails;
+import io.github.kotlinmania.spring.boot.testcontainers.service.connection.ContainerConnectionDetailsFactory;
+import io.github.kotlinmania.spring.boot.testcontainers.service.connection.ServiceConnection;
 
 /**
  * {@link ContainerConnectionDetailsFactory} to create {@link MongoConnectionDetails} from

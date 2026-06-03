@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.testing.springbootapplications.autoconfiguredspringdatacouchbase;
+package io.github.kotlinmania.spring.boot.docs.testing.springbootapplications.autoconfiguredspringdatacouchbase;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.data.couchbase.test.autoconfigure.DataCouchbaseTest;
+import io.github.kotlinmania.spring.boot.data.couchbase.test.autoconfigure.DataCouchbaseTest;
 
 @DataCouchbaseTest
 class MyDataCouchbaseTests {

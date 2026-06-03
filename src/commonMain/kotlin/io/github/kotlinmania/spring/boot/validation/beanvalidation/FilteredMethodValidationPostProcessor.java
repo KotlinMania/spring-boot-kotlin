@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.validation.beanvalidation;
+package io.github.kotlinmania.spring.boot.validation.beanvalidation;
 
 import java.util.ArrayList;
 import java.util.Collection;

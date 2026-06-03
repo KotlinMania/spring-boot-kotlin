@@ -16,8 +16,8 @@
 
 package smoketest.cache;
 
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.builder.SpringApplicationBuilder;
+import io.github.kotlinmania.spring.boot.autoconfigure.SpringBootApplication;
+import io.github.kotlinmania.spring.boot.builder.SpringApplicationBuilder;
 import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.scheduling.annotation.EnableScheduling;
 

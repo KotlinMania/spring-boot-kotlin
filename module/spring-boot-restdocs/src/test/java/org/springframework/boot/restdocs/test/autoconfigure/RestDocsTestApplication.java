@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.restdocs.test.autoconfigure;
+package io.github.kotlinmania.spring.boot.restdocs.test.autoconfigure;
 
-import org.springframework.boot.autoconfigure.SpringBootApplication;
+import io.github.kotlinmania.spring.boot.autoconfigure.SpringBootApplication;
 
 /**
  * Test application used with {@link AutoConfigureRestDocs @AutoConfigureRestDocs} tests.

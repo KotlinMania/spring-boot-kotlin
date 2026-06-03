@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.web.server.servlet.context;
+package io.github.kotlinmania.spring.boot.web.server.servlet.context;
 
 import java.util.ArrayDeque;
 import java.util.ArrayList;
@@ -47,16 +47,16 @@ import org.springframework.beans.factory.config.ConstructorArgumentValues;
 import org.springframework.beans.factory.config.Scope;
 import org.springframework.beans.factory.support.AbstractBeanDefinition;
 import org.springframework.beans.factory.support.RootBeanDefinition;
-import org.springframework.boot.availability.AvailabilityChangeEvent;
-import org.springframework.boot.testsupport.system.CapturedOutput;
-import org.springframework.boot.testsupport.system.OutputCaptureExtension;
-import org.springframework.boot.web.server.WebServer;
-import org.springframework.boot.web.server.context.ServerPortInfoApplicationContextInitializer;
-import org.springframework.boot.web.server.servlet.MockServletWebServerFactory;
-import org.springframework.boot.web.servlet.DelegatingFilterProxyRegistrationBean;
-import org.springframework.boot.web.servlet.FilterRegistrationBean;
-import org.springframework.boot.web.servlet.ServletContextInitializer;
-import org.springframework.boot.web.servlet.ServletRegistrationBean;
+import io.github.kotlinmania.spring.boot.availability.AvailabilityChangeEvent;
+import io.github.kotlinmania.spring.boot.testsupport.system.CapturedOutput;
+import io.github.kotlinmania.spring.boot.testsupport.system.OutputCaptureExtension;
+import io.github.kotlinmania.spring.boot.web.server.WebServer;
+import io.github.kotlinmania.spring.boot.web.server.context.ServerPortInfoApplicationContextInitializer;
+import io.github.kotlinmania.spring.boot.web.server.servlet.MockServletWebServerFactory;
+import io.github.kotlinmania.spring.boot.web.servlet.DelegatingFilterProxyRegistrationBean;
+import io.github.kotlinmania.spring.boot.web.servlet.FilterRegistrationBean;
+import io.github.kotlinmania.spring.boot.web.servlet.ServletContextInitializer;
+import io.github.kotlinmania.spring.boot.web.servlet.ServletRegistrationBean;
 import org.springframework.context.ApplicationContextException;
 import org.springframework.context.ApplicationEvent;
 import org.springframework.context.ApplicationListener;

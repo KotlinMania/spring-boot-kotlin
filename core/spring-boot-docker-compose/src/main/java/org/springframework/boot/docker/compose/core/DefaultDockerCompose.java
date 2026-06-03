@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docker.compose.core;
+package io.github.kotlinmania.spring.boot.docker.compose.core;
 
 import java.time.Duration;
 import java.util.ArrayList;
@@ -27,7 +27,7 @@ import java.util.stream.Collectors;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.logging.LogLevel;
+import io.github.kotlinmania.spring.boot.logging.LogLevel;
 import org.springframework.util.Assert;
 
 /**

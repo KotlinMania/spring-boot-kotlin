@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.gradle.junit;
+package io.github.kotlinmania.spring.boot.gradle.junit;
 
 import java.io.File;
 

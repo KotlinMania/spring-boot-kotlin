@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.jdbc.autoconfigure;
+package io.github.kotlinmania.spring.boot.jdbc.autoconfigure;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
@@ -27,10 +27,10 @@ import org.jspecify.annotations.Nullable;
 import org.springframework.beans.factory.BeanClassLoaderAware;
 import org.springframework.beans.factory.BeanCreationException;
 import org.springframework.beans.factory.InitializingBean;
-import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.boot.jdbc.DataSourceBuilder;
-import org.springframework.boot.jdbc.DatabaseDriver;
-import org.springframework.boot.jdbc.EmbeddedDatabaseConnection;
+import io.github.kotlinmania.spring.boot.context.properties.ConfigurationProperties;
+import io.github.kotlinmania.spring.boot.jdbc.DataSourceBuilder;
+import io.github.kotlinmania.spring.boot.jdbc.DatabaseDriver;
+import io.github.kotlinmania.spring.boot.jdbc.EmbeddedDatabaseConnection;
 import org.springframework.util.Assert;
 import org.springframework.util.ClassUtils;
 import org.springframework.util.StringUtils;

@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.actuate.autoconfigure.web.mappings;
+package io.github.kotlinmania.spring.boot.actuate.autoconfigure.web.mappings;
 
 import org.springframework.beans.factory.ObjectProvider;
-import org.springframework.boot.actuate.autoconfigure.endpoint.condition.ConditionalOnAvailableEndpoint;
-import org.springframework.boot.actuate.web.mappings.MappingDescriptionProvider;
-import org.springframework.boot.actuate.web.mappings.MappingsEndpoint;
-import org.springframework.boot.autoconfigure.AutoConfiguration;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
+import io.github.kotlinmania.spring.boot.actuate.autoconfigure.endpoint.condition.ConditionalOnAvailableEndpoint;
+import io.github.kotlinmania.spring.boot.actuate.web.mappings.MappingDescriptionProvider;
+import io.github.kotlinmania.spring.boot.actuate.web.mappings.MappingsEndpoint;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
 

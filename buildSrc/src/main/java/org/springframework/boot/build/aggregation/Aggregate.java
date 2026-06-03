@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.build.aggregation;
+package io.github.kotlinmania.spring.boot.build.aggregation;
 
 import org.gradle.api.Named;
 import org.gradle.api.attributes.Category;

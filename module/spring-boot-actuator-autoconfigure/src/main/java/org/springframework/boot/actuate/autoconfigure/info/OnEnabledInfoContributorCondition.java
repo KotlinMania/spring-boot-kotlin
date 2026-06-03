@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.actuate.autoconfigure.info;
+package io.github.kotlinmania.spring.boot.actuate.autoconfigure.info;
 
-import org.springframework.boot.actuate.autoconfigure.OnEndpointElementCondition;
-import org.springframework.boot.autoconfigure.condition.ConditionMessage;
-import org.springframework.boot.autoconfigure.condition.ConditionOutcome;
+import io.github.kotlinmania.spring.boot.actuate.autoconfigure.OnEndpointElementCondition;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionMessage;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionOutcome;
 import org.springframework.context.annotation.Condition;
 import org.springframework.context.annotation.ConditionContext;
 import org.springframework.core.annotation.AnnotationAttributes;

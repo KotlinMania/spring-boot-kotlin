@@ -14,23 +14,23 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.actuate.endpoint.web.reactive;
+package io.github.kotlinmania.spring.boot.actuate.endpoint.web.reactive;
 
 import java.util.Arrays;
 
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver;
-import org.springframework.boot.actuate.endpoint.web.EndpointMapping;
-import org.springframework.boot.actuate.endpoint.web.EndpointMediaTypes;
-import org.springframework.boot.actuate.endpoint.web.annotation.AbstractWebEndpointIntegrationTests;
-import org.springframework.boot.actuate.endpoint.web.annotation.WebEndpointDiscoverer;
-import org.springframework.boot.autoconfigure.ImportAutoConfiguration;
-import org.springframework.boot.reactor.netty.NettyReactiveWebServerFactory;
-import org.springframework.boot.web.server.reactive.context.AnnotationConfigReactiveWebServerApplicationContext;
-import org.springframework.boot.web.server.reactive.context.ReactiveWebServerInitializedEvent;
-import org.springframework.boot.webflux.actuate.endpoint.web.WebFluxEndpointHandlerMapping;
-import org.springframework.boot.webflux.autoconfigure.error.ErrorWebFluxAutoConfiguration;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.web.EndpointLinksResolver;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.web.EndpointMapping;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.web.EndpointMediaTypes;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.web.annotation.AbstractWebEndpointIntegrationTests;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.web.annotation.WebEndpointDiscoverer;
+import io.github.kotlinmania.spring.boot.autoconfigure.ImportAutoConfiguration;
+import io.github.kotlinmania.spring.boot.reactor.netty.NettyReactiveWebServerFactory;
+import io.github.kotlinmania.spring.boot.web.server.reactive.context.AnnotationConfigReactiveWebServerApplicationContext;
+import io.github.kotlinmania.spring.boot.web.server.reactive.context.ReactiveWebServerInitializedEvent;
+import io.github.kotlinmania.spring.boot.webflux.actuate.endpoint.web.WebFluxEndpointHandlerMapping;
+import io.github.kotlinmania.spring.boot.webflux.autoconfigure.error.ErrorWebFluxAutoConfiguration;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationListener;
 import org.springframework.context.annotation.Bean;

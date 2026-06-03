@@ -18,6 +18,6 @@
  * Auto-configuration for testing code that uses the cache abstraction.
  */
 @NullMarked
-package org.springframework.boot.cache.test.autoconfigure;
+package io.github.kotlinmania.spring.boot.cache.test.autoconfigure;
 
 import org.jspecify.annotations.NullMarked;

@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.configurationsample.simple;
+package io.github.kotlinmania.spring.boot.configurationsample.simple;
 
 import java.beans.FeatureDescriptor;
 import java.util.Comparator;
 
-import org.springframework.boot.configurationsample.TestConfigurationProperties;
+import io.github.kotlinmania.spring.boot.configurationsample.TestConfigurationProperties;
 
 /**
  * Simple properties.

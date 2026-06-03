@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.jooq.autoconfigure;
+package io.github.kotlinmania.spring.boot.jooq.autoconfigure;
 
 import java.sql.SQLException;
 import java.util.function.Function;

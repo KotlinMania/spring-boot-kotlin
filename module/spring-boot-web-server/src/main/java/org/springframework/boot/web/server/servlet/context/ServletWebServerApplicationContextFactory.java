@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.web.server.servlet.context;
+package io.github.kotlinmania.spring.boot.web.server.servlet.context;
 
 import org.jspecify.annotations.Nullable;
 
 import org.springframework.aot.AotDetector;
-import org.springframework.boot.ApplicationContextFactory;
-import org.springframework.boot.WebApplicationType;
-import org.springframework.boot.web.context.servlet.ApplicationServletEnvironment;
+import io.github.kotlinmania.spring.boot.ApplicationContextFactory;
+import io.github.kotlinmania.spring.boot.WebApplicationType;
+import io.github.kotlinmania.spring.boot.web.context.servlet.ApplicationServletEnvironment;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.core.env.ConfigurableEnvironment;
 

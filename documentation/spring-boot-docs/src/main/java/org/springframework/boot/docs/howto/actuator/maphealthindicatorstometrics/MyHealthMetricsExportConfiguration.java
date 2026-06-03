@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.howto.actuator.maphealthindicatorstometrics;
+package io.github.kotlinmania.spring.boot.docs.howto.actuator.maphealthindicatorstometrics;
 
 import io.micrometer.core.instrument.Gauge;
 import io.micrometer.core.instrument.MeterRegistry;
 
-import org.springframework.boot.health.actuate.endpoint.HealthEndpoint;
-import org.springframework.boot.health.contributor.Status;
+import io.github.kotlinmania.spring.boot.health.actuate.endpoint.HealthEndpoint;
+import io.github.kotlinmania.spring.boot.health.contributor.Status;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration(proxyBeanMethods = false)

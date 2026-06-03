@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.actuate.audit.listener;
+package io.github.kotlinmania.spring.boot.actuate.audit.listener;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
-import org.springframework.boot.actuate.audit.AuditEvent;
-import org.springframework.boot.actuate.audit.AuditEventRepository;
+import io.github.kotlinmania.spring.boot.actuate.audit.AuditEvent;
+import io.github.kotlinmania.spring.boot.actuate.audit.AuditEventRepository;
 
 /**
  * The default {@link AbstractAuditListener} implementation. Listens for

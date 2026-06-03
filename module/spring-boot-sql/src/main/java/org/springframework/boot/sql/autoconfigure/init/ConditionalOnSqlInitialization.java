@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.sql.autoconfigure.init;
+package io.github.kotlinmania.spring.boot.sql.autoconfigure.init;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
-import org.springframework.boot.sql.init.DatabaseInitializationMode;
+import io.github.kotlinmania.spring.boot.sql.init.DatabaseInitializationMode;
 import org.springframework.context.annotation.Conditional;
 
 /**

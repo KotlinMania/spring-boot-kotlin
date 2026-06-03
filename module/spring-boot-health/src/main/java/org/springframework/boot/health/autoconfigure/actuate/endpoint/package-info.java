@@ -18,6 +18,6 @@
  * Auto-configuration for health actuator endpoints.
  */
 @NullMarked
-package org.springframework.boot.health.autoconfigure.actuate.endpoint;
+package io.github.kotlinmania.spring.boot.health.autoconfigure.actuate.endpoint;
 
 import org.jspecify.annotations.NullMarked;

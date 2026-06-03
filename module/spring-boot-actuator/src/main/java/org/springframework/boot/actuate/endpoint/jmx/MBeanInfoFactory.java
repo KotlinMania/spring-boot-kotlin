@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.actuate.endpoint.jmx;
+package io.github.kotlinmania.spring.boot.actuate.endpoint.jmx;
 
 import java.util.List;
 
@@ -27,7 +27,7 @@ import javax.management.modelmbean.ModelMBeanInfoSupport;
 import javax.management.modelmbean.ModelMBeanNotificationInfo;
 import javax.management.modelmbean.ModelMBeanOperationInfo;
 
-import org.springframework.boot.actuate.endpoint.OperationType;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.OperationType;
 
 /**
  * Factory to create {@link MBeanInfo} from an {@link ExposableJmxEndpoint}.

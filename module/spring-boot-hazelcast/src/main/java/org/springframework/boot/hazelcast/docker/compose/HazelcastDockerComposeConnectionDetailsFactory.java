@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.hazelcast.docker.compose;
+package io.github.kotlinmania.spring.boot.hazelcast.docker.compose;
 
 import com.hazelcast.client.config.ClientConfig;
 
-import org.springframework.boot.docker.compose.core.RunningService;
-import org.springframework.boot.docker.compose.service.connection.DockerComposeConnectionDetailsFactory;
-import org.springframework.boot.docker.compose.service.connection.DockerComposeConnectionSource;
-import org.springframework.boot.hazelcast.autoconfigure.HazelcastConnectionDetails;
+import io.github.kotlinmania.spring.boot.docker.compose.core.RunningService;
+import io.github.kotlinmania.spring.boot.docker.compose.service.connection.DockerComposeConnectionDetailsFactory;
+import io.github.kotlinmania.spring.boot.docker.compose.service.connection.DockerComposeConnectionSource;
+import io.github.kotlinmania.spring.boot.hazelcast.autoconfigure.HazelcastConnectionDetails;
 
 /**
  * {@link DockerComposeConnectionDetailsFactory} to create

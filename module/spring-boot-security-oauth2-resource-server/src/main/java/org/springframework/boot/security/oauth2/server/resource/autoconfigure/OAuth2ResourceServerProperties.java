@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.security.oauth2.server.resource.autoconfigure;
+package io.github.kotlinmania.spring.boot.security.oauth2.server.resource.autoconfigure;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -25,8 +25,8 @@ import java.util.List;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.boot.context.properties.source.InvalidConfigurationPropertyValueException;
+import io.github.kotlinmania.spring.boot.context.properties.ConfigurationProperties;
+import io.github.kotlinmania.spring.boot.context.properties.source.InvalidConfigurationPropertyValueException;
 import org.springframework.core.io.Resource;
 import org.springframework.util.StreamUtils;
 

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.devtools.autoconfigure;
+package io.github.kotlinmania.spring.boot.devtools.autoconfigure;
 
 import java.io.File;
 

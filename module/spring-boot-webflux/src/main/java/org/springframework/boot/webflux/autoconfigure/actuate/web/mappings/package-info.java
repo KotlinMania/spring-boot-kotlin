@@ -18,6 +18,6 @@
  * Actuator reactive request mappings auto-configuration.
  */
 @NullMarked
-package org.springframework.boot.webflux.autoconfigure.actuate.web.mappings;
+package io.github.kotlinmania.spring.boot.webflux.autoconfigure.actuate.web.mappings;
 
 import org.jspecify.annotations.NullMarked;

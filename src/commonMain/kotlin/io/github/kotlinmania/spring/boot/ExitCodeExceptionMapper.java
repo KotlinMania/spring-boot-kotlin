@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot;
+package io.github.kotlinmania.spring.boot.
 
 /**
  * Strategy interface that can be used to provide a mapping between exceptions and exit

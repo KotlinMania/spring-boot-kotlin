@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.actuate.endpoint.invoke;
+package io.github.kotlinmania.spring.boot.actuate.endpoint.invoke;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.actuate.endpoint.InvalidEndpointRequestException;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.InvalidEndpointRequestException;
 
 /**
  * A {@code ParameterMappingException} is thrown when a failure occurs during

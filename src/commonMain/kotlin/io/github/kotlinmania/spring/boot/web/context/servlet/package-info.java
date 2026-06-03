@@ -19,6 +19,6 @@
  * {@link org.springframework.web.context.WebApplicationContext WebApplicationContext}.
  */
 @NullMarked
-package org.springframework.boot.web.context.servlet;
+package io.github.kotlinmania.spring.boot.web.context.servlet;
 
 import org.jspecify.annotations.NullMarked;

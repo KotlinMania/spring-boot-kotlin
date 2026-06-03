@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.convert;
+package io.github.kotlinmania.spring.boot.convert;
 
 /**
  * Converts from a String to a {@link java.lang.Enum} with lenient conversion rules.

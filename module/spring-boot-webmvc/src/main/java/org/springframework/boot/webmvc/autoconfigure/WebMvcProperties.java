@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.webmvc.autoconfigure;
+package io.github.kotlinmania.spring.boot.webmvc.autoconfigure;
 
 import java.time.Duration;
 import java.util.ArrayList;
@@ -24,8 +24,8 @@ import java.util.Map;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.boot.context.properties.bind.Name;
+import io.github.kotlinmania.spring.boot.context.properties.ConfigurationProperties;
+import io.github.kotlinmania.spring.boot.context.properties.bind.Name;
 import org.springframework.http.MediaType;
 import org.springframework.util.Assert;
 import org.springframework.validation.DefaultMessageCodesResolver;

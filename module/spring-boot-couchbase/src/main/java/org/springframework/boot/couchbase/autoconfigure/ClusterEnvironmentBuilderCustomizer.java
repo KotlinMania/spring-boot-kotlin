@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.couchbase.autoconfigure;
+package io.github.kotlinmania.spring.boot.couchbase.autoconfigure;
 
 import com.couchbase.client.java.env.ClusterEnvironment;
 import com.couchbase.client.java.env.ClusterEnvironment.Builder;

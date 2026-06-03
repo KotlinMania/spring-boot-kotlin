@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.context.properties;
+package io.github.kotlinmania.spring.boot.context.properties;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -29,23 +29,23 @@ import org.springframework.beans.factory.FactoryBean;
 import org.springframework.beans.factory.config.BeanDefinition;
 import org.springframework.beans.factory.support.BeanDefinitionBuilder;
 import org.springframework.beans.factory.support.BeanDefinitionRegistry;
-import org.springframework.boot.context.properties.bind.AbstractBindHandler;
-import org.springframework.boot.context.properties.bind.BindContext;
-import org.springframework.boot.context.properties.bind.BindHandler;
-import org.springframework.boot.context.properties.bind.BindResult;
-import org.springframework.boot.context.properties.bind.Bindable;
-import org.springframework.boot.context.properties.bind.Bindable.BindRestriction;
-import org.springframework.boot.context.properties.bind.Binder;
-import org.springframework.boot.context.properties.bind.BoundPropertiesTrackingBindHandler;
-import org.springframework.boot.context.properties.bind.PropertySourcesPlaceholdersResolver;
-import org.springframework.boot.context.properties.bind.handler.IgnoreErrorsBindHandler;
-import org.springframework.boot.context.properties.bind.handler.IgnoreTopLevelConverterNotFoundBindHandler;
-import org.springframework.boot.context.properties.bind.handler.NoUnboundElementsBindHandler;
-import org.springframework.boot.context.properties.bind.validation.ValidationBindHandler;
-import org.springframework.boot.context.properties.source.ConfigurationPropertyName;
-import org.springframework.boot.context.properties.source.ConfigurationPropertySource;
-import org.springframework.boot.context.properties.source.ConfigurationPropertySources;
-import org.springframework.boot.context.properties.source.UnboundElementsSourceFilter;
+import io.github.kotlinmania.spring.boot.context.properties.bind.AbstractBindHandler;
+import io.github.kotlinmania.spring.boot.context.properties.bind.BindContext;
+import io.github.kotlinmania.spring.boot.context.properties.bind.BindHandler;
+import io.github.kotlinmania.spring.boot.context.properties.bind.BindResult;
+import io.github.kotlinmania.spring.boot.context.properties.bind.Bindable;
+import io.github.kotlinmania.spring.boot.context.properties.bind.Bindable.BindRestriction;
+import io.github.kotlinmania.spring.boot.context.properties.bind.Binder;
+import io.github.kotlinmania.spring.boot.context.properties.bind.BoundPropertiesTrackingBindHandler;
+import io.github.kotlinmania.spring.boot.context.properties.bind.PropertySourcesPlaceholdersResolver;
+import io.github.kotlinmania.spring.boot.context.properties.bind.handler.IgnoreErrorsBindHandler;
+import io.github.kotlinmania.spring.boot.context.properties.bind.handler.IgnoreTopLevelConverterNotFoundBindHandler;
+import io.github.kotlinmania.spring.boot.context.properties.bind.handler.NoUnboundElementsBindHandler;
+import io.github.kotlinmania.spring.boot.context.properties.bind.validation.ValidationBindHandler;
+import io.github.kotlinmania.spring.boot.context.properties.source.ConfigurationPropertyName;
+import io.github.kotlinmania.spring.boot.context.properties.source.ConfigurationPropertySource;
+import io.github.kotlinmania.spring.boot.context.properties.source.ConfigurationPropertySources;
+import io.github.kotlinmania.spring.boot.context.properties.source.UnboundElementsSourceFilter;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
 import org.springframework.context.ConfigurableApplicationContext;
@@ -66,7 +66,7 @@ import org.springframework.validation.annotation.Validated;
  */
 class ConfigurationPropertiesBinder {
 
-	private static final String BEAN_NAME = "org.springframework.boot.context.internalConfigurationPropertiesBinder";
+	private static final String BEAN_NAME = "io.github.kotlinmania.spring.boot.context.internalConfigurationPropertiesBinder";
 
 	private static final String VALIDATOR_BEAN_NAME = EnableConfigurationProperties.VALIDATOR_BEAN_NAME;
 

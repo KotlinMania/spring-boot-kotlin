@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.configurationsample.fieldvalues;
+package io.github.kotlinmania.spring.boot.configurationsample.fieldvalues;
 
 import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
@@ -22,7 +22,7 @@ import java.time.Duration;
 import java.time.Period;
 import java.time.temporal.ChronoUnit;
 
-import org.springframework.boot.configurationsample.TestConfigurationProperties;
+import io.github.kotlinmania.spring.boot.configurationsample.TestConfigurationProperties;
 import org.springframework.util.MimeType;
 import org.springframework.util.unit.DataSize;
 

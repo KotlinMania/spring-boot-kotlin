@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.tomcat;
+package io.github.kotlinmania.spring.boot.tomcat;
 
 import java.io.File;
 import java.nio.charset.Charset;
@@ -44,10 +44,10 @@ import org.apache.coyote.http2.Http2Protocol;
 import org.apache.tomcat.util.modeler.Registry;
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.ssl.SslBundles;
-import org.springframework.boot.util.LambdaSafe;
-import org.springframework.boot.web.server.AbstractConfigurableWebServerFactory;
-import org.springframework.boot.web.server.Ssl;
+import io.github.kotlinmania.spring.boot.ssl.SslBundles;
+import io.github.kotlinmania.spring.boot.util.LambdaSafe;
+import io.github.kotlinmania.spring.boot.web.server.AbstractConfigurableWebServerFactory;
+import io.github.kotlinmania.spring.boot.web.server.Ssl;
 import org.springframework.core.NativeDetector;
 import org.springframework.util.Assert;
 import org.springframework.util.StringUtils;

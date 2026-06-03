@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.batch.jdbc.autoconfigure;
+package io.github.kotlinmania.spring.boot.batch.jdbc.autoconfigure;
 
 import java.io.IOException;
 import java.sql.Connection;
@@ -30,9 +30,9 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.EnumSource;
 import org.junit.jupiter.params.provider.EnumSource.Mode;
 
-import org.springframework.boot.jdbc.DatabaseDriver;
-import org.springframework.boot.sql.init.DatabaseInitializationSettings;
-import org.springframework.boot.sql.init.ScriptDatabaseInitializerSettings;
+import io.github.kotlinmania.spring.boot.jdbc.DatabaseDriver;
+import io.github.kotlinmania.spring.boot.sql.init.DatabaseInitializationSettings;
+import io.github.kotlinmania.spring.boot.sql.init.ScriptDatabaseInitializerSettings;
 import org.springframework.core.io.DefaultResourceLoader;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.support.PathMatchingResourcePatternResolver;

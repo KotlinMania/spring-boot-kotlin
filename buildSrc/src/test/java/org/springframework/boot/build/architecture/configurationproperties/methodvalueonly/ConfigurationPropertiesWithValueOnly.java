@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.build.architecture.configurationproperties.methodvalueonly;
+package io.github.kotlinmania.spring.boot.build.architecture.configurationproperties.methodvalueonly;
 
-import org.springframework.boot.build.architecture.annotations.TestConfigurationProperties;
+import io.github.kotlinmania.spring.boot.build.architecture.annotations.TestConfigurationProperties;
 
 public class ConfigurationPropertiesWithValueOnly {
 

@@ -20,6 +20,6 @@
  * @author Eddú Meléndez
  */
 @NullMarked
-package org.springframework.boot.artemis.autoconfigure;
+package io.github.kotlinmania.spring.boot.artemis.autoconfigure;
 
 import org.jspecify.annotations.NullMarked;

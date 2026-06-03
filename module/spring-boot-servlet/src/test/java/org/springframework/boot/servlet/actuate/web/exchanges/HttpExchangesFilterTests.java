@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.servlet.actuate.web.exchanges;
+package io.github.kotlinmania.spring.boot.servlet.actuate.web.exchanges;
 
 import java.io.IOException;
 import java.security.Principal;
@@ -26,9 +26,9 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.actuate.web.exchanges.HttpExchange.Session;
-import org.springframework.boot.actuate.web.exchanges.InMemoryHttpExchangeRepository;
-import org.springframework.boot.actuate.web.exchanges.Include;
+import io.github.kotlinmania.spring.boot.actuate.web.exchanges.HttpExchange.Session;
+import io.github.kotlinmania.spring.boot.actuate.web.exchanges.InMemoryHttpExchangeRepository;
+import io.github.kotlinmania.spring.boot.actuate.web.exchanges.Include;
 import org.springframework.mock.web.MockFilterChain;
 import org.springframework.mock.web.MockHttpServletRequest;
 import org.springframework.mock.web.MockHttpServletResponse;
@@ -87,7 +87,7 @@ class HttpExchangesFilterTests {
 		request.setUserPrincipal(principal);
 		this.filter.doFilter(request, new MockHttpServletResponse(), new MockFilterChain());
 		assertThat(this.repository.findAll()).hasSize(1);
-		org.springframework.boot.actuate.web.exchanges.HttpExchange.Principal recordedPrincipal = this.repository
+		io.github.kotlinmania.spring.boot.actuate.web.exchanges.HttpExchange.Principal recordedPrincipal = this.repository
 			.findAll()
 			.get(0)
 			.getPrincipal();

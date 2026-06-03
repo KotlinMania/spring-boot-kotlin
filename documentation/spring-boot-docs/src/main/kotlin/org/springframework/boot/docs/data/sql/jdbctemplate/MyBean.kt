@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.data.sql.jdbctemplate
+package io.github.kotlinmania.spring.boot.docs.data.sql.jdbctemplate
 
 import org.springframework.jdbc.core.JdbcTemplate
 import org.springframework.stereotype.Component

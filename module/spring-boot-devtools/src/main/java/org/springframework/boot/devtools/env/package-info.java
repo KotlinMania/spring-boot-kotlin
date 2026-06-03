@@ -19,6 +19,6 @@
  * {@link org.springframework.core.env.Environment}.
  */
 @NullMarked
-package org.springframework.boot.devtools.env;
+package io.github.kotlinmania.spring.boot.devtools.env;
 
 import org.jspecify.annotations.NullMarked;

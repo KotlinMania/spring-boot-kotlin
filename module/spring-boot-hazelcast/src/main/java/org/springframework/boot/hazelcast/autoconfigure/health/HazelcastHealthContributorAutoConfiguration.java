@@ -14,21 +14,21 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.hazelcast.autoconfigure.health;
+package io.github.kotlinmania.spring.boot.hazelcast.autoconfigure.health;
 
 import com.hazelcast.core.HazelcastInstance;
 
 import org.springframework.beans.factory.config.ConfigurableListableBeanFactory;
-import org.springframework.boot.autoconfigure.AutoConfiguration;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
-import org.springframework.boot.hazelcast.autoconfigure.HazelcastAutoConfiguration;
-import org.springframework.boot.hazelcast.health.HazelcastHealthIndicator;
-import org.springframework.boot.health.autoconfigure.contributor.CompositeHealthContributorConfiguration;
-import org.springframework.boot.health.autoconfigure.contributor.ConditionalOnEnabledHealthIndicator;
-import org.springframework.boot.health.contributor.HealthContributor;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.EnableAutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnBean;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnClass;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnMissingBean;
+import io.github.kotlinmania.spring.boot.hazelcast.autoconfigure.HazelcastAutoConfiguration;
+import io.github.kotlinmania.spring.boot.hazelcast.health.HazelcastHealthIndicator;
+import io.github.kotlinmania.spring.boot.health.autoconfigure.contributor.CompositeHealthContributorConfiguration;
+import io.github.kotlinmania.spring.boot.health.autoconfigure.contributor.ConditionalOnEnabledHealthIndicator;
+import io.github.kotlinmania.spring.boot.health.contributor.HealthContributor;
 import org.springframework.context.annotation.Bean;
 
 /**

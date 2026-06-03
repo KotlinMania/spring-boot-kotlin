@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.webservices.test.autoconfigure.client;
+package io.github.kotlinmania.spring.boot.webservices.test.autoconfigure.client;
 
 import org.springframework.ws.test.client.MockWebServiceMessageSender;
 import org.springframework.ws.test.client.MockWebServiceServer;

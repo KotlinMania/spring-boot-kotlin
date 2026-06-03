@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.build.architecture.bpp.safeparameters;
+package io.github.kotlinmania.spring.boot.build.architecture.bpp.safeparameters;
 
 import org.springframework.beans.factory.ObjectProvider;
 import org.springframework.beans.factory.config.BeanPostProcessor;

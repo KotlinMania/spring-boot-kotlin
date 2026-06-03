@@ -20,10 +20,10 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import smoketest.xml.service.OtherService;
 
-import org.springframework.boot.CommandLineRunner;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.boot.test.system.CapturedOutput;
-import org.springframework.boot.test.system.OutputCaptureExtension;
+import io.github.kotlinmania.spring.boot.CommandLineRunner;
+import io.github.kotlinmania.spring.boot.test.context.SpringBootTest;
+import io.github.kotlinmania.spring.boot.test.system.CapturedOutput;
+import io.github.kotlinmania.spring.boot.test.system.OutputCaptureExtension;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.ImportResource;

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.autoconfigure.condition;
+package io.github.kotlinmania.spring.boot.autoconfigure.condition;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -27,8 +27,8 @@ import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.BeanClassLoaderAware;
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.BeanFactoryAware;
-import org.springframework.boot.autoconfigure.AutoConfigurationImportFilter;
-import org.springframework.boot.autoconfigure.AutoConfigurationMetadata;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurationImportFilter;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurationMetadata;
 import org.springframework.util.Assert;
 import org.springframework.util.ClassUtils;
 import org.springframework.util.CollectionUtils;

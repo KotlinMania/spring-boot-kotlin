@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.context.config;
+package io.github.kotlinmania.spring.boot.context.config;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -28,10 +28,10 @@ import java.util.stream.StreamSupport;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.context.properties.bind.Binder;
-import org.springframework.boot.context.properties.bind.PlaceholdersResolver;
-import org.springframework.boot.context.properties.source.ConfigurationPropertySource;
-import org.springframework.boot.env.PropertySourceInfo;
+import io.github.kotlinmania.spring.boot.context.properties.bind.Binder;
+import io.github.kotlinmania.spring.boot.context.properties.bind.PlaceholdersResolver;
+import io.github.kotlinmania.spring.boot.context.properties.source.ConfigurationPropertySource;
+import io.github.kotlinmania.spring.boot.env.PropertySourceInfo;
 import org.springframework.core.convert.ConversionService;
 import org.springframework.core.env.Environment;
 import org.springframework.core.env.PropertySource;

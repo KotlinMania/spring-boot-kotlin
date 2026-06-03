@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.autoconfigure.template;
+package io.github.kotlinmania.spring.boot.autoconfigure.template;
 
 import java.io.IOException;
 

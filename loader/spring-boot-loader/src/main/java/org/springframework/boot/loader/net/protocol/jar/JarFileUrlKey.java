@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.loader.net.protocol.jar;
+package io.github.kotlinmania.spring.boot.loader.net.protocol.jar;
 
 import java.net.URL;
 import java.util.Objects;

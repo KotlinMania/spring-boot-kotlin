@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.web.server.servlet.context;
+package io.github.kotlinmania.spring.boot.web.server.servlet.context;
 
 import jakarta.servlet.ServletConfig;
 import jakarta.servlet.ServletContext;

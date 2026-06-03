@@ -14,18 +14,18 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.actuate.info;
+package io.github.kotlinmania.spring.boot.actuate.info;
 
 import org.junit.jupiter.api.Test;
 
 import org.springframework.aot.hint.MemberCategory;
 import org.springframework.aot.hint.RuntimeHints;
 import org.springframework.aot.hint.predicate.RuntimeHintsPredicates;
-import org.springframework.boot.actuate.info.SslInfoContributor.SslInfoContributorRuntimeHints;
-import org.springframework.boot.info.SslInfo;
-import org.springframework.boot.ssl.DefaultSslBundleRegistry;
-import org.springframework.boot.ssl.SslBundle;
-import org.springframework.boot.ssl.SslBundles;
+import io.github.kotlinmania.spring.boot.actuate.info.SslInfoContributor.SslInfoContributorRuntimeHints;
+import io.github.kotlinmania.spring.boot.info.SslInfo;
+import io.github.kotlinmania.spring.boot.ssl.DefaultSslBundleRegistry;
+import io.github.kotlinmania.spring.boot.ssl.SslBundle;
+import io.github.kotlinmania.spring.boot.ssl.SslBundles;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.Mockito.mock;

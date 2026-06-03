@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.r2dbc;
+package io.github.kotlinmania.spring.boot.r2dbc;
 
 import java.util.function.Predicate;
 

@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.cache.autoconfigure;
+package io.github.kotlinmania.spring.boot.cache.autoconfigure;
 
 import java.util.Collections;
 import java.util.EnumMap;
 import java.util.Map;
 
-import org.springframework.boot.autoconfigure.cache.CacheType;
+import io.github.kotlinmania.spring.boot.autoconfigure.cache.CacheType;
 import org.springframework.util.Assert;
 
 /**

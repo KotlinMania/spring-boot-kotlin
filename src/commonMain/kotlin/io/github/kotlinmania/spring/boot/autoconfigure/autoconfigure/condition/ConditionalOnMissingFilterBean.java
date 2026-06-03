@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.autoconfigure.condition;
+package io.github.kotlinmania.spring.boot.autoconfigure.condition;
 
 import java.lang.annotation.Documented;
 import java.lang.annotation.ElementType;
@@ -25,7 +25,7 @@ import java.lang.annotation.Target;
 import jakarta.servlet.Filter;
 
 import org.springframework.beans.factory.BeanFactory;
-import org.springframework.boot.web.servlet.FilterRegistrationBean;
+import io.github.kotlinmania.spring.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.context.annotation.Conditional;
 import org.springframework.core.annotation.AliasFor;
 

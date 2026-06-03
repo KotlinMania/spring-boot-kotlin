@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.test.autoconfigure;
+package io.github.kotlinmania.spring.boot.test.autoconfigure;
 
 import java.lang.annotation.Annotation;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.test.context.SpringBootTestContextBootstrapper;
+import io.github.kotlinmania.spring.boot.test.context.SpringBootTestContextBootstrapper;
 import org.springframework.core.ResolvableType;
 import org.springframework.core.annotation.MergedAnnotation;
 import org.springframework.core.annotation.MergedAnnotations;

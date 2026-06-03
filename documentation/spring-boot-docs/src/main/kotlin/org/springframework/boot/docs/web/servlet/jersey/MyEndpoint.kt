@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.web.servlet.jersey
+package io.github.kotlinmania.spring.boot.docs.web.servlet.jersey
 
 import jakarta.ws.rs.GET
 import jakarta.ws.rs.Path

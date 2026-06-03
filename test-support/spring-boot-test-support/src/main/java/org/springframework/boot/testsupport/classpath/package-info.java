@@ -17,4 +17,4 @@
 /**
  * Custom JUnit extension to change the classpath.
  */
-package org.springframework.boot.testsupport.classpath;
+package io.github.kotlinmania.spring.boot.testsupport.classpath;

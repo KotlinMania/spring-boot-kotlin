@@ -14,17 +14,17 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.autoconfigure.preinitialize;
+package io.github.kotlinmania.spring.boot.autoconfigure.preinitialize;
 
 import java.util.List;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.atomic.AtomicBoolean;
 
-import org.springframework.boot.context.event.ApplicationEnvironmentPreparedEvent;
-import org.springframework.boot.context.event.ApplicationFailedEvent;
-import org.springframework.boot.context.event.ApplicationReadyEvent;
-import org.springframework.boot.context.event.SpringApplicationEvent;
-import org.springframework.boot.context.logging.LoggingApplicationListener;
+import io.github.kotlinmania.spring.boot.context.event.ApplicationEnvironmentPreparedEvent;
+import io.github.kotlinmania.spring.boot.context.event.ApplicationFailedEvent;
+import io.github.kotlinmania.spring.boot.context.event.ApplicationReadyEvent;
+import io.github.kotlinmania.spring.boot.context.event.SpringApplicationEvent;
+import io.github.kotlinmania.spring.boot.context.logging.LoggingApplicationListener;
 import org.springframework.context.ApplicationListener;
 import org.springframework.core.NativeDetector;
 import org.springframework.core.Ordered;

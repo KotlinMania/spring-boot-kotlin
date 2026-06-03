@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.security.oauth2.client.autoconfigure.servlet.webmvc;
+package io.github.kotlinmania.spring.boot.security.oauth2.client.autoconfigure.servlet.webmvc;
 
-import org.springframework.boot.webmvc.test.autoconfigure.WebMvcTest;
+import io.github.kotlinmania.spring.boot.webmvc.test.autoconfigure.WebMvcTest;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;

@@ -18,6 +18,6 @@
  * Auto-configuration for OpenTelemetry.
  */
 @NullMarked
-package org.springframework.boot.opentelemetry.autoconfigure;
+package io.github.kotlinmania.spring.boot.opentelemetry.autoconfigure;
 
 import org.jspecify.annotations.NullMarked;

@@ -20,11 +20,11 @@ import java.util.Set;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.actuate.autoconfigure.endpoint.condition.EndpointExposureOutcomeContributor;
-import org.springframework.boot.actuate.autoconfigure.endpoint.expose.EndpointExposure;
-import org.springframework.boot.actuate.endpoint.EndpointId;
-import org.springframework.boot.autoconfigure.condition.ConditionMessage.Builder;
-import org.springframework.boot.autoconfigure.condition.ConditionOutcome;
+import io.github.kotlinmania.spring.boot.actuate.autoconfigure.endpoint.condition.EndpointExposureOutcomeContributor;
+import io.github.kotlinmania.spring.boot.actuate.autoconfigure.endpoint.expose.EndpointExposure;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.EndpointId;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionMessage.Builder;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionOutcome;
 import org.springframework.core.env.Environment;
 
 class MyExtensionEndpointExposureOutcomeContributor implements EndpointExposureOutcomeContributor {

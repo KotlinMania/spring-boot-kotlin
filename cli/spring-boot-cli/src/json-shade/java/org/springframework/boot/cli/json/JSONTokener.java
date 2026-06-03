@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.cli.json;
+package io.github.kotlinmania.spring.boot.cli.json;
 
 // Note: this class was written without inspecting the non-free org.json source code.
 

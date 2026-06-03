@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.websocket.autoconfigure.servlet;
+package io.github.kotlinmania.spring.boot.websocket.autoconfigure.servlet;
 
 import java.lang.reflect.Type;
 import java.util.Arrays;
@@ -34,22 +34,22 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.skyscreamer.jsonassert.JSONAssert;
 
-import org.springframework.boot.LazyInitializationBeanFactoryPostProcessor;
-import org.springframework.boot.autoconfigure.ImportAutoConfiguration;
-import org.springframework.boot.context.properties.EnableConfigurationProperties;
-import org.springframework.boot.jackson.autoconfigure.JacksonAutoConfiguration;
-import org.springframework.boot.test.context.assertj.AssertableApplicationContext;
-import org.springframework.boot.test.util.TestPropertyValues;
-import org.springframework.boot.testsupport.classpath.ClassPathExclusions;
-import org.springframework.boot.testsupport.web.servlet.DirtiesUrlFactories;
-import org.springframework.boot.tomcat.autoconfigure.WebSocketTomcatWebServerFactoryCustomizer;
-import org.springframework.boot.tomcat.autoconfigure.servlet.TomcatServletWebServerAutoConfiguration;
-import org.springframework.boot.tomcat.servlet.TomcatServletWebServerFactory;
-import org.springframework.boot.web.server.WebServer;
-import org.springframework.boot.web.server.servlet.context.AnnotationConfigServletWebServerApplicationContext;
-import org.springframework.boot.webmvc.autoconfigure.DispatcherServletAutoConfiguration;
-import org.springframework.boot.websocket.autoconfigure.servlet.WebSocketMessagingAutoConfiguration.JacksonWebSocketMessageConverterConfiguration;
-import org.springframework.boot.websocket.autoconfigure.servlet.WebSocketMessagingAutoConfiguration.SpringBootWebSocketMessageBrokerConfigurer;
+import io.github.kotlinmania.spring.boot.LazyInitializationBeanFactoryPostProcessor;
+import io.github.kotlinmania.spring.boot.autoconfigure.ImportAutoConfiguration;
+import io.github.kotlinmania.spring.boot.context.properties.EnableConfigurationProperties;
+import io.github.kotlinmania.spring.boot.jackson.autoconfigure.JacksonAutoConfiguration;
+import io.github.kotlinmania.spring.boot.test.context.assertj.AssertableApplicationContext;
+import io.github.kotlinmania.spring.boot.test.util.TestPropertyValues;
+import io.github.kotlinmania.spring.boot.testsupport.classpath.ClassPathExclusions;
+import io.github.kotlinmania.spring.boot.testsupport.web.servlet.DirtiesUrlFactories;
+import io.github.kotlinmania.spring.boot.tomcat.autoconfigure.WebSocketTomcatWebServerFactoryCustomizer;
+import io.github.kotlinmania.spring.boot.tomcat.autoconfigure.servlet.TomcatServletWebServerAutoConfiguration;
+import io.github.kotlinmania.spring.boot.tomcat.servlet.TomcatServletWebServerFactory;
+import io.github.kotlinmania.spring.boot.web.server.WebServer;
+import io.github.kotlinmania.spring.boot.web.server.servlet.context.AnnotationConfigServletWebServerApplicationContext;
+import io.github.kotlinmania.spring.boot.webmvc.autoconfigure.DispatcherServletAutoConfiguration;
+import io.github.kotlinmania.spring.boot.websocket.autoconfigure.servlet.WebSocketMessagingAutoConfiguration.JacksonWebSocketMessageConverterConfiguration;
+import io.github.kotlinmania.spring.boot.websocket.autoconfigure.servlet.WebSocketMessagingAutoConfiguration.SpringBootWebSocketMessageBrokerConfigurer;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.Ordered;
@@ -224,7 +224,7 @@ class WebSocketMessagingAutoConfigurationTests {
 		this.context.registerBean(ObjectMapper.class);
 		this.context.refresh();
 		assertThat(AssertableApplicationContext.get(() -> this.context)).hasSingleBean(
-				org.springframework.boot.websocket.autoconfigure.servlet.WebSocketMessagingAutoConfiguration.Jackson2WebSocketMessageConverterConfiguration.class)
+				io.github.kotlinmania.spring.boot.websocket.autoconfigure.servlet.WebSocketMessagingAutoConfiguration.Jackson2WebSocketMessageConverterConfiguration.class)
 			.doesNotHaveBean(JacksonWebSocketMessageConverterConfiguration.class);
 	}
 

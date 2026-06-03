@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.configurationprocessor;
+package io.github.kotlinmania.spring.boot.configurationprocessor;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -30,9 +30,9 @@ import javax.tools.Diagnostic;
 import javax.tools.FileObject;
 import javax.tools.StandardLocation;
 
-import org.springframework.boot.configurationprocessor.metadata.ConfigurationMetadata;
-import org.springframework.boot.configurationprocessor.metadata.InvalidConfigurationMetadataException;
-import org.springframework.boot.configurationprocessor.metadata.JsonMarshaller;
+import io.github.kotlinmania.spring.boot.configurationprocessor.metadata.ConfigurationMetadata;
+import io.github.kotlinmania.spring.boot.configurationprocessor.metadata.InvalidConfigurationMetadataException;
+import io.github.kotlinmania.spring.boot.configurationprocessor.metadata.JsonMarshaller;
 
 /**
  * A {@code MetadataStore} is responsible for the storage of metadata on the filesystem.

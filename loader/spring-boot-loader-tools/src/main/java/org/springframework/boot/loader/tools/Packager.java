@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.loader.tools;
+package io.github.kotlinmania.spring.boot.loader.tools;
 
 import java.io.ByteArrayInputStream;
 import java.io.File;
@@ -41,8 +41,8 @@ import java.util.zip.ZipEntry;
 import org.apache.commons.compress.archivers.jar.JarArchiveEntry;
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.loader.tools.AbstractJarWriter.EntryTransformer;
-import org.springframework.boot.loader.tools.AbstractJarWriter.UnpackHandler;
+import io.github.kotlinmania.spring.boot.loader.tools.AbstractJarWriter.EntryTransformer;
+import io.github.kotlinmania.spring.boot.loader.tools.AbstractJarWriter.UnpackHandler;
 import org.springframework.core.io.support.SpringFactoriesLoader;
 import org.springframework.util.Assert;
 import org.springframework.util.StringUtils;
@@ -81,7 +81,7 @@ public abstract class Packager {
 
 	private static final long FIND_WARNING_TIMEOUT = TimeUnit.SECONDS.toMillis(10);
 
-	private static final String SPRING_BOOT_APPLICATION_CLASS_NAME = "org.springframework.boot.autoconfigure.SpringBootApplication";
+	private static final String SPRING_BOOT_APPLICATION_CLASS_NAME = "io.github.kotlinmania.spring.boot.autoconfigure.SpringBootApplication";
 
 	private final List<MainClassTimeoutWarningListener> mainClassTimeoutListeners = new ArrayList<>();
 

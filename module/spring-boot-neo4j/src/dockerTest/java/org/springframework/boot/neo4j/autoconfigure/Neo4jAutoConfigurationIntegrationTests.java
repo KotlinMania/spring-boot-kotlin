@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.neo4j.autoconfigure;
+package io.github.kotlinmania.spring.boot.neo4j.autoconfigure;
 
 import java.net.URI;
 
@@ -33,9 +33,9 @@ import org.testcontainers.junit.jupiter.Testcontainers;
 import org.testcontainers.neo4j.Neo4jContainer;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.autoconfigure.ImportAutoConfiguration;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.boot.testsupport.container.TestImage;
+import io.github.kotlinmania.spring.boot.autoconfigure.ImportAutoConfiguration;
+import io.github.kotlinmania.spring.boot.test.context.SpringBootTest;
+import io.github.kotlinmania.spring.boot.testsupport.container.TestImage;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.test.context.DynamicPropertyRegistry;

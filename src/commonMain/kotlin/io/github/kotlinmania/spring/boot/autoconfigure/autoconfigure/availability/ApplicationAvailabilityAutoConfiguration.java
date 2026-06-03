@@ -14,16 +14,16 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.autoconfigure.availability;
+package io.github.kotlinmania.spring.boot.autoconfigure.availability;
 
-import org.springframework.boot.autoconfigure.AutoConfiguration;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
-import org.springframework.boot.availability.ApplicationAvailability;
-import org.springframework.boot.availability.ApplicationAvailabilityBean;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnMissingBean;
+import io.github.kotlinmania.spring.boot.availability.ApplicationAvailability;
+import io.github.kotlinmania.spring.boot.availability.ApplicationAvailabilityBean;
 import org.springframework.context.annotation.Bean;
 
 /**
- * {@link org.springframework.boot.autoconfigure.EnableAutoConfiguration} for
+ * {@link io.github.kotlinmania.spring.boot.autoconfigure.EnableAutoConfiguration} for
  * {@link ApplicationAvailabilityBean}.
  *
  * @author Brian Clozel

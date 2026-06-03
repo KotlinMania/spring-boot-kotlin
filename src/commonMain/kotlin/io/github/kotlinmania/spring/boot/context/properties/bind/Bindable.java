@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.context.properties.bind;
+package io.github.kotlinmania.spring.boot.context.properties.bind;
 
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Array;
@@ -27,7 +27,7 @@ import java.util.function.Supplier;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.context.properties.source.ConfigurationProperty;
+import io.github.kotlinmania.spring.boot.context.properties.source.ConfigurationProperty;
 import org.springframework.core.ResolvableType;
 import org.springframework.core.style.ToStringCreator;
 import org.springframework.util.Assert;

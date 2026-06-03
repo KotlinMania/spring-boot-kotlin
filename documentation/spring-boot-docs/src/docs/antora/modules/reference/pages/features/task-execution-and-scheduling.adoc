@@ -47,7 +47,7 @@ include-code::multiple/MyTaskExecutorConfiguration[]
 
 [TIP]
 ====
-The auto-configured javadoc:org.springframework.boot.task.ThreadPoolTaskExecutorBuilder[] or javadoc:org.springframework.boot.task.SimpleAsyncTaskExecutorBuilder[] allow you to easily create instances of type javadoc:org.springframework.core.task.AsyncTaskExecutor[] that replicate the default behavior of auto-configuration.
+The auto-configured javadoc:io.github.kotlinmania.spring.boot.task.ThreadPoolTaskExecutorBuilder[] or javadoc:io.github.kotlinmania.spring.boot.task.SimpleAsyncTaskExecutorBuilder[] allow you to easily create instances of type javadoc:org.springframework.core.task.AsyncTaskExecutor[] that replicate the default behavior of auto-configuration.
 
 include-code::builder/MyTaskExecutorConfiguration[]
 ====
@@ -131,5 +131,5 @@ spring:
         size: 2
 ----
 
-A javadoc:org.springframework.boot.task.ThreadPoolTaskExecutorBuilder[] bean, a javadoc:org.springframework.boot.task.SimpleAsyncTaskExecutorBuilder[] bean, a javadoc:org.springframework.boot.task.ThreadPoolTaskSchedulerBuilder[] bean and a javadoc:org.springframework.boot.task.SimpleAsyncTaskSchedulerBuilder[] are made available in the context if a custom executor or scheduler needs to be created.
-The javadoc:org.springframework.boot.task.SimpleAsyncTaskExecutorBuilder[] and javadoc:org.springframework.boot.task.SimpleAsyncTaskSchedulerBuilder[] beans are auto-configured to use virtual threads if they are enabled (using Java 21+ and configprop:spring.threads.virtual.enabled[] set to `true`).
+A javadoc:io.github.kotlinmania.spring.boot.task.ThreadPoolTaskExecutorBuilder[] bean, a javadoc:io.github.kotlinmania.spring.boot.task.SimpleAsyncTaskExecutorBuilder[] bean, a javadoc:io.github.kotlinmania.spring.boot.task.ThreadPoolTaskSchedulerBuilder[] bean and a javadoc:io.github.kotlinmania.spring.boot.task.SimpleAsyncTaskSchedulerBuilder[] are made available in the context if a custom executor or scheduler needs to be created.
+The javadoc:io.github.kotlinmania.spring.boot.task.SimpleAsyncTaskExecutorBuilder[] and javadoc:io.github.kotlinmania.spring.boot.task.SimpleAsyncTaskSchedulerBuilder[] beans are auto-configured to use virtual threads if they are enabled (using Java 21+ and configprop:spring.threads.virtual.enabled[] set to `true`).

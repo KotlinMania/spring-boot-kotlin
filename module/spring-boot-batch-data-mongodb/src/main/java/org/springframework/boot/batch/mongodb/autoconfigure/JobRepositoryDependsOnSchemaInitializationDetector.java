@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.batch.mongodb.autoconfigure;
+package io.github.kotlinmania.spring.boot.batch.mongodb.autoconfigure;
 
 import org.springframework.batch.core.repository.JobRepository;
-import org.springframework.boot.autoconfigure.AbstractDependsOnBeanFactoryPostProcessor;
+import io.github.kotlinmania.spring.boot.autoconfigure.AbstractDependsOnBeanFactoryPostProcessor;
 
 /**
  * {@link AbstractDependsOnBeanFactoryPostProcessor} implementation that makes sure Spring

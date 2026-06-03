@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.context.properties.bind;
+package io.github.kotlinmania.spring.boot.context.properties.bind;
 
 import java.beans.Introspector;
 import java.lang.annotation.Annotation;
@@ -36,10 +36,10 @@ import java.util.function.Supplier;
 import org.jspecify.annotations.Nullable;
 
 import org.springframework.beans.BeanUtils;
-import org.springframework.boot.context.properties.bind.Binder.Context;
-import org.springframework.boot.context.properties.source.ConfigurationPropertyName;
-import org.springframework.boot.context.properties.source.ConfigurationPropertySource;
-import org.springframework.boot.context.properties.source.ConfigurationPropertyState;
+import io.github.kotlinmania.spring.boot.context.properties.bind.Binder.Context;
+import io.github.kotlinmania.spring.boot.context.properties.source.ConfigurationPropertyName;
+import io.github.kotlinmania.spring.boot.context.properties.source.ConfigurationPropertySource;
+import io.github.kotlinmania.spring.boot.context.properties.source.ConfigurationPropertyState;
 import org.springframework.core.BridgeMethodResolver;
 import org.springframework.core.MethodParameter;
 import org.springframework.core.ResolvableType;

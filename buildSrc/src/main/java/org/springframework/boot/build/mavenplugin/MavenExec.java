@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.build.mavenplugin;
+package io.github.kotlinmania.spring.boot.build.mavenplugin;
 
 import java.io.File;
 import java.io.IOException;

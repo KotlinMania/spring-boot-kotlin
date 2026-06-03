@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.testing.utilities.testresttemplate;
+package io.github.kotlinmania.spring.boot.docs.testing.utilities.testresttemplate;
 
 /**
  * Tests for {@link MySpringBootTests}.

@@ -14,16 +14,16 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.actuate.docs.condition;
+package io.github.kotlinmania.spring.boot.actuate.docs.condition;
 
 import java.util.List;
 
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.actuate.autoconfigure.condition.ConditionsReportEndpoint;
-import org.springframework.boot.actuate.docs.MockMvcEndpointDocumentationTests;
-import org.springframework.boot.autoconfigure.condition.ConditionEvaluationReport;
-import org.springframework.boot.autoconfigure.context.PropertyPlaceholderAutoConfiguration;
+import io.github.kotlinmania.spring.boot.actuate.autoconfigure.condition.ConditionsReportEndpoint;
+import io.github.kotlinmania.spring.boot.actuate.docs.MockMvcEndpointDocumentationTests;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionEvaluationReport;
+import io.github.kotlinmania.spring.boot.autoconfigure.context.PropertyPlaceholderAutoConfiguration;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

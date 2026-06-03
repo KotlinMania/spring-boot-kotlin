@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.configurationsample.deprecation;
+package io.github.kotlinmania.spring.boot.configurationsample.deprecation;
 
 import org.apache.commons.dbcp2.BasicDataSource;
 
-import org.springframework.boot.configurationsample.TestConfigurationProperties;
+import io.github.kotlinmania.spring.boot.configurationsample.TestConfigurationProperties;
 
 /**
  * Test configuration for DBCP2 {@link BasicDataSource}.

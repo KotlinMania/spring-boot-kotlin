@@ -14,26 +14,26 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.webflux.autoconfigure.actuate.endpoint.web;
+package io.github.kotlinmania.spring.boot.webflux.autoconfigure.actuate.endpoint.web;
 
 import java.util.Collection;
 
-import org.springframework.boot.actuate.autoconfigure.endpoint.condition.ConditionalOnAvailableEndpoint;
-import org.springframework.boot.actuate.autoconfigure.endpoint.expose.EndpointExposure;
-import org.springframework.boot.actuate.endpoint.web.EndpointMapping;
-import org.springframework.boot.actuate.endpoint.web.ExposableWebEndpoint;
-import org.springframework.boot.actuate.endpoint.web.WebEndpointsSupplier;
-import org.springframework.boot.actuate.endpoint.web.WebServerNamespace;
-import org.springframework.boot.autoconfigure.AutoConfiguration;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnWebApplication;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnWebApplication.Type;
-import org.springframework.boot.health.actuate.endpoint.HealthEndpoint;
-import org.springframework.boot.health.actuate.endpoint.HealthEndpointGroups;
-import org.springframework.boot.health.contributor.Health;
-import org.springframework.boot.webflux.actuate.endpoint.web.AdditionalHealthEndpointPathsWebFluxHandlerMapping;
+import io.github.kotlinmania.spring.boot.actuate.autoconfigure.endpoint.condition.ConditionalOnAvailableEndpoint;
+import io.github.kotlinmania.spring.boot.actuate.autoconfigure.endpoint.expose.EndpointExposure;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.web.EndpointMapping;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.web.ExposableWebEndpoint;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.web.WebEndpointsSupplier;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.web.WebServerNamespace;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.EnableAutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnBean;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnClass;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnWebApplication;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnWebApplication.Type;
+import io.github.kotlinmania.spring.boot.health.actuate.endpoint.HealthEndpoint;
+import io.github.kotlinmania.spring.boot.health.actuate.endpoint.HealthEndpointGroups;
+import io.github.kotlinmania.spring.boot.health.contributor.Health;
+import io.github.kotlinmania.spring.boot.webflux.actuate.endpoint.web.AdditionalHealthEndpointPathsWebFluxHandlerMapping;
 import org.springframework.context.annotation.Bean;
 
 /**

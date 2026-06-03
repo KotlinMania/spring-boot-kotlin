@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.micrometer.observation.autoconfigure;
+package io.github.kotlinmania.spring.boot.micrometer.observation.autoconfigure;
 
 import java.util.List;
 
@@ -25,7 +25,7 @@ import io.micrometer.observation.ObservationPredicate;
 import io.micrometer.observation.ObservationRegistry;
 
 import org.springframework.beans.factory.ObjectProvider;
-import org.springframework.boot.util.LambdaSafe;
+import io.github.kotlinmania.spring.boot.util.LambdaSafe;
 
 /**
  * Configurer to apply {@link ObservationRegistryCustomizer customizers} to

@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.cli.command;
+package io.github.kotlinmania.spring.boot.cli.command;
 
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.cli.command.options.OptionHandler;
+import io.github.kotlinmania.spring.boot.cli.command.options.OptionHandler;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.mustache.servlet.view;
+package io.github.kotlinmania.spring.boot.mustache.servlet.view;
 
 import java.nio.charset.Charset;
 

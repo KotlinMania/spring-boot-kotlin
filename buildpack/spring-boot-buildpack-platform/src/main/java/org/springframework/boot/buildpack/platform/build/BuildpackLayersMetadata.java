@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.buildpack.platform.build;
+package io.github.kotlinmania.spring.boot.buildpack.platform.build;
 
 import java.io.IOException;
 import java.lang.invoke.MethodHandles;
@@ -24,10 +24,10 @@ import java.util.Map;
 import org.jspecify.annotations.Nullable;
 import tools.jackson.databind.JsonNode;
 
-import org.springframework.boot.buildpack.platform.docker.type.Image;
-import org.springframework.boot.buildpack.platform.docker.type.ImageConfig;
-import org.springframework.boot.buildpack.platform.json.MappedObject;
-import org.springframework.boot.buildpack.platform.json.SharedJsonMapper;
+import io.github.kotlinmania.spring.boot.buildpack.platform.docker.type.Image;
+import io.github.kotlinmania.spring.boot.buildpack.platform.docker.type.ImageConfig;
+import io.github.kotlinmania.spring.boot.buildpack.platform.json.MappedObject;
+import io.github.kotlinmania.spring.boot.buildpack.platform.json.SharedJsonMapper;
 import org.springframework.util.Assert;
 import org.springframework.util.StringUtils;
 

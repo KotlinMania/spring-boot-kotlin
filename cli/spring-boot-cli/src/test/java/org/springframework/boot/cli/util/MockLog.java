@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.cli.util;
+package io.github.kotlinmania.spring.boot.cli.util;
 
 import static org.mockito.Mockito.mock;
 

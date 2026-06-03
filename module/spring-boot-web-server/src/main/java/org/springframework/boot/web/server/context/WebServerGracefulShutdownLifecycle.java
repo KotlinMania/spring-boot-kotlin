@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.web.server.context;
+package io.github.kotlinmania.spring.boot.web.server.context;
 
-import org.springframework.boot.web.server.WebServer;
+import io.github.kotlinmania.spring.boot.web.server.WebServer;
 import org.springframework.context.SmartLifecycle;
 
 /**

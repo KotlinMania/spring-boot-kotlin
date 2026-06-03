@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.jdbc;
+package io.github.kotlinmania.spring.boot.jdbc;
 
 import java.util.Set;
 
-import org.springframework.boot.sql.init.dependency.AbstractBeansOfTypeDependsOnDatabaseInitializationDetector;
-import org.springframework.boot.sql.init.dependency.DependsOnDatabaseInitializationDetector;
+import io.github.kotlinmania.spring.boot.sql.init.dependency.AbstractBeansOfTypeDependsOnDatabaseInitializationDetector;
+import io.github.kotlinmania.spring.boot.sql.init.dependency.DependsOnDatabaseInitializationDetector;
 import org.springframework.jdbc.core.JdbcOperations;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcOperations;
 import org.springframework.jdbc.core.simple.JdbcClient;

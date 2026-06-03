@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.testing.springbootapplications.usingmain.typical;
+package io.github.kotlinmania.spring.boot.docs.testing.springbootapplications.usingmain.typical;
 
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
+import io.github.kotlinmania.spring.boot.SpringApplication;
+import io.github.kotlinmania.spring.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 public class MyApplication {

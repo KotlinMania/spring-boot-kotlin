@@ -18,6 +18,6 @@
  * Support for RSocket servers.
  */
 @NullMarked
-package org.springframework.boot.rsocket.server;
+package io.github.kotlinmania.spring.boot.rsocket.server;
 
 import org.jspecify.annotations.NullMarked;

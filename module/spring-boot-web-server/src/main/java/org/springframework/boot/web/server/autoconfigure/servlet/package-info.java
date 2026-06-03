@@ -18,6 +18,6 @@
  * Classes related to the auto-configuration of a servlet web server.
  */
 @NullMarked
-package org.springframework.boot.web.server.autoconfigure.servlet;
+package io.github.kotlinmania.spring.boot.web.server.autoconfigure.servlet;
 
 import org.jspecify.annotations.NullMarked;

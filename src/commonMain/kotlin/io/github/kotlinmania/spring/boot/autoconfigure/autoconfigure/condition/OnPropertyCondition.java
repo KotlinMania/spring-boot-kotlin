@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.autoconfigure.condition;
+package io.github.kotlinmania.spring.boot.autoconfigure.condition;
 
 import java.lang.annotation.Annotation;
 import java.util.ArrayList;
@@ -24,7 +24,7 @@ import java.util.stream.Stream;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.autoconfigure.condition.ConditionMessage.Style;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionMessage.Style;
 import org.springframework.context.annotation.Condition;
 import org.springframework.context.annotation.ConditionContext;
 import org.springframework.core.Ordered;

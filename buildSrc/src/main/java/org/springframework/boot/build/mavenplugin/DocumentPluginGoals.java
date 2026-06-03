@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.build.mavenplugin;
+package io.github.kotlinmania.spring.boot.build.mavenplugin;
 
 import java.io.File;
 import java.io.FileWriter;
@@ -32,9 +32,9 @@ import org.gradle.api.tasks.InputFile;
 import org.gradle.api.tasks.OutputDirectory;
 import org.gradle.api.tasks.TaskAction;
 
-import org.springframework.boot.build.mavenplugin.PluginXmlParser.Mojo;
-import org.springframework.boot.build.mavenplugin.PluginXmlParser.Parameter;
-import org.springframework.boot.build.mavenplugin.PluginXmlParser.Plugin;
+import io.github.kotlinmania.spring.boot.build.mavenplugin.PluginXmlParser.Mojo;
+import io.github.kotlinmania.spring.boot.build.mavenplugin.PluginXmlParser.Parameter;
+import io.github.kotlinmania.spring.boot.build.mavenplugin.PluginXmlParser.Plugin;
 
 /**
  * A {@link Task} to document the plugin's goals.
@@ -219,10 +219,10 @@ public abstract class DocumentPluginGoals extends DefaultTask {
 	}
 
 	private String typeNameToJavadocLink(String shortName, String name) {
-		if (name.startsWith("org.springframework.boot.maven")) {
+		if (name.startsWith("io.github.kotlinmania.spring.boot.maven")) {
 			return "xref:maven-plugin:api/java/" + typeNameToJavadocPath(name) + ".html[" + shortName + "]";
 		}
-		if (name.startsWith("org.springframework.boot")) {
+		if (name.startsWith("io.github.kotlinmania.spring.boot.)) {
 			return "xref:api:java/" + typeNameToJavadocPath(name) + ".html[" + shortName + "]";
 		}
 		return shortName;

@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.ldap.autoconfigure;
+package io.github.kotlinmania.spring.boot.ldap.autoconfigure;
 
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.ldap.autoconfigure.LdapProperties.Template;
+import io.github.kotlinmania.spring.boot.ldap.autoconfigure.LdapProperties.Template;
 import org.springframework.ldap.core.LdapTemplate;
 
 import static org.assertj.core.api.Assertions.assertThat;

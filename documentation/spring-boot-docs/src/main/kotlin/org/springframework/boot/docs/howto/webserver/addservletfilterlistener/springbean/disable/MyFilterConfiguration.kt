@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.howto.webserver.addservletfilterlistener.springbean.disable
+package io.github.kotlinmania.spring.boot.docs.howto.webserver.addservletfilterlistener.springbean.disable
 
-import org.springframework.boot.web.servlet.FilterRegistrationBean
+import io.github.kotlinmania.spring.boot.web.servlet.FilterRegistrationBean
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
 

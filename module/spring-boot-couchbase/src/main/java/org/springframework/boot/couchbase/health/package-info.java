@@ -18,6 +18,6 @@
  * Health integration for Couchbase.
  */
 @NullMarked
-package org.springframework.boot.couchbase.health;
+package io.github.kotlinmania.spring.boot.couchbase.health;
 
 import org.jspecify.annotations.NullMarked;

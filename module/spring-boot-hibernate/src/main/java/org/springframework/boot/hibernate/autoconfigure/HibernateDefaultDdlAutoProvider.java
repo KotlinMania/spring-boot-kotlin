@@ -14,15 +14,15 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.hibernate.autoconfigure;
+package io.github.kotlinmania.spring.boot.hibernate.autoconfigure;
 
 import java.util.stream.StreamSupport;
 
 import javax.sql.DataSource;
 
-import org.springframework.boot.jdbc.EmbeddedDatabaseConnection;
-import org.springframework.boot.jdbc.SchemaManagement;
-import org.springframework.boot.jdbc.SchemaManagementProvider;
+import io.github.kotlinmania.spring.boot.jdbc.EmbeddedDatabaseConnection;
+import io.github.kotlinmania.spring.boot.jdbc.SchemaManagement;
+import io.github.kotlinmania.spring.boot.jdbc.SchemaManagementProvider;
 
 /**
  * A {@link SchemaManagementProvider} that invokes a configurable number of

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.build.mavenplugin;
+package io.github.kotlinmania.spring.boot.build.mavenplugin;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -31,7 +31,7 @@ import javax.xml.xpath.XPathFactory;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
-import org.springframework.boot.build.xml.XmlDocument;
+import io.github.kotlinmania.spring.boot.build.xml.XmlDocument;
 
 /**
  * A parser for a Maven plugin's {@code plugin.xml} file.

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.health.application;
+package io.github.kotlinmania.spring.boot.health.application;
 
 import java.time.Duration;
 import java.time.Instant;
@@ -23,13 +23,13 @@ import java.util.List;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.health.contributor.Health;
-import org.springframework.boot.health.contributor.Status;
-import org.springframework.boot.info.SslInfo;
-import org.springframework.boot.info.SslInfo.BundleInfo;
-import org.springframework.boot.info.SslInfo.CertificateChainInfo;
-import org.springframework.boot.info.SslInfo.CertificateInfo;
-import org.springframework.boot.info.SslInfo.CertificateValidityInfo;
+import io.github.kotlinmania.spring.boot.health.contributor.Health;
+import io.github.kotlinmania.spring.boot.health.contributor.Status;
+import io.github.kotlinmania.spring.boot.info.SslInfo;
+import io.github.kotlinmania.spring.boot.info.SslInfo.BundleInfo;
+import io.github.kotlinmania.spring.boot.info.SslInfo.CertificateChainInfo;
+import io.github.kotlinmania.spring.boot.info.SslInfo.CertificateInfo;
+import io.github.kotlinmania.spring.boot.info.SslInfo.CertificateValidityInfo;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.BDDMockito.given;

@@ -14,18 +14,18 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.tomcat.autoconfigure.servlet;
+package io.github.kotlinmania.spring.boot.tomcat.autoconfigure.servlet;
 
 import org.apache.catalina.Context;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.context.properties.bind.Bindable;
-import org.springframework.boot.context.properties.bind.Binder;
-import org.springframework.boot.context.properties.source.ConfigurationPropertySources;
-import org.springframework.boot.tomcat.TomcatWebServer;
-import org.springframework.boot.tomcat.autoconfigure.TomcatServerProperties;
-import org.springframework.boot.tomcat.servlet.TomcatServletWebServerFactory;
+import io.github.kotlinmania.spring.boot.context.properties.bind.Bindable;
+import io.github.kotlinmania.spring.boot.context.properties.bind.Binder;
+import io.github.kotlinmania.spring.boot.context.properties.source.ConfigurationPropertySources;
+import io.github.kotlinmania.spring.boot.tomcat.TomcatWebServer;
+import io.github.kotlinmania.spring.boot.tomcat.autoconfigure.TomcatServerProperties;
+import io.github.kotlinmania.spring.boot.tomcat.servlet.TomcatServletWebServerFactory;
 import org.springframework.mock.env.MockEnvironment;
 import org.springframework.test.context.support.TestPropertySourceUtils;
 

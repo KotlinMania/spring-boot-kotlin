@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.configurationprocessor;
+package io.github.kotlinmania.spring.boot.configurationprocessor;
 
 import java.io.ByteArrayInputStream;
 import java.nio.charset.StandardCharsets;
@@ -25,12 +25,12 @@ import java.util.function.Predicate;
 
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.configurationprocessor.metadata.ConfigurationMetadata;
-import org.springframework.boot.configurationprocessor.metadata.ItemHint;
-import org.springframework.boot.configurationprocessor.metadata.ItemHint.ValueHint;
-import org.springframework.boot.configurationprocessor.metadata.ItemMetadata;
-import org.springframework.boot.configurationprocessor.metadata.JsonMarshaller;
-import org.springframework.boot.configurationprocessor.metadata.Metadata;
+import io.github.kotlinmania.spring.boot.configurationprocessor.metadata.ConfigurationMetadata;
+import io.github.kotlinmania.spring.boot.configurationprocessor.metadata.ItemHint;
+import io.github.kotlinmania.spring.boot.configurationprocessor.metadata.ItemHint.ValueHint;
+import io.github.kotlinmania.spring.boot.configurationprocessor.metadata.ItemMetadata;
+import io.github.kotlinmania.spring.boot.configurationprocessor.metadata.JsonMarshaller;
+import io.github.kotlinmania.spring.boot.configurationprocessor.metadata.Metadata;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.BDDMockito.given;

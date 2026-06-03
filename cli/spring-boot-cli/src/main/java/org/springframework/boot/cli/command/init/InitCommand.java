@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.cli.command.init;
+package io.github.kotlinmania.spring.boot.cli.command.init;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -28,12 +28,12 @@ import java.util.Map;
 import joptsimple.OptionSet;
 import joptsimple.OptionSpec;
 
-import org.springframework.boot.cli.command.Command;
-import org.springframework.boot.cli.command.HelpExample;
-import org.springframework.boot.cli.command.OptionParsingCommand;
-import org.springframework.boot.cli.command.options.OptionHandler;
-import org.springframework.boot.cli.command.status.ExitStatus;
-import org.springframework.boot.cli.util.Log;
+import io.github.kotlinmania.spring.boot.cli.command.Command;
+import io.github.kotlinmania.spring.boot.cli.command.HelpExample;
+import io.github.kotlinmania.spring.boot.cli.command.OptionParsingCommand;
+import io.github.kotlinmania.spring.boot.cli.command.options.OptionHandler;
+import io.github.kotlinmania.spring.boot.cli.command.status.ExitStatus;
+import io.github.kotlinmania.spring.boot.cli.util.Log;
 import org.springframework.util.Assert;
 
 /**

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.test.context;
+package io.github.kotlinmania.spring.boot.test.context;
 
 import org.jspecify.annotations.Nullable;
 import org.junit.jupiter.api.Test;

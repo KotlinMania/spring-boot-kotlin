@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.build.bom;
+package io.github.kotlinmania.spring.boot.build.bom;
 
 import java.util.Collections;
 import java.util.List;
@@ -22,13 +22,13 @@ import java.util.Map;
 
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.build.bom.Library.BomAlignment;
-import org.springframework.boot.build.bom.Library.Group;
-import org.springframework.boot.build.bom.Library.LibraryVersion;
-import org.springframework.boot.build.bom.Library.Link;
-import org.springframework.boot.build.bom.Library.ProhibitedVersion;
-import org.springframework.boot.build.bom.Library.VersionAlignment;
-import org.springframework.boot.build.bom.bomr.version.DependencyVersion;
+import io.github.kotlinmania.spring.boot.build.bom.Library.BomAlignment;
+import io.github.kotlinmania.spring.boot.build.bom.Library.Group;
+import io.github.kotlinmania.spring.boot.build.bom.Library.LibraryVersion;
+import io.github.kotlinmania.spring.boot.build.bom.Library.Link;
+import io.github.kotlinmania.spring.boot.build.bom.Library.ProhibitedVersion;
+import io.github.kotlinmania.spring.boot.build.bom.Library.VersionAlignment;
+import io.github.kotlinmania.spring.boot.build.bom.bomr.version.DependencyVersion;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

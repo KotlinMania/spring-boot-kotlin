@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.testing.utilities.testresttemplate;
+package io.github.kotlinmania.spring.boot.docs.testing.utilities.testresttemplate;
 
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.resttestclient.TestRestTemplate;
+import io.github.kotlinmania.spring.boot.resttestclient.TestRestTemplate;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 

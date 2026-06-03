@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.features.taskexecutionandscheduling.defaultcandidate
+package io.github.kotlinmania.spring.boot.docs.features.taskexecutionandscheduling.defaultcandidate
 
 import org.springframework.beans.factory.annotation.Qualifier
 import org.springframework.context.annotation.Bean

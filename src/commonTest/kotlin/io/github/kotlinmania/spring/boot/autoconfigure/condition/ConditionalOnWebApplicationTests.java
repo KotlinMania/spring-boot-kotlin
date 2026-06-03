@@ -14,15 +14,15 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.autoconfigure.condition;
+package io.github.kotlinmania.spring.boot.autoconfigure.condition;
 
 import org.jspecify.annotations.Nullable;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.autoconfigure.condition.ConditionalOnWebApplication.Type;
-import org.springframework.boot.web.context.reactive.AnnotationConfigReactiveWebApplicationContext;
-import org.springframework.boot.web.context.servlet.AnnotationConfigServletWebApplicationContext;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnWebApplication.Type;
+import io.github.kotlinmania.spring.boot.web.context.reactive.AnnotationConfigReactiveWebApplicationContext;
+import io.github.kotlinmania.spring.boot.web.context.servlet.AnnotationConfigServletWebApplicationContext;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.Bean;

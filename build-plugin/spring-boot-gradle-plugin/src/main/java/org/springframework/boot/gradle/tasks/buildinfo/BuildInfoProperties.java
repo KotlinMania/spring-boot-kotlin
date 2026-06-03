@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.gradle.tasks.buildinfo;
+package io.github.kotlinmania.spring.boot.gradle.tasks.buildinfo;
 
 import java.io.Serializable;
 import java.time.Instant;

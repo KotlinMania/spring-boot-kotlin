@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.devtools.env;
+package io.github.kotlinmania.spring.boot.devtools.env;
 
 import java.io.File;
 import java.io.IOException;
@@ -31,12 +31,12 @@ import java.util.function.Supplier;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.EnvironmentPostProcessor;
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.devtools.system.DevToolsEnablementDeducer;
-import org.springframework.boot.env.PropertiesPropertySourceLoader;
-import org.springframework.boot.env.PropertySourceLoader;
-import org.springframework.boot.env.YamlPropertySourceLoader;
+import io.github.kotlinmania.spring.boot.EnvironmentPostProcessor;
+import io.github.kotlinmania.spring.boot.SpringApplication;
+import io.github.kotlinmania.spring.boot.devtools.system.DevToolsEnablementDeducer;
+import io.github.kotlinmania.spring.boot.env.PropertiesPropertySourceLoader;
+import io.github.kotlinmania.spring.boot.env.PropertySourceLoader;
+import io.github.kotlinmania.spring.boot.env.YamlPropertySourceLoader;
 import org.springframework.core.env.ConfigurableEnvironment;
 import org.springframework.core.env.PropertySource;
 import org.springframework.core.io.FileSystemResource;

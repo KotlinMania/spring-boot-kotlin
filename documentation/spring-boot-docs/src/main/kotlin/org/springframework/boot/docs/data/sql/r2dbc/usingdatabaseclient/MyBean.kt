@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.data.sql.r2dbc.usingdatabaseclient
+package io.github.kotlinmania.spring.boot.docs.data.sql.r2dbc.usingdatabaseclient
 
 import org.springframework.r2dbc.core.DatabaseClient
 import org.springframework.stereotype.Component

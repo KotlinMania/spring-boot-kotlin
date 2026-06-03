@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.autoconfigure.cache;
+package io.github.kotlinmania.spring.boot.autoconfigure.cache;
 
 /**
  * Supported cache types (defined in order of precedence).

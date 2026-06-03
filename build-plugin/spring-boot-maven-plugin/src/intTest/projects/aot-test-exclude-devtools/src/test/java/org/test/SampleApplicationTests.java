@@ -17,7 +17,7 @@
 package org.test;
 
 import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.context.SpringBootTest;
+import io.github.kotlinmania.spring.boot.test.context.SpringBootTest;
 
 @SpringBootTest
 class SampleApplicationTests {

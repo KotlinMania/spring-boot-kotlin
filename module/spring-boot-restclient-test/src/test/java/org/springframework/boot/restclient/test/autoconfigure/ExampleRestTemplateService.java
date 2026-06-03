@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.restclient.test.autoconfigure;
+package io.github.kotlinmania.spring.boot.restclient.test.autoconfigure;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.restclient.RestTemplateBuilder;
+import io.github.kotlinmania.spring.boot.restclient.RestTemplateBuilder;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 

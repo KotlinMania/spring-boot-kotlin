@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.loader.launch;
+package io.github.kotlinmania.spring.boot.loader.launch;
 
 import java.io.IOException;
 import java.io.UncheckedIOException;
@@ -25,8 +25,8 @@ import java.util.Set;
 import java.util.jar.Attributes;
 import java.util.jar.Manifest;
 
-import org.springframework.boot.loader.launch.Archive.Entry;
-import org.springframework.boot.loader.net.protocol.Handlers;
+import io.github.kotlinmania.spring.boot.loader.launch.Archive.Entry;
+import io.github.kotlinmania.spring.boot.loader.net.protocol.Handlers;
 
 /**
  * Base class for launchers that can start an application with a fully configured

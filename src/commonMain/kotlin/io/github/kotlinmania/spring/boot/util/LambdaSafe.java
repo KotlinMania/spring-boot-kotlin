@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.util;
+package io.github.kotlinmania.spring.boot.util;
 
 import java.lang.reflect.Method;
 import java.util.Collection;

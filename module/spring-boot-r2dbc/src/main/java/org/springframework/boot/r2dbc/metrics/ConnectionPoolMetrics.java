@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.r2dbc.metrics;
+package io.github.kotlinmania.spring.boot.r2dbc.metrics;
 
 import io.micrometer.core.instrument.Gauge;
 import io.micrometer.core.instrument.Gauge.Builder;

@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.devtools.classpath;
+package io.github.kotlinmania.spring.boot.devtools.classpath;
 
 import java.util.LinkedHashSet;
 import java.util.Set;
 
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.devtools.filewatch.ChangedFiles;
+import io.github.kotlinmania.spring.boot.devtools.filewatch.ChangedFiles;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatIllegalArgumentException;

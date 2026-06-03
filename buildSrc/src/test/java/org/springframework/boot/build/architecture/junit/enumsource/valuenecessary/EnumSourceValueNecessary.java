@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.build.architecture.junit.enumsource.valuenecessary;
+package io.github.kotlinmania.spring.boot.build.architecture.junit.enumsource.valuenecessary;
 
 import org.junit.jupiter.params.provider.EnumSource;
 

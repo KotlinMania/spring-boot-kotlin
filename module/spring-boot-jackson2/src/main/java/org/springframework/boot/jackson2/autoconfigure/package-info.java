@@ -18,4 +18,4 @@
  * Auto-configuration for Jackson 2.
  */
 @org.jspecify.annotations.NullMarked
-package org.springframework.boot.jackson2.autoconfigure;
+package io.github.kotlinmania.spring.boot.jackson2.autoconfigure;

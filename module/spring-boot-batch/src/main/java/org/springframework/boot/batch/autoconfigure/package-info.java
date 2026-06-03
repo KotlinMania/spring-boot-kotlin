@@ -18,6 +18,6 @@
  * Auto-configuration for Spring Batch.
  */
 @NullMarked
-package org.springframework.boot.batch.autoconfigure;
+package io.github.kotlinmania.spring.boot.batch.autoconfigure;
 
 import org.jspecify.annotations.NullMarked;

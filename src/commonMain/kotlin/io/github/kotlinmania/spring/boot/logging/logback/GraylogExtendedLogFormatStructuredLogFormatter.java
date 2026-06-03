@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.logging.logback;
+package io.github.kotlinmania.spring.boot.logging.logback;
 
 import java.math.BigDecimal;
 import java.util.Set;
@@ -30,18 +30,18 @@ import org.apache.commons.logging.LogFactory;
 import org.jspecify.annotations.Nullable;
 import org.slf4j.event.KeyValuePair;
 
-import org.springframework.boot.json.JsonWriter;
-import org.springframework.boot.json.JsonWriter.Members;
-import org.springframework.boot.json.JsonWriter.PairExtractor;
-import org.springframework.boot.json.WritableJson;
-import org.springframework.boot.logging.StackTracePrinter;
-import org.springframework.boot.logging.structured.CommonStructuredLogFormat;
-import org.springframework.boot.logging.structured.ContextPairs;
-import org.springframework.boot.logging.structured.ContextPairs.Joiner;
-import org.springframework.boot.logging.structured.GraylogExtendedLogFormatProperties;
-import org.springframework.boot.logging.structured.JsonWriterStructuredLogFormatter;
-import org.springframework.boot.logging.structured.StructuredLogFormatter;
-import org.springframework.boot.logging.structured.StructuredLoggingJsonMembersCustomizer;
+import io.github.kotlinmania.spring.boot.json.JsonWriter;
+import io.github.kotlinmania.spring.boot.json.JsonWriter.Members;
+import io.github.kotlinmania.spring.boot.json.JsonWriter.PairExtractor;
+import io.github.kotlinmania.spring.boot.json.WritableJson;
+import io.github.kotlinmania.spring.boot.logging.StackTracePrinter;
+import io.github.kotlinmania.spring.boot.logging.structured.CommonStructuredLogFormat;
+import io.github.kotlinmania.spring.boot.logging.structured.ContextPairs;
+import io.github.kotlinmania.spring.boot.logging.structured.ContextPairs.Joiner;
+import io.github.kotlinmania.spring.boot.logging.structured.GraylogExtendedLogFormatProperties;
+import io.github.kotlinmania.spring.boot.logging.structured.JsonWriterStructuredLogFormatter;
+import io.github.kotlinmania.spring.boot.logging.structured.StructuredLogFormatter;
+import io.github.kotlinmania.spring.boot.logging.structured.StructuredLoggingJsonMembersCustomizer;
 import org.springframework.core.env.Environment;
 import org.springframework.core.log.LogMessage;
 import org.springframework.util.StringUtils;

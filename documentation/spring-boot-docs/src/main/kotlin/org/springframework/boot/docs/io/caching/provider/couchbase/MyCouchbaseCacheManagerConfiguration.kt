@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.io.caching.provider.couchbase
+package io.github.kotlinmania.spring.boot.docs.io.caching.provider.couchbase
 
-import org.springframework.boot.cache.autoconfigure.CouchbaseCacheManagerBuilderCustomizer
+import io.github.kotlinmania.spring.boot.cache.autoconfigure.CouchbaseCacheManagerBuilderCustomizer
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
 import org.springframework.data.couchbase.cache.CouchbaseCacheConfiguration

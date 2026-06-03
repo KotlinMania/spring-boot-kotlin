@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.resttestclient.autoconfigure;
+package io.github.kotlinmania.spring.boot.resttestclient.autoconfigure;
 
 import java.util.Collection;
 
-import org.springframework.boot.http.converter.autoconfigure.ClientHttpMessageConvertersCustomizer;
+import io.github.kotlinmania.spring.boot.http.converter.autoconfigure.ClientHttpMessageConvertersCustomizer;
 import org.springframework.test.web.servlet.client.RestTestClient;
 
 /**

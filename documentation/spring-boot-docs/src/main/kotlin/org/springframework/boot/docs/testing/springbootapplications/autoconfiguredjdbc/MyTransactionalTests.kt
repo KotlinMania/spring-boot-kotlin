@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.testing.springbootapplications.autoconfiguredjdbc
+package io.github.kotlinmania.spring.boot.docs.testing.springbootapplications.autoconfiguredjdbc
 
-import org.springframework.boot.jdbc.test.autoconfigure.JdbcTest
+import io.github.kotlinmania.spring.boot.jdbc.test.autoconfigure.JdbcTest
 import org.springframework.transaction.annotation.Propagation
 import org.springframework.transaction.annotation.Transactional
 

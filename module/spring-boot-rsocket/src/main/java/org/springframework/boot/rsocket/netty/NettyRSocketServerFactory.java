@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.rsocket.netty;
+package io.github.kotlinmania.spring.boot.rsocket.netty;
 
 import java.net.InetAddress;
 import java.net.InetSocketAddress;
@@ -43,17 +43,17 @@ import reactor.netty.tcp.SslProvider.GenericSslContextSpec;
 import reactor.netty.tcp.SslProvider.SslContextSpec;
 import reactor.netty.tcp.TcpServer;
 
-import org.springframework.boot.context.properties.PropertyMapper;
-import org.springframework.boot.rsocket.server.ConfigurableRSocketServerFactory;
-import org.springframework.boot.rsocket.server.RSocketServer;
-import org.springframework.boot.rsocket.server.RSocketServerCustomizer;
-import org.springframework.boot.rsocket.server.RSocketServerFactory;
-import org.springframework.boot.ssl.SslBundle;
-import org.springframework.boot.ssl.SslBundles;
-import org.springframework.boot.ssl.SslOptions;
-import org.springframework.boot.web.server.Ssl;
-import org.springframework.boot.web.server.Ssl.ServerNameSslBundle;
-import org.springframework.boot.web.server.WebServerSslBundle;
+import io.github.kotlinmania.spring.boot.context.properties.PropertyMapper;
+import io.github.kotlinmania.spring.boot.rsocket.server.ConfigurableRSocketServerFactory;
+import io.github.kotlinmania.spring.boot.rsocket.server.RSocketServer;
+import io.github.kotlinmania.spring.boot.rsocket.server.RSocketServerCustomizer;
+import io.github.kotlinmania.spring.boot.rsocket.server.RSocketServerFactory;
+import io.github.kotlinmania.spring.boot.ssl.SslBundle;
+import io.github.kotlinmania.spring.boot.ssl.SslBundles;
+import io.github.kotlinmania.spring.boot.ssl.SslOptions;
+import io.github.kotlinmania.spring.boot.web.server.Ssl;
+import io.github.kotlinmania.spring.boot.web.server.Ssl.ServerNameSslBundle;
+import io.github.kotlinmania.spring.boot.web.server.WebServerSslBundle;
 import org.springframework.http.client.ReactorResourceFactory;
 import org.springframework.util.Assert;
 import org.springframework.util.unit.DataSize;

@@ -14,16 +14,16 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.testing.utilities.testresttemplate;
+package io.github.kotlinmania.spring.boot.docs.testing.utilities.testresttemplate;
 
 import java.net.URI;
 
-import org.springframework.boot.SpringBootConfiguration;
-import org.springframework.boot.autoconfigure.ImportAutoConfiguration;
-import org.springframework.boot.http.converter.autoconfigure.HttpMessageConvertersAutoConfiguration;
-import org.springframework.boot.jackson.autoconfigure.JacksonAutoConfiguration;
-import org.springframework.boot.tomcat.autoconfigure.servlet.TomcatServletWebServerAutoConfiguration;
-import org.springframework.boot.webmvc.autoconfigure.DispatcherServletAutoConfiguration;
+import io.github.kotlinmania.spring.boot.SpringBootConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.ImportAutoConfiguration;
+import io.github.kotlinmania.spring.boot.http.converter.autoconfigure.HttpMessageConvertersAutoConfiguration;
+import io.github.kotlinmania.spring.boot.jackson.autoconfigure.JacksonAutoConfiguration;
+import io.github.kotlinmania.spring.boot.tomcat.autoconfigure.servlet.TomcatServletWebServerAutoConfiguration;
+import io.github.kotlinmania.spring.boot.webmvc.autoconfigure.DispatcherServletAutoConfiguration;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;

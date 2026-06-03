@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.neo4j.health;
+package io.github.kotlinmania.spring.boot.neo4j.health;
 
 import org.neo4j.driver.summary.DatabaseInfo;
 import org.neo4j.driver.summary.ResultSummary;
 import org.neo4j.driver.summary.ServerInfo;
 
-import org.springframework.boot.health.contributor.Health;
+import io.github.kotlinmania.spring.boot.health.contributor.Health;
 import org.springframework.util.StringUtils;
 
 /**

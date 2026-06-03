@@ -14,18 +14,18 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.http.client.autoconfigure;
+package io.github.kotlinmania.spring.boot.http.client.autoconfigure;
 
 import java.time.Duration;
 
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.autoconfigure.AutoConfigurations;
-import org.springframework.boot.autoconfigure.ssl.SslAutoConfiguration;
-import org.springframework.boot.http.client.HttpClientSettings;
-import org.springframework.boot.http.client.HttpRedirects;
-import org.springframework.boot.http.client.InetAddressFilter;
-import org.springframework.boot.test.context.runner.ApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurations;
+import io.github.kotlinmania.spring.boot.autoconfigure.ssl.SslAutoConfiguration;
+import io.github.kotlinmania.spring.boot.http.client.HttpClientSettings;
+import io.github.kotlinmania.spring.boot.http.client.HttpRedirects;
+import io.github.kotlinmania.spring.boot.http.client.InetAddressFilter;
+import io.github.kotlinmania.spring.boot.test.context.runner.ApplicationContextRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 

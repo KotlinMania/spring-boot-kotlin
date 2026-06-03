@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.context.properties;
+package io.github.kotlinmania.spring.boot.context.properties;
 
-import org.springframework.boot.context.properties.bind.AbstractBindHandler;
-import org.springframework.boot.context.properties.bind.BindHandler;
+import io.github.kotlinmania.spring.boot.context.properties.bind.AbstractBindHandler;
+import io.github.kotlinmania.spring.boot.context.properties.bind.BindHandler;
 
 /**
  * Allows additional functionality to be applied to the {@link BindHandler} used by the

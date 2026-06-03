@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.testing.springbootapplications.autoconfiguredspringdataldap.inmemory;
+package io.github.kotlinmania.spring.boot.docs.testing.springbootapplications.autoconfiguredspringdataldap.inmemory;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.data.ldap.test.autoconfigure.DataLdapTest;
+import io.github.kotlinmania.spring.boot.data.ldap.test.autoconfigure.DataLdapTest;
 import org.springframework.ldap.core.LdapTemplate;
 
 @DataLdapTest

@@ -14,20 +14,20 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.web.server.autoconfigure.reactive;
+package io.github.kotlinmania.spring.boot.web.server.autoconfigure.reactive;
 
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.autoconfigure.AutoConfigurations;
-import org.springframework.boot.ssl.DefaultSslBundleRegistry;
-import org.springframework.boot.ssl.NoSuchSslBundleException;
-import org.springframework.boot.test.context.runner.ReactiveWebApplicationContextRunner;
-import org.springframework.boot.web.server.ConfigurableWebServerFactory;
-import org.springframework.boot.web.server.WebServerFactoryCustomizer;
-import org.springframework.boot.web.server.reactive.ConfigurableReactiveWebServerFactory;
-import org.springframework.boot.web.server.reactive.MockReactiveWebServerFactory;
-import org.springframework.boot.web.server.reactive.ReactiveWebServerFactory;
-import org.springframework.boot.web.server.reactive.context.AnnotationConfigReactiveWebServerApplicationContext;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurations;
+import io.github.kotlinmania.spring.boot.ssl.DefaultSslBundleRegistry;
+import io.github.kotlinmania.spring.boot.ssl.NoSuchSslBundleException;
+import io.github.kotlinmania.spring.boot.test.context.runner.ReactiveWebApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.web.server.ConfigurableWebServerFactory;
+import io.github.kotlinmania.spring.boot.web.server.WebServerFactoryCustomizer;
+import io.github.kotlinmania.spring.boot.web.server.reactive.ConfigurableReactiveWebServerFactory;
+import io.github.kotlinmania.spring.boot.web.server.reactive.MockReactiveWebServerFactory;
+import io.github.kotlinmania.spring.boot.web.server.reactive.ReactiveWebServerFactory;
+import io.github.kotlinmania.spring.boot.web.server.reactive.context.AnnotationConfigReactiveWebServerApplicationContext;
 import org.springframework.context.ApplicationContextException;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

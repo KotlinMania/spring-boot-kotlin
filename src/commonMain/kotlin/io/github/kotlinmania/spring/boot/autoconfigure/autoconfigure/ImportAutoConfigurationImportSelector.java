@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.autoconfigure;
+package io.github.kotlinmania.spring.boot.autoconfigure;
 
 import java.lang.annotation.Annotation;
 import java.util.ArrayList;
@@ -30,8 +30,8 @@ import java.util.Set;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.context.annotation.DeterminableImports;
-import org.springframework.boot.context.annotation.ImportCandidates;
+import io.github.kotlinmania.spring.boot.context.annotation.DeterminableImports;
+import io.github.kotlinmania.spring.boot.context.annotation.ImportCandidates;
 import org.springframework.core.annotation.AnnotatedElementUtils;
 import org.springframework.core.annotation.AnnotationAttributes;
 import org.springframework.core.annotation.AnnotationUtils;
@@ -60,7 +60,7 @@ class ImportAutoConfigurationImportSelector extends AutoConfigurationImportSelec
 	static {
 		Set<String> names = new LinkedHashSet<>();
 		names.add(ImportAutoConfiguration.class.getName());
-		names.add("org.springframework.boot.autoconfigure.test.ImportAutoConfiguration");
+		names.add("io.github.kotlinmania.spring.boot.autoconfigure.test.ImportAutoConfiguration");
 		ANNOTATION_NAMES = Collections.unmodifiableSet(names);
 	}
 

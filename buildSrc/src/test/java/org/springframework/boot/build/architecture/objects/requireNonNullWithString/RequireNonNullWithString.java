@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.build.architecture.objects.requireNonNullWithString;
+package io.github.kotlinmania.spring.boot.build.architecture.objects.requireNonNullWithString;
 
 import java.util.Objects;
 

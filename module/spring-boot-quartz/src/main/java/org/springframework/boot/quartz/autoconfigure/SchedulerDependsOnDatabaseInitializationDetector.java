@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.quartz.autoconfigure;
+package io.github.kotlinmania.spring.boot.quartz.autoconfigure;
 
 import java.util.Arrays;
 import java.util.HashSet;
@@ -22,8 +22,8 @@ import java.util.Set;
 
 import org.quartz.Scheduler;
 
-import org.springframework.boot.sql.init.dependency.AbstractBeansOfTypeDependsOnDatabaseInitializationDetector;
-import org.springframework.boot.sql.init.dependency.DependsOnDatabaseInitializationDetector;
+import io.github.kotlinmania.spring.boot.sql.init.dependency.AbstractBeansOfTypeDependsOnDatabaseInitializationDetector;
+import io.github.kotlinmania.spring.boot.sql.init.dependency.DependsOnDatabaseInitializationDetector;
 import org.springframework.scheduling.quartz.SchedulerFactoryBean;
 
 /**

@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.webclient.autoconfigure;
+package io.github.kotlinmania.spring.boot.webclient.autoconfigure;
 
 import java.util.List;
 
-import org.springframework.boot.http.codec.CodecCustomizer;
-import org.springframework.boot.webclient.WebClientCustomizer;
+import io.github.kotlinmania.spring.boot.http.codec.CodecCustomizer;
+import io.github.kotlinmania.spring.boot.webclient.WebClientCustomizer;
 import org.springframework.web.reactive.function.client.WebClient;
 
 /**

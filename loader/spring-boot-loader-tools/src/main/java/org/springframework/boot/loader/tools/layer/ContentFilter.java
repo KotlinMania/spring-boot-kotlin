@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.loader.tools.layer;
+package io.github.kotlinmania.spring.boot.loader.tools.layer;
 
 /**
  * Callback interface that can be used to filter layer contents.

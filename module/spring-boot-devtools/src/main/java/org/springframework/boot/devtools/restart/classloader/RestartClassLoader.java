@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.devtools.restart.classloader;
+package io.github.kotlinmania.spring.boot.devtools.restart.classloader;
 
 import java.io.IOException;
 import java.net.MalformedURLException;
@@ -25,7 +25,7 @@ import java.util.Enumeration;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.devtools.restart.classloader.ClassLoaderFile.Kind;
+import io.github.kotlinmania.spring.boot.devtools.restart.classloader.ClassLoaderFile.Kind;
 import org.springframework.core.SmartClassLoader;
 import org.springframework.util.Assert;
 

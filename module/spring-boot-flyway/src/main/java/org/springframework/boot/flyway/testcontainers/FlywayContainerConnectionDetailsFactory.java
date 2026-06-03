@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.flyway.testcontainers;
+package io.github.kotlinmania.spring.boot.flyway.testcontainers;
 
 import org.testcontainers.containers.JdbcDatabaseContainer;
 
-import org.springframework.boot.flyway.autoconfigure.FlywayConnectionDetails;
-import org.springframework.boot.testcontainers.service.connection.ContainerConnectionDetailsFactory;
-import org.springframework.boot.testcontainers.service.connection.ContainerConnectionSource;
-import org.springframework.boot.testcontainers.service.connection.ServiceConnection;
+import io.github.kotlinmania.spring.boot.flyway.autoconfigure.FlywayConnectionDetails;
+import io.github.kotlinmania.spring.boot.testcontainers.service.connection.ContainerConnectionDetailsFactory;
+import io.github.kotlinmania.spring.boot.testcontainers.service.connection.ContainerConnectionSource;
+import io.github.kotlinmania.spring.boot.testcontainers.service.connection.ServiceConnection;
 
 /**
  * {@link ContainerConnectionDetailsFactory} to create {@link FlywayConnectionDetails}

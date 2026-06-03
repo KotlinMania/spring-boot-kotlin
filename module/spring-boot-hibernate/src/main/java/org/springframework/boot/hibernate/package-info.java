@@ -18,6 +18,6 @@
  * Hibernate Support classes.
  */
 @NullMarked
-package org.springframework.boot.hibernate;
+package io.github.kotlinmania.spring.boot.hibernate;
 
 import org.jspecify.annotations.NullMarked;

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.context.properties.bind;
+package io.github.kotlinmania.spring.boot.context.properties.bind;
 
 import java.lang.reflect.Array;
 import java.util.ArrayList;
@@ -23,8 +23,8 @@ import java.util.function.Supplier;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.context.properties.bind.Binder.Context;
-import org.springframework.boot.context.properties.source.ConfigurationPropertyName;
+import io.github.kotlinmania.spring.boot.context.properties.bind.Binder.Context;
+import io.github.kotlinmania.spring.boot.context.properties.source.ConfigurationPropertyName;
 import org.springframework.core.ResolvableType;
 
 /**

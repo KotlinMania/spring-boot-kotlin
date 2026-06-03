@@ -33,4 +33,4 @@ runs:
     - name: Await
       uses: ./.github/actions/await-http-resource
       with:
-        url: ${{ format('https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot/{0}/spring-boot-{0}.jar', inputs.spring-boot-version) }}
+        url: ${{ format('https://repo.maven.apache.org/maven2/io.github.kotlinmania.spring.boot.spring-boot/{0}/spring-boot-{0}.jar', inputs.spring-boot-version) }}

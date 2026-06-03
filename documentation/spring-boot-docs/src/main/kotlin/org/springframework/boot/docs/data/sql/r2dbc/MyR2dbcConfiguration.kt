@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.data.sql.r2dbc
+package io.github.kotlinmania.spring.boot.docs.data.sql.r2dbc
 
 import io.r2dbc.spi.ConnectionFactoryOptions
-import org.springframework.boot.r2dbc.autoconfigure.ConnectionFactoryOptionsBuilderCustomizer
+import io.github.kotlinmania.spring.boot.r2dbc.autoconfigure.ConnectionFactoryOptionsBuilderCustomizer
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
 

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.context.properties.bind;
+package io.github.kotlinmania.spring.boot.context.properties.bind;
 
 import java.util.ArrayDeque;
 import java.util.Arrays;
@@ -34,14 +34,14 @@ import org.jspecify.annotations.Nullable;
 
 import org.springframework.beans.PropertyEditorRegistry;
 import org.springframework.beans.factory.config.ConfigurableListableBeanFactory;
-import org.springframework.boot.context.properties.bind.Bindable.BindRestriction;
-import org.springframework.boot.context.properties.source.ConfigurationProperty;
-import org.springframework.boot.context.properties.source.ConfigurationPropertyCaching;
-import org.springframework.boot.context.properties.source.ConfigurationPropertyName;
-import org.springframework.boot.context.properties.source.ConfigurationPropertySource;
-import org.springframework.boot.context.properties.source.ConfigurationPropertySources;
-import org.springframework.boot.context.properties.source.ConfigurationPropertyState;
-import org.springframework.boot.convert.ApplicationConversionService;
+import io.github.kotlinmania.spring.boot.context.properties.bind.Bindable.BindRestriction;
+import io.github.kotlinmania.spring.boot.context.properties.source.ConfigurationProperty;
+import io.github.kotlinmania.spring.boot.context.properties.source.ConfigurationPropertyCaching;
+import io.github.kotlinmania.spring.boot.context.properties.source.ConfigurationPropertyName;
+import io.github.kotlinmania.spring.boot.context.properties.source.ConfigurationPropertySource;
+import io.github.kotlinmania.spring.boot.context.properties.source.ConfigurationPropertySources;
+import io.github.kotlinmania.spring.boot.context.properties.source.ConfigurationPropertyState;
+import io.github.kotlinmania.spring.boot.convert.ApplicationConversionService;
 import org.springframework.core.convert.ConversionService;
 import org.springframework.core.convert.ConverterNotFoundException;
 import org.springframework.core.env.Environment;

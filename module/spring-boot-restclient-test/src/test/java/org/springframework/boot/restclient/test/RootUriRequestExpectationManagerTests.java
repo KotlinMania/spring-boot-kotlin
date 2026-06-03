@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.restclient.test;
+package io.github.kotlinmania.spring.boot.restclient.test;
 
 import java.net.URI;
 
@@ -24,7 +24,7 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 
-import org.springframework.boot.restclient.RestTemplateBuilder;
+import io.github.kotlinmania.spring.boot.restclient.RestTemplateBuilder;
 import org.springframework.http.client.ClientHttpRequest;
 import org.springframework.http.client.support.HttpRequestWrapper;
 import org.springframework.test.web.client.ExpectedCount;

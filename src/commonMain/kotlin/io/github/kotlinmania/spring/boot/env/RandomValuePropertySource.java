@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.env;
+package io.github.kotlinmania.spring.boot.env;
 
 import java.security.SecureRandom;
 import java.util.HexFormat;

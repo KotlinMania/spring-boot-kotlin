@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.h2console.autoconfigure;
+package io.github.kotlinmania.spring.boot.h2console.autoconfigure;
 
 import java.sql.Connection;
 import java.util.List;
@@ -28,15 +28,15 @@ import org.h2.server.web.JakartaWebServlet;
 import org.jspecify.annotations.Nullable;
 
 import org.springframework.beans.factory.ObjectProvider;
-import org.springframework.boot.autoconfigure.AutoConfiguration;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnBooleanProperty;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnWebApplication;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnWebApplication.Type;
-import org.springframework.boot.context.properties.EnableConfigurationProperties;
-import org.springframework.boot.h2console.autoconfigure.H2ConsoleProperties.Settings;
-import org.springframework.boot.web.servlet.ServletRegistrationBean;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.EnableAutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnBooleanProperty;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnClass;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnWebApplication;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnWebApplication.Type;
+import io.github.kotlinmania.spring.boot.context.properties.EnableConfigurationProperties;
+import io.github.kotlinmania.spring.boot.h2console.autoconfigure.H2ConsoleProperties.Settings;
+import io.github.kotlinmania.spring.boot.web.servlet.ServletRegistrationBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.core.log.LogMessage;
 

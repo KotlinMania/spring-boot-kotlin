@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.artemis.autoconfigure;
+package io.github.kotlinmania.spring.boot.artemis.autoconfigure;
 
 import java.io.File;
 

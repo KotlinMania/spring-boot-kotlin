@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.jdbc.autoconfigure;
+package io.github.kotlinmania.spring.boot.jdbc.autoconfigure;
 
 import java.sql.SQLException;
 
@@ -25,7 +25,7 @@ import oracle.ucp.util.OpaqueString;
 import org.junit.jupiter.api.Test;
 
 import org.springframework.beans.factory.ObjectProvider;
-import org.springframework.boot.jdbc.DatabaseDriver;
+import io.github.kotlinmania.spring.boot.jdbc.DatabaseDriver;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.Mockito.mock;

@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.grpc.server.health;
+package io.github.kotlinmania.spring.boot.grpc.server.health;
 
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.health.contributor.Status;
+import io.github.kotlinmania.spring.boot.health.contributor.Status;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

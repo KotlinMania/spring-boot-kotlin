@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.buildpack.platform.json;
+package io.github.kotlinmania.spring.boot.buildpack.platform.json;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -23,7 +23,7 @@ import java.lang.invoke.MethodHandles;
 import org.junit.jupiter.api.Test;
 import tools.jackson.databind.JsonNode;
 
-import org.springframework.boot.buildpack.platform.json.MappedObjectTests.TestMappedObject.Person;
+import io.github.kotlinmania.spring.boot.buildpack.platform.json.MappedObjectTests.TestMappedObject.Person;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

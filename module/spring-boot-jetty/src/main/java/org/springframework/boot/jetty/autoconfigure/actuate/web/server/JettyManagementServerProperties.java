@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.jetty.autoconfigure.actuate.web.server;
+package io.github.kotlinmania.spring.boot.jetty.autoconfigure.actuate.web.server;
 
-import org.springframework.boot.context.properties.ConfigurationProperties;
+import io.github.kotlinmania.spring.boot.context.properties.ConfigurationProperties;
 
 /**
  * Properties for a Jetty-based management server.

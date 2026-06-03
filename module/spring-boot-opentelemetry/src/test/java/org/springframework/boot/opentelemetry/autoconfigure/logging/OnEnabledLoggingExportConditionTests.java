@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.opentelemetry.autoconfigure.logging;
+package io.github.kotlinmania.spring.boot.opentelemetry.autoconfigure.logging;
 
 import java.util.Collections;
 import java.util.Map;
 
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.autoconfigure.condition.ConditionOutcome;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionOutcome;
 import org.springframework.context.annotation.ConditionContext;
 import org.springframework.core.type.AnnotatedTypeMetadata;
 import org.springframework.mock.env.MockEnvironment;

@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.autoconfigure;
+package io.github.kotlinmania.spring.boot.autoconfigure;
 
 import org.assertj.core.api.Condition;
 import org.assertj.core.description.TextDescription;
 
 import org.springframework.beans.factory.config.ConfigurableListableBeanFactory;
-import org.springframework.boot.autoconfigure.condition.ConditionEvaluationReport;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionEvaluationReport;
 import org.springframework.context.ApplicationContext;
 
 /**

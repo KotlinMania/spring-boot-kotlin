@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.testing.springbootapplications.userconfigurationandslicing;
+package io.github.kotlinmania.spring.boot.docs.testing.springbootapplications.userconfigurationandslicing;
 
-import org.springframework.boot.autoconfigure.SpringBootApplication;
+import io.github.kotlinmania.spring.boot.autoconfigure.SpringBootApplication;
 import org.springframework.data.mongodb.config.EnableMongoAuditing;
 
 @SpringBootApplication

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.r2dbc.autoconfigure;
+package io.github.kotlinmania.spring.boot.r2dbc.autoconfigure;
 
 import java.time.Duration;
 import java.util.LinkedHashMap;
@@ -24,7 +24,7 @@ import java.util.UUID;
 import io.r2dbc.spi.ValidationDepth;
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.context.properties.ConfigurationProperties;
+import io.github.kotlinmania.spring.boot.context.properties.ConfigurationProperties;
 
 /**
  * Configuration properties for R2DBC.

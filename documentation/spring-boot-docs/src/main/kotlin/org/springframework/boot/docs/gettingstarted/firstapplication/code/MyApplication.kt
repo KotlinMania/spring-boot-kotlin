@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.gettingstarted.firstapplication.code
+package io.github.kotlinmania.spring.boot.docs.gettingstarted.firstapplication.code
 
-import org.springframework.boot.autoconfigure.SpringBootApplication
-import org.springframework.boot.runApplication
+import io.github.kotlinmania.spring.boot.autoconfigure.SpringBootApplication
+import io.github.kotlinmania.spring.boot.runApplication
 import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RestController
 

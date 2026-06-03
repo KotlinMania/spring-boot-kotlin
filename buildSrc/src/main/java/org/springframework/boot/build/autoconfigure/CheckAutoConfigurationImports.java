@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.build.autoconfigure;
+package io.github.kotlinmania.spring.boot.build.autoconfigure;
 
 import java.io.File;
 import java.io.IOException;
@@ -35,7 +35,7 @@ import org.gradle.language.base.plugins.LifecycleBasePlugin;
 
 /**
  * Task to check the contents of a project's
- * {@code META-INF/spring/org.springframework.boot.autoconfigure.AutoConfiguration.imports}
+ * {@code META-INF/spring/io.github.kotlinmania.spring.boot.autoconfigure.AutoConfiguration.imports}
  * file.
  *
  * @author Andy Wilkinson

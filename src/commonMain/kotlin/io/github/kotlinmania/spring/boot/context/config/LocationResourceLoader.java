@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.context.config;
+package io.github.kotlinmania.spring.boot.context.config;
 
 import java.io.File;
 import java.io.FilenameFilter;

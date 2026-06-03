@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.activemq.autoconfigure;
+package io.github.kotlinmania.spring.boot.activemq.autoconfigure;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.autoconfigure.service.connection.ConnectionDetails;
+import io.github.kotlinmania.spring.boot.autoconfigure.service.connection.ConnectionDetails;
 
 /**
  * Details required to establish a connection to an ActiveMQ service.

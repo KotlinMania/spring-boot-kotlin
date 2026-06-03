@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.health.actuate.endpoint;
+package io.github.kotlinmania.spring.boot.health.actuate.endpoint;
 
 import java.util.LinkedHashSet;
 import java.util.Map;
@@ -22,7 +22,7 @@ import java.util.Set;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.actuate.endpoint.web.WebServerNamespace;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.web.WebServerNamespace;
 import org.springframework.util.Assert;
 
 /**

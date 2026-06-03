@@ -14,15 +14,15 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.sql.autoconfigure.init;
+package io.github.kotlinmania.spring.boot.sql.autoconfigure.init;
 
 import java.nio.charset.Charset;
 import java.util.List;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.boot.sql.init.DatabaseInitializationMode;
+import io.github.kotlinmania.spring.boot.context.properties.ConfigurationProperties;
+import io.github.kotlinmania.spring.boot.sql.init.DatabaseInitializationMode;
 
 /**
  * {@link ConfigurationProperties Configuration properties} for initializing an SQL

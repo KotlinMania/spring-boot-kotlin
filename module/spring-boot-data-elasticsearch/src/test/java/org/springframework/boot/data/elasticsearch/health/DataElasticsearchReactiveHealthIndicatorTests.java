@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.data.elasticsearch.health;
+package io.github.kotlinmania.spring.boot.data.elasticsearch.health;
 
 import java.time.Duration;
 import java.util.Map;
@@ -30,9 +30,9 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.health.contributor.Health;
-import org.springframework.boot.health.contributor.Status;
-import org.springframework.boot.testsupport.junit.EnabledOnLocale;
+import io.github.kotlinmania.spring.boot.health.contributor.Health;
+import io.github.kotlinmania.spring.boot.health.contributor.Status;
+import io.github.kotlinmania.spring.boot.testsupport.junit.EnabledOnLocale;
 import org.springframework.data.elasticsearch.client.elc.ReactiveElasticsearchClient;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;

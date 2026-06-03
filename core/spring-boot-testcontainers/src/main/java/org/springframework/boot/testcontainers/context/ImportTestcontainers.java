@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.testcontainers.context;
+package io.github.kotlinmania.spring.boot.testcontainers.context;
 
 import java.lang.annotation.Documented;
 import java.lang.annotation.ElementType;
@@ -24,8 +24,8 @@ import java.lang.annotation.Target;
 
 import org.testcontainers.containers.Container;
 
-import org.springframework.boot.autoconfigure.ImportAutoConfiguration;
-import org.springframework.boot.testcontainers.properties.TestcontainersPropertySourceAutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.ImportAutoConfiguration;
+import io.github.kotlinmania.spring.boot.testcontainers.properties.TestcontainersPropertySourceAutoConfiguration;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Import;
 

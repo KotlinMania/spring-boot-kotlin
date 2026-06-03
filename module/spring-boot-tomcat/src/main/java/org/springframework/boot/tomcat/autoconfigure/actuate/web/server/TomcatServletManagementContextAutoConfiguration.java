@@ -14,19 +14,19 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.tomcat.autoconfigure.actuate.web.server;
+package io.github.kotlinmania.spring.boot.tomcat.autoconfigure.actuate.web.server;
 
-import org.springframework.boot.WebApplicationType;
-import org.springframework.boot.actuate.autoconfigure.web.server.ConditionalOnManagementPort;
-import org.springframework.boot.actuate.autoconfigure.web.server.ManagementContextFactory;
-import org.springframework.boot.actuate.autoconfigure.web.server.ManagementPortType;
-import org.springframework.boot.autoconfigure.AutoConfiguration;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnWebApplication;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnWebApplication.Type;
-import org.springframework.boot.tomcat.autoconfigure.TomcatWebServerConfiguration;
-import org.springframework.boot.tomcat.autoconfigure.servlet.TomcatServletWebServerAutoConfiguration;
-import org.springframework.boot.web.server.servlet.ServletWebServerFactory;
+import io.github.kotlinmania.spring.boot.WebApplicationType;
+import io.github.kotlinmania.spring.boot.actuate.autoconfigure.web.server.ConditionalOnManagementPort;
+import io.github.kotlinmania.spring.boot.actuate.autoconfigure.web.server.ManagementContextFactory;
+import io.github.kotlinmania.spring.boot.actuate.autoconfigure.web.server.ManagementPortType;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnClass;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnWebApplication;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnWebApplication.Type;
+import io.github.kotlinmania.spring.boot.tomcat.autoconfigure.TomcatWebServerConfiguration;
+import io.github.kotlinmania.spring.boot.tomcat.autoconfigure.servlet.TomcatServletWebServerAutoConfiguration;
+import io.github.kotlinmania.spring.boot.web.server.servlet.ServletWebServerFactory;
 import org.springframework.context.annotation.Bean;
 
 /**

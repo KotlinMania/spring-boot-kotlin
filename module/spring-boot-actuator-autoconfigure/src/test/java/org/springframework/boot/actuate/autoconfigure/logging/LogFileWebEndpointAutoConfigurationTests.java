@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.actuate.autoconfigure.logging;
+package io.github.kotlinmania.spring.boot.actuate.autoconfigure.logging;
 
 import java.io.File;
 import java.io.IOException;
@@ -23,9 +23,9 @@ import java.nio.file.Path;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.io.TempDir;
 
-import org.springframework.boot.actuate.logging.LogFileWebEndpoint;
-import org.springframework.boot.autoconfigure.AutoConfigurations;
-import org.springframework.boot.test.context.runner.WebApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.actuate.logging.LogFileWebEndpoint;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurations;
+import io.github.kotlinmania.spring.boot.test.context.runner.WebApplicationContextRunner;
 import org.springframework.core.io.Resource;
 import org.springframework.util.FileCopyUtils;
 

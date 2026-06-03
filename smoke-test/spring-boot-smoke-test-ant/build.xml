@@ -1,6 +1,6 @@
 <project
 	xmlns:ivy="antlib:org.apache.ivy.ant"
-	xmlns:spring-boot="antlib:org.springframework.boot.ant"
+	xmlns:spring-boot="antlib:io.github.kotlinmania.spring.boot.ant"
 	name="spring-boot-smoke-test-ant"
 	default="build">
 
@@ -67,7 +67,7 @@
 			</mappedresources>
 			<zipfileset src="${lib.dir}/loader/spring-boot-loader-jar-${ant-spring-boot.version}.jar" />
 			<manifest>
-				<attribute name="Main-Class" value="org.springframework.boot.loader.launch.JarLauncher" />
+				<attribute name="Main-Class" value="io.github.kotlinmania.spring.boot.loader.launch.JarLauncher" />
 				<attribute name="Start-Class" value="${start-class}" />
 			</manifest>
 		</jar>

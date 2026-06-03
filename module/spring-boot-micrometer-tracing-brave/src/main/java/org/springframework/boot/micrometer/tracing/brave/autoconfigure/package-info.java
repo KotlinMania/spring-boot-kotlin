@@ -18,6 +18,6 @@
  * Auto-configuration for Micrometer Tracing with Brave.
  */
 @NullMarked
-package org.springframework.boot.micrometer.tracing.brave.autoconfigure;
+package io.github.kotlinmania.spring.boot.micrometer.tracing.brave.autoconfigure;
 
 import org.jspecify.annotations.NullMarked;

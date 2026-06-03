@@ -14,17 +14,17 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.actuate.autoconfigure.endpoint.web;
+package io.github.kotlinmania.spring.boot.actuate.autoconfigure.endpoint.web;
 
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.SpringBootConfiguration;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
-import org.springframework.boot.context.annotation.UserConfigurations;
-import org.springframework.boot.health.actuate.endpoint.HealthEndpointWebExtension;
-import org.springframework.boot.health.actuate.endpoint.ReactiveHealthEndpointWebExtension;
-import org.springframework.boot.test.context.runner.ReactiveWebApplicationContextRunner;
-import org.springframework.boot.test.context.runner.WebApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.SpringBootConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.EnableAutoConfiguration;
+import io.github.kotlinmania.spring.boot.context.annotation.UserConfigurations;
+import io.github.kotlinmania.spring.boot.health.actuate.endpoint.HealthEndpointWebExtension;
+import io.github.kotlinmania.spring.boot.health.actuate.endpoint.ReactiveHealthEndpointWebExtension;
+import io.github.kotlinmania.spring.boot.test.context.runner.ReactiveWebApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.test.context.runner.WebApplicationContextRunner;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

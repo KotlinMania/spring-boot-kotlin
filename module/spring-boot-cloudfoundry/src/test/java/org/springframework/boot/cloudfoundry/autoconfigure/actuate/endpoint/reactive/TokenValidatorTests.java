@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.cloudfoundry.autoconfigure.actuate.endpoint.reactive;
+package io.github.kotlinmania.spring.boot.cloudfoundry.autoconfigure.actuate.endpoint.reactive;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
@@ -40,9 +40,9 @@ import reactor.core.publisher.Mono;
 import reactor.test.StepVerifier;
 import reactor.test.publisher.PublisherProbe;
 
-import org.springframework.boot.cloudfoundry.autoconfigure.actuate.endpoint.CloudFoundryAuthorizationException;
-import org.springframework.boot.cloudfoundry.autoconfigure.actuate.endpoint.CloudFoundryAuthorizationException.Reason;
-import org.springframework.boot.cloudfoundry.autoconfigure.actuate.endpoint.Token;
+import io.github.kotlinmania.spring.boot.cloudfoundry.autoconfigure.actuate.endpoint.CloudFoundryAuthorizationException;
+import io.github.kotlinmania.spring.boot.cloudfoundry.autoconfigure.actuate.endpoint.CloudFoundryAuthorizationException.Reason;
+import io.github.kotlinmania.spring.boot.cloudfoundry.autoconfigure.actuate.endpoint.Token;
 import org.springframework.test.util.ReflectionTestUtils;
 import org.springframework.util.StreamUtils;
 

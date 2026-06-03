@@ -18,6 +18,6 @@
  * Auto-configuration for the cache abstraction.
  */
 @NullMarked
-package org.springframework.boot.cache.autoconfigure;
+package io.github.kotlinmania.spring.boot.cache.autoconfigure;
 
 import org.jspecify.annotations.NullMarked;

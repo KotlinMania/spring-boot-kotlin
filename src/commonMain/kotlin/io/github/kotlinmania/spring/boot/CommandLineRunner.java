@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot;
+package io.github.kotlinmania.spring.boot.
 
 import org.springframework.core.Ordered;
 import org.springframework.core.annotation.Order;

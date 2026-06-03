@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.features.taskexecutionandscheduling.builder;
+package io.github.kotlinmania.spring.boot.docs.features.taskexecutionandscheduling.builder;
 
-import org.springframework.boot.task.SimpleAsyncTaskExecutorBuilder;
+import io.github.kotlinmania.spring.boot.task.SimpleAsyncTaskExecutorBuilder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.task.SimpleAsyncTaskExecutor;

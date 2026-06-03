@@ -18,6 +18,6 @@
  * Auto-configuration for logging.
  */
 @NullMarked
-package org.springframework.boot.autoconfigure.logging;
+package io.github.kotlinmania.spring.boot.autoconfigure.logging;
 
 import org.jspecify.annotations.NullMarked;

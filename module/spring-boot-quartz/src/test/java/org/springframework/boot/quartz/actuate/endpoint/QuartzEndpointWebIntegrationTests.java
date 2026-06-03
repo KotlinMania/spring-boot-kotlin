@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.quartz.actuate.endpoint;
+package io.github.kotlinmania.spring.boot.quartz.actuate.endpoint;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -43,8 +43,8 @@ import org.quartz.TriggerBuilder;
 import org.quartz.TriggerKey;
 import org.quartz.impl.matchers.GroupMatcher;
 
-import org.springframework.boot.actuate.endpoint.Show;
-import org.springframework.boot.actuate.endpoint.web.test.WebEndpointTest;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.Show;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.web.test.WebEndpointTest;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.MediaType;

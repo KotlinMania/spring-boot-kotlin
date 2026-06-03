@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.couchbase.autoconfigure;
+package io.github.kotlinmania.spring.boot.couchbase.autoconfigure;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -39,25 +39,25 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import org.jspecify.annotations.Nullable;
 
 import org.springframework.beans.factory.ObjectProvider;
-import org.springframework.boot.autoconfigure.AutoConfiguration;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
-import org.springframework.boot.autoconfigure.condition.AnyNestedCondition;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnSingleCandidate;
-import org.springframework.boot.context.properties.EnableConfigurationProperties;
-import org.springframework.boot.couchbase.autoconfigure.CouchbaseAutoConfiguration.CouchbaseCondition;
-import org.springframework.boot.couchbase.autoconfigure.CouchbaseProperties.Authentication.Jks;
-import org.springframework.boot.couchbase.autoconfigure.CouchbaseProperties.Authentication.Pem;
-import org.springframework.boot.couchbase.autoconfigure.CouchbaseProperties.Ssl;
-import org.springframework.boot.couchbase.autoconfigure.CouchbaseProperties.Timeouts;
-import org.springframework.boot.io.ApplicationResourceLoader;
-import org.springframework.boot.ssl.SslBundle;
-import org.springframework.boot.ssl.SslBundles;
-import org.springframework.boot.ssl.pem.PemSslStore;
-import org.springframework.boot.ssl.pem.PemSslStoreDetails;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.EnableAutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.AnyNestedCondition;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnBean;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnClass;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnMissingBean;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnProperty;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnSingleCandidate;
+import io.github.kotlinmania.spring.boot.context.properties.EnableConfigurationProperties;
+import io.github.kotlinmania.spring.boot.couchbase.autoconfigure.CouchbaseAutoConfiguration.CouchbaseCondition;
+import io.github.kotlinmania.spring.boot.couchbase.autoconfigure.CouchbaseProperties.Authentication.Jks;
+import io.github.kotlinmania.spring.boot.couchbase.autoconfigure.CouchbaseProperties.Authentication.Pem;
+import io.github.kotlinmania.spring.boot.couchbase.autoconfigure.CouchbaseProperties.Ssl;
+import io.github.kotlinmania.spring.boot.couchbase.autoconfigure.CouchbaseProperties.Timeouts;
+import io.github.kotlinmania.spring.boot.io.ApplicationResourceLoader;
+import io.github.kotlinmania.spring.boot.ssl.SslBundle;
+import io.github.kotlinmania.spring.boot.ssl.SslBundles;
+import io.github.kotlinmania.spring.boot.ssl.pem.PemSslStore;
+import io.github.kotlinmania.spring.boot.ssl.pem.PemSslStoreDetails;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Conditional;
 import org.springframework.context.annotation.Configuration;
@@ -79,7 +79,7 @@ import org.springframework.util.StringUtils;
  * @author Scott Frederick
  * @since 4.0.0
  */
-@AutoConfiguration(afterName = "org.springframework.boot.jackson.autoconfigure.JacksonAutoConfiguration")
+@AutoConfiguration(afterName = "io.github.kotlinmania.spring.boot.jackson.autoconfigure.JacksonAutoConfiguration")
 @ConditionalOnClass(Cluster.class)
 @Conditional(CouchbaseCondition.class)
 @EnableConfigurationProperties(CouchbaseProperties.class)

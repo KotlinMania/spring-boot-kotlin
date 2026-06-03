@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.jarmode.tools;
+package io.github.kotlinmania.spring.boot.jarmode.tools;
 
 import java.io.File;
 import java.io.FileOutputStream;

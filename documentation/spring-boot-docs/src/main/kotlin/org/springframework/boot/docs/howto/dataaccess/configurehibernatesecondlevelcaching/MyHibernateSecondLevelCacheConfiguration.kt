@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.howto.dataaccess.configurehibernatesecondlevelcaching
+package io.github.kotlinmania.spring.boot.docs.howto.dataaccess.configurehibernatesecondlevelcaching
 
 import org.hibernate.cache.jcache.ConfigSettings
-import org.springframework.boot.hibernate.autoconfigure.HibernatePropertiesCustomizer
+import io.github.kotlinmania.spring.boot.hibernate.autoconfigure.HibernatePropertiesCustomizer
 import org.springframework.cache.jcache.JCacheCacheManager
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration

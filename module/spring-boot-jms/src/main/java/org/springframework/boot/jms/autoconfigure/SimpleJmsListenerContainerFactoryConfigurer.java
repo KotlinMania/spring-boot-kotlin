@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.jms.autoconfigure;
+package io.github.kotlinmania.spring.boot.jms.autoconfigure;
 
 import org.springframework.jms.config.SimpleJmsListenerContainerFactory;
 import org.springframework.jms.listener.DefaultMessageListenerContainer;

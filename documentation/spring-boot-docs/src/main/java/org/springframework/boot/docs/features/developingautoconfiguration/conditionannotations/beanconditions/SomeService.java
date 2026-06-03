@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.features.developingautoconfiguration.conditionannotations.beanconditions;
+package io.github.kotlinmania.spring.boot.docs.features.developingautoconfiguration.conditionannotations.beanconditions;
 
 public class SomeService {
 

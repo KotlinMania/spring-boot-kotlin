@@ -14,16 +14,16 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.ldap.autoconfigure;
+package io.github.kotlinmania.spring.boot.ldap.autoconfigure;
 
 import javax.naming.Name;
 
 import org.assertj.core.api.InstanceOfAssertFactories;
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.autoconfigure.AutoConfigurations;
-import org.springframework.boot.convert.ApplicationConversionService;
-import org.springframework.boot.test.context.runner.ApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurations;
+import io.github.kotlinmania.spring.boot.convert.ApplicationConversionService;
+import io.github.kotlinmania.spring.boot.test.context.runner.ApplicationContextRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;

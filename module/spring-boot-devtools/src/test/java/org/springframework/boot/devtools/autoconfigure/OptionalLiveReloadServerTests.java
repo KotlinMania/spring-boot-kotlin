@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.devtools.autoconfigure;
+package io.github.kotlinmania.spring.boot.devtools.autoconfigure;
 
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.devtools.livereload.LiveReloadServer;
+import io.github.kotlinmania.spring.boot.devtools.livereload.LiveReloadServer;
 
 import static org.mockito.BDDMockito.then;
 import static org.mockito.BDDMockito.willThrow;

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.mustache.reactive.view;
+package io.github.kotlinmania.spring.boot.mustache.reactive.view;
 
 import java.time.Duration;
 import java.util.Locale;
@@ -22,7 +22,7 @@ import java.util.Locale;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.testsupport.classpath.resources.WithResource;
+import io.github.kotlinmania.spring.boot.testsupport.classpath.resources.WithResource;
 import org.springframework.context.support.GenericApplicationContext;
 
 import static org.assertj.core.api.Assertions.assertThat;

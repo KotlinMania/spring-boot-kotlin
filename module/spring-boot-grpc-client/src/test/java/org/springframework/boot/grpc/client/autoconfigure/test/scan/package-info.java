@@ -15,6 +15,6 @@
  */
 
 @NullMarked
-package org.springframework.boot.grpc.client.autoconfigure.test.scan;
+package io.github.kotlinmania.spring.boot.grpc.client.autoconfigure.test.scan;
 
 import org.jspecify.annotations.NullMarked;

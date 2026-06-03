@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.testing.springbootapplications.autoconfiguredspringrestdocs.withmockmvc.hamcrest;
+package io.github.kotlinmania.spring.boot.docs.testing.springbootapplications.autoconfiguredspringrestdocs.withmockmvc.hamcrest;
 
 class UserController {
 

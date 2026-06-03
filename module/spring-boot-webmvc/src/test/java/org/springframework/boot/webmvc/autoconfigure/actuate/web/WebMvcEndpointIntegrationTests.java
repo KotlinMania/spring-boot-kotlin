@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.webmvc.autoconfigure.actuate.web;
+package io.github.kotlinmania.spring.boot.webmvc.autoconfigure.actuate.web;
 
 import java.util.function.Supplier;
 
@@ -28,22 +28,22 @@ import tools.jackson.databind.jsontype.TypeSerializer;
 import tools.jackson.databind.module.SimpleModule;
 import tools.jackson.databind.ser.std.StdScalarSerializer;
 
-import org.springframework.boot.actuate.autoconfigure.audit.AuditAutoConfiguration;
-import org.springframework.boot.actuate.autoconfigure.beans.BeansEndpointAutoConfiguration;
-import org.springframework.boot.actuate.autoconfigure.endpoint.EndpointAutoConfiguration;
-import org.springframework.boot.actuate.autoconfigure.endpoint.web.WebEndpointAutoConfiguration;
-import org.springframework.boot.actuate.autoconfigure.web.server.ManagementContextAutoConfiguration;
-import org.springframework.boot.actuate.endpoint.jackson.EndpointJsonMapper;
-import org.springframework.boot.autoconfigure.ImportAutoConfiguration;
-import org.springframework.boot.autoconfigure.context.PropertyPlaceholderAutoConfiguration;
-import org.springframework.boot.http.converter.autoconfigure.HttpMessageConvertersAutoConfiguration;
-import org.springframework.boot.jackson.autoconfigure.JacksonAutoConfiguration;
-import org.springframework.boot.servlet.autoconfigure.actuate.web.ServletManagementContextAutoConfiguration;
-import org.springframework.boot.test.util.TestPropertyValues;
-import org.springframework.boot.web.context.servlet.AnnotationConfigServletWebApplicationContext;
-import org.springframework.boot.webmvc.actuate.endpoint.web.WebMvcEndpointHandlerMapping;
-import org.springframework.boot.webmvc.autoconfigure.DispatcherServletAutoConfiguration;
-import org.springframework.boot.webmvc.autoconfigure.WebMvcAutoConfiguration;
+import io.github.kotlinmania.spring.boot.actuate.autoconfigure.audit.AuditAutoConfiguration;
+import io.github.kotlinmania.spring.boot.actuate.autoconfigure.beans.BeansEndpointAutoConfiguration;
+import io.github.kotlinmania.spring.boot.actuate.autoconfigure.endpoint.EndpointAutoConfiguration;
+import io.github.kotlinmania.spring.boot.actuate.autoconfigure.endpoint.web.WebEndpointAutoConfiguration;
+import io.github.kotlinmania.spring.boot.actuate.autoconfigure.web.server.ManagementContextAutoConfiguration;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.jackson.EndpointJsonMapper;
+import io.github.kotlinmania.spring.boot.autoconfigure.ImportAutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.context.PropertyPlaceholderAutoConfiguration;
+import io.github.kotlinmania.spring.boot.http.converter.autoconfigure.HttpMessageConvertersAutoConfiguration;
+import io.github.kotlinmania.spring.boot.jackson.autoconfigure.JacksonAutoConfiguration;
+import io.github.kotlinmania.spring.boot.servlet.autoconfigure.actuate.web.ServletManagementContextAutoConfiguration;
+import io.github.kotlinmania.spring.boot.test.util.TestPropertyValues;
+import io.github.kotlinmania.spring.boot.web.context.servlet.AnnotationConfigServletWebApplicationContext;
+import io.github.kotlinmania.spring.boot.webmvc.actuate.endpoint.web.WebMvcEndpointHandlerMapping;
+import io.github.kotlinmania.spring.boot.webmvc.autoconfigure.DispatcherServletAutoConfiguration;
+import io.github.kotlinmania.spring.boot.webmvc.autoconfigure.WebMvcAutoConfiguration;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpStatus;
@@ -120,26 +120,26 @@ class WebMvcEndpointIntegrationTests {
 
 	}
 
-	@org.springframework.boot.actuate.endpoint.web.annotation.ServletEndpoint(id = "servlet")
+	@io.github.kotlinmania.spring.boot.actuate.endpoint.web.annotation.ServletEndpoint(id = "servlet")
 	@SuppressWarnings({ "deprecation", "removal" })
 	static class TestServletEndpoint
-			implements Supplier<org.springframework.boot.actuate.endpoint.web.EndpointServlet> {
+			implements Supplier<io.github.kotlinmania.spring.boot.actuate.endpoint.web.EndpointServlet> {
 
 		@Override
-		public org.springframework.boot.actuate.endpoint.web.EndpointServlet get() {
-			return new org.springframework.boot.actuate.endpoint.web.EndpointServlet(new HttpServlet() {
+		public io.github.kotlinmania.spring.boot.actuate.endpoint.web.EndpointServlet get() {
+			return new io.github.kotlinmania.spring.boot.actuate.endpoint.web.EndpointServlet(new HttpServlet() {
 			});
 		}
 
 	}
 
-	@org.springframework.boot.actuate.endpoint.web.annotation.ControllerEndpoint(id = "controller")
+	@io.github.kotlinmania.spring.boot.actuate.endpoint.web.annotation.ControllerEndpoint(id = "controller")
 	@SuppressWarnings("removal")
 	static class TestControllerEndpoint {
 
 	}
 
-	@org.springframework.boot.actuate.endpoint.web.annotation.RestControllerEndpoint(id = "restcontroller")
+	@io.github.kotlinmania.spring.boot.actuate.endpoint.web.annotation.RestControllerEndpoint(id = "restcontroller")
 	@SuppressWarnings("removal")
 	static class TestRestControllerEndpoint {
 

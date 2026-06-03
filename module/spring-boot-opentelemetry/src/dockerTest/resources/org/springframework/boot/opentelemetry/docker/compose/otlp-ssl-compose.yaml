@@ -5,4 +5,4 @@ services:
       - '4317'
       - '4318'
     labels:
-      - 'org.springframework.boot.sslbundle.pem.truststore.certificate=ca.crt'
+      - 'io.github.kotlinmania.spring.boot.sslbundle.pem.truststore.certificate=ca.crt'

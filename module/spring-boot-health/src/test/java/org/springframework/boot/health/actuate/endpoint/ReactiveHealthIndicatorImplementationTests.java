@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.health.actuate.endpoint;
+package io.github.kotlinmania.spring.boot.health.actuate.endpoint;
 
 import java.time.Duration;
 
@@ -23,10 +23,10 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import reactor.core.publisher.Mono;
 import reactor.test.StepVerifier;
 
-import org.springframework.boot.health.contributor.AbstractReactiveHealthIndicator;
-import org.springframework.boot.health.contributor.Health;
-import org.springframework.boot.test.system.CapturedOutput;
-import org.springframework.boot.test.system.OutputCaptureExtension;
+import io.github.kotlinmania.spring.boot.health.contributor.AbstractReactiveHealthIndicator;
+import io.github.kotlinmania.spring.boot.health.contributor.Health;
+import io.github.kotlinmania.spring.boot.test.system.CapturedOutput;
+import io.github.kotlinmania.spring.boot.test.system.OutputCaptureExtension;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

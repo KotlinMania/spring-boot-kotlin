@@ -14,15 +14,15 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.artemis.docker.compose;
+package io.github.kotlinmania.spring.boot.artemis.docker.compose;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.artemis.autoconfigure.ArtemisConnectionDetails;
-import org.springframework.boot.artemis.autoconfigure.ArtemisMode;
-import org.springframework.boot.docker.compose.core.RunningService;
-import org.springframework.boot.docker.compose.service.connection.DockerComposeConnectionDetailsFactory;
-import org.springframework.boot.docker.compose.service.connection.DockerComposeConnectionSource;
+import io.github.kotlinmania.spring.boot.artemis.autoconfigure.ArtemisConnectionDetails;
+import io.github.kotlinmania.spring.boot.artemis.autoconfigure.ArtemisMode;
+import io.github.kotlinmania.spring.boot.docker.compose.core.RunningService;
+import io.github.kotlinmania.spring.boot.docker.compose.service.connection.DockerComposeConnectionDetailsFactory;
+import io.github.kotlinmania.spring.boot.docker.compose.service.connection.DockerComposeConnectionSource;
 
 /**
  * {@link DockerComposeConnectionDetailsFactory} to create

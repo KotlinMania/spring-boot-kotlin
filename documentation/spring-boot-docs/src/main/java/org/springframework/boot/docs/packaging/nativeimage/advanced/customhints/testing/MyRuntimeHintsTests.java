@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.packaging.nativeimage.advanced.customhints.testing;
+package io.github.kotlinmania.spring.boot.docs.packaging.nativeimage.advanced.customhints.testing;
 
 import org.junit.jupiter.api.Test;
 
 import org.springframework.aot.hint.RuntimeHints;
 import org.springframework.aot.hint.predicate.RuntimeHintsPredicates;
-import org.springframework.boot.docs.packaging.nativeimage.advanced.customhints.MyRuntimeHints;
+import io.github.kotlinmania.spring.boot.docs.packaging.nativeimage.advanced.customhints.MyRuntimeHints;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

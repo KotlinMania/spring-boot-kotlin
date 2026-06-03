@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.test.context.assertj;
+package io.github.kotlinmania.spring.boot.test.context.assertj;
 
 import java.util.function.Supplier;
 

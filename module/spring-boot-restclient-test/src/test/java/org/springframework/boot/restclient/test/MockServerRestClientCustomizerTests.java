@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.restclient.test;
+package io.github.kotlinmania.spring.boot.restclient.test;
 
 import java.util.function.Supplier;
 

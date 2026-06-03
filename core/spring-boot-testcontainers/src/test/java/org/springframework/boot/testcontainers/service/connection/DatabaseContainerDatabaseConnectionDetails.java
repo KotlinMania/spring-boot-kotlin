@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.testcontainers.service.connection;
+package io.github.kotlinmania.spring.boot.testcontainers.service.connection;
 
 import org.testcontainers.containers.JdbcDatabaseContainer;
 

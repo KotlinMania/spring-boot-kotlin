@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.autoconfigure.template;
+package io.github.kotlinmania.spring.boot.autoconfigure.template;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
@@ -29,7 +29,7 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 
-import org.springframework.boot.testsupport.classpath.resources.WithResource;
+import io.github.kotlinmania.spring.boot.testsupport.classpath.resources.WithResource;
 import org.springframework.context.ApplicationContext;
 import org.springframework.core.env.Environment;
 import org.springframework.core.io.ResourceLoader;
@@ -211,8 +211,8 @@ class TemplateAvailabilityProvidersTests {
 	@Target(ElementType.METHOD)
 	@Retention(RetentionPolicy.RUNTIME)
 	@WithResource(name = "META-INF/spring.factories",
-			content = "org.springframework.boot.autoconfigure.template.TemplateAvailabilityProvider="
-					+ "org.springframework.boot.autoconfigure.template.TemplateAvailabilityProvidersTests$TestTemplateAvailabilityProvider")
+			content = "io.github.kotlinmania.spring.boot.autoconfigure.template.TemplateAvailabilityProvider="
+					+ "io.github.kotlinmania.spring.boot.autoconfigure.template.TemplateAvailabilityProvidersTests$TestTemplateAvailabilityProvider")
 	@interface WithTestTemplateAvailabilityProvider {
 
 	}

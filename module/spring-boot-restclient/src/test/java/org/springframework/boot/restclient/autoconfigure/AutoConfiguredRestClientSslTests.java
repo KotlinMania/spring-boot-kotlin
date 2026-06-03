@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.restclient.autoconfigure;
+package io.github.kotlinmania.spring.boot.restclient.autoconfigure;
 
 import java.time.Duration;
 import java.util.function.Consumer;
@@ -24,11 +24,11 @@ import org.junit.jupiter.api.Test;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 
-import org.springframework.boot.http.client.ClientHttpRequestFactoryBuilder;
-import org.springframework.boot.http.client.HttpClientSettings;
-import org.springframework.boot.http.client.HttpRedirects;
-import org.springframework.boot.ssl.SslBundle;
-import org.springframework.boot.ssl.SslBundles;
+import io.github.kotlinmania.spring.boot.http.client.ClientHttpRequestFactoryBuilder;
+import io.github.kotlinmania.spring.boot.http.client.HttpClientSettings;
+import io.github.kotlinmania.spring.boot.http.client.HttpRedirects;
+import io.github.kotlinmania.spring.boot.ssl.SslBundle;
+import io.github.kotlinmania.spring.boot.ssl.SslBundles;
 import org.springframework.http.client.ClientHttpRequestFactory;
 import org.springframework.web.client.RestClient;
 import org.springframework.web.client.RestClient.Builder;

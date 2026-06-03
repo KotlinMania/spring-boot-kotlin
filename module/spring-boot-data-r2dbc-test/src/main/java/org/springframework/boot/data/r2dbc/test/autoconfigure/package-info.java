@@ -18,6 +18,6 @@
  * Auto-configuration for Data R2DBC tests.
  */
 @NullMarked
-package org.springframework.boot.data.r2dbc.test.autoconfigure;
+package io.github.kotlinmania.spring.boot.data.r2dbc.test.autoconfigure;
 
 import org.jspecify.annotations.NullMarked;

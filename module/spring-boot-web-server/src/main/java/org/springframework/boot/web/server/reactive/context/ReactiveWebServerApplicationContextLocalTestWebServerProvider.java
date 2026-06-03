@@ -14,15 +14,15 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.web.server.reactive.context;
+package io.github.kotlinmania.spring.boot.web.server.reactive.context;
 
 import org.jspecify.annotations.Nullable;
 
 import org.springframework.beans.factory.NoSuchBeanDefinitionException;
-import org.springframework.boot.test.http.server.LocalTestWebServer;
-import org.springframework.boot.test.http.server.LocalTestWebServer.BaseUriDetails;
-import org.springframework.boot.test.http.server.LocalTestWebServer.Scheme;
-import org.springframework.boot.web.server.AbstractConfigurableWebServerFactory;
+import io.github.kotlinmania.spring.boot.test.http.server.LocalTestWebServer;
+import io.github.kotlinmania.spring.boot.test.http.server.LocalTestWebServer.BaseUriDetails;
+import io.github.kotlinmania.spring.boot.test.http.server.LocalTestWebServer.Scheme;
+import io.github.kotlinmania.spring.boot.web.server.AbstractConfigurableWebServerFactory;
 import org.springframework.context.ApplicationContext;
 
 /**

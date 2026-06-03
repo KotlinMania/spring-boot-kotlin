@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.buildpack.platform.docker.type;
+package io.github.kotlinmania.spring.boot.buildpack.platform.docker.type;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
@@ -26,8 +26,8 @@ import org.apache.commons.compress.archivers.tar.TarArchiveInputStream;
 import org.junit.jupiter.api.Test;
 import org.skyscreamer.jsonassert.JSONAssert;
 
-import org.springframework.boot.buildpack.platform.io.Owner;
-import org.springframework.boot.buildpack.platform.json.AbstractJsonTests;
+import io.github.kotlinmania.spring.boot.buildpack.platform.io.Owner;
+import io.github.kotlinmania.spring.boot.buildpack.platform.json.AbstractJsonTests;
 import org.springframework.util.StreamUtils;
 
 import static org.assertj.core.api.Assertions.assertThat;

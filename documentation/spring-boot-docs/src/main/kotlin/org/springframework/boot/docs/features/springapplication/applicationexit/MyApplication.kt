@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.features.springapplication.applicationexit
+package io.github.kotlinmania.spring.boot.docs.features.springapplication.applicationexit
 
-import org.springframework.boot.ExitCodeGenerator
-import org.springframework.boot.SpringApplication
-import org.springframework.boot.autoconfigure.SpringBootApplication
-import org.springframework.boot.runApplication
+import io.github.kotlinmania.spring.boot.ExitCodeGenerator
+import io.github.kotlinmania.spring.boot.SpringApplication
+import io.github.kotlinmania.spring.boot.autoconfigure.SpringBootApplication
+import io.github.kotlinmania.spring.boot.runApplication
 import org.springframework.context.annotation.Bean
 
 import kotlin.system.exitProcess

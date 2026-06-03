@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.reactor.netty.autoconfigure;
+package io.github.kotlinmania.spring.boot.reactor.netty.autoconfigure;
 
-import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
-import org.springframework.boot.context.properties.EnableConfigurationProperties;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnMissingBean;
+import io.github.kotlinmania.spring.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.client.ReactorResourceFactory;

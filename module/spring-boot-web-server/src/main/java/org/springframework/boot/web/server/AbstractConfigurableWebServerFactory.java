@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.web.server;
+package io.github.kotlinmania.spring.boot.web.server;
 
 import java.io.File;
 import java.io.IOException;
@@ -30,10 +30,10 @@ import java.util.stream.Collectors;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.ssl.SslBundle;
-import org.springframework.boot.ssl.SslBundles;
-import org.springframework.boot.web.error.ErrorPage;
-import org.springframework.boot.web.server.Ssl.ServerNameSslBundle;
+import io.github.kotlinmania.spring.boot.ssl.SslBundle;
+import io.github.kotlinmania.spring.boot.ssl.SslBundles;
+import io.github.kotlinmania.spring.boot.web.error.ErrorPage;
+import io.github.kotlinmania.spring.boot.web.server.Ssl.ServerNameSslBundle;
 import org.springframework.util.Assert;
 import org.springframework.util.FileSystemUtils;
 

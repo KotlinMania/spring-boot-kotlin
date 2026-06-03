@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.build.context.properties;
+package io.github.kotlinmania.spring.boot.build.context.properties;
 
 import java.io.File;
 import java.io.IOException;
@@ -25,8 +25,8 @@ import java.util.List;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.io.TempDir;
 
-import org.springframework.boot.build.context.properties.ConfigurationPropertiesAnalyzer.Analysis;
-import org.springframework.boot.build.context.properties.ConfigurationPropertiesAnalyzer.Report;
+import io.github.kotlinmania.spring.boot.build.context.properties.ConfigurationPropertiesAnalyzer.Analysis;
+import io.github.kotlinmania.spring.boot.build.context.properties.ConfigurationPropertiesAnalyzer.Report;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatIllegalArgumentException;

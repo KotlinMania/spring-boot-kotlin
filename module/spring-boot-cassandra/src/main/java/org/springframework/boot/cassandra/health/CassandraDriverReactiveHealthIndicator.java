@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.cassandra.health;
+package io.github.kotlinmania.spring.boot.cassandra.health;
 
 import java.util.Collection;
 import java.util.Optional;
@@ -24,10 +24,10 @@ import com.datastax.oss.driver.api.core.metadata.Node;
 import com.datastax.oss.driver.api.core.metadata.NodeState;
 import reactor.core.publisher.Mono;
 
-import org.springframework.boot.health.contributor.AbstractReactiveHealthIndicator;
-import org.springframework.boot.health.contributor.Health;
-import org.springframework.boot.health.contributor.ReactiveHealthIndicator;
-import org.springframework.boot.health.contributor.Status;
+import io.github.kotlinmania.spring.boot.health.contributor.AbstractReactiveHealthIndicator;
+import io.github.kotlinmania.spring.boot.health.contributor.Health;
+import io.github.kotlinmania.spring.boot.health.contributor.ReactiveHealthIndicator;
+import io.github.kotlinmania.spring.boot.health.contributor.Status;
 import org.springframework.util.Assert;
 
 /**

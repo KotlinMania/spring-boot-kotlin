@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.autoconfigure.condition;
+package io.github.kotlinmania.spring.boot.autoconfigure.condition;
 
 import java.util.function.Consumer;
 import java.util.stream.Collectors;
@@ -23,10 +23,10 @@ import org.jspecify.annotations.Nullable;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.WebApplicationType;
-import org.springframework.boot.autoconfigure.condition.ConditionEvaluationReport.ConditionAndOutcomes;
-import org.springframework.boot.builder.SpringApplicationBuilder;
-import org.springframework.boot.test.util.TestPropertyValues;
+import io.github.kotlinmania.spring.boot.WebApplicationType;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionEvaluationReport.ConditionAndOutcomes;
+import io.github.kotlinmania.spring.boot.builder.SpringApplicationBuilder;
+import io.github.kotlinmania.spring.boot.test.util.TestPropertyValues;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

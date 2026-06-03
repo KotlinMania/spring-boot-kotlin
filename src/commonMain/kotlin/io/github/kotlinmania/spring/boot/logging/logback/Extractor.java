@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.logging.logback;
+package io.github.kotlinmania.spring.boot.logging.logback;
 
 import ch.qos.logback.classic.pattern.ThrowableProxyConverter;
 import ch.qos.logback.classic.spi.ILoggingEvent;
@@ -22,7 +22,7 @@ import ch.qos.logback.classic.spi.IThrowableProxy;
 import ch.qos.logback.classic.spi.ThrowableProxy;
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.logging.StackTracePrinter;
+import io.github.kotlinmania.spring.boot.logging.StackTracePrinter;
 import org.springframework.util.Assert;
 
 /**

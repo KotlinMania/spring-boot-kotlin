@@ -1,6 +1,6 @@
-org.springframework.boot.jdbc.autoconfigure.DataSourceAutoConfiguration
-org.springframework.boot.jdbc.autoconfigure.DataSourceTransactionManagerAutoConfiguration
-org.springframework.boot.jooq.autoconfigure.JooqAutoConfiguration
-org.springframework.boot.transaction.autoconfigure.TransactionAutoConfiguration
-org.springframework.boot.transaction.autoconfigure.TransactionManagerCustomizationAutoConfiguration
-optional:org.springframework.boot.testcontainers.service.connection.ServiceConnectionAutoConfiguration
+io.github.kotlinmania.spring.boot.jdbc.autoconfigure.DataSourceAutoConfiguration
+io.github.kotlinmania.spring.boot.jdbc.autoconfigure.DataSourceTransactionManagerAutoConfiguration
+io.github.kotlinmania.spring.boot.jooq.autoconfigure.JooqAutoConfiguration
+io.github.kotlinmania.spring.boot.transaction.autoconfigure.TransactionAutoConfiguration
+io.github.kotlinmania.spring.boot.transaction.autoconfigure.TransactionManagerCustomizationAutoConfiguration
+optional:io.github.kotlinmania.spring.boot.testcontainers.service.connection.ServiceConnectionAutoConfiguration

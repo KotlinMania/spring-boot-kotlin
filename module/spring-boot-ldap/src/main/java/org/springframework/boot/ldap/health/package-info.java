@@ -18,6 +18,6 @@
  * Health integration for LDAP.
  */
 @NullMarked
-package org.springframework.boot.ldap.health;
+package io.github.kotlinmania.spring.boot.ldap.health;
 
 import org.jspecify.annotations.NullMarked;

@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.web.servlet.embeddedcontainer.customizing.programmatic
+package io.github.kotlinmania.spring.boot.docs.web.servlet.embeddedcontainer.customizing.programmatic
 
-import org.springframework.boot.web.server.WebServerFactoryCustomizer
-import org.springframework.boot.tomcat.servlet.TomcatServletWebServerFactory
+import io.github.kotlinmania.spring.boot.web.server.WebServerFactoryCustomizer
+import io.github.kotlinmania.spring.boot.tomcat.servlet.TomcatServletWebServerFactory
 import org.springframework.stereotype.Component
 import java.time.Duration
 

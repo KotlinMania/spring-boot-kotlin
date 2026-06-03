@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.autoconfigure.condition;
+package io.github.kotlinmania.spring.boot.autoconfigure.condition;
 
 import org.jspecify.annotations.Nullable;
 
@@ -22,8 +22,8 @@ import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.BeanFactoryAware;
 import org.springframework.beans.factory.config.ConfigurableListableBeanFactory;
-import org.springframework.boot.autoconfigure.AutoConfigurationImportEvent;
-import org.springframework.boot.autoconfigure.AutoConfigurationImportListener;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurationImportEvent;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurationImportListener;
 
 /**
  * {@link AutoConfigurationImportListener} to record results with the

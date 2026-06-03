@@ -18,6 +18,6 @@
  * Auto-configuration for Spring Data Couchbase.
  */
 @NullMarked
-package org.springframework.boot.data.couchbase.autoconfigure;
+package io.github.kotlinmania.spring.boot.data.couchbase.autoconfigure;
 
 import org.jspecify.annotations.NullMarked;

@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.support;
+package io.github.kotlinmania.spring.boot.support;
 
-import org.springframework.boot.ansi.AnsiOutput;
-import org.springframework.boot.ansi.AnsiOutput.Enabled;
-import org.springframework.boot.context.event.ApplicationEnvironmentPreparedEvent;
-import org.springframework.boot.context.properties.bind.Binder;
+import io.github.kotlinmania.spring.boot.ansi.AnsiOutput;
+import io.github.kotlinmania.spring.boot.ansi.AnsiOutput.Enabled;
+import io.github.kotlinmania.spring.boot.context.event.ApplicationEnvironmentPreparedEvent;
+import io.github.kotlinmania.spring.boot.context.properties.bind.Binder;
 import org.springframework.context.ApplicationListener;
 import org.springframework.core.Ordered;
 import org.springframework.core.env.ConfigurableEnvironment;

@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.webmvc.test.autoconfigure.mockmvc;
+package io.github.kotlinmania.spring.boot.webmvc.test.autoconfigure.mockmvc;
 
-import org.springframework.boot.webmvc.test.autoconfigure.WebMvcTest;
+import io.github.kotlinmania.spring.boot.webmvc.test.autoconfigure.WebMvcTest;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;

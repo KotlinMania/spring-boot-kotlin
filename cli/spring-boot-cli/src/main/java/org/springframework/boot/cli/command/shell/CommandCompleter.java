@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.cli.command.shell;
+package io.github.kotlinmania.spring.boot.cli.command.shell;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -30,9 +30,9 @@ import jline.console.completer.Completer;
 import jline.console.completer.FileNameCompleter;
 import jline.console.completer.StringsCompleter;
 
-import org.springframework.boot.cli.command.Command;
-import org.springframework.boot.cli.command.options.OptionHelp;
-import org.springframework.boot.cli.util.Log;
+import io.github.kotlinmania.spring.boot.cli.command.Command;
+import io.github.kotlinmania.spring.boot.cli.command.options.OptionHelp;
+import io.github.kotlinmania.spring.boot.cli.util.Log;
 import org.springframework.util.StringUtils;
 
 /**

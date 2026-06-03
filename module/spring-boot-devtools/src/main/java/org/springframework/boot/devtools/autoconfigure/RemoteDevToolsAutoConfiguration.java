@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.devtools.autoconfigure;
+package io.github.kotlinmania.spring.boot.devtools.autoconfigure;
 
 import java.util.Collection;
 
@@ -22,27 +22,27 @@ import jakarta.servlet.Filter;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
-import org.springframework.boot.autoconfigure.AutoConfiguration;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnBooleanProperty;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
-import org.springframework.boot.context.properties.EnableConfigurationProperties;
-import org.springframework.boot.devtools.remote.server.AccessManager;
-import org.springframework.boot.devtools.remote.server.Dispatcher;
-import org.springframework.boot.devtools.remote.server.DispatcherFilter;
-import org.springframework.boot.devtools.remote.server.Handler;
-import org.springframework.boot.devtools.remote.server.HandlerMapper;
-import org.springframework.boot.devtools.remote.server.HttpHeaderAccessManager;
-import org.springframework.boot.devtools.remote.server.HttpStatusHandler;
-import org.springframework.boot.devtools.remote.server.UrlHandlerMapper;
-import org.springframework.boot.devtools.restart.server.DefaultSourceDirectoryUrlFilter;
-import org.springframework.boot.devtools.restart.server.HttpRestartServer;
-import org.springframework.boot.devtools.restart.server.HttpRestartServerHandler;
-import org.springframework.boot.devtools.restart.server.SourceDirectoryUrlFilter;
-import org.springframework.boot.web.server.autoconfigure.ServerProperties;
-import org.springframework.boot.web.server.autoconfigure.ServerProperties.Servlet;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.EnableAutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnBooleanProperty;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnClass;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnMissingBean;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnProperty;
+import io.github.kotlinmania.spring.boot.context.properties.EnableConfigurationProperties;
+import io.github.kotlinmania.spring.boot.devtools.remote.server.AccessManager;
+import io.github.kotlinmania.spring.boot.devtools.remote.server.Dispatcher;
+import io.github.kotlinmania.spring.boot.devtools.remote.server.DispatcherFilter;
+import io.github.kotlinmania.spring.boot.devtools.remote.server.Handler;
+import io.github.kotlinmania.spring.boot.devtools.remote.server.HandlerMapper;
+import io.github.kotlinmania.spring.boot.devtools.remote.server.HttpHeaderAccessManager;
+import io.github.kotlinmania.spring.boot.devtools.remote.server.HttpStatusHandler;
+import io.github.kotlinmania.spring.boot.devtools.remote.server.UrlHandlerMapper;
+import io.github.kotlinmania.spring.boot.devtools.restart.server.DefaultSourceDirectoryUrlFilter;
+import io.github.kotlinmania.spring.boot.devtools.restart.server.HttpRestartServer;
+import io.github.kotlinmania.spring.boot.devtools.restart.server.HttpRestartServerHandler;
+import io.github.kotlinmania.spring.boot.devtools.restart.server.SourceDirectoryUrlFilter;
+import io.github.kotlinmania.spring.boot.web.server.autoconfigure.ServerProperties;
+import io.github.kotlinmania.spring.boot.web.server.autoconfigure.ServerProperties.Servlet;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
@@ -60,7 +60,7 @@ import org.springframework.util.Assert;
  * @since 1.3.0
  */
 @AutoConfiguration(
-		afterName = "org.springframework.boot.security.autoconfigure.web.servlet.ServletWebSecurityAutoConfiguration")
+		afterName = "io.github.kotlinmania.spring.boot.security.autoconfigure.web.servlet.ServletWebSecurityAutoConfiguration")
 @ConditionalOnEnabledDevTools
 @ConditionalOnProperty("spring.devtools.remote.secret")
 @ConditionalOnClass({ Filter.class, ServerHttpRequest.class, ServerProperties.class })

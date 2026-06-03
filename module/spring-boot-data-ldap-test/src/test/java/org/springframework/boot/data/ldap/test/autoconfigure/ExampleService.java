@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.data.ldap.test.autoconfigure;
+package io.github.kotlinmania.spring.boot.data.ldap.test.autoconfigure;
 
 import org.springframework.ldap.core.LdapTemplate;
 import org.springframework.ldap.query.LdapQuery;

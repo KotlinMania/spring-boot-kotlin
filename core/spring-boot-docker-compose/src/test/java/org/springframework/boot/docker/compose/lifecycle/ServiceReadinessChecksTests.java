@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docker.compose.lifecycle;
+package io.github.kotlinmania.spring.boot.docker.compose.lifecycle;
 
 import java.time.Clock;
 import java.time.Duration;
@@ -27,8 +27,8 @@ import org.jspecify.annotations.Nullable;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.docker.compose.core.RunningService;
-import org.springframework.boot.docker.compose.lifecycle.DockerComposeProperties.Readiness.Tcp;
+import io.github.kotlinmania.spring.boot.docker.compose.core.RunningService;
+import io.github.kotlinmania.spring.boot.docker.compose.lifecycle.DockerComposeProperties.Readiness.Tcp;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatExceptionOfType;
@@ -85,7 +85,7 @@ class ServiceReadinessChecksTests {
 
 	@Test
 	void waitForWhenServiceHasDisableLabelDoesNotCheck() {
-		given(this.runningService.labels()).willReturn(Map.of("org.springframework.boot.readiness-check.disable", ""));
+		given(this.runningService.labels()).willReturn(Map.of("io.github.kotlinmania.spring.boot.readiness-check.disable", ""));
 		MockServiceReadinessCheck check = new MockServiceReadinessCheck();
 		createChecks(check).waitUntilReady(this.runningServices);
 		assertThat(check.getChecked()).isEmpty();

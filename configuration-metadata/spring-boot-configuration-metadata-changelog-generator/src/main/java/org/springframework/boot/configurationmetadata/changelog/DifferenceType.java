@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.configurationmetadata.changelog;
+package io.github.kotlinmania.spring.boot.configurationmetadata.changelog;
 
 /**
  * The type of a difference in the metadata.

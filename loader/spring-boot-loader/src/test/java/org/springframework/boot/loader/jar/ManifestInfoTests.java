@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.loader.jar;
+package io.github.kotlinmania.spring.boot.loader.jar;
 
 import java.util.jar.Attributes.Name;
 import java.util.jar.Manifest;

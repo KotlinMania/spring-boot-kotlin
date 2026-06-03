@@ -14,15 +14,15 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.devtools.classpath;
+package io.github.kotlinmania.spring.boot.devtools.classpath;
 
 import java.io.File;
 
 import org.jspecify.annotations.Nullable;
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.devtools.filewatch.ChangedFile;
-import org.springframework.boot.devtools.filewatch.ChangedFile.Type;
+import io.github.kotlinmania.spring.boot.devtools.filewatch.ChangedFile;
+import io.github.kotlinmania.spring.boot.devtools.filewatch.ChangedFile.Type;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -70,7 +70,7 @@ class PatternClassPathRestartStrategyTests {
 	void pomChange() {
 		ClassPathRestartStrategy strategy = createStrategy("META-INF/maven/**");
 		assertRestartRequired(strategy, "pom.xml", true);
-		String mavenDirectory = "META-INF/maven/org.springframework.boot/spring-boot-devtools";
+		String mavenDirectory = "META-INF/maven/io.github.kotlinmania.spring.boot.spring-boot-devtools";
 		assertRestartRequired(strategy, mavenDirectory + "/pom.xml", false);
 		assertRestartRequired(strategy, mavenDirectory + "/pom.properties", false);
 	}

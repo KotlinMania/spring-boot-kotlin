@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.logging.log4j2;
+package io.github.kotlinmania.spring.boot.logging.log4j2;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -46,19 +46,19 @@ import org.apache.logging.log4j.status.StatusLogger;
 import org.apache.logging.log4j.util.PropertiesUtil;
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.context.properties.bind.BindResult;
-import org.springframework.boot.context.properties.bind.Bindable;
-import org.springframework.boot.context.properties.bind.Binder;
-import org.springframework.boot.io.ApplicationResourceLoader;
-import org.springframework.boot.logging.AbstractLoggingSystem;
-import org.springframework.boot.logging.LogFile;
-import org.springframework.boot.logging.LogLevel;
-import org.springframework.boot.logging.LoggerConfiguration;
-import org.springframework.boot.logging.LoggerConfiguration.LevelConfiguration;
-import org.springframework.boot.logging.LoggingInitializationContext;
-import org.springframework.boot.logging.LoggingSystem;
-import org.springframework.boot.logging.LoggingSystemFactory;
-import org.springframework.boot.logging.LoggingSystemProperties;
+import io.github.kotlinmania.spring.boot.context.properties.bind.BindResult;
+import io.github.kotlinmania.spring.boot.context.properties.bind.Bindable;
+import io.github.kotlinmania.spring.boot.context.properties.bind.Binder;
+import io.github.kotlinmania.spring.boot.io.ApplicationResourceLoader;
+import io.github.kotlinmania.spring.boot.logging.AbstractLoggingSystem;
+import io.github.kotlinmania.spring.boot.logging.LogFile;
+import io.github.kotlinmania.spring.boot.logging.LogLevel;
+import io.github.kotlinmania.spring.boot.logging.LoggerConfiguration;
+import io.github.kotlinmania.spring.boot.logging.LoggerConfiguration.LevelConfiguration;
+import io.github.kotlinmania.spring.boot.logging.LoggingInitializationContext;
+import io.github.kotlinmania.spring.boot.logging.LoggingSystem;
+import io.github.kotlinmania.spring.boot.logging.LoggingSystemFactory;
+import io.github.kotlinmania.spring.boot.logging.LoggingSystemProperties;
 import org.springframework.core.Conventions;
 import org.springframework.core.annotation.Order;
 import org.springframework.core.env.ConfigurableEnvironment;

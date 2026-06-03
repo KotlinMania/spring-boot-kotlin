@@ -15,6 +15,6 @@
  */
 
 @NullMarked
-package org.springframework.boot.webmvc.test.autoconfigure.mockmvc;
+package io.github.kotlinmania.spring.boot.webmvc.test.autoconfigure.mockmvc;
 
 import org.jspecify.annotations.NullMarked;

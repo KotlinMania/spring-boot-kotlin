@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.actuate.endpoint.jmx;
+package io.github.kotlinmania.spring.boot.actuate.endpoint.jmx;
 
-import org.springframework.boot.actuate.endpoint.EndpointsSupplier;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.EndpointsSupplier;
 
 /**
  * {@link EndpointsSupplier} for {@link ExposableJmxEndpoint JMX endpoints}.

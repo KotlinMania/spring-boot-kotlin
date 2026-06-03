@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.devtools.remote.client;
+package io.github.kotlinmania.spring.boot.devtools.remote.client;
 
 import java.io.IOException;
 import java.net.URI;
@@ -25,7 +25,7 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 
-import org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer;
+import io.github.kotlinmania.spring.boot.devtools.autoconfigure.OptionalLiveReloadServer;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.client.ClientHttpRequest;

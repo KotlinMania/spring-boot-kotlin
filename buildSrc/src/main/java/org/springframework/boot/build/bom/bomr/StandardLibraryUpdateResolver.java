@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.build.bom.bomr;
+package io.github.kotlinmania.spring.boot.build.bom.bomr;
 
 import java.time.Duration;
 import java.util.ArrayList;
@@ -29,12 +29,12 @@ import java.util.function.BiFunction;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import org.springframework.boot.build.bom.Library;
-import org.springframework.boot.build.bom.Library.Group;
-import org.springframework.boot.build.bom.Library.ImportedBom;
-import org.springframework.boot.build.bom.Library.Module;
-import org.springframework.boot.build.bom.Library.VersionAlignment;
-import org.springframework.boot.build.bom.bomr.version.DependencyVersion;
+import io.github.kotlinmania.spring.boot.build.bom.Library;
+import io.github.kotlinmania.spring.boot.build.bom.Library.Group;
+import io.github.kotlinmania.spring.boot.build.bom.Library.ImportedBom;
+import io.github.kotlinmania.spring.boot.build.bom.Library.Module;
+import io.github.kotlinmania.spring.boot.build.bom.Library.VersionAlignment;
+import io.github.kotlinmania.spring.boot.build.bom.bomr.version.DependencyVersion;
 
 /**
  * Standard implementation for {@link LibraryUpdateResolver}.

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.cloudfoundry.autoconfigure.actuate.endpoint.servlet;
+package io.github.kotlinmania.spring.boot.cloudfoundry.autoconfigure.actuate.endpoint.servlet;
 
 import java.security.GeneralSecurityException;
 import java.security.KeyFactory;
@@ -29,9 +29,9 @@ import java.util.concurrent.TimeUnit;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.cloudfoundry.autoconfigure.actuate.endpoint.CloudFoundryAuthorizationException;
-import org.springframework.boot.cloudfoundry.autoconfigure.actuate.endpoint.CloudFoundryAuthorizationException.Reason;
-import org.springframework.boot.cloudfoundry.autoconfigure.actuate.endpoint.Token;
+import io.github.kotlinmania.spring.boot.cloudfoundry.autoconfigure.actuate.endpoint.CloudFoundryAuthorizationException;
+import io.github.kotlinmania.spring.boot.cloudfoundry.autoconfigure.actuate.endpoint.CloudFoundryAuthorizationException.Reason;
+import io.github.kotlinmania.spring.boot.cloudfoundry.autoconfigure.actuate.endpoint.Token;
 import org.springframework.util.Assert;
 
 /**

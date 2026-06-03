@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.actuate.sbom;
+package io.github.kotlinmania.spring.boot.actuate.sbom;
 
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
@@ -24,9 +24,9 @@ import org.junit.jupiter.api.Test;
 
 import org.springframework.aot.hint.RuntimeHints;
 import org.springframework.aot.hint.predicate.RuntimeHintsPredicates;
-import org.springframework.boot.actuate.sbom.SbomEndpoint.SbomEndpointRuntimeHints;
-import org.springframework.boot.actuate.sbom.SbomEndpoint.Sboms;
-import org.springframework.boot.actuate.sbom.SbomProperties.Sbom;
+import io.github.kotlinmania.spring.boot.actuate.sbom.SbomEndpoint.SbomEndpointRuntimeHints;
+import io.github.kotlinmania.spring.boot.actuate.sbom.SbomEndpoint.Sboms;
+import io.github.kotlinmania.spring.boot.actuate.sbom.SbomProperties.Sbom;
 import org.springframework.context.support.GenericApplicationContext;
 import org.springframework.core.io.Resource;
 
@@ -49,11 +49,11 @@ class SbomEndpointTests {
 
 	@Test
 	void shouldListSboms() {
-		this.properties.getApplication().setLocation("classpath:org/springframework/boot/actuate/sbom/cyclonedx.json");
+		this.properties.getApplication().setLocation("classpath:io.github.kotlinmania.spring.boot.actuate/sbom/cyclonedx.json");
 		this.properties.getAdditional()
-			.put("alpha", sbom("classpath:org/springframework/boot/actuate/sbom/cyclonedx.json"));
+			.put("alpha", sbom("classpath:io.github.kotlinmania.spring.boot.actuate/sbom/cyclonedx.json"));
 		this.properties.getAdditional()
-			.put("beta", sbom("classpath:org/springframework/boot/actuate/sbom/cyclonedx.json"));
+			.put("beta", sbom("classpath:io.github.kotlinmania.spring.boot.actuate/sbom/cyclonedx.json"));
 		Sboms sboms = createEndpoint().sboms();
 		assertThat(sboms.ids()).containsExactly("alpha", "application", "beta");
 	}
@@ -61,16 +61,16 @@ class SbomEndpointTests {
 	@Test
 	void shouldFailIfDuplicateSbomIdIsRegistered() {
 		// This adds an SBOM with id 'application'
-		this.properties.getApplication().setLocation("classpath:org/springframework/boot/actuate/sbom/cyclonedx.json");
+		this.properties.getApplication().setLocation("classpath:io.github.kotlinmania.spring.boot.actuate/sbom/cyclonedx.json");
 		this.properties.getAdditional()
-			.put("application", sbom("classpath:org/springframework/boot/actuate/sbom/cyclonedx.json"));
+			.put("application", sbom("classpath:io.github.kotlinmania.spring.boot.actuate/sbom/cyclonedx.json"));
 		assertThatIllegalStateException().isThrownBy(this::createEndpoint)
 			.withMessage("Duplicate SBOM registration with id 'application'");
 	}
 
 	@Test
 	void shouldUseLocationFromProperties() throws IOException {
-		this.properties.getApplication().setLocation("classpath:org/springframework/boot/actuate/sbom/cyclonedx.json");
+		this.properties.getApplication().setLocation("classpath:io.github.kotlinmania.spring.boot.actuate/sbom/cyclonedx.json");
 		Resource sbom = createEndpoint().sbom("application");
 		assertThat(sbom).isNotNull();
 		String content = sbom.getContentAsString(StandardCharsets.UTF_8);

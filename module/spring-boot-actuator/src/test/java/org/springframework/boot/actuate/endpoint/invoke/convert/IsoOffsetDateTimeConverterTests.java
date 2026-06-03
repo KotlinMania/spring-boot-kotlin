@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.actuate.endpoint.invoke.convert;
+package io.github.kotlinmania.spring.boot.actuate.endpoint.invoke.convert;
 
 import java.time.OffsetDateTime;
 

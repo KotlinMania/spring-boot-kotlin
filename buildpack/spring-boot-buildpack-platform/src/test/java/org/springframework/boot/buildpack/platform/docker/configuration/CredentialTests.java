@@ -14,15 +14,15 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.buildpack.platform.docker.configuration;
+package io.github.kotlinmania.spring.boot.buildpack.platform.docker.configuration;
 
 import java.io.IOException;
 import java.io.InputStream;
 
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.buildpack.platform.json.SharedJsonMapper;
-import org.springframework.boot.testsupport.classpath.resources.WithResource;
+import io.github.kotlinmania.spring.boot.buildpack.platform.json.SharedJsonMapper;
+import io.github.kotlinmania.spring.boot.testsupport.classpath.resources.WithResource;
 import org.springframework.core.io.ClassPathResource;
 
 import static org.assertj.core.api.Assertions.assertThat;

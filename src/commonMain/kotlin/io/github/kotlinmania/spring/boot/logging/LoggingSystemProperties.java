@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.logging;
+package io.github.kotlinmania.spring.boot.logging;
 
 import java.io.Console;
 import java.nio.charset.Charset;
@@ -24,7 +24,7 @@ import java.util.function.Function;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.system.ApplicationPid;
+import io.github.kotlinmania.spring.boot.system.ApplicationPid;
 import org.springframework.core.env.ConfigurableEnvironment;
 import org.springframework.core.env.Environment;
 import org.springframework.core.env.PropertyResolver;

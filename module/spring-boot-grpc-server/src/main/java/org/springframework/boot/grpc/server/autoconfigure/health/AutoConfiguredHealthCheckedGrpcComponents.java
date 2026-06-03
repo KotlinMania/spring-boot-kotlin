@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.grpc.server.autoconfigure.health;
+package io.github.kotlinmania.spring.boot.grpc.server.autoconfigure.health;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -32,13 +32,13 @@ import org.springframework.beans.factory.BeanFactoryUtils;
 import org.springframework.beans.factory.ListableBeanFactory;
 import org.springframework.beans.factory.NoSuchBeanDefinitionException;
 import org.springframework.beans.factory.annotation.BeanFactoryAnnotationUtils;
-import org.springframework.boot.grpc.server.autoconfigure.health.GrpcServerHealthProperties.Service;
-import org.springframework.boot.grpc.server.autoconfigure.health.GrpcServerHealthProperties.Status;
-import org.springframework.boot.grpc.server.health.HealthCheckedGrpcComponent;
-import org.springframework.boot.grpc.server.health.HealthCheckedGrpcComponents;
-import org.springframework.boot.grpc.server.health.StatusAggregator;
-import org.springframework.boot.grpc.server.health.StatusMapper;
-import org.springframework.boot.health.autoconfigure.contributor.HealthContributorMembership;
+import io.github.kotlinmania.spring.boot.grpc.server.autoconfigure.health.GrpcServerHealthProperties.Service;
+import io.github.kotlinmania.spring.boot.grpc.server.autoconfigure.health.GrpcServerHealthProperties.Status;
+import io.github.kotlinmania.spring.boot.grpc.server.health.HealthCheckedGrpcComponent;
+import io.github.kotlinmania.spring.boot.grpc.server.health.HealthCheckedGrpcComponents;
+import io.github.kotlinmania.spring.boot.grpc.server.health.StatusAggregator;
+import io.github.kotlinmania.spring.boot.grpc.server.health.StatusMapper;
+import io.github.kotlinmania.spring.boot.health.autoconfigure.contributor.HealthContributorMembership;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.util.CollectionUtils;

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.webmvc.test.autoconfigure;
+package io.github.kotlinmania.spring.boot.webmvc.test.autoconfigure;
 
 import java.lang.annotation.Documented;
 import java.lang.annotation.ElementType;
@@ -26,9 +26,9 @@ import java.lang.annotation.Target;
 import org.htmlunit.WebClient;
 import org.openqa.selenium.WebDriver;
 
-import org.springframework.boot.autoconfigure.ImportAutoConfiguration;
-import org.springframework.boot.test.context.PropertyMapping;
-import org.springframework.boot.test.context.PropertyMapping.Skip;
+import io.github.kotlinmania.spring.boot.autoconfigure.ImportAutoConfiguration;
+import io.github.kotlinmania.spring.boot.test.context.PropertyMapping;
+import io.github.kotlinmania.spring.boot.test.context.PropertyMapping.Skip;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.MvcResult;
 import org.springframework.test.web.servlet.assertj.MockMvcTester;

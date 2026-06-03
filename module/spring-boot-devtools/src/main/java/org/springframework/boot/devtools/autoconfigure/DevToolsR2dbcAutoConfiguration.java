@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.devtools.autoconfigure;
+package io.github.kotlinmania.spring.boot.devtools.autoconfigure;
 
 import io.r2dbc.spi.Connection;
 import io.r2dbc.spi.ConnectionFactory;
@@ -26,15 +26,15 @@ import org.springframework.beans.factory.DisposableBean;
 import org.springframework.beans.factory.annotation.AnnotatedBeanDefinition;
 import org.springframework.beans.factory.config.BeanDefinition;
 import org.springframework.beans.factory.config.ConfigurableListableBeanFactory;
-import org.springframework.boot.autoconfigure.AutoConfiguration;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
-import org.springframework.boot.autoconfigure.condition.ConditionMessage;
-import org.springframework.boot.autoconfigure.condition.ConditionOutcome;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
-import org.springframework.boot.autoconfigure.condition.SpringBootCondition;
-import org.springframework.boot.devtools.autoconfigure.DevToolsR2dbcAutoConfiguration.DevToolsConnectionFactoryCondition;
-import org.springframework.boot.r2dbc.EmbeddedDatabaseConnection;
-import org.springframework.boot.r2dbc.autoconfigure.R2dbcAutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.EnableAutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionMessage;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionOutcome;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnClass;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.SpringBootCondition;
+import io.github.kotlinmania.spring.boot.devtools.autoconfigure.DevToolsR2dbcAutoConfiguration.DevToolsConnectionFactoryCondition;
+import io.github.kotlinmania.spring.boot.r2dbc.EmbeddedDatabaseConnection;
+import io.github.kotlinmania.spring.boot.r2dbc.autoconfigure.R2dbcAutoConfiguration;
 import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ConditionContext;
@@ -54,7 +54,7 @@ import org.springframework.util.Assert;
 @ConditionalOnClass(ConnectionFactory.class)
 @ConditionalOnEnabledDevTools
 @Conditional(DevToolsConnectionFactoryCondition.class)
-@AutoConfiguration(afterName = "org.springframework.boot.r2dbc.autoconfigure.R2dbcAutoConfiguration")
+@AutoConfiguration(afterName = "io.github.kotlinmania.spring.boot.r2dbc.autoconfigure.R2dbcAutoConfiguration")
 public final class DevToolsR2dbcAutoConfiguration {
 
 	@Bean

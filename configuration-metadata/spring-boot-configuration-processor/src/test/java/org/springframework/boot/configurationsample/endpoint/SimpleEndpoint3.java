@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.configurationsample.endpoint;
+package io.github.kotlinmania.spring.boot.configurationsample.endpoint;
 
-import org.springframework.boot.configurationsample.TestAccess;
-import org.springframework.boot.configurationsample.TestEndpoint;
-import org.springframework.boot.configurationsample.TestReadOperation;
+import io.github.kotlinmania.spring.boot.configurationsample.TestAccess;
+import io.github.kotlinmania.spring.boot.configurationsample.TestEndpoint;
+import io.github.kotlinmania.spring.boot.configurationsample.TestReadOperation;
 
 /**
  * A simple endpoint with no default override, with the same id as {@link SimpleEndpoint},

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.build.bom.bomr;
+package io.github.kotlinmania.spring.boot.build.bom.bomr;
 
 import java.time.OffsetDateTime;
 import java.util.List;
@@ -22,7 +22,7 @@ import java.util.Map;
 
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.build.bom.bomr.ReleaseSchedule.Release;
+import io.github.kotlinmania.spring.boot.build.bom.bomr.ReleaseSchedule.Release;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.client.MockRestServiceServer;

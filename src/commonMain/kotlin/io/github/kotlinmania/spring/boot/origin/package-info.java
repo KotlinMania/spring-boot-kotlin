@@ -16,9 +16,9 @@
 
 /**
  * Support for item origin tracking.
- * @see org.springframework.boot.origin.Origin
+ * @see io.github.kotlinmania.spring.boot.origin.Origin
  */
 @NullMarked
-package org.springframework.boot.origin;
+package io.github.kotlinmania.spring.boot.origin;
 
 import org.jspecify.annotations.NullMarked;

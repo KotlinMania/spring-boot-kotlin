@@ -21,11 +21,11 @@ import java.time.Duration;
 import org.junit.jupiter.api.Test;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.micrometer.metrics.autoconfigure.export.otlp.OtlpMetricsProperties;
-import org.springframework.boot.micrometer.tracing.opentelemetry.autoconfigure.otlp.OtlpTracingProperties;
-import org.springframework.boot.micrometer.tracing.opentelemetry.autoconfigure.otlp.Transport;
-import org.springframework.boot.opentelemetry.autoconfigure.logging.otlp.OtlpLoggingProperties;
-import org.springframework.boot.test.context.SpringBootTest;
+import io.github.kotlinmania.spring.boot.micrometer.metrics.autoconfigure.export.otlp.OtlpMetricsProperties;
+import io.github.kotlinmania.spring.boot.micrometer.tracing.opentelemetry.autoconfigure.otlp.OtlpTracingProperties;
+import io.github.kotlinmania.spring.boot.micrometer.tracing.opentelemetry.autoconfigure.otlp.Transport;
+import io.github.kotlinmania.spring.boot.opentelemetry.autoconfigure.logging.otlp.OtlpLoggingProperties;
+import io.github.kotlinmania.spring.boot.test.context.SpringBootTest;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -73,7 +73,7 @@ class HeadersAndCompressionTests {
 	void protocolIsMapped() {
 		assertThat(this.tracingProperties.getTransport()).isEqualTo(Transport.HTTP);
 		assertThat(this.loggingProperties.getTransport())
-			.isEqualTo(org.springframework.boot.opentelemetry.autoconfigure.logging.otlp.Transport.HTTP);
+			.isEqualTo(io.github.kotlinmania.spring.boot.opentelemetry.autoconfigure.logging.otlp.Transport.HTTP);
 	}
 
 }

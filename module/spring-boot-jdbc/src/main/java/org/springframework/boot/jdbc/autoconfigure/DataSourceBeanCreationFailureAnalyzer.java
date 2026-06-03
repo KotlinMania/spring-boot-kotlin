@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.jdbc.autoconfigure;
+package io.github.kotlinmania.spring.boot.jdbc.autoconfigure;
 
-import org.springframework.boot.diagnostics.AbstractFailureAnalyzer;
-import org.springframework.boot.diagnostics.FailureAnalysis;
-import org.springframework.boot.jdbc.EmbeddedDatabaseConnection;
-import org.springframework.boot.jdbc.autoconfigure.DataSourceProperties.DataSourceBeanCreationException;
+import io.github.kotlinmania.spring.boot.diagnostics.AbstractFailureAnalyzer;
+import io.github.kotlinmania.spring.boot.diagnostics.FailureAnalysis;
+import io.github.kotlinmania.spring.boot.jdbc.EmbeddedDatabaseConnection;
+import io.github.kotlinmania.spring.boot.jdbc.autoconfigure.DataSourceProperties.DataSourceBeanCreationException;
 import org.springframework.core.env.Environment;
 import org.springframework.util.ObjectUtils;
 import org.springframework.util.StringUtils;

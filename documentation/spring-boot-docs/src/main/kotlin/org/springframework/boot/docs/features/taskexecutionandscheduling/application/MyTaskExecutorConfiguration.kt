@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.features.taskexecutionandscheduling.application
+package io.github.kotlinmania.spring.boot.docs.features.taskexecutionandscheduling.application
 
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.grpc.client.autoconfigure;
+package io.github.kotlinmania.spring.boot.grpc.client.autoconfigure;
 
 import io.grpc.stub.AbstractStub;
 import io.micrometer.core.instrument.binder.grpc.GrpcClientObservationConvention;
@@ -22,12 +22,12 @@ import io.micrometer.core.instrument.binder.grpc.ObservationGrpcClientIntercepto
 import io.micrometer.observation.ObservationRegistry;
 
 import org.springframework.beans.factory.ObjectProvider;
-import org.springframework.boot.autoconfigure.AutoConfiguration;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.EnableAutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnBean;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnClass;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnMissingBean;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.context.annotation.Bean;
 import org.springframework.grpc.client.GlobalClientInterceptor;
 import org.springframework.grpc.client.GrpcChannelBuilderCustomizer;
@@ -40,7 +40,7 @@ import org.springframework.grpc.client.GrpcChannelBuilderCustomizer;
  * @since 4.1.0
  */
 @AutoConfiguration(
-		afterName = "org.springframework.boot.micrometer.observation.autoconfigure.ObservationAutoConfiguration")
+		afterName = "io.github.kotlinmania.spring.boot.micrometer.observation.autoconfigure.ObservationAutoConfiguration")
 @ConditionalOnClass({ AbstractStub.class, GrpcChannelBuilderCustomizer.class, ObservationRegistry.class,
 		ObservationGrpcClientInterceptor.class })
 @ConditionalOnProperty(name = "spring.grpc.client.enabled", matchIfMissing = true)

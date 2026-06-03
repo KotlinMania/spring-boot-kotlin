@@ -15,11 +15,11 @@
  */
 
 plugins {
-	id 'org.springframework.boot' version '{version}'
+	id 'io.github.kotlinmania.spring.boot. version '{version}'
 	id 'java'
 }
 
-apply plugin: 'org.springframework.boot.aot'
+apply plugin: 'io.github.kotlinmania.spring.boot.aot'
 
 repositories {
 	mavenCentral()

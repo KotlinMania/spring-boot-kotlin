@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.http.client.reactive;
+package io.github.kotlinmania.spring.boot.http.client.reactive;
 
 import java.net.ProxySelector;
 import java.net.http.HttpClient;
@@ -26,9 +26,9 @@ import java.util.function.UnaryOperator;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.context.properties.PropertyMapper;
-import org.springframework.boot.http.client.HttpClientSettings;
-import org.springframework.boot.http.client.JdkHttpClientBuilder;
+import io.github.kotlinmania.spring.boot.context.properties.PropertyMapper;
+import io.github.kotlinmania.spring.boot.http.client.HttpClientSettings;
+import io.github.kotlinmania.spring.boot.http.client.JdkHttpClientBuilder;
 import org.springframework.http.client.reactive.JdkClientHttpConnector;
 import org.springframework.util.Assert;
 import org.springframework.util.ClassUtils;

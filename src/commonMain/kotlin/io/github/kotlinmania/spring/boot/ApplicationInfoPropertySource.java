@@ -14,15 +14,15 @@
  * limitations under the License.
  */
 
-package org.springframework.boot;
+package io.github.kotlinmania.spring.boot.
 
 import java.util.HashMap;
 import java.util.Map;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.env.PropertySourceInfo;
-import org.springframework.boot.system.ApplicationPid;
+import io.github.kotlinmania.spring.boot.env.PropertySourceInfo;
+import io.github.kotlinmania.spring.boot.system.ApplicationPid;
 import org.springframework.core.env.ConfigurableEnvironment;
 import org.springframework.core.env.MapPropertySource;
 import org.springframework.core.env.MutablePropertySources;

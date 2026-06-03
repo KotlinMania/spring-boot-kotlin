@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.tomcat.metrics;
+package io.github.kotlinmania.spring.boot.tomcat.metrics;
 
 import io.micrometer.core.instrument.MeterRegistry;
 import org.junit.jupiter.api.Test;

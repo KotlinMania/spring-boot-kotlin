@@ -18,6 +18,6 @@
  * Web Services client utilities.
  */
 @NullMarked
-package org.springframework.boot.webservices.client;
+package io.github.kotlinmania.spring.boot.webservices.client;
 
 import org.jspecify.annotations.NullMarked;

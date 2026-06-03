@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.jackson2;
+package io.github.kotlinmania.spring.boot.jackson2;
 
 import java.io.IOException;
 import java.util.HashMap;
@@ -35,9 +35,9 @@ import org.springframework.aot.test.generate.TestGenerationContext;
 import org.springframework.beans.factory.aot.BeanFactoryInitializationAotContribution;
 import org.springframework.beans.factory.aot.BeanFactoryInitializationCode;
 import org.springframework.beans.factory.config.ConfigurableListableBeanFactory;
-import org.springframework.boot.jackson2.types.Name;
-import org.springframework.boot.jackson2.types.NameAndAge;
-import org.springframework.boot.jackson2.types.NameAndCareer;
+import io.github.kotlinmania.spring.boot.jackson2.types.Name;
+import io.github.kotlinmania.spring.boot.jackson2.types.NameAndAge;
+import io.github.kotlinmania.spring.boot.jackson2.types.NameAndCareer;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -131,7 +131,7 @@ class JsonComponentModuleTests {
 	void aotContributionRegistersReflectionHintsForSuitableInnerClasses() {
 		load(ComponentWithInnerAbstractClass.class);
 		ConfigurableListableBeanFactory beanFactory = getContext().getBeanFactory();
-		BeanFactoryInitializationAotContribution contribution = new org.springframework.boot.jackson2.JsonComponentModule.JsonComponentBeanFactoryInitializationAotProcessor()
+		BeanFactoryInitializationAotContribution contribution = new io.github.kotlinmania.spring.boot.jackson2.JsonComponentModule.JsonComponentBeanFactoryInitializationAotProcessor()
 			.processAheadOfTime(beanFactory);
 		TestGenerationContext generationContext = new TestGenerationContext();
 		assertThat(contribution).isNotNull();

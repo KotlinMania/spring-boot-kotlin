@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.web.server;
+package io.github.kotlinmania.spring.boot.web.server;
 
 /**
  * Tagging interface for factories that create a {@link WebServer}.
@@ -22,8 +22,8 @@ package org.springframework.boot.web.server;
  * @author Phillip Webb
  * @since 2.0.0
  * @see WebServer
- * @see org.springframework.boot.web.server.servlet.ServletWebServerFactory
- * @see org.springframework.boot.web.server.reactive.ReactiveWebServerFactory
+ * @see io.github.kotlinmania.spring.boot.web.server.servlet.ServletWebServerFactory
+ * @see io.github.kotlinmania.spring.boot.web.server.reactive.ReactiveWebServerFactory
  */
 public interface WebServerFactory {
 

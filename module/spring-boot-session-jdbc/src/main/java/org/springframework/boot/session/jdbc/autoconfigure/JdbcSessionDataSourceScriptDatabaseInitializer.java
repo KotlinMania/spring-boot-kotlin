@@ -14,15 +14,15 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.session.jdbc.autoconfigure;
+package io.github.kotlinmania.spring.boot.session.jdbc.autoconfigure;
 
 import java.util.Map;
 
 import javax.sql.DataSource;
 
-import org.springframework.boot.jdbc.DatabaseDriver;
-import org.springframework.boot.jdbc.init.DataSourceScriptDatabaseInitializer;
-import org.springframework.boot.jdbc.init.PropertiesBasedDataSourceScriptDatabaseInitializer;
+import io.github.kotlinmania.spring.boot.jdbc.DatabaseDriver;
+import io.github.kotlinmania.spring.boot.jdbc.init.DataSourceScriptDatabaseInitializer;
+import io.github.kotlinmania.spring.boot.jdbc.init.PropertiesBasedDataSourceScriptDatabaseInitializer;
 
 /**
  * {@link DataSourceScriptDatabaseInitializer} for the Spring Session JDBC database. May

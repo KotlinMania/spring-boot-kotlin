@@ -15,7 +15,7 @@
  */
 
 plugins {
-	id "org.springframework.boot.starter"
+	id "io.github.kotlinmania.spring.boot.starter"
 }
 
 description = "Starter for using Spring Security's OAuth2 resource server features (deprecated in favor of spring-boot-starter-security-oauth2-resource-server)"

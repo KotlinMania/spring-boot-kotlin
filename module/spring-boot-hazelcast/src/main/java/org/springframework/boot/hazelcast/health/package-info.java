@@ -18,6 +18,6 @@
  * Health integration for Hazelcast.
  */
 @NullMarked
-package org.springframework.boot.hazelcast.health;
+package io.github.kotlinmania.spring.boot.hazelcast.health;
 
 import org.jspecify.annotations.NullMarked;

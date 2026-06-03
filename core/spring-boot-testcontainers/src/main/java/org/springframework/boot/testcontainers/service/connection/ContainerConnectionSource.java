@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.testcontainers.service.connection;
+package io.github.kotlinmania.spring.boot.testcontainers.service.connection;
 
 import java.lang.annotation.Annotation;
 import java.util.Set;
@@ -26,8 +26,8 @@ import org.jspecify.annotations.Nullable;
 import org.testcontainers.containers.Container;
 import org.testcontainers.utility.DockerImageName;
 
-import org.springframework.boot.origin.Origin;
-import org.springframework.boot.origin.OriginProvider;
+import io.github.kotlinmania.spring.boot.origin.Origin;
+import io.github.kotlinmania.spring.boot.origin.OriginProvider;
 import org.springframework.core.annotation.MergedAnnotation;
 import org.springframework.core.annotation.MergedAnnotations;
 import org.springframework.core.log.LogMessage;

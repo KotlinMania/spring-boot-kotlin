@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.devtools.restart.classloader;
+package io.github.kotlinmania.spring.boot.devtools.restart.classloader;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -37,8 +37,8 @@ import org.junit.jupiter.api.io.TempDir;
 
 import org.springframework.aop.framework.ProxyFactory;
 import org.springframework.aop.support.AopUtils;
-import org.springframework.boot.devtools.restart.classloader.ClassLoaderFile.Kind;
-import org.springframework.boot.test.context.runner.ApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.devtools.restart.classloader.ClassLoaderFile.Kind;
+import io.github.kotlinmania.spring.boot.test.context.runner.ApplicationContextRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;

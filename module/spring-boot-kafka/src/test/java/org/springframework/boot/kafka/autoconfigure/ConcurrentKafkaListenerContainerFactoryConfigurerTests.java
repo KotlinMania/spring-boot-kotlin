@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.kafka.autoconfigure;
+package io.github.kotlinmania.spring.boot.kafka.autoconfigure;
 
 import java.time.Duration;
 import java.util.function.Function;

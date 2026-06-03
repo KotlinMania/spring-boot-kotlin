@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.messaging.rsocket.requester
+package io.github.kotlinmania.spring.boot.docs.messaging.rsocket.requester
 
 import org.springframework.messaging.rsocket.RSocketRequester
 import org.springframework.stereotype.Service

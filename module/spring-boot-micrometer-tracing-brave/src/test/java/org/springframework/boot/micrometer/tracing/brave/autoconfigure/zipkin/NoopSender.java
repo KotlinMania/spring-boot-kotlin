@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.micrometer.tracing.brave.autoconfigure.zipkin;
+package io.github.kotlinmania.spring.boot.micrometer.tracing.brave.autoconfigure.zipkin;
 
 import java.io.IOException;
 import java.util.List;

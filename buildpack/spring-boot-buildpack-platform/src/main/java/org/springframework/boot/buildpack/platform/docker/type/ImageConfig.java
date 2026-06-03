@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.buildpack.platform.docker.type;
+package io.github.kotlinmania.spring.boot.buildpack.platform.docker.type;
 
 import java.lang.invoke.MethodHandles;
 import java.util.Collections;
@@ -26,7 +26,7 @@ import org.jspecify.annotations.Nullable;
 import tools.jackson.databind.JsonNode;
 import tools.jackson.databind.node.ObjectNode;
 
-import org.springframework.boot.buildpack.platform.json.MappedObject;
+import io.github.kotlinmania.spring.boot.buildpack.platform.json.MappedObject;
 
 /**
  * Image configuration information.

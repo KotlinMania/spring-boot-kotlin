@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.logging;
+package io.github.kotlinmania.spring.boot.logging;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -23,8 +23,8 @@ import java.util.function.Supplier;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
-import org.springframework.boot.logging.DeferredLog.Line;
-import org.springframework.boot.logging.DeferredLog.Lines;
+import io.github.kotlinmania.spring.boot.logging.DeferredLog.Line;
+import io.github.kotlinmania.spring.boot.logging.DeferredLog.Lines;
 
 /**
  * A {@link DeferredLogFactory} implementation that manages a collection

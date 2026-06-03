@@ -14,20 +14,20 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.tomcat.autoconfigure.servlet;
+package io.github.kotlinmania.spring.boot.tomcat.autoconfigure.servlet;
 
 import jakarta.servlet.Filter;
 import org.apache.catalina.Context;
 import org.apache.catalina.connector.Connector;
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.tomcat.TomcatConnectorCustomizer;
-import org.springframework.boot.tomcat.TomcatContextCustomizer;
-import org.springframework.boot.tomcat.TomcatProtocolHandlerCustomizer;
-import org.springframework.boot.tomcat.servlet.TomcatServletWebServerFactory;
-import org.springframework.boot.web.server.WebServerFactoryCustomizer;
-import org.springframework.boot.web.server.autoconfigure.servlet.AbstractServletWebServerAutoConfigurationTests;
-import org.springframework.boot.web.servlet.FilterRegistrationBean;
+import io.github.kotlinmania.spring.boot.tomcat.TomcatConnectorCustomizer;
+import io.github.kotlinmania.spring.boot.tomcat.TomcatContextCustomizer;
+import io.github.kotlinmania.spring.boot.tomcat.TomcatProtocolHandlerCustomizer;
+import io.github.kotlinmania.spring.boot.tomcat.servlet.TomcatServletWebServerFactory;
+import io.github.kotlinmania.spring.boot.web.server.WebServerFactoryCustomizer;
+import io.github.kotlinmania.spring.boot.web.server.autoconfigure.servlet.AbstractServletWebServerAutoConfigurationTests;
+import io.github.kotlinmania.spring.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.filter.ForwardedHeaderFilter;

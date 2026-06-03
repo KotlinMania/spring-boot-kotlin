@@ -1,6 +1,6 @@
 # Connection Details Factories
-org.springframework.boot.autoconfigure.service.connection.ConnectionDetailsFactory=\
-org.springframework.boot.mongodb.docker.compose.MongoDockerComposeConnectionDetailsFactory,\
-org.springframework.boot.mongodb.testcontainers.DeprecatedMongoDbContainerConnectionDetailsFactory,\
-org.springframework.boot.mongodb.testcontainers.MongoDbAtlasLocalContainerConnectionDetailsFactory,\
-org.springframework.boot.mongodb.testcontainers.MongoDbContainerConnectionDetailsFactory
+io.github.kotlinmania.spring.boot.autoconfigure.service.connection.ConnectionDetailsFactory=\
+io.github.kotlinmania.spring.boot.mongodb.docker.compose.MongoDockerComposeConnectionDetailsFactory,\
+io.github.kotlinmania.spring.boot.mongodb.testcontainers.DeprecatedMongoDbContainerConnectionDetailsFactory,\
+io.github.kotlinmania.spring.boot.mongodb.testcontainers.MongoDbAtlasLocalContainerConnectionDetailsFactory,\
+io.github.kotlinmania.spring.boot.mongodb.testcontainers.MongoDbContainerConnectionDetailsFactory

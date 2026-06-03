@@ -18,6 +18,6 @@
  * Support for classpath monitoring.
  */
 @NullMarked
-package org.springframework.boot.devtools.classpath;
+package io.github.kotlinmania.spring.boot.devtools.classpath;
 
 import org.jspecify.annotations.NullMarked;

@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.web.context.servlet;
+package io.github.kotlinmania.spring.boot.web.context.servlet;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.context.properties.source.ConfigurationPropertySources;
+import io.github.kotlinmania.spring.boot.SpringApplication;
+import io.github.kotlinmania.spring.boot.context.properties.source.ConfigurationPropertySources;
 import org.springframework.core.env.ConfigurablePropertyResolver;
 import org.springframework.core.env.MutablePropertySources;
 import org.springframework.web.context.support.StandardServletEnvironment;

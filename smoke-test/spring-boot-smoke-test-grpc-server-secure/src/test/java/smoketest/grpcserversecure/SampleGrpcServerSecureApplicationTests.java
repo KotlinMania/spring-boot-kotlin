@@ -35,8 +35,8 @@ import smoketest.grpcserversecure.proto.HelloWorldGrpc.HelloWorldBlockingStub;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.boot.test.context.TestConfiguration;
+import io.github.kotlinmania.spring.boot.test.context.SpringBootTest;
+import io.github.kotlinmania.spring.boot.test.context.TestConfiguration;
 import org.springframework.context.annotation.Bean;
 import org.springframework.grpc.client.GrpcChannelBuilderCustomizer;
 import org.springframework.grpc.client.ImportGrpcClients;

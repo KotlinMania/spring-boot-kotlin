@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.system;
+package io.github.kotlinmania.spring.boot.system;
 
 import java.io.File;
 import java.io.FileNotFoundException;

@@ -18,6 +18,6 @@
  * Support for testcontainers Pulsar service connections.
  */
 @NullMarked
-package org.springframework.boot.pulsar.testcontainers;
+package io.github.kotlinmania.spring.boot.pulsar.testcontainers;
 
 import org.jspecify.annotations.NullMarked;

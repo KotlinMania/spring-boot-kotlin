@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.context.metrics.buffering;
+package io.github.kotlinmania.spring.boot.context.metrics.buffering;
 
 import java.time.Clock;
 import java.time.Instant;
@@ -28,7 +28,7 @@ import java.util.function.Predicate;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.context.metrics.buffering.StartupTimeline.TimelineEvent;
+import io.github.kotlinmania.spring.boot.context.metrics.buffering.StartupTimeline.TimelineEvent;
 import org.springframework.core.metrics.ApplicationStartup;
 import org.springframework.core.metrics.StartupStep;
 import org.springframework.util.Assert;

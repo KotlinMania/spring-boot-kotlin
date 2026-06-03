@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.autoconfigure.task;
+package io.github.kotlinmania.spring.boot.autoconfigure.task;
 
-import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnThreading;
-import org.springframework.boot.task.SimpleAsyncTaskSchedulerBuilder;
-import org.springframework.boot.task.ThreadPoolTaskSchedulerBuilder;
-import org.springframework.boot.thread.Threading;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnBean;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnMissingBean;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnThreading;
+import io.github.kotlinmania.spring.boot.task.SimpleAsyncTaskSchedulerBuilder;
+import io.github.kotlinmania.spring.boot.task.ThreadPoolTaskSchedulerBuilder;
+import io.github.kotlinmania.spring.boot.thread.Threading;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.scheduling.TaskScheduler;

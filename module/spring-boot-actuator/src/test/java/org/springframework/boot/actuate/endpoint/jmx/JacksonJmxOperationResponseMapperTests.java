@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.actuate.endpoint.jmx;
+package io.github.kotlinmania.spring.boot.actuate.endpoint.jmx;
 
 import java.util.Arrays;
 import java.util.Collection;
@@ -28,7 +28,7 @@ import org.junit.jupiter.api.Test;
 import tools.jackson.databind.JavaType;
 import tools.jackson.databind.json.JsonMapper;
 
-import org.springframework.boot.test.json.BasicJsonTester;
+import io.github.kotlinmania.spring.boot.test.json.BasicJsonTester;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.ArgumentMatchers.any;

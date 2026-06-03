@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.hibernate;
+package io.github.kotlinmania.spring.boot.hibernate;
 
 import org.hibernate.boot.model.naming.Identifier;
 import org.hibernate.boot.model.naming.ImplicitJoinTableNameSource;

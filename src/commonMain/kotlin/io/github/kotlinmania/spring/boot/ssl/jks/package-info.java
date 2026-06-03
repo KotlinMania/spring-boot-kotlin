@@ -18,6 +18,6 @@
  * SSL trust material provider for Java KeyStores.
  */
 @NullMarked
-package org.springframework.boot.ssl.jks;
+package io.github.kotlinmania.spring.boot.ssl.jks;
 
 import org.jspecify.annotations.NullMarked;

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.data.sql.jooq.dslcontext;
+package io.github.kotlinmania.spring.boot.docs.data.sql.jooq.dslcontext;
 
 import java.util.GregorianCalendar;
 import java.util.List;
@@ -23,7 +23,7 @@ import org.jooq.DSLContext;
 
 import org.springframework.stereotype.Component;
 
-import static org.springframework.boot.docs.data.sql.jooq.dslcontext.Tables.AUTHOR;
+import static io.github.kotlinmania.spring.boot.docs.data.sql.jooq.dslcontext.Tables.AUTHOR;
 
 @Component
 public class MyBean {

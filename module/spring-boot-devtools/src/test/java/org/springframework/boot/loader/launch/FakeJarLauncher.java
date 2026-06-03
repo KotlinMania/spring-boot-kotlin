@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.loader.launch;
+package io.github.kotlinmania.spring.boot.loader.launch;
 
 import java.util.function.Consumer;
 
 import org.jspecify.annotations.Nullable;
 
 /**
- * Fake launcher in the {@code org.springframework.boot.loader.launch} package used in
+ * Fake launcher in the {@code io.github.kotlinmania.spring.boot.loader.launch} package used in
  * {@code MainMethodTests}.
  *
  * @author Phillip Webb

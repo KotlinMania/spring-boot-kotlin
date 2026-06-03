@@ -18,6 +18,6 @@
  * Auto-configuration for Data LDAP tests.
  */
 @NullMarked
-package org.springframework.boot.data.ldap.test.autoconfigure;
+package io.github.kotlinmania.spring.boot.data.ldap.test.autoconfigure;
 
 import org.jspecify.annotations.NullMarked;

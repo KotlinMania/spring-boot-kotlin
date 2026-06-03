@@ -14,29 +14,29 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.grpc.server.autoconfigure.health;
+package io.github.kotlinmania.spring.boot.grpc.server.autoconfigure.health;
 
 import io.grpc.BindableService;
 import io.grpc.Grpc;
 import io.grpc.protobuf.services.HealthStatusManager;
 
 import org.springframework.beans.factory.ObjectProvider;
-import org.springframework.boot.autoconfigure.AutoConfiguration;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
-import org.springframework.boot.autoconfigure.condition.AnyNestedCondition;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnBooleanProperty;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
-import org.springframework.boot.context.properties.EnableConfigurationProperties;
-import org.springframework.boot.grpc.server.autoconfigure.health.GrpcServerHealthAutoConfiguration.NotDisabledAndHasBindableServiceOrExplicitlyEnabledCondition;
-import org.springframework.boot.grpc.server.health.GrpcServerHealth;
-import org.springframework.boot.grpc.server.health.HealthCheckedGrpcComponents;
-import org.springframework.boot.grpc.server.health.StatusAggregator;
-import org.springframework.boot.grpc.server.health.StatusMapper;
-import org.springframework.boot.health.autoconfigure.contributor.HealthContributorMembershipValidator;
-import org.springframework.boot.health.registry.HealthContributorRegistry;
-import org.springframework.boot.health.registry.ReactiveHealthContributorRegistry;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.EnableAutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.AnyNestedCondition;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnBean;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnBooleanProperty;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnClass;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnMissingBean;
+import io.github.kotlinmania.spring.boot.context.properties.EnableConfigurationProperties;
+import io.github.kotlinmania.spring.boot.grpc.server.autoconfigure.health.GrpcServerHealthAutoConfiguration.NotDisabledAndHasBindableServiceOrExplicitlyEnabledCondition;
+import io.github.kotlinmania.spring.boot.grpc.server.health.GrpcServerHealth;
+import io.github.kotlinmania.spring.boot.grpc.server.health.HealthCheckedGrpcComponents;
+import io.github.kotlinmania.spring.boot.grpc.server.health.StatusAggregator;
+import io.github.kotlinmania.spring.boot.grpc.server.health.StatusMapper;
+import io.github.kotlinmania.spring.boot.health.autoconfigure.contributor.HealthContributorMembershipValidator;
+import io.github.kotlinmania.spring.boot.health.registry.HealthContributorRegistry;
+import io.github.kotlinmania.spring.boot.health.registry.ReactiveHealthContributorRegistry;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Conditional;
@@ -52,7 +52,7 @@ import org.springframework.grpc.server.GrpcServerFactory;
  * @since 4.1.0
  */
 @AutoConfiguration(
-		afterName = "org.springframework.boot.health.autoconfigure.registry.HealthContributorRegistryAutoConfiguration")
+		afterName = "io.github.kotlinmania.spring.boot.health.autoconfigure.registry.HealthContributorRegistryAutoConfiguration")
 @ConditionalOnClass({ GrpcServerFactory.class, Grpc.class, HealthStatusManager.class })
 @ConditionalOnBooleanProperty(name = "spring.grpc.server.enabled", matchIfMissing = true)
 @Conditional(NotDisabledAndHasBindableServiceOrExplicitlyEnabledCondition.class)
@@ -71,7 +71,7 @@ public final class GrpcServerHealthAutoConfiguration {
 	}
 
 	@Configuration(proxyBeanMethods = false)
-	@ConditionalOnBean(type = "org.springframework.boot.health.registry.HealthContributorRegistry")
+	@ConditionalOnBean(type = "io.github.kotlinmania.spring.boot.health.registry.HealthContributorRegistry")
 	static class GrpcServerHealthContributorConfiguration {
 
 		static final String VALIDATE_MEMBERSHIP_PROPERTY = "spring.grpc.server.health.services.validate-membership";

@@ -14,15 +14,15 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.webmvc.test.autoconfigure;
+package io.github.kotlinmania.spring.boot.webmvc.test.autoconfigure;
 
 import java.io.IOException;
 
 import org.junit.jupiter.api.Test;
 import tools.jackson.databind.module.SimpleModule;
 
-import org.springframework.boot.jackson.JacksonComponent;
-import org.springframework.boot.webmvc.autoconfigure.WebMvcRegistrations;
+import io.github.kotlinmania.spring.boot.jackson.JacksonComponent;
+import io.github.kotlinmania.spring.boot.webmvc.autoconfigure.WebMvcRegistrations;
 import org.springframework.context.annotation.ComponentScan.Filter;
 import org.springframework.context.annotation.FilterType;
 import org.springframework.core.type.classreading.MetadataReader;
@@ -223,7 +223,7 @@ class WebMvcTypeExcludeFilterTests {
 
 	}
 
-	@org.springframework.boot.jackson2.JsonComponent
+	@io.github.kotlinmania.spring.boot.jackson2.JsonComponent
 	@SuppressWarnings("removal")
 	static class ExampleJsonComponent {
 

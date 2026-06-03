@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.configurationsample.lombok;
+package io.github.kotlinmania.spring.boot.configurationsample.lombok;
 
 import lombok.Data;
 
-import org.springframework.boot.configurationsample.TestConfigurationProperties;
+import io.github.kotlinmania.spring.boot.configurationsample.TestConfigurationProperties;
 
 @Data
 @TestConfigurationProperties("config")

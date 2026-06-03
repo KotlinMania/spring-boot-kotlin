@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.jackson.scan.f;
+package io.github.kotlinmania.spring.boot.jackson.scan.f;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-import org.springframework.boot.jackson.JacksonMixin;
+import io.github.kotlinmania.spring.boot.jackson.JacksonMixin;
 
 @JacksonMixin
 public interface EmptyMixIn {

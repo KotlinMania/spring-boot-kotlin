@@ -14,15 +14,15 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docker.compose.core;
+package io.github.kotlinmania.spring.boot.docker.compose.core;
 
 import java.util.Collections;
 import java.util.Map;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.origin.Origin;
-import org.springframework.boot.origin.OriginProvider;
+import io.github.kotlinmania.spring.boot.origin.Origin;
+import io.github.kotlinmania.spring.boot.origin.OriginProvider;
 
 /**
  * Default {@link RunningService} implementation backed by {@link DockerCli} responses.

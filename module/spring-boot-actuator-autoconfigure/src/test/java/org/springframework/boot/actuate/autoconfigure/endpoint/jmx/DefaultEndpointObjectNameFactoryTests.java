@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.actuate.autoconfigure.endpoint.jmx;
+package io.github.kotlinmania.spring.boot.actuate.autoconfigure.endpoint.jmx;
 
 import java.util.Collections;
 
@@ -25,9 +25,9 @@ import javax.management.ObjectName;
 import org.jspecify.annotations.Nullable;
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.actuate.endpoint.EndpointId;
-import org.springframework.boot.actuate.endpoint.jmx.ExposableJmxEndpoint;
-import org.springframework.boot.autoconfigure.jmx.JmxProperties;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.EndpointId;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.jmx.ExposableJmxEndpoint;
+import io.github.kotlinmania.spring.boot.autoconfigure.jmx.JmxProperties;
 import org.springframework.util.ObjectUtils;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -52,13 +52,13 @@ class DefaultEndpointObjectNameFactoryTests {
 	@Test
 	void generateObjectName() {
 		ObjectName objectName = generateObjectName(endpoint(EndpointId.of("test")));
-		assertThat(objectName).hasToString("org.springframework.boot:type=Endpoint,name=Test");
+		assertThat(objectName).hasToString("io.github.kotlinmania.spring.boot.type=Endpoint,name=Test");
 	}
 
 	@Test
 	void generateObjectNameWithCapitalizedId() {
 		ObjectName objectName = generateObjectName(endpoint(EndpointId.of("testEndpoint")));
-		assertThat(objectName).hasToString("org.springframework.boot:type=Endpoint,name=TestEndpoint");
+		assertThat(objectName).hasToString("io.github.kotlinmania.spring.boot.type=Endpoint,name=TestEndpoint");
 	}
 
 	@Test
@@ -78,7 +78,7 @@ class DefaultEndpointObjectNameFactoryTests {
 		ExposableJmxEndpoint endpoint = endpoint(EndpointId.of("test"));
 		String id = ObjectUtils.getIdentityHexString(endpoint);
 		ObjectName objectName = generateObjectName(endpoint);
-		assertThat(objectName).hasToString("org.springframework.boot:type=Endpoint,name=Test,identity=" + id);
+		assertThat(objectName).hasToString("io.github.kotlinmania.spring.boot.type=Endpoint,name=Test,identity=" + id);
 	}
 
 	@Test
@@ -88,16 +88,16 @@ class DefaultEndpointObjectNameFactoryTests {
 		ObjectName objectName = generateObjectName(endpoint(EndpointId.of("test")));
 		assertThat(objectName.getKeyProperty("counter")).isEqualTo("42");
 		assertThat(objectName.getKeyProperty("foo")).isEqualTo("bar");
-		assertThat(objectName.toString()).startsWith("org.springframework.boot:type=Endpoint,name=Test,");
+		assertThat(objectName.toString()).startsWith("io.github.kotlinmania.spring.boot.type=Endpoint,name=Test,");
 	}
 
 	@Test
 	void generateObjectNameWithDuplicate() throws MalformedObjectNameException {
 		this.contextId = "testContext";
-		given(this.mBeanServer.queryNames(new ObjectName("org.springframework.boot:type=Endpoint,name=Test,*"), null))
-			.willReturn(Collections.singleton(new ObjectName("org.springframework.boot:type=Endpoint,name=Test")));
+		given(this.mBeanServer.queryNames(new ObjectName("io.github.kotlinmania.spring.boot.type=Endpoint,name=Test,*"), null))
+			.willReturn(Collections.singleton(new ObjectName("io.github.kotlinmania.spring.boot.type=Endpoint,name=Test")));
 		ObjectName objectName = generateObjectName(endpoint(EndpointId.of("test")));
-		assertThat(objectName).hasToString("org.springframework.boot:type=Endpoint,name=Test,context=testContext");
+		assertThat(objectName).hasToString("io.github.kotlinmania.spring.boot.type=Endpoint,name=Test,context=testContext");
 
 	}
 

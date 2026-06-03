@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.gradle.plugin;
+package io.github.kotlinmania.spring.boot.gradle.plugin;
 
 import java.io.File;
 import java.util.List;
@@ -46,10 +46,10 @@ import org.gradle.jvm.toolchain.JavaToolchainService;
 import org.gradle.jvm.toolchain.JavaToolchainSpec;
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.gradle.dsl.SpringBootExtension;
-import org.springframework.boot.gradle.tasks.bundling.BootBuildImage;
-import org.springframework.boot.gradle.tasks.bundling.BootJar;
-import org.springframework.boot.gradle.tasks.run.BootRun;
+import io.github.kotlinmania.spring.boot.gradle.dsl.SpringBootExtension;
+import io.github.kotlinmania.spring.boot.gradle.tasks.bundling.BootBuildImage;
+import io.github.kotlinmania.spring.boot.gradle.tasks.bundling.BootJar;
+import io.github.kotlinmania.spring.boot.gradle.tasks.run.BootRun;
 import org.springframework.util.Assert;
 import org.springframework.util.StringUtils;
 
@@ -327,7 +327,7 @@ final class JavaPluginAction implements PluginApplicationAction {
 
 	private void configureSpringBootStarterTestToDependOnJUnitPlatformLauncher(Project project) {
 		project.getDependencies()
-			.components((components) -> components.withModule("org.springframework.boot:spring-boot-starter-test",
+			.components((components) -> components.withModule("io.github.kotlinmania.spring.boot.spring-boot-starter-test",
 					(metadata) -> metadata.withVariant("runtimeElements", (variant) -> variant.withDependencies(
 							(dependencies) -> dependencies.add("org.junit.platform:junit-platform-launcher")
 
@@ -368,7 +368,7 @@ final class JavaPluginAction implements PluginApplicationAction {
 		private void configureAdditionalMetadataLocations(JavaCompile compile) {
 			compile.getOptions()
 				.getCompilerArgs()
-				.add("-Aorg.springframework.boot.configurationprocessor.additionalMetadataLocations="
+				.add("-Aio.github.kotlinmania.spring.boot.configurationprocessor.additionalMetadataLocations="
 						+ StringUtils.collectionToCommaDelimitedString(this.locations));
 		}
 

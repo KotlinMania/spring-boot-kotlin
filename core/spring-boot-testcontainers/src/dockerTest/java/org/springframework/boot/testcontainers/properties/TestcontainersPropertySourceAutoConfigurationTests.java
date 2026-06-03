@@ -14,21 +14,21 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.testcontainers.properties;
+package io.github.kotlinmania.spring.boot.testcontainers.properties;
 
 import com.redis.testcontainers.RedisContainer;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 
-import org.springframework.boot.autoconfigure.AutoConfigurations;
-import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.boot.context.properties.EnableConfigurationProperties;
-import org.springframework.boot.test.context.runner.ApplicationContextRunner;
-import org.springframework.boot.testcontainers.lifecycle.TestcontainersLifecycleApplicationContextInitializer;
-import org.springframework.boot.testsupport.container.DisabledIfDockerUnavailable;
-import org.springframework.boot.testsupport.container.TestImage;
-import org.springframework.boot.testsupport.system.CapturedOutput;
-import org.springframework.boot.testsupport.system.OutputCaptureExtension;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurations;
+import io.github.kotlinmania.spring.boot.context.properties.ConfigurationProperties;
+import io.github.kotlinmania.spring.boot.context.properties.EnableConfigurationProperties;
+import io.github.kotlinmania.spring.boot.test.context.runner.ApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.testcontainers.lifecycle.TestcontainersLifecycleApplicationContextInitializer;
+import io.github.kotlinmania.spring.boot.testsupport.container.DisabledIfDockerUnavailable;
+import io.github.kotlinmania.spring.boot.testsupport.container.TestImage;
+import io.github.kotlinmania.spring.boot.testsupport.system.CapturedOutput;
+import io.github.kotlinmania.spring.boot.testsupport.system.OutputCaptureExtension;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;

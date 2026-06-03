@@ -18,6 +18,6 @@
  * Support for exporting actuator metrics to AppOptics.
  */
 @NullMarked
-package org.springframework.boot.micrometer.metrics.autoconfigure.export.appoptics;
+package io.github.kotlinmania.spring.boot.micrometer.metrics.autoconfigure.export.appoptics;
 
 import org.jspecify.annotations.NullMarked;

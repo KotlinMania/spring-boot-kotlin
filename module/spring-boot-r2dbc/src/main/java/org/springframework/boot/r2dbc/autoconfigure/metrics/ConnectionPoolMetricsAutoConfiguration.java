@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.r2dbc.autoconfigure.metrics;
+package io.github.kotlinmania.spring.boot.r2dbc.autoconfigure.metrics;
 
 import io.micrometer.core.instrument.MeterRegistry;
 import io.micrometer.core.instrument.Tags;
@@ -26,12 +26,12 @@ import org.jspecify.annotations.Nullable;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.config.ConfigurableListableBeanFactory;
 import org.springframework.beans.factory.support.SimpleAutowireCandidateResolver;
-import org.springframework.boot.autoconfigure.AutoConfiguration;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
-import org.springframework.boot.r2dbc.autoconfigure.R2dbcAutoConfiguration;
-import org.springframework.boot.r2dbc.metrics.ConnectionPoolMetrics;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.EnableAutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnBean;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnClass;
+import io.github.kotlinmania.spring.boot.r2dbc.autoconfigure.R2dbcAutoConfiguration;
+import io.github.kotlinmania.spring.boot.r2dbc.metrics.ConnectionPoolMetrics;
 
 /**
  * {@link EnableAutoConfiguration Auto-configuration} for metrics on all available
@@ -42,7 +42,7 @@ import org.springframework.boot.r2dbc.metrics.ConnectionPoolMetrics;
  * @since 4.0.0
  */
 @AutoConfiguration(after = R2dbcAutoConfiguration.class,
-		afterName = "org.springframework.boot.micrometer.metrics.autoconfigure.CompositeMeterRegistryAutoConfiguration")
+		afterName = "io.github.kotlinmania.spring.boot.micrometer.metrics.autoconfigure.CompositeMeterRegistryAutoConfiguration")
 @ConditionalOnClass({ ConnectionPool.class, MeterRegistry.class })
 @ConditionalOnBean({ ConnectionFactory.class, MeterRegistry.class })
 public final class ConnectionPoolMetricsAutoConfiguration {

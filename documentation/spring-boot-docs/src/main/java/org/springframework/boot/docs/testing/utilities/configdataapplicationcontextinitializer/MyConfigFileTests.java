@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.testing.utilities.configdataapplicationcontextinitializer;
+package io.github.kotlinmania.spring.boot.docs.testing.utilities.configdataapplicationcontextinitializer;
 
-import org.springframework.boot.test.context.ConfigDataApplicationContextInitializer;
+import io.github.kotlinmania.spring.boot.test.context.ConfigDataApplicationContextInitializer;
 import org.springframework.test.context.ContextConfiguration;
 
 @ContextConfiguration(classes = Config.class, initializers = ConfigDataApplicationContextInitializer.class)

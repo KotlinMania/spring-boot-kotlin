@@ -14,17 +14,17 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.graphql.test.autoconfigure.tester;
+package io.github.kotlinmania.spring.boot.graphql.test.autoconfigure.tester;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.autoconfigure.AutoConfiguration;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
-import org.springframework.boot.context.properties.EnableConfigurationProperties;
-import org.springframework.boot.graphql.autoconfigure.GraphQlProperties;
-import org.springframework.boot.test.http.server.LocalTestWebServer;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnBean;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnClass;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnMissingBean;
+import io.github.kotlinmania.spring.boot.context.properties.EnableConfigurationProperties;
+import io.github.kotlinmania.spring.boot.graphql.autoconfigure.GraphQlProperties;
+import io.github.kotlinmania.spring.boot.test.http.server.LocalTestWebServer;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.graphql.test.tester.HttpGraphQlTester;
@@ -39,7 +39,7 @@ import org.springframework.web.reactive.function.client.WebClient;
  * @author Stephane Nicoll
  * @since 4.0.0
  */
-@AutoConfiguration(afterName = "org.springframework.boot.webtestclient.autoconfigure.WebTestClientAutoConfiguration")
+@AutoConfiguration(afterName = "io.github.kotlinmania.spring.boot.webtestclient.autoconfigure.WebTestClientAutoConfiguration")
 @ConditionalOnClass({ WebClient.class, WebTestClient.class, WebGraphQlTester.class })
 @EnableConfigurationProperties(GraphQlProperties.class)
 public final class HttpGraphQlTesterAutoConfiguration {

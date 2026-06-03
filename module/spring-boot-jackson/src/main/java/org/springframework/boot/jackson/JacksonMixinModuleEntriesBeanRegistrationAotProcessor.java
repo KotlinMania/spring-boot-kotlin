@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.jackson;
+package io.github.kotlinmania.spring.boot.jackson;
 
 import java.util.LinkedHashSet;
 import java.util.Set;

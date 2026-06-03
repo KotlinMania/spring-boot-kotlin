@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.howto.traditionaldeployment.war
+package io.github.kotlinmania.spring.boot.docs.howto.traditionaldeployment.war
 
-import org.springframework.boot.autoconfigure.SpringBootApplication
-import org.springframework.boot.builder.SpringApplicationBuilder
-import org.springframework.boot.runApplication
-import org.springframework.boot.web.servlet.support.SpringBootServletInitializer
+import io.github.kotlinmania.spring.boot.autoconfigure.SpringBootApplication
+import io.github.kotlinmania.spring.boot.builder.SpringApplicationBuilder
+import io.github.kotlinmania.spring.boot.runApplication
+import io.github.kotlinmania.spring.boot.web.servlet.support.SpringBootServletInitializer
 
 @SpringBootApplication
 class MyApplication : SpringBootServletInitializer() {

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.micrometer.metrics.autoconfigure;
+package io.github.kotlinmania.spring.boot.micrometer.metrics.autoconfigure;
 
 import java.util.Arrays;
 import java.util.Map;
@@ -30,7 +30,7 @@ import io.micrometer.core.instrument.config.MeterFilterReply;
 import io.micrometer.core.instrument.distribution.DistributionStatisticConfig;
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.micrometer.metrics.autoconfigure.MetricsProperties.Distribution;
+import io.github.kotlinmania.spring.boot.micrometer.metrics.autoconfigure.MetricsProperties.Distribution;
 import org.springframework.lang.Contract;
 import org.springframework.util.Assert;
 import org.springframework.util.StringUtils;

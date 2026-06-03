@@ -18,6 +18,6 @@
  * Support for Docker Compose LDAP service connections.
  */
 @NullMarked
-package org.springframework.boot.ldap.docker.compose;
+package io.github.kotlinmania.spring.boot.ldap.docker.compose;
 
 import org.jspecify.annotations.NullMarked;

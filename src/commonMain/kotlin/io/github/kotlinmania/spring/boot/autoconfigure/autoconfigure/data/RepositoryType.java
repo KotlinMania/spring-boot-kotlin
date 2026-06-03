@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.autoconfigure.data;
+package io.github.kotlinmania.spring.boot.autoconfigure.data;
 
 /**
  * Type of Spring Data repositories to enable.

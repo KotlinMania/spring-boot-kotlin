@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.howto.propertiesandconfiguration.externalizeconfiguration.builder
+package io.github.kotlinmania.spring.boot.docs.howto.propertiesandconfiguration.externalizeconfiguration.builder
 
-import org.springframework.boot.Banner
-import org.springframework.boot.builder.SpringApplicationBuilder
+import io.github.kotlinmania.spring.boot.Banner
+import io.github.kotlinmania.spring.boot.builder.SpringApplicationBuilder
 
 object MyApplication {
 

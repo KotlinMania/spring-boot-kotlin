@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.image.paketo;
+package io.github.kotlinmania.spring.boot.image.paketo;
 
 import java.io.File;
 import java.io.IOException;

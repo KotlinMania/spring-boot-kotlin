@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.autoconfigure.context.filtersample;
+package io.github.kotlinmania.spring.boot.autoconfigure.context.filtersample;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

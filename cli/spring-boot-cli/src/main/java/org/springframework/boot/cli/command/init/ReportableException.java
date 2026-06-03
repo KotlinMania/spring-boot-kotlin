@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.cli.command.init;
+package io.github.kotlinmania.spring.boot.cli.command.init;
 
 /**
  * Exception with a message that can be reported to the user.

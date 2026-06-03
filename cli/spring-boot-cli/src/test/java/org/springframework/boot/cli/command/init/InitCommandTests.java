@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.cli.command.init;
+package io.github.kotlinmania.spring.boot.cli.command.init;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;
@@ -33,7 +33,7 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.junit.jupiter.api.io.TempDir;
 import org.mockito.junit.jupiter.MockitoExtension;
 
-import org.springframework.boot.cli.command.status.ExitStatus;
+import io.github.kotlinmania.spring.boot.cli.command.status.ExitStatus;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.fail;

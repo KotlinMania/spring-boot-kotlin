@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.actuate.logging;
+package io.github.kotlinmania.spring.boot.actuate.logging;
 
 import java.util.Collection;
 import java.util.LinkedHashMap;
@@ -27,20 +27,20 @@ import java.util.TreeSet;
 import org.jspecify.annotations.Nullable;
 
 import org.springframework.aot.hint.annotation.RegisterReflectionForBinding;
-import org.springframework.boot.actuate.endpoint.OperationResponseBody;
-import org.springframework.boot.actuate.endpoint.annotation.Endpoint;
-import org.springframework.boot.actuate.endpoint.annotation.ReadOperation;
-import org.springframework.boot.actuate.endpoint.annotation.Selector;
-import org.springframework.boot.actuate.endpoint.annotation.WriteOperation;
-import org.springframework.boot.actuate.logging.LoggersEndpoint.GroupLoggerLevelsDescriptor;
-import org.springframework.boot.actuate.logging.LoggersEndpoint.SingleLoggerLevelsDescriptor;
-import org.springframework.boot.logging.LogLevel;
-import org.springframework.boot.logging.LoggerConfiguration;
-import org.springframework.boot.logging.LoggerConfiguration.ConfigurationScope;
-import org.springframework.boot.logging.LoggerConfiguration.LevelConfiguration;
-import org.springframework.boot.logging.LoggerGroup;
-import org.springframework.boot.logging.LoggerGroups;
-import org.springframework.boot.logging.LoggingSystem;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.OperationResponseBody;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.annotation.Endpoint;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.annotation.ReadOperation;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.annotation.Selector;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.annotation.WriteOperation;
+import io.github.kotlinmania.spring.boot.actuate.logging.LoggersEndpoint.GroupLoggerLevelsDescriptor;
+import io.github.kotlinmania.spring.boot.actuate.logging.LoggersEndpoint.SingleLoggerLevelsDescriptor;
+import io.github.kotlinmania.spring.boot.logging.LogLevel;
+import io.github.kotlinmania.spring.boot.logging.LoggerConfiguration;
+import io.github.kotlinmania.spring.boot.logging.LoggerConfiguration.ConfigurationScope;
+import io.github.kotlinmania.spring.boot.logging.LoggerConfiguration.LevelConfiguration;
+import io.github.kotlinmania.spring.boot.logging.LoggerGroup;
+import io.github.kotlinmania.spring.boot.logging.LoggerGroups;
+import io.github.kotlinmania.spring.boot.logging.LoggingSystem;
 import org.springframework.util.Assert;
 
 /**

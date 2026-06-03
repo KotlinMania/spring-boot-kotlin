@@ -14,17 +14,17 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.http.client.autoconfigure;
+package io.github.kotlinmania.spring.boot.http.client.autoconfigure;
 
 import java.time.Duration;
 
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.http.client.HttpClientSettings;
-import org.springframework.boot.http.client.HttpCookieHandling;
-import org.springframework.boot.http.client.HttpRedirects;
-import org.springframework.boot.ssl.SslBundle;
-import org.springframework.boot.ssl.SslBundles;
+import io.github.kotlinmania.spring.boot.http.client.HttpClientSettings;
+import io.github.kotlinmania.spring.boot.http.client.HttpCookieHandling;
+import io.github.kotlinmania.spring.boot.http.client.HttpRedirects;
+import io.github.kotlinmania.spring.boot.ssl.SslBundle;
+import io.github.kotlinmania.spring.boot.ssl.SslBundles;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatIllegalStateException;

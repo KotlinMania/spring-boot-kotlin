@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.actuate.endpoint.jackson;
+package io.github.kotlinmania.spring.boot.actuate.endpoint.jackson;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.json.JsonMapper;
 
-import org.springframework.boot.actuate.endpoint.OperationResponseBody;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.OperationResponseBody;
 
 /**
  * Interface used to supply the Jackson 2 {@link ObjectMapper} that should be used when

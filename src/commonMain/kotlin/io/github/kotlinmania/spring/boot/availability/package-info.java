@@ -18,6 +18,6 @@
  * Support for describing the availability of Spring Boot applications.
  */
 @NullMarked
-package org.springframework.boot.availability;
+package io.github.kotlinmania.spring.boot.availability;
 
 import org.jspecify.annotations.NullMarked;

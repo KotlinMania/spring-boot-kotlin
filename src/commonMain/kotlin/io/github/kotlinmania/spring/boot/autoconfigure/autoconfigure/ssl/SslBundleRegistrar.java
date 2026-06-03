@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.autoconfigure.ssl;
+package io.github.kotlinmania.spring.boot.autoconfigure.ssl;
 
-import org.springframework.boot.ssl.SslBundle;
-import org.springframework.boot.ssl.SslBundleRegistry;
+import io.github.kotlinmania.spring.boot.ssl.SslBundle;
+import io.github.kotlinmania.spring.boot.ssl.SslBundleRegistry;
 
 /**
  * Interface to be implemented by types that register {@link SslBundle} instances with an

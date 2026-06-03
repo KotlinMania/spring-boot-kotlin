@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.io.caching.provider.redis
+package io.github.kotlinmania.spring.boot.docs.io.caching.provider.redis
 
-import org.springframework.boot.cache.autoconfigure.RedisCacheManagerBuilderCustomizer
+import io.github.kotlinmania.spring.boot.cache.autoconfigure.RedisCacheManagerBuilderCustomizer
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
 import org.springframework.data.redis.cache.RedisCacheConfiguration

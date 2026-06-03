@@ -18,6 +18,6 @@
  * Support for testcontainers JDBC service connections.
  */
 @NullMarked
-package org.springframework.boot.jdbc.testcontainers;
+package io.github.kotlinmania.spring.boot.jdbc.testcontainers;
 
 import org.jspecify.annotations.NullMarked;

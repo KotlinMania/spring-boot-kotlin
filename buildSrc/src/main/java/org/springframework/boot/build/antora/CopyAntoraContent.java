@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.build.antora;
+package io.github.kotlinmania.spring.boot.build.antora;
 
 import java.io.IOException;
 import java.nio.file.Files;

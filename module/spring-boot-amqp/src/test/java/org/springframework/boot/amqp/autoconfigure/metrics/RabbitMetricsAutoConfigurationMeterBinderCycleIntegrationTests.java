@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.amqp.autoconfigure.metrics;
+package io.github.kotlinmania.spring.boot.amqp.autoconfigure.metrics;
 
 import io.micrometer.core.instrument.MeterRegistry;
 import io.micrometer.core.instrument.binder.MeterBinder;
@@ -22,8 +22,8 @@ import io.micrometer.core.instrument.simple.SimpleMeterRegistry;
 import org.junit.jupiter.api.Test;
 
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
-import org.springframework.boot.amqp.autoconfigure.RabbitAutoConfiguration;
-import org.springframework.boot.micrometer.metrics.autoconfigure.MetricsAutoConfiguration;
+import io.github.kotlinmania.spring.boot.amqp.autoconfigure.RabbitAutoConfiguration;
+import io.github.kotlinmania.spring.boot.micrometer.metrics.autoconfigure.MetricsAutoConfiguration;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

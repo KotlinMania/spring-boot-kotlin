@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.using.usingthespringbootapplicationannotation.springapplication
+package io.github.kotlinmania.spring.boot.docs.using.usingthespringbootapplicationannotation.springapplication
 
-import org.springframework.boot.autoconfigure.SpringBootApplication
-import org.springframework.boot.runApplication
+import io.github.kotlinmania.spring.boot.autoconfigure.SpringBootApplication
+import io.github.kotlinmania.spring.boot.runApplication
 
 // Same as @SpringBootConfiguration @EnableAutoConfiguration @ComponentScan
 @SpringBootApplication

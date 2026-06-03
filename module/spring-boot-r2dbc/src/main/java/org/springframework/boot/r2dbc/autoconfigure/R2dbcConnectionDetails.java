@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.r2dbc.autoconfigure;
+package io.github.kotlinmania.spring.boot.r2dbc.autoconfigure;
 
 import io.r2dbc.spi.ConnectionFactoryOptions;
 
-import org.springframework.boot.autoconfigure.service.connection.ConnectionDetails;
+import io.github.kotlinmania.spring.boot.autoconfigure.service.connection.ConnectionDetails;
 
 /**
  * Details required to establish a connection to an SQL service using R2DBC.

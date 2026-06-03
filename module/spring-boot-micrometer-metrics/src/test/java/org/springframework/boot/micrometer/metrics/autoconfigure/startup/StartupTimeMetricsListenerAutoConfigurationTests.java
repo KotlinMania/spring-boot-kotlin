@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.micrometer.metrics.autoconfigure.startup;
+package io.github.kotlinmania.spring.boot.micrometer.metrics.autoconfigure.startup;
 
 import java.time.Duration;
 import java.util.concurrent.TimeUnit;
@@ -23,13 +23,13 @@ import io.micrometer.core.instrument.TimeGauge;
 import io.micrometer.core.instrument.simple.SimpleMeterRegistry;
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.AutoConfigurations;
-import org.springframework.boot.context.event.ApplicationReadyEvent;
-import org.springframework.boot.context.event.ApplicationStartedEvent;
-import org.springframework.boot.micrometer.metrics.autoconfigure.MetricsAutoConfiguration;
-import org.springframework.boot.micrometer.metrics.startup.StartupTimeMetricsListener;
-import org.springframework.boot.test.context.runner.ApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.SpringApplication;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurations;
+import io.github.kotlinmania.spring.boot.context.event.ApplicationReadyEvent;
+import io.github.kotlinmania.spring.boot.context.event.ApplicationStartedEvent;
+import io.github.kotlinmania.spring.boot.micrometer.metrics.autoconfigure.MetricsAutoConfiguration;
+import io.github.kotlinmania.spring.boot.micrometer.metrics.startup.StartupTimeMetricsListener;
+import io.github.kotlinmania.spring.boot.test.context.runner.ApplicationContextRunner;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.Mockito.mock;

@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.web.server.servlet;
+package io.github.kotlinmania.spring.boot.web.server.servlet;
 
-import org.springframework.boot.web.server.WebServer;
-import org.springframework.boot.web.server.WebServerFactory;
-import org.springframework.boot.web.servlet.ServletContextInitializer;
+import io.github.kotlinmania.spring.boot.web.server.WebServer;
+import io.github.kotlinmania.spring.boot.web.server.WebServerFactory;
+import io.github.kotlinmania.spring.boot.web.servlet.ServletContextInitializer;
 
 /**
  * Factory interface that can be used to create a {@link WebServer}.

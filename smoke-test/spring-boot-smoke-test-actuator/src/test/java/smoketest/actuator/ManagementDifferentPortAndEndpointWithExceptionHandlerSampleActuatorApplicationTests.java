@@ -18,9 +18,9 @@ package smoketest.actuator;
 
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.resttestclient.TestRestTemplate;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.boot.test.web.server.LocalManagementPort;
+import io.github.kotlinmania.spring.boot.resttestclient.TestRestTemplate;
+import io.github.kotlinmania.spring.boot.test.context.SpringBootTest;
+import io.github.kotlinmania.spring.boot.test.web.server.LocalManagementPort;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ExceptionHandler;
@@ -29,7 +29,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 /**
  * Integration tests for separate management and main service ports with Actuator's MVC
- * {@link org.springframework.boot.actuate.endpoint.web.annotation.RestControllerEndpoint
+ * {@link io.github.kotlinmania.spring.boot.actuate.endpoint.web.annotation.RestControllerEndpoint
  * rest controller endpoints} and {@link ExceptionHandler exception handler}.
  *
  * @author Guirong Hu

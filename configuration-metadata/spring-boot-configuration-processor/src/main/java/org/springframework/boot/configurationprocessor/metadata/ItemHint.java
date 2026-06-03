@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.configurationprocessor.metadata;
+package io.github.kotlinmania.spring.boot.configurationprocessor.metadata;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -22,7 +22,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 
-import org.springframework.boot.configurationprocessor.support.ConventionUtils;
+import io.github.kotlinmania.spring.boot.configurationprocessor.support.ConventionUtils;
 
 /**
  * Provide hints on an {@link ItemMetadata}. Defines the list of possible values for a

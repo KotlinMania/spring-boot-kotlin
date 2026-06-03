@@ -14,15 +14,15 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.data.redis.docker.compose;
+package io.github.kotlinmania.spring.boot.data.redis.docker.compose;
 
 import javax.net.ssl.SSLContext;
 
-import org.springframework.boot.data.redis.autoconfigure.DataRedisConnectionDetails;
-import org.springframework.boot.data.redis.autoconfigure.DataRedisConnectionDetails.Standalone;
-import org.springframework.boot.docker.compose.service.connection.test.DockerComposeTest;
-import org.springframework.boot.ssl.SslBundle;
-import org.springframework.boot.testsupport.container.TestImage;
+import io.github.kotlinmania.spring.boot.data.redis.autoconfigure.DataRedisConnectionDetails;
+import io.github.kotlinmania.spring.boot.data.redis.autoconfigure.DataRedisConnectionDetails.Standalone;
+import io.github.kotlinmania.spring.boot.docker.compose.service.connection.test.DockerComposeTest;
+import io.github.kotlinmania.spring.boot.ssl.SslBundle;
+import io.github.kotlinmania.spring.boot.testsupport.container.TestImage;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

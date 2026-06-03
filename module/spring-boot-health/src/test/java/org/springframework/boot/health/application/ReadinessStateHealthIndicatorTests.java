@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.health.application;
+package io.github.kotlinmania.spring.boot.health.application;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.availability.ApplicationAvailability;
-import org.springframework.boot.availability.ReadinessState;
-import org.springframework.boot.health.contributor.Status;
+import io.github.kotlinmania.spring.boot.availability.ApplicationAvailability;
+import io.github.kotlinmania.spring.boot.availability.ReadinessState;
+import io.github.kotlinmania.spring.boot.health.contributor.Status;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.BDDMockito.given;

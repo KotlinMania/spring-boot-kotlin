@@ -14,15 +14,15 @@
  * limitations under the License.
  */
 
-package org.springframework.boot;
+package io.github.kotlinmania.spring.boot.
 
 import java.io.PrintStream;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.ansi.AnsiColor;
-import org.springframework.boot.ansi.AnsiOutput;
-import org.springframework.boot.ansi.AnsiStyle;
+import io.github.kotlinmania.spring.boot.ansi.AnsiColor;
+import io.github.kotlinmania.spring.boot.ansi.AnsiOutput;
+import io.github.kotlinmania.spring.boot.ansi.AnsiStyle;
 import org.springframework.core.env.Environment;
 
 /**

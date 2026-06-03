@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.servlet.filter;
+package io.github.kotlinmania.spring.boot.servlet.filter;
 
 import java.util.ArrayList;
 import java.util.List;

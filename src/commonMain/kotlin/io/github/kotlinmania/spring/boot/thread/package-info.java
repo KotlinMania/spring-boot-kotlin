@@ -18,6 +18,6 @@
  * Classes related to threads.
  */
 @NullMarked
-package org.springframework.boot.thread;
+package io.github.kotlinmania.spring.boot.thread;
 
 import org.jspecify.annotations.NullMarked;

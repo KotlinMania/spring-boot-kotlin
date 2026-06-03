@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.jetty.autoconfigure;
+package io.github.kotlinmania.spring.boot.jetty.autoconfigure;
 
 import java.time.Duration;
 import java.util.List;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.context.properties.ConfigurationProperties;
+import io.github.kotlinmania.spring.boot.context.properties.ConfigurationProperties;
 import org.springframework.util.unit.DataSize;
 
 /**

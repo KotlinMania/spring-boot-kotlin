@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.tomcat.autoconfigure.servlet;
+package io.github.kotlinmania.spring.boot.tomcat.autoconfigure.servlet;
 
-import org.springframework.boot.tomcat.ConfigurableTomcatWebServerFactory;
-import org.springframework.boot.tomcat.autoconfigure.TomcatServerProperties;
-import org.springframework.boot.tomcat.servlet.TomcatServletWebServerFactory;
-import org.springframework.boot.web.server.WebServerFactoryCustomizer;
+import io.github.kotlinmania.spring.boot.tomcat.ConfigurableTomcatWebServerFactory;
+import io.github.kotlinmania.spring.boot.tomcat.autoconfigure.TomcatServerProperties;
+import io.github.kotlinmania.spring.boot.tomcat.servlet.TomcatServletWebServerFactory;
+import io.github.kotlinmania.spring.boot.web.server.WebServerFactoryCustomizer;
 import org.springframework.core.Ordered;
 import org.springframework.util.ObjectUtils;
 

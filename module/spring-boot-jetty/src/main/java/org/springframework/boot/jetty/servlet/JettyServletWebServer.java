@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.jetty.servlet;
+package io.github.kotlinmania.spring.boot.jetty.servlet;
 
 import java.util.List;
 
 import org.eclipse.jetty.server.Handler;
 import org.eclipse.jetty.server.Server;
 
-import org.springframework.boot.jetty.JettyWebServer;
+import io.github.kotlinmania.spring.boot.jetty.JettyWebServer;
 
 /**
  * Servlet-specific {@link JettyWebServer}.

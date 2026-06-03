@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.webflux.autoconfigure.actuate.web.mappings;
+package io.github.kotlinmania.spring.boot.webflux.autoconfigure.actuate.web.mappings;
 
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.autoconfigure.AutoConfigurations;
-import org.springframework.boot.test.context.runner.ReactiveWebApplicationContextRunner;
-import org.springframework.boot.webflux.actuate.web.mappings.DispatcherHandlersMappingDescriptionProvider;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurations;
+import io.github.kotlinmania.spring.boot.test.context.runner.ReactiveWebApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.webflux.actuate.web.mappings.DispatcherHandlersMappingDescriptionProvider;
 import org.springframework.web.reactive.DispatcherHandler;
 
 import static org.assertj.core.api.Assertions.assertThat;

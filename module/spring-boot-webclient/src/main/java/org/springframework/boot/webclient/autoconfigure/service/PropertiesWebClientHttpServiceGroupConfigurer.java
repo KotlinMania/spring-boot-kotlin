@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.webclient.autoconfigure.service;
+package io.github.kotlinmania.spring.boot.webclient.autoconfigure.service;
 
 import java.util.List;
 import java.util.Map;
@@ -23,15 +23,15 @@ import java.util.function.Consumer;
 import org.jspecify.annotations.Nullable;
 
 import org.springframework.beans.factory.ObjectProvider;
-import org.springframework.boot.context.properties.PropertyMapper;
-import org.springframework.boot.http.client.HttpClientSettings;
-import org.springframework.boot.http.client.autoconfigure.ApiversionProperties;
-import org.springframework.boot.http.client.autoconfigure.HttpClientProperties;
-import org.springframework.boot.http.client.autoconfigure.HttpClientSettingsPropertyMapper;
-import org.springframework.boot.http.client.autoconfigure.PropertiesApiVersionInserter;
-import org.springframework.boot.http.client.autoconfigure.service.HttpServiceClientProperties;
-import org.springframework.boot.http.client.reactive.ClientHttpConnectorBuilder;
-import org.springframework.boot.ssl.SslBundles;
+import io.github.kotlinmania.spring.boot.context.properties.PropertyMapper;
+import io.github.kotlinmania.spring.boot.http.client.HttpClientSettings;
+import io.github.kotlinmania.spring.boot.http.client.autoconfigure.ApiversionProperties;
+import io.github.kotlinmania.spring.boot.http.client.autoconfigure.HttpClientProperties;
+import io.github.kotlinmania.spring.boot.http.client.autoconfigure.HttpClientSettingsPropertyMapper;
+import io.github.kotlinmania.spring.boot.http.client.autoconfigure.PropertiesApiVersionInserter;
+import io.github.kotlinmania.spring.boot.http.client.autoconfigure.service.HttpServiceClientProperties;
+import io.github.kotlinmania.spring.boot.http.client.reactive.ClientHttpConnectorBuilder;
+import io.github.kotlinmania.spring.boot.ssl.SslBundles;
 import org.springframework.core.Ordered;
 import org.springframework.http.HttpHeaders;
 import org.springframework.web.reactive.function.client.WebClient;

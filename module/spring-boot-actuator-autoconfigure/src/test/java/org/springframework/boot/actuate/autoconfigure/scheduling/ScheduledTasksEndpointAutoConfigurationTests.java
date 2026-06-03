@@ -14,15 +14,15 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.actuate.autoconfigure.scheduling;
+package io.github.kotlinmania.spring.boot.actuate.autoconfigure.scheduling;
 
 import java.util.Collections;
 
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.actuate.scheduling.ScheduledTasksEndpoint;
-import org.springframework.boot.autoconfigure.AutoConfigurations;
-import org.springframework.boot.test.context.runner.ApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.actuate.scheduling.ScheduledTasksEndpoint;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurations;
+import io.github.kotlinmania.spring.boot.test.context.runner.ApplicationContextRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 

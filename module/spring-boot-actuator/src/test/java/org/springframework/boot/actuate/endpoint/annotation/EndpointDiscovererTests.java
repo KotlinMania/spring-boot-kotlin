@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.actuate.endpoint.annotation;
+package io.github.kotlinmania.spring.boot.actuate.endpoint.annotation;
 
 import java.lang.annotation.Documented;
 import java.lang.annotation.ElementType;
@@ -35,19 +35,19 @@ import java.util.function.Function;
 import org.jspecify.annotations.Nullable;
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.actuate.endpoint.Access;
-import org.springframework.boot.actuate.endpoint.EndpointFilter;
-import org.springframework.boot.actuate.endpoint.EndpointId;
-import org.springframework.boot.actuate.endpoint.ExposableEndpoint;
-import org.springframework.boot.actuate.endpoint.Operation;
-import org.springframework.boot.actuate.endpoint.OperationFilter;
-import org.springframework.boot.actuate.endpoint.OperationType;
-import org.springframework.boot.actuate.endpoint.invoke.OperationInvoker;
-import org.springframework.boot.actuate.endpoint.invoke.OperationInvokerAdvisor;
-import org.springframework.boot.actuate.endpoint.invoke.ParameterValueMapper;
-import org.springframework.boot.actuate.endpoint.invoke.convert.ConversionServiceParameterValueMapper;
-import org.springframework.boot.actuate.endpoint.invoker.cache.CachingOperationInvoker;
-import org.springframework.boot.actuate.endpoint.invoker.cache.CachingOperationInvokerAdvisor;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.Access;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.EndpointFilter;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.EndpointId;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.ExposableEndpoint;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.Operation;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.OperationFilter;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.OperationType;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.invoke.OperationInvoker;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.invoke.OperationInvokerAdvisor;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.invoke.ParameterValueMapper;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.invoke.convert.ConversionServiceParameterValueMapper;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.invoker.cache.CachingOperationInvoker;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.invoker.cache.CachingOperationInvokerAdvisor;
 import org.springframework.cglib.proxy.Enhancer;
 import org.springframework.cglib.proxy.FixedValue;
 import org.springframework.context.ApplicationContext;

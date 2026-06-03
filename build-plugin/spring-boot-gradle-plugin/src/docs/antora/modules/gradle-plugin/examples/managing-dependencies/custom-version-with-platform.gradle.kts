@@ -1,10 +1,10 @@
 plugins {
 	java
-	id("org.springframework.boot") version "{version-spring-boot}"
+	id("io.github.kotlinmania.spring.boot.) version "{version-spring-boot}"
 }
 
 dependencies {
-	implementation(platform(org.springframework.boot.gradle.plugin.SpringBootPlugin.BOM_COORDINATES))
+	implementation(platform(io.github.kotlinmania.spring.boot.gradle.plugin.SpringBootPlugin.BOM_COORDINATES))
 	implementation("org.slf4j:slf4j-api")
 }
 
@@ -17,7 +17,7 @@ repositories {
 configurations.all {
 	resolutionStrategy {
 		eachDependency {
-			if (requested.group == "org.springframework.boot") {
+			if (requested.group == "io.github.kotlinmania.spring.boot.) {
 				useVersion("TEST-SNAPSHOT")
 			}
 		}

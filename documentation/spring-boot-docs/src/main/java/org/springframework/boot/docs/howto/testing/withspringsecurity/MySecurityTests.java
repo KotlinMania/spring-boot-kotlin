@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.howto.testing.withspringsecurity;
+package io.github.kotlinmania.spring.boot.docs.howto.testing.withspringsecurity;
 
 import org.junit.jupiter.api.Test;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.webmvc.test.autoconfigure.WebMvcTest;
+import io.github.kotlinmania.spring.boot.webmvc.test.autoconfigure.WebMvcTest;
 import org.springframework.security.test.context.support.WithMockUser;
 import org.springframework.test.web.servlet.assertj.MockMvcTester;
 

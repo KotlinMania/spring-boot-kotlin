@@ -14,20 +14,20 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.buildpack.platform.build;
+package io.github.kotlinmania.spring.boot.buildpack.platform.build;
 
 import java.io.PrintStream;
 import java.util.function.Consumer;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.buildpack.platform.docker.ImagePlatform;
-import org.springframework.boot.buildpack.platform.docker.LogUpdateEvent;
-import org.springframework.boot.buildpack.platform.docker.TotalProgressEvent;
-import org.springframework.boot.buildpack.platform.docker.type.Binding;
-import org.springframework.boot.buildpack.platform.docker.type.Image;
-import org.springframework.boot.buildpack.platform.docker.type.ImageReference;
-import org.springframework.boot.buildpack.platform.docker.type.VolumeName;
+import io.github.kotlinmania.spring.boot.buildpack.platform.docker.ImagePlatform;
+import io.github.kotlinmania.spring.boot.buildpack.platform.docker.LogUpdateEvent;
+import io.github.kotlinmania.spring.boot.buildpack.platform.docker.TotalProgressEvent;
+import io.github.kotlinmania.spring.boot.buildpack.platform.docker.type.Binding;
+import io.github.kotlinmania.spring.boot.buildpack.platform.docker.type.Image;
+import io.github.kotlinmania.spring.boot.buildpack.platform.docker.type.ImageReference;
+import io.github.kotlinmania.spring.boot.buildpack.platform.docker.type.VolumeName;
 
 /**
  * Callback interface used to provide {@link Builder} output logging.

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot;
+package io.github.kotlinmania.spring.boot.
 
 import java.time.Duration;
 import java.util.List;
@@ -23,7 +23,7 @@ import java.util.function.Consumer;
 import org.apache.commons.logging.Log;
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.bootstrap.ConfigurableBootstrapContext;
+import io.github.kotlinmania.spring.boot.bootstrap.ConfigurableBootstrapContext;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.core.env.ConfigurableEnvironment;
 import org.springframework.core.metrics.ApplicationStartup;

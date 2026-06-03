@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.buildpack.platform.system;
+package io.github.kotlinmania.spring.boot.buildpack.platform.system;
 
 import org.jspecify.annotations.Nullable;
 

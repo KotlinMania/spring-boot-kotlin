@@ -65,7 +65,7 @@ You should have a `<parent>` section that looks like this:
 [source,xml,subs="verbatim,attributes"]
 ----
 <parent>
-	<groupId>org.springframework.boot</groupId>
+	<groupId>io.github.kotlinmania.spring.boot./groupId>
 	<artifactId>spring-boot-starter-parent</artifactId>
 	<version>{version-spring-boot}</version>
 </parent>

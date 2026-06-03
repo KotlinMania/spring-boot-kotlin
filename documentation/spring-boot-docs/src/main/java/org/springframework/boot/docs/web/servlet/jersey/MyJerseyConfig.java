@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.web.servlet.jersey;
+package io.github.kotlinmania.spring.boot.docs.web.servlet.jersey;
 
 import org.glassfish.jersey.server.ResourceConfig;
 

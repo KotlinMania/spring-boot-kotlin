@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.build;
+package io.github.kotlinmania.spring.boot.build;
 
 import org.gradle.api.Project;
 import org.gradle.api.artifacts.ConfigurationContainer;

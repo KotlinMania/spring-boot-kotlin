@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.testing.springbootapplications.autoconfiguredspringdatajpa.withdb
+package io.github.kotlinmania.spring.boot.docs.testing.springbootapplications.autoconfiguredspringdatajpa.withdb
 
-import org.springframework.boot.jdbc.test.autoconfigure.AutoConfigureTestDatabase
-import org.springframework.boot.data.jpa.test.autoconfigure.DataJpaTest
+import io.github.kotlinmania.spring.boot.jdbc.test.autoconfigure.AutoConfigureTestDatabase
+import io.github.kotlinmania.spring.boot.data.jpa.test.autoconfigure.DataJpaTest
 
 @DataJpaTest
 @AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)

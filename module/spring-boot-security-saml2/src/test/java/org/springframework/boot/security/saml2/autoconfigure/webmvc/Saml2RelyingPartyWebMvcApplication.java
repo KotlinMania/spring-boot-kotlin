@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.security.saml2.autoconfigure.webmvc;
+package io.github.kotlinmania.spring.boot.security.saml2.autoconfigure.webmvc;
 
-import org.springframework.boot.autoconfigure.SpringBootApplication;
+import io.github.kotlinmania.spring.boot.autoconfigure.SpringBootApplication;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 
 /**

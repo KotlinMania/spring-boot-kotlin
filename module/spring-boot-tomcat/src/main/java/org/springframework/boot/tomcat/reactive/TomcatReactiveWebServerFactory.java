@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.tomcat.reactive;
+package io.github.kotlinmania.spring.boot.tomcat.reactive;
 
 import java.nio.file.Path;
 
@@ -26,15 +26,15 @@ import org.apache.catalina.startup.Tomcat;
 import org.apache.catalina.webresources.StandardRoot;
 import org.apache.tomcat.util.scan.StandardJarScanFilter;
 
-import org.springframework.boot.tomcat.ConfigurableTomcatWebServerFactory;
-import org.springframework.boot.tomcat.DisableReferenceClearingContextCustomizer;
-import org.springframework.boot.tomcat.TomcatEmbeddedContext;
-import org.springframework.boot.tomcat.TomcatEmbeddedWebappClassLoader;
-import org.springframework.boot.tomcat.TomcatWebServer;
-import org.springframework.boot.tomcat.TomcatWebServerFactory;
-import org.springframework.boot.web.server.WebServer;
-import org.springframework.boot.web.server.reactive.ConfigurableReactiveWebServerFactory;
-import org.springframework.boot.web.server.reactive.ReactiveWebServerFactory;
+import io.github.kotlinmania.spring.boot.tomcat.ConfigurableTomcatWebServerFactory;
+import io.github.kotlinmania.spring.boot.tomcat.DisableReferenceClearingContextCustomizer;
+import io.github.kotlinmania.spring.boot.tomcat.TomcatEmbeddedContext;
+import io.github.kotlinmania.spring.boot.tomcat.TomcatEmbeddedWebappClassLoader;
+import io.github.kotlinmania.spring.boot.tomcat.TomcatWebServer;
+import io.github.kotlinmania.spring.boot.tomcat.TomcatWebServerFactory;
+import io.github.kotlinmania.spring.boot.web.server.WebServer;
+import io.github.kotlinmania.spring.boot.web.server.reactive.ConfigurableReactiveWebServerFactory;
+import io.github.kotlinmania.spring.boot.web.server.reactive.ReactiveWebServerFactory;
 import org.springframework.http.server.reactive.HttpHandler;
 import org.springframework.http.server.reactive.TomcatHttpHandlerAdapter;
 import org.springframework.util.ClassUtils;

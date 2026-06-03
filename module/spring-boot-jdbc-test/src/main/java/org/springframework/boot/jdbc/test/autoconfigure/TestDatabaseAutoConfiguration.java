@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.jdbc.test.autoconfigure;
+package io.github.kotlinmania.spring.boot.jdbc.test.autoconfigure;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -39,20 +39,20 @@ import org.springframework.beans.factory.config.ConfigurableListableBeanFactory;
 import org.springframework.beans.factory.support.BeanDefinitionRegistry;
 import org.springframework.beans.factory.support.BeanDefinitionRegistryPostProcessor;
 import org.springframework.beans.factory.support.RootBeanDefinition;
-import org.springframework.boot.autoconfigure.AutoConfiguration;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
-import org.springframework.boot.autoconfigure.container.ContainerImageMetadata;
-import org.springframework.boot.context.properties.bind.Bindable;
-import org.springframework.boot.context.properties.bind.Binder;
-import org.springframework.boot.context.properties.bind.BoundPropertiesTrackingBindHandler;
-import org.springframework.boot.context.properties.source.ConfigurationProperty;
-import org.springframework.boot.context.properties.source.ConfigurationPropertyName;
-import org.springframework.boot.jdbc.EmbeddedDatabaseConnection;
-import org.springframework.boot.jdbc.autoconfigure.DataSourceAutoConfiguration;
-import org.springframework.boot.jdbc.autoconfigure.JdbcConnectionDetails;
-import org.springframework.boot.jdbc.test.autoconfigure.AutoConfigureTestDatabase.Replace;
-import org.springframework.boot.origin.PropertySourceOrigin;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnMissingBean;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnProperty;
+import io.github.kotlinmania.spring.boot.autoconfigure.container.ContainerImageMetadata;
+import io.github.kotlinmania.spring.boot.context.properties.bind.Bindable;
+import io.github.kotlinmania.spring.boot.context.properties.bind.Binder;
+import io.github.kotlinmania.spring.boot.context.properties.bind.BoundPropertiesTrackingBindHandler;
+import io.github.kotlinmania.spring.boot.context.properties.source.ConfigurationProperty;
+import io.github.kotlinmania.spring.boot.context.properties.source.ConfigurationPropertyName;
+import io.github.kotlinmania.spring.boot.jdbc.EmbeddedDatabaseConnection;
+import io.github.kotlinmania.spring.boot.jdbc.autoconfigure.DataSourceAutoConfiguration;
+import io.github.kotlinmania.spring.boot.jdbc.autoconfigure.JdbcConnectionDetails;
+import io.github.kotlinmania.spring.boot.jdbc.test.autoconfigure.AutoConfigureTestDatabase.Replace;
+import io.github.kotlinmania.spring.boot.origin.PropertySourceOrigin;
 import org.springframework.context.EnvironmentAware;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Role;
@@ -188,7 +188,7 @@ public final class TestDatabaseAutoConfiguration {
 			if (holder.getBeanDefinition() instanceof AnnotatedBeanDefinition annotatedBeanDefinition) {
 				MethodMetadata factoryMethodMetadata = annotatedBeanDefinition.getFactoryMethodMetadata();
 				return (factoryMethodMetadata != null) && (factoryMethodMetadata.getDeclaringClassName()
-					.startsWith("org.springframework.boot.jdbc.autoconfigure."));
+					.startsWith("io.github.kotlinmania.spring.boot.jdbc.autoconfigure."));
 			}
 			return false;
 		}

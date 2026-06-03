@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.artemis.autoconfigure;
+package io.github.kotlinmania.spring.boot.artemis.autoconfigure;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -24,9 +24,9 @@ import java.util.concurrent.atomic.AtomicInteger;
 import org.apache.activemq.artemis.core.remoting.impl.invm.TransportConstants;
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.boot.context.properties.NestedConfigurationProperty;
-import org.springframework.boot.jms.autoconfigure.JmsPoolConnectionFactoryProperties;
+import io.github.kotlinmania.spring.boot.context.properties.ConfigurationProperties;
+import io.github.kotlinmania.spring.boot.context.properties.NestedConfigurationProperty;
+import io.github.kotlinmania.spring.boot.jms.autoconfigure.JmsPoolConnectionFactoryProperties;
 
 /**
  * Configuration properties for Artemis.

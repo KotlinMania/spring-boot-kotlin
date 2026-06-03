@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.gradle.dsl;
+package io.github.kotlinmania.spring.boot.gradle.dsl;
 
 import org.gradle.api.Action;
 import org.gradle.api.Project;
@@ -29,7 +29,7 @@ import org.gradle.api.tasks.TaskProvider;
 import org.gradle.api.tasks.bundling.Jar;
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.gradle.tasks.buildinfo.BuildInfo;
+import io.github.kotlinmania.spring.boot.gradle.tasks.buildinfo.BuildInfo;
 
 /**
  * Entry point to Spring Boot's Gradle DSL.

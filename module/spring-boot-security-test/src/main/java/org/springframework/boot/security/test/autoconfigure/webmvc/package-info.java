@@ -18,6 +18,6 @@
  * Auto-configuration for tests involving Spring MVC and Spring Security.
  */
 @NullMarked
-package org.springframework.boot.security.test.autoconfigure.webmvc;
+package io.github.kotlinmania.spring.boot.security.test.autoconfigure.webmvc;
 
 import org.jspecify.annotations.NullMarked;

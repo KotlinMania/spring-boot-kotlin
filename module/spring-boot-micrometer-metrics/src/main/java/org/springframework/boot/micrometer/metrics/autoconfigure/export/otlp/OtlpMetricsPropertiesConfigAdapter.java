@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.micrometer.metrics.autoconfigure.export.otlp;
+package io.github.kotlinmania.spring.boot.micrometer.metrics.autoconfigure.export.otlp;
 
 import java.util.Collections;
 import java.util.LinkedHashMap;
@@ -26,10 +26,10 @@ import io.micrometer.registry.otlp.CompressionMode;
 import io.micrometer.registry.otlp.HistogramFlavor;
 import io.micrometer.registry.otlp.OtlpConfig;
 
-import org.springframework.boot.micrometer.metrics.autoconfigure.export.otlp.OtlpMetricsProperties.Meter;
-import org.springframework.boot.micrometer.metrics.autoconfigure.export.properties.StepRegistryPropertiesConfigAdapter;
-import org.springframework.boot.opentelemetry.autoconfigure.OpenTelemetryProperties;
-import org.springframework.boot.opentelemetry.autoconfigure.OpenTelemetryResourceAttributes;
+import io.github.kotlinmania.spring.boot.micrometer.metrics.autoconfigure.export.otlp.OtlpMetricsProperties.Meter;
+import io.github.kotlinmania.spring.boot.micrometer.metrics.autoconfigure.export.properties.StepRegistryPropertiesConfigAdapter;
+import io.github.kotlinmania.spring.boot.opentelemetry.autoconfigure.OpenTelemetryProperties;
+import io.github.kotlinmania.spring.boot.opentelemetry.autoconfigure.OpenTelemetryResourceAttributes;
 import org.springframework.core.env.Environment;
 import org.springframework.util.CollectionUtils;
 

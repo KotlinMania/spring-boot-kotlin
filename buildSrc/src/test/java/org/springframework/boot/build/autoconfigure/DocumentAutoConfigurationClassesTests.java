@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.build.autoconfigure;
+package io.github.kotlinmania.spring.boot.build.autoconfigure;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -45,10 +45,10 @@ class DocumentAutoConfigurationClassesTests {
 	@Test
 	void classesAreDocumented() throws IOException {
 		File output = documentAutoConfigurationClasses((metadataDir) -> {
-			writeAutoConfigurationMetadata("spring-boot-one", List.of("org.springframework.boot.one.AAutoConfiguration",
-					"org.springframework.boot.one.BAutoConfiguration"), metadataDir);
-			writeAutoConfigurationMetadata("spring-boot-two", List.of("org.springframework.boot.two.CAutoConfiguration",
-					"org.springframework.boot.two.DAutoConfiguration"), metadataDir);
+			writeAutoConfigurationMetadata("spring-boot-one", List.of("io.github.kotlinmania.spring.boot.one.AAutoConfiguration",
+					"io.github.kotlinmania.spring.boot.one.BAutoConfiguration"), metadataDir);
+			writeAutoConfigurationMetadata("spring-boot-two", List.of("io.github.kotlinmania.spring.boot.two.CAutoConfiguration",
+					"io.github.kotlinmania.spring.boot.two.DAutoConfiguration"), metadataDir);
 		});
 		assertThat(output).isNotEmptyDirectory();
 		assertThat(output.listFiles()).extracting(File::getName)
@@ -58,10 +58,10 @@ class DocumentAutoConfigurationClassesTests {
 	@Test
 	void whenMetadataIsRemovedThenOutputForThatMetadataIsNoLongerPresent() throws IOException {
 		documentAutoConfigurationClasses((metadataDir) -> {
-			writeAutoConfigurationMetadata("spring-boot-one", List.of("org.springframework.boot.one.AAutoConfiguration",
-					"org.springframework.boot.one.BAutoConfiguration"), metadataDir);
-			writeAutoConfigurationMetadata("spring-boot-two", List.of("org.springframework.boot.two.CAutoConfiguration",
-					"org.springframework.boot.two.DAutoConfiguration"), metadataDir);
+			writeAutoConfigurationMetadata("spring-boot-one", List.of("io.github.kotlinmania.spring.boot.one.AAutoConfiguration",
+					"io.github.kotlinmania.spring.boot.one.BAutoConfiguration"), metadataDir);
+			writeAutoConfigurationMetadata("spring-boot-two", List.of("io.github.kotlinmania.spring.boot.two.CAutoConfiguration",
+					"io.github.kotlinmania.spring.boot.two.DAutoConfiguration"), metadataDir);
 		});
 		File output = documentAutoConfigurationClasses(
 				(metadataDir) -> assertThat(new File(metadataDir, "spring-boot-two.properties").delete()).isTrue());

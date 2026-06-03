@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.context.properties.bind;
+package io.github.kotlinmania.spring.boot.context.properties.bind;
 
 import java.lang.annotation.Annotation;
 import java.util.Collection;
@@ -25,12 +25,12 @@ import java.util.function.Supplier;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.context.properties.bind.Binder.Context;
-import org.springframework.boot.context.properties.source.ConfigurationProperty;
-import org.springframework.boot.context.properties.source.ConfigurationPropertyName;
-import org.springframework.boot.context.properties.source.ConfigurationPropertyName.Form;
-import org.springframework.boot.context.properties.source.ConfigurationPropertySource;
-import org.springframework.boot.context.properties.source.IterableConfigurationPropertySource;
+import io.github.kotlinmania.spring.boot.context.properties.bind.Binder.Context;
+import io.github.kotlinmania.spring.boot.context.properties.source.ConfigurationProperty;
+import io.github.kotlinmania.spring.boot.context.properties.source.ConfigurationPropertyName;
+import io.github.kotlinmania.spring.boot.context.properties.source.ConfigurationPropertyName.Form;
+import io.github.kotlinmania.spring.boot.context.properties.source.ConfigurationPropertySource;
+import io.github.kotlinmania.spring.boot.context.properties.source.IterableConfigurationPropertySource;
 import org.springframework.core.ResolvableType;
 
 /**

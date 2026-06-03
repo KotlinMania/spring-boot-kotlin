@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.jetty.servlet;
+package io.github.kotlinmania.spring.boot.jetty.servlet;
 
 import java.io.File;
 import java.net.InetSocketAddress;
@@ -69,25 +69,25 @@ import org.eclipse.jetty.util.resource.ResourceFactory;
 import org.eclipse.jetty.util.resource.URLResourceFactory;
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.jetty.ConfigurableJettyWebServerFactory;
-import org.springframework.boot.jetty.ForwardHeadersCustomizer;
-import org.springframework.boot.jetty.JettyServerCustomizer;
-import org.springframework.boot.jetty.JettyWebServer;
-import org.springframework.boot.jetty.JettyWebServerFactory;
-import org.springframework.boot.web.error.ErrorPage;
-import org.springframework.boot.web.server.Cookie.SameSite;
-import org.springframework.boot.web.server.MimeMappings;
-import org.springframework.boot.web.server.Shutdown;
-import org.springframework.boot.web.server.Ssl;
-import org.springframework.boot.web.server.WebServer;
-import org.springframework.boot.web.server.servlet.ConfigurableServletWebServerFactory;
-import org.springframework.boot.web.server.servlet.ContextPath;
-import org.springframework.boot.web.server.servlet.CookieSameSiteSupplier;
-import org.springframework.boot.web.server.servlet.DocumentRoot;
-import org.springframework.boot.web.server.servlet.ServletContextInitializers;
-import org.springframework.boot.web.server.servlet.ServletWebServerFactory;
-import org.springframework.boot.web.server.servlet.ServletWebServerSettings;
-import org.springframework.boot.web.servlet.ServletContextInitializer;
+import io.github.kotlinmania.spring.boot.jetty.ConfigurableJettyWebServerFactory;
+import io.github.kotlinmania.spring.boot.jetty.ForwardHeadersCustomizer;
+import io.github.kotlinmania.spring.boot.jetty.JettyServerCustomizer;
+import io.github.kotlinmania.spring.boot.jetty.JettyWebServer;
+import io.github.kotlinmania.spring.boot.jetty.JettyWebServerFactory;
+import io.github.kotlinmania.spring.boot.web.error.ErrorPage;
+import io.github.kotlinmania.spring.boot.web.server.Cookie.SameSite;
+import io.github.kotlinmania.spring.boot.web.server.MimeMappings;
+import io.github.kotlinmania.spring.boot.web.server.Shutdown;
+import io.github.kotlinmania.spring.boot.web.server.Ssl;
+import io.github.kotlinmania.spring.boot.web.server.WebServer;
+import io.github.kotlinmania.spring.boot.web.server.servlet.ConfigurableServletWebServerFactory;
+import io.github.kotlinmania.spring.boot.web.server.servlet.ContextPath;
+import io.github.kotlinmania.spring.boot.web.server.servlet.CookieSameSiteSupplier;
+import io.github.kotlinmania.spring.boot.web.server.servlet.DocumentRoot;
+import io.github.kotlinmania.spring.boot.web.server.servlet.ServletContextInitializers;
+import io.github.kotlinmania.spring.boot.web.server.servlet.ServletWebServerFactory;
+import io.github.kotlinmania.spring.boot.web.server.servlet.ServletWebServerSettings;
+import io.github.kotlinmania.spring.boot.web.servlet.ServletContextInitializer;
 import org.springframework.context.ResourceLoaderAware;
 import org.springframework.core.io.ResourceLoader;
 import org.springframework.lang.Contract;

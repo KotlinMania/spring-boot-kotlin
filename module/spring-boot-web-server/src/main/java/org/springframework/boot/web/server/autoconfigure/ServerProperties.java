@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.web.server.autoconfigure;
+package io.github.kotlinmania.spring.boot.web.server.autoconfigure;
 
 import java.net.InetAddress;
 import java.nio.charset.Charset;
@@ -26,17 +26,17 @@ import java.util.Map;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.boot.context.properties.NestedConfigurationProperty;
-import org.springframework.boot.convert.DurationUnit;
-import org.springframework.boot.web.server.Compression;
-import org.springframework.boot.web.server.Cookie;
-import org.springframework.boot.web.server.Http2;
-import org.springframework.boot.web.server.MimeMappings;
-import org.springframework.boot.web.server.Shutdown;
-import org.springframework.boot.web.server.Ssl;
-import org.springframework.boot.web.server.servlet.Jsp;
-import org.springframework.boot.web.server.servlet.Session;
+import io.github.kotlinmania.spring.boot.context.properties.ConfigurationProperties;
+import io.github.kotlinmania.spring.boot.context.properties.NestedConfigurationProperty;
+import io.github.kotlinmania.spring.boot.convert.DurationUnit;
+import io.github.kotlinmania.spring.boot.web.server.Compression;
+import io.github.kotlinmania.spring.boot.web.server.Cookie;
+import io.github.kotlinmania.spring.boot.web.server.Http2;
+import io.github.kotlinmania.spring.boot.web.server.MimeMappings;
+import io.github.kotlinmania.spring.boot.web.server.Shutdown;
+import io.github.kotlinmania.spring.boot.web.server.Ssl;
+import io.github.kotlinmania.spring.boot.web.server.servlet.Jsp;
+import io.github.kotlinmania.spring.boot.web.server.servlet.Session;
 import org.springframework.util.StringUtils;
 import org.springframework.util.unit.DataSize;
 

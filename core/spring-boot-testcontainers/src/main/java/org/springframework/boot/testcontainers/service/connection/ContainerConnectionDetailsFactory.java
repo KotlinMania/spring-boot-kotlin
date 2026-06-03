@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.testcontainers.service.connection;
+package io.github.kotlinmania.spring.boot.testcontainers.service.connection;
 
 import java.lang.annotation.Annotation;
 import java.util.Arrays;
@@ -31,12 +31,12 @@ import org.springframework.aot.hint.RuntimeHints;
 import org.springframework.aot.hint.RuntimeHintsRegistrar;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.InitializingBean;
-import org.springframework.boot.autoconfigure.service.connection.ConnectionDetails;
-import org.springframework.boot.autoconfigure.service.connection.ConnectionDetailsFactory;
-import org.springframework.boot.origin.Origin;
-import org.springframework.boot.origin.OriginProvider;
-import org.springframework.boot.ssl.SslBundle;
-import org.springframework.boot.testcontainers.lifecycle.TestcontainersStartup;
+import io.github.kotlinmania.spring.boot.autoconfigure.service.connection.ConnectionDetails;
+import io.github.kotlinmania.spring.boot.autoconfigure.service.connection.ConnectionDetailsFactory;
+import io.github.kotlinmania.spring.boot.origin.Origin;
+import io.github.kotlinmania.spring.boot.origin.OriginProvider;
+import io.github.kotlinmania.spring.boot.ssl.SslBundle;
+import io.github.kotlinmania.spring.boot.testcontainers.lifecycle.TestcontainersStartup;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
 import org.springframework.core.ResolvableType;

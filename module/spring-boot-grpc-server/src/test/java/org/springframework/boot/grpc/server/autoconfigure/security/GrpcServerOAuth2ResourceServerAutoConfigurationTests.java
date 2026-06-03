@@ -14,26 +14,26 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.grpc.server.autoconfigure.security;
+package io.github.kotlinmania.spring.boot.grpc.server.autoconfigure.security;
 
 import io.grpc.BindableService;
 import io.grpc.ServerServiceDefinition;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.AutoConfigurations;
-import org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener;
-import org.springframework.boot.context.annotation.UserConfigurations;
-import org.springframework.boot.context.event.ApplicationFailedEvent;
-import org.springframework.boot.logging.LogLevel;
-import org.springframework.boot.security.autoconfigure.web.servlet.ServletWebSecurityAutoConfiguration;
-import org.springframework.boot.security.oauth2.server.resource.autoconfigure.OAuth2ResourceServerAutoConfiguration;
-import org.springframework.boot.test.context.assertj.ApplicationContextAssertProvider;
-import org.springframework.boot.test.context.runner.AbstractApplicationContextRunner;
-import org.springframework.boot.test.context.runner.ApplicationContextRunner;
-import org.springframework.boot.test.context.runner.WebApplicationContextRunner;
-import org.springframework.boot.web.context.servlet.AnnotationConfigServletWebApplicationContext;
+import io.github.kotlinmania.spring.boot.SpringApplication;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurations;
+import io.github.kotlinmania.spring.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener;
+import io.github.kotlinmania.spring.boot.context.annotation.UserConfigurations;
+import io.github.kotlinmania.spring.boot.context.event.ApplicationFailedEvent;
+import io.github.kotlinmania.spring.boot.logging.LogLevel;
+import io.github.kotlinmania.spring.boot.security.autoconfigure.web.servlet.ServletWebSecurityAutoConfiguration;
+import io.github.kotlinmania.spring.boot.security.oauth2.server.resource.autoconfigure.OAuth2ResourceServerAutoConfiguration;
+import io.github.kotlinmania.spring.boot.test.context.assertj.ApplicationContextAssertProvider;
+import io.github.kotlinmania.spring.boot.test.context.runner.AbstractApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.test.context.runner.ApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.test.context.runner.WebApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.web.context.servlet.AnnotationConfigServletWebApplicationContext;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.Bean;

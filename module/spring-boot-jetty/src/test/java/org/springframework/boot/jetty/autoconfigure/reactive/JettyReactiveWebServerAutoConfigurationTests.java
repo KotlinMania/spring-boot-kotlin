@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.jetty.autoconfigure.reactive;
+package io.github.kotlinmania.spring.boot.jetty.autoconfigure.reactive;
 
 import jakarta.websocket.server.ServerContainer;
 import org.eclipse.jetty.ee11.servlet.ServletContextHandler;
@@ -22,13 +22,13 @@ import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.server.handler.StatisticsHandler;
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.jetty.JettyServerCustomizer;
-import org.springframework.boot.jetty.JettyWebServer;
-import org.springframework.boot.jetty.reactive.JettyReactiveWebServerFactory;
-import org.springframework.boot.web.server.WebServer;
-import org.springframework.boot.web.server.WebServerFactoryCustomizer;
-import org.springframework.boot.web.server.autoconfigure.reactive.AbstractReactiveWebServerAutoConfigurationTests;
-import org.springframework.boot.web.server.reactive.context.ReactiveWebServerApplicationContext;
+import io.github.kotlinmania.spring.boot.jetty.JettyServerCustomizer;
+import io.github.kotlinmania.spring.boot.jetty.JettyWebServer;
+import io.github.kotlinmania.spring.boot.jetty.reactive.JettyReactiveWebServerFactory;
+import io.github.kotlinmania.spring.boot.web.server.WebServer;
+import io.github.kotlinmania.spring.boot.web.server.WebServerFactoryCustomizer;
+import io.github.kotlinmania.spring.boot.web.server.autoconfigure.reactive.AbstractReactiveWebServerAutoConfigurationTests;
+import io.github.kotlinmania.spring.boot.web.server.reactive.context.ReactiveWebServerApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 

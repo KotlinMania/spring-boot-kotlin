@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.configurationmetadata.changelog;
+package io.github.kotlinmania.spring.boot.configurationmetadata.changelog;
 
 import java.util.List;
 
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.configurationmetadata.ConfigurationMetadataProperty;
+import io.github.kotlinmania.spring.boot.configurationmetadata.ConfigurationMetadataProperty;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

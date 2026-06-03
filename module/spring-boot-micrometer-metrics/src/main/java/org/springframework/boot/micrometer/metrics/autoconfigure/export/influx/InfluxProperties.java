@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.micrometer.metrics.autoconfigure.export.influx;
+package io.github.kotlinmania.spring.boot.micrometer.metrics.autoconfigure.export.influx;
 
 import io.micrometer.influx.InfluxApiVersion;
 import io.micrometer.influx.InfluxConsistency;
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.boot.micrometer.metrics.autoconfigure.export.properties.StepRegistryProperties;
+import io.github.kotlinmania.spring.boot.context.properties.ConfigurationProperties;
+import io.github.kotlinmania.spring.boot.micrometer.metrics.autoconfigure.export.properties.StepRegistryProperties;
 
 /**
  * {@link ConfigurationProperties @ConfigurationProperties} for configuring Influx metrics

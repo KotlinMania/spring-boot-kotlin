@@ -14,15 +14,15 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.hazelcast.autoconfigure;
+package io.github.kotlinmania.spring.boot.hazelcast.autoconfigure;
 
 import com.hazelcast.config.Config;
 import com.hazelcast.core.HazelcastInstance;
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.autoconfigure.AutoConfigurations;
-import org.springframework.boot.test.context.runner.ApplicationContextRunner;
-import org.springframework.boot.testsupport.classpath.resources.WithResource;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurations;
+import io.github.kotlinmania.spring.boot.test.context.runner.ApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.testsupport.classpath.resources.WithResource;
 import org.springframework.core.io.ClassPathResource;
 
 import static org.assertj.core.api.Assertions.assertThat;

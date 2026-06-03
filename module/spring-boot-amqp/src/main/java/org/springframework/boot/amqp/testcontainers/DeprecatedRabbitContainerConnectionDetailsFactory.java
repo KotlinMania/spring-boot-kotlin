@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.amqp.testcontainers;
+package io.github.kotlinmania.spring.boot.amqp.testcontainers;
 
 import java.net.URI;
 import java.util.List;
@@ -22,11 +22,11 @@ import java.util.List;
 import org.jspecify.annotations.Nullable;
 import org.testcontainers.containers.RabbitMQContainer;
 
-import org.springframework.boot.amqp.autoconfigure.RabbitConnectionDetails;
-import org.springframework.boot.ssl.SslBundle;
-import org.springframework.boot.testcontainers.service.connection.ContainerConnectionDetailsFactory;
-import org.springframework.boot.testcontainers.service.connection.ContainerConnectionSource;
-import org.springframework.boot.testcontainers.service.connection.ServiceConnection;
+import io.github.kotlinmania.spring.boot.amqp.autoconfigure.RabbitConnectionDetails;
+import io.github.kotlinmania.spring.boot.ssl.SslBundle;
+import io.github.kotlinmania.spring.boot.testcontainers.service.connection.ContainerConnectionDetailsFactory;
+import io.github.kotlinmania.spring.boot.testcontainers.service.connection.ContainerConnectionSource;
+import io.github.kotlinmania.spring.boot.testcontainers.service.connection.ServiceConnection;
 
 /**
  * {@link ContainerConnectionDetailsFactory} to create {@link RabbitConnectionDetails}

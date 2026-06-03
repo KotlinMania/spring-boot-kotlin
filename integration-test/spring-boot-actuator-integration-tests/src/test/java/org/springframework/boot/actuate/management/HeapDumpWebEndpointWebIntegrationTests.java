@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.actuate.management;
+package io.github.kotlinmania.spring.boot.actuate.management;
 
 import java.io.File;
 import java.nio.file.Files;
@@ -24,7 +24,7 @@ import java.util.concurrent.TimeUnit;
 import org.awaitility.Awaitility;
 import org.junit.jupiter.api.BeforeEach;
 
-import org.springframework.boot.actuate.endpoint.web.test.WebEndpointTest;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.web.test.WebEndpointTest;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

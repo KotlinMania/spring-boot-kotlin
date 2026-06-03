@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.io.restclient.restclient.ssl.settings;
+package io.github.kotlinmania.spring.boot.docs.io.restclient.restclient.ssl.settings;
 
 public class Details {
 

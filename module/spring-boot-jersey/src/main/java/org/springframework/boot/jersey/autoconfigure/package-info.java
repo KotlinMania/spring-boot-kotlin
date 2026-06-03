@@ -18,6 +18,6 @@
  * Auto-configuration for Jersey.
  */
 @NullMarked
-package org.springframework.boot.jersey.autoconfigure;
+package io.github.kotlinmania.spring.boot.jersey.autoconfigure;
 
 import org.jspecify.annotations.NullMarked;

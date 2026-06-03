@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.jarmode.tools;
+package io.github.kotlinmania.spring.boot.jarmode.tools;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -35,7 +35,7 @@ import java.util.zip.ZipEntry;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.jarmode.tools.JarStructure.Entry.Type;
+import io.github.kotlinmania.spring.boot.jarmode.tools.JarStructure.Entry.Type;
 import org.springframework.util.Assert;
 import org.springframework.util.StreamUtils;
 import org.springframework.util.StringUtils;
@@ -104,7 +104,7 @@ class IndexedJarStructure implements JarStructure {
 		if (name.startsWith(this.classesLocation)) {
 			return new Entry(name, name.substring(this.classesLocation.length()), Type.APPLICATION_CLASS_OR_RESOURCE);
 		}
-		if (name.startsWith("org/springframework/boot/loader")) {
+		if (name.startsWith("io.github.kotlinmania.spring.boot.loader")) {
 			return new Entry(name, name, Type.LOADER);
 		}
 		if (name.startsWith("META-INF/")) {

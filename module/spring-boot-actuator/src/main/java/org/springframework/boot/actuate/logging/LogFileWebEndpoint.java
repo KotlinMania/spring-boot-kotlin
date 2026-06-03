@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.actuate.logging;
+package io.github.kotlinmania.spring.boot.actuate.logging;
 
 import java.io.File;
 
@@ -22,10 +22,10 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.actuate.endpoint.annotation.Endpoint;
-import org.springframework.boot.actuate.endpoint.annotation.ReadOperation;
-import org.springframework.boot.actuate.endpoint.web.annotation.WebEndpoint;
-import org.springframework.boot.logging.LogFile;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.annotation.Endpoint;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.annotation.ReadOperation;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.web.annotation.WebEndpoint;
+import io.github.kotlinmania.spring.boot.logging.LogFile;
 import org.springframework.core.io.FileSystemResource;
 import org.springframework.core.io.Resource;
 

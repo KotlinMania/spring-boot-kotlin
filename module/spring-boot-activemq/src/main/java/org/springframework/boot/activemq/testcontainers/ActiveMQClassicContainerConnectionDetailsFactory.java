@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.activemq.testcontainers;
+package io.github.kotlinmania.spring.boot.activemq.testcontainers;
 
 import org.testcontainers.activemq.ActiveMQContainer;
 
-import org.springframework.boot.activemq.autoconfigure.ActiveMQConnectionDetails;
-import org.springframework.boot.testcontainers.service.connection.ContainerConnectionDetailsFactory;
-import org.springframework.boot.testcontainers.service.connection.ContainerConnectionSource;
-import org.springframework.boot.testcontainers.service.connection.ServiceConnection;
+import io.github.kotlinmania.spring.boot.activemq.autoconfigure.ActiveMQConnectionDetails;
+import io.github.kotlinmania.spring.boot.testcontainers.service.connection.ContainerConnectionDetailsFactory;
+import io.github.kotlinmania.spring.boot.testcontainers.service.connection.ContainerConnectionSource;
+import io.github.kotlinmania.spring.boot.testcontainers.service.connection.ServiceConnection;
 
 /**
  * {@link ContainerConnectionDetailsFactory} to create {@link ActiveMQConnectionDetails} *

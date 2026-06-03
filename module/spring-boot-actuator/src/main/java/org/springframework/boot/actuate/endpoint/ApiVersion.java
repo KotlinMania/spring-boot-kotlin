@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.actuate.endpoint;
+package io.github.kotlinmania.spring.boot.actuate.endpoint;
 
 import org.springframework.util.MimeType;
 import org.springframework.util.MimeTypeUtils;

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.build.testing;
+package io.github.kotlinmania.spring.boot.build.testing;
 
 import java.util.ArrayList;
 import java.util.List;

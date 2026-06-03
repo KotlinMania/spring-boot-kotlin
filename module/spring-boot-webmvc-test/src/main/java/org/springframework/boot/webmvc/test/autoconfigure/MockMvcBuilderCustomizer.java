@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.webmvc.test.autoconfigure;
+package io.github.kotlinmania.spring.boot.webmvc.test.autoconfigure;
 
 import org.springframework.test.web.servlet.MockMvcBuilder;
 import org.springframework.test.web.servlet.setup.ConfigurableMockMvcBuilder;

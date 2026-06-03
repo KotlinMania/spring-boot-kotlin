@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.buildpack.platform.docker.configuration;
+package io.github.kotlinmania.spring.boot.buildpack.platform.docker.configuration;
 
 import java.io.File;
 import java.net.URISyntaxException;
@@ -27,9 +27,9 @@ import java.util.regex.Pattern;
 
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.buildpack.platform.docker.configuration.DockerConfigurationMetadata.DockerConfig;
-import org.springframework.boot.buildpack.platform.docker.configuration.DockerConfigurationMetadata.DockerContext;
-import org.springframework.boot.buildpack.platform.json.AbstractJsonTests;
+import io.github.kotlinmania.spring.boot.buildpack.platform.docker.configuration.DockerConfigurationMetadata.DockerConfig;
+import io.github.kotlinmania.spring.boot.buildpack.platform.docker.configuration.DockerConfigurationMetadata.DockerContext;
+import io.github.kotlinmania.spring.boot.buildpack.platform.json.AbstractJsonTests;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatIllegalArgumentException;

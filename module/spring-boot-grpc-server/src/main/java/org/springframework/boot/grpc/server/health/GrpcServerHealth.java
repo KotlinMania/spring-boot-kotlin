@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.grpc.server.health;
+package io.github.kotlinmania.spring.boot.grpc.server.health;
 
 import java.util.HashMap;
 import java.util.LinkedHashSet;
@@ -26,13 +26,13 @@ import io.grpc.health.v1.HealthCheckResponse.ServingStatus;
 import io.grpc.protobuf.services.HealthStatusManager;
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.health.contributor.CompositeHealthContributor;
-import org.springframework.boot.health.contributor.Health;
-import org.springframework.boot.health.contributor.HealthContributors;
-import org.springframework.boot.health.contributor.HealthIndicator;
-import org.springframework.boot.health.contributor.Status;
-import org.springframework.boot.health.registry.HealthContributorRegistry;
-import org.springframework.boot.health.registry.ReactiveHealthContributorRegistry;
+import io.github.kotlinmania.spring.boot.health.contributor.CompositeHealthContributor;
+import io.github.kotlinmania.spring.boot.health.contributor.Health;
+import io.github.kotlinmania.spring.boot.health.contributor.HealthContributors;
+import io.github.kotlinmania.spring.boot.health.contributor.HealthIndicator;
+import io.github.kotlinmania.spring.boot.health.contributor.Status;
+import io.github.kotlinmania.spring.boot.health.registry.HealthContributorRegistry;
+import io.github.kotlinmania.spring.boot.health.registry.ReactiveHealthContributorRegistry;
 import org.springframework.util.Assert;
 
 /**

@@ -18,6 +18,6 @@
  * Auto-configuration for Spring MVC error handling.
  */
 @NullMarked
-package org.springframework.boot.webmvc.autoconfigure.error;
+package io.github.kotlinmania.spring.boot.webmvc.autoconfigure.error;
 
 import org.jspecify.annotations.NullMarked;

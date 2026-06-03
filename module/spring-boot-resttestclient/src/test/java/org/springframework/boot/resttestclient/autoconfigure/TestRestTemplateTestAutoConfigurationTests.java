@@ -14,19 +14,19 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.resttestclient.autoconfigure;
+package io.github.kotlinmania.spring.boot.resttestclient.autoconfigure;
 
 import java.net.URI;
 
 import org.jspecify.annotations.Nullable;
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.autoconfigure.AutoConfigurations;
-import org.springframework.boot.resttestclient.TestRestTemplate;
-import org.springframework.boot.test.context.runner.WebApplicationContextRunner;
-import org.springframework.boot.test.http.server.LocalTestWebServer;
-import org.springframework.boot.test.http.server.LocalTestWebServer.Scheme;
-import org.springframework.boot.testsupport.classpath.resources.WithResource;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurations;
+import io.github.kotlinmania.spring.boot.resttestclient.TestRestTemplate;
+import io.github.kotlinmania.spring.boot.test.context.runner.WebApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.test.http.server.LocalTestWebServer;
+import io.github.kotlinmania.spring.boot.test.http.server.LocalTestWebServer.Scheme;
+import io.github.kotlinmania.spring.boot.testsupport.classpath.resources.WithResource;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -50,13 +50,13 @@ class TestRestTemplateTestAutoConfigurationTests {
 	@Test
 	@WithResource(name = "META-INF/spring.factories",
 			content = """
-					org.springframework.boot.test.http.server.LocalTestWebServer$Provider=\
-					org.springframework.boot.resttestclient.autoconfigure.TestRestTemplateTestAutoConfigurationTests$TestLocalTestWebServerProvider
+					io.github.kotlinmania.spring.boot.test.http.server.LocalTestWebServer$Provider=\
+					io.github.kotlinmania.spring.boot.resttestclient.autoconfigure.TestRestTemplateTestAutoConfigurationTests$TestLocalTestWebServerProvider
 					""")
 	void shouldDefineTestRestTemplateBoundToWebServer() {
 		this.contextRunner.run((context) -> {
 			assertThat(context).hasSingleBean(TestRestTemplate.class)
-				.hasBean("org.springframework.boot.resttestclient.TestRestTemplate");
+				.hasBean("io.github.kotlinmania.spring.boot.resttestclient.TestRestTemplate");
 			TestRestTemplate testRestTemplate = context.getBean(TestRestTemplate.class);
 			assertThat(testRestTemplate.getRestTemplate().getUriTemplateHandler().expand("/"))
 				.isEqualTo(URI.create("https://localhost:8182/"));

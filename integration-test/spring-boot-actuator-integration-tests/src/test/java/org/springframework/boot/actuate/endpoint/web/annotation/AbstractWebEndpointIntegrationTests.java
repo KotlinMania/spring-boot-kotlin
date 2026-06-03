@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.actuate.endpoint.web.annotation;
+package io.github.kotlinmania.spring.boot.actuate.endpoint.web.annotation;
 
 import java.net.InetSocketAddress;
 import java.security.Principal;
@@ -32,15 +32,15 @@ import org.junit.jupiter.api.Test;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
-import org.springframework.boot.actuate.endpoint.SecurityContext;
-import org.springframework.boot.actuate.endpoint.annotation.DeleteOperation;
-import org.springframework.boot.actuate.endpoint.annotation.Endpoint;
-import org.springframework.boot.actuate.endpoint.annotation.ReadOperation;
-import org.springframework.boot.actuate.endpoint.annotation.Selector;
-import org.springframework.boot.actuate.endpoint.annotation.Selector.Match;
-import org.springframework.boot.actuate.endpoint.annotation.WriteOperation;
-import org.springframework.boot.actuate.endpoint.web.PathMapper;
-import org.springframework.boot.actuate.endpoint.web.WebEndpointResponse;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.SecurityContext;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.annotation.DeleteOperation;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.annotation.Endpoint;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.annotation.ReadOperation;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.annotation.Selector;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.annotation.Selector.Match;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.annotation.WriteOperation;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.web.PathMapper;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.web.WebEndpointResponse;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigRegistry;

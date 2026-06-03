@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.autoconfigure;
+package io.github.kotlinmania.spring.boot.autoconfigure;
 
 import java.lang.annotation.Documented;
 import java.lang.annotation.ElementType;
@@ -23,7 +23,7 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
-import org.springframework.boot.context.annotation.ImportCandidates;
+import io.github.kotlinmania.spring.boot.context.annotation.ImportCandidates;
 import org.springframework.context.annotation.Import;
 import org.springframework.core.annotation.AliasFor;
 

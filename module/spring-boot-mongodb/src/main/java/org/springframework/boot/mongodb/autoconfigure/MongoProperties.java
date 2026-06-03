@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.mongodb.autoconfigure;
+package io.github.kotlinmania.spring.boot.mongodb.autoconfigure;
 
 import java.util.List;
 
@@ -22,7 +22,7 @@ import com.mongodb.ConnectionString;
 import org.bson.UuidRepresentation;
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.context.properties.ConfigurationProperties;
+import io.github.kotlinmania.spring.boot.context.properties.ConfigurationProperties;
 import org.springframework.util.StringUtils;
 
 /**

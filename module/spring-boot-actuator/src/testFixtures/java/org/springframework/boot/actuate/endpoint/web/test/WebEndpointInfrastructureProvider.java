@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.actuate.endpoint.web.test;
+package io.github.kotlinmania.spring.boot.actuate.endpoint.web.test;
 
 import java.util.List;
 
-import org.springframework.boot.actuate.endpoint.web.test.WebEndpointTest.Infrastructure;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.web.test.WebEndpointTest.Infrastructure;
 
 /**
  * Strategy interface to provide the web endpoint configuration for a target

@@ -14,21 +14,21 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.configurationprocessor;
+package io.github.kotlinmania.spring.boot.configurationprocessor;
 
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.configurationprocessor.metadata.ConfigurationMetadata;
-import org.springframework.boot.configurationprocessor.metadata.Metadata;
-import org.springframework.boot.configurationsample.method.DeprecatedMethodConfig;
-import org.springframework.boot.configurationsample.method.EmptyTypeMethodConfig;
-import org.springframework.boot.configurationsample.method.InvalidMethodConfig;
-import org.springframework.boot.configurationsample.method.MethodAndClassConfig;
-import org.springframework.boot.configurationsample.method.PackagePrivateMethodConfig;
-import org.springframework.boot.configurationsample.method.PrivateMethodConfig;
-import org.springframework.boot.configurationsample.method.ProtectedMethodConfig;
-import org.springframework.boot.configurationsample.method.PublicMethodConfig;
-import org.springframework.boot.configurationsample.method.SingleConstructorMethodConfig;
+import io.github.kotlinmania.spring.boot.configurationprocessor.metadata.ConfigurationMetadata;
+import io.github.kotlinmania.spring.boot.configurationprocessor.metadata.Metadata;
+import io.github.kotlinmania.spring.boot.configurationsample.method.DeprecatedMethodConfig;
+import io.github.kotlinmania.spring.boot.configurationsample.method.EmptyTypeMethodConfig;
+import io.github.kotlinmania.spring.boot.configurationsample.method.InvalidMethodConfig;
+import io.github.kotlinmania.spring.boot.configurationsample.method.MethodAndClassConfig;
+import io.github.kotlinmania.spring.boot.configurationsample.method.PackagePrivateMethodConfig;
+import io.github.kotlinmania.spring.boot.configurationsample.method.PrivateMethodConfig;
+import io.github.kotlinmania.spring.boot.configurationsample.method.ProtectedMethodConfig;
+import io.github.kotlinmania.spring.boot.configurationsample.method.PublicMethodConfig;
+import io.github.kotlinmania.spring.boot.configurationsample.method.SingleConstructorMethodConfig;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -124,15 +124,15 @@ class MethodBasedMetadataGenerationTests extends AbstractMetadataGenerationTests
 	@Test
 	@SuppressWarnings("deprecation")
 	void deprecatedMethodConfigOnClass() {
-		Class<?> type = org.springframework.boot.configurationsample.method.DeprecatedClassMethodConfig.class;
+		Class<?> type = io.github.kotlinmania.spring.boot.configurationsample.method.DeprecatedClassMethodConfig.class;
 		ConfigurationMetadata metadata = compile(type);
 		assertThat(metadata).has(Metadata.withGroup("foo").fromSource(type));
 		assertThat(metadata).has(Metadata.withProperty("foo.name", String.class)
-			.fromSource(org.springframework.boot.configurationsample.method.DeprecatedClassMethodConfig.Foo.class)
+			.fromSource(io.github.kotlinmania.spring.boot.configurationsample.method.DeprecatedClassMethodConfig.Foo.class)
 			.withDeprecation());
 		assertThat(metadata).has(Metadata.withProperty("foo.flag", Boolean.class)
 			.withDefaultValue(false)
-			.fromSource(org.springframework.boot.configurationsample.method.DeprecatedClassMethodConfig.Foo.class)
+			.fromSource(io.github.kotlinmania.spring.boot.configurationsample.method.DeprecatedClassMethodConfig.Foo.class)
 			.withDeprecation());
 	}
 

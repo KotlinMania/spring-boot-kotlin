@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.logging.structured;
+package io.github.kotlinmania.spring.boot.logging.structured;
 
-import org.springframework.boot.json.JsonWriter;
-import org.springframework.boot.json.JsonWriter.Members;
+import io.github.kotlinmania.spring.boot.json.JsonWriter;
+import io.github.kotlinmania.spring.boot.json.JsonWriter.Members;
 import org.springframework.core.env.Environment;
 
 /**
@@ -27,7 +27,7 @@ import org.springframework.core.env.Environment;
  * An implementation may be provided using the {@code logging.structured.json.customizer}
  * property. Alternatively, implementations can be registered in
  * {@code META-INF/spring.factories} under the key
- * {@code org.springframework.boot.logging.structured.StructuredLoggingJsonMembersCustomizer}.
+ * {@code io.github.kotlinmania.spring.boot.logging.structured.StructuredLoggingJsonMembersCustomizer}.
  * <p>
  * Implementing classes can declare the following parameter types in the constructor:
  * <ul>

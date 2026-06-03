@@ -14,16 +14,16 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.autoconfigure.condition;
+package io.github.kotlinmania.spring.boot.autoconfigure.condition;
 
 import java.util.Map;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.autoconfigure.AutoConfigurationMetadata;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnWebApplication.Type;
-import org.springframework.boot.web.context.reactive.ConfigurableReactiveWebEnvironment;
-import org.springframework.boot.web.context.reactive.ReactiveWebApplicationContext;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurationMetadata;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnWebApplication.Type;
+import io.github.kotlinmania.spring.boot.web.context.reactive.ConfigurableReactiveWebEnvironment;
+import io.github.kotlinmania.spring.boot.web.context.reactive.ReactiveWebApplicationContext;
 import org.springframework.context.annotation.Condition;
 import org.springframework.context.annotation.ConditionContext;
 import org.springframework.core.Ordered;

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.http.client;
+package io.github.kotlinmania.spring.boot.http.client;
 
 import javax.net.ssl.SSLContext;
 
@@ -22,8 +22,8 @@ import org.apache.hc.client5.http.ssl.DefaultClientTlsStrategy;
 import org.apache.hc.client5.http.ssl.DefaultHostnameVerifier;
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.ssl.SslBundle;
-import org.springframework.boot.ssl.SslOptions;
+import io.github.kotlinmania.spring.boot.ssl.SslBundle;
+import io.github.kotlinmania.spring.boot.ssl.SslOptions;
 import org.springframework.lang.Contract;
 
 /**

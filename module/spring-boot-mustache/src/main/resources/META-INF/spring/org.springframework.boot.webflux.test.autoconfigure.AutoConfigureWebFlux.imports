@@ -1,1 +1,1 @@
-org.springframework.boot.mustache.autoconfigure.MustacheAutoConfiguration
+io.github.kotlinmania.spring.boot.mustache.autoconfigure.MustacheAutoConfiguration

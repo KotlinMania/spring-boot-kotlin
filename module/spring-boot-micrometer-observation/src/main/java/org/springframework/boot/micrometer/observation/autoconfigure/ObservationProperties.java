@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.micrometer.observation.autoconfigure;
+package io.github.kotlinmania.spring.boot.micrometer.observation.autoconfigure;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
 
-import org.springframework.boot.context.properties.ConfigurationProperties;
+import io.github.kotlinmania.spring.boot.context.properties.ConfigurationProperties;
 
 /**
  * {@link ConfigurationProperties @ConfigurationProperties} for configuring Micrometer

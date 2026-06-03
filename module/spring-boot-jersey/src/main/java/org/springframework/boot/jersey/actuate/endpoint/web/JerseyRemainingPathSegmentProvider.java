@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.jersey.actuate.endpoint.web;
+package io.github.kotlinmania.spring.boot.jersey.actuate.endpoint.web;
 
 import jakarta.ws.rs.container.ContainerRequestContext;
 

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.restdocs.test.autoconfigure;
+package io.github.kotlinmania.spring.boot.restdocs.test.autoconfigure;
 
 import java.io.File;
 
@@ -22,9 +22,9 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.TestConfiguration;
-import org.springframework.boot.testsupport.BuildOutput;
-import org.springframework.boot.webflux.test.autoconfigure.WebFluxTest;
+import io.github.kotlinmania.spring.boot.test.context.TestConfiguration;
+import io.github.kotlinmania.spring.boot.testsupport.BuildOutput;
+import io.github.kotlinmania.spring.boot.webflux.test.autoconfigure.WebFluxTest;
 import org.springframework.context.annotation.Bean;
 import org.springframework.restdocs.mockmvc.MockMvcRestDocumentation;
 import org.springframework.restdocs.mockmvc.RestDocumentationResultHandler;

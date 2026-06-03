@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.devtools.restart.classloader;
+package io.github.kotlinmania.spring.boot.devtools.restart.classloader;
 
 import org.jspecify.annotations.Nullable;
 

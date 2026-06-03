@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.sendgrid.autoconfigure;
+package io.github.kotlinmania.spring.boot.sendgrid.autoconfigure;
 
 import com.sendgrid.Client;
 import com.sendgrid.SendGrid;
@@ -22,12 +22,12 @@ import com.sendgrid.SendGridAPI;
 import org.apache.http.HttpHost;
 import org.apache.http.impl.client.HttpClientBuilder;
 
-import org.springframework.boot.autoconfigure.AutoConfiguration;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
-import org.springframework.boot.context.properties.EnableConfigurationProperties;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.EnableAutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnClass;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnMissingBean;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnProperty;
+import io.github.kotlinmania.spring.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 
 /**

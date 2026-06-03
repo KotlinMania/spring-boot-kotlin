@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.r2dbc.autoconfigure;
+package io.github.kotlinmania.spring.boot.r2dbc.autoconfigure;
 
 import io.r2dbc.spi.ConnectionFactory;
 import io.r2dbc.spi.ConnectionFactoryProvider;
 import org.junit.jupiter.api.Test;
 
 import org.springframework.beans.factory.NoSuchBeanDefinitionException;
-import org.springframework.boot.test.context.FilteredClassLoader;
+import io.github.kotlinmania.spring.boot.test.context.FilteredClassLoader;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

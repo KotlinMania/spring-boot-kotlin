@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.build.autoconfigure;
+package io.github.kotlinmania.spring.boot.build.autoconfigure;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -95,7 +95,7 @@ public record AutoConfigurationClass(String name, List<String> before, List<Stri
 		@Override
 		public AnnotationVisitor visitAnnotation(String descriptor, boolean visible) {
 			String annotationClassName = Type.getType(descriptor).getClassName();
-			if ("org.springframework.boot.autoconfigure.AutoConfiguration".equals(annotationClassName)) {
+			if ("io.github.kotlinmania.spring.boot.autoconfigure.AutoConfiguration".equals(annotationClassName)) {
 				return new AutoConfigurationAnnotationVisitor();
 			}
 			return null;

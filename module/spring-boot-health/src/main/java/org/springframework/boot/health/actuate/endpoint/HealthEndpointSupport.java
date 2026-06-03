@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.health.actuate.endpoint;
+package io.github.kotlinmania.spring.boot.health.actuate.endpoint;
 
 import java.time.Duration;
 import java.time.Instant;
@@ -28,11 +28,11 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.actuate.endpoint.ApiVersion;
-import org.springframework.boot.actuate.endpoint.SecurityContext;
-import org.springframework.boot.actuate.endpoint.web.WebServerNamespace;
-import org.springframework.boot.convert.DurationStyle;
-import org.springframework.boot.health.contributor.Status;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.ApiVersion;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.SecurityContext;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.web.WebServerNamespace;
+import io.github.kotlinmania.spring.boot.convert.DurationStyle;
+import io.github.kotlinmania.spring.boot.health.contributor.Status;
 import org.springframework.core.log.LogMessage;
 import org.springframework.util.Assert;
 import org.springframework.util.StringUtils;

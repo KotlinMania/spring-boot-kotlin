@@ -8,4 +8,4 @@ services:
       - 'MSSQL_SA_PASSWORD=verYs3cret'
       - 'ACCEPT_EULA=yes'
     labels:
-      org.springframework.boot.jdbc.parameters: sendStringParametersAsUnicode=false
+      io.github.kotlinmania.spring.boot.jdbc.parameters: sendStringParametersAsUnicode=false

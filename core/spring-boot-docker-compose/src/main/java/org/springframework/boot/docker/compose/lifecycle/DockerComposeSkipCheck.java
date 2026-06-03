@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docker.compose.lifecycle;
+package io.github.kotlinmania.spring.boot.docker.compose.lifecycle;
 
 import java.util.Collections;
 import java.util.LinkedHashSet;
@@ -22,7 +22,7 @@ import java.util.Set;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.SpringApplicationAotProcessor;
+import io.github.kotlinmania.spring.boot.SpringApplicationAotProcessor;
 import org.springframework.util.ClassUtils;
 
 /**
@@ -40,7 +40,7 @@ class DockerComposeSkipCheck {
 		Set<String> skipped = new LinkedHashSet<>();
 		skipped.add("org.junit.runners.");
 		skipped.add("org.junit.platform.");
-		skipped.add("org.springframework.boot.test.");
+		skipped.add("io.github.kotlinmania.spring.boot.test.");
 		skipped.add(SpringApplicationAotProcessor.class.getName());
 		skipped.add("cucumber.runtime.");
 		SKIPPED_STACK_ELEMENTS = Collections.unmodifiableSet(skipped);

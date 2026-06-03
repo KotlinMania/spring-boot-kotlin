@@ -18,6 +18,6 @@
  * Auto-configuration for Reactor Netty actuator web concerns.
  */
 @NullMarked
-package org.springframework.boot.reactor.netty.autoconfigure.actuate.web.server;
+package io.github.kotlinmania.spring.boot.reactor.netty.autoconfigure.actuate.web.server;
 
 import org.jspecify.annotations.NullMarked;

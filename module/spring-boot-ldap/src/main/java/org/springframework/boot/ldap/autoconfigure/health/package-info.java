@@ -18,6 +18,6 @@
  * Auto-configuration for LDAP health.
  */
 @NullMarked
-package org.springframework.boot.ldap.autoconfigure.health;
+package io.github.kotlinmania.spring.boot.ldap.autoconfigure.health;
 
 import org.jspecify.annotations.NullMarked;

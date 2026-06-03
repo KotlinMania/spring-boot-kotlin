@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.autoconfigure.condition;
+package io.github.kotlinmania.spring.boot.autoconfigure.condition;
 
 import java.lang.annotation.Documented;
 import java.lang.annotation.ElementType;
@@ -32,13 +32,13 @@ import org.springframework.beans.factory.FactoryBean;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.beans.factory.support.BeanDefinitionBuilder;
 import org.springframework.beans.factory.support.BeanDefinitionRegistry;
-import org.springframework.boot.autoconfigure.condition.ConditionEvaluationReport.ConditionAndOutcome;
-import org.springframework.boot.autoconfigure.condition.ConditionEvaluationReport.ConditionAndOutcomes;
-import org.springframework.boot.autoconfigure.condition.scan.ScanBean;
-import org.springframework.boot.autoconfigure.condition.scan.ScannedFactoryBeanConfiguration;
-import org.springframework.boot.autoconfigure.condition.scan.ScannedFactoryBeanWithBeanMethodArgumentsConfiguration;
-import org.springframework.boot.autoconfigure.context.PropertyPlaceholderAutoConfiguration;
-import org.springframework.boot.test.context.runner.ApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionEvaluationReport.ConditionAndOutcome;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionEvaluationReport.ConditionAndOutcomes;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.scan.ScanBean;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.scan.ScannedFactoryBeanConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.scan.ScannedFactoryBeanWithBeanMethodArgumentsConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.context.PropertyPlaceholderAutoConfiguration;
+import io.github.kotlinmania.spring.boot.test.context.runner.ApplicationContextRunner;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -603,7 +603,7 @@ class ConditionalOnMissingBeanTests {
 	}
 
 	@Configuration(proxyBeanMethods = false)
-	@ComponentScan(basePackages = "org.springframework.boot.autoconfigure.condition.scan", useDefaultFilters = false,
+	@ComponentScan(basePackages = "io.github.kotlinmania.spring.boot.autoconfigure.condition.scan", useDefaultFilters = false,
 			includeFilters = @Filter(type = FilterType.ASSIGNABLE_TYPE,
 					classes = ScannedFactoryBeanConfiguration.class))
 	static class ComponentScannedFactoryBeanBeanMethodConfiguration {
@@ -611,7 +611,7 @@ class ConditionalOnMissingBeanTests {
 	}
 
 	@Configuration(proxyBeanMethods = false)
-	@ComponentScan(basePackages = "org.springframework.boot.autoconfigure.condition.scan", useDefaultFilters = false,
+	@ComponentScan(basePackages = "io.github.kotlinmania.spring.boot.autoconfigure.condition.scan", useDefaultFilters = false,
 			includeFilters = @Filter(type = FilterType.ASSIGNABLE_TYPE,
 					classes = ScannedFactoryBeanWithBeanMethodArgumentsConfiguration.class))
 	static class ComponentScannedFactoryBeanBeanMethodWithArgumentsConfiguration {
@@ -691,7 +691,7 @@ class ConditionalOnMissingBeanTests {
 	}
 
 	@Configuration(proxyBeanMethods = false)
-	@ImportResource("org/springframework/boot/autoconfigure/condition/factorybean.xml")
+	@ImportResource("io.github.kotlinmania.spring.boot.autoconfigure/condition/factorybean.xml")
 	static class FactoryBeanXmlConfiguration {
 
 	}
@@ -734,7 +734,7 @@ class ConditionalOnMissingBeanTests {
 
 		@Bean
 		@ConditionalOnMissingBean(
-				ignoredType = "org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBeanTests$CustomExampleBean")
+				ignoredType = "io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnMissingBeanTests$CustomExampleBean")
 		ExampleBean exampleBean() {
 			return new ExampleBean("test");
 		}

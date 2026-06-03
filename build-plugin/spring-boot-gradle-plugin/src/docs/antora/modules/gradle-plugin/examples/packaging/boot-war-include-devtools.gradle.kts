@@ -1,8 +1,8 @@
-import org.springframework.boot.gradle.tasks.bundling.BootWar
+import io.github.kotlinmania.spring.boot.gradle.tasks.bundling.BootWar
 
 plugins {
 	war
-	id("org.springframework.boot") version "{version-spring-boot}"
+	id("io.github.kotlinmania.spring.boot.) version "{version-spring-boot}"
 }
 
 tasks.named<BootWar>("bootWar") {

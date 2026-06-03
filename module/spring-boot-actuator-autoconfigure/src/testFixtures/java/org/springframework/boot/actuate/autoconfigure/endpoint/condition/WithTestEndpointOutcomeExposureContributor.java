@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.actuate.autoconfigure.endpoint.condition;
+package io.github.kotlinmania.spring.boot.actuate.autoconfigure.endpoint.condition;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Inherited;
@@ -23,13 +23,13 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 import java.util.Set;
 
-import org.springframework.boot.actuate.autoconfigure.endpoint.expose.EndpointExposure;
-import org.springframework.boot.actuate.autoconfigure.endpoint.expose.IncludeExcludeEndpointFilter;
-import org.springframework.boot.actuate.endpoint.EndpointId;
-import org.springframework.boot.actuate.endpoint.ExposableEndpoint;
-import org.springframework.boot.autoconfigure.condition.ConditionMessage.Builder;
-import org.springframework.boot.autoconfigure.condition.ConditionOutcome;
-import org.springframework.boot.testsupport.classpath.resources.WithResource;
+import io.github.kotlinmania.spring.boot.actuate.autoconfigure.endpoint.expose.EndpointExposure;
+import io.github.kotlinmania.spring.boot.actuate.autoconfigure.endpoint.expose.IncludeExcludeEndpointFilter;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.EndpointId;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.ExposableEndpoint;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionMessage.Builder;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionOutcome;
+import io.github.kotlinmania.spring.boot.testsupport.classpath.resources.WithResource;
 import org.springframework.core.env.Environment;
 import org.springframework.core.io.support.SpringFactoriesLoader;
 
@@ -44,8 +44,8 @@ import org.springframework.core.io.support.SpringFactoriesLoader;
 @Target(ElementType.METHOD)
 @WithResource(name = "META-INF/spring.factories",
 		content = """
-				org.springframework.boot.actuate.autoconfigure.endpoint.condition.EndpointExposureOutcomeContributor=\
-				org.springframework.boot.actuate.autoconfigure.endpoint.condition.WithTestEndpointOutcomeExposureContributor.TestEndpointExposureOutcomeContributor
+				io.github.kotlinmania.spring.boot.actuate.autoconfigure.endpoint.condition.EndpointExposureOutcomeContributor=\
+				io.github.kotlinmania.spring.boot.actuate.autoconfigure.endpoint.condition.WithTestEndpointOutcomeExposureContributor.TestEndpointExposureOutcomeContributor
 				""")
 public @interface WithTestEndpointOutcomeExposureContributor {
 

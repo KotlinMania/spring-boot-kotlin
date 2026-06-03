@@ -14,16 +14,16 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.actuate.info;
+package io.github.kotlinmania.spring.boot.actuate.info;
 
 import org.jspecify.annotations.Nullable;
 
 import org.springframework.aot.hint.BindingReflectionHintsRegistrar;
 import org.springframework.aot.hint.RuntimeHints;
 import org.springframework.aot.hint.RuntimeHintsRegistrar;
-import org.springframework.boot.actuate.info.Info.Builder;
-import org.springframework.boot.actuate.info.JavaInfoContributor.JavaInfoContributorRuntimeHints;
-import org.springframework.boot.info.JavaInfo;
+import io.github.kotlinmania.spring.boot.actuate.info.Info.Builder;
+import io.github.kotlinmania.spring.boot.actuate.info.JavaInfoContributor.JavaInfoContributorRuntimeHints;
+import io.github.kotlinmania.spring.boot.info.JavaInfo;
 import org.springframework.context.annotation.ImportRuntimeHints;
 
 /**

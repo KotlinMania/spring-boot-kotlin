@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.tomcat.autoconfigure;
+package io.github.kotlinmania.spring.boot.tomcat.autoconfigure;
 
 import org.apache.coyote.ProtocolHandler;
 import org.apache.tomcat.util.threads.VirtualThreadExecutor;
 
-import org.springframework.boot.tomcat.ConfigurableTomcatWebServerFactory;
-import org.springframework.boot.web.server.WebServerFactoryCustomizer;
+import io.github.kotlinmania.spring.boot.tomcat.ConfigurableTomcatWebServerFactory;
+import io.github.kotlinmania.spring.boot.web.server.WebServerFactoryCustomizer;
 import org.springframework.core.Ordered;
 
 /**

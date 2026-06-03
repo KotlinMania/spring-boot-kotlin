@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.autoconfigure.condition;
+package io.github.kotlinmania.spring.boot.autoconfigure.condition;
 
 import java.util.Arrays;
 import java.util.Collections;
@@ -26,8 +26,8 @@ import org.junit.jupiter.api.Test;
 
 import org.springframework.beans.factory.config.ConfigurableListableBeanFactory;
 import org.springframework.beans.factory.support.DefaultListableBeanFactory;
-import org.springframework.boot.autoconfigure.AutoConfigurationImportEvent;
-import org.springframework.boot.autoconfigure.AutoConfigurationImportListener;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurationImportEvent;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurationImportListener;
 import org.springframework.core.io.support.SpringFactoriesLoader;
 
 import static org.assertj.core.api.Assertions.assertThat;

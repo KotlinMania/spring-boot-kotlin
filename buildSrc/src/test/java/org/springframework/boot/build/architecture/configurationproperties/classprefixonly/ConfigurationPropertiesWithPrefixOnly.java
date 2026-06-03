@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.build.architecture.configurationproperties.classprefixonly;
+package io.github.kotlinmania.spring.boot.build.architecture.configurationproperties.classprefixonly;
 
-import org.springframework.boot.build.architecture.annotations.TestConfigurationProperties;
+import io.github.kotlinmania.spring.boot.build.architecture.annotations.TestConfigurationProperties;
 
 @TestConfigurationProperties(prefix = "testing")
 public class ConfigurationPropertiesWithPrefixOnly {

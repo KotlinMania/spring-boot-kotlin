@@ -18,6 +18,6 @@
  * Support for exporting actuator metrics to OTLP.
  */
 @NullMarked
-package org.springframework.boot.micrometer.metrics.autoconfigure.export.otlp;
+package io.github.kotlinmania.spring.boot.micrometer.metrics.autoconfigure.export.otlp;
 
 import org.jspecify.annotations.NullMarked;

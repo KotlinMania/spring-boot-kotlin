@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.actuate.endpoint.invoke.reflect;
+package io.github.kotlinmania.spring.boot.actuate.endpoint.invoke.reflect;
 
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Parameter;
 
-import org.springframework.boot.actuate.endpoint.invoke.OperationParameter;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.invoke.OperationParameter;
 import org.springframework.core.Nullness;
 
 /**

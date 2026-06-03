@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.gradle.junit;
+package io.github.kotlinmania.spring.boot.gradle.junit;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -31,11 +31,11 @@ import org.junit.jupiter.api.extension.TestTemplateInvocationContext;
 import org.junit.jupiter.api.extension.TestTemplateInvocationContextProvider;
 import org.junit.platform.commons.util.AnnotationUtils;
 
-import org.springframework.boot.gradle.testkit.PluginClasspathGradleBuild;
-import org.springframework.boot.testsupport.BuildOutput;
-import org.springframework.boot.testsupport.gradle.testkit.GradleBuild;
-import org.springframework.boot.testsupport.gradle.testkit.GradleBuildExtension;
-import org.springframework.boot.testsupport.gradle.testkit.GradleVersions;
+import io.github.kotlinmania.spring.boot.gradle.testkit.PluginClasspathGradleBuild;
+import io.github.kotlinmania.spring.boot.testsupport.BuildOutput;
+import io.github.kotlinmania.spring.boot.testsupport.gradle.testkit.GradleBuild;
+import io.github.kotlinmania.spring.boot.testsupport.gradle.testkit.GradleBuildExtension;
+import io.github.kotlinmania.spring.boot.testsupport.gradle.testkit.GradleVersions;
 import org.springframework.util.StringUtils;
 
 /**

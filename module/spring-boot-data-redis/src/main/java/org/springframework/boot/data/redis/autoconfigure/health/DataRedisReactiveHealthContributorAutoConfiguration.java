@@ -14,22 +14,22 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.data.redis.autoconfigure.health;
+package io.github.kotlinmania.spring.boot.data.redis.autoconfigure.health;
 
 import reactor.core.publisher.Flux;
 
 import org.springframework.beans.factory.config.ConfigurableListableBeanFactory;
-import org.springframework.boot.autoconfigure.AutoConfiguration;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
-import org.springframework.boot.data.redis.autoconfigure.DataRedisReactiveAutoConfiguration;
-import org.springframework.boot.data.redis.health.DataRedisReactiveHealthIndicator;
-import org.springframework.boot.health.autoconfigure.contributor.CompositeReactiveHealthContributorConfiguration;
-import org.springframework.boot.health.autoconfigure.contributor.ConditionalOnEnabledHealthIndicator;
-import org.springframework.boot.health.contributor.ReactiveHealthContributor;
-import org.springframework.boot.health.contributor.ReactiveHealthIndicator;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.EnableAutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnBean;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnClass;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnMissingBean;
+import io.github.kotlinmania.spring.boot.data.redis.autoconfigure.DataRedisReactiveAutoConfiguration;
+import io.github.kotlinmania.spring.boot.data.redis.health.DataRedisReactiveHealthIndicator;
+import io.github.kotlinmania.spring.boot.health.autoconfigure.contributor.CompositeReactiveHealthContributorConfiguration;
+import io.github.kotlinmania.spring.boot.health.autoconfigure.contributor.ConditionalOnEnabledHealthIndicator;
+import io.github.kotlinmania.spring.boot.health.contributor.ReactiveHealthContributor;
+import io.github.kotlinmania.spring.boot.health.contributor.ReactiveHealthIndicator;
 import org.springframework.context.annotation.Bean;
 import org.springframework.data.redis.connection.ReactiveRedisConnectionFactory;
 

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.actuate.endpoint.invoke.reflect;
+package io.github.kotlinmania.spring.boot.actuate.endpoint.invoke.reflect;
 
 import java.lang.reflect.Method;
 import java.util.Collections;
@@ -23,12 +23,12 @@ import org.jspecify.annotations.Nullable;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.actuate.endpoint.ApiVersion;
-import org.springframework.boot.actuate.endpoint.InvocationContext;
-import org.springframework.boot.actuate.endpoint.OperationType;
-import org.springframework.boot.actuate.endpoint.SecurityContext;
-import org.springframework.boot.actuate.endpoint.invoke.MissingParametersException;
-import org.springframework.boot.actuate.endpoint.invoke.ParameterValueMapper;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.ApiVersion;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.InvocationContext;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.OperationType;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.SecurityContext;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.invoke.MissingParametersException;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.invoke.ParameterValueMapper;
 import org.springframework.util.ReflectionUtils;
 
 import static org.assertj.core.api.Assertions.assertThat;

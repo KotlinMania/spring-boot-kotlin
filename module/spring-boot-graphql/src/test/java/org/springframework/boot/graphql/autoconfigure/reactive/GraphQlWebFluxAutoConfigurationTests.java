@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.graphql.autoconfigure.reactive;
+package io.github.kotlinmania.spring.boot.graphql.autoconfigure.reactive;
 
 import java.time.Duration;
 import java.util.Collections;
@@ -29,15 +29,15 @@ import reactor.core.publisher.Mono;
 
 import org.springframework.aot.hint.RuntimeHints;
 import org.springframework.aot.hint.predicate.RuntimeHintsPredicates;
-import org.springframework.boot.autoconfigure.AutoConfigurations;
-import org.springframework.boot.graphql.autoconfigure.GraphQlAutoConfiguration;
-import org.springframework.boot.graphql.autoconfigure.GraphQlTestDataFetchers;
-import org.springframework.boot.http.codec.autoconfigure.CodecsAutoConfiguration;
-import org.springframework.boot.jackson.autoconfigure.JacksonAutoConfiguration;
-import org.springframework.boot.test.context.runner.ReactiveWebApplicationContextRunner;
-import org.springframework.boot.testsupport.classpath.resources.WithResource;
-import org.springframework.boot.webflux.autoconfigure.HttpHandlerAutoConfiguration;
-import org.springframework.boot.webflux.autoconfigure.WebFluxAutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurations;
+import io.github.kotlinmania.spring.boot.graphql.autoconfigure.GraphQlAutoConfiguration;
+import io.github.kotlinmania.spring.boot.graphql.autoconfigure.GraphQlTestDataFetchers;
+import io.github.kotlinmania.spring.boot.http.codec.autoconfigure.CodecsAutoConfiguration;
+import io.github.kotlinmania.spring.boot.jackson.autoconfigure.JacksonAutoConfiguration;
+import io.github.kotlinmania.spring.boot.test.context.runner.ReactiveWebApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.testsupport.classpath.resources.WithResource;
+import io.github.kotlinmania.spring.boot.webflux.autoconfigure.HttpHandlerAutoConfiguration;
+import io.github.kotlinmania.spring.boot.webflux.autoconfigure.WebFluxAutoConfiguration;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.annotation.Order;

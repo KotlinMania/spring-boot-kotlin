@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.jackson2.autoconfigure;
+package io.github.kotlinmania.spring.boot.jackson2.autoconfigure;
 
 import java.lang.reflect.Field;
 import java.text.DateFormat;
@@ -46,14 +46,14 @@ import org.springframework.aot.hint.RuntimeHintsRegistrar;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.ObjectProvider;
 import org.springframework.beans.factory.config.ConfigurableBeanFactory;
-import org.springframework.boot.autoconfigure.AutoConfiguration;
-import org.springframework.boot.autoconfigure.AutoConfigurationPackages;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
-import org.springframework.boot.context.properties.EnableConfigurationProperties;
-import org.springframework.boot.jackson2.JsonComponentModule;
-import org.springframework.boot.jackson2.JsonMixinModule;
-import org.springframework.boot.jackson2.JsonMixinModuleEntries;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurationPackages;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnClass;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnMissingBean;
+import io.github.kotlinmania.spring.boot.context.properties.EnableConfigurationProperties;
+import io.github.kotlinmania.spring.boot.jackson2.JsonComponentModule;
+import io.github.kotlinmania.spring.boot.jackson2.JsonMixinModule;
+import io.github.kotlinmania.spring.boot.jackson2.JsonMixinModuleEntries;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -338,7 +338,7 @@ public final class Jackson2AutoConfiguration {
 
 			private void configureConstructorDetector(
 					org.springframework.http.converter.json.Jackson2ObjectMapperBuilder builder) {
-				org.springframework.boot.jackson2.autoconfigure.Jackson2Properties.ConstructorDetectorStrategy strategy = this.jacksonProperties
+				io.github.kotlinmania.spring.boot.jackson2.autoconfigure.Jackson2Properties.ConstructorDetectorStrategy strategy = this.jacksonProperties
 					.getConstructorDetector();
 				builder.postConfigurer((objectMapper) -> {
 					switch (strategy) {

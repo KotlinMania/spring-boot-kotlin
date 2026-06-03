@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.micrometer.tracing.autoconfigure;
+package io.github.kotlinmania.spring.boot.micrometer.tracing.autoconfigure;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -27,7 +27,7 @@ import io.micrometer.tracing.Tracer;
 import io.micrometer.tracing.handler.TracingAwareMeterObservationHandler;
 import io.micrometer.tracing.handler.TracingObservationHandler;
 
-import org.springframework.boot.micrometer.observation.autoconfigure.ObservationHandlerGroup;
+import io.github.kotlinmania.spring.boot.micrometer.observation.autoconfigure.ObservationHandlerGroup;
 
 /**
  * {@link ObservationHandlerGroup} that considers both {@link TracingObservationHandler}

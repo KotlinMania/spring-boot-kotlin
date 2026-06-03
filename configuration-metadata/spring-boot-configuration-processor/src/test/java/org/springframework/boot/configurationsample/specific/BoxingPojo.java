@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.configurationsample.specific;
+package io.github.kotlinmania.spring.boot.configurationsample.specific;
 
-import org.springframework.boot.configurationsample.TestConfigurationProperties;
+import io.github.kotlinmania.spring.boot.configurationsample.TestConfigurationProperties;
 
 /**
  * Demonstrate the use of boxing/unboxing. Even if the type does not strictly match, it

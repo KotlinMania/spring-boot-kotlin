@@ -18,6 +18,6 @@
  * Maven plugin for Spring Boot.
  */
 @NullMarked
-package org.springframework.boot.maven;
+package io.github.kotlinmania.spring.boot.maven;
 
 import org.jspecify.annotations.NullMarked;

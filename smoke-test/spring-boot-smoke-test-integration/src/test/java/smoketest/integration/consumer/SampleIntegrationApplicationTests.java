@@ -32,9 +32,9 @@ import smoketest.integration.SampleIntegrationApplication;
 import smoketest.integration.ServiceProperties;
 import smoketest.integration.producer.ProducerApplication;
 
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.test.system.CapturedOutput;
-import org.springframework.boot.test.system.OutputCaptureExtension;
+import io.github.kotlinmania.spring.boot.SpringApplication;
+import io.github.kotlinmania.spring.boot.test.system.CapturedOutput;
+import io.github.kotlinmania.spring.boot.test.system.OutputCaptureExtension;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.core.io.DefaultResourceLoader;
 import org.springframework.core.io.Resource;

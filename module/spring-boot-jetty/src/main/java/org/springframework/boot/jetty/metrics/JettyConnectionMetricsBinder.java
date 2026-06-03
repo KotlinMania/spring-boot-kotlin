@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.jetty.metrics;
+package io.github.kotlinmania.spring.boot.jetty.metrics;
 
 import java.util.Collections;
 

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.loader.launch;
+package io.github.kotlinmania.spring.boot.loader.launch;
 
 import java.net.URL;
 import java.util.Collections;
@@ -26,9 +26,9 @@ import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 
-import org.springframework.boot.loader.zip.AssertFileChannelDataBlocksClosed;
-import org.springframework.boot.testsupport.system.CapturedOutput;
-import org.springframework.boot.testsupport.system.OutputCaptureExtension;
+import io.github.kotlinmania.spring.boot.loader.zip.AssertFileChannelDataBlocksClosed;
+import io.github.kotlinmania.spring.boot.testsupport.system.CapturedOutput;
+import io.github.kotlinmania.spring.boot.testsupport.system.OutputCaptureExtension;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

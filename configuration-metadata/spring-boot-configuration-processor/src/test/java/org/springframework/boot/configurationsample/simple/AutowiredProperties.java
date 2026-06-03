@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.configurationsample.simple;
+package io.github.kotlinmania.spring.boot.configurationsample.simple;
 
-import org.springframework.boot.configurationsample.TestAutowired;
+import io.github.kotlinmania.spring.boot.configurationsample.TestAutowired;
 
 /**
  * Properties with autowired constructor.

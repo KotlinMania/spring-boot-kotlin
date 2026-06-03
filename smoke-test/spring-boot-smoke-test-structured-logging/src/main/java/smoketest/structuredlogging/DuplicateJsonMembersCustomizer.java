@@ -18,8 +18,8 @@ package smoketest.structuredlogging;
 
 import java.util.Objects;
 
-import org.springframework.boot.json.JsonWriter.Members;
-import org.springframework.boot.logging.structured.StructuredLoggingJsonMembersCustomizer;
+import io.github.kotlinmania.spring.boot.json.JsonWriter.Members;
+import io.github.kotlinmania.spring.boot.logging.structured.StructuredLoggingJsonMembersCustomizer;
 
 public class DuplicateJsonMembersCustomizer implements StructuredLoggingJsonMembersCustomizer<Object> {
 

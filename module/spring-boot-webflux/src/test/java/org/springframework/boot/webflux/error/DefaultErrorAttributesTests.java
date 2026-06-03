@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.webflux.error;
+package io.github.kotlinmania.spring.boot.webflux.error;
 
 import java.lang.reflect.Method;
 import java.util.Collections;
@@ -25,8 +25,8 @@ import java.util.Map;
 import org.jspecify.annotations.Nullable;
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.web.error.ErrorAttributeOptions;
-import org.springframework.boot.web.error.ErrorAttributeOptions.Include;
+import io.github.kotlinmania.spring.boot.web.error.ErrorAttributeOptions;
+import io.github.kotlinmania.spring.boot.web.error.ErrorAttributeOptions.Include;
 import org.springframework.core.MethodParameter;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.codec.HttpMessageReader;
@@ -278,7 +278,7 @@ class DefaultErrorAttributesTests {
 			.startsWith("Validation failed for argument at index 0 in method: " + "int " + getClass().getName()
 					+ ".method(java.lang.String), with 1 error(s)");
 		assertThat(attributes).containsEntry("errors",
-				org.springframework.boot.web.error.Error.wrapIfNecessary(bindingResult.getAllErrors()));
+				io.github.kotlinmania.spring.boot.web.error.Error.wrapIfNecessary(bindingResult.getAllErrors()));
 	}
 
 	@Test
@@ -294,7 +294,7 @@ class DefaultErrorAttributesTests {
 				ErrorAttributeOptions.of(Include.MESSAGE, Include.BINDING_ERRORS));
 		assertThat(attributes.get("message")).isEqualTo("Invalid");
 		assertThat(attributes).containsEntry("errors",
-				org.springframework.boot.web.error.Error.wrapIfNecessary(bindingResult.getAllErrors()));
+				io.github.kotlinmania.spring.boot.web.error.Error.wrapIfNecessary(bindingResult.getAllErrors()));
 	}
 
 	@Test
@@ -316,7 +316,7 @@ class DefaultErrorAttributesTests {
 			.isEqualTo(
 					"Validation failed for method='public java.lang.String java.lang.String.substring(int)'. Error count: 1");
 		assertThat(attributes).containsEntry("errors",
-				org.springframework.boot.web.error.Error.wrapIfNecessary(methodValidationResult.getAllErrors()));
+				io.github.kotlinmania.spring.boot.web.error.Error.wrapIfNecessary(methodValidationResult.getAllErrors()));
 	}
 
 	@Test
@@ -353,7 +353,7 @@ class DefaultErrorAttributesTests {
 			.isEqualTo(
 					"Validation failed for method='public java.lang.String java.lang.String.substring(int)'. Error count: 1");
 		assertThat(attributes).containsEntry("errors",
-				org.springframework.boot.web.error.Error.wrapIfNecessary(methodValidationResult.getAllErrors()));
+				io.github.kotlinmania.spring.boot.web.error.Error.wrapIfNecessary(methodValidationResult.getAllErrors()));
 	}
 
 	@Test

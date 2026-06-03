@@ -18,6 +18,6 @@
  * Support for Docker Compose Elasticsearch service connections.
  */
 @NullMarked
-package org.springframework.boot.elasticsearch.docker.compose;
+package io.github.kotlinmania.spring.boot.elasticsearch.docker.compose;
 
 import org.jspecify.annotations.NullMarked;

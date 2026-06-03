@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.webmvc.actuate.web.mappings;
+package io.github.kotlinmania.spring.boot.webmvc.actuate.web.mappings;
 
 import java.util.Collections;
 import java.util.List;
@@ -26,9 +26,9 @@ import org.apache.catalina.Container;
 import org.apache.catalina.Context;
 import org.apache.catalina.core.StandardWrapper;
 
-import org.springframework.boot.tomcat.TomcatWebServer;
-import org.springframework.boot.web.server.WebServer;
-import org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext;
+import io.github.kotlinmania.spring.boot.tomcat.TomcatWebServer;
+import io.github.kotlinmania.spring.boot.web.server.WebServer;
+import io.github.kotlinmania.spring.boot.web.server.servlet.context.ServletWebServerApplicationContext;
 import org.springframework.util.ClassUtils;
 import org.springframework.web.context.WebApplicationContext;
 import org.springframework.web.servlet.DispatcherServlet;
@@ -44,7 +44,7 @@ import org.springframework.web.servlet.HandlerMapping;
 final class DispatcherServletHandlerMappings {
 
 	private static final boolean TOMCAT_WEB_SERVER_PRESENT = ClassUtils.isPresent(
-			"org.springframework.boot.tomcat.TomcatWebServer", DispatcherServletHandlerMappings.class.getClassLoader());
+			"io.github.kotlinmania.spring.boot.tomcat.TomcatWebServer", DispatcherServletHandlerMappings.class.getClassLoader());
 
 	private final String name;
 

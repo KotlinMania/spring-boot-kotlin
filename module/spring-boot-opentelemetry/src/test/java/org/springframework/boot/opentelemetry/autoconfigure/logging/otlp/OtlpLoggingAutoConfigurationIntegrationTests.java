@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.opentelemetry.autoconfigure.logging.otlp;
+package io.github.kotlinmania.spring.boot.opentelemetry.autoconfigure.logging.otlp;
 
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
@@ -32,10 +32,10 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.autoconfigure.AutoConfigurations;
-import org.springframework.boot.opentelemetry.autoconfigure.OpenTelemetrySdkAutoConfiguration;
-import org.springframework.boot.opentelemetry.autoconfigure.logging.OpenTelemetryLoggingAutoConfiguration;
-import org.springframework.boot.test.context.runner.ApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurations;
+import io.github.kotlinmania.spring.boot.opentelemetry.autoconfigure.OpenTelemetrySdkAutoConfiguration;
+import io.github.kotlinmania.spring.boot.opentelemetry.autoconfigure.logging.OpenTelemetryLoggingAutoConfiguration;
+import io.github.kotlinmania.spring.boot.test.context.runner.ApplicationContextRunner;
 import org.springframework.context.ApplicationContext;
 
 import static org.assertj.core.api.Assertions.assertThat;

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.integration.autoconfigure;
+package io.github.kotlinmania.spring.boot.integration.autoconfigure;
 
 import java.beans.PropertyDescriptor;
 import java.time.Duration;
@@ -39,30 +39,30 @@ import reactor.core.publisher.Mono;
 
 import org.springframework.beans.DirectFieldAccessor;
 import org.springframework.beans.PropertyAccessorFactory;
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.AutoConfigurations;
-import org.springframework.boot.autoconfigure.jmx.JmxAutoConfiguration;
-import org.springframework.boot.autoconfigure.task.TaskSchedulingAutoConfiguration;
-import org.springframework.boot.context.annotation.UserConfigurations;
-import org.springframework.boot.context.properties.source.MutuallyExclusiveConfigurationPropertiesException;
-import org.springframework.boot.flyway.autoconfigure.FlywayAutoConfiguration;
-import org.springframework.boot.integration.autoconfigure.IntegrationAutoConfiguration.IntegrationComponentScanConfiguration;
-import org.springframework.boot.jdbc.autoconfigure.DataSourceAutoConfiguration;
-import org.springframework.boot.jdbc.autoconfigure.DataSourceProperties;
-import org.springframework.boot.jdbc.autoconfigure.DataSourceTransactionManagerAutoConfiguration;
-import org.springframework.boot.jdbc.autoconfigure.EmbeddedDataSourceConfiguration;
-import org.springframework.boot.jdbc.autoconfigure.JdbcTemplateAutoConfiguration;
-import org.springframework.boot.jdbc.init.DataSourceScriptDatabaseInitializer;
-import org.springframework.boot.rsocket.autoconfigure.RSocketMessagingAutoConfiguration;
-import org.springframework.boot.rsocket.autoconfigure.RSocketRequesterAutoConfiguration;
-import org.springframework.boot.rsocket.autoconfigure.RSocketServerAutoConfiguration;
-import org.springframework.boot.rsocket.autoconfigure.RSocketStrategiesAutoConfiguration;
-import org.springframework.boot.sql.init.DatabaseInitializationMode;
-import org.springframework.boot.sql.init.DatabaseInitializationSettings;
-import org.springframework.boot.test.context.FilteredClassLoader;
-import org.springframework.boot.test.context.runner.ApplicationContextRunner;
-import org.springframework.boot.testsupport.assertj.SimpleAsyncTaskExecutorAssert;
-import org.springframework.boot.testsupport.classpath.resources.WithResource;
+import io.github.kotlinmania.spring.boot.SpringApplication;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurations;
+import io.github.kotlinmania.spring.boot.autoconfigure.jmx.JmxAutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.task.TaskSchedulingAutoConfiguration;
+import io.github.kotlinmania.spring.boot.context.annotation.UserConfigurations;
+import io.github.kotlinmania.spring.boot.context.properties.source.MutuallyExclusiveConfigurationPropertiesException;
+import io.github.kotlinmania.spring.boot.flyway.autoconfigure.FlywayAutoConfiguration;
+import io.github.kotlinmania.spring.boot.integration.autoconfigure.IntegrationAutoConfiguration.IntegrationComponentScanConfiguration;
+import io.github.kotlinmania.spring.boot.jdbc.autoconfigure.DataSourceAutoConfiguration;
+import io.github.kotlinmania.spring.boot.jdbc.autoconfigure.DataSourceProperties;
+import io.github.kotlinmania.spring.boot.jdbc.autoconfigure.DataSourceTransactionManagerAutoConfiguration;
+import io.github.kotlinmania.spring.boot.jdbc.autoconfigure.EmbeddedDataSourceConfiguration;
+import io.github.kotlinmania.spring.boot.jdbc.autoconfigure.JdbcTemplateAutoConfiguration;
+import io.github.kotlinmania.spring.boot.jdbc.init.DataSourceScriptDatabaseInitializer;
+import io.github.kotlinmania.spring.boot.rsocket.autoconfigure.RSocketMessagingAutoConfiguration;
+import io.github.kotlinmania.spring.boot.rsocket.autoconfigure.RSocketRequesterAutoConfiguration;
+import io.github.kotlinmania.spring.boot.rsocket.autoconfigure.RSocketServerAutoConfiguration;
+import io.github.kotlinmania.spring.boot.rsocket.autoconfigure.RSocketStrategiesAutoConfiguration;
+import io.github.kotlinmania.spring.boot.sql.init.DatabaseInitializationMode;
+import io.github.kotlinmania.spring.boot.sql.init.DatabaseInitializationSettings;
+import io.github.kotlinmania.spring.boot.test.context.FilteredClassLoader;
+import io.github.kotlinmania.spring.boot.test.context.runner.ApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.testsupport.assertj.SimpleAsyncTaskExecutorAssert;
+import io.github.kotlinmania.spring.boot.testsupport.classpath.resources.WithResource;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
@@ -159,7 +159,7 @@ class IntegrationAutoConfigurationTests {
 		this.contextRunner.withPropertyValues("spring.jmx.enabled=true").run((context) -> {
 			MBeanServer mBeanServer = context.getBean(MBeanServer.class);
 			assertThat(mBeanServer.getDomains()).contains("org.springframework.integration",
-					"org.springframework.boot.integration.autoconfigure");
+					"io.github.kotlinmania.spring.boot.integration.autoconfigure");
 			assertThat(context).hasBean(IntegrationManagementConfigurer.MANAGEMENT_CONFIGURER_NAME);
 		});
 	}
@@ -276,7 +276,7 @@ class IntegrationAutoConfigurationTests {
 	@Test
 	void integrationJdbcDataSourceInitializerBacksOffWithoutSpringBootJdbc() {
 		this.contextRunner.withBean(DataSource.class, IntegrationAutoConfigurationTests::createTestDataSource)
-			.withClassLoader(new FilteredClassLoader("org.springframework.boot.jdbc"))
+			.withClassLoader(new FilteredClassLoader("io.github.kotlinmania.spring.boot.jdbc"))
 			.run((context) -> assertThat(context)
 				.doesNotHaveBean(IntegrationDataSourceScriptDatabaseInitializer.class));
 	}
@@ -284,7 +284,7 @@ class IntegrationAutoConfigurationTests {
 	@Test
 	void integrationJdbcDataSourceInitializerBacksOffWithoutSpringBootJdbcAndSql() {
 		this.contextRunner.withBean(DataSource.class, IntegrationAutoConfigurationTests::createTestDataSource)
-			.withClassLoader(new FilteredClassLoader("org.springframework.boot.jdbc", "org.springframework.boot.sql"))
+			.withClassLoader(new FilteredClassLoader("io.github.kotlinmania.spring.boot.jdbc", "io.github.kotlinmania.spring.boot.sql"))
 			.run((context) -> assertThat(context)
 				.doesNotHaveBean(IntegrationDataSourceScriptDatabaseInitializer.class));
 	}

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.neo4j.health;
+package io.github.kotlinmania.spring.boot.neo4j.health;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
@@ -27,9 +27,9 @@ import org.neo4j.driver.SessionConfig;
 import org.neo4j.driver.exceptions.SessionExpiredException;
 import org.neo4j.driver.summary.ResultSummary;
 
-import org.springframework.boot.health.contributor.AbstractHealthIndicator;
-import org.springframework.boot.health.contributor.Health;
-import org.springframework.boot.health.contributor.HealthIndicator;
+import io.github.kotlinmania.spring.boot.health.contributor.AbstractHealthIndicator;
+import io.github.kotlinmania.spring.boot.health.contributor.Health;
+import io.github.kotlinmania.spring.boot.health.contributor.HealthIndicator;
 
 /**
  * {@link HealthIndicator} that tests the status of a Neo4j by executing a Cypher

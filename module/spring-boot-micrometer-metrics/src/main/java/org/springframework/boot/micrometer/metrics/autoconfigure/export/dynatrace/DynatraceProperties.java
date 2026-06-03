@@ -14,15 +14,15 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.micrometer.metrics.autoconfigure.export.dynatrace;
+package io.github.kotlinmania.spring.boot.micrometer.metrics.autoconfigure.export.dynatrace;
 
 import java.util.Map;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.boot.context.properties.DeprecatedConfigurationProperty;
-import org.springframework.boot.micrometer.metrics.autoconfigure.export.properties.StepRegistryProperties;
+import io.github.kotlinmania.spring.boot.context.properties.ConfigurationProperties;
+import io.github.kotlinmania.spring.boot.context.properties.DeprecatedConfigurationProperty;
+import io.github.kotlinmania.spring.boot.micrometer.metrics.autoconfigure.export.properties.StepRegistryProperties;
 
 /**
  * {@link ConfigurationProperties @ConfigurationProperties} for configuring Dynatrace

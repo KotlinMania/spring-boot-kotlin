@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.restclient.test;
+package io.github.kotlinmania.spring.boot.restclient.test;
 
 import java.util.function.Supplier;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.restclient.RestTemplateBuilder;
+import io.github.kotlinmania.spring.boot.restclient.RestTemplateBuilder;
 import org.springframework.http.client.BufferingClientHttpRequestFactory;
 import org.springframework.http.client.ClientHttpRequestFactory;
 import org.springframework.test.web.client.RequestExpectationManager;

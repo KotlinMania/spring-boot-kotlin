@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.testcontainers.context;
+package io.github.kotlinmania.spring.boot.testcontainers.context;
 
 import java.lang.reflect.Field;
 
 import org.testcontainers.containers.Container;
 
 import org.springframework.beans.factory.support.RootBeanDefinition;
-import org.springframework.boot.testcontainers.beans.TestcontainerBeanDefinition;
+import io.github.kotlinmania.spring.boot.testcontainers.beans.TestcontainerBeanDefinition;
 import org.springframework.core.annotation.MergedAnnotations;
 
 /**

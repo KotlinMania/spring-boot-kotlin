@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.grpc.server.autoconfigure.health;
+package io.github.kotlinmania.spring.boot.grpc.server.autoconfigure.health;
 
 import java.time.Clock;
 import java.time.Duration;
@@ -25,8 +25,8 @@ import jakarta.servlet.ServletContext;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
-import org.springframework.boot.grpc.server.GrpcServletRegistration;
-import org.springframework.boot.grpc.server.health.GrpcServerHealth;
+import io.github.kotlinmania.spring.boot.grpc.server.GrpcServletRegistration;
+import io.github.kotlinmania.spring.boot.grpc.server.health.GrpcServerHealth;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.core.log.LogMessage;
 import org.springframework.grpc.server.lifecycle.GrpcServerStartedEvent;

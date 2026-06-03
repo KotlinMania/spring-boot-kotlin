@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.io.restclient.resttemplate.ssl;
+package io.github.kotlinmania.spring.boot.docs.io.restclient.resttemplate.ssl;
 
-import org.springframework.boot.docs.io.restclient.resttemplate.Details;
-import org.springframework.boot.restclient.RestTemplateBuilder;
-import org.springframework.boot.ssl.SslBundles;
+import io.github.kotlinmania.spring.boot.docs.io.restclient.resttemplate.Details;
+import io.github.kotlinmania.spring.boot.restclient.RestTemplateBuilder;
+import io.github.kotlinmania.spring.boot.ssl.SslBundles;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 

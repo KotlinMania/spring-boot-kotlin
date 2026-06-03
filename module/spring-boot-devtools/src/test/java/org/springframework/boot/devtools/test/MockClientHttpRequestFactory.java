@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.devtools.test;
+package io.github.kotlinmania.spring.boot.devtools.test;
 
 import java.io.IOException;
 import java.net.URI;

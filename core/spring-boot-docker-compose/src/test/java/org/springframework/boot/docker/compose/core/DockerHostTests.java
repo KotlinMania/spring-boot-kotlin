@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docker.compose.core;
+package io.github.kotlinmania.spring.boot.docker.compose.core;
 
 import java.util.ArrayList;
 import java.util.Collections;

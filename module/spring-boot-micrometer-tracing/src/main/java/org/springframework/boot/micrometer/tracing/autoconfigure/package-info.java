@@ -18,6 +18,6 @@
  * Auto-configuration for Micrometer Tracing.
  */
 @NullMarked
-package org.springframework.boot.micrometer.tracing.autoconfigure;
+package io.github.kotlinmania.spring.boot.micrometer.tracing.autoconfigure;
 
 import org.jspecify.annotations.NullMarked;

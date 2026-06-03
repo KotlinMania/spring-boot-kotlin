@@ -14,16 +14,16 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.diagnostics.analyzer;
+package io.github.kotlinmania.spring.boot.diagnostics.analyzer;
 
 import java.util.stream.Collectors;
 
 import org.jspecify.annotations.Nullable;
 
 import org.springframework.beans.factory.BeanCreationException;
-import org.springframework.boot.context.properties.source.InvalidConfigurationPropertyNameException;
-import org.springframework.boot.diagnostics.AbstractFailureAnalyzer;
-import org.springframework.boot.diagnostics.FailureAnalysis;
+import io.github.kotlinmania.spring.boot.context.properties.source.InvalidConfigurationPropertyNameException;
+import io.github.kotlinmania.spring.boot.diagnostics.AbstractFailureAnalyzer;
+import io.github.kotlinmania.spring.boot.diagnostics.FailureAnalysis;
 
 /**
  * An {@link AbstractFailureAnalyzer} that performs analysis of failures caused by

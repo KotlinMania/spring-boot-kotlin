@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.hateoas.autoconfigure;
+package io.github.kotlinmania.spring.boot.hateoas.autoconfigure;
 
 import org.jspecify.annotations.Nullable;
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.autoconfigure.ImportAutoConfiguration;
-import org.springframework.boot.testsupport.classpath.ClassPathExclusions;
-import org.springframework.boot.web.context.servlet.AnnotationConfigServletWebApplicationContext;
+import io.github.kotlinmania.spring.boot.autoconfigure.ImportAutoConfiguration;
+import io.github.kotlinmania.spring.boot.testsupport.classpath.ClassPathExclusions;
+import io.github.kotlinmania.spring.boot.web.context.servlet.AnnotationConfigServletWebApplicationContext;
 import org.springframework.mock.web.MockServletContext;
 
 /**

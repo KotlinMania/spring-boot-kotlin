@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.rsocket.server;
+package io.github.kotlinmania.spring.boot.rsocket.server;
 
 /**
  * Exceptions thrown by an RSocket server.

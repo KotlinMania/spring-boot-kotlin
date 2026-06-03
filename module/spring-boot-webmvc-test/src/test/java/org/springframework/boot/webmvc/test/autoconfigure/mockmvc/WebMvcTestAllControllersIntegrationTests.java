@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.webmvc.test.autoconfigure.mockmvc;
+package io.github.kotlinmania.spring.boot.webmvc.test.autoconfigure.mockmvc;
 
 import java.util.function.Consumer;
 
@@ -23,8 +23,8 @@ import jakarta.validation.ConstraintViolationException;
 import org.junit.jupiter.api.Test;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.webmvc.error.ErrorAttributes;
-import org.springframework.boot.webmvc.test.autoconfigure.WebMvcTest;
+import io.github.kotlinmania.spring.boot.webmvc.error.ErrorAttributes;
+import io.github.kotlinmania.spring.boot.webmvc.test.autoconfigure.WebMvcTest;
 import org.springframework.test.web.servlet.assertj.MockMvcTester;
 import org.springframework.test.web.servlet.assertj.MvcTestResult;
 

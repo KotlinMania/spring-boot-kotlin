@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.actuate.management;
+package io.github.kotlinmania.spring.boot.actuate.management;
 
 import java.io.PrintWriter;
 import java.io.StringWriter;

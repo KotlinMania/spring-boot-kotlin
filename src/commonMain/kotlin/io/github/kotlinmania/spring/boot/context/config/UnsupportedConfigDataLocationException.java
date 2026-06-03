@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.context.config;
+package io.github.kotlinmania.spring.boot.context.config;
 
 /**
  * Exception throw if a {@link ConfigDataLocation} is not supported.

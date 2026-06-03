@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.data.redis.domain.empty;
+package io.github.kotlinmania.spring.boot.data.redis.domain.empty;
 
 public class EmptyPackage {
 

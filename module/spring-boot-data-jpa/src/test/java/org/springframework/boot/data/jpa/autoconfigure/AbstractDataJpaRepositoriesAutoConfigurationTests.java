@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.data.jpa.autoconfigure;
+package io.github.kotlinmania.spring.boot.data.jpa.autoconfigure;
 
 import java.util.Map;
 
@@ -22,18 +22,18 @@ import jakarta.persistence.EntityManagerFactory;
 import jakarta.persistence.metamodel.Metamodel;
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.LazyInitializationBeanFactoryPostProcessor;
-import org.springframework.boot.autoconfigure.AutoConfigurations;
-import org.springframework.boot.autoconfigure.TestAutoConfigurationPackage;
-import org.springframework.boot.autoconfigure.context.PropertyPlaceholderAutoConfiguration;
-import org.springframework.boot.autoconfigure.task.TaskExecutionAutoConfiguration;
-import org.springframework.boot.autoconfigure.task.TaskSchedulingAutoConfiguration;
-import org.springframework.boot.data.jpa.autoconfigure.domain.city.City;
-import org.springframework.boot.data.jpa.autoconfigure.domain.city.CityRepository;
-import org.springframework.boot.data.jpa.autoconfigure.domain.country.Country;
-import org.springframework.boot.hibernate.autoconfigure.HibernateJpaAutoConfiguration;
-import org.springframework.boot.jdbc.autoconfigure.EmbeddedDataSourceConfiguration;
-import org.springframework.boot.test.context.runner.ApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.LazyInitializationBeanFactoryPostProcessor;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurations;
+import io.github.kotlinmania.spring.boot.autoconfigure.TestAutoConfigurationPackage;
+import io.github.kotlinmania.spring.boot.autoconfigure.context.PropertyPlaceholderAutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.task.TaskExecutionAutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.task.TaskSchedulingAutoConfiguration;
+import io.github.kotlinmania.spring.boot.data.jpa.autoconfigure.domain.city.City;
+import io.github.kotlinmania.spring.boot.data.jpa.autoconfigure.domain.city.CityRepository;
+import io.github.kotlinmania.spring.boot.data.jpa.autoconfigure.domain.country.Country;
+import io.github.kotlinmania.spring.boot.hibernate.autoconfigure.HibernateJpaAutoConfiguration;
+import io.github.kotlinmania.spring.boot.jdbc.autoconfigure.EmbeddedDataSourceConfiguration;
+import io.github.kotlinmania.spring.boot.test.context.runner.ApplicationContextRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;

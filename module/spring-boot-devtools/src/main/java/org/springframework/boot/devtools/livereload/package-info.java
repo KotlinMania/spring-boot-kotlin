@@ -18,6 +18,6 @@
  * Support for the livereload protocol.
  */
 @NullMarked
-package org.springframework.boot.devtools.livereload;
+package io.github.kotlinmania.spring.boot.devtools.livereload;
 
 import org.jspecify.annotations.NullMarked;

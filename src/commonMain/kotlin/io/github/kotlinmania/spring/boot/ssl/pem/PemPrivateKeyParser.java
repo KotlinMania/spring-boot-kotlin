@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.ssl.pem;
+package io.github.kotlinmania.spring.boot.ssl.pem;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
@@ -46,8 +46,8 @@ import javax.crypto.spec.PBEKeySpec;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.ssl.pem.PemPrivateKeyParser.DerElement.TagType;
-import org.springframework.boot.ssl.pem.PemPrivateKeyParser.DerElement.ValueType;
+import io.github.kotlinmania.spring.boot.ssl.pem.PemPrivateKeyParser.DerElement.TagType;
+import io.github.kotlinmania.spring.boot.ssl.pem.PemPrivateKeyParser.DerElement.ValueType;
 import org.springframework.util.Assert;
 
 /**

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.activemq.autoconfigure;
+package io.github.kotlinmania.spring.boot.activemq.autoconfigure;
 
 import org.apache.activemq.ActiveMQConnectionFactory;
 

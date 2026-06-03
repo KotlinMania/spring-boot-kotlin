@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docker.compose.lifecycle;
+package io.github.kotlinmania.spring.boot.docker.compose.lifecycle;
 
 import java.io.File;
 import java.io.IOException;
@@ -34,15 +34,15 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.junit.jupiter.api.io.TempDir;
 
 import org.springframework.aot.AotDetector;
-import org.springframework.boot.SpringApplicationShutdownHandlers;
-import org.springframework.boot.context.properties.bind.Binder;
-import org.springframework.boot.docker.compose.core.DockerCompose;
-import org.springframework.boot.docker.compose.core.DockerComposeFile;
-import org.springframework.boot.docker.compose.core.RunningService;
-import org.springframework.boot.docker.compose.lifecycle.DockerComposeProperties.Readiness.Wait;
-import org.springframework.boot.docker.compose.lifecycle.DockerComposeProperties.Start.Skip;
-import org.springframework.boot.test.system.CapturedOutput;
-import org.springframework.boot.test.system.OutputCaptureExtension;
+import io.github.kotlinmania.spring.boot.SpringApplicationShutdownHandlers;
+import io.github.kotlinmania.spring.boot.context.properties.bind.Binder;
+import io.github.kotlinmania.spring.boot.docker.compose.core.DockerCompose;
+import io.github.kotlinmania.spring.boot.docker.compose.core.DockerComposeFile;
+import io.github.kotlinmania.spring.boot.docker.compose.core.RunningService;
+import io.github.kotlinmania.spring.boot.docker.compose.lifecycle.DockerComposeProperties.Readiness.Wait;
+import io.github.kotlinmania.spring.boot.docker.compose.lifecycle.DockerComposeProperties.Start.Skip;
+import io.github.kotlinmania.spring.boot.test.system.CapturedOutput;
+import io.github.kotlinmania.spring.boot.test.system.OutputCaptureExtension;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationListener;
 import org.springframework.context.aot.AbstractAotProcessor;
@@ -306,7 +306,7 @@ class DockerComposeLifecycleManagerTests {
 	void startWhenHasIgnoreLabelIgnoresService() {
 		EventCapturingListener listener = new EventCapturingListener();
 		this.eventListeners.add(listener);
-		setUpRunningServices(true, Map.of("org.springframework.boot.ignore", "true"));
+		setUpRunningServices(true, Map.of("io.github.kotlinmania.spring.boot.ignore", "true"));
 		this.lifecycleManager.start();
 		this.shutdownHandlers.run();
 		assertThat(listener.getEvent()).isNotNull();

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.security.autoconfigure.web.reactive;
+package io.github.kotlinmania.spring.boot.security.autoconfigure.web.reactive;
 
 import java.util.EnumSet;
 import java.util.LinkedHashSet;
@@ -23,7 +23,7 @@ import java.util.stream.Stream;
 
 import reactor.core.publisher.Mono;
 
-import org.springframework.boot.security.autoconfigure.web.StaticResourceLocation;
+import io.github.kotlinmania.spring.boot.security.autoconfigure.web.StaticResourceLocation;
 import org.springframework.security.web.server.util.matcher.OrServerWebExchangeMatcher;
 import org.springframework.security.web.server.util.matcher.PathPatternParserServerWebExchangeMatcher;
 import org.springframework.security.web.server.util.matcher.ServerWebExchangeMatcher;

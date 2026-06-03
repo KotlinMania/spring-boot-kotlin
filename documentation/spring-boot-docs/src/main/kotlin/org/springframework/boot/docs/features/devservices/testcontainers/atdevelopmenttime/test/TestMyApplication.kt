@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.features.devservices.testcontainers.atdevelopmenttime.test
+package io.github.kotlinmania.spring.boot.docs.features.devservices.testcontainers.atdevelopmenttime.test
 
-import org.springframework.boot.fromApplication
-import org.springframework.boot.with
+import io.github.kotlinmania.spring.boot.fromApplication
+import io.github.kotlinmania.spring.boot.with
 
 fun main(args: Array<String>) {
 	fromApplication<MyApplication>().with(MyContainersConfiguration::class).run(*args)

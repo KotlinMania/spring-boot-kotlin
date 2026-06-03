@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.logging.log4j2;
+package io.github.kotlinmania.spring.boot.logging.log4j2;
 
 import java.io.IOException;
 
 import org.apache.logging.log4j.message.Message;
 import org.apache.logging.log4j.util.MultiFormatStringBuilderFormattable;
 
-import org.springframework.boot.json.WritableJson;
+import io.github.kotlinmania.spring.boot.json.WritableJson;
 
 /**
  * Helper used to adapt {@link Message} for structured writing.

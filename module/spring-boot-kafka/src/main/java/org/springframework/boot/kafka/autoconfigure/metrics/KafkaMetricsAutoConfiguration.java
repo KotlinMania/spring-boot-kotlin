@@ -14,18 +14,18 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.kafka.autoconfigure.metrics;
+package io.github.kotlinmania.spring.boot.kafka.autoconfigure.metrics;
 
 import io.micrometer.core.instrument.MeterRegistry;
 import io.micrometer.core.instrument.binder.kafka.KafkaClientMetrics;
 import io.micrometer.core.instrument.binder.kafka.KafkaStreamsMetrics;
 
-import org.springframework.boot.autoconfigure.AutoConfiguration;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
-import org.springframework.boot.kafka.autoconfigure.DefaultKafkaConsumerFactoryCustomizer;
-import org.springframework.boot.kafka.autoconfigure.DefaultKafkaProducerFactoryCustomizer;
-import org.springframework.boot.kafka.autoconfigure.KafkaAutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnBean;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnClass;
+import io.github.kotlinmania.spring.boot.kafka.autoconfigure.DefaultKafkaConsumerFactoryCustomizer;
+import io.github.kotlinmania.spring.boot.kafka.autoconfigure.DefaultKafkaProducerFactoryCustomizer;
+import io.github.kotlinmania.spring.boot.kafka.autoconfigure.KafkaAutoConfiguration;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.kafka.config.StreamsBuilderFactoryBean;
@@ -46,8 +46,8 @@ import org.springframework.kafka.streams.KafkaStreamsMicrometerListener;
  * @since 4.0.0
  */
 @AutoConfiguration(before = KafkaAutoConfiguration.class,
-		afterName = { "org.springframework.boot.micrometer.metrics.autoconfigure.MetricsAutoConfiguration",
-				"org.springframework.boot.micrometer.metrics.autoconfigure.CompositeMeterRegistryAutoConfiguration" })
+		afterName = { "io.github.kotlinmania.spring.boot.micrometer.metrics.autoconfigure.MetricsAutoConfiguration",
+				"io.github.kotlinmania.spring.boot.micrometer.metrics.autoconfigure.CompositeMeterRegistryAutoConfiguration" })
 @ConditionalOnClass({ KafkaClientMetrics.class, ProducerFactory.class, MeterRegistry.class })
 @ConditionalOnBean(MeterRegistry.class)
 public final class KafkaMetricsAutoConfiguration {

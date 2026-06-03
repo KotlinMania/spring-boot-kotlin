@@ -14,22 +14,22 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.jersey.autoconfigure.actuate.web;
+package io.github.kotlinmania.spring.boot.jersey.autoconfigure.actuate.web;
 
 import java.util.Collections;
 
 import org.glassfish.jersey.server.ResourceConfig;
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.actuate.autoconfigure.endpoint.web.WebEndpointAutoConfiguration;
-import org.springframework.boot.actuate.endpoint.Access;
-import org.springframework.boot.actuate.endpoint.EndpointAccessResolver;
-import org.springframework.boot.actuate.endpoint.web.WebEndpointsSupplier;
-import org.springframework.boot.autoconfigure.AutoConfigurations;
-import org.springframework.boot.jersey.autoconfigure.actuate.web.JerseyWebEndpointManagementContextConfiguration.JerseyWebEndpointsResourcesRegistrar;
-import org.springframework.boot.test.context.FilteredClassLoader;
-import org.springframework.boot.test.context.runner.ApplicationContextRunner;
-import org.springframework.boot.test.context.runner.WebApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.actuate.autoconfigure.endpoint.web.WebEndpointAutoConfiguration;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.Access;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.EndpointAccessResolver;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.web.WebEndpointsSupplier;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurations;
+import io.github.kotlinmania.spring.boot.jersey.autoconfigure.actuate.web.JerseyWebEndpointManagementContextConfiguration.JerseyWebEndpointsResourcesRegistrar;
+import io.github.kotlinmania.spring.boot.test.context.FilteredClassLoader;
+import io.github.kotlinmania.spring.boot.test.context.runner.ApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.test.context.runner.WebApplicationContextRunner;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.messaging.amqp.receiving.custom;
+package io.github.kotlinmania.spring.boot.docs.messaging.amqp.receiving.custom;
 
 import org.springframework.amqp.core.Message;
 import org.springframework.amqp.core.MessageProperties;

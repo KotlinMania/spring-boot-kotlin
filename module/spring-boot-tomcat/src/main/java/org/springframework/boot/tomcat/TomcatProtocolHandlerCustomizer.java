@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.tomcat;
+package io.github.kotlinmania.spring.boot.tomcat;
 
 import org.apache.catalina.connector.Connector;
 import org.apache.coyote.ProtocolHandler;

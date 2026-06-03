@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.autoconfigure.web;
+package io.github.kotlinmania.spring.boot.autoconfigure.web;
 
 import java.net.URL;
 import java.util.Collections;
@@ -27,7 +27,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.aot.hint.ResourcePatternHint;
 import org.springframework.aot.hint.ResourcePatternHints;
 import org.springframework.aot.hint.RuntimeHints;
-import org.springframework.boot.testsupport.classpath.resources.WithResource;
+import io.github.kotlinmania.spring.boot.testsupport.classpath.resources.WithResource;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

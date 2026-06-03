@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.flyway.autoconfigure;
+package io.github.kotlinmania.spring.boot.flyway.autoconfigure;
 
 import java.sql.DatabaseMetaData;
 import java.time.Duration;
@@ -44,27 +44,27 @@ import org.jspecify.annotations.Nullable;
 import org.springframework.aot.hint.RuntimeHints;
 import org.springframework.aot.hint.RuntimeHintsRegistrar;
 import org.springframework.beans.factory.ObjectProvider;
-import org.springframework.boot.autoconfigure.AutoConfiguration;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
-import org.springframework.boot.autoconfigure.condition.AnyNestedCondition;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnBooleanProperty;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
-import org.springframework.boot.context.properties.ConfigurationPropertiesBinding;
-import org.springframework.boot.context.properties.EnableConfigurationProperties;
-import org.springframework.boot.context.properties.PropertyMapper;
-import org.springframework.boot.flyway.autoconfigure.FlywayAutoConfiguration.FlywayAutoConfigurationRuntimeHints;
-import org.springframework.boot.flyway.autoconfigure.FlywayAutoConfiguration.FlywayDataSourceCondition;
-import org.springframework.boot.flyway.autoconfigure.FlywayProperties.Oracle;
-import org.springframework.boot.flyway.autoconfigure.FlywayProperties.Postgresql;
-import org.springframework.boot.flyway.autoconfigure.FlywayProperties.Sqlserver;
-import org.springframework.boot.jdbc.DataSourceBuilder;
-import org.springframework.boot.jdbc.DatabaseDriver;
-import org.springframework.boot.jdbc.autoconfigure.DataSourceAutoConfiguration;
-import org.springframework.boot.jdbc.autoconfigure.JdbcConnectionDetails;
-import org.springframework.boot.sql.init.dependency.DatabaseInitializationDependencyConfigurer;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.EnableAutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.AnyNestedCondition;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnBean;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnBooleanProperty;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnClass;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnMissingBean;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnProperty;
+import io.github.kotlinmania.spring.boot.context.properties.ConfigurationPropertiesBinding;
+import io.github.kotlinmania.spring.boot.context.properties.EnableConfigurationProperties;
+import io.github.kotlinmania.spring.boot.context.properties.PropertyMapper;
+import io.github.kotlinmania.spring.boot.flyway.autoconfigure.FlywayAutoConfiguration.FlywayAutoConfigurationRuntimeHints;
+import io.github.kotlinmania.spring.boot.flyway.autoconfigure.FlywayAutoConfiguration.FlywayDataSourceCondition;
+import io.github.kotlinmania.spring.boot.flyway.autoconfigure.FlywayProperties.Oracle;
+import io.github.kotlinmania.spring.boot.flyway.autoconfigure.FlywayProperties.Postgresql;
+import io.github.kotlinmania.spring.boot.flyway.autoconfigure.FlywayProperties.Sqlserver;
+import io.github.kotlinmania.spring.boot.jdbc.DataSourceBuilder;
+import io.github.kotlinmania.spring.boot.jdbc.DatabaseDriver;
+import io.github.kotlinmania.spring.boot.jdbc.autoconfigure.DataSourceAutoConfiguration;
+import io.github.kotlinmania.spring.boot.jdbc.autoconfigure.JdbcConnectionDetails;
+import io.github.kotlinmania.spring.boot.sql.init.dependency.DatabaseInitializationDependencyConfigurer;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Conditional;
 import org.springframework.context.annotation.Configuration;

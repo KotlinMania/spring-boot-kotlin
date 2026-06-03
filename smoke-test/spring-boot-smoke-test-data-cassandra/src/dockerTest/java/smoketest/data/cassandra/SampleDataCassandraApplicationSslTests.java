@@ -25,12 +25,12 @@ import org.testcontainers.junit.jupiter.Container;
 import org.testcontainers.junit.jupiter.Testcontainers;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.data.cassandra.test.autoconfigure.DataCassandraTest;
-import org.springframework.boot.test.context.TestConfiguration;
-import org.springframework.boot.testcontainers.service.connection.JksKeyStore;
-import org.springframework.boot.testcontainers.service.connection.JksTrustStore;
-import org.springframework.boot.testcontainers.service.connection.ServiceConnection;
-import org.springframework.boot.testsupport.container.TestImage;
+import io.github.kotlinmania.spring.boot.data.cassandra.test.autoconfigure.DataCassandraTest;
+import io.github.kotlinmania.spring.boot.test.context.TestConfiguration;
+import io.github.kotlinmania.spring.boot.testcontainers.service.connection.JksKeyStore;
+import io.github.kotlinmania.spring.boot.testcontainers.service.connection.JksTrustStore;
+import io.github.kotlinmania.spring.boot.testcontainers.service.connection.ServiceConnection;
+import io.github.kotlinmania.spring.boot.testsupport.container.TestImage;
 import org.springframework.context.annotation.Bean;
 import org.springframework.data.cassandra.core.CassandraTemplate;
 

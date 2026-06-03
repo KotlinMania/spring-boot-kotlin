@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.devtools.autoconfigure;
+package io.github.kotlinmania.spring.boot.devtools.autoconfigure;
 
-import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
-import org.springframework.boot.security.autoconfigure.web.servlet.SecurityFilterProperties;
-import org.springframework.boot.web.server.autoconfigure.ServerProperties;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnClass;
+import io.github.kotlinmania.spring.boot.security.autoconfigure.web.servlet.SecurityFilterProperties;
+import io.github.kotlinmania.spring.boot.web.server.autoconfigure.ServerProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.annotation.Order;

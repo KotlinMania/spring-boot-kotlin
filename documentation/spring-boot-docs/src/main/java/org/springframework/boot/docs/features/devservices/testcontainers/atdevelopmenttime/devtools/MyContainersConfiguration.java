@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.features.devservices.testcontainers.atdevelopmenttime.devtools;
+package io.github.kotlinmania.spring.boot.docs.features.devservices.testcontainers.atdevelopmenttime.devtools;
 
 import org.testcontainers.mongodb.MongoDBContainer;
 
-import org.springframework.boot.devtools.restart.RestartScope;
-import org.springframework.boot.test.context.TestConfiguration;
-import org.springframework.boot.testcontainers.service.connection.ServiceConnection;
+import io.github.kotlinmania.spring.boot.devtools.restart.RestartScope;
+import io.github.kotlinmania.spring.boot.test.context.TestConfiguration;
+import io.github.kotlinmania.spring.boot.testcontainers.service.connection.ServiceConnection;
 import org.springframework.context.annotation.Bean;
 
 @TestConfiguration(proxyBeanMethods = false)

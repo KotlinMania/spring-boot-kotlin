@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.batch.autoconfigure;
+package io.github.kotlinmania.spring.boot.batch.autoconfigure;
 
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 
 import org.springframework.batch.core.job.JobExecution;
-import org.springframework.boot.ExitCodeGenerator;
+import io.github.kotlinmania.spring.boot.ExitCodeGenerator;
 import org.springframework.context.ApplicationListener;
 
 /**

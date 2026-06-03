@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.rsocket.context;
+package io.github.kotlinmania.spring.boot.rsocket.context;
 
 import java.net.InetSocketAddress;
 
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.rsocket.server.RSocketServer;
+import io.github.kotlinmania.spring.boot.rsocket.server.RSocketServer;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.Bean;

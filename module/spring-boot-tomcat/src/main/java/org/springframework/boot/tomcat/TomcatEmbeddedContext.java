@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.tomcat;
+package io.github.kotlinmania.spring.boot.tomcat;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -32,8 +32,8 @@ import org.apache.catalina.core.StandardWrapper;
 import org.apache.catalina.session.ManagerBase;
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.web.server.MimeMappings;
-import org.springframework.boot.web.server.WebServerException;
+import io.github.kotlinmania.spring.boot.web.server.MimeMappings;
+import io.github.kotlinmania.spring.boot.web.server.WebServerException;
 import org.springframework.util.Assert;
 import org.springframework.util.ClassUtils;
 

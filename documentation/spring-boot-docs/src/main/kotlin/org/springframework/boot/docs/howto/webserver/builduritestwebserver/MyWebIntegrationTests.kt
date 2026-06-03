@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.howto.webserver.builduritestwebserver
+package io.github.kotlinmania.spring.boot.docs.howto.webserver.builduritestwebserver
 
 import org.junit.jupiter.api.Test
 import org.springframework.beans.factory.annotation.Autowired
-import org.springframework.boot.test.context.SpringBootTest
-import org.springframework.boot.test.context.SpringBootTest.WebEnvironment
-import org.springframework.boot.test.http.server.LocalTestWebServer
+import io.github.kotlinmania.spring.boot.test.context.SpringBootTest
+import io.github.kotlinmania.spring.boot.test.context.SpringBootTest.WebEnvironment
+import io.github.kotlinmania.spring.boot.test.http.server.LocalTestWebServer
 import org.springframework.context.ApplicationContext
 
 @SpringBootTest(webEnvironment = WebEnvironment.RANDOM_PORT)

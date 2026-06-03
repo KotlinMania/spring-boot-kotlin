@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docker.compose.core;
+package io.github.kotlinmania.spring.boot.docker.compose.core;
 
 import java.time.Duration;
 import java.util.Collections;
@@ -23,8 +23,8 @@ import java.util.Set;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.docker.compose.core.DockerCli.DockerComposeOptions;
-import org.springframework.boot.logging.LogLevel;
+import io.github.kotlinmania.spring.boot.docker.compose.core.DockerCli.DockerComposeOptions;
+import io.github.kotlinmania.spring.boot.logging.LogLevel;
 
 /**
  * Provides a high-level API to work with Docker compose.

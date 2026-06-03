@@ -18,6 +18,6 @@
  * Support for testcontainers Couchbase service connections.
  */
 @NullMarked
-package org.springframework.boot.couchbase.testcontainers;
+package io.github.kotlinmania.spring.boot.couchbase.testcontainers;
 
 import org.jspecify.annotations.NullMarked;

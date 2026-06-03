@@ -17,9 +17,9 @@
 /**
  * Support and abstractions across several logging libraries.
  *
- * @see org.springframework.boot.logging.LoggingSystem
+ * @see io.github.kotlinmania.spring.boot.logging.LoggingSystem
  */
 @NullMarked
-package org.springframework.boot.logging;
+package io.github.kotlinmania.spring.boot.logging;
 
 import org.jspecify.annotations.NullMarked;

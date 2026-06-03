@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.autoconfigure.web;
+package io.github.kotlinmania.spring.boot.autoconfigure.web;
 
 import java.lang.annotation.Documented;
 import java.lang.annotation.ElementType;

@@ -18,6 +18,6 @@
  * Utilities and classes related to task execution and scheduling.
  */
 @NullMarked
-package org.springframework.boot.task;
+package io.github.kotlinmania.spring.boot.task;
 
 import org.jspecify.annotations.NullMarked;

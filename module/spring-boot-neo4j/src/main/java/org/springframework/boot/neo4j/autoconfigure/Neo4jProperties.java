@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.neo4j.autoconfigure;
+package io.github.kotlinmania.spring.boot.neo4j.autoconfigure;
 
 import java.io.File;
 import java.net.URI;
@@ -22,7 +22,7 @@ import java.time.Duration;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.context.properties.ConfigurationProperties;
+import io.github.kotlinmania.spring.boot.context.properties.ConfigurationProperties;
 
 /**
  * Configuration properties for Neo4j.

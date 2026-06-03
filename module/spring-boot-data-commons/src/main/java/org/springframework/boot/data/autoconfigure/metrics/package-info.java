@@ -18,6 +18,6 @@
  * Auto-configuration for Spring Data repository metrics.
  */
 @NullMarked
-package org.springframework.boot.data.autoconfigure.metrics;
+package io.github.kotlinmania.spring.boot.data.autoconfigure.metrics;
 
 import org.jspecify.annotations.NullMarked;

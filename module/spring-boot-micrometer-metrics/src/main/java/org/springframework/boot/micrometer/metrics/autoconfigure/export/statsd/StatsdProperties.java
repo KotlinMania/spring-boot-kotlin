@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.micrometer.metrics.autoconfigure.export.statsd;
+package io.github.kotlinmania.spring.boot.micrometer.metrics.autoconfigure.export.statsd;
 
 import java.time.Duration;
 
 import io.micrometer.statsd.StatsdFlavor;
 import io.micrometer.statsd.StatsdProtocol;
 
-import org.springframework.boot.context.properties.ConfigurationProperties;
+import io.github.kotlinmania.spring.boot.context.properties.ConfigurationProperties;
 
 /**
  * {@link ConfigurationProperties @ConfigurationProperties} for configuring StatsD metrics

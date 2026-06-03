@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package org.springframework.boot;
+package io.github.kotlinmania.spring.boot.
 
 import java.lang.reflect.Method;
 import java.nio.file.Paths;
 import java.util.Arrays;
 
-import org.springframework.boot.SpringApplication.AbandonedRunException;
+import io.github.kotlinmania.spring.boot.SpringApplication.AbandonedRunException;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.aot.ContextAotProcessor;

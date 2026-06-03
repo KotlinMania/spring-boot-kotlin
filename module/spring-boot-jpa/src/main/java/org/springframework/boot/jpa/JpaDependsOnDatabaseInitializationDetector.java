@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.jpa;
+package io.github.kotlinmania.spring.boot.jpa;
 
 import java.util.Arrays;
 import java.util.Collections;
@@ -23,8 +23,8 @@ import java.util.Set;
 
 import jakarta.persistence.EntityManagerFactory;
 
-import org.springframework.boot.sql.init.dependency.AbstractBeansOfTypeDependsOnDatabaseInitializationDetector;
-import org.springframework.boot.sql.init.dependency.DependsOnDatabaseInitializationDetector;
+import io.github.kotlinmania.spring.boot.sql.init.dependency.AbstractBeansOfTypeDependsOnDatabaseInitializationDetector;
+import io.github.kotlinmania.spring.boot.sql.init.dependency.DependsOnDatabaseInitializationDetector;
 import org.springframework.core.env.Environment;
 import org.springframework.orm.jpa.AbstractEntityManagerFactoryBean;
 

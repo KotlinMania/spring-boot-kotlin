@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.micrometer.observation.autoconfigure;
+package io.github.kotlinmania.spring.boot.micrometer.observation.autoconfigure;
 
 import io.micrometer.observation.ObservationRegistry;
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.autoconfigure.AutoConfigurations;
-import org.springframework.boot.micrometer.observation.autoconfigure.ScheduledTasksObservationAutoConfiguration.ObservabilitySchedulingConfigurer;
-import org.springframework.boot.test.context.runner.ApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurations;
+import io.github.kotlinmania.spring.boot.micrometer.observation.autoconfigure.ScheduledTasksObservationAutoConfiguration.ObservabilitySchedulingConfigurer;
+import io.github.kotlinmania.spring.boot.test.context.runner.ApplicationContextRunner;
 import org.springframework.scheduling.config.ScheduledTaskRegistrar;
 
 import static org.assertj.core.api.Assertions.assertThat;

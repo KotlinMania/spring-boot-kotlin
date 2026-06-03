@@ -16,7 +16,7 @@
 
 package smoketest.web.secure;
 
-import org.springframework.boot.test.context.SpringBootTest;
+import io.github.kotlinmania.spring.boot.test.context.SpringBootTest;
 
 /**
  * Tests for error page that permits access to all with a custom context path.

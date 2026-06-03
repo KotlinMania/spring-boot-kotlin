@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.devtools.autoconfigure;
+package io.github.kotlinmania.spring.boot.devtools.autoconfigure;
 
 import java.io.File;
 import java.time.Duration;
@@ -23,9 +23,9 @@ import java.util.List;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.boot.context.properties.DeprecatedConfigurationProperty;
-import org.springframework.boot.context.properties.NestedConfigurationProperty;
+import io.github.kotlinmania.spring.boot.context.properties.ConfigurationProperties;
+import io.github.kotlinmania.spring.boot.context.properties.DeprecatedConfigurationProperty;
+import io.github.kotlinmania.spring.boot.context.properties.NestedConfigurationProperty;
 import org.springframework.util.StringUtils;
 
 /**

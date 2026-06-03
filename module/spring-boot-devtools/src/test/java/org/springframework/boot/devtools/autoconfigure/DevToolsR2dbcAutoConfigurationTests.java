@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.devtools.autoconfigure;
+package io.github.kotlinmania.spring.boot.devtools.autoconfigure;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -30,11 +30,11 @@ import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
 
 import org.springframework.beans.factory.annotation.AnnotatedGenericBeanDefinition;
-import org.springframework.boot.devtools.autoconfigure.DevToolsR2dbcAutoConfiguration.R2dbcDatabaseShutdownEvent;
-import org.springframework.boot.r2dbc.SimpleConnectionFactoryProvider.SimpleTestConnectionFactory;
-import org.springframework.boot.r2dbc.autoconfigure.R2dbcAutoConfiguration;
-import org.springframework.boot.test.util.TestPropertyValues;
-import org.springframework.boot.testsupport.classpath.ClassPathExclusions;
+import io.github.kotlinmania.spring.boot.devtools.autoconfigure.DevToolsR2dbcAutoConfiguration.R2dbcDatabaseShutdownEvent;
+import io.github.kotlinmania.spring.boot.r2dbc.SimpleConnectionFactoryProvider.SimpleTestConnectionFactory;
+import io.github.kotlinmania.spring.boot.r2dbc.autoconfigure.R2dbcAutoConfiguration;
+import io.github.kotlinmania.spring.boot.test.util.TestPropertyValues;
+import io.github.kotlinmania.spring.boot.testsupport.classpath.ClassPathExclusions;
 import org.springframework.context.ApplicationListener;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;

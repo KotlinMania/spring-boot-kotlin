@@ -16,11 +16,11 @@
 
 /**
  * Fluent 'builder' style API to construct a
- * {@link org.springframework.boot.SpringApplication}.
+ * {@link io.github.kotlinmania.spring.boot.SpringApplication}.
  *
- * @see org.springframework.boot.builder.SpringApplicationBuilder
+ * @see io.github.kotlinmania.spring.boot.builder.SpringApplicationBuilder
  */
 @NullMarked
-package org.springframework.boot.builder;
+package io.github.kotlinmania.spring.boot.builder;
 
 import org.jspecify.annotations.NullMarked;

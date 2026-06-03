@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.test.context.bootstrap;
+package io.github.kotlinmania.spring.boot.test.context.bootstrap;
 
-import org.springframework.boot.SpringBootConfiguration;
+import io.github.kotlinmania.spring.boot.SpringBootConfiguration;
 
 /**
  * Example configuration used in

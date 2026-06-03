@@ -18,6 +18,6 @@
  * Auto-configuration for SSL metrics.
  */
 @NullMarked
-package org.springframework.boot.micrometer.metrics.autoconfigure.ssl;
+package io.github.kotlinmania.spring.boot.micrometer.metrics.autoconfigure.ssl;
 
 import org.jspecify.annotations.NullMarked;

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.data.jpa.test.autoconfigure;
+package io.github.kotlinmania.spring.boot.data.jpa.test.autoconfigure;
 
 import javax.sql.DataSource;
 
@@ -32,7 +32,7 @@ import static org.assertj.core.api.Assertions.assertThat;
  * @author Andy Wilkinson
  */
 @DataJpaTest(properties = { "spring.sql.init.username=alice", "spring.sql.init.password=secret",
-		"spring.sql.init.schema-locations=classpath:org/springframework/boot/data/jpa/test/autoconfigure/schema.sql" })
+		"spring.sql.init.schema-locations=classpath:io.github.kotlinmania.spring.boot.data/jpa/test/autoconfigure/schema.sql" })
 class DataJpaTestSchemaCredentialsIntegrationTests {
 
 	@Autowired

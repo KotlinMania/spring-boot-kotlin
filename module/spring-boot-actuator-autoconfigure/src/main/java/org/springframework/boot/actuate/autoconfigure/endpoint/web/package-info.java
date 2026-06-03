@@ -18,6 +18,6 @@
  * Auto-configuration for the Actuator's web endpoints.
  */
 @NullMarked
-package org.springframework.boot.actuate.autoconfigure.endpoint.web;
+package io.github.kotlinmania.spring.boot.actuate.autoconfigure.endpoint.web;
 
 import org.jspecify.annotations.NullMarked;

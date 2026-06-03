@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.autoconfigure.ssl;
+package io.github.kotlinmania.spring.boot.autoconfigure.ssl;
 
 import java.security.Key;
 import java.security.KeyStore;
@@ -24,7 +24,7 @@ import java.util.function.Consumer;
 
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.ssl.SslBundle;
+import io.github.kotlinmania.spring.boot.ssl.SslBundle;
 import org.springframework.core.io.DefaultResourceLoader;
 import org.springframework.core.io.ResourceLoader;
 import org.springframework.util.function.ThrowingConsumer;
@@ -52,14 +52,14 @@ class PropertiesSslBundleTests {
 		properties.getKey().setPassword("secret");
 		properties.getOptions().setCiphers(Set.of("cipher1", "cipher2", "cipher3"));
 		properties.getOptions().setEnabledProtocols(Set.of("protocol1", "protocol2"));
-		properties.getKeystore().setCertificate("classpath:org/springframework/boot/autoconfigure/ssl/rsa-cert.pem");
-		properties.getKeystore().setPrivateKey("classpath:org/springframework/boot/autoconfigure/ssl/rsa-key.pem");
+		properties.getKeystore().setCertificate("classpath:io.github.kotlinmania.spring.boot.autoconfigure/ssl/rsa-cert.pem");
+		properties.getKeystore().setPrivateKey("classpath:io.github.kotlinmania.spring.boot.autoconfigure/ssl/rsa-key.pem");
 		properties.getKeystore().setPrivateKeyPassword(null);
 		properties.getKeystore().setType("PKCS12");
 		properties.getTruststore()
-			.setCertificate("classpath:org/springframework/boot/autoconfigure/ssl/ed25519-cert.pem");
+			.setCertificate("classpath:io.github.kotlinmania.spring.boot.autoconfigure/ssl/ed25519-cert.pem");
 		properties.getTruststore()
-			.setPrivateKey("classpath:org/springframework/boot/autoconfigure/ssl/ed25519-key.pem");
+			.setPrivateKey("classpath:io.github.kotlinmania.spring.boot.autoconfigure/ssl/ed25519-key.pem");
 		properties.getTruststore().setPrivateKeyPassword("secret");
 		properties.getTruststore().setType("PKCS12");
 		SslBundle sslBundle = PropertiesSslBundle.get(properties);
@@ -93,11 +93,11 @@ class PropertiesSslBundleTests {
 		properties.getKeystore().setPassword("secret");
 		properties.getKeystore().setProvider("SUN");
 		properties.getKeystore().setType("JKS");
-		properties.getKeystore().setLocation("classpath:org/springframework/boot/autoconfigure/ssl/keystore.jks");
+		properties.getKeystore().setLocation("classpath:io.github.kotlinmania.spring.boot.autoconfigure/ssl/keystore.jks");
 		properties.getTruststore().setPassword("secret");
 		properties.getTruststore().setProvider("SUN");
 		properties.getTruststore().setType("PKCS12");
-		properties.getTruststore().setLocation("classpath:org/springframework/boot/autoconfigure/ssl/keystore.pkcs12");
+		properties.getTruststore().setLocation("classpath:io.github.kotlinmania.spring.boot.autoconfigure/ssl/keystore.pkcs12");
 		SslBundle sslBundle = PropertiesSslBundle.get(properties);
 		assertThat(sslBundle.getKey().getAlias()).isEqualTo("alias");
 		assertThat(sslBundle.getKey().getPassword()).isEqualTo("secret");
@@ -106,7 +106,7 @@ class PropertiesSslBundleTests {
 		assertThat(sslBundle.getStores()).isNotNull();
 		assertThat(sslBundle.getStores()).extracting("keyStoreDetails")
 			.extracting("location", "password", "provider", "type")
-			.containsExactly("classpath:org/springframework/boot/autoconfigure/ssl/keystore.jks", "secret", "SUN",
+			.containsExactly("classpath:io.github.kotlinmania.spring.boot.autoconfigure/ssl/keystore.jks", "secret", "SUN",
 					"JKS");
 		KeyStore trustStore = sslBundle.getStores().getTrustStore();
 		assertThat(trustStore).isNotNull();
@@ -117,8 +117,8 @@ class PropertiesSslBundleTests {
 	@Test
 	void getWithPemSslBundlePropertiesWhenVerifyKeyStoreAgainstSingleCertificateWithMatchCreatesBundle() {
 		PemSslBundleProperties properties = new PemSslBundleProperties();
-		properties.getKeystore().setCertificate("classpath:org/springframework/boot/autoconfigure/ssl/key1.crt");
-		properties.getKeystore().setPrivateKey("classpath:org/springframework/boot/autoconfigure/ssl/key1.pem");
+		properties.getKeystore().setCertificate("classpath:io.github.kotlinmania.spring.boot.autoconfigure/ssl/key1.crt");
+		properties.getKeystore().setPrivateKey("classpath:io.github.kotlinmania.spring.boot.autoconfigure/ssl/key1.pem");
 		properties.getKeystore().setVerifyKeys(true);
 		properties.getKey().setAlias("test-alias");
 		SslBundle bundle = PropertiesSslBundle.get(properties);
@@ -128,8 +128,8 @@ class PropertiesSslBundleTests {
 	@Test
 	void getWithPemSslBundlePropertiesWhenVerifyKeyStoreAgainstCertificateChainWithMatchCreatesBundle() {
 		PemSslBundleProperties properties = new PemSslBundleProperties();
-		properties.getKeystore().setCertificate("classpath:org/springframework/boot/autoconfigure/ssl/key2-chain.crt");
-		properties.getKeystore().setPrivateKey("classpath:org/springframework/boot/autoconfigure/ssl/key2.pem");
+		properties.getKeystore().setCertificate("classpath:io.github.kotlinmania.spring.boot.autoconfigure/ssl/key2-chain.crt");
+		properties.getKeystore().setPrivateKey("classpath:io.github.kotlinmania.spring.boot.autoconfigure/ssl/key2.pem");
 		properties.getKeystore().setVerifyKeys(true);
 		properties.getKey().setAlias("test-alias");
 		SslBundle bundle = PropertiesSslBundle.get(properties);
@@ -139,8 +139,8 @@ class PropertiesSslBundleTests {
 	@Test
 	void getWithPemSslBundlePropertiesWhenVerifyKeyStoreWithNoMatchThrowsException() {
 		PemSslBundleProperties properties = new PemSslBundleProperties();
-		properties.getKeystore().setCertificate("classpath:org/springframework/boot/autoconfigure/ssl/key2.crt");
-		properties.getKeystore().setPrivateKey("classpath:org/springframework/boot/autoconfigure/ssl/key1.pem");
+		properties.getKeystore().setCertificate("classpath:io.github.kotlinmania.spring.boot.autoconfigure/ssl/key2.crt");
+		properties.getKeystore().setPrivateKey("classpath:io.github.kotlinmania.spring.boot.autoconfigure/ssl/key1.pem");
 		properties.getKeystore().setVerifyKeys(true);
 		properties.getKey().setAlias("test-alias");
 		assertThatIllegalStateException().isThrownBy(() -> PropertiesSslBundle.get(properties))
@@ -150,17 +150,17 @@ class PropertiesSslBundleTests {
 	@Test
 	void getWithResourceLoader() {
 		PemSslBundleProperties properties = new PemSslBundleProperties();
-		properties.getKeystore().setCertificate("classpath:org/springframework/boot/autoconfigure/ssl/key2-chain.crt");
-		properties.getKeystore().setPrivateKey("classpath:org/springframework/boot/autoconfigure/ssl/key2.pem");
+		properties.getKeystore().setCertificate("classpath:io.github.kotlinmania.spring.boot.autoconfigure/ssl/key2-chain.crt");
+		properties.getKeystore().setPrivateKey("classpath:io.github.kotlinmania.spring.boot.autoconfigure/ssl/key2.pem");
 		properties.getKeystore().setVerifyKeys(true);
 		properties.getKey().setAlias("test-alias");
 		ResourceLoader resourceLoader = spy(new DefaultResourceLoader());
 		SslBundle bundle = PropertiesSslBundle.get(properties, resourceLoader);
 		assertThat(bundle.getStores().getKeyStore()).satisfies(storeContainingCertAndKey("test-alias"));
 		then(resourceLoader).should(atLeastOnce())
-			.getResource("classpath:org/springframework/boot/autoconfigure/ssl/key2-chain.crt");
+			.getResource("classpath:io.github.kotlinmania.spring.boot.autoconfigure/ssl/key2-chain.crt");
 		then(resourceLoader).should(atLeastOnce())
-			.getResource("classpath:org/springframework/boot/autoconfigure/ssl/key2.pem");
+			.getResource("classpath:io.github.kotlinmania.spring.boot.autoconfigure/ssl/key2.pem");
 	}
 
 	private Consumer<KeyStore> storeContainingCertAndKey(String keyAlias) {

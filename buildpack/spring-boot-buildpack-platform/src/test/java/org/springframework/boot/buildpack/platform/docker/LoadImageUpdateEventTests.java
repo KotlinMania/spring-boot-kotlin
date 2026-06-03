@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.buildpack.platform.docker;
+package io.github.kotlinmania.spring.boot.buildpack.platform.docker;
 
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.buildpack.platform.docker.LoadImageUpdateEvent.ErrorDetail;
-import org.springframework.boot.buildpack.platform.docker.ProgressUpdateEvent.ProgressDetail;
+import io.github.kotlinmania.spring.boot.buildpack.platform.docker.LoadImageUpdateEvent.ErrorDetail;
+import io.github.kotlinmania.spring.boot.buildpack.platform.docker.ProgressUpdateEvent.ProgressDetail;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

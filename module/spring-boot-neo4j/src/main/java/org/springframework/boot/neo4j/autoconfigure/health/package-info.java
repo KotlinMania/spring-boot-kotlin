@@ -18,6 +18,6 @@
  * Auto-configuration for Neo4j health.
  */
 @NullMarked
-package org.springframework.boot.neo4j.autoconfigure.health;
+package io.github.kotlinmania.spring.boot.neo4j.autoconfigure.health;
 
 import org.jspecify.annotations.NullMarked;

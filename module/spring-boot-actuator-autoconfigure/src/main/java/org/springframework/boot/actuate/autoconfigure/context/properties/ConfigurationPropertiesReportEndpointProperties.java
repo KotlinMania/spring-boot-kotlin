@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.actuate.autoconfigure.context.properties;
+package io.github.kotlinmania.spring.boot.actuate.autoconfigure.context.properties;
 
 import java.util.HashSet;
 import java.util.Set;
 
-import org.springframework.boot.actuate.context.properties.ConfigurationPropertiesReportEndpoint;
-import org.springframework.boot.actuate.endpoint.Show;
-import org.springframework.boot.context.properties.ConfigurationProperties;
+import io.github.kotlinmania.spring.boot.actuate.context.properties.ConfigurationPropertiesReportEndpoint;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.Show;
+import io.github.kotlinmania.spring.boot.context.properties.ConfigurationProperties;
 
 /**
  * Configuration properties for {@link ConfigurationPropertiesReportEndpoint}.

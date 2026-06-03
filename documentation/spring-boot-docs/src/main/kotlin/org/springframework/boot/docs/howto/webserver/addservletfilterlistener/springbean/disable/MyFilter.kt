@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.howto.webserver.addservletfilterlistener.springbean.disable
+package io.github.kotlinmania.spring.boot.docs.howto.webserver.addservletfilterlistener.springbean.disable
 
 import jakarta.servlet.Filter
 

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.micrometer.metrics.autoconfigure.export.otlp;
+package io.github.kotlinmania.spring.boot.micrometer.metrics.autoconfigure.export.otlp;
 
 import java.net.http.HttpClient;
 import java.util.concurrent.ScheduledExecutorService;
@@ -31,16 +31,16 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.condition.EnabledForJreRange;
 import org.junit.jupiter.api.condition.JRE;
 
-import org.springframework.boot.autoconfigure.AutoConfigurations;
-import org.springframework.boot.autoconfigure.ssl.SslAutoConfiguration;
-import org.springframework.boot.micrometer.metrics.autoconfigure.export.otlp.OtlpMetricsExportAutoConfiguration.PropertiesOtlpMetricsConnectionDetails;
-import org.springframework.boot.ssl.SslBundle;
-import org.springframework.boot.ssl.SslOptions;
-import org.springframework.boot.test.context.FilteredClassLoader;
-import org.springframework.boot.test.context.assertj.AssertableApplicationContext;
-import org.springframework.boot.test.context.runner.ApplicationContextRunner;
-import org.springframework.boot.testsupport.assertj.ScheduledExecutorServiceAssert;
-import org.springframework.boot.testsupport.classpath.resources.WithPackageResources;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurations;
+import io.github.kotlinmania.spring.boot.autoconfigure.ssl.SslAutoConfiguration;
+import io.github.kotlinmania.spring.boot.micrometer.metrics.autoconfigure.export.otlp.OtlpMetricsExportAutoConfiguration.PropertiesOtlpMetricsConnectionDetails;
+import io.github.kotlinmania.spring.boot.ssl.SslBundle;
+import io.github.kotlinmania.spring.boot.ssl.SslOptions;
+import io.github.kotlinmania.spring.boot.test.context.FilteredClassLoader;
+import io.github.kotlinmania.spring.boot.test.context.assertj.AssertableApplicationContext;
+import io.github.kotlinmania.spring.boot.test.context.runner.ApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.testsupport.assertj.ScheduledExecutorServiceAssert;
+import io.github.kotlinmania.spring.boot.testsupport.classpath.resources.WithPackageResources;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
@@ -194,7 +194,7 @@ class OtlpMetricsExportAutoConfigurationTests {
 	@Test
 	void shouldBackOffIfSpringBootOpenTelemetryIsMissing() {
 		this.contextRunner.withUserConfiguration(BaseConfiguration.class)
-			.withClassLoader(new FilteredClassLoader("org.springframework.boot.opentelemetry"))
+			.withClassLoader(new FilteredClassLoader("io.github.kotlinmania.spring.boot.opentelemetry"))
 			.run((context) -> assertThat(context).doesNotHaveBean(OtlpMetricsExportAutoConfiguration.class));
 	}
 

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.loader.net.protocol.nested;
+package io.github.kotlinmania.spring.boot.loader.net.protocol.nested;
 
 import java.io.File;
 import java.io.FilePermission;
@@ -33,11 +33,11 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.io.TempDir;
 import org.mockito.ArgumentCaptor;
 
-import org.springframework.boot.loader.net.protocol.Handlers;
-import org.springframework.boot.loader.ref.Cleaner;
-import org.springframework.boot.loader.testsupport.TestJar;
-import org.springframework.boot.loader.zip.AssertFileChannelDataBlocksClosed;
-import org.springframework.boot.loader.zip.ZipContent;
+import io.github.kotlinmania.spring.boot.loader.net.protocol.Handlers;
+import io.github.kotlinmania.spring.boot.loader.ref.Cleaner;
+import io.github.kotlinmania.spring.boot.loader.testsupport.TestJar;
+import io.github.kotlinmania.spring.boot.loader.zip.AssertFileChannelDataBlocksClosed;
+import io.github.kotlinmania.spring.boot.loader.zip.ZipContent;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.ArgumentMatchers.any;

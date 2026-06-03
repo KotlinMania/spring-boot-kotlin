@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.reactor.netty;
+package io.github.kotlinmania.spring.boot.reactor.netty;
 
 import java.util.Collections;
 import java.util.Map;
@@ -22,11 +22,11 @@ import java.util.Map;
 import org.junit.jupiter.api.Test;
 import reactor.netty.tcp.SslProvider;
 
-import org.springframework.boot.ssl.SslBundle;
-import org.springframework.boot.ssl.pem.PemSslStoreBundle;
-import org.springframework.boot.ssl.pem.PemSslStoreDetails;
-import org.springframework.boot.testsupport.classpath.resources.WithPackageResources;
-import org.springframework.boot.web.server.Ssl;
+import io.github.kotlinmania.spring.boot.ssl.SslBundle;
+import io.github.kotlinmania.spring.boot.ssl.pem.PemSslStoreBundle;
+import io.github.kotlinmania.spring.boot.ssl.pem.PemSslStoreDetails;
+import io.github.kotlinmania.spring.boot.testsupport.classpath.resources.WithPackageResources;
+import io.github.kotlinmania.spring.boot.web.server.Ssl;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

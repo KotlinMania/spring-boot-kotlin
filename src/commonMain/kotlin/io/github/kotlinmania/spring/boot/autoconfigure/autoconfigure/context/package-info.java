@@ -18,6 +18,6 @@
  * Auto-configuration for the Spring context.
  */
 @NullMarked
-package org.springframework.boot.autoconfigure.context;
+package io.github.kotlinmania.spring.boot.autoconfigure.context;
 
 import org.jspecify.annotations.NullMarked;

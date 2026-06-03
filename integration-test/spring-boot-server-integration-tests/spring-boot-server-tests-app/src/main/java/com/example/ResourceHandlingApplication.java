@@ -26,10 +26,10 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.builder.SpringApplicationBuilder;
-import org.springframework.boot.web.server.context.WebServerPortFileWriter;
-import org.springframework.boot.web.servlet.ServletRegistrationBean;
+import io.github.kotlinmania.spring.boot.autoconfigure.SpringBootApplication;
+import io.github.kotlinmania.spring.boot.builder.SpringApplicationBuilder;
+import io.github.kotlinmania.spring.boot.web.server.context.WebServerPortFileWriter;
+import io.github.kotlinmania.spring.boot.web.servlet.ServletRegistrationBean;
 import org.springframework.context.annotation.Bean;
 
 /**

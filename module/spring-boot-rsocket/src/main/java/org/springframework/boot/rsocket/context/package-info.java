@@ -19,6 +19,6 @@
  * {@link org.springframework.context.ApplicationContext ApplicationContext}.
  */
 @NullMarked
-package org.springframework.boot.rsocket.context;
+package io.github.kotlinmania.spring.boot.rsocket.context;
 
 import org.jspecify.annotations.NullMarked;

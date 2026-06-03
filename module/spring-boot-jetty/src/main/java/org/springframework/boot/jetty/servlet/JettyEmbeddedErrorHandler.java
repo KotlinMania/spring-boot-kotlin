@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.jetty.servlet;
+package io.github.kotlinmania.spring.boot.jetty.servlet;
 
 import org.eclipse.jetty.ee11.servlet.ErrorPageErrorHandler;
 import org.eclipse.jetty.http.HttpMethod;

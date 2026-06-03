@@ -14,16 +14,16 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.ldap.health;
+package io.github.kotlinmania.spring.boot.ldap.health;
 
 import javax.naming.NamingException;
 import javax.naming.directory.DirContext;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.health.contributor.AbstractHealthIndicator;
-import org.springframework.boot.health.contributor.Health;
-import org.springframework.boot.health.contributor.HealthIndicator;
+import io.github.kotlinmania.spring.boot.health.contributor.AbstractHealthIndicator;
+import io.github.kotlinmania.spring.boot.health.contributor.Health;
+import io.github.kotlinmania.spring.boot.health.contributor.HealthIndicator;
 import org.springframework.ldap.core.ContextExecutor;
 import org.springframework.ldap.core.LdapOperations;
 import org.springframework.util.Assert;

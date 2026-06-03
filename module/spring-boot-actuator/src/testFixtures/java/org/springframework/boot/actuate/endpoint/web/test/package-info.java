@@ -18,4 +18,4 @@
  * Support for testing endpoints against one or more of the web endpoint infrastructure
  * implementations.
  */
-package org.springframework.boot.actuate.endpoint.web.test;
+package io.github.kotlinmania.spring.boot.actuate.endpoint.web.test;

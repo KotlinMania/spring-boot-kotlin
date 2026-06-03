@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot;
+package io.github.kotlinmania.spring.boot.
 
 import java.util.LinkedHashSet;
 import java.util.Set;
@@ -23,9 +23,9 @@ import org.jspecify.annotations.Nullable;
 
 import org.springframework.aot.hint.RuntimeHints;
 import org.springframework.aot.hint.RuntimeHintsRegistrar;
-import org.springframework.boot.Banner.Mode;
-import org.springframework.boot.context.properties.bind.BindableRuntimeHintsRegistrar;
-import org.springframework.boot.logging.LoggingSystemProperty;
+import io.github.kotlinmania.spring.boot.Banner.Mode;
+import io.github.kotlinmania.spring.boot.context.properties.bind.BindableRuntimeHintsRegistrar;
+import io.github.kotlinmania.spring.boot.logging.LoggingSystemProperty;
 import org.springframework.core.env.Environment;
 import org.springframework.util.Assert;
 

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.gradle.tasks.bundling;
+package io.github.kotlinmania.spring.boot.gradle.tasks.bundling;
 
 import java.io.File;
 
@@ -23,8 +23,8 @@ import org.gradle.testkit.runner.BuildTask;
 import org.gradle.testkit.runner.TaskOutcome;
 import org.junit.jupiter.api.TestTemplate;
 
-import org.springframework.boot.gradle.junit.GradleCompatibility;
-import org.springframework.boot.testsupport.gradle.testkit.GradleBuild;
+import io.github.kotlinmania.spring.boot.gradle.junit.GradleCompatibility;
+import io.github.kotlinmania.spring.boot.testsupport.gradle.testkit.GradleBuild;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

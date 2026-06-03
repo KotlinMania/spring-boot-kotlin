@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.webmvc.actuate.web.mappings;
+package io.github.kotlinmania.spring.boot.webmvc.actuate.web.mappings;
 
 import java.util.Collections;
 import java.util.List;
@@ -30,9 +30,9 @@ import org.junit.jupiter.api.Test;
 import org.springframework.aot.hint.MemberCategory;
 import org.springframework.aot.hint.RuntimeHints;
 import org.springframework.aot.hint.predicate.RuntimeHintsPredicates;
-import org.springframework.boot.test.context.runner.WebApplicationContextRunner;
-import org.springframework.boot.web.context.servlet.AnnotationConfigServletWebApplicationContext;
-import org.springframework.boot.webmvc.actuate.web.mappings.DispatcherServletsMappingDescriptionProvider.DispatcherServletsMappingDescriptionProviderRuntimeHints;
+import io.github.kotlinmania.spring.boot.test.context.runner.WebApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.web.context.servlet.AnnotationConfigServletWebApplicationContext;
+import io.github.kotlinmania.spring.boot.webmvc.actuate.web.mappings.DispatcherServletsMappingDescriptionProvider.DispatcherServletsMappingDescriptionProviderRuntimeHints;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.MediaType;

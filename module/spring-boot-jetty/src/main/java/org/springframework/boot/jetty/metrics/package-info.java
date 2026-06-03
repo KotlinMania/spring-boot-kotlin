@@ -18,6 +18,6 @@
  * Actuator support for Jetty metrics.
  */
 @NullMarked
-package org.springframework.boot.jetty.metrics;
+package io.github.kotlinmania.spring.boot.jetty.metrics;
 
 import org.jspecify.annotations.NullMarked;

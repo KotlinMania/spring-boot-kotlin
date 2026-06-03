@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.http.client.autoconfigure.service;
+package io.github.kotlinmania.spring.boot.http.client.autoconfigure.service;
 
 import java.util.Collections;
 import java.util.Map;
@@ -23,11 +23,11 @@ import org.jspecify.annotations.Nullable;
 
 import org.springframework.aot.hint.RuntimeHints;
 import org.springframework.aot.hint.RuntimeHintsRegistrar;
-import org.springframework.boot.context.properties.bind.Bindable;
-import org.springframework.boot.context.properties.bind.BindableRuntimeHintsRegistrar;
-import org.springframework.boot.context.properties.bind.Binder;
-import org.springframework.boot.http.client.autoconfigure.HttpClientProperties;
-import org.springframework.boot.http.client.autoconfigure.service.HttpServiceClientProperties.HttpServiceClientPropertiesRuntimeHints;
+import io.github.kotlinmania.spring.boot.context.properties.bind.Bindable;
+import io.github.kotlinmania.spring.boot.context.properties.bind.BindableRuntimeHintsRegistrar;
+import io.github.kotlinmania.spring.boot.context.properties.bind.Binder;
+import io.github.kotlinmania.spring.boot.http.client.autoconfigure.HttpClientProperties;
+import io.github.kotlinmania.spring.boot.http.client.autoconfigure.service.HttpServiceClientProperties.HttpServiceClientPropertiesRuntimeHints;
 import org.springframework.context.annotation.ImportRuntimeHints;
 import org.springframework.core.env.Environment;
 

@@ -18,6 +18,6 @@
  * Auto-configuration for project information.
  */
 @NullMarked
-package org.springframework.boot.autoconfigure.info;
+package io.github.kotlinmania.spring.boot.autoconfigure.info;
 
 import org.jspecify.annotations.NullMarked;

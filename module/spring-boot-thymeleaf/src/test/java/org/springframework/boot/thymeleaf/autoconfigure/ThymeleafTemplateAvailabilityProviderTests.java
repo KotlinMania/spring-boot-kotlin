@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.thymeleaf.autoconfigure;
+package io.github.kotlinmania.spring.boot.thymeleaf.autoconfigure;
 
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.autoconfigure.template.TemplateAvailabilityProvider;
-import org.springframework.boot.testsupport.classpath.resources.WithResource;
+import io.github.kotlinmania.spring.boot.autoconfigure.template.TemplateAvailabilityProvider;
+import io.github.kotlinmania.spring.boot.testsupport.classpath.resources.WithResource;
 import org.springframework.core.io.DefaultResourceLoader;
 import org.springframework.core.io.ResourceLoader;
 import org.springframework.mock.env.MockEnvironment;

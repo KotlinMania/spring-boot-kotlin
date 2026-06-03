@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.tomcat;
+package io.github.kotlinmania.spring.boot.tomcat;
 
 import java.io.File;
 import java.io.FileOutputStream;

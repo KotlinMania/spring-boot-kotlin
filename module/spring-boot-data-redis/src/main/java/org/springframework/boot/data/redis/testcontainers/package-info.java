@@ -18,6 +18,6 @@
  * Support for testcontainers Redis service connections.
  */
 @NullMarked
-package org.springframework.boot.data.redis.testcontainers;
+package io.github.kotlinmania.spring.boot.data.redis.testcontainers;
 
 import org.jspecify.annotations.NullMarked;

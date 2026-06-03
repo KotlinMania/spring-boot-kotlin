@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.io.restclient.restclient.ssl.settings
+package io.github.kotlinmania.spring.boot.docs.io.restclient.restclient.ssl.settings
 
-import org.springframework.boot.http.client.ClientHttpRequestFactoryBuilder;
-import org.springframework.boot.http.client.HttpClientSettings
-import org.springframework.boot.ssl.SslBundles
+import io.github.kotlinmania.spring.boot.http.client.ClientHttpRequestFactoryBuilder;
+import io.github.kotlinmania.spring.boot.http.client.HttpClientSettings
+import io.github.kotlinmania.spring.boot.ssl.SslBundles
 import org.springframework.stereotype.Service
 import org.springframework.web.client.RestClient
 import java.time.Duration

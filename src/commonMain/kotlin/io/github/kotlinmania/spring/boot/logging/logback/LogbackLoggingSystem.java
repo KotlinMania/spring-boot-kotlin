@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.logging.logback;
+package io.github.kotlinmania.spring.boot.logging.logback;
 
 import java.io.PrintStream;
 import java.net.URL;
@@ -50,15 +50,15 @@ import org.springframework.aot.AotDetector;
 import org.springframework.beans.factory.aot.BeanFactoryInitializationAotContribution;
 import org.springframework.beans.factory.aot.BeanFactoryInitializationAotProcessor;
 import org.springframework.beans.factory.config.ConfigurableListableBeanFactory;
-import org.springframework.boot.io.ApplicationResourceLoader;
-import org.springframework.boot.logging.AbstractLoggingSystem;
-import org.springframework.boot.logging.LogFile;
-import org.springframework.boot.logging.LogLevel;
-import org.springframework.boot.logging.LoggerConfiguration;
-import org.springframework.boot.logging.LoggingInitializationContext;
-import org.springframework.boot.logging.LoggingSystem;
-import org.springframework.boot.logging.LoggingSystemFactory;
-import org.springframework.boot.logging.LoggingSystemProperties;
+import io.github.kotlinmania.spring.boot.io.ApplicationResourceLoader;
+import io.github.kotlinmania.spring.boot.logging.AbstractLoggingSystem;
+import io.github.kotlinmania.spring.boot.logging.LogFile;
+import io.github.kotlinmania.spring.boot.logging.LogLevel;
+import io.github.kotlinmania.spring.boot.logging.LoggerConfiguration;
+import io.github.kotlinmania.spring.boot.logging.LoggingInitializationContext;
+import io.github.kotlinmania.spring.boot.logging.LoggingSystem;
+import io.github.kotlinmania.spring.boot.logging.LoggingSystemFactory;
+import io.github.kotlinmania.spring.boot.logging.LoggingSystemProperties;
 import org.springframework.core.Ordered;
 import org.springframework.core.annotation.Order;
 import org.springframework.core.env.ConfigurableEnvironment;

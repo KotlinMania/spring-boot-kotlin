@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.build;
+package io.github.kotlinmania.spring.boot.build;
 
 import org.gradle.api.Project;
 import org.gradle.api.artifacts.repositories.MavenArtifactRepository;
@@ -34,8 +34,8 @@ import org.gradle.api.publish.maven.plugins.MavenPublishPlugin;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import org.springframework.boot.build.properties.BuildProperties;
-import org.springframework.boot.build.properties.BuildType;
+import io.github.kotlinmania.spring.boot.build.properties.BuildProperties;
+import io.github.kotlinmania.spring.boot.build.properties.BuildType;
 
 /**
  * Conventions that are applied in the presence of the {@link MavenPublishPlugin}. When

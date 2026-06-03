@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.configurationsample.specific;
+package io.github.kotlinmania.spring.boot.configurationsample.specific;
 
-import org.springframework.boot.configurationsample.TestConfigurationProperties;
-import org.springframework.boot.configurationsample.simple.SimpleProperties;
+import io.github.kotlinmania.spring.boot.configurationsample.TestConfigurationProperties;
+import io.github.kotlinmania.spring.boot.configurationsample.simple.SimpleProperties;
 
 /**
  * Properties that conflict with {@link SimpleProperties}.

@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.actuate.autoconfigure.startup;
+package io.github.kotlinmania.spring.boot.actuate.autoconfigure.startup;
 
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.actuate.startup.StartupEndpoint;
-import org.springframework.boot.autoconfigure.AutoConfigurations;
-import org.springframework.boot.context.metrics.buffering.BufferingApplicationStartup;
-import org.springframework.boot.test.context.runner.ApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.actuate.startup.StartupEndpoint;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurations;
+import io.github.kotlinmania.spring.boot.context.metrics.buffering.BufferingApplicationStartup;
+import io.github.kotlinmania.spring.boot.test.context.runner.ApplicationContextRunner;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import static org.assertj.core.api.Assertions.assertThat;

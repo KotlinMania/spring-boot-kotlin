@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.buildpack.platform.build;
+package io.github.kotlinmania.spring.boot.buildpack.platform.build;
 
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.buildpack.platform.docker.type.Binding;
-import org.springframework.boot.buildpack.platform.docker.type.ContainerConfig.Update;
-import org.springframework.boot.buildpack.platform.docker.type.VolumeName;
+import io.github.kotlinmania.spring.boot.buildpack.platform.docker.type.Binding;
+import io.github.kotlinmania.spring.boot.buildpack.platform.docker.type.ContainerConfig.Update;
+import io.github.kotlinmania.spring.boot.buildpack.platform.docker.type.VolumeName;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.BDDMockito.then;

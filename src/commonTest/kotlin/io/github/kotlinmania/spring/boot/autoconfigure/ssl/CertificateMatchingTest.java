@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.autoconfigure.ssl;
+package io.github.kotlinmania.spring.boot.autoconfigure.ssl;
 
 import java.lang.annotation.Documented;
 import java.lang.annotation.ElementType;
@@ -35,7 +35,7 @@ import org.junit.jupiter.params.provider.MethodSource;
 @Retention(RetentionPolicy.RUNTIME)
 @Documented
 @ParameterizedTest(name = "{0}")
-@MethodSource("org.springframework.boot.autoconfigure.ssl.CertificateMatchingTestSource#create")
+@MethodSource("io.github.kotlinmania.spring.boot.autoconfigure.ssl.CertificateMatchingTestSource#create")
 public @interface CertificateMatchingTest {
 
 }

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.elasticsearch.autoconfigure;
+package io.github.kotlinmania.spring.boot.elasticsearch.autoconfigure;
 
 import java.time.Duration;
 import java.util.ArrayList;
@@ -42,12 +42,12 @@ import org.apache.hc.core5.util.Timeout;
 import org.assertj.core.api.InstanceOfAssertFactories;
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.autoconfigure.AutoConfigurations;
-import org.springframework.boot.autoconfigure.ssl.SslAutoConfiguration;
-import org.springframework.boot.elasticsearch.autoconfigure.ElasticsearchConnectionDetails.Node.Protocol;
-import org.springframework.boot.elasticsearch.autoconfigure.ElasticsearchRestClientConfigurations.PropertiesElasticsearchConnectionDetails;
-import org.springframework.boot.test.context.runner.ApplicationContextRunner;
-import org.springframework.boot.testsupport.classpath.resources.WithPackageResources;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurations;
+import io.github.kotlinmania.spring.boot.autoconfigure.ssl.SslAutoConfiguration;
+import io.github.kotlinmania.spring.boot.elasticsearch.autoconfigure.ElasticsearchConnectionDetails.Node.Protocol;
+import io.github.kotlinmania.spring.boot.elasticsearch.autoconfigure.ElasticsearchRestClientConfigurations.PropertiesElasticsearchConnectionDetails;
+import io.github.kotlinmania.spring.boot.test.context.runner.ApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.testsupport.classpath.resources.WithPackageResources;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 

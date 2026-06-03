@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.data.redis.test.autoconfigure;
+package io.github.kotlinmania.spring.boot.data.redis.test.autoconfigure;
 
 import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
@@ -26,15 +26,15 @@ import org.testcontainers.junit.jupiter.Testcontainers;
 
 import org.springframework.beans.factory.NoSuchBeanDefinitionException;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.testcontainers.service.connection.ServiceConnection;
-import org.springframework.boot.testcontainers.service.connection.ServiceConnectionAutoConfiguration;
-import org.springframework.boot.testsupport.container.TestImage;
+import io.github.kotlinmania.spring.boot.testcontainers.service.connection.ServiceConnection;
+import io.github.kotlinmania.spring.boot.testcontainers.service.connection.ServiceConnectionAutoConfiguration;
+import io.github.kotlinmania.spring.boot.testsupport.container.TestImage;
 import org.springframework.context.ApplicationContext;
 import org.springframework.data.redis.core.RedisOperations;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatExceptionOfType;
-import static org.springframework.boot.autoconfigure.AutoConfigurationImportedCondition.importedAutoConfiguration;
+import static io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurationImportedCondition.importedAutoConfiguration;
 
 /**
  * Integration test for {@link DataRedisTest @DataRedisTest}.

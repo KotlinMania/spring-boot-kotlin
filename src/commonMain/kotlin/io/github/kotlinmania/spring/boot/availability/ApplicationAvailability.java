@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.availability;
+package io.github.kotlinmania.spring.boot.availability;
 
 import org.jspecify.annotations.Nullable;
 

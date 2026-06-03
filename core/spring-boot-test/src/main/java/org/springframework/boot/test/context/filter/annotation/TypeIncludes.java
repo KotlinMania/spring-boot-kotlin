@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.test.context.filter.annotation;
+package io.github.kotlinmania.spring.boot.test.context.filter.annotation;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -31,7 +31,7 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.context.TypeExcludeFilter;
+import io.github.kotlinmania.spring.boot.context.TypeExcludeFilter;
 import org.springframework.core.io.UrlResource;
 import org.springframework.core.log.LogMessage;
 import org.springframework.util.Assert;

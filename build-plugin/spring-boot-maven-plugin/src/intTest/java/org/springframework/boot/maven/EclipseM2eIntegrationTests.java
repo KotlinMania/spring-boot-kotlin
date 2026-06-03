@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.maven;
+package io.github.kotlinmania.spring.boot.maven;
 
 import java.io.File;
 import java.nio.charset.StandardCharsets;
@@ -38,7 +38,7 @@ class EclipseM2eIntegrationTests {
 	void pluginPomIncludesOptionalShadeDependency() throws Exception {
 		String version = new Versions().get("project.version");
 		File repository = new File("build/test-maven-repository");
-		File pluginDirectory = new File(repository, "org/springframework/boot/spring-boot-maven-plugin/" + version);
+		File pluginDirectory = new File(repository, "io.github.kotlinmania.spring.boot.spring-boot-maven-plugin/" + version);
 		File[] pomFiles = pluginDirectory.listFiles(this::isPomFile);
 		Arrays.sort(pomFiles, Comparator.comparing(File::getName));
 		File pomFile = pomFiles[pomFiles.length - 1];

@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.restclient.autoconfigure.service;
+package io.github.kotlinmania.spring.boot.restclient.autoconfigure.service;
 
 import org.springframework.beans.factory.ObjectProvider;
-import org.springframework.boot.restclient.RestClientCustomizer;
+import io.github.kotlinmania.spring.boot.restclient.RestClientCustomizer;
 import org.springframework.web.client.RestClient;
 import org.springframework.web.client.support.RestClientHttpServiceGroupConfigurer;
 import org.springframework.web.service.registry.HttpServiceGroup;

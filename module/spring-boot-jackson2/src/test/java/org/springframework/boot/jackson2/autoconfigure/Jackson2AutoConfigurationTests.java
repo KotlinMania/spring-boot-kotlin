@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.jackson2.autoconfigure;
+package io.github.kotlinmania.spring.boot.jackson2.autoconfigure;
 
 import java.io.IOException;
 import java.text.DateFormat;
@@ -60,14 +60,14 @@ import org.springframework.aot.hint.RuntimeHints;
 import org.springframework.aot.hint.predicate.ReflectionHintsPredicates;
 import org.springframework.aot.hint.predicate.RuntimeHintsPredicates;
 import org.springframework.beans.factory.BeanCurrentlyInCreationException;
-import org.springframework.boot.autoconfigure.AutoConfigurationPackage;
-import org.springframework.boot.autoconfigure.AutoConfigurations;
-import org.springframework.boot.jackson2.JsonComponent;
-import org.springframework.boot.jackson2.JsonMixin;
-import org.springframework.boot.jackson2.JsonMixinModule;
-import org.springframework.boot.jackson2.JsonMixinModuleEntries;
-import org.springframework.boot.jackson2.JsonObjectSerializer;
-import org.springframework.boot.test.context.runner.ApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurationPackage;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurations;
+import io.github.kotlinmania.spring.boot.jackson2.JsonComponent;
+import io.github.kotlinmania.spring.boot.jackson2.JsonMixin;
+import io.github.kotlinmania.spring.boot.jackson2.JsonMixinModule;
+import io.github.kotlinmania.spring.boot.jackson2.JsonMixinModuleEntries;
+import io.github.kotlinmania.spring.boot.jackson2.JsonObjectSerializer;
+import io.github.kotlinmania.spring.boot.test.context.runner.ApplicationContextRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
@@ -143,7 +143,7 @@ class Jackson2AutoConfigurationTests {
 	@Test
 	void customDateFormatClass() {
 		this.contextRunner.withPropertyValues(
-				"spring.jackson2.date-format:org.springframework.boot.jackson2.autoconfigure.Jackson2AutoConfigurationTests.MyDateFormat")
+				"spring.jackson2.date-format:io.github.kotlinmania.spring.boot.jackson2.autoconfigure.Jackson2AutoConfigurationTests.MyDateFormat")
 			.run((context) -> {
 				ObjectMapper mapper = context.getBean(ObjectMapper.class);
 				assertThat(mapper.getDateFormat()).isInstanceOf(MyDateFormat.class);
@@ -510,7 +510,7 @@ class Jackson2AutoConfigurationTests {
 
 	private void shouldRegisterPropertyNamingStrategyHints(Class<?> type, String... fieldNames) {
 		RuntimeHints hints = new RuntimeHints();
-		new org.springframework.boot.jackson2.autoconfigure.Jackson2AutoConfiguration.Jackson2AutoConfigurationRuntimeHints()
+		new io.github.kotlinmania.spring.boot.jackson2.autoconfigure.Jackson2AutoConfiguration.Jackson2AutoConfigurationRuntimeHints()
 			.registerHints(hints, getClass().getClassLoader());
 		ReflectionHintsPredicates reflection = RuntimeHintsPredicates.reflection();
 		Stream.of(fieldNames)

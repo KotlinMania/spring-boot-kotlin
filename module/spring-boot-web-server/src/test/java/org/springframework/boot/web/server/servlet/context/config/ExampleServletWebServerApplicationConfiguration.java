@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.web.server.servlet.context.config;
+package io.github.kotlinmania.spring.boot.web.server.servlet.context.config;
 
 import jakarta.servlet.Servlet;
 
-import org.springframework.boot.web.server.servlet.MockServletWebServerFactory;
-import org.springframework.boot.web.servlet.mock.MockServlet;
+import io.github.kotlinmania.spring.boot.web.server.servlet.MockServletWebServerFactory;
+import io.github.kotlinmania.spring.boot.web.servlet.mock.MockServlet;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 

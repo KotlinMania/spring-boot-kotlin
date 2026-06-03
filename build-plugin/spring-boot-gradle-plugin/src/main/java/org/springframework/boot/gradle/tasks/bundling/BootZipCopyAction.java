@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.gradle.tasks.bundling;
+package io.github.kotlinmania.spring.boot.gradle.tasks.bundling;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -53,14 +53,14 @@ import org.gradle.api.tasks.WorkResults;
 import org.gradle.util.GradleVersion;
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.gradle.tasks.bundling.ResolvedDependencies.DependencyDescriptor;
-import org.springframework.boot.loader.tools.FileUtils;
-import org.springframework.boot.loader.tools.JarModeLibrary;
-import org.springframework.boot.loader.tools.Layer;
-import org.springframework.boot.loader.tools.LayersIndex;
-import org.springframework.boot.loader.tools.LibraryCoordinates;
-import org.springframework.boot.loader.tools.NativeImageArgFile;
-import org.springframework.boot.loader.tools.ReachabilityMetadataProperties;
+import io.github.kotlinmania.spring.boot.gradle.tasks.bundling.ResolvedDependencies.DependencyDescriptor;
+import io.github.kotlinmania.spring.boot.loader.tools.FileUtils;
+import io.github.kotlinmania.spring.boot.loader.tools.JarModeLibrary;
+import io.github.kotlinmania.spring.boot.loader.tools.Layer;
+import io.github.kotlinmania.spring.boot.loader.tools.LayersIndex;
+import io.github.kotlinmania.spring.boot.loader.tools.LibraryCoordinates;
+import io.github.kotlinmania.spring.boot.loader.tools.NativeImageArgFile;
+import io.github.kotlinmania.spring.boot.loader.tools.ReachabilityMetadataProperties;
 import org.springframework.util.Assert;
 import org.springframework.util.StreamUtils;
 import org.springframework.util.StringUtils;

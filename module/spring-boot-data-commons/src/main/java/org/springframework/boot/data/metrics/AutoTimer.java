@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.data.metrics;
+package io.github.kotlinmania.spring.boot.data.metrics;
 
 import java.util.Set;
 import java.util.function.Consumer;

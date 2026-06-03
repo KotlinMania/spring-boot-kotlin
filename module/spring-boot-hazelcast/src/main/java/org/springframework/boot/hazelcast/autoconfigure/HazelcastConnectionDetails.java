@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.hazelcast.autoconfigure;
+package io.github.kotlinmania.spring.boot.hazelcast.autoconfigure;
 
 import com.hazelcast.client.config.ClientConfig;
 
-import org.springframework.boot.autoconfigure.service.connection.ConnectionDetails;
+import io.github.kotlinmania.spring.boot.autoconfigure.service.connection.ConnectionDetails;
 
 /**
  * Details required to establish a client connection to a Hazelcast instance.

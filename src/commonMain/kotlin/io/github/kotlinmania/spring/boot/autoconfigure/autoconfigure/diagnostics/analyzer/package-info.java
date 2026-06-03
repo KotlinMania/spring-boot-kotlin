@@ -15,10 +15,10 @@
  */
 
 /**
- * Internal {@link org.springframework.boot.diagnostics.FailureAnalyzer} implementations
+ * Internal {@link io.github.kotlinmania.spring.boot.diagnostics.FailureAnalyzer} implementations
  * related to auto-configuration.
  */
 @NullMarked
-package org.springframework.boot.autoconfigure.diagnostics.analyzer;
+package io.github.kotlinmania.spring.boot.autoconfigure.diagnostics.analyzer;
 
 import org.jspecify.annotations.NullMarked;

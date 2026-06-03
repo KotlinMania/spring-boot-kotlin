@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.jackson.autoconfigure;
+package io.github.kotlinmania.spring.boot.jackson.autoconfigure;
 
 import java.lang.reflect.Field;
 import java.text.DateFormat;
@@ -62,20 +62,20 @@ import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.ObjectProvider;
 import org.springframework.beans.factory.config.AutowireCapableBeanFactory;
 import org.springframework.beans.factory.config.ConfigurableBeanFactory;
-import org.springframework.boot.autoconfigure.AutoConfiguration;
-import org.springframework.boot.autoconfigure.AutoConfigurationPackages;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
-import org.springframework.boot.context.properties.EnableConfigurationProperties;
-import org.springframework.boot.context.properties.PropertyMapper;
-import org.springframework.boot.jackson.JacksonComponentModule;
-import org.springframework.boot.jackson.JacksonMixinModule;
-import org.springframework.boot.jackson.JacksonMixinModuleEntries;
-import org.springframework.boot.jackson.autoconfigure.JacksonProperties.ConstructorDetectorStrategy;
-import org.springframework.boot.jackson.autoconfigure.JacksonProperties.Factory.Constraints;
-import org.springframework.boot.jackson.autoconfigure.JacksonProperties.Factory.Constraints.Read;
-import org.springframework.boot.jackson.autoconfigure.JacksonProperties.Factory.Constraints.Write;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurationPackages;
+import io.github.kotlinmania.spring.boot.autoconfigure.EnableAutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnClass;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnMissingBean;
+import io.github.kotlinmania.spring.boot.context.properties.EnableConfigurationProperties;
+import io.github.kotlinmania.spring.boot.context.properties.PropertyMapper;
+import io.github.kotlinmania.spring.boot.jackson.JacksonComponentModule;
+import io.github.kotlinmania.spring.boot.jackson.JacksonMixinModule;
+import io.github.kotlinmania.spring.boot.jackson.JacksonMixinModuleEntries;
+import io.github.kotlinmania.spring.boot.jackson.autoconfigure.JacksonProperties.ConstructorDetectorStrategy;
+import io.github.kotlinmania.spring.boot.jackson.autoconfigure.JacksonProperties.Factory.Constraints;
+import io.github.kotlinmania.spring.boot.jackson.autoconfigure.JacksonProperties.Factory.Constraints.Read;
+import io.github.kotlinmania.spring.boot.jackson.autoconfigure.JacksonProperties.Factory.Constraints.Write;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

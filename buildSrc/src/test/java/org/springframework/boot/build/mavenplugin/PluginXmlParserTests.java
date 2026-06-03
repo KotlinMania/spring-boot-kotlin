@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.build.mavenplugin;
+package io.github.kotlinmania.spring.boot.build.mavenplugin;
 
 import java.io.File;
 import java.io.FileNotFoundException;
 
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.build.mavenplugin.PluginXmlParser.Plugin;
+import io.github.kotlinmania.spring.boot.build.mavenplugin.PluginXmlParser.Plugin;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatExceptionOfType;
@@ -39,7 +39,7 @@ class PluginXmlParserTests {
 	@Test
 	void parseExistingDescriptorReturnPluginDescriptor() {
 		Plugin plugin = this.parser.parse(new File("src/test/resources/plugin.xml"));
-		assertThat(plugin.getGroupId()).isEqualTo("org.springframework.boot");
+		assertThat(plugin.getGroupId()).isEqualTo("io.github.kotlinmania.spring.boot.);
 		assertThat(plugin.getArtifactId()).isEqualTo("spring-boot-maven-plugin");
 		assertThat(plugin.getVersion()).isEqualTo("2.2.0.GRADLE-SNAPSHOT");
 		assertThat(plugin.getGoalPrefix()).isEqualTo("spring-boot");

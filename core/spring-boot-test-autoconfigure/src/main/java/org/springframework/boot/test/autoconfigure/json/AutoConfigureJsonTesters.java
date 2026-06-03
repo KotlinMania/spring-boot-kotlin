@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.test.autoconfigure.json;
+package io.github.kotlinmania.spring.boot.test.autoconfigure.json;
 
 import java.lang.annotation.Documented;
 import java.lang.annotation.ElementType;
@@ -23,12 +23,12 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
-import org.springframework.boot.autoconfigure.ImportAutoConfiguration;
-import org.springframework.boot.test.context.PropertyMapping;
-import org.springframework.boot.test.json.BasicJsonTester;
-import org.springframework.boot.test.json.GsonTester;
-import org.springframework.boot.test.json.JacksonTester;
-import org.springframework.boot.test.json.JsonbTester;
+import io.github.kotlinmania.spring.boot.autoconfigure.ImportAutoConfiguration;
+import io.github.kotlinmania.spring.boot.test.context.PropertyMapping;
+import io.github.kotlinmania.spring.boot.test.json.BasicJsonTester;
+import io.github.kotlinmania.spring.boot.test.json.GsonTester;
+import io.github.kotlinmania.spring.boot.test.json.JacksonTester;
+import io.github.kotlinmania.spring.boot.test.json.JsonbTester;
 
 /**
  * Annotation that can be applied to a test class to enable and configure

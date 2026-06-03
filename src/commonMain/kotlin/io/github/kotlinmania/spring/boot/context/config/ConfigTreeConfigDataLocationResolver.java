@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.context.config;
+package io.github.kotlinmania.spring.boot.context.config;
 
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-import org.springframework.boot.context.config.LocationResourceLoader.ResourceType;
+import io.github.kotlinmania.spring.boot.context.config.LocationResourceLoader.ResourceType;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.ResourceLoader;
 import org.springframework.util.Assert;

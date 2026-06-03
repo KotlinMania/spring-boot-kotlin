@@ -18,6 +18,6 @@
  * Auto-configuration for the cache abstraction metrics.
  */
 @NullMarked
-package org.springframework.boot.cache.autoconfigure.metrics;
+package io.github.kotlinmania.spring.boot.cache.autoconfigure.metrics;
 
 import org.jspecify.annotations.NullMarked;

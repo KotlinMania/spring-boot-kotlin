@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.testing.springbootapplications.excludingconfiguration;
+package io.github.kotlinmania.spring.boot.docs.testing.springbootapplications.excludingconfiguration;
 
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.test.context.SpringBootTest;
+import io.github.kotlinmania.spring.boot.test.context.SpringBootTest;
 import org.springframework.context.annotation.Import;
 
 @SpringBootTest

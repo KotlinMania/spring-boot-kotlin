@@ -8,7 +8,7 @@ To use the module, you need to declare an additional `spring-boot` namespace in 
 [source,xml]
 ----
 <project xmlns:ivy="antlib:org.apache.ivy.ant"
-	xmlns:spring-boot="antlib:org.springframework.boot.ant"
+	xmlns:spring-boot="antlib:io.github.kotlinmania.spring.boot.ant"
 	name="myapp" default="build">
 	...
 </project>

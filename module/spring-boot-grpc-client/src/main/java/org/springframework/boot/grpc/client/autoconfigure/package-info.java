@@ -18,6 +18,6 @@
  * Auto-configuration for gRPC clients.
  */
 @NullMarked
-package org.springframework.boot.grpc.client.autoconfigure;
+package io.github.kotlinmania.spring.boot.grpc.client.autoconfigure;
 
 import org.jspecify.annotations.NullMarked;

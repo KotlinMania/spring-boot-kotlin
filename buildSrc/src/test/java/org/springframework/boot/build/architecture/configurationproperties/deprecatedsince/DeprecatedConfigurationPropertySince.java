@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.build.architecture.configurationproperties.deprecatedsince;
+package io.github.kotlinmania.spring.boot.build.architecture.configurationproperties.deprecatedsince;
 
-import org.springframework.boot.build.architecture.annotations.TestDeprecatedConfigurationProperty;
+import io.github.kotlinmania.spring.boot.build.architecture.annotations.TestDeprecatedConfigurationProperty;
 
 public class DeprecatedConfigurationPropertySince {
 

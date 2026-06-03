@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.grpc.server.autoconfigure;
+package io.github.kotlinmania.spring.boot.grpc.server.autoconfigure;
 
 import io.grpc.BindableService;
 import io.grpc.protobuf.services.ProtoReflectionServiceV1;
@@ -22,10 +22,10 @@ import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 
-import org.springframework.boot.autoconfigure.AutoConfigurations;
-import org.springframework.boot.grpc.server.autoconfigure.GrpcServerServicesAutoConfiguration.GrpcServerReflectionServiceConfiguration;
-import org.springframework.boot.test.context.FilteredClassLoader;
-import org.springframework.boot.test.context.runner.ApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurations;
+import io.github.kotlinmania.spring.boot.grpc.server.autoconfigure.GrpcServerServicesAutoConfiguration.GrpcServerReflectionServiceConfiguration;
+import io.github.kotlinmania.spring.boot.test.context.FilteredClassLoader;
+import io.github.kotlinmania.spring.boot.test.context.runner.ApplicationContextRunner;
 import org.springframework.grpc.server.lifecycle.GrpcServerLifecycle;
 
 import static org.assertj.core.api.Assertions.assertThat;

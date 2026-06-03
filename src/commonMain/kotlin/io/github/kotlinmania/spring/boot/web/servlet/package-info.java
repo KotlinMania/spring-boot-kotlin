@@ -18,6 +18,6 @@
  * Classes and utilities designed to work with the {@code jakarta.servlet} specification.
  */
 @NullMarked
-package org.springframework.boot.web.servlet;
+package io.github.kotlinmania.spring.boot.web.servlet;
 
 import org.jspecify.annotations.NullMarked;

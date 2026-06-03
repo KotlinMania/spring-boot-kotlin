@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.test.autoconfigure.json;
+package io.github.kotlinmania.spring.boot.test.autoconfigure.json;
 
 import java.lang.annotation.Documented;
 import java.lang.annotation.ElementType;
@@ -25,13 +25,13 @@ import java.lang.annotation.Target;
 
 import org.junit.jupiter.api.extension.ExtendWith;
 
-import org.springframework.boot.autoconfigure.ImportAutoConfiguration;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.test.autoconfigure.OverrideAutoConfiguration;
-import org.springframework.boot.test.context.filter.annotation.TypeExcludeFilters;
-import org.springframework.boot.test.json.GsonTester;
-import org.springframework.boot.test.json.JacksonTester;
-import org.springframework.boot.test.json.JsonbTester;
+import io.github.kotlinmania.spring.boot.autoconfigure.ImportAutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.SpringBootApplication;
+import io.github.kotlinmania.spring.boot.test.autoconfigure.OverrideAutoConfiguration;
+import io.github.kotlinmania.spring.boot.test.context.filter.annotation.TypeExcludeFilters;
+import io.github.kotlinmania.spring.boot.test.json.GsonTester;
+import io.github.kotlinmania.spring.boot.test.json.JacksonTester;
+import io.github.kotlinmania.spring.boot.test.json.JsonbTester;
 import org.springframework.context.annotation.ComponentScan.Filter;
 import org.springframework.core.annotation.AliasFor;
 import org.springframework.core.env.Environment;

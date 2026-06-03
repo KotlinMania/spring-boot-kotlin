@@ -18,6 +18,6 @@
  * Support for exporting actuator metrics to StatsD.
  */
 @NullMarked
-package org.springframework.boot.micrometer.metrics.autoconfigure.export.statsd;
+package io.github.kotlinmania.spring.boot.micrometer.metrics.autoconfigure.export.statsd;
 
 import org.jspecify.annotations.NullMarked;

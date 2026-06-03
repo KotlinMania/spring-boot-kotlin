@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.io.caching.provider;
+package io.github.kotlinmania.spring.boot.docs.io.caching.provider;
 
-import org.springframework.boot.cache.autoconfigure.CacheManagerCustomizer;
+import io.github.kotlinmania.spring.boot.cache.autoconfigure.CacheManagerCustomizer;
 import org.springframework.cache.concurrent.ConcurrentMapCacheManager;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

@@ -18,4 +18,4 @@
  * Custom enhancements and support for Jackson 2.
  */
 @org.jspecify.annotations.NullMarked
-package org.springframework.boot.jackson2;
+package io.github.kotlinmania.spring.boot.jackson2;

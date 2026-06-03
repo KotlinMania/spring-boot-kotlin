@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.messaging.kafka.embedded.property
+package io.github.kotlinmania.spring.boot.docs.messaging.kafka.embedded.property
 
-import org.springframework.boot.test.context.SpringBootTest
+import io.github.kotlinmania.spring.boot.test.context.SpringBootTest
 import org.springframework.kafka.test.EmbeddedKafkaBroker
 
 @SpringBootTest

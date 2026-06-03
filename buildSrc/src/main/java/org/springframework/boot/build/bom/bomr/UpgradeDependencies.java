@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.build.bom.bomr;
+package io.github.kotlinmania.spring.boot.build.bom.bomr;
 
 import java.io.File;
 import java.io.FileReader;
@@ -48,14 +48,14 @@ import org.gradle.api.tasks.TaskAction;
 import org.gradle.api.tasks.TaskExecutionException;
 import org.gradle.api.tasks.options.Option;
 
-import org.springframework.boot.build.bom.BomExtension;
-import org.springframework.boot.build.bom.Library;
-import org.springframework.boot.build.bom.UpgradePolicy;
-import org.springframework.boot.build.bom.bomr.github.GitHub;
-import org.springframework.boot.build.bom.bomr.github.GitHubRepository;
-import org.springframework.boot.build.bom.bomr.github.Issue;
-import org.springframework.boot.build.bom.bomr.github.Milestone;
-import org.springframework.boot.build.bom.bomr.version.DependencyVersion;
+import io.github.kotlinmania.spring.boot.build.bom.BomExtension;
+import io.github.kotlinmania.spring.boot.build.bom.Library;
+import io.github.kotlinmania.spring.boot.build.bom.UpgradePolicy;
+import io.github.kotlinmania.spring.boot.build.bom.bomr.github.GitHub;
+import io.github.kotlinmania.spring.boot.build.bom.bomr.github.GitHubRepository;
+import io.github.kotlinmania.spring.boot.build.bom.bomr.github.Issue;
+import io.github.kotlinmania.spring.boot.build.bom.bomr.github.Milestone;
+import io.github.kotlinmania.spring.boot.build.bom.bomr.version.DependencyVersion;
 import org.springframework.util.StringUtils;
 
 /**

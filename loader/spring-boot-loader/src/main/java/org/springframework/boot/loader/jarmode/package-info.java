@@ -17,4 +17,4 @@
 /**
  * Support for launching the JAR using jarmode.
  */
-package org.springframework.boot.loader.jarmode;
+package io.github.kotlinmania.spring.boot.loader.jarmode;

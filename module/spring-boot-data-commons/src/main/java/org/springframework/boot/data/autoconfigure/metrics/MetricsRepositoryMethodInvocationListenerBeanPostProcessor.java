@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.data.autoconfigure.metrics;
+package io.github.kotlinmania.spring.boot.data.autoconfigure.metrics;
 
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.config.BeanPostProcessor;
-import org.springframework.boot.data.metrics.MetricsRepositoryMethodInvocationListener;
+import io.github.kotlinmania.spring.boot.data.metrics.MetricsRepositoryMethodInvocationListener;
 import org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport;
 import org.springframework.data.repository.core.support.RepositoryFactoryCustomizer;
 import org.springframework.data.repository.core.support.RepositoryFactorySupport;

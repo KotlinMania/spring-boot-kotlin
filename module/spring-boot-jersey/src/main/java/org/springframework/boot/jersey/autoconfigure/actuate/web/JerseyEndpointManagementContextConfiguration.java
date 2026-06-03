@@ -14,15 +14,15 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.jersey.autoconfigure.actuate.web;
+package io.github.kotlinmania.spring.boot.jersey.autoconfigure.actuate.web;
 
-import org.springframework.boot.actuate.autoconfigure.endpoint.web.WebEndpointProperties;
-import org.springframework.boot.actuate.autoconfigure.web.ManagementContextConfiguration;
-import org.springframework.boot.actuate.endpoint.EndpointAccessResolver;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingClass;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnWebApplication;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnWebApplication.Type;
-import org.springframework.boot.jersey.autoconfigure.JerseyApplicationPath;
+import io.github.kotlinmania.spring.boot.actuate.autoconfigure.endpoint.web.WebEndpointProperties;
+import io.github.kotlinmania.spring.boot.actuate.autoconfigure.web.ManagementContextConfiguration;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.EndpointAccessResolver;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnMissingClass;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnWebApplication;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnWebApplication.Type;
+import io.github.kotlinmania.spring.boot.jersey.autoconfigure.JerseyApplicationPath;
 import org.springframework.context.annotation.Bean;
 
 /**
@@ -41,11 +41,11 @@ public class JerseyEndpointManagementContextConfiguration {
 
 	@Bean
 	@SuppressWarnings("removal")
-	public org.springframework.boot.actuate.endpoint.web.ServletEndpointRegistrar servletEndpointRegistrar(
+	public io.github.kotlinmania.spring.boot.actuate.endpoint.web.ServletEndpointRegistrar servletEndpointRegistrar(
 			WebEndpointProperties properties,
-			org.springframework.boot.actuate.endpoint.web.annotation.ServletEndpointsSupplier servletEndpointsSupplier,
+			io.github.kotlinmania.spring.boot.actuate.endpoint.web.annotation.ServletEndpointsSupplier servletEndpointsSupplier,
 			JerseyApplicationPath jerseyApplicationPath, EndpointAccessResolver endpointAccessResolver) {
-		return new org.springframework.boot.actuate.endpoint.web.ServletEndpointRegistrar(
+		return new io.github.kotlinmania.spring.boot.actuate.endpoint.web.ServletEndpointRegistrar(
 				jerseyApplicationPath.getRelativePath(properties.getBasePath()),
 				servletEndpointsSupplier.getEndpoints(), endpointAccessResolver);
 	}

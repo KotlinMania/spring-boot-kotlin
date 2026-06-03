@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.logging.logback;
+package io.github.kotlinmania.spring.boot.logging.logback;
 
 import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
@@ -25,15 +25,15 @@ import ch.qos.logback.core.encoder.Encoder;
 import ch.qos.logback.core.encoder.EncoderBase;
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.logging.StackTracePrinter;
-import org.springframework.boot.logging.structured.CommonStructuredLogFormat;
-import org.springframework.boot.logging.structured.ContextPairs;
-import org.springframework.boot.logging.structured.StructuredLogFormatter;
-import org.springframework.boot.logging.structured.StructuredLogFormatterFactory;
-import org.springframework.boot.logging.structured.StructuredLogFormatterFactory.CommonFormatters;
-import org.springframework.boot.logging.structured.StructuredLoggingJsonMembersCustomizer;
-import org.springframework.boot.util.Instantiator;
-import org.springframework.boot.util.Instantiator.AvailableParameters;
+import io.github.kotlinmania.spring.boot.logging.StackTracePrinter;
+import io.github.kotlinmania.spring.boot.logging.structured.CommonStructuredLogFormat;
+import io.github.kotlinmania.spring.boot.logging.structured.ContextPairs;
+import io.github.kotlinmania.spring.boot.logging.structured.StructuredLogFormatter;
+import io.github.kotlinmania.spring.boot.logging.structured.StructuredLogFormatterFactory;
+import io.github.kotlinmania.spring.boot.logging.structured.StructuredLogFormatterFactory.CommonFormatters;
+import io.github.kotlinmania.spring.boot.logging.structured.StructuredLoggingJsonMembersCustomizer;
+import io.github.kotlinmania.spring.boot.util.Instantiator;
+import io.github.kotlinmania.spring.boot.util.Instantiator.AvailableParameters;
 import org.springframework.core.env.Environment;
 import org.springframework.util.Assert;
 

@@ -22,7 +22,7 @@ import org.junit.jupiter.api.Test;
 import tools.jackson.databind.DeserializationFeature;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
+import io.github.kotlinmania.spring.boot.test.context.SpringBootTest;
 import org.springframework.http.converter.json.JacksonJsonHttpMessageConverter;
 import org.springframework.test.util.ReflectionTestUtils;
 import org.springframework.web.client.RestClient;

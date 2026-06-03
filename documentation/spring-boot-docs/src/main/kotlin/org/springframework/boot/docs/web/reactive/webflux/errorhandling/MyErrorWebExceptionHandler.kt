@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.web.reactive.webflux.errorhandling
+package io.github.kotlinmania.spring.boot.docs.web.reactive.webflux.errorhandling
 
-import org.springframework.boot.autoconfigure.web.WebProperties
-import org.springframework.boot.webflux.error.ErrorAttributes
-import org.springframework.boot.webflux.autoconfigure.error.AbstractErrorWebExceptionHandler
+import io.github.kotlinmania.spring.boot.autoconfigure.web.WebProperties
+import io.github.kotlinmania.spring.boot.webflux.error.ErrorAttributes
+import io.github.kotlinmania.spring.boot.webflux.autoconfigure.error.AbstractErrorWebExceptionHandler
 import org.springframework.context.ApplicationContext
 import org.springframework.http.HttpStatus
 import org.springframework.http.MediaType

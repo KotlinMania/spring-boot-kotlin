@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.jackson.autoconfigure;
+package io.github.kotlinmania.spring.boot.jackson.autoconfigure;
 
 import tools.jackson.databind.json.JsonMapper;
 
-import org.springframework.boot.autoconfigure.preinitialize.BackgroundPreinitializer;
+import io.github.kotlinmania.spring.boot.autoconfigure.preinitialize.BackgroundPreinitializer;
 
 /**
  * {@link BackgroundPreinitializer} for Jackson.

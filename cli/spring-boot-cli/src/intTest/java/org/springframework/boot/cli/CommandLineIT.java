@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.cli;
+package io.github.kotlinmania.spring.boot.cli;
 
 import java.io.File;
 import java.io.IOException;
@@ -23,8 +23,8 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.io.TempDir;
 
-import org.springframework.boot.cli.infrastructure.CommandLineInvoker;
-import org.springframework.boot.cli.infrastructure.CommandLineInvoker.Invocation;
+import io.github.kotlinmania.spring.boot.cli.infrastructure.CommandLineInvoker;
+import io.github.kotlinmania.spring.boot.cli.infrastructure.CommandLineInvoker.Invocation;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.amqp.autoconfigure.metrics;
+package io.github.kotlinmania.spring.boot.amqp.autoconfigure.metrics;
 
 import com.rabbitmq.client.ConnectionFactory;
 import com.rabbitmq.client.MetricsCollector;
@@ -24,7 +24,7 @@ import org.jspecify.annotations.Nullable;
 
 import org.springframework.amqp.rabbit.connection.AbstractConnectionFactory;
 import org.springframework.beans.factory.config.BeanPostProcessor;
-import org.springframework.boot.amqp.metrics.RabbitMetrics;
+import io.github.kotlinmania.spring.boot.amqp.metrics.RabbitMetrics;
 import org.springframework.context.ApplicationContext;
 import org.springframework.core.Ordered;
 import org.springframework.util.StringUtils;

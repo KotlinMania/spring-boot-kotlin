@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.test.context;
+package io.github.kotlinmania.spring.boot.test.context;
 
 import java.lang.reflect.Method;
 import java.lang.reflect.Modifier;
@@ -29,22 +29,22 @@ import org.jspecify.annotations.Nullable;
 import org.springframework.aot.hint.ExecutableMode;
 import org.springframework.aot.hint.RuntimeHints;
 import org.springframework.beans.BeanUtils;
-import org.springframework.boot.ApplicationContextFactory;
-import org.springframework.boot.Banner;
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.SpringApplication.AbandonedRunException;
-import org.springframework.boot.SpringApplicationHook;
-import org.springframework.boot.SpringApplicationRunListener;
-import org.springframework.boot.SpringBootConfiguration;
-import org.springframework.boot.WebApplicationType;
-import org.springframework.boot.bootstrap.ConfigurableBootstrapContext;
-import org.springframework.boot.context.event.ApplicationEnvironmentPreparedEvent;
-import org.springframework.boot.test.context.SpringBootTest.UseMainMethod;
-import org.springframework.boot.test.mock.web.SpringBootMockServletContext;
-import org.springframework.boot.test.util.TestPropertyValues;
-import org.springframework.boot.test.util.TestPropertyValues.Type;
-import org.springframework.boot.web.context.reactive.GenericReactiveWebApplicationContext;
-import org.springframework.boot.web.servlet.support.ServletContextApplicationContextInitializer;
+import io.github.kotlinmania.spring.boot.ApplicationContextFactory;
+import io.github.kotlinmania.spring.boot.Banner;
+import io.github.kotlinmania.spring.boot.SpringApplication;
+import io.github.kotlinmania.spring.boot.SpringApplication.AbandonedRunException;
+import io.github.kotlinmania.spring.boot.SpringApplicationHook;
+import io.github.kotlinmania.spring.boot.SpringApplicationRunListener;
+import io.github.kotlinmania.spring.boot.SpringBootConfiguration;
+import io.github.kotlinmania.spring.boot.WebApplicationType;
+import io.github.kotlinmania.spring.boot.bootstrap.ConfigurableBootstrapContext;
+import io.github.kotlinmania.spring.boot.context.event.ApplicationEnvironmentPreparedEvent;
+import io.github.kotlinmania.spring.boot.test.context.SpringBootTest.UseMainMethod;
+import io.github.kotlinmania.spring.boot.test.mock.web.SpringBootMockServletContext;
+import io.github.kotlinmania.spring.boot.test.util.TestPropertyValues;
+import io.github.kotlinmania.spring.boot.test.util.TestPropertyValues.Type;
+import io.github.kotlinmania.spring.boot.web.context.reactive.GenericReactiveWebApplicationContext;
+import io.github.kotlinmania.spring.boot.web.servlet.support.ServletContextApplicationContextInitializer;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextInitializer;
 import org.springframework.context.ApplicationListener;
@@ -303,7 +303,7 @@ public class SpringBootContextLoader extends AbstractContextLoader implements Ao
 	}
 
 	/**
-	 * Builds new {@link org.springframework.boot.SpringApplication} instance. This method
+	 * Builds new {@link io.github.kotlinmania.spring.boot.SpringApplication} instance. This method
 	 * is only called when a {@code main} method isn't being used to create the
 	 * {@link SpringApplication}.
 	 * @return a {@link SpringApplication} instance

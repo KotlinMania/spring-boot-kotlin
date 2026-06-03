@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.devtools.classpath;
+package io.github.kotlinmania.spring.boot.devtools.classpath;
 
-import org.springframework.boot.devtools.filewatch.ChangedFile;
+import io.github.kotlinmania.spring.boot.devtools.filewatch.ChangedFile;
 
 /**
  * Strategy interface used to determine when a changed classpath file should trigger a

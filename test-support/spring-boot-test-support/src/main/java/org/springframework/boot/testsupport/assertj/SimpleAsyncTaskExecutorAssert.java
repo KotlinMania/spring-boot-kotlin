@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.testsupport.assertj;
+package io.github.kotlinmania.spring.boot.testsupport.assertj;
 
 import java.lang.reflect.Field;
 

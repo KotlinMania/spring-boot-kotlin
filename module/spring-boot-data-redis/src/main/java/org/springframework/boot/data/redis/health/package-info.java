@@ -18,6 +18,6 @@
  * Redis health integration using Spring Data Redis.
  */
 @NullMarked
-package org.springframework.boot.data.redis.health;
+package io.github.kotlinmania.spring.boot.data.redis.health;
 
 import org.jspecify.annotations.NullMarked;

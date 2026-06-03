@@ -14,19 +14,19 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.tomcat.autoconfigure;
+package io.github.kotlinmania.spring.boot.tomcat.autoconfigure;
 
 import org.apache.tomcat.websocket.server.WsSci;
 
-import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnNotWarDeployment;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnThreading;
-import org.springframework.boot.autoconfigure.web.WebProperties;
-import org.springframework.boot.context.properties.EnableConfigurationProperties;
-import org.springframework.boot.thread.Threading;
-import org.springframework.boot.tomcat.autoconfigure.reactive.TomcatReactiveWebServerAutoConfiguration;
-import org.springframework.boot.tomcat.autoconfigure.servlet.TomcatServletWebServerAutoConfiguration;
-import org.springframework.boot.web.server.autoconfigure.ServerProperties;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnClass;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnNotWarDeployment;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnThreading;
+import io.github.kotlinmania.spring.boot.autoconfigure.web.WebProperties;
+import io.github.kotlinmania.spring.boot.context.properties.EnableConfigurationProperties;
+import io.github.kotlinmania.spring.boot.thread.Threading;
+import io.github.kotlinmania.spring.boot.tomcat.autoconfigure.reactive.TomcatReactiveWebServerAutoConfiguration;
+import io.github.kotlinmania.spring.boot.tomcat.autoconfigure.servlet.TomcatServletWebServerAutoConfiguration;
+import io.github.kotlinmania.spring.boot.web.server.autoconfigure.ServerProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.env.Environment;

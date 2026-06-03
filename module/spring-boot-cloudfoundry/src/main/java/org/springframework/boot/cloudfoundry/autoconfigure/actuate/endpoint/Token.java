@@ -14,15 +14,15 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.cloudfoundry.autoconfigure.actuate.endpoint;
+package io.github.kotlinmania.spring.boot.cloudfoundry.autoconfigure.actuate.endpoint;
 
 import java.nio.charset.StandardCharsets;
 import java.util.Base64;
 import java.util.List;
 import java.util.Map;
 
-import org.springframework.boot.cloudfoundry.autoconfigure.actuate.endpoint.CloudFoundryAuthorizationException.Reason;
-import org.springframework.boot.json.JsonParserFactory;
+import io.github.kotlinmania.spring.boot.cloudfoundry.autoconfigure.actuate.endpoint.CloudFoundryAuthorizationException.Reason;
+import io.github.kotlinmania.spring.boot.json.JsonParserFactory;
 import org.springframework.util.StringUtils;
 
 /**

@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.gradle.junit;
+package io.github.kotlinmania.spring.boot.gradle.junit;
 
 import java.lang.reflect.Field;
 
 import org.junit.jupiter.api.extension.BeforeEachCallback;
 import org.junit.jupiter.api.extension.ExtensionContext;
 
-import org.springframework.boot.testsupport.gradle.testkit.GradleBuild;
+import io.github.kotlinmania.spring.boot.testsupport.gradle.testkit.GradleBuild;
 import org.springframework.util.Assert;
 import org.springframework.util.ReflectionUtils;
 

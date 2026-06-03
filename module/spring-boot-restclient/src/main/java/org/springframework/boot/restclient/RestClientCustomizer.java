@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.restclient;
+package io.github.kotlinmania.spring.boot.restclient;
 
 import org.springframework.web.client.RestClient;
 

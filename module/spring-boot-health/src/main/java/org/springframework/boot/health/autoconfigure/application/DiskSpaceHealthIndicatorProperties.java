@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.health.autoconfigure.application;
+package io.github.kotlinmania.spring.boot.health.autoconfigure.application;
 
 import java.io.File;
 
-import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.boot.health.application.DiskSpaceHealthIndicator;
+import io.github.kotlinmania.spring.boot.context.properties.ConfigurationProperties;
+import io.github.kotlinmania.spring.boot.health.application.DiskSpaceHealthIndicator;
 import org.springframework.util.Assert;
 import org.springframework.util.unit.DataSize;
 

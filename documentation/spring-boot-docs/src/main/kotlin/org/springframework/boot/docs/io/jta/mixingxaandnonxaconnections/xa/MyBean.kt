@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.io.jta.mixingxaandnonxaconnections.xa
+package io.github.kotlinmania.spring.boot.docs.io.jta.mixingxaandnonxaconnections.xa
 
 import jakarta.jms.ConnectionFactory
 import org.springframework.beans.factory.annotation.Qualifier

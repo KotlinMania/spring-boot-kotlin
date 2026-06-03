@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.actuate.endpoint.web.test;
+package io.github.kotlinmania.spring.boot.actuate.endpoint.web.test;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
@@ -26,7 +26,7 @@ import java.util.function.Function;
 import org.junit.jupiter.api.TestTemplate;
 import org.junit.jupiter.api.extension.ExtendWith;
 
-import org.springframework.boot.actuate.endpoint.web.test.WebEndpointTestInvocationContextProvider.WebEndpointsInvocationContext;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.web.test.WebEndpointTestInvocationContextProvider.WebEndpointsInvocationContext;
 import org.springframework.context.ConfigurableApplicationContext;
 
 /**

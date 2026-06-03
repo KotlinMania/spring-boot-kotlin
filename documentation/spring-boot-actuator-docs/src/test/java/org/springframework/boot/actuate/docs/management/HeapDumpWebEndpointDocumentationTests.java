@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.actuate.docs.management;
+package io.github.kotlinmania.spring.boot.actuate.docs.management;
 
 import java.io.File;
 import java.io.FileWriter;
@@ -23,8 +23,8 @@ import java.util.Map;
 
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.actuate.docs.MockMvcEndpointDocumentationTests;
-import org.springframework.boot.actuate.management.HeapDumpWebEndpoint;
+import io.github.kotlinmania.spring.boot.actuate.docs.MockMvcEndpointDocumentationTests;
+import io.github.kotlinmania.spring.boot.actuate.management.HeapDumpWebEndpoint;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.restdocs.cli.CliDocumentation;

@@ -16,10 +16,10 @@
 
 package smoketest.tomcat.jsp;
 
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.builder.SpringApplicationBuilder;
-import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
+import io.github.kotlinmania.spring.boot.SpringApplication;
+import io.github.kotlinmania.spring.boot.autoconfigure.SpringBootApplication;
+import io.github.kotlinmania.spring.boot.builder.SpringApplicationBuilder;
+import io.github.kotlinmania.spring.boot.web.servlet.support.SpringBootServletInitializer;
 
 @SpringBootApplication
 public class SampleTomcatJspApplication extends SpringBootServletInitializer {

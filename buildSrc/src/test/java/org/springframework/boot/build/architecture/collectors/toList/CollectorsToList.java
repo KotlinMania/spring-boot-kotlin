@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.build.architecture.collectors.toList;
+package io.github.kotlinmania.spring.boot.build.architecture.collectors.toList;
 
 import java.util.List;
 import java.util.stream.Collectors;

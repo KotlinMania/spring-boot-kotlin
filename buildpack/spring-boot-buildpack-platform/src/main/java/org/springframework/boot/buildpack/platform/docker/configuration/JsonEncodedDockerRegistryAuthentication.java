@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.buildpack.platform.docker.configuration;
+package io.github.kotlinmania.spring.boot.buildpack.platform.docker.configuration;
 
 import java.util.Base64;
 
@@ -22,7 +22,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.jspecify.annotations.Nullable;
 import tools.jackson.core.JacksonException;
 
-import org.springframework.boot.buildpack.platform.json.SharedJsonMapper;
+import io.github.kotlinmania.spring.boot.buildpack.platform.json.SharedJsonMapper;
 
 /**
  * {@link DockerRegistryAuthentication} that uses a Base64 encoded auth header value based

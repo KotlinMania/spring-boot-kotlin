@@ -14,15 +14,15 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.actuate.endpoint.web.annotation;
+package io.github.kotlinmania.spring.boot.actuate.endpoint.web.annotation;
 
 import java.util.Collections;
 
-import org.springframework.boot.actuate.endpoint.Access;
-import org.springframework.boot.actuate.endpoint.EndpointId;
-import org.springframework.boot.actuate.endpoint.Operation;
-import org.springframework.boot.actuate.endpoint.annotation.AbstractDiscoveredEndpoint;
-import org.springframework.boot.actuate.endpoint.annotation.EndpointDiscoverer;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.Access;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.EndpointId;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.Operation;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.annotation.AbstractDiscoveredEndpoint;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.annotation.EndpointDiscoverer;
 
 /**
  * A discovered {@link ExposableControllerEndpoint controller endpoint}.

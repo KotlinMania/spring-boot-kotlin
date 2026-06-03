@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.configurationsample.name;
+package io.github.kotlinmania.spring.boot.configurationsample.name;
 
-import org.springframework.boot.configurationsample.TestConfigurationProperties;
-import org.springframework.boot.configurationsample.TestName;
+import io.github.kotlinmania.spring.boot.configurationsample.TestConfigurationProperties;
+import io.github.kotlinmania.spring.boot.configurationsample.TestName;
 
 /**
  * Java bean properties making use of {@code @Name}.

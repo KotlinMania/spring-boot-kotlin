@@ -14,16 +14,16 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.actuate.health;
+package io.github.kotlinmania.spring.boot.actuate.health;
 
 import java.util.function.Predicate;
 
-import org.springframework.boot.actuate.endpoint.SecurityContext;
-import org.springframework.boot.health.actuate.endpoint.AdditionalHealthEndpointPath;
-import org.springframework.boot.health.actuate.endpoint.HealthEndpointGroup;
-import org.springframework.boot.health.actuate.endpoint.HealthEndpointGroups;
-import org.springframework.boot.health.actuate.endpoint.HttpCodeStatusMapper;
-import org.springframework.boot.health.actuate.endpoint.StatusAggregator;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.SecurityContext;
+import io.github.kotlinmania.spring.boot.health.actuate.endpoint.AdditionalHealthEndpointPath;
+import io.github.kotlinmania.spring.boot.health.actuate.endpoint.HealthEndpointGroup;
+import io.github.kotlinmania.spring.boot.health.actuate.endpoint.HealthEndpointGroups;
+import io.github.kotlinmania.spring.boot.health.actuate.endpoint.HttpCodeStatusMapper;
+import io.github.kotlinmania.spring.boot.health.actuate.endpoint.StatusAggregator;
 
 /**
  * Test implementation of {@link HealthEndpointGroups}.

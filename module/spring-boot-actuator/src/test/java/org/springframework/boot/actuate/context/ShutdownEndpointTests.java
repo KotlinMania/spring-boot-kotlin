@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.actuate.context;
+package io.github.kotlinmania.spring.boot.actuate.context;
 
 import java.net.URL;
 import java.net.URLClassLoader;
@@ -24,10 +24,10 @@ import java.util.concurrent.TimeUnit;
 import org.jspecify.annotations.Nullable;
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.WebApplicationType;
-import org.springframework.boot.actuate.context.ShutdownEndpoint.ShutdownDescriptor;
-import org.springframework.boot.builder.SpringApplicationBuilder;
-import org.springframework.boot.test.context.runner.ApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.WebApplicationType;
+import io.github.kotlinmania.spring.boot.actuate.context.ShutdownEndpoint.ShutdownDescriptor;
+import io.github.kotlinmania.spring.boot.builder.SpringApplicationBuilder;
+import io.github.kotlinmania.spring.boot.test.context.runner.ApplicationContextRunner;
 import org.springframework.context.ApplicationListener;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.Bean;

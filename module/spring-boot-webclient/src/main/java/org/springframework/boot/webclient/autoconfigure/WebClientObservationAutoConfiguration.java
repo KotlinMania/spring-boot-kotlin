@@ -14,16 +14,16 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.webclient.autoconfigure;
+package io.github.kotlinmania.spring.boot.webclient.autoconfigure;
 
 import io.micrometer.observation.ObservationRegistry;
 
 import org.springframework.beans.factory.ObjectProvider;
-import org.springframework.boot.autoconfigure.AutoConfiguration;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
-import org.springframework.boot.context.properties.EnableConfigurationProperties;
-import org.springframework.boot.micrometer.observation.autoconfigure.ObservationProperties;
-import org.springframework.boot.webclient.observation.ObservationWebClientCustomizer;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnClass;
+import io.github.kotlinmania.spring.boot.context.properties.EnableConfigurationProperties;
+import io.github.kotlinmania.spring.boot.micrometer.observation.autoconfigure.ObservationProperties;
+import io.github.kotlinmania.spring.boot.webclient.observation.ObservationWebClientCustomizer;
 import org.springframework.context.annotation.Bean;
 import org.springframework.web.reactive.function.client.ClientRequestObservationConvention;
 import org.springframework.web.reactive.function.client.DefaultClientRequestObservationConvention;
@@ -36,7 +36,7 @@ import org.springframework.web.reactive.function.client.WebClient;
  * @since 4.0.0
  */
 @AutoConfiguration(
-		beforeName = "org.springframework.boot.micrometer.observation.autoconfigure.ObservationAutoConfiguration")
+		beforeName = "io.github.kotlinmania.spring.boot.micrometer.observation.autoconfigure.ObservationAutoConfiguration")
 @ConditionalOnClass({ WebClient.class, ObservationWebClientCustomizer.class, ObservationRegistry.class,
 		ObservationProperties.class })
 @EnableConfigurationProperties(ObservationProperties.class)

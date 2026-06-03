@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.buildpack.platform.docker.ssl;
+package io.github.kotlinmania.spring.boot.buildpack.platform.docker.ssl;
 
 import java.nio.file.Files;
 import java.nio.file.Path;

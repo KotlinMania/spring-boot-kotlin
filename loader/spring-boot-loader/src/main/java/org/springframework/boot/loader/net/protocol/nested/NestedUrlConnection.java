@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.loader.net.protocol.nested;
+package io.github.kotlinmania.spring.boot.loader.net.protocol.nested;
 
 import java.io.File;
 import java.io.FilePermission;
@@ -38,7 +38,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 
-import org.springframework.boot.loader.ref.Cleaner;
+import io.github.kotlinmania.spring.boot.loader.ref.Cleaner;
 
 /**
  * {@link URLConnection} to support {@code nested:} URLs. See {@link NestedLocation} for

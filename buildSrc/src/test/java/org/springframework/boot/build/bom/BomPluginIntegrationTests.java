@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.build.bom;
+package io.github.kotlinmania.spring.boot.build.bom;
 
 import java.io.File;
 import java.io.FileWriter;
@@ -28,8 +28,8 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.io.TempDir;
 
-import org.springframework.boot.build.DeployedPlugin;
-import org.springframework.boot.build.assertj.NodeAssert;
+import io.github.kotlinmania.spring.boot.build.DeployedPlugin;
+import io.github.kotlinmania.spring.boot.build.assertj.NodeAssert;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -54,8 +54,8 @@ class BomPluginIntegrationTests {
 	void libraryModulesAreIncludedInDependencyManagementOfGeneratedPom() throws IOException {
 		try (PrintWriter out = new PrintWriter(new FileWriter(this.buildFile))) {
 			out.println("plugins {");
-			out.println("    id 'org.springframework.boot.bom'");
-			out.println("    id 'org.springframework.boot.deployed'");
+			out.println("    id 'io.github.kotlinmania.spring.boot.bom'");
+			out.println("    id 'io.github.kotlinmania.spring.boot.deployed'");
 			out.println("}");
 			out.println("bom {");
 			out.println("    library('ActiveMQ', '5.15.10') {");
@@ -91,8 +91,8 @@ class BomPluginIntegrationTests {
 	void libraryPluginsAreIncludedInPluginManagementOfGeneratedPom() throws IOException {
 		try (PrintWriter out = new PrintWriter(new FileWriter(this.buildFile))) {
 			out.println("plugins {");
-			out.println("    id 'org.springframework.boot.bom'");
-			out.println("    id 'org.springframework.boot.deployed'");
+			out.println("    id 'io.github.kotlinmania.spring.boot.bom'");
+			out.println("    id 'io.github.kotlinmania.spring.boot.deployed'");
 			out.println("}");
 			out.println("bom {");
 			out.println("    library('Flyway', '6.0.8') {");
@@ -119,8 +119,8 @@ class BomPluginIntegrationTests {
 	void libraryImportsAreIncludedInDependencyManagementOfGeneratedPom() throws Exception {
 		try (PrintWriter out = new PrintWriter(new FileWriter(this.buildFile))) {
 			out.println("plugins {");
-			out.println("    id 'org.springframework.boot.bom'");
-			out.println("    id 'org.springframework.boot.deployed'");
+			out.println("    id 'io.github.kotlinmania.spring.boot.bom'");
+			out.println("    id 'io.github.kotlinmania.spring.boot.deployed'");
 			out.println("}");
 			out.println("bom {");
 			out.println("    library('Jackson Bom', '2.10.0') {");
@@ -146,8 +146,8 @@ class BomPluginIntegrationTests {
 	void moduleExclusionsAreIncludedInDependencyManagementOfGeneratedPom() throws IOException {
 		try (PrintWriter out = new PrintWriter(new FileWriter(this.buildFile))) {
 			out.println("plugins {");
-			out.println("    id 'org.springframework.boot.bom'");
-			out.println("    id 'org.springframework.boot.deployed'");
+			out.println("    id 'io.github.kotlinmania.spring.boot.bom'");
+			out.println("    id 'io.github.kotlinmania.spring.boot.deployed'");
 			out.println("}");
 			out.println("bom {");
 			out.println("    library('MySQL', '8.0.18') {");
@@ -180,8 +180,8 @@ class BomPluginIntegrationTests {
 	void moduleTypesAreIncludedInDependencyManagementOfGeneratedPom() throws IOException {
 		try (PrintWriter out = new PrintWriter(new FileWriter(this.buildFile))) {
 			out.println("plugins {");
-			out.println("    id 'org.springframework.boot.bom'");
-			out.println("    id 'org.springframework.boot.deployed'");
+			out.println("    id 'io.github.kotlinmania.spring.boot.bom'");
+			out.println("    id 'io.github.kotlinmania.spring.boot.deployed'");
 			out.println("}");
 			out.println("bom {");
 			out.println("    library('Elasticsearch', '7.15.2') {");
@@ -212,8 +212,8 @@ class BomPluginIntegrationTests {
 	void moduleClassifiersAreIncludedInDependencyManagementOfGeneratedPom() throws IOException {
 		try (PrintWriter out = new PrintWriter(new FileWriter(this.buildFile))) {
 			out.println("plugins {");
-			out.println("    id 'org.springframework.boot.bom'");
-			out.println("    id 'org.springframework.boot.deployed'");
+			out.println("    id 'io.github.kotlinmania.spring.boot.bom'");
+			out.println("    id 'io.github.kotlinmania.spring.boot.deployed'");
 			out.println("}");
 			out.println("bom {");
 			out.println("    library('Kafka', '2.7.2') {");
@@ -271,12 +271,12 @@ class BomPluginIntegrationTests {
 	void libraryNamedSpringBootHasNoVersionProperty() throws IOException {
 		try (PrintWriter out = new PrintWriter(new FileWriter(this.buildFile))) {
 			out.println("plugins {");
-			out.println("    id 'org.springframework.boot.bom'");
-			out.println("    id 'org.springframework.boot.deployed'");
+			out.println("    id 'io.github.kotlinmania.spring.boot.bom'");
+			out.println("    id 'io.github.kotlinmania.spring.boot.deployed'");
 			out.println("}");
 			out.println("bom {");
 			out.println("    library('Spring Boot', '1.2.3') {");
-			out.println("        group('org.springframework.boot') {");
+			out.println("        group('io.github.kotlinmania.spring.boot.) {");
 			out.println("            modules = [");
 			out.println("                'spring-boot'");
 			out.println("            ]");
@@ -287,7 +287,7 @@ class BomPluginIntegrationTests {
 		generatePom((pom) -> {
 			assertThat(pom).textAtPath("//properties/spring-boot.version").isEmpty();
 			NodeAssert dependency = pom.nodeAtPath("//dependencyManagement/dependencies/dependency[1]");
-			assertThat(dependency).textAtPath("groupId").isEqualTo("org.springframework.boot");
+			assertThat(dependency).textAtPath("groupId").isEqualTo("io.github.kotlinmania.spring.boot.);
 			assertThat(dependency).textAtPath("artifactId").isEqualTo("spring-boot");
 			assertThat(dependency).textAtPath("version").isEqualTo("1.2.3");
 			assertThat(dependency).textAtPath("scope").isNullOrEmpty();

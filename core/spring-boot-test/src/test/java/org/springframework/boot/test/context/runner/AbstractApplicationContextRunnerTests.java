@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.test.context.runner;
+package io.github.kotlinmania.spring.boot.test.context.runner;
 
 import java.io.IOException;
 import java.util.Collection;
@@ -31,12 +31,12 @@ import org.springframework.beans.factory.BeanDefinitionStoreException;
 import org.springframework.beans.factory.ObjectProvider;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.support.BeanDefinitionOverrideException;
-import org.springframework.boot.context.annotation.Configurations;
-import org.springframework.boot.context.annotation.UserConfigurations;
-import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.boot.context.properties.EnableConfigurationProperties;
-import org.springframework.boot.test.context.FilteredClassLoader;
-import org.springframework.boot.test.context.assertj.ApplicationContextAssertProvider;
+import io.github.kotlinmania.spring.boot.context.annotation.Configurations;
+import io.github.kotlinmania.spring.boot.context.annotation.UserConfigurations;
+import io.github.kotlinmania.spring.boot.context.properties.ConfigurationProperties;
+import io.github.kotlinmania.spring.boot.context.properties.EnableConfigurationProperties;
+import io.github.kotlinmania.spring.boot.test.context.FilteredClassLoader;
+import io.github.kotlinmania.spring.boot.test.context.assertj.ApplicationContextAssertProvider;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Condition;
@@ -153,8 +153,8 @@ abstract class AbstractApplicationContextRunnerTests<T extends AbstractApplicati
 	@Test
 	void runWithUserConfigurationsWhenHasSameShortClassNamedRegistersWithoutBeanName() {
 		get()
-			.withUserConfiguration(org.springframework.boot.test.context.example.duplicate.first.EmptyConfig.class,
-					org.springframework.boot.test.context.example.duplicate.second.EmptyConfig.class)
+			.withUserConfiguration(io.github.kotlinmania.spring.boot.test.context.example.duplicate.first.EmptyConfig.class,
+					io.github.kotlinmania.spring.boot.test.context.example.duplicate.second.EmptyConfig.class)
 			.run((context) -> assertThat(context.getStartupFailure())
 				.isInstanceOf(BeanDefinitionOverrideException.class));
 	}
@@ -169,11 +169,11 @@ abstract class AbstractApplicationContextRunnerTests<T extends AbstractApplicati
 	void runWithFullyQualifiedNameConfigurationsWhenHasSameShortClassNamedRegistersWithFullyQualifiedBeanName() {
 		get()
 			.withConfiguration(FullyQualifiedNameConfigurations.of(
-					org.springframework.boot.test.context.example.duplicate.first.EmptyConfig.class,
-					org.springframework.boot.test.context.example.duplicate.second.EmptyConfig.class))
+					io.github.kotlinmania.spring.boot.test.context.example.duplicate.first.EmptyConfig.class,
+					io.github.kotlinmania.spring.boot.test.context.example.duplicate.second.EmptyConfig.class))
 			.run((context) -> assertThat(context)
-				.hasSingleBean(org.springframework.boot.test.context.example.duplicate.first.EmptyConfig.class)
-				.hasSingleBean(org.springframework.boot.test.context.example.duplicate.second.EmptyConfig.class));
+				.hasSingleBean(io.github.kotlinmania.spring.boot.test.context.example.duplicate.first.EmptyConfig.class)
+				.hasSingleBean(io.github.kotlinmania.spring.boot.test.context.example.duplicate.second.EmptyConfig.class));
 	}
 
 	@Test

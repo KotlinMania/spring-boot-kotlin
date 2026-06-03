@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.autoconfigure;
+package io.github.kotlinmania.spring.boot.autoconfigure;
 
 import java.util.Arrays;
 
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.context.annotation.Configurations;
+import io.github.kotlinmania.spring.boot.context.annotation.Configurations;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

@@ -18,6 +18,6 @@
  * Support for loading resources.
  */
 @NullMarked
-package org.springframework.boot.io;
+package io.github.kotlinmania.spring.boot.io;
 
 import org.jspecify.annotations.NullMarked;

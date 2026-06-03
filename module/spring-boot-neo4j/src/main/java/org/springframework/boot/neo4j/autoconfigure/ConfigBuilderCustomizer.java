@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.neo4j.autoconfigure;
+package io.github.kotlinmania.spring.boot.neo4j.autoconfigure;
 
 import org.neo4j.driver.Config;
 import org.neo4j.driver.Config.ConfigBuilder;

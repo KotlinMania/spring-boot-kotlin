@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.actuate.security;
+package io.github.kotlinmania.spring.boot.actuate.security;
 
 import java.util.HashMap;
 import java.util.LinkedHashMap;
@@ -22,7 +22,7 @@ import java.util.Map;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.actuate.audit.AuditEvent;
+import io.github.kotlinmania.spring.boot.actuate.audit.AuditEvent;
 import org.springframework.security.authentication.event.AbstractAuthenticationEvent;
 import org.springframework.security.authentication.event.AbstractAuthenticationFailureEvent;
 import org.springframework.security.authentication.event.AuthenticationSuccessEvent;

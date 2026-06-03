@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.configurationsample.source.generation;
+package io.github.kotlinmania.spring.boot.configurationsample.source.generation;
 
-import org.springframework.boot.configurationsample.TestConfigurationPropertiesSource;
-import org.springframework.boot.configurationsample.TestDefaultValue;
+import io.github.kotlinmania.spring.boot.configurationsample.TestConfigurationPropertiesSource;
+import io.github.kotlinmania.spring.boot.configurationsample.TestDefaultValue;
 
 @TestConfigurationPropertiesSource
 public class ImmutablePropertiesSource {

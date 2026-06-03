@@ -14,15 +14,15 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.buildpack.platform.build;
+package io.github.kotlinmania.spring.boot.buildpack.platform.build;
 
 import java.io.IOException;
 import java.util.List;
 
-import org.springframework.boot.buildpack.platform.docker.type.Image;
-import org.springframework.boot.buildpack.platform.docker.type.ImageReference;
-import org.springframework.boot.buildpack.platform.io.IOBiConsumer;
-import org.springframework.boot.buildpack.platform.io.TarArchive;
+import io.github.kotlinmania.spring.boot.buildpack.platform.docker.type.Image;
+import io.github.kotlinmania.spring.boot.buildpack.platform.docker.type.ImageReference;
+import io.github.kotlinmania.spring.boot.buildpack.platform.io.IOBiConsumer;
+import io.github.kotlinmania.spring.boot.buildpack.platform.io.TarArchive;
 
 /**
  * Context passed to a {@link BuildpackResolver}.

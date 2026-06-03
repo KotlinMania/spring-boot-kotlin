@@ -28,11 +28,11 @@ import smoketest.kafka.Producer;
 import smoketest.kafka.SampleMessage;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.boot.testcontainers.service.connection.JksKeyStore;
-import org.springframework.boot.testcontainers.service.connection.JksTrustStore;
-import org.springframework.boot.testcontainers.service.connection.ServiceConnection;
-import org.springframework.boot.testsupport.container.TestImage;
+import io.github.kotlinmania.spring.boot.test.context.SpringBootTest;
+import io.github.kotlinmania.spring.boot.testcontainers.service.connection.JksKeyStore;
+import io.github.kotlinmania.spring.boot.testcontainers.service.connection.JksTrustStore;
+import io.github.kotlinmania.spring.boot.testcontainers.service.connection.ServiceConnection;
+import io.github.kotlinmania.spring.boot.testsupport.container.TestImage;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.hamcrest.Matchers.empty;

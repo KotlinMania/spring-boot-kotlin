@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.actuator.observability.opentelemetry.environmentvariables.unsupported;
+package io.github.kotlinmania.spring.boot.docs.actuator.observability.opentelemetry.environmentvariables.unsupported;
 
 import io.opentelemetry.api.OpenTelemetry;
 import io.opentelemetry.sdk.autoconfigure.AutoConfiguredOpenTelemetrySdk;

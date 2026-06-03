@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.gradle.tasks.bundling;
+package io.github.kotlinmania.spring.boot.gradle.tasks.bundling;
 
 import java.io.File;
 import java.util.Base64;
@@ -25,10 +25,10 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.io.TempDir;
 
-import org.springframework.boot.buildpack.platform.build.BuilderDockerConfiguration;
-import org.springframework.boot.buildpack.platform.docker.configuration.DockerConnectionConfiguration;
-import org.springframework.boot.buildpack.platform.docker.configuration.DockerRegistryAuthentication;
-import org.springframework.boot.gradle.junit.GradleProjectBuilder;
+import io.github.kotlinmania.spring.boot.buildpack.platform.build.BuilderDockerConfiguration;
+import io.github.kotlinmania.spring.boot.buildpack.platform.docker.configuration.DockerConnectionConfiguration;
+import io.github.kotlinmania.spring.boot.buildpack.platform.docker.configuration.DockerRegistryAuthentication;
+import io.github.kotlinmania.spring.boot.gradle.junit.GradleProjectBuilder;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatExceptionOfType;

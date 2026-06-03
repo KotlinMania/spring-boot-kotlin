@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.web.context.servlet;
+package io.github.kotlinmania.spring.boot.web.context.servlet;
 
 import java.util.Arrays;
 import java.util.LinkedHashSet;

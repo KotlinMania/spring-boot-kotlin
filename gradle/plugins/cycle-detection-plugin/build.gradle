@@ -40,8 +40,8 @@ dependencies {
 gradlePlugin {
 	plugins {
 		cycleDetectionPlugin {
-			id = "org.springframework.boot.cycle-detection"
-			implementationClass = "org.springframework.boot.build.cycledetection.CycleDetectionPlugin"
+			id = "io.github.kotlinmania.spring.boot.cycle-detection"
+			implementationClass = "io.github.kotlinmania.spring.boot.build.cycledetection.CycleDetectionPlugin"
 		}
 	}
 }

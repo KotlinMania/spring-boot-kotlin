@@ -14,15 +14,15 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.data.r2dbc.autoconfigure;
+package io.github.kotlinmania.spring.boot.data.r2dbc.autoconfigure;
 
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.autoconfigure.AutoConfigurations;
-import org.springframework.boot.autoconfigure.TestAutoConfigurationPackage;
-import org.springframework.boot.data.r2dbc.domain.city.City;
-import org.springframework.boot.r2dbc.autoconfigure.R2dbcAutoConfiguration;
-import org.springframework.boot.test.context.runner.ApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurations;
+import io.github.kotlinmania.spring.boot.autoconfigure.TestAutoConfigurationPackage;
+import io.github.kotlinmania.spring.boot.data.r2dbc.domain.city.City;
+import io.github.kotlinmania.spring.boot.r2dbc.autoconfigure.R2dbcAutoConfiguration;
+import io.github.kotlinmania.spring.boot.test.context.runner.ApplicationContextRunner;
 import org.springframework.data.domain.ManagedTypes;
 import org.springframework.data.r2dbc.core.R2dbcEntityTemplate;
 import org.springframework.data.r2dbc.mapping.R2dbcMappingContext;

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.quartz.autoconfigure;
+package io.github.kotlinmania.spring.boot.quartz.autoconfigure;
 
 import java.util.List;
 import java.util.Map;
@@ -23,9 +23,9 @@ import javax.sql.DataSource;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.jdbc.DatabaseDriver;
-import org.springframework.boot.jdbc.init.DataSourceScriptDatabaseInitializer;
-import org.springframework.boot.jdbc.init.PropertiesBasedDataSourceScriptDatabaseInitializer;
+import io.github.kotlinmania.spring.boot.jdbc.DatabaseDriver;
+import io.github.kotlinmania.spring.boot.jdbc.init.DataSourceScriptDatabaseInitializer;
+import io.github.kotlinmania.spring.boot.jdbc.init.PropertiesBasedDataSourceScriptDatabaseInitializer;
 import org.springframework.jdbc.datasource.init.ResourceDatabasePopulator;
 import org.springframework.util.ObjectUtils;
 

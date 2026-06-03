@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.build.architecture.nullmarked.notannotated;
+package io.github.kotlinmania.spring.boot.build.architecture.nullmarked.notannotated;
 
 public class TestClass {
 

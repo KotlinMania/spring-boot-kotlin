@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.r2dbc.docker.compose;
+package io.github.kotlinmania.spring.boot.r2dbc.docker.compose;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
@@ -23,8 +23,8 @@ import io.r2dbc.spi.ConnectionFactoryOptions;
 import io.r2dbc.spi.Option;
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.docker.compose.core.ConnectionPorts;
-import org.springframework.boot.docker.compose.core.RunningService;
+import io.github.kotlinmania.spring.boot.docker.compose.core.ConnectionPorts;
+import io.github.kotlinmania.spring.boot.docker.compose.core.RunningService;
 import org.springframework.mock.env.MockEnvironment;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -66,7 +66,7 @@ class PostgresR2dbcDockerComposeConnectionDetailsFactoryConnectionDetailsTests {
 
 	@Test
 	void createConnectionDetailsWithLabels() {
-		this.labels.put("org.springframework.boot.r2dbc.parameters",
+		this.labels.put("io.github.kotlinmania.spring.boot.r2dbc.parameters",
 				"connectTimeout=PT15S,applicationName=spring-boot");
 		ConnectionFactoryOptions options = getConnectionFactoryOptions();
 		assertConnectionFactoryOptions(options);
@@ -76,7 +76,7 @@ class PostgresR2dbcDockerComposeConnectionDetailsFactoryConnectionDetailsTests {
 
 	@Test
 	void createConnectionDetailsWithApplicationNameLabelTakesPrecedence() {
-		this.labels.put("org.springframework.boot.r2dbc.parameters", "applicationName=spring-boot");
+		this.labels.put("io.github.kotlinmania.spring.boot.r2dbc.parameters", "applicationName=spring-boot");
 		this.environment.setProperty("spring.application.name", "my-app");
 		ConnectionFactoryOptions options = getConnectionFactoryOptions();
 		assertConnectionFactoryOptions(options);
@@ -93,7 +93,7 @@ class PostgresR2dbcDockerComposeConnectionDetailsFactoryConnectionDetailsTests {
 
 	@Test
 	void createConnectionDetailsAppendSpringApplicationName() {
-		this.labels.put("org.springframework.boot.r2dbc.parameters", "connectTimeout=PT15S");
+		this.labels.put("io.github.kotlinmania.spring.boot.r2dbc.parameters", "connectTimeout=PT15S");
 		this.environment.setProperty("spring.application.name", "my-app");
 		ConnectionFactoryOptions options = getConnectionFactoryOptions();
 		assertConnectionFactoryOptions(options);

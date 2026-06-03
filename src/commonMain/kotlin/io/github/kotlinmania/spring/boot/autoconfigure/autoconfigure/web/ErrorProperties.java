@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.autoconfigure.web;
+package io.github.kotlinmania.spring.boot.autoconfigure.web;
 
 import org.springframework.beans.factory.annotation.Value;
 

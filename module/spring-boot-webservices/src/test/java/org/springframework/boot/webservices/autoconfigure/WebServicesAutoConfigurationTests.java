@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.webservices.autoconfigure;
+package io.github.kotlinmania.spring.boot.webservices.autoconfigure;
 
 import java.util.Collection;
 
@@ -23,10 +23,10 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
 
 import org.springframework.beans.factory.BeanCreationException;
-import org.springframework.boot.autoconfigure.AutoConfigurations;
-import org.springframework.boot.test.context.runner.WebApplicationContextRunner;
-import org.springframework.boot.testsupport.classpath.resources.WithResource;
-import org.springframework.boot.web.servlet.ServletRegistrationBean;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurations;
+import io.github.kotlinmania.spring.boot.test.context.runner.WebApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.testsupport.classpath.resources.WithResource;
+import io.github.kotlinmania.spring.boot.web.servlet.ServletRegistrationBean;
 import org.springframework.context.ApplicationContext;
 import org.springframework.ws.wsdl.wsdl11.SimpleWsdl11Definition;
 import org.springframework.xml.xsd.SimpleXsdSchema;

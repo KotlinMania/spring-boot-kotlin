@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.build.test.autoconfigure;
+package io.github.kotlinmania.spring.boot.build.test.autoconfigure;
 
 import java.io.File;
 import java.util.List;

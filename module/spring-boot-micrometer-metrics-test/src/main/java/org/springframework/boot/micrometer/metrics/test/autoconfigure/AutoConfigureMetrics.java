@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.micrometer.metrics.test.autoconfigure;
+package io.github.kotlinmania.spring.boot.micrometer.metrics.test.autoconfigure;
 
 import java.lang.annotation.Documented;
 import java.lang.annotation.ElementType;
@@ -26,7 +26,7 @@ import java.lang.annotation.Target;
 import io.micrometer.core.instrument.MeterRegistry;
 import io.micrometer.observation.ObservationRegistry;
 
-import org.springframework.boot.autoconfigure.ImportAutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.ImportAutoConfiguration;
 
 /**
  * Annotation that can be applied to a test class to enable auto-configuration for

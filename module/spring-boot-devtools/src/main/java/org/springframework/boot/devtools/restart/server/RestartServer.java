@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.devtools.restart.server;
+package io.github.kotlinmania.spring.boot.devtools.restart.server;
 
 import java.io.File;
 import java.io.IOException;
@@ -28,11 +28,11 @@ import java.util.Set;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
-import org.springframework.boot.devtools.restart.Restarter;
-import org.springframework.boot.devtools.restart.classloader.ClassLoaderFile;
-import org.springframework.boot.devtools.restart.classloader.ClassLoaderFile.Kind;
-import org.springframework.boot.devtools.restart.classloader.ClassLoaderFiles;
-import org.springframework.boot.devtools.restart.classloader.ClassLoaderFiles.SourceDirectory;
+import io.github.kotlinmania.spring.boot.devtools.restart.Restarter;
+import io.github.kotlinmania.spring.boot.devtools.restart.classloader.ClassLoaderFile;
+import io.github.kotlinmania.spring.boot.devtools.restart.classloader.ClassLoaderFile.Kind;
+import io.github.kotlinmania.spring.boot.devtools.restart.classloader.ClassLoaderFiles;
+import io.github.kotlinmania.spring.boot.devtools.restart.classloader.ClassLoaderFiles.SourceDirectory;
 import org.springframework.util.Assert;
 import org.springframework.util.FileCopyUtils;
 import org.springframework.util.ResourceUtils;

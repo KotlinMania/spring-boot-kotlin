@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.jdbc.autoconfigure;
+package io.github.kotlinmania.spring.boot.jdbc.autoconfigure;
 
-import org.springframework.boot.jdbc.DatabaseDriver;
+import io.github.kotlinmania.spring.boot.jdbc.DatabaseDriver;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

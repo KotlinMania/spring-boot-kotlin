@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.jsonb.autoconfigure;
+package io.github.kotlinmania.spring.boot.jsonb.autoconfigure;
 
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.test.autoconfigure.json.JsonTest;
+import io.github.kotlinmania.spring.boot.autoconfigure.SpringBootApplication;
+import io.github.kotlinmania.spring.boot.test.autoconfigure.json.JsonTest;
 
 /**
  * Application for testing of {@link JsonTest @JsonTest}.

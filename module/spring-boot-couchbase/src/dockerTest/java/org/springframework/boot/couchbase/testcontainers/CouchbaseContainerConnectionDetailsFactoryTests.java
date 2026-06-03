@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.couchbase.testcontainers;
+package io.github.kotlinmania.spring.boot.couchbase.testcontainers;
 
 import com.couchbase.client.java.Cluster;
 import org.junit.jupiter.api.Test;
@@ -25,11 +25,11 @@ import org.testcontainers.junit.jupiter.Container;
 import org.testcontainers.junit.jupiter.Testcontainers;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.autoconfigure.ImportAutoConfiguration;
-import org.springframework.boot.couchbase.autoconfigure.CouchbaseAutoConfiguration;
-import org.springframework.boot.couchbase.autoconfigure.CouchbaseConnectionDetails;
-import org.springframework.boot.testcontainers.service.connection.ServiceConnection;
-import org.springframework.boot.testsupport.container.TestImage;
+import io.github.kotlinmania.spring.boot.autoconfigure.ImportAutoConfiguration;
+import io.github.kotlinmania.spring.boot.couchbase.autoconfigure.CouchbaseAutoConfiguration;
+import io.github.kotlinmania.spring.boot.couchbase.autoconfigure.CouchbaseConnectionDetails;
+import io.github.kotlinmania.spring.boot.testcontainers.service.connection.ServiceConnection;
+import io.github.kotlinmania.spring.boot.testsupport.container.TestImage;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.test.context.junit.jupiter.SpringJUnitConfig;
 

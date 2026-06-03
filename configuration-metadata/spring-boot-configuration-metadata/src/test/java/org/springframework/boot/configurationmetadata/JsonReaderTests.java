@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.configurationmetadata;
+package io.github.kotlinmania.spring.boot.configurationmetadata;
 
 import java.io.IOException;
 import java.nio.charset.Charset;
@@ -23,7 +23,7 @@ import java.util.List;
 
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.configurationmetadata.json.JSONException;
+import io.github.kotlinmania.spring.boot.configurationmetadata.json.JSONException;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatIllegalStateException;

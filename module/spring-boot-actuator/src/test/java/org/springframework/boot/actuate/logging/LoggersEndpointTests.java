@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.actuate.logging;
+package io.github.kotlinmania.spring.boot.actuate.logging;
 
 import java.util.Collections;
 import java.util.EnumSet;
@@ -29,16 +29,16 @@ import org.springframework.aot.hint.RuntimeHints;
 import org.springframework.aot.hint.annotation.ReflectiveRuntimeHintsRegistrar;
 import org.springframework.aot.hint.predicate.ReflectionHintsPredicates;
 import org.springframework.aot.hint.predicate.RuntimeHintsPredicates;
-import org.springframework.boot.actuate.logging.LoggersEndpoint.GroupLoggerLevelsDescriptor;
-import org.springframework.boot.actuate.logging.LoggersEndpoint.LoggerLevelsDescriptor;
-import org.springframework.boot.actuate.logging.LoggersEndpoint.LoggersDescriptor;
-import org.springframework.boot.actuate.logging.LoggersEndpoint.SingleLoggerLevelsDescriptor;
-import org.springframework.boot.logging.LogLevel;
-import org.springframework.boot.logging.LoggerConfiguration;
-import org.springframework.boot.logging.LoggerConfiguration.LevelConfiguration;
-import org.springframework.boot.logging.LoggerGroup;
-import org.springframework.boot.logging.LoggerGroups;
-import org.springframework.boot.logging.LoggingSystem;
+import io.github.kotlinmania.spring.boot.actuate.logging.LoggersEndpoint.GroupLoggerLevelsDescriptor;
+import io.github.kotlinmania.spring.boot.actuate.logging.LoggersEndpoint.LoggerLevelsDescriptor;
+import io.github.kotlinmania.spring.boot.actuate.logging.LoggersEndpoint.LoggersDescriptor;
+import io.github.kotlinmania.spring.boot.actuate.logging.LoggersEndpoint.SingleLoggerLevelsDescriptor;
+import io.github.kotlinmania.spring.boot.logging.LogLevel;
+import io.github.kotlinmania.spring.boot.logging.LoggerConfiguration;
+import io.github.kotlinmania.spring.boot.logging.LoggerConfiguration.LevelConfiguration;
+import io.github.kotlinmania.spring.boot.logging.LoggerGroup;
+import io.github.kotlinmania.spring.boot.logging.LoggerGroups;
+import io.github.kotlinmania.spring.boot.logging.LoggingSystem;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.BDDMockito.given;

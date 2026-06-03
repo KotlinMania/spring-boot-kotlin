@@ -16,7 +16,7 @@
 
 package org.test;
 
-import org.springframework.boot.SpringApplication;
+import io.github.kotlinmania.spring.boot.SpringApplication;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.scheduling.annotation.EnableAsync;

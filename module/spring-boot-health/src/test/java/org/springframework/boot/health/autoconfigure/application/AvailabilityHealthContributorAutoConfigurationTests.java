@@ -14,16 +14,16 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.health.autoconfigure.application;
+package io.github.kotlinmania.spring.boot.health.autoconfigure.application;
 
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.autoconfigure.AutoConfigurations;
-import org.springframework.boot.autoconfigure.availability.ApplicationAvailabilityAutoConfiguration;
-import org.springframework.boot.availability.ApplicationAvailability;
-import org.springframework.boot.health.application.LivenessStateHealthIndicator;
-import org.springframework.boot.health.application.ReadinessStateHealthIndicator;
-import org.springframework.boot.test.context.runner.ApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurations;
+import io.github.kotlinmania.spring.boot.autoconfigure.availability.ApplicationAvailabilityAutoConfiguration;
+import io.github.kotlinmania.spring.boot.availability.ApplicationAvailability;
+import io.github.kotlinmania.spring.boot.health.application.LivenessStateHealthIndicator;
+import io.github.kotlinmania.spring.boot.health.application.ReadinessStateHealthIndicator;
+import io.github.kotlinmania.spring.boot.test.context.runner.ApplicationContextRunner;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

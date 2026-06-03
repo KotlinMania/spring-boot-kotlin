@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.cloudfoundry.autoconfigure.actuate.endpoint.reactive;
+package io.github.kotlinmania.spring.boot.cloudfoundry.autoconfigure.actuate.endpoint.reactive;
 
 import java.util.function.Consumer;
 
@@ -26,9 +26,9 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import reactor.test.StepVerifier;
 
-import org.springframework.boot.cloudfoundry.autoconfigure.actuate.endpoint.AccessLevel;
-import org.springframework.boot.cloudfoundry.autoconfigure.actuate.endpoint.CloudFoundryAuthorizationException;
-import org.springframework.boot.cloudfoundry.autoconfigure.actuate.endpoint.CloudFoundryAuthorizationException.Reason;
+import io.github.kotlinmania.spring.boot.cloudfoundry.autoconfigure.actuate.endpoint.AccessLevel;
+import io.github.kotlinmania.spring.boot.cloudfoundry.autoconfigure.actuate.endpoint.CloudFoundryAuthorizationException;
+import io.github.kotlinmania.spring.boot.cloudfoundry.autoconfigure.actuate.endpoint.CloudFoundryAuthorizationException.Reason;
 import org.springframework.http.HttpHeaders;
 import org.springframework.web.reactive.function.client.WebClient;
 

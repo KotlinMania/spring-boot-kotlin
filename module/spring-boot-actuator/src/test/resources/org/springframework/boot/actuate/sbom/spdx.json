@@ -1779,7 +1779,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:maven/org.springframework.boot.loader.launch.JarLauncher/sbom-test-gradle@0.0.1-SNAPSHOT"
+          "referenceLocator": "pkg:maven/io.github.kotlinmania.spring.boot.loader.launch.JarLauncher/sbom-test-gradle@0.0.1-SNAPSHOT"
         }
       ]
     },
@@ -2099,7 +2099,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:maven/org.springframework.boot/spring-boot@3.3.0-SNAPSHOT"
+          "referenceLocator": "pkg:maven/io.github.kotlinmania.spring.boot.spring-boot@3.3.0-SNAPSHOT"
         }
       ]
     },
@@ -2229,7 +2229,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:maven/org.springframework.boot/spring-boot-actuator@3.3.0-SNAPSHOT"
+          "referenceLocator": "pkg:maven/io.github.kotlinmania.spring.boot.spring-boot-actuator@3.3.0-SNAPSHOT"
         }
       ]
     },
@@ -2389,7 +2389,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:maven/org.springframework.boot/spring-boot-actuator-autoconfigure@3.3.0-SNAPSHOT"
+          "referenceLocator": "pkg:maven/io.github.kotlinmania.spring.boot.spring-boot-actuator-autoconfigure@3.3.0-SNAPSHOT"
         }
       ]
     },
@@ -2519,7 +2519,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:maven/org.springframework.boot/spring-boot-autoconfigure@3.3.0-SNAPSHOT"
+          "referenceLocator": "pkg:maven/io.github.kotlinmania.spring.boot.spring-boot-autoconfigure@3.3.0-SNAPSHOT"
         }
       ]
     },
@@ -2679,7 +2679,7 @@
         {
           "referenceCategory": "PACKAGE-MANAGER",
           "referenceType": "purl",
-          "referenceLocator": "pkg:maven/org.springframework.boot/spring-boot-jarmode-layertools@3.3.0-SNAPSHOT"
+          "referenceLocator": "pkg:maven/io.github.kotlinmania.spring.boot.spring-boot-jarmode-layertools@3.3.0-SNAPSHOT"
         }
       ]
     },

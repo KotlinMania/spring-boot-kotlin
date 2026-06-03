@@ -15,6 +15,6 @@
  */
 
 @NullMarked
-package org.springframework.boot.data.couchbase.domain.empty;
+package io.github.kotlinmania.spring.boot.data.couchbase.domain.empty;
 
 import org.jspecify.annotations.NullMarked;

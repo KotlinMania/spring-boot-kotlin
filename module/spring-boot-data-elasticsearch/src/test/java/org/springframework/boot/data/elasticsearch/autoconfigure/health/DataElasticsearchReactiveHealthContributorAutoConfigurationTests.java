@@ -14,19 +14,19 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.data.elasticsearch.autoconfigure.health;
+package io.github.kotlinmania.spring.boot.data.elasticsearch.autoconfigure.health;
 
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.autoconfigure.AutoConfigurations;
-import org.springframework.boot.data.elasticsearch.autoconfigure.DataElasticsearchAutoConfiguration;
-import org.springframework.boot.data.elasticsearch.health.DataElasticsearchReactiveHealthIndicator;
-import org.springframework.boot.elasticsearch.autoconfigure.ElasticsearchClientAutoConfiguration;
-import org.springframework.boot.elasticsearch.autoconfigure.ElasticsearchRestClientAutoConfiguration;
-import org.springframework.boot.elasticsearch.autoconfigure.health.ElasticsearchRestHealthContributorAutoConfiguration;
-import org.springframework.boot.elasticsearch.health.ElasticsearchRestClientHealthIndicator;
-import org.springframework.boot.health.autoconfigure.contributor.HealthContributorAutoConfiguration;
-import org.springframework.boot.test.context.runner.ApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurations;
+import io.github.kotlinmania.spring.boot.data.elasticsearch.autoconfigure.DataElasticsearchAutoConfiguration;
+import io.github.kotlinmania.spring.boot.data.elasticsearch.health.DataElasticsearchReactiveHealthIndicator;
+import io.github.kotlinmania.spring.boot.elasticsearch.autoconfigure.ElasticsearchClientAutoConfiguration;
+import io.github.kotlinmania.spring.boot.elasticsearch.autoconfigure.ElasticsearchRestClientAutoConfiguration;
+import io.github.kotlinmania.spring.boot.elasticsearch.autoconfigure.health.ElasticsearchRestHealthContributorAutoConfiguration;
+import io.github.kotlinmania.spring.boot.elasticsearch.health.ElasticsearchRestClientHealthIndicator;
+import io.github.kotlinmania.spring.boot.health.autoconfigure.contributor.HealthContributorAutoConfiguration;
+import io.github.kotlinmania.spring.boot.test.context.runner.ApplicationContextRunner;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

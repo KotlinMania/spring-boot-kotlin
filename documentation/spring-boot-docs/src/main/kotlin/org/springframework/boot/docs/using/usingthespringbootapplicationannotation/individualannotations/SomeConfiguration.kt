@@ -14,6 +14,6 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.using.usingthespringbootapplicationannotation.individualannotations
+package io.github.kotlinmania.spring.boot.docs.using.usingthespringbootapplicationannotation.individualannotations
 
 class SomeConfiguration

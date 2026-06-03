@@ -1,6 +1,6 @@
-org.springframework.boot.webmvc.autoconfigure.DispatcherServletAutoConfiguration
-org.springframework.boot.webmvc.autoconfigure.WebMvcAutoConfiguration
-org.springframework.boot.webmvc.autoconfigure.WebMvcObservationAutoConfiguration
-org.springframework.boot.webmvc.autoconfigure.actuate.endpoint.web.WebMvcHealthEndpointExtensionAutoConfiguration
-org.springframework.boot.webmvc.autoconfigure.actuate.web.mappings.WebMvcMappingsAutoConfiguration
-org.springframework.boot.webmvc.autoconfigure.error.ErrorMvcAutoConfiguration
+io.github.kotlinmania.spring.boot.webmvc.autoconfigure.DispatcherServletAutoConfiguration
+io.github.kotlinmania.spring.boot.webmvc.autoconfigure.WebMvcAutoConfiguration
+io.github.kotlinmania.spring.boot.webmvc.autoconfigure.WebMvcObservationAutoConfiguration
+io.github.kotlinmania.spring.boot.webmvc.autoconfigure.actuate.endpoint.web.WebMvcHealthEndpointExtensionAutoConfiguration
+io.github.kotlinmania.spring.boot.webmvc.autoconfigure.actuate.web.mappings.WebMvcMappingsAutoConfiguration
+io.github.kotlinmania.spring.boot.webmvc.autoconfigure.error.ErrorMvcAutoConfiguration

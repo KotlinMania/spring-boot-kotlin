@@ -14,18 +14,18 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.webmvc.test.autoconfigure.mockmvc;
+package io.github.kotlinmania.spring.boot.webmvc.test.autoconfigure.mockmvc;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.resttestclient.autoconfigure.AutoConfigureRestTestClient;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.boot.test.system.CapturedOutput;
-import org.springframework.boot.test.system.OutputCaptureExtension;
-import org.springframework.boot.webmvc.test.autoconfigure.AutoConfigureMockMvc;
-import org.springframework.boot.webmvc.test.autoconfigure.MockMvcPrint;
+import io.github.kotlinmania.spring.boot.resttestclient.autoconfigure.AutoConfigureRestTestClient;
+import io.github.kotlinmania.spring.boot.test.context.SpringBootTest;
+import io.github.kotlinmania.spring.boot.test.system.CapturedOutput;
+import io.github.kotlinmania.spring.boot.test.system.OutputCaptureExtension;
+import io.github.kotlinmania.spring.boot.webmvc.test.autoconfigure.AutoConfigureMockMvc;
+import io.github.kotlinmania.spring.boot.webmvc.test.autoconfigure.MockMvcPrint;
 import org.springframework.context.ApplicationContext;
 import org.springframework.test.context.bean.override.mockito.MockitoBean;
 import org.springframework.test.web.servlet.MockMvc;

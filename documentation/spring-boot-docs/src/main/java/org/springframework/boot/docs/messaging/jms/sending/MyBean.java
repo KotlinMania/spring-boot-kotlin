@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.messaging.jms.sending;
+package io.github.kotlinmania.spring.boot.docs.messaging.jms.sending;
 
 import org.springframework.jms.core.JmsClient;
 import org.springframework.stereotype.Component;

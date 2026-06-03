@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.messaging.amqp.receiving.custom
+package io.github.kotlinmania.spring.boot.docs.messaging.amqp.receiving.custom
 
 import org.springframework.amqp.rabbit.config.SimpleRabbitListenerContainerFactory
 import org.springframework.amqp.rabbit.connection.CachingConnectionFactory
 import org.springframework.amqp.rabbit.connection.ConnectionFactory
-import org.springframework.boot.amqp.autoconfigure.SimpleRabbitListenerContainerFactoryConfigurer
+import io.github.kotlinmania.spring.boot.amqp.autoconfigure.SimpleRabbitListenerContainerFactoryConfigurer
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
 

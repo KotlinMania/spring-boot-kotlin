@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.autoconfigure.service.connection;
+package io.github.kotlinmania.spring.boot.autoconfigure.service.connection;
 
 /**
  * {@link RuntimeException} thrown when a {@link ConnectionDetailsFactory} could not be

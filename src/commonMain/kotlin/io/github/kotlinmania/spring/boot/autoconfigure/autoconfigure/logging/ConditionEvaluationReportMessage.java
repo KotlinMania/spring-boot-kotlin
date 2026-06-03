@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.autoconfigure.logging;
+package io.github.kotlinmania.spring.boot.autoconfigure.logging;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -24,9 +24,9 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 
-import org.springframework.boot.autoconfigure.condition.ConditionEvaluationReport;
-import org.springframework.boot.autoconfigure.condition.ConditionEvaluationReport.ConditionAndOutcome;
-import org.springframework.boot.autoconfigure.condition.ConditionEvaluationReport.ConditionAndOutcomes;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionEvaluationReport;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionEvaluationReport.ConditionAndOutcome;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionEvaluationReport.ConditionAndOutcomes;
 import org.springframework.util.Assert;
 import org.springframework.util.ClassUtils;
 import org.springframework.util.LinkedMultiValueMap;

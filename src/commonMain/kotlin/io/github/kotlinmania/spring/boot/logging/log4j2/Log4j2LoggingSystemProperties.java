@@ -14,15 +14,15 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.logging.log4j2;
+package io.github.kotlinmania.spring.boot.logging.log4j2;
 
 import java.util.function.BiConsumer;
 import java.util.function.Function;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.logging.LogFile;
-import org.springframework.boot.logging.LoggingSystemProperties;
+import io.github.kotlinmania.spring.boot.logging.LogFile;
+import io.github.kotlinmania.spring.boot.logging.LoggingSystemProperties;
 import org.springframework.core.convert.ConversionFailedException;
 import org.springframework.core.convert.ConverterNotFoundException;
 import org.springframework.core.env.Environment;

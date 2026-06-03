@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.security.web.reactive;
+package io.github.kotlinmania.spring.boot.security.web.reactive;
 
 import java.util.function.Supplier;
 

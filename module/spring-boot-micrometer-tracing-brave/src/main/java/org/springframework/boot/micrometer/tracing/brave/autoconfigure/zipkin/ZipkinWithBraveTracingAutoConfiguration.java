@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.micrometer.tracing.brave.autoconfigure.zipkin;
+package io.github.kotlinmania.spring.boot.micrometer.tracing.brave.autoconfigure.zipkin;
 
 import brave.Tag;
 import brave.Tags;
@@ -26,12 +26,12 @@ import zipkin2.reporter.brave.AsyncZipkinSpanHandler;
 import zipkin2.reporter.brave.MutableSpanBytesEncoder;
 
 import org.springframework.beans.factory.ObjectProvider;
-import org.springframework.boot.autoconfigure.AutoConfiguration;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
-import org.springframework.boot.micrometer.tracing.autoconfigure.ConditionalOnEnabledTracingExport;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.EnableAutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnBean;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnClass;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnMissingBean;
+import io.github.kotlinmania.spring.boot.micrometer.tracing.autoconfigure.ConditionalOnEnabledTracingExport;
 import org.springframework.context.annotation.Bean;
 
 /**
@@ -43,7 +43,7 @@ import org.springframework.context.annotation.Bean;
  * @author Phillip Webb
  * @since 4.0.0
  */
-@AutoConfiguration(afterName = "org.springframework.boot.zipkin.autoconfigure.ZipkinAutoConfiguration")
+@AutoConfiguration(afterName = "io.github.kotlinmania.spring.boot.zipkin.autoconfigure.ZipkinAutoConfiguration")
 @ConditionalOnClass({ Encoding.class, AsyncZipkinSpanHandler.class })
 public final class ZipkinWithBraveTracingAutoConfiguration {
 

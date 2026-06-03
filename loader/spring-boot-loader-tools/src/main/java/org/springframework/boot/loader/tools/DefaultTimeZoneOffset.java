@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.loader.tools;
+package io.github.kotlinmania.spring.boot.loader.tools;
 
 import java.nio.file.attribute.FileTime;
 import java.util.TimeZone;

@@ -18,6 +18,6 @@
  * Auto-configuration for Spring WebFlux tests.
  */
 @NullMarked
-package org.springframework.boot.webflux.test.autoconfigure;
+package io.github.kotlinmania.spring.boot.webflux.test.autoconfigure;
 
 import org.jspecify.annotations.NullMarked;

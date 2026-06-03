@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.actuate.autoconfigure.web;
+package io.github.kotlinmania.spring.boot.actuate.autoconfigure.web;
 
 import java.lang.annotation.Documented;
 import java.lang.annotation.ElementType;
@@ -31,7 +31,7 @@ import org.springframework.core.annotation.Order;
 /**
  * Specialized {@link Configuration @Configuration} class that defines configuration
  * specific for the management context. Configurations should be registered in
- * {@code /META-INF/spring/org.springframework.boot.actuate.autoconfigure.web.ManagementContextConfiguration.imports}.
+ * {@code /META-INF/spring/io.github.kotlinmania.spring.boot.actuate.autoconfigure.web.ManagementContextConfiguration.imports}.
  * <p>
  * {@code ManagementContextConfiguration} classes can be ordered using
  * {@link Order @Order}. Ordering by implementing {@link Ordered} is not supported and

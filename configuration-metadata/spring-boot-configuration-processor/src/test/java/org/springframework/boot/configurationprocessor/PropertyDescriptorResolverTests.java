@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.configurationprocessor;
+package io.github.kotlinmania.spring.boot.configurationprocessor;
 
 import java.util.Arrays;
 import java.util.Collection;
@@ -28,27 +28,27 @@ import javax.lang.model.element.TypeElement;
 
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.configurationprocessor.metadata.ItemMetadata;
-import org.springframework.boot.configurationprocessor.test.RoundEnvironmentTester;
-import org.springframework.boot.configurationprocessor.test.TestableAnnotationProcessor;
-import org.springframework.boot.configurationsample.immutable.ImmutableClassConstructorBindingProperties;
-import org.springframework.boot.configurationsample.immutable.ImmutableDeducedConstructorBindingProperties;
-import org.springframework.boot.configurationsample.immutable.ImmutableMultiConstructorProperties;
-import org.springframework.boot.configurationsample.immutable.ImmutableSimpleProperties;
-import org.springframework.boot.configurationsample.lombok.LombokExplicitProperties;
-import org.springframework.boot.configurationsample.lombok.LombokSimpleDataProperties;
-import org.springframework.boot.configurationsample.lombok.LombokSimpleProperties;
-import org.springframework.boot.configurationsample.lombok.LombokSimpleValueProperties;
-import org.springframework.boot.configurationsample.name.ConstructorParameterNameAnnotationProperties;
-import org.springframework.boot.configurationsample.name.JavaBeanNameAnnotationProperties;
-import org.springframework.boot.configurationsample.name.LombokNameAnnotationProperties;
-import org.springframework.boot.configurationsample.name.RecordComponentNameAnnotationProperties;
-import org.springframework.boot.configurationsample.simple.AutowiredProperties;
-import org.springframework.boot.configurationsample.simple.HierarchicalProperties;
-import org.springframework.boot.configurationsample.simple.HierarchicalPropertiesGrandparent;
-import org.springframework.boot.configurationsample.simple.HierarchicalPropertiesParent;
-import org.springframework.boot.configurationsample.simple.SimpleProperties;
-import org.springframework.boot.configurationsample.specific.TwoConstructorsExample;
+import io.github.kotlinmania.spring.boot.configurationprocessor.metadata.ItemMetadata;
+import io.github.kotlinmania.spring.boot.configurationprocessor.test.RoundEnvironmentTester;
+import io.github.kotlinmania.spring.boot.configurationprocessor.test.TestableAnnotationProcessor;
+import io.github.kotlinmania.spring.boot.configurationsample.immutable.ImmutableClassConstructorBindingProperties;
+import io.github.kotlinmania.spring.boot.configurationsample.immutable.ImmutableDeducedConstructorBindingProperties;
+import io.github.kotlinmania.spring.boot.configurationsample.immutable.ImmutableMultiConstructorProperties;
+import io.github.kotlinmania.spring.boot.configurationsample.immutable.ImmutableSimpleProperties;
+import io.github.kotlinmania.spring.boot.configurationsample.lombok.LombokExplicitProperties;
+import io.github.kotlinmania.spring.boot.configurationsample.lombok.LombokSimpleDataProperties;
+import io.github.kotlinmania.spring.boot.configurationsample.lombok.LombokSimpleProperties;
+import io.github.kotlinmania.spring.boot.configurationsample.lombok.LombokSimpleValueProperties;
+import io.github.kotlinmania.spring.boot.configurationsample.name.ConstructorParameterNameAnnotationProperties;
+import io.github.kotlinmania.spring.boot.configurationsample.name.JavaBeanNameAnnotationProperties;
+import io.github.kotlinmania.spring.boot.configurationsample.name.LombokNameAnnotationProperties;
+import io.github.kotlinmania.spring.boot.configurationsample.name.RecordComponentNameAnnotationProperties;
+import io.github.kotlinmania.spring.boot.configurationsample.simple.AutowiredProperties;
+import io.github.kotlinmania.spring.boot.configurationsample.simple.HierarchicalProperties;
+import io.github.kotlinmania.spring.boot.configurationsample.simple.HierarchicalPropertiesGrandparent;
+import io.github.kotlinmania.spring.boot.configurationsample.simple.HierarchicalPropertiesParent;
+import io.github.kotlinmania.spring.boot.configurationsample.simple.SimpleProperties;
+import io.github.kotlinmania.spring.boot.configurationsample.specific.TwoConstructorsExample;
 import org.springframework.core.test.tools.SourceFile;
 import org.springframework.core.test.tools.TestCompiler;
 

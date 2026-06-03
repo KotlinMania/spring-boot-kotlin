@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.actuate.endpoint.web;
+package io.github.kotlinmania.spring.boot.actuate.endpoint.web;
 
-import org.springframework.boot.actuate.endpoint.ExposableEndpoint;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.ExposableEndpoint;
 
 /**
  * Information describing an endpoint that can be exposed over the web.

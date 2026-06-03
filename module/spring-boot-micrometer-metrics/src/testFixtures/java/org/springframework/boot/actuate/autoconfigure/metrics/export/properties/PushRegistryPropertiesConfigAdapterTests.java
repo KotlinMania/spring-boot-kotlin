@@ -14,15 +14,15 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.actuate.autoconfigure.metrics.export.properties;
+package io.github.kotlinmania.spring.boot.actuate.autoconfigure.metrics.export.properties;
 
 import java.time.Duration;
 
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.micrometer.metrics.autoconfigure.export.properties.PropertiesConfigAdapter;
-import org.springframework.boot.micrometer.metrics.autoconfigure.export.properties.PushRegistryProperties;
-import org.springframework.boot.micrometer.metrics.autoconfigure.export.properties.PushRegistryPropertiesConfigAdapter;
+import io.github.kotlinmania.spring.boot.micrometer.metrics.autoconfigure.export.properties.PropertiesConfigAdapter;
+import io.github.kotlinmania.spring.boot.micrometer.metrics.autoconfigure.export.properties.PushRegistryProperties;
+import io.github.kotlinmania.spring.boot.micrometer.metrics.autoconfigure.export.properties.PushRegistryPropertiesConfigAdapter;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

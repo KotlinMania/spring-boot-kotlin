@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.rsocket.autoconfigure;
+package io.github.kotlinmania.spring.boot.rsocket.autoconfigure;
 
 import java.util.List;
 import java.util.function.Consumer;
@@ -28,8 +28,8 @@ import reactor.netty.http.server.HttpServerRoutes;
 import reactor.netty.http.server.WebsocketServerSpec;
 import reactor.netty.http.server.WebsocketServerSpec.Builder;
 
-import org.springframework.boot.reactor.netty.NettyRouteProvider;
-import org.springframework.boot.rsocket.server.RSocketServerCustomizer;
+import io.github.kotlinmania.spring.boot.reactor.netty.NettyRouteProvider;
+import io.github.kotlinmania.spring.boot.rsocket.server.RSocketServerCustomizer;
 
 /**
  * {@link NettyRouteProvider} that configures an RSocket Websocket endpoint.

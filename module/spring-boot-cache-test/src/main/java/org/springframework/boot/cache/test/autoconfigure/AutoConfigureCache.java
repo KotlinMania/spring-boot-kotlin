@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.cache.test.autoconfigure;
+package io.github.kotlinmania.spring.boot.cache.test.autoconfigure;
 
 import java.lang.annotation.Documented;
 import java.lang.annotation.ElementType;
@@ -23,9 +23,9 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
-import org.springframework.boot.autoconfigure.ImportAutoConfiguration;
-import org.springframework.boot.autoconfigure.cache.CacheType;
-import org.springframework.boot.test.context.PropertyMapping;
+import io.github.kotlinmania.spring.boot.autoconfigure.ImportAutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.cache.CacheType;
+import io.github.kotlinmania.spring.boot.test.context.PropertyMapping;
 import org.springframework.cache.CacheManager;
 import org.springframework.cache.support.NoOpCacheManager;
 

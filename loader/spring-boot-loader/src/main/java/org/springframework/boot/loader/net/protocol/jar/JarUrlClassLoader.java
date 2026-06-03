@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.loader.net.protocol.jar;
+package io.github.kotlinmania.spring.boot.loader.net.protocol.jar;
 
 import java.io.IOException;
 import java.net.JarURLConnection;
@@ -28,8 +28,8 @@ import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.jar.JarFile;
 
-import org.springframework.boot.loader.jar.NestedJarFile;
-import org.springframework.boot.loader.launch.LaunchedClassLoader;
+import io.github.kotlinmania.spring.boot.loader.jar.NestedJarFile;
+import io.github.kotlinmania.spring.boot.loader.launch.LaunchedClassLoader;
 
 /**
  * {@link URLClassLoader} with optimized support for Jar URLs.
@@ -202,7 +202,7 @@ public abstract class JarUrlClassLoader extends URLClassLoader {
 	 */
 	public void clearCache() {
 		Handler.clearCache();
-		org.springframework.boot.loader.net.protocol.nested.Handler.clearCache();
+		io.github.kotlinmania.spring.boot.loader.net.protocol.nested.Handler.clearCache();
 		try {
 			clearJarFiles();
 		}

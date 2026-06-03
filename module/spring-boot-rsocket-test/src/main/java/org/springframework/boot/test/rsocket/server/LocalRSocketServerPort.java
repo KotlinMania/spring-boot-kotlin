@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.test.rsocket.server;
+package io.github.kotlinmania.spring.boot.test.rsocket.server;
 
 import java.lang.annotation.Documented;
 import java.lang.annotation.ElementType;

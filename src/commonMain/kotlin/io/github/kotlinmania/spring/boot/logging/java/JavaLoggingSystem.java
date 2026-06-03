@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.logging.java;
+package io.github.kotlinmania.spring.boot.logging.java;
 
 import java.io.ByteArrayInputStream;
 import java.io.InputStreamReader;
@@ -30,14 +30,14 @@ import java.util.logging.Logger;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.io.ApplicationResourceLoader;
-import org.springframework.boot.logging.AbstractLoggingSystem;
-import org.springframework.boot.logging.LogFile;
-import org.springframework.boot.logging.LogLevel;
-import org.springframework.boot.logging.LoggerConfiguration;
-import org.springframework.boot.logging.LoggingInitializationContext;
-import org.springframework.boot.logging.LoggingSystem;
-import org.springframework.boot.logging.LoggingSystemFactory;
+import io.github.kotlinmania.spring.boot.io.ApplicationResourceLoader;
+import io.github.kotlinmania.spring.boot.logging.AbstractLoggingSystem;
+import io.github.kotlinmania.spring.boot.logging.LogFile;
+import io.github.kotlinmania.spring.boot.logging.LogLevel;
+import io.github.kotlinmania.spring.boot.logging.LoggerConfiguration;
+import io.github.kotlinmania.spring.boot.logging.LoggingInitializationContext;
+import io.github.kotlinmania.spring.boot.logging.LoggingSystem;
+import io.github.kotlinmania.spring.boot.logging.LoggingSystemFactory;
 import org.springframework.core.Ordered;
 import org.springframework.core.annotation.Order;
 import org.springframework.core.io.Resource;

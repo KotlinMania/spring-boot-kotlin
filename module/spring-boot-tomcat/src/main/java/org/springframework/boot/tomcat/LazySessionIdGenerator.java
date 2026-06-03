@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.tomcat;
+package io.github.kotlinmania.spring.boot.tomcat;
 
 import org.apache.catalina.LifecycleException;
 import org.apache.catalina.LifecycleState;

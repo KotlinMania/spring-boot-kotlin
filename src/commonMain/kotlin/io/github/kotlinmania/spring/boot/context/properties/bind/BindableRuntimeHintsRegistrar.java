@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.context.properties.bind;
+package io.github.kotlinmania.spring.boot.context.properties.bind;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
@@ -38,9 +38,9 @@ import org.springframework.aot.hint.MemberCategory;
 import org.springframework.aot.hint.ReflectionHints;
 import org.springframework.aot.hint.RuntimeHints;
 import org.springframework.aot.hint.RuntimeHintsRegistrar;
-import org.springframework.boot.context.properties.NestedConfigurationProperty;
-import org.springframework.boot.context.properties.bind.JavaBeanBinder.BeanProperties;
-import org.springframework.boot.context.properties.bind.JavaBeanBinder.BeanProperty;
+import io.github.kotlinmania.spring.boot.context.properties.NestedConfigurationProperty;
+import io.github.kotlinmania.spring.boot.context.properties.bind.JavaBeanBinder.BeanProperties;
+import io.github.kotlinmania.spring.boot.context.properties.bind.JavaBeanBinder.BeanProperty;
 import org.springframework.core.KotlinDetector;
 import org.springframework.core.ResolvableType;
 import org.springframework.core.annotation.MergedAnnotations;

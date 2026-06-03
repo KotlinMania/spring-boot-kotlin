@@ -14,17 +14,17 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.health.actuate.endpoint;
+package io.github.kotlinmania.spring.boot.health.actuate.endpoint;
 
 import java.util.Map;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 
-import org.springframework.boot.health.contributor.Health;
-import org.springframework.boot.health.contributor.HealthIndicator;
-import org.springframework.boot.health.contributor.ReactiveHealthIndicator;
-import org.springframework.boot.health.contributor.Status;
+import io.github.kotlinmania.spring.boot.health.contributor.Health;
+import io.github.kotlinmania.spring.boot.health.contributor.HealthIndicator;
+import io.github.kotlinmania.spring.boot.health.contributor.ReactiveHealthIndicator;
+import io.github.kotlinmania.spring.boot.health.contributor.Status;
 
 /**
  * Description of health obtained from a {@link HealthIndicator} or

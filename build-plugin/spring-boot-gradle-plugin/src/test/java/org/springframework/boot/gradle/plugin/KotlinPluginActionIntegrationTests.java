@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.gradle.plugin;
+package io.github.kotlinmania.spring.boot.gradle.plugin;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -29,10 +29,10 @@ import org.junit.jupiter.api.condition.DisabledForJreRange;
 import org.junit.jupiter.api.condition.JRE;
 import org.junit.jupiter.api.extension.ExtendWith;
 
-import org.springframework.boot.gradle.testkit.PluginClasspathGradleBuild;
-import org.springframework.boot.testsupport.BuildOutput;
-import org.springframework.boot.testsupport.gradle.testkit.GradleBuild;
-import org.springframework.boot.testsupport.gradle.testkit.GradleBuildExtension;
+import io.github.kotlinmania.spring.boot.gradle.testkit.PluginClasspathGradleBuild;
+import io.github.kotlinmania.spring.boot.testsupport.BuildOutput;
+import io.github.kotlinmania.spring.boot.testsupport.gradle.testkit.GradleBuild;
+import io.github.kotlinmania.spring.boot.testsupport.gradle.testkit.GradleBuildExtension;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

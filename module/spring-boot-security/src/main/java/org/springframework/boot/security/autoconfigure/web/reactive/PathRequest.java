@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.security.autoconfigure.web.reactive;
+package io.github.kotlinmania.spring.boot.security.autoconfigure.web.reactive;
 
-import org.springframework.boot.security.autoconfigure.web.StaticResourceLocation;
+import io.github.kotlinmania.spring.boot.security.autoconfigure.web.StaticResourceLocation;
 import org.springframework.security.web.server.util.matcher.ServerWebExchangeMatcher;
 
 /**

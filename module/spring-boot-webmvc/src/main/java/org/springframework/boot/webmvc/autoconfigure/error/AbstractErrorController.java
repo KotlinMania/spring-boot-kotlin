@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.webmvc.autoconfigure.error;
+package io.github.kotlinmania.spring.boot.webmvc.autoconfigure.error;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -25,9 +25,9 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.web.error.ErrorAttributeOptions;
-import org.springframework.boot.webmvc.error.ErrorAttributes;
-import org.springframework.boot.webmvc.error.ErrorController;
+import io.github.kotlinmania.spring.boot.web.error.ErrorAttributeOptions;
+import io.github.kotlinmania.spring.boot.webmvc.error.ErrorAttributes;
+import io.github.kotlinmania.spring.boot.webmvc.error.ErrorController;
 import org.springframework.core.annotation.AnnotationAwareOrderComparator;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Controller;

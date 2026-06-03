@@ -15,6 +15,6 @@
  */
 
 @NullMarked
-package org.springframework.boot.autoconfigure.packagestest.two;
+package io.github.kotlinmania.spring.boot.autoconfigure.packagestest.two;
 
 import org.jspecify.annotations.NullMarked;

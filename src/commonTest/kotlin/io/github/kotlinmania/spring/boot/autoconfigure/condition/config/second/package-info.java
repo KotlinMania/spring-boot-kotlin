@@ -15,6 +15,6 @@
  */
 
 @NullMarked
-package org.springframework.boot.autoconfigure.condition.config.second;
+package io.github.kotlinmania.spring.boot.autoconfigure.condition.config.second;
 
 import org.jspecify.annotations.NullMarked;

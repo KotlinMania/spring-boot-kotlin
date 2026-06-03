@@ -18,7 +18,7 @@ import org.gradle.util.GradleVersion
 
 plugins {
 	id 'java'
-	id 'org.springframework.boot' version '{version}'
+	id 'io.github.kotlinmania.spring.boot. version '{version}'
 }
 
 group = 'com.example'

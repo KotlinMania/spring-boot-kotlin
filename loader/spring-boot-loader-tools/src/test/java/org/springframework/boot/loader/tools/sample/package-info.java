@@ -18,6 +18,6 @@
  * Sample code for testing Spring Boot's loader tools.
  */
 @NullMarked
-package org.springframework.boot.loader.tools.sample;
+package io.github.kotlinmania.spring.boot.loader.tools.sample;
 
 import org.jspecify.annotations.NullMarked;

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.groovy.template.autoconfigure;
+package io.github.kotlinmania.spring.boot.groovy.template.autoconfigure;
 
 import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
@@ -25,7 +25,7 @@ import java.util.Map;
 import groovy.text.markup.BaseTemplate;
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.context.properties.ConfigurationProperties;
+import io.github.kotlinmania.spring.boot.context.properties.ConfigurationProperties;
 import org.springframework.core.Ordered;
 import org.springframework.util.Assert;
 import org.springframework.util.MimeType;

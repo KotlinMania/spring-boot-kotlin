@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.cli.command.init;
+package io.github.kotlinmania.spring.boot.cli.command.init;
 
 import java.util.Collection;
 import java.util.Collections;
@@ -24,9 +24,9 @@ import java.util.Map;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.cli.json.JSONArray;
-import org.springframework.boot.cli.json.JSONException;
-import org.springframework.boot.cli.json.JSONObject;
+import io.github.kotlinmania.spring.boot.cli.json.JSONArray;
+import io.github.kotlinmania.spring.boot.cli.json.JSONException;
+import io.github.kotlinmania.spring.boot.cli.json.JSONObject;
 import org.springframework.util.Assert;
 
 /**

@@ -18,6 +18,6 @@
  * Actuator endpoint for Spring Integration.
  */
 @NullMarked
-package org.springframework.boot.integration.actuate.endpoint;
+package io.github.kotlinmania.spring.boot.integration.actuate.endpoint;
 
 import org.jspecify.annotations.NullMarked;

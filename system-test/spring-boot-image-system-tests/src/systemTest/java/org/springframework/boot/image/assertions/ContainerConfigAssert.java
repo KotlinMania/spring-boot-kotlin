@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.image.assertions;
+package io.github.kotlinmania.spring.boot.image.assertions;
 
 import java.util.Collection;
 import java.util.Collections;
@@ -32,7 +32,7 @@ import org.assertj.core.api.ListAssert;
 import org.assertj.core.api.ObjectAssert;
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.test.json.JsonContentAssert;
+import io.github.kotlinmania.spring.boot.test.json.JsonContentAssert;
 import org.springframework.lang.CheckReturnValue;
 
 /**

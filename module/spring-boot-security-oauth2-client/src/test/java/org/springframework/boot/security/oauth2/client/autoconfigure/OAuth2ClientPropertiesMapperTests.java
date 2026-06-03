@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.security.oauth2.client.autoconfigure;
+package io.github.kotlinmania.spring.boot.security.oauth2.client.autoconfigure;
 
 import java.util.Collections;
 import java.util.HashMap;
@@ -27,8 +27,8 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 import tools.jackson.databind.json.JsonMapper;
 
-import org.springframework.boot.security.oauth2.client.autoconfigure.OAuth2ClientProperties.Provider;
-import org.springframework.boot.security.oauth2.client.autoconfigure.OAuth2ClientProperties.Registration;
+import io.github.kotlinmania.spring.boot.security.oauth2.client.autoconfigure.OAuth2ClientProperties.Provider;
+import io.github.kotlinmania.spring.boot.security.oauth2.client.autoconfigure.OAuth2ClientProperties.Registration;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;

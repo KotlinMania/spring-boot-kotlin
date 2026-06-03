@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.webservices.test.autoconfigure.server;
+package io.github.kotlinmania.spring.boot.webservices.test.autoconfigure.server;
 
-import org.springframework.boot.autoconfigure.AutoConfiguration;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnClass;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.ws.test.server.MockWebServiceClient;

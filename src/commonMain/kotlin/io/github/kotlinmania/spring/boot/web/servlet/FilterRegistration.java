@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.web.servlet;
+package io.github.kotlinmania.spring.boot.web.servlet;
 
 import java.lang.annotation.Documented;
 import java.lang.annotation.ElementType;

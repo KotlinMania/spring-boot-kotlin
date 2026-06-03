@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.convert;
+package io.github.kotlinmania.spring.boot.convert;
 
 import java.io.IOException;
 
-import org.springframework.boot.origin.Origin;
+import io.github.kotlinmania.spring.boot.origin.Origin;
 import org.springframework.core.convert.converter.Converter;
 import org.springframework.core.io.InputStreamSource;
 import org.springframework.core.io.Resource;

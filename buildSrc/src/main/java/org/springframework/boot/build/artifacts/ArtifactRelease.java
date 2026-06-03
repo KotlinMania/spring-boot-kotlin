@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.build.artifacts;
+package io.github.kotlinmania.spring.boot.build.artifacts;
 
 import java.util.Locale;
 

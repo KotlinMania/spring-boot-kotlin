@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.http.converter.autoconfigure;
+package io.github.kotlinmania.spring.boot.http.converter.autoconfigure;
 
 import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
 
-import org.springframework.boot.context.properties.ConfigurationProperties;
+import io.github.kotlinmania.spring.boot.context.properties.ConfigurationProperties;
 
 /**
  * {@link ConfigurationProperties @ConfigurationProperties} for HTTP message conversion.

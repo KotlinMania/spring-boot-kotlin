@@ -14,26 +14,26 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.actuate.autoconfigure.info;
+package io.github.kotlinmania.spring.boot.actuate.autoconfigure.info;
 
-import org.springframework.boot.actuate.info.BuildInfoContributor;
-import org.springframework.boot.actuate.info.EnvironmentInfoContributor;
-import org.springframework.boot.actuate.info.GitInfoContributor;
-import org.springframework.boot.actuate.info.InfoContributor;
-import org.springframework.boot.actuate.info.JavaInfoContributor;
-import org.springframework.boot.actuate.info.OsInfoContributor;
-import org.springframework.boot.actuate.info.ProcessInfoContributor;
-import org.springframework.boot.actuate.info.SslInfoContributor;
-import org.springframework.boot.autoconfigure.AutoConfiguration;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnSingleCandidate;
-import org.springframework.boot.autoconfigure.info.ProjectInfoAutoConfiguration;
-import org.springframework.boot.context.properties.EnableConfigurationProperties;
-import org.springframework.boot.info.BuildProperties;
-import org.springframework.boot.info.GitProperties;
-import org.springframework.boot.info.SslInfo;
-import org.springframework.boot.ssl.SslBundles;
+import io.github.kotlinmania.spring.boot.actuate.info.BuildInfoContributor;
+import io.github.kotlinmania.spring.boot.actuate.info.EnvironmentInfoContributor;
+import io.github.kotlinmania.spring.boot.actuate.info.GitInfoContributor;
+import io.github.kotlinmania.spring.boot.actuate.info.InfoContributor;
+import io.github.kotlinmania.spring.boot.actuate.info.JavaInfoContributor;
+import io.github.kotlinmania.spring.boot.actuate.info.OsInfoContributor;
+import io.github.kotlinmania.spring.boot.actuate.info.ProcessInfoContributor;
+import io.github.kotlinmania.spring.boot.actuate.info.SslInfoContributor;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.EnableAutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnMissingBean;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnSingleCandidate;
+import io.github.kotlinmania.spring.boot.autoconfigure.info.ProjectInfoAutoConfiguration;
+import io.github.kotlinmania.spring.boot.context.properties.EnableConfigurationProperties;
+import io.github.kotlinmania.spring.boot.info.BuildProperties;
+import io.github.kotlinmania.spring.boot.info.GitProperties;
+import io.github.kotlinmania.spring.boot.info.SslInfo;
+import io.github.kotlinmania.spring.boot.ssl.SslBundles;
 import org.springframework.context.annotation.Bean;
 import org.springframework.core.Ordered;
 import org.springframework.core.annotation.Order;

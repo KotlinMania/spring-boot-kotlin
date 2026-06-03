@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.testsupport.web.servlet;
+package io.github.kotlinmania.spring.boot.testsupport.web.servlet;
 
 import java.io.IOException;
 

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.context.event;
+package io.github.kotlinmania.spring.boot.context.event;
 
 import java.time.Duration;
 
@@ -22,12 +22,12 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.SpringApplicationRunListener;
-import org.springframework.boot.availability.AvailabilityChangeEvent;
-import org.springframework.boot.availability.LivenessState;
-import org.springframework.boot.availability.ReadinessState;
-import org.springframework.boot.bootstrap.ConfigurableBootstrapContext;
+import io.github.kotlinmania.spring.boot.SpringApplication;
+import io.github.kotlinmania.spring.boot.SpringApplicationRunListener;
+import io.github.kotlinmania.spring.boot.availability.AvailabilityChangeEvent;
+import io.github.kotlinmania.spring.boot.availability.LivenessState;
+import io.github.kotlinmania.spring.boot.availability.ReadinessState;
+import io.github.kotlinmania.spring.boot.bootstrap.ConfigurableBootstrapContext;
 import org.springframework.context.ApplicationContextAware;
 import org.springframework.context.ApplicationEvent;
 import org.springframework.context.ApplicationListener;

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.autoconfigure.preinitialize;
+package io.github.kotlinmania.spring.boot.autoconfigure.preinitialize;
 
 /**
  * Interface used to preinitialize in the background code that may otherwise cause a delay

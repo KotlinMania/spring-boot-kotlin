@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.batch.mongodb.autoconfigure;
+package io.github.kotlinmania.spring.boot.batch.mongodb.autoconfigure;
 
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
@@ -24,13 +24,13 @@ import org.springframework.batch.core.configuration.support.DefaultBatchConfigur
 import org.springframework.batch.core.launch.JobOperator;
 import org.springframework.batch.core.repository.JobRepository;
 import org.springframework.beans.factory.config.BeanDefinition;
-import org.springframework.boot.autoconfigure.AutoConfigurations;
-import org.springframework.boot.batch.autoconfigure.BatchTransactionManager;
-import org.springframework.boot.batch.mongodb.autoconfigure.BatchDataMongoAutoConfiguration.SpringBootBatchMongoConfiguration;
-import org.springframework.boot.data.mongodb.autoconfigure.DataMongoAutoConfiguration;
-import org.springframework.boot.mongodb.autoconfigure.MongoAutoConfiguration;
-import org.springframework.boot.test.context.FilteredClassLoader;
-import org.springframework.boot.test.context.runner.ApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurations;
+import io.github.kotlinmania.spring.boot.batch.autoconfigure.BatchTransactionManager;
+import io.github.kotlinmania.spring.boot.batch.mongodb.autoconfigure.BatchDataMongoAutoConfiguration.SpringBootBatchMongoConfiguration;
+import io.github.kotlinmania.spring.boot.data.mongodb.autoconfigure.DataMongoAutoConfiguration;
+import io.github.kotlinmania.spring.boot.mongodb.autoconfigure.MongoAutoConfiguration;
+import io.github.kotlinmania.spring.boot.test.context.FilteredClassLoader;
+import io.github.kotlinmania.spring.boot.test.context.runner.ApplicationContextRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.mongodb.MongoDatabaseFactory;
@@ -173,7 +173,7 @@ class BatchDataMongoAutoConfigurationTests {
 					"spring.batch.data.mongodb.schema.location=classpath:does/not/exist.jsonl")
 			.run((context) -> assertThat(context).getFailure()
 				.hasRootCauseInstanceOf(
-						org.springframework.boot.context.properties.source.InvalidConfigurationPropertyValueException.class)
+						io.github.kotlinmania.spring.boot.context.properties.source.InvalidConfigurationPropertyValueException.class)
 				.rootCause()
 				.hasMessageContaining("spring.batch.data.mongodb.schema.location")
 				.hasMessageContaining("resource does not exist"));

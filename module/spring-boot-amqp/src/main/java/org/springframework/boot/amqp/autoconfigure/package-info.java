@@ -18,6 +18,6 @@
  * Auto-configuration for RabbitMQ.
  */
 @NullMarked
-package org.springframework.boot.amqp.autoconfigure;
+package io.github.kotlinmania.spring.boot.amqp.autoconfigure;
 
 import org.jspecify.annotations.NullMarked;

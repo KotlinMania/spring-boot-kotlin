@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.grpc.client.autoconfigure;
+package io.github.kotlinmania.spring.boot.grpc.client.autoconfigure;
 
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
@@ -32,15 +32,15 @@ import org.junit.jupiter.api.Test;
 import org.mockito.InOrder;
 import org.mockito.Mockito;
 
-import org.springframework.boot.autoconfigure.AutoConfigurationPackage;
-import org.springframework.boot.autoconfigure.AutoConfigurations;
-import org.springframework.boot.autoconfigure.ssl.SslAutoConfiguration;
-import org.springframework.boot.grpc.client.autoconfigure.GrpcClientAutoConfiguration.GrpcClientCoroutineStubConfiguration;
-import org.springframework.boot.grpc.client.autoconfigure.GrpcClientProperties.Channel;
-import org.springframework.boot.grpc.client.autoconfigure.test.scan.DummyBlockingGrpc;
-import org.springframework.boot.ssl.SslBundles;
-import org.springframework.boot.test.context.FilteredClassLoader;
-import org.springframework.boot.test.context.runner.ApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurationPackage;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurations;
+import io.github.kotlinmania.spring.boot.autoconfigure.ssl.SslAutoConfiguration;
+import io.github.kotlinmania.spring.boot.grpc.client.autoconfigure.GrpcClientAutoConfiguration.GrpcClientCoroutineStubConfiguration;
+import io.github.kotlinmania.spring.boot.grpc.client.autoconfigure.GrpcClientProperties.Channel;
+import io.github.kotlinmania.spring.boot.grpc.client.autoconfigure.test.scan.DummyBlockingGrpc;
+import io.github.kotlinmania.spring.boot.ssl.SslBundles;
+import io.github.kotlinmania.spring.boot.test.context.FilteredClassLoader;
+import io.github.kotlinmania.spring.boot.test.context.runner.ApplicationContextRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.annotation.Order;

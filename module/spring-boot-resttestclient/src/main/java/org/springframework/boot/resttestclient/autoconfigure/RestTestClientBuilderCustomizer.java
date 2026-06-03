@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.resttestclient.autoconfigure;
+package io.github.kotlinmania.spring.boot.resttestclient.autoconfigure;
 
 import org.springframework.test.web.servlet.client.RestTestClient;
 import org.springframework.test.web.servlet.client.RestTestClient.Builder;

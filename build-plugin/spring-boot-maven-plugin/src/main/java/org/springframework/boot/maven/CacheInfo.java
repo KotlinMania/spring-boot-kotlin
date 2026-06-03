@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.maven;
+package io.github.kotlinmania.spring.boot.maven;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.buildpack.platform.build.Cache;
+import io.github.kotlinmania.spring.boot.buildpack.platform.build.Cache;
 import org.springframework.util.Assert;
 
 /**

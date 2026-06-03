@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.actuate.endpoint.jmx;
+package io.github.kotlinmania.spring.boot.actuate.endpoint.jmx;
 
 import java.util.List;
 
-import org.springframework.boot.actuate.endpoint.Operation;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.Operation;
 
 /**
  * An operation on a JMX endpoint.

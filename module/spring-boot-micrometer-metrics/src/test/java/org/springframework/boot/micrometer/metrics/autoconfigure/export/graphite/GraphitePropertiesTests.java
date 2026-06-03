@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.micrometer.metrics.autoconfigure.export.graphite;
+package io.github.kotlinmania.spring.boot.micrometer.metrics.autoconfigure.export.graphite;
 
 import io.micrometer.graphite.GraphiteConfig;
 import org.junit.jupiter.api.Test;

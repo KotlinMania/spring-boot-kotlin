@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.security.autoconfigure.web.servlet;
+package io.github.kotlinmania.spring.boot.security.autoconfigure.web.servlet;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.web.server.WebServer;
-import org.springframework.boot.web.server.context.WebServerApplicationContext;
+import io.github.kotlinmania.spring.boot.web.server.WebServer;
+import io.github.kotlinmania.spring.boot.web.server.context.WebServerApplicationContext;
 import org.springframework.web.context.support.StaticWebApplicationContext;
 
 /**

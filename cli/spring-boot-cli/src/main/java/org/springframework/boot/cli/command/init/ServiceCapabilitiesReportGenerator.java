@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.cli.command.init;
+package io.github.kotlinmania.spring.boot.cli.command.init;
 
 import java.io.IOException;
 import java.util.ArrayList;

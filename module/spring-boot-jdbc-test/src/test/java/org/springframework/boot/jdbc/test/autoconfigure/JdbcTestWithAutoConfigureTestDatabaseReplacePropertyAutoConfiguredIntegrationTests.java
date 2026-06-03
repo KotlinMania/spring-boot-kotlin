@@ -14,15 +14,15 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.jdbc.test.autoconfigure;
+package io.github.kotlinmania.spring.boot.jdbc.test.autoconfigure;
 
 import javax.sql.DataSource;
 
 import org.junit.jupiter.api.Test;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
-import org.springframework.boot.jdbc.EmbeddedDatabaseConnection;
+import io.github.kotlinmania.spring.boot.autoconfigure.EnableAutoConfiguration;
+import io.github.kotlinmania.spring.boot.jdbc.EmbeddedDatabaseConnection;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.test.context.TestPropertySource;
 

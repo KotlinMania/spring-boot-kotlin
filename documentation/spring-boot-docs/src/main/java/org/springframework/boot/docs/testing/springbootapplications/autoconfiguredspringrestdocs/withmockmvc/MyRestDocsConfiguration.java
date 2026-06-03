@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.testing.springbootapplications.autoconfiguredspringrestdocs.withmockmvc;
+package io.github.kotlinmania.spring.boot.docs.testing.springbootapplications.autoconfiguredspringrestdocs.withmockmvc;
 
-import org.springframework.boot.restdocs.test.autoconfigure.RestDocsMockMvcConfigurationCustomizer;
-import org.springframework.boot.test.context.TestConfiguration;
+import io.github.kotlinmania.spring.boot.restdocs.test.autoconfigure.RestDocsMockMvcConfigurationCustomizer;
+import io.github.kotlinmania.spring.boot.test.context.TestConfiguration;
 import org.springframework.restdocs.mockmvc.MockMvcRestDocumentationConfigurer;
 import org.springframework.restdocs.templates.TemplateFormats;
 

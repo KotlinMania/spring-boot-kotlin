@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.integration.actuate.endpoint;
+package io.github.kotlinmania.spring.boot.integration.actuate.endpoint;
 
-import org.springframework.boot.actuate.endpoint.web.test.WebEndpointTest;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.web.test.WebEndpointTest;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.MediaType;

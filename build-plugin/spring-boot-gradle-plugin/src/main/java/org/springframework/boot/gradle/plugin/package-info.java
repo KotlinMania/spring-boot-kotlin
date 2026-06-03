@@ -18,6 +18,6 @@
  * Central classes for the Spring Boot Gradle plugin.
  */
 @NullMarked
-package org.springframework.boot.gradle.plugin;
+package io.github.kotlinmania.spring.boot.gradle.plugin;
 
 import org.jspecify.annotations.NullMarked;

@@ -14,15 +14,15 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.security.test.autoconfigure.webflux;
+package io.github.kotlinmania.spring.boot.security.test.autoconfigure.webflux;
 
 import java.util.List;
 
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.autoconfigure.AutoConfigurations;
-import org.springframework.boot.test.context.runner.ApplicationContextRunner;
-import org.springframework.boot.webtestclient.autoconfigure.WebTestClientAutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurations;
+import io.github.kotlinmania.spring.boot.test.context.runner.ApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.webtestclient.autoconfigure.WebTestClientAutoConfiguration;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.test.util.ReflectionTestUtils;

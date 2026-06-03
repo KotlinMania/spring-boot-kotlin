@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-import org.springframework.boot.gradle.tasks.bundling.BootJar
+import io.github.kotlinmania.spring.boot.gradle.tasks.bundling.BootJar
 
 plugins {
 	id "java"
-	id "org.springframework.boot"
+	id "io.github.kotlinmania.spring.boot.
 }
 
 java {
@@ -47,20 +47,20 @@ configurations {
 dependencies {
 	compileOnly("org.springframework:spring-webflux")
 
-	implementation(platform(org.springframework.boot.gradle.plugin.SpringBootPlugin.BOM_COORDINATES))
-	implementation("org.springframework.boot:spring-boot-starter")
-	implementation("org.springframework.boot:spring-boot-starter-actuator")
-	implementation("org.springframework.boot:spring-boot-starter-jackson")
+	implementation(platform(io.github.kotlinmania.spring.boot.gradle.plugin.SpringBootPlugin.BOM_COORDINATES))
+	implementation("io.github.kotlinmania.spring.boot.spring-boot-starter")
+	implementation("io.github.kotlinmania.spring.boot.spring-boot-starter-actuator")
+	implementation("io.github.kotlinmania.spring.boot.spring-boot-starter-jackson")
 
 	app(files(sourceSets.main.output))
-	app("org.springframework.boot:spring-boot-webflux")
-	netty("org.springframework.boot:spring-boot-starter-webflux")
-	tomcat("org.springframework.boot:spring-boot-starter-tomcat")
+	app("io.github.kotlinmania.spring.boot.spring-boot-webflux")
+	netty("io.github.kotlinmania.spring.boot.spring-boot-starter-webflux")
+	tomcat("io.github.kotlinmania.spring.boot.spring-boot-starter-tomcat")
 }
 
 ["netty", "tomcat"].each { webServer ->
 	def configurer = { task ->
-		task.mainClass = "org.springframework.boot.sni.server.SniServerApplication"
+		task.mainClass = "io.github.kotlinmania.spring.boot.sni.server.SniServerApplication"
 		task.classpath = configurations.getByName(webServer)
 		task.archiveClassifier = webServer
 		task.targetJavaVersion = project.java.targetCompatibility

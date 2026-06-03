@@ -15,6 +15,6 @@
  */
 
 @NullMarked
-package org.springframework.boot.deployment;
+package io.github.kotlinmania.spring.boot.deployment;
 
 import org.jspecify.annotations.NullMarked;

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.build.bom;
+package io.github.kotlinmania.spring.boot.build.bom;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -47,9 +47,9 @@ import org.gradle.api.artifacts.result.DependencyResult;
 import org.gradle.api.artifacts.result.ResolutionResult;
 import org.w3c.dom.Document;
 
-import org.springframework.boot.build.bom.ResolvedBom.Id;
-import org.springframework.boot.build.bom.bomr.version.DependencyVersion;
-import org.springframework.boot.build.xml.XmlDocument;
+import io.github.kotlinmania.spring.boot.build.bom.ResolvedBom.Id;
+import io.github.kotlinmania.spring.boot.build.bom.bomr.version.DependencyVersion;
+import io.github.kotlinmania.spring.boot.build.xml.XmlDocument;
 
 /**
  * A collection of modules, Maven plugins, and Maven boms that are versioned and released

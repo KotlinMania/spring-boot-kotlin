@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.restclient.autoconfigure.service;
+package io.github.kotlinmania.spring.boot.restclient.autoconfigure.service;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Proxy;
@@ -34,16 +34,16 @@ import org.junit.jupiter.api.Test;
 import org.mockito.ArgumentCaptor;
 
 import org.springframework.aop.Advisor;
-import org.springframework.boot.autoconfigure.AutoConfigurations;
-import org.springframework.boot.http.client.ClientHttpRequestFactoryBuilder;
-import org.springframework.boot.http.client.HttpClientSettings;
-import org.springframework.boot.http.client.HttpRedirects;
-import org.springframework.boot.http.client.autoconfigure.HttpClientAutoConfiguration;
-import org.springframework.boot.http.client.autoconfigure.imperative.ImperativeHttpClientAutoConfiguration;
-import org.springframework.boot.http.client.autoconfigure.service.HttpServiceClientPropertiesAutoConfiguration;
-import org.springframework.boot.restclient.RestClientCustomizer;
-import org.springframework.boot.restclient.autoconfigure.RestClientAutoConfiguration;
-import org.springframework.boot.test.context.runner.ApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurations;
+import io.github.kotlinmania.spring.boot.http.client.ClientHttpRequestFactoryBuilder;
+import io.github.kotlinmania.spring.boot.http.client.HttpClientSettings;
+import io.github.kotlinmania.spring.boot.http.client.HttpRedirects;
+import io.github.kotlinmania.spring.boot.http.client.autoconfigure.HttpClientAutoConfiguration;
+import io.github.kotlinmania.spring.boot.http.client.autoconfigure.imperative.ImperativeHttpClientAutoConfiguration;
+import io.github.kotlinmania.spring.boot.http.client.autoconfigure.service.HttpServiceClientPropertiesAutoConfiguration;
+import io.github.kotlinmania.spring.boot.restclient.RestClientCustomizer;
+import io.github.kotlinmania.spring.boot.restclient.autoconfigure.RestClientAutoConfiguration;
+import io.github.kotlinmania.spring.boot.test.context.runner.ApplicationContextRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.client.ClientHttpRequestFactory;

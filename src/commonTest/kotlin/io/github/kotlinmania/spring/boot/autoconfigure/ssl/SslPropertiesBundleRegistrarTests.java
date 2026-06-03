@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.autoconfigure.ssl;
+package io.github.kotlinmania.spring.boot.autoconfigure.ssl;
 
 import java.nio.file.Path;
 import java.util.Set;
@@ -23,8 +23,8 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 
-import org.springframework.boot.ssl.DefaultSslBundleRegistry;
-import org.springframework.boot.ssl.SslBundleRegistry;
+import io.github.kotlinmania.spring.boot.ssl.DefaultSslBundleRegistry;
+import io.github.kotlinmania.spring.boot.ssl.SslBundleRegistry;
 import org.springframework.core.io.DefaultResourceLoader;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -67,9 +67,9 @@ class SslPropertiesBundleRegistrarTests {
 	void shouldWatchJksBundles() {
 		JksSslBundleProperties jks = new JksSslBundleProperties();
 		jks.setReloadOnUpdate(true);
-		jks.getKeystore().setLocation("classpath:org/springframework/boot/autoconfigure/ssl/test.jks");
+		jks.getKeystore().setLocation("classpath:io.github.kotlinmania.spring.boot.autoconfigure/ssl/test.jks");
 		jks.getKeystore().setPassword("secret");
-		jks.getTruststore().setLocation("classpath:org/springframework/boot/autoconfigure/ssl/test.jks");
+		jks.getTruststore().setLocation("classpath:io.github.kotlinmania.spring.boot.autoconfigure/ssl/test.jks");
 		jks.getTruststore().setPassword("secret");
 		this.properties.getBundle().getJks().put("bundle1", jks);
 		this.registrar.registerBundles(this.registry);
@@ -81,10 +81,10 @@ class SslPropertiesBundleRegistrarTests {
 	void shouldWatchPemBundles() {
 		PemSslBundleProperties pem = new PemSslBundleProperties();
 		pem.setReloadOnUpdate(true);
-		pem.getKeystore().setCertificate("classpath:org/springframework/boot/autoconfigure/ssl/rsa-cert.pem");
-		pem.getKeystore().setPrivateKey("classpath:org/springframework/boot/autoconfigure/ssl/rsa-key.pem");
-		pem.getTruststore().setCertificate("classpath:org/springframework/boot/autoconfigure/ssl/ed25519-cert.pem");
-		pem.getTruststore().setPrivateKey("classpath:org/springframework/boot/autoconfigure/ssl/ed25519-key.pem");
+		pem.getKeystore().setCertificate("classpath:io.github.kotlinmania.spring.boot.autoconfigure/ssl/rsa-cert.pem");
+		pem.getKeystore().setPrivateKey("classpath:io.github.kotlinmania.spring.boot.autoconfigure/ssl/rsa-key.pem");
+		pem.getTruststore().setCertificate("classpath:io.github.kotlinmania.spring.boot.autoconfigure/ssl/ed25519-cert.pem");
+		pem.getTruststore().setPrivateKey("classpath:io.github.kotlinmania.spring.boot.autoconfigure/ssl/ed25519-key.pem");
 		this.properties.getBundle().getPem().put("bundle1", pem);
 		this.registrar.registerBundles(this.registry);
 		then(this.registry).should(times(1)).registerBundle(eq("bundle1"), any());
@@ -95,16 +95,16 @@ class SslPropertiesBundleRegistrarTests {
 	@Test
 	void shouldUseResourceLoader() {
 		PemSslBundleProperties pem = new PemSslBundleProperties();
-		pem.getTruststore().setCertificate("classpath:org/springframework/boot/autoconfigure/ssl/ed25519-cert.pem");
-		pem.getTruststore().setPrivateKey("classpath:org/springframework/boot/autoconfigure/ssl/ed25519-key.pem");
+		pem.getTruststore().setCertificate("classpath:io.github.kotlinmania.spring.boot.autoconfigure/ssl/ed25519-cert.pem");
+		pem.getTruststore().setPrivateKey("classpath:io.github.kotlinmania.spring.boot.autoconfigure/ssl/ed25519-key.pem");
 		this.properties.getBundle().getPem().put("bundle1", pem);
 		DefaultSslBundleRegistry registry = new DefaultSslBundleRegistry();
 		this.registrar.registerBundles(registry);
 		registry.getBundle("bundle1").createSslContext();
 		then(this.resourceLoader).should(atLeastOnce())
-			.getResource("classpath:org/springframework/boot/autoconfigure/ssl/ed25519-cert.pem");
+			.getResource("classpath:io.github.kotlinmania.spring.boot.autoconfigure/ssl/ed25519-cert.pem");
 		then(this.resourceLoader).should(atLeastOnce())
-			.getResource("classpath:org/springframework/boot/autoconfigure/ssl/ed25519-key.pem");
+			.getResource("classpath:io.github.kotlinmania.spring.boot.autoconfigure/ssl/ed25519-key.pem");
 	}
 
 	@Test
@@ -137,7 +137,7 @@ class SslPropertiesBundleRegistrarTests {
 	void shouldFailIfPemKeystorePrivateKeyIsEmbedded() {
 		PemSslBundleProperties pem = new PemSslBundleProperties();
 		pem.setReloadOnUpdate(true);
-		pem.getKeystore().setCertificate("classpath:org/springframework/boot/autoconfigure/ssl/ed25519-cert.pem");
+		pem.getKeystore().setCertificate("classpath:io.github.kotlinmania.spring.boot.autoconfigure/ssl/ed25519-cert.pem");
 		pem.getKeystore().setPrivateKey("""
 				-----BEGIN PRIVATE KEY-----
 				MC4CAQAwBQYDK2VwBCIEIC29RnMVTcyqXEAIO1b/6p7RdbM6TiqvnztVQ4IxYxUh
@@ -180,7 +180,7 @@ class SslPropertiesBundleRegistrarTests {
 	void shouldFailIfPemTruststorePrivateKeyIsEmbedded() {
 		PemSslBundleProperties pem = new PemSslBundleProperties();
 		pem.setReloadOnUpdate(true);
-		pem.getTruststore().setCertificate("classpath:org/springframework/boot/autoconfigure/ssl/ed25519-cert.pem");
+		pem.getTruststore().setCertificate("classpath:io.github.kotlinmania.spring.boot.autoconfigure/ssl/ed25519-cert.pem");
 		pem.getTruststore().setPrivateKey("""
 				-----BEGIN PRIVATE KEY-----
 				MC4CAQAwBQYDK2VwBCIEIC29RnMVTcyqXEAIO1b/6p7RdbM6TiqvnztVQ4IxYxUh

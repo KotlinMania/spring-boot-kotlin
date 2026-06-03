@@ -15,6 +15,6 @@
  */
 
 @NullMarked
-package org.springframework.boot.autoconfigure.context.filtersample;
+package io.github.kotlinmania.spring.boot.autoconfigure.context.filtersample;
 
 import org.jspecify.annotations.NullMarked;

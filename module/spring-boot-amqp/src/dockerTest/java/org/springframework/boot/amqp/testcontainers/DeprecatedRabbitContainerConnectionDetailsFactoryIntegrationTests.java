@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.amqp.testcontainers;
+package io.github.kotlinmania.spring.boot.amqp.testcontainers;
 
 import java.time.Duration;
 import java.util.ArrayList;
@@ -30,11 +30,11 @@ import org.springframework.amqp.rabbit.annotation.Queue;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.amqp.autoconfigure.RabbitAutoConfiguration;
-import org.springframework.boot.amqp.autoconfigure.RabbitConnectionDetails;
-import org.springframework.boot.autoconfigure.ImportAutoConfiguration;
-import org.springframework.boot.testcontainers.service.connection.ServiceConnection;
-import org.springframework.boot.testsupport.container.TestImage;
+import io.github.kotlinmania.spring.boot.amqp.autoconfigure.RabbitAutoConfiguration;
+import io.github.kotlinmania.spring.boot.amqp.autoconfigure.RabbitConnectionDetails;
+import io.github.kotlinmania.spring.boot.autoconfigure.ImportAutoConfiguration;
+import io.github.kotlinmania.spring.boot.testcontainers.service.connection.ServiceConnection;
+import io.github.kotlinmania.spring.boot.testsupport.container.TestImage;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.test.context.junit.jupiter.SpringJUnitConfig;

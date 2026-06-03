@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.health.autoconfigure.contributor;
+package io.github.kotlinmania.spring.boot.health.autoconfigure.contributor;
 
 import java.util.Collections;
 import java.util.LinkedHashMap;

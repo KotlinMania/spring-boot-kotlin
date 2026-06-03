@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.autoconfigure.ssl;
+package io.github.kotlinmania.spring.boot.autoconfigure.ssl;
 
 import java.net.URISyntaxException;
 import java.net.URL;
@@ -22,7 +22,7 @@ import java.nio.file.Path;
 
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.io.ApplicationResourceLoader;
+import io.github.kotlinmania.spring.boot.io.ApplicationResourceLoader;
 import org.springframework.core.io.ResourceLoader;
 
 import static org.assertj.core.api.Assertions.assertThat;

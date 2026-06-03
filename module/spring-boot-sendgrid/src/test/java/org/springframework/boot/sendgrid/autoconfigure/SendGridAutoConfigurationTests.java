@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.sendgrid.autoconfigure;
+package io.github.kotlinmania.spring.boot.sendgrid.autoconfigure;
 
 import com.sendgrid.SendGrid;
 import org.apache.http.impl.conn.DefaultProxyRoutePlanner;
@@ -23,8 +23,8 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 
 import org.springframework.beans.factory.NoSuchBeanDefinitionException;
-import org.springframework.boot.context.properties.source.ConfigurationPropertySources;
-import org.springframework.boot.test.util.TestPropertyValues;
+import io.github.kotlinmania.spring.boot.context.properties.source.ConfigurationPropertySources;
+import io.github.kotlinmania.spring.boot.test.util.TestPropertyValues;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

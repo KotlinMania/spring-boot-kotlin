@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docker.compose.lifecycle;
+package io.github.kotlinmania.spring.boot.docker.compose.lifecycle;
 
 import java.io.File;
 import java.time.Duration;
@@ -25,11 +25,11 @@ import java.util.Map;
 
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.context.properties.bind.Binder;
-import org.springframework.boot.context.properties.source.MapConfigurationPropertySource;
-import org.springframework.boot.docker.compose.core.RunningService;
-import org.springframework.boot.docker.compose.lifecycle.DockerComposeProperties.Readiness.Wait;
-import org.springframework.boot.docker.compose.lifecycle.DockerComposeProperties.Start.Skip;
+import io.github.kotlinmania.spring.boot.context.properties.bind.Binder;
+import io.github.kotlinmania.spring.boot.context.properties.source.MapConfigurationPropertySource;
+import io.github.kotlinmania.spring.boot.docker.compose.core.RunningService;
+import io.github.kotlinmania.spring.boot.docker.compose.lifecycle.DockerComposeProperties.Readiness.Wait;
+import io.github.kotlinmania.spring.boot.docker.compose.lifecycle.DockerComposeProperties.Start.Skip;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.Mockito.mock;

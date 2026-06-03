@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.actuate.endpoint.jmx;
+package io.github.kotlinmania.spring.boot.actuate.endpoint.jmx;
 
 import java.util.Arrays;
 import java.util.Collection;
 
-import org.springframework.boot.actuate.endpoint.Access;
-import org.springframework.boot.actuate.endpoint.EndpointId;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.Access;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.EndpointId;
 
 /**
  * Test {@link ExposableJmxEndpoint} implementation.

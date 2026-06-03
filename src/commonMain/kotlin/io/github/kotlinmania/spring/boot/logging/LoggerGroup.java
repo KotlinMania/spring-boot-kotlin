@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.logging;
+package io.github.kotlinmania.spring.boot.logging;
 
 import java.util.ArrayList;
 import java.util.Collections;

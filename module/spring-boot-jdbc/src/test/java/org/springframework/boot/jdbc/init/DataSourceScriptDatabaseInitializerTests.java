@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.jdbc.init;
+package io.github.kotlinmania.spring.boot.jdbc.init;
 
 import java.util.Collections;
 import java.util.UUID;
@@ -25,10 +25,10 @@ import com.zaxxer.hikari.HikariDataSource;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.jdbc.DataSourceBuilder;
-import org.springframework.boot.sql.init.AbstractScriptDatabaseInitializerTests;
-import org.springframework.boot.sql.init.DatabaseInitializationSettings;
-import org.springframework.boot.testsupport.BuildOutput;
+import io.github.kotlinmania.spring.boot.jdbc.DataSourceBuilder;
+import io.github.kotlinmania.spring.boot.sql.init.AbstractScriptDatabaseInitializerTests;
+import io.github.kotlinmania.spring.boot.sql.init.DatabaseInitializationSettings;
+import io.github.kotlinmania.spring.boot.testsupport.BuildOutput;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.datasource.init.ResourceDatabasePopulator;
 import org.springframework.jdbc.datasource.init.ScriptStatementFailedException;

@@ -14,17 +14,17 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.http.client.autoconfigure.imperative;
+package io.github.kotlinmania.spring.boot.http.client.autoconfigure.imperative;
 
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.http.client.HttpComponentsClientHttpRequestFactoryBuilder;
-import org.springframework.boot.http.client.JdkClientHttpRequestFactoryBuilder;
-import org.springframework.boot.http.client.JettyClientHttpRequestFactoryBuilder;
-import org.springframework.boot.http.client.ReactorClientHttpRequestFactoryBuilder;
-import org.springframework.boot.http.client.SimpleClientHttpRequestFactoryBuilder;
-import org.springframework.boot.http.client.autoconfigure.imperative.ImperativeHttpClientsProperties.Factory;
+import io.github.kotlinmania.spring.boot.http.client.HttpComponentsClientHttpRequestFactoryBuilder;
+import io.github.kotlinmania.spring.boot.http.client.JdkClientHttpRequestFactoryBuilder;
+import io.github.kotlinmania.spring.boot.http.client.JettyClientHttpRequestFactoryBuilder;
+import io.github.kotlinmania.spring.boot.http.client.ReactorClientHttpRequestFactoryBuilder;
+import io.github.kotlinmania.spring.boot.http.client.SimpleClientHttpRequestFactoryBuilder;
+import io.github.kotlinmania.spring.boot.http.client.autoconfigure.imperative.ImperativeHttpClientsProperties.Factory;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

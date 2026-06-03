@@ -14,18 +14,18 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.web.server;
+package io.github.kotlinmania.spring.boot.web.server;
 
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.ssl.SslBundle;
-import org.springframework.boot.ssl.SslBundleKey;
-import org.springframework.boot.ssl.SslOptions;
-import org.springframework.boot.ssl.SslStoreBundle;
-import org.springframework.boot.testsupport.classpath.resources.ResourcePath;
-import org.springframework.boot.testsupport.classpath.resources.WithPackageResources;
-import org.springframework.boot.testsupport.ssl.MockPkcs11Security;
-import org.springframework.boot.testsupport.ssl.MockPkcs11SecurityProvider;
+import io.github.kotlinmania.spring.boot.ssl.SslBundle;
+import io.github.kotlinmania.spring.boot.ssl.SslBundleKey;
+import io.github.kotlinmania.spring.boot.ssl.SslOptions;
+import io.github.kotlinmania.spring.boot.ssl.SslStoreBundle;
+import io.github.kotlinmania.spring.boot.testsupport.classpath.resources.ResourcePath;
+import io.github.kotlinmania.spring.boot.testsupport.classpath.resources.WithPackageResources;
+import io.github.kotlinmania.spring.boot.testsupport.ssl.MockPkcs11Security;
+import io.github.kotlinmania.spring.boot.testsupport.ssl.MockPkcs11SecurityProvider;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatIllegalStateException;

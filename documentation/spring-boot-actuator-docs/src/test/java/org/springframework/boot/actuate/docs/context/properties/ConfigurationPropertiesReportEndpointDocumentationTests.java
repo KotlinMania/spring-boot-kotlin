@@ -14,15 +14,15 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.actuate.docs.context.properties;
+package io.github.kotlinmania.spring.boot.actuate.docs.context.properties;
 
 import java.util.Collections;
 
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.actuate.context.properties.ConfigurationPropertiesReportEndpoint;
-import org.springframework.boot.actuate.docs.MockMvcEndpointDocumentationTests;
-import org.springframework.boot.actuate.endpoint.Show;
+import io.github.kotlinmania.spring.boot.actuate.context.properties.ConfigurationPropertiesReportEndpoint;
+import io.github.kotlinmania.spring.boot.actuate.docs.MockMvcEndpointDocumentationTests;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.Show;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.restdocs.mockmvc.MockMvcRestDocumentation;

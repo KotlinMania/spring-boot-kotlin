@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.grpc.test.autoconfigure;
+package io.github.kotlinmania.spring.boot.grpc.test.autoconfigure;
 
 import io.grpc.BindableService;
 import io.grpc.ServerServiceDefinition;
@@ -22,13 +22,13 @@ import io.grpc.stub.AbstractStub;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.autoconfigure.AutoConfigurations;
-import org.springframework.boot.autoconfigure.ssl.SslAutoConfiguration;
-import org.springframework.boot.grpc.client.autoconfigure.GrpcClientAutoConfiguration;
-import org.springframework.boot.grpc.server.autoconfigure.GrpcServerAutoConfiguration;
-import org.springframework.boot.grpc.server.autoconfigure.GrpcServerServicesAutoConfiguration;
-import org.springframework.boot.test.context.FilteredClassLoader;
-import org.springframework.boot.test.context.runner.ApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurations;
+import io.github.kotlinmania.spring.boot.autoconfigure.ssl.SslAutoConfiguration;
+import io.github.kotlinmania.spring.boot.grpc.client.autoconfigure.GrpcClientAutoConfiguration;
+import io.github.kotlinmania.spring.boot.grpc.server.autoconfigure.GrpcServerAutoConfiguration;
+import io.github.kotlinmania.spring.boot.grpc.server.autoconfigure.GrpcServerServicesAutoConfiguration;
+import io.github.kotlinmania.spring.boot.test.context.FilteredClassLoader;
+import io.github.kotlinmania.spring.boot.test.context.runner.ApplicationContextRunner;
 import org.springframework.grpc.client.GrpcChannelFactory;
 import org.springframework.grpc.server.GrpcServerFactory;
 

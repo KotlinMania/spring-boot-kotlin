@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.howto.dataaccess.configurecustomdatasource.custom;
+package io.github.kotlinmania.spring.boot.docs.howto.dataaccess.configurecustomdatasource.custom;
 
 public class SomeDataSource {
 

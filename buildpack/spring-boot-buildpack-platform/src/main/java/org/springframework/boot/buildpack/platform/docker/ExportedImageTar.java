@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.buildpack.platform.docker;
+package io.github.kotlinmania.spring.boot.buildpack.platform.docker;
 
 import java.io.Closeable;
 import java.io.IOException;
@@ -36,15 +36,15 @@ import org.apache.commons.compress.archivers.tar.TarArchiveEntry;
 import org.apache.commons.compress.archivers.tar.TarArchiveInputStream;
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.buildpack.platform.docker.type.BlobReference;
-import org.springframework.boot.buildpack.platform.docker.type.ImageArchiveIndex;
-import org.springframework.boot.buildpack.platform.docker.type.ImageArchiveManifest;
-import org.springframework.boot.buildpack.platform.docker.type.ImageReference;
-import org.springframework.boot.buildpack.platform.docker.type.Manifest;
-import org.springframework.boot.buildpack.platform.docker.type.ManifestList;
-import org.springframework.boot.buildpack.platform.io.IOBiConsumer;
-import org.springframework.boot.buildpack.platform.io.TarArchive;
-import org.springframework.boot.buildpack.platform.io.TarArchive.Compression;
+import io.github.kotlinmania.spring.boot.buildpack.platform.docker.type.BlobReference;
+import io.github.kotlinmania.spring.boot.buildpack.platform.docker.type.ImageArchiveIndex;
+import io.github.kotlinmania.spring.boot.buildpack.platform.docker.type.ImageArchiveManifest;
+import io.github.kotlinmania.spring.boot.buildpack.platform.docker.type.ImageReference;
+import io.github.kotlinmania.spring.boot.buildpack.platform.docker.type.Manifest;
+import io.github.kotlinmania.spring.boot.buildpack.platform.docker.type.ManifestList;
+import io.github.kotlinmania.spring.boot.buildpack.platform.io.IOBiConsumer;
+import io.github.kotlinmania.spring.boot.buildpack.platform.io.TarArchive;
+import io.github.kotlinmania.spring.boot.buildpack.platform.io.TarArchive.Compression;
 import org.springframework.util.Assert;
 import org.springframework.util.function.ThrowingFunction;
 

@@ -17,10 +17,10 @@
 /**
  * Support for failure analysis and reporting.
  *
- * @see org.springframework.boot.diagnostics.FailureAnalyzer
- * @see org.springframework.boot.diagnostics.FailureAnalysisReporter
+ * @see io.github.kotlinmania.spring.boot.diagnostics.FailureAnalyzer
+ * @see io.github.kotlinmania.spring.boot.diagnostics.FailureAnalysisReporter
  */
 @NullMarked
-package org.springframework.boot.diagnostics;
+package io.github.kotlinmania.spring.boot.diagnostics;
 
 import org.jspecify.annotations.NullMarked;

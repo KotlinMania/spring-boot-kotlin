@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.build.bom;
+package io.github.kotlinmania.spring.boot.build.bom;
 
 import java.util.List;
 import java.util.Objects;
@@ -34,11 +34,11 @@ import org.gradle.api.publish.maven.MavenPom;
 import org.gradle.api.publish.maven.MavenPublication;
 import org.gradle.api.tasks.TaskProvider;
 
-import org.springframework.boot.build.MavenRepositoryPlugin;
-import org.springframework.boot.build.bom.Library.Group;
-import org.springframework.boot.build.bom.Library.Module;
-import org.springframework.boot.build.bom.bomr.MoveToSnapshots;
-import org.springframework.boot.build.bom.bomr.UpgradeBom;
+import io.github.kotlinmania.spring.boot.build.MavenRepositoryPlugin;
+import io.github.kotlinmania.spring.boot.build.bom.Library.Group;
+import io.github.kotlinmania.spring.boot.build.bom.Library.Module;
+import io.github.kotlinmania.spring.boot.build.bom.bomr.MoveToSnapshots;
+import io.github.kotlinmania.spring.boot.build.bom.bomr.UpgradeBom;
 
 /**
  * {@link Plugin} for defining a bom. Dependencies are added as constraints in the

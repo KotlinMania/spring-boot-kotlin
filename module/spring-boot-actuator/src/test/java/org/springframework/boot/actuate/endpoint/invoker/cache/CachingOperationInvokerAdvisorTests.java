@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.actuate.endpoint.invoker.cache;
+package io.github.kotlinmania.spring.boot.actuate.endpoint.invoker.cache;
 
 import java.lang.reflect.Method;
 import java.util.function.Function;
@@ -26,14 +26,14 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 
-import org.springframework.boot.actuate.endpoint.ApiVersion;
-import org.springframework.boot.actuate.endpoint.EndpointId;
-import org.springframework.boot.actuate.endpoint.OperationType;
-import org.springframework.boot.actuate.endpoint.SecurityContext;
-import org.springframework.boot.actuate.endpoint.invoke.OperationInvoker;
-import org.springframework.boot.actuate.endpoint.invoke.OperationParameters;
-import org.springframework.boot.actuate.endpoint.invoke.reflect.OperationMethod;
-import org.springframework.boot.actuate.endpoint.web.WebServerNamespace;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.ApiVersion;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.EndpointId;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.OperationType;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.SecurityContext;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.invoke.OperationInvoker;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.invoke.OperationParameters;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.invoke.reflect.OperationMethod;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.web.WebServerNamespace;
 import org.springframework.util.ReflectionUtils;
 
 import static org.assertj.core.api.Assertions.assertThat;

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.gradle.tasks.buildinfo;
+package io.github.kotlinmania.spring.boot.gradle.tasks.buildinfo;
 
 import java.io.File;
 import java.io.FileReader;
@@ -29,9 +29,9 @@ import org.gradle.testkit.runner.BuildTask;
 import org.gradle.testkit.runner.TaskOutcome;
 import org.junit.jupiter.api.TestTemplate;
 
-import org.springframework.boot.gradle.junit.GradleCompatibility;
-import org.springframework.boot.testsupport.FileUtils;
-import org.springframework.boot.testsupport.gradle.testkit.GradleBuild;
+import io.github.kotlinmania.spring.boot.gradle.junit.GradleCompatibility;
+import io.github.kotlinmania.spring.boot.testsupport.FileUtils;
+import io.github.kotlinmania.spring.boot.testsupport.gradle.testkit.GradleBuild;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

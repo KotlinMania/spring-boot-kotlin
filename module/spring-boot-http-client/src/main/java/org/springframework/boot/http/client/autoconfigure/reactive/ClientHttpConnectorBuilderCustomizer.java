@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.http.client.autoconfigure.reactive;
+package io.github.kotlinmania.spring.boot.http.client.autoconfigure.reactive;
 
-import org.springframework.boot.http.client.reactive.ClientHttpConnectorBuilder;
+import io.github.kotlinmania.spring.boot.http.client.reactive.ClientHttpConnectorBuilder;
 
 /**
  * Customizer that can be used to modify the auto-configured

@@ -19,9 +19,9 @@ plugins {
 	id "org.jetbrains.dokka"
 	id "java-library"
 	id "java-test-fixtures"
-	id "org.springframework.boot.configuration-properties"
-	id "org.springframework.boot.deployed"
-	id "org.springframework.boot.optional-dependencies"
+	id "io.github.kotlinmania.spring.boot.configuration-properties"
+	id "io.github.kotlinmania.spring.boot.deployed"
+	id "io.github.kotlinmania.spring.boot.optional-dependencies"
 }
 
 description = "Spring Boot"
@@ -88,7 +88,7 @@ tasks.named("checkFormatMain") {
 
 tasks.named("compileJava") {
 	// Provide the project coordinates to the `GraalVmProcessor`:
-	options.compilerArgs << '-Alog4j.graalvm.groupId=org.springframework.boot'
+	options.compilerArgs << '-Alog4j.graalvm.groupId=io.github.kotlinmania.spring.boot.
 	options.compilerArgs << '-Alog4j.graalvm.artifactId=spring-boot-log4j'
 }
 

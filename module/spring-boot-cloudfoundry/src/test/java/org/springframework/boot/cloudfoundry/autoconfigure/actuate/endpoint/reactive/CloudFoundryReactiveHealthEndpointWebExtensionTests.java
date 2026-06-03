@@ -14,34 +14,34 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.cloudfoundry.autoconfigure.actuate.endpoint.reactive;
+package io.github.kotlinmania.spring.boot.cloudfoundry.autoconfigure.actuate.endpoint.reactive;
 
 import java.time.Duration;
 import java.util.Map;
 
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.actuate.autoconfigure.endpoint.EndpointAutoConfiguration;
-import org.springframework.boot.actuate.autoconfigure.endpoint.web.WebEndpointAutoConfiguration;
-import org.springframework.boot.actuate.autoconfigure.web.server.ManagementContextAutoConfiguration;
-import org.springframework.boot.actuate.endpoint.ApiVersion;
-import org.springframework.boot.actuate.endpoint.web.WebEndpointResponse;
-import org.springframework.boot.autoconfigure.AutoConfigurations;
-import org.springframework.boot.autoconfigure.context.PropertyPlaceholderAutoConfiguration;
-import org.springframework.boot.health.actuate.endpoint.CompositeHealthDescriptor;
-import org.springframework.boot.health.actuate.endpoint.HealthDescriptor;
-import org.springframework.boot.health.actuate.endpoint.IndicatedHealthDescriptor;
-import org.springframework.boot.health.autoconfigure.actuate.endpoint.HealthEndpointAutoConfiguration;
-import org.springframework.boot.health.autoconfigure.contributor.HealthContributorAutoConfiguration;
-import org.springframework.boot.health.autoconfigure.registry.HealthContributorRegistryAutoConfiguration;
-import org.springframework.boot.health.contributor.Health;
-import org.springframework.boot.health.contributor.HealthIndicator;
-import org.springframework.boot.http.converter.autoconfigure.HttpMessageConvertersAutoConfiguration;
-import org.springframework.boot.jackson.autoconfigure.JacksonAutoConfiguration;
-import org.springframework.boot.security.autoconfigure.web.reactive.ReactiveWebSecurityAutoConfiguration;
-import org.springframework.boot.test.context.runner.ReactiveWebApplicationContextRunner;
-import org.springframework.boot.webclient.autoconfigure.WebClientAutoConfiguration;
-import org.springframework.boot.webflux.autoconfigure.WebFluxAutoConfiguration;
+import io.github.kotlinmania.spring.boot.actuate.autoconfigure.endpoint.EndpointAutoConfiguration;
+import io.github.kotlinmania.spring.boot.actuate.autoconfigure.endpoint.web.WebEndpointAutoConfiguration;
+import io.github.kotlinmania.spring.boot.actuate.autoconfigure.web.server.ManagementContextAutoConfiguration;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.ApiVersion;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.web.WebEndpointResponse;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurations;
+import io.github.kotlinmania.spring.boot.autoconfigure.context.PropertyPlaceholderAutoConfiguration;
+import io.github.kotlinmania.spring.boot.health.actuate.endpoint.CompositeHealthDescriptor;
+import io.github.kotlinmania.spring.boot.health.actuate.endpoint.HealthDescriptor;
+import io.github.kotlinmania.spring.boot.health.actuate.endpoint.IndicatedHealthDescriptor;
+import io.github.kotlinmania.spring.boot.health.autoconfigure.actuate.endpoint.HealthEndpointAutoConfiguration;
+import io.github.kotlinmania.spring.boot.health.autoconfigure.contributor.HealthContributorAutoConfiguration;
+import io.github.kotlinmania.spring.boot.health.autoconfigure.registry.HealthContributorRegistryAutoConfiguration;
+import io.github.kotlinmania.spring.boot.health.contributor.Health;
+import io.github.kotlinmania.spring.boot.health.contributor.HealthIndicator;
+import io.github.kotlinmania.spring.boot.http.converter.autoconfigure.HttpMessageConvertersAutoConfiguration;
+import io.github.kotlinmania.spring.boot.jackson.autoconfigure.JacksonAutoConfiguration;
+import io.github.kotlinmania.spring.boot.security.autoconfigure.web.reactive.ReactiveWebSecurityAutoConfiguration;
+import io.github.kotlinmania.spring.boot.test.context.runner.ReactiveWebApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.webclient.autoconfigure.WebClientAutoConfiguration;
+import io.github.kotlinmania.spring.boot.webflux.autoconfigure.WebFluxAutoConfiguration;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.core.userdetails.MapReactiveUserDetailsService;

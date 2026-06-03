@@ -1,2 +1,2 @@
-org.springframework.boot.autoconfigure.template.TemplateAvailabilityProvider=\
-org.springframework.boot.mustache.autoconfigure.MustacheTemplateAvailabilityProvider
+io.github.kotlinmania.spring.boot.autoconfigure.template.TemplateAvailabilityProvider=\
+io.github.kotlinmania.spring.boot.mustache.autoconfigure.MustacheTemplateAvailabilityProvider

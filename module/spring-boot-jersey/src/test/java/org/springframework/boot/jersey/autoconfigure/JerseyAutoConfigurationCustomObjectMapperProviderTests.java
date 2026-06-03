@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.jersey.autoconfigure;
+package io.github.kotlinmania.spring.boot.jersey.autoconfigure;
 
 import java.lang.annotation.Documented;
 import java.lang.annotation.ElementType;
@@ -29,13 +29,13 @@ import org.glassfish.jersey.server.ResourceConfig;
 import org.junit.jupiter.api.Test;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.context.PropertyPlaceholderAutoConfiguration;
-import org.springframework.boot.resttestclient.TestRestTemplate;
-import org.springframework.boot.resttestclient.autoconfigure.AutoConfigureTestRestTemplate;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.boot.test.context.SpringBootTest.WebEnvironment;
-import org.springframework.boot.tomcat.autoconfigure.servlet.TomcatServletWebServerAutoConfiguration;
+import io.github.kotlinmania.spring.boot.SpringApplication;
+import io.github.kotlinmania.spring.boot.autoconfigure.context.PropertyPlaceholderAutoConfiguration;
+import io.github.kotlinmania.spring.boot.resttestclient.TestRestTemplate;
+import io.github.kotlinmania.spring.boot.resttestclient.autoconfigure.AutoConfigureTestRestTemplate;
+import io.github.kotlinmania.spring.boot.test.context.SpringBootTest;
+import io.github.kotlinmania.spring.boot.test.context.SpringBootTest.WebEnvironment;
+import io.github.kotlinmania.spring.boot.tomcat.autoconfigure.servlet.TomcatServletWebServerAutoConfiguration;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
 import org.springframework.http.HttpStatus;
@@ -120,7 +120,7 @@ class JerseyAutoConfigurationCustomObjectMapperProviderTests {
 	@Documented
 	@Configuration
 	@Import({ TomcatServletWebServerAutoConfiguration.class,
-			org.springframework.boot.jackson2.autoconfigure.Jackson2AutoConfiguration.class,
+			io.github.kotlinmania.spring.boot.jackson2.autoconfigure.Jackson2AutoConfiguration.class,
 			JerseyAutoConfiguration.class, PropertyPlaceholderAutoConfiguration.class })
 	protected @interface MinimalWebConfiguration {
 

@@ -18,6 +18,6 @@
  * Auto-configuration for FreeMarker.
  */
 @NullMarked
-package org.springframework.boot.freemarker.autoconfigure;
+package io.github.kotlinmania.spring.boot.freemarker.autoconfigure;
 
 import org.jspecify.annotations.NullMarked;

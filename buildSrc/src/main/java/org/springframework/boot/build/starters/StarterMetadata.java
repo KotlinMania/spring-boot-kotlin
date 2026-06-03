@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.build.starters;
+package io.github.kotlinmania.spring.boot.build.starters;
 
 import java.io.File;
 import java.io.FileWriter;

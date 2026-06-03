@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.grpc.client.autoconfigure;
+package io.github.kotlinmania.spring.boot.grpc.client.autoconfigure;
 
 import java.time.Duration;
 import java.util.concurrent.TimeUnit;
@@ -25,7 +25,7 @@ import io.grpc.ManagedChannelBuilder;
 import org.junit.jupiter.api.Test;
 import org.mockito.ArgumentCaptor;
 
-import org.springframework.boot.grpc.client.autoconfigure.GrpcClientProperties.Channel;
+import io.github.kotlinmania.spring.boot.grpc.client.autoconfigure.GrpcClientProperties.Channel;
 import org.springframework.grpc.client.GrpcChannelBuilderCustomizer;
 import org.springframework.grpc.client.interceptor.DefaultDeadlineSetupClientInterceptor;
 import org.springframework.util.unit.DataSize;

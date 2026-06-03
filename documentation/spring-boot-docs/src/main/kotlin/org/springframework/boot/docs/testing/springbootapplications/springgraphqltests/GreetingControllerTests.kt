@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.testing.springbootapplications.springgraphqltests
+package io.github.kotlinmania.spring.boot.docs.testing.springbootapplications.springgraphqltests
 
 import org.junit.jupiter.api.Test
 import org.springframework.beans.factory.annotation.Autowired
-import org.springframework.boot.docs.web.graphql.runtimewiring.GreetingController
-import org.springframework.boot.graphql.test.autoconfigure.GraphQlTest
+import io.github.kotlinmania.spring.boot.docs.web.graphql.runtimewiring.GreetingController
+import io.github.kotlinmania.spring.boot.graphql.test.autoconfigure.GraphQlTest
 import org.springframework.graphql.test.tester.GraphQlTester
 
 @GraphQlTest(GreetingController::class)

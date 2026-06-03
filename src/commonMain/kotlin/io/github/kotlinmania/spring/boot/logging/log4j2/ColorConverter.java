@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.logging.log4j2;
+package io.github.kotlinmania.spring.boot.logging.log4j2;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -36,11 +36,11 @@ import org.apache.logging.log4j.core.pattern.PatternFormatter;
 import org.apache.logging.log4j.core.pattern.PatternParser;
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.ansi.AnsiBackground;
-import org.springframework.boot.ansi.AnsiColor;
-import org.springframework.boot.ansi.AnsiElement;
-import org.springframework.boot.ansi.AnsiOutput;
-import org.springframework.boot.ansi.AnsiStyle;
+import io.github.kotlinmania.spring.boot.ansi.AnsiBackground;
+import io.github.kotlinmania.spring.boot.ansi.AnsiColor;
+import io.github.kotlinmania.spring.boot.ansi.AnsiElement;
+import io.github.kotlinmania.spring.boot.ansi.AnsiOutput;
+import io.github.kotlinmania.spring.boot.ansi.AnsiStyle;
 
 /**
  * Log4j2 {@link LogEventPatternConverter} to color output using the {@link AnsiOutput}

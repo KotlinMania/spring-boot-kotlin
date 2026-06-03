@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.diagnostics.analyzer;
+package io.github.kotlinmania.spring.boot.diagnostics.analyzer;
 
 import java.lang.reflect.Method;
 
@@ -23,9 +23,9 @@ import org.jspecify.annotations.Nullable;
 import org.springframework.beans.BeanInstantiationException;
 import org.springframework.beans.factory.InjectionPoint;
 import org.springframework.beans.factory.UnsatisfiedDependencyException;
-import org.springframework.boot.diagnostics.AbstractFailureAnalyzer;
-import org.springframework.boot.diagnostics.FailureAnalysis;
-import org.springframework.boot.diagnostics.FailureAnalyzer;
+import io.github.kotlinmania.spring.boot.diagnostics.AbstractFailureAnalyzer;
+import io.github.kotlinmania.spring.boot.diagnostics.FailureAnalysis;
+import io.github.kotlinmania.spring.boot.diagnostics.FailureAnalyzer;
 import org.springframework.util.Assert;
 import org.springframework.util.ClassUtils;
 

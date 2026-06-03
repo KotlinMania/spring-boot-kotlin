@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.cloudfoundry.autoconfigure.actuate.endpoint;
+package io.github.kotlinmania.spring.boot.cloudfoundry.autoconfigure.actuate.endpoint;
 
-import org.springframework.boot.actuate.endpoint.EndpointFilter;
-import org.springframework.boot.actuate.endpoint.annotation.DiscovererEndpointFilter;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.EndpointFilter;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.annotation.DiscovererEndpointFilter;
 
 /**
  * {@link EndpointFilter} for endpoints discovered by

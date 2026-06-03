@@ -18,6 +18,6 @@
  * Support for building Spring Boot applications using Ant.
  */
 @NullMarked
-package org.springframework.boot.ant;
+package io.github.kotlinmania.spring.boot.ant;
 
 import org.jspecify.annotations.NullMarked;

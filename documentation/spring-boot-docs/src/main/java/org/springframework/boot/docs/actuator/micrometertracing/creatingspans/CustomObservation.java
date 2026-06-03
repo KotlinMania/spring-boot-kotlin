@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.actuator.micrometertracing.creatingspans;
+package io.github.kotlinmania.spring.boot.docs.actuator.micrometertracing.creatingspans;
 
 import io.micrometer.observation.Observation;
 import io.micrometer.observation.ObservationRegistry;

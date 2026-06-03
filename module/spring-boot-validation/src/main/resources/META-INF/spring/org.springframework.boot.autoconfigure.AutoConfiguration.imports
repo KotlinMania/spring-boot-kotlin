@@ -1,1 +1,1 @@
-org.springframework.boot.validation.autoconfigure.ValidationAutoConfiguration
+io.github.kotlinmania.spring.boot.validation.autoconfigure.ValidationAutoConfiguration

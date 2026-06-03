@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.liquibase.autoconfigure;
+package io.github.kotlinmania.spring.boot.liquibase.autoconfigure;
 
 import java.util.List;
 import java.util.stream.Stream;
@@ -24,9 +24,9 @@ import liquibase.UpdateSummaryOutputEnum;
 import liquibase.ui.UIServiceEnum;
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.liquibase.autoconfigure.LiquibaseProperties.ShowSummary;
-import org.springframework.boot.liquibase.autoconfigure.LiquibaseProperties.ShowSummaryOutput;
-import org.springframework.boot.liquibase.autoconfigure.LiquibaseProperties.UiService;
+import io.github.kotlinmania.spring.boot.liquibase.autoconfigure.LiquibaseProperties.ShowSummary;
+import io.github.kotlinmania.spring.boot.liquibase.autoconfigure.LiquibaseProperties.ShowSummaryOutput;
+import io.github.kotlinmania.spring.boot.liquibase.autoconfigure.LiquibaseProperties.UiService;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

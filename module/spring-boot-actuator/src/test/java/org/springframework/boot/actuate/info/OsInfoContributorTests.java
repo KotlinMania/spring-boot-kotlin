@@ -14,15 +14,15 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.actuate.info;
+package io.github.kotlinmania.spring.boot.actuate.info;
 
 import org.junit.jupiter.api.Test;
 
 import org.springframework.aot.hint.MemberCategory;
 import org.springframework.aot.hint.RuntimeHints;
 import org.springframework.aot.hint.predicate.RuntimeHintsPredicates;
-import org.springframework.boot.actuate.info.OsInfoContributor.OsInfoContributorRuntimeHints;
-import org.springframework.boot.info.OsInfo;
+import io.github.kotlinmania.spring.boot.actuate.info.OsInfoContributor.OsInfoContributorRuntimeHints;
+import io.github.kotlinmania.spring.boot.info.OsInfo;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

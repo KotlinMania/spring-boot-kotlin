@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.micrometer.observation.autoconfigure;
+package io.github.kotlinmania.spring.boot.micrometer.observation.autoconfigure;
 
 import io.micrometer.common.annotation.ValueExpressionResolver;
 import org.jspecify.annotations.Nullable;

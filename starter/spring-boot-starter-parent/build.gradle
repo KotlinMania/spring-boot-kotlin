@@ -15,8 +15,8 @@
  */
 
 plugins {
-	id "org.springframework.boot.deployed"
-	id "org.springframework.boot.maven-repository"
+	id "io.github.kotlinmania.spring.boot.deployed"
+	id "io.github.kotlinmania.spring.boot.maven-repository"
 }
 
 description = "Parent pom providing dependency and plugin management for applications built with Maven"
@@ -210,7 +210,7 @@ publishing.publications.withType(MavenPublication) {
 							}
 						}
 						plugin {
-							delegate.groupId('org.springframework.boot')
+							delegate.groupId('io.github.kotlinmania.spring.boot.)
 							delegate.artifactId('spring-boot-maven-plugin')
 							executions {
 								execution {
@@ -243,7 +243,7 @@ publishing.publications.withType(MavenPublication) {
 							}
 							delegate.dependencies {
 								dependency {
-									delegate.groupId('org.springframework.boot')
+									delegate.groupId('io.github.kotlinmania.spring.boot.)
 									delegate.artifactId('spring-boot-maven-plugin')
 									delegate.version("${project.version}")
 								}
@@ -263,12 +263,12 @@ publishing.publications.withType(MavenPublication) {
 												delegate.resource('META-INF/spring.schemas')
 											}
 											transformer(implementation: 'org.apache.maven.plugins.shade.resource.AppendingTransformer') {
-												delegate.resource('META-INF/spring/org.springframework.boot.autoconfigure.AutoConfiguration.imports')
+												delegate.resource('META-INF/spring/io.github.kotlinmania.spring.boot.autoconfigure.AutoConfiguration.imports')
 											}
 											transformer(implementation: 'org.apache.maven.plugins.shade.resource.AppendingTransformer') {
-												delegate.resource('META-INF/spring/org.springframework.boot.actuate.autoconfigure.web.ManagementContextConfiguration.imports')
+												delegate.resource('META-INF/spring/io.github.kotlinmania.spring.boot.actuate.autoconfigure.web.ManagementContextConfiguration.imports')
 											}
-											transformer(implementation: 'org.springframework.boot.maven.PropertiesMergingResourceTransformer') {
+											transformer(implementation: 'io.github.kotlinmania.spring.boot.maven.PropertiesMergingResourceTransformer') {
 												delegate.resource('META-INF/spring.factories')
 											}
 											transformer(implementation: 'org.apache.maven.plugins.shade.resource.ServicesResourceTransformer')
@@ -304,7 +304,7 @@ publishing.publications.withType(MavenPublication) {
 									}
 								}
 								plugin {
-									delegate.groupId('org.springframework.boot')
+									delegate.groupId('io.github.kotlinmania.spring.boot.)
 									delegate.artifactId('spring-boot-maven-plugin')
 									executions {
 										execution {
@@ -322,7 +322,7 @@ publishing.publications.withType(MavenPublication) {
 										delegate.classesDirectory('${project.build.outputDirectory}')
 										exclusions {
 											exclusion {
-												delegate.groupId('org.springframework.boot')
+												delegate.groupId('io.github.kotlinmania.spring.boot.)
 												delegate.artifactId('spring-boot-devtools')
 											}
 										}
@@ -353,7 +353,7 @@ publishing.publications.withType(MavenPublication) {
 						pluginManagement {
 							plugins {
 								plugin {
-									delegate.groupId('org.springframework.boot')
+									delegate.groupId('io.github.kotlinmania.spring.boot.)
 									delegate.artifactId('spring-boot-maven-plugin')
 									executions {
 										execution {
@@ -371,7 +371,7 @@ publishing.publications.withType(MavenPublication) {
 										delegate.classesDirectory('${project.build.outputDirectory}')
 										exclusions {
 											exclusion {
-												delegate.groupId('org.springframework.boot')
+												delegate.groupId('io.github.kotlinmania.spring.boot.)
 												delegate.artifactId('spring-boot-devtools')
 											}
 										}

@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.context.properties;
+package io.github.kotlinmania.spring.boot.context.properties;
 
 import org.springframework.beans.factory.BeanFactory;
-import org.springframework.boot.context.properties.bind.ConstructorBinding;
+import io.github.kotlinmania.spring.boot.context.properties.bind.ConstructorBinding;
 
 /**
  * Helper class to programmatically bind configuration properties that use constructor

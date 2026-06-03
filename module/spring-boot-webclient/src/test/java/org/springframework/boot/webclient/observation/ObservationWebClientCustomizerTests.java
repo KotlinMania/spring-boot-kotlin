@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.webclient.observation;
+package io.github.kotlinmania.spring.boot.webclient.observation;
 
 import io.micrometer.observation.tck.TestObservationRegistry;
 import org.junit.jupiter.api.Test;

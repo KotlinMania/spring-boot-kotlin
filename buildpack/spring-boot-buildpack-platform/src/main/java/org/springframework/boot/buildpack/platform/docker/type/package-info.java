@@ -18,6 +18,6 @@
  * Docker types.
  */
 @NullMarked
-package org.springframework.boot.buildpack.platform.docker.type;
+package io.github.kotlinmania.spring.boot.buildpack.platform.docker.type;
 
 import org.jspecify.annotations.NullMarked;

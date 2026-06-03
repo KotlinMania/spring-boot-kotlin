@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.webservices.autoconfigure;
+package io.github.kotlinmania.spring.boot.webservices.autoconfigure;
 
 import java.util.HashMap;
 import java.util.Map;
 
-import org.springframework.boot.context.properties.ConfigurationProperties;
+import io.github.kotlinmania.spring.boot.context.properties.ConfigurationProperties;
 import org.springframework.util.Assert;
 
 /**

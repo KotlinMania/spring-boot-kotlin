@@ -18,7 +18,7 @@ package smoketest.simple;
 
 import jakarta.validation.constraints.NotNull;
 
-import org.springframework.boot.context.properties.ConfigurationProperties;
+import io.github.kotlinmania.spring.boot.context.properties.ConfigurationProperties;
 import org.springframework.validation.annotation.Validated;
 
 @Validated

@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.actuate.autoconfigure.endpoint;
+package io.github.kotlinmania.spring.boot.actuate.autoconfigure.endpoint;
 
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.actuate.endpoint.Access;
-import org.springframework.boot.actuate.endpoint.EndpointId;
-import org.springframework.boot.context.properties.source.ConfigurationPropertySources;
-import org.springframework.boot.context.properties.source.MutuallyExclusiveConfigurationPropertiesException;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.Access;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.EndpointId;
+import io.github.kotlinmania.spring.boot.context.properties.source.ConfigurationPropertySources;
+import io.github.kotlinmania.spring.boot.context.properties.source.MutuallyExclusiveConfigurationPropertiesException;
 import org.springframework.mock.env.MockEnvironment;
 
 import static org.assertj.core.api.Assertions.assertThat;

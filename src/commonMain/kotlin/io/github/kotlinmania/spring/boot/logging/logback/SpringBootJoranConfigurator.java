@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.logging.logback;
+package io.github.kotlinmania.spring.boot.logging.logback;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
@@ -60,7 +60,7 @@ import org.springframework.aot.hint.ReflectionHints;
 import org.springframework.aot.hint.TypeReference;
 import org.springframework.beans.factory.aot.BeanFactoryInitializationAotContribution;
 import org.springframework.beans.factory.aot.BeanFactoryInitializationCode;
-import org.springframework.boot.logging.LoggingInitializationContext;
+import io.github.kotlinmania.spring.boot.logging.LoggingInitializationContext;
 import org.springframework.context.aot.AbstractAotProcessor;
 import org.springframework.core.CollectionFactory;
 import org.springframework.core.NativeDetector;

@@ -1,2 +1,2 @@
-org.springframework.boot.webservices.autoconfigure.client.WebServiceTemplateAutoConfiguration
-org.springframework.boot.webservices.test.autoconfigure.client.WebServiceClientTemplateAutoConfiguration
+io.github.kotlinmania.spring.boot.webservices.autoconfigure.client.WebServiceTemplateAutoConfiguration
+io.github.kotlinmania.spring.boot.webservices.test.autoconfigure.client.WebServiceClientTemplateAutoConfiguration

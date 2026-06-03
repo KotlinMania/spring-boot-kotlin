@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.webtestclient.autoconfigure;
+package io.github.kotlinmania.spring.boot.webtestclient.autoconfigure;
 
 import org.junit.jupiter.api.Test;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
+import io.github.kotlinmania.spring.boot.test.context.SpringBootTest;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Import;
 import org.springframework.test.web.reactive.server.WebTestClient;

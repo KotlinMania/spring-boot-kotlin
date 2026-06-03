@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.http.client.autoconfigure;
+package io.github.kotlinmania.spring.boot.http.client.autoconfigure;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.context.properties.bind.Name;
+import io.github.kotlinmania.spring.boot.context.properties.bind.Name;
 
 /**
  * API Version properties for both reactive and imperative HTTP Clients.

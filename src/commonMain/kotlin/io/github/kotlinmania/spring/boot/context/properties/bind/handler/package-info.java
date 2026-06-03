@@ -15,10 +15,10 @@
  */
 
 /**
- * General {@link org.springframework.boot.context.properties.bind.BindHandler
+ * General {@link io.github.kotlinmania.spring.boot.context.properties.bind.BindHandler
  * BindHandler} implementations.
  */
 @NullMarked
-package org.springframework.boot.context.properties.bind.handler;
+package io.github.kotlinmania.spring.boot.context.properties.bind.handler;
 
 import org.jspecify.annotations.NullMarked;

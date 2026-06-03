@@ -14,18 +14,18 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.session.autoconfigure;
+package io.github.kotlinmania.spring.boot.session.autoconfigure;
 
 import java.util.Collections;
 import java.util.function.Consumer;
 
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.test.context.assertj.AssertableReactiveWebApplicationContext;
-import org.springframework.boot.test.context.runner.ContextConsumer;
-import org.springframework.boot.test.context.runner.ReactiveWebApplicationContextRunner;
-import org.springframework.boot.web.context.reactive.ReactiveWebApplicationContext;
-import org.springframework.boot.web.server.reactive.MockReactiveWebServerFactory;
+import io.github.kotlinmania.spring.boot.test.context.assertj.AssertableReactiveWebApplicationContext;
+import io.github.kotlinmania.spring.boot.test.context.runner.ContextConsumer;
+import io.github.kotlinmania.spring.boot.test.context.runner.ReactiveWebApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.web.context.reactive.ReactiveWebApplicationContext;
+import io.github.kotlinmania.spring.boot.web.server.reactive.MockReactiveWebServerFactory;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.mock.http.server.reactive.MockServerHttpRequest;

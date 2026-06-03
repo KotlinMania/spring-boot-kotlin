@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.thymeleaf.autoconfigure.webmvctest;
+package io.github.kotlinmania.spring.boot.thymeleaf.autoconfigure.webmvctest;
 
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.webmvc.test.autoconfigure.WebMvcTest;
+import io.github.kotlinmania.spring.boot.autoconfigure.SpringBootApplication;
+import io.github.kotlinmania.spring.boot.webmvc.test.autoconfigure.WebMvcTest;
 
 /**
  * Application for testing Thymeleaf integration with {@link WebMvcTest @WebMvcTest}.

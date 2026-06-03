@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.howto.dataaccess.configurehibernatenamingstrategy.spring;
+package io.github.kotlinmania.spring.boot.docs.howto.dataaccess.configurehibernatenamingstrategy.spring;
 
 import org.hibernate.boot.model.naming.Identifier;
 import org.hibernate.boot.model.naming.PhysicalNamingStrategySnakeCaseImpl;

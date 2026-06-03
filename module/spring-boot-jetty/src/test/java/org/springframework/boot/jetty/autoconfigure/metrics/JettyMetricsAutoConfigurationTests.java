@@ -14,28 +14,28 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.jetty.autoconfigure.metrics;
+package io.github.kotlinmania.spring.boot.jetty.autoconfigure.metrics;
 
 import io.micrometer.core.instrument.MeterRegistry;
 import io.micrometer.core.instrument.Tags;
 import io.micrometer.core.instrument.simple.SimpleMeterRegistry;
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.AutoConfigurations;
-import org.springframework.boot.context.event.ApplicationStartedEvent;
-import org.springframework.boot.jetty.autoconfigure.reactive.JettyReactiveWebServerAutoConfiguration;
-import org.springframework.boot.jetty.autoconfigure.servlet.JettyServletWebServerAutoConfiguration;
-import org.springframework.boot.jetty.metrics.JettyConnectionMetricsBinder;
-import org.springframework.boot.jetty.metrics.JettyServerThreadPoolMetricsBinder;
-import org.springframework.boot.jetty.metrics.JettySslHandshakeMetricsBinder;
-import org.springframework.boot.jetty.reactive.JettyReactiveWebServerFactory;
-import org.springframework.boot.jetty.servlet.JettyServletWebServerFactory;
-import org.springframework.boot.test.context.runner.ReactiveWebApplicationContextRunner;
-import org.springframework.boot.test.context.runner.WebApplicationContextRunner;
-import org.springframework.boot.testsupport.classpath.resources.WithPackageResources;
-import org.springframework.boot.web.server.reactive.context.AnnotationConfigReactiveWebServerApplicationContext;
-import org.springframework.boot.web.server.servlet.context.AnnotationConfigServletWebServerApplicationContext;
+import io.github.kotlinmania.spring.boot.SpringApplication;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurations;
+import io.github.kotlinmania.spring.boot.context.event.ApplicationStartedEvent;
+import io.github.kotlinmania.spring.boot.jetty.autoconfigure.reactive.JettyReactiveWebServerAutoConfiguration;
+import io.github.kotlinmania.spring.boot.jetty.autoconfigure.servlet.JettyServletWebServerAutoConfiguration;
+import io.github.kotlinmania.spring.boot.jetty.metrics.JettyConnectionMetricsBinder;
+import io.github.kotlinmania.spring.boot.jetty.metrics.JettyServerThreadPoolMetricsBinder;
+import io.github.kotlinmania.spring.boot.jetty.metrics.JettySslHandshakeMetricsBinder;
+import io.github.kotlinmania.spring.boot.jetty.reactive.JettyReactiveWebServerFactory;
+import io.github.kotlinmania.spring.boot.jetty.servlet.JettyServletWebServerFactory;
+import io.github.kotlinmania.spring.boot.test.context.runner.ReactiveWebApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.test.context.runner.WebApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.testsupport.classpath.resources.WithPackageResources;
+import io.github.kotlinmania.spring.boot.web.server.reactive.context.AnnotationConfigReactiveWebServerApplicationContext;
+import io.github.kotlinmania.spring.boot.web.server.servlet.context.AnnotationConfigServletWebServerApplicationContext;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

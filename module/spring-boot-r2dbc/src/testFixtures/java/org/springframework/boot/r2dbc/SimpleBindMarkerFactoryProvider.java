@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.r2dbc;
+package io.github.kotlinmania.spring.boot.r2dbc;
 
 import io.r2dbc.spi.ConnectionFactory;
 import io.r2dbc.spi.Wrapped;
 
-import org.springframework.boot.r2dbc.SimpleConnectionFactoryProvider.SimpleTestConnectionFactory;
+import io.github.kotlinmania.spring.boot.r2dbc.SimpleConnectionFactoryProvider.SimpleTestConnectionFactory;
 import org.springframework.r2dbc.core.binding.BindMarkersFactory;
 import org.springframework.r2dbc.core.binding.BindMarkersFactoryResolver.BindMarkerFactoryProvider;
 

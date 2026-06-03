@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.build.cli;
+package io.github.kotlinmania.spring.boot.build.cli;
 
 import java.io.File;
 import java.security.MessageDigest;
@@ -39,9 +39,9 @@ import org.gradle.api.tasks.TaskExecutionException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import org.springframework.boot.build.artifacts.ArtifactRelease;
-import org.springframework.boot.build.properties.BuildProperties;
-import org.springframework.boot.build.properties.BuildType;
+import io.github.kotlinmania.spring.boot.build.artifacts.ArtifactRelease;
+import io.github.kotlinmania.spring.boot.build.properties.BuildProperties;
+import io.github.kotlinmania.spring.boot.build.properties.BuildType;
 
 /**
  * A {@link Task} for creating a Homebrew formula manifest.

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.neo4j.health;
+package io.github.kotlinmania.spring.boot.neo4j.health;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
@@ -29,9 +29,9 @@ import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 import reactor.util.retry.Retry;
 
-import org.springframework.boot.health.contributor.AbstractReactiveHealthIndicator;
-import org.springframework.boot.health.contributor.Health;
-import org.springframework.boot.health.contributor.ReactiveHealthIndicator;
+import io.github.kotlinmania.spring.boot.health.contributor.AbstractReactiveHealthIndicator;
+import io.github.kotlinmania.spring.boot.health.contributor.Health;
+import io.github.kotlinmania.spring.boot.health.contributor.ReactiveHealthIndicator;
 import org.springframework.util.Assert;
 
 /**

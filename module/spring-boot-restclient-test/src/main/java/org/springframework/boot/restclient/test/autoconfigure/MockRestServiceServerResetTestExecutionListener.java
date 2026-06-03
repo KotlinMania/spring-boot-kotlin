@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.restclient.test.autoconfigure;
+package io.github.kotlinmania.spring.boot.restclient.test.autoconfigure;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.core.Ordered;

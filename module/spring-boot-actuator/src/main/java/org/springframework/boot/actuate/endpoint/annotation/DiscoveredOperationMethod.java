@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.actuate.endpoint.annotation;
+package io.github.kotlinmania.spring.boot.actuate.endpoint.annotation;
 
 import java.lang.reflect.Method;
 import java.util.ArrayList;
@@ -22,9 +22,9 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
-import org.springframework.boot.actuate.endpoint.OperationType;
-import org.springframework.boot.actuate.endpoint.Producible;
-import org.springframework.boot.actuate.endpoint.invoke.reflect.OperationMethod;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.OperationType;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.Producible;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.invoke.reflect.OperationMethod;
 import org.springframework.core.annotation.AnnotationAttributes;
 import org.springframework.util.Assert;
 

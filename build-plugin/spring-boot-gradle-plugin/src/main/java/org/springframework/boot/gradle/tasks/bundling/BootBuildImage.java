@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.gradle.tasks.bundling;
+package io.github.kotlinmania.spring.boot.gradle.tasks.bundling;
 
 import java.io.IOException;
 import java.util.Collections;
@@ -42,18 +42,18 @@ import org.gradle.api.tasks.TaskAction;
 import org.gradle.api.tasks.options.Option;
 import org.gradle.work.DisableCachingByDefault;
 
-import org.springframework.boot.buildpack.platform.build.BuildRequest;
-import org.springframework.boot.buildpack.platform.build.Builder;
-import org.springframework.boot.buildpack.platform.build.BuildpackReference;
-import org.springframework.boot.buildpack.platform.build.Cache;
-import org.springframework.boot.buildpack.platform.build.Creator;
-import org.springframework.boot.buildpack.platform.build.PullPolicy;
-import org.springframework.boot.buildpack.platform.docker.transport.DockerEngineException;
-import org.springframework.boot.buildpack.platform.docker.type.Binding;
-import org.springframework.boot.buildpack.platform.docker.type.ImageName;
-import org.springframework.boot.buildpack.platform.docker.type.ImageReference;
-import org.springframework.boot.buildpack.platform.io.ZipFileTarArchive;
-import org.springframework.boot.gradle.util.VersionExtractor;
+import io.github.kotlinmania.spring.boot.buildpack.platform.build.BuildRequest;
+import io.github.kotlinmania.spring.boot.buildpack.platform.build.Builder;
+import io.github.kotlinmania.spring.boot.buildpack.platform.build.BuildpackReference;
+import io.github.kotlinmania.spring.boot.buildpack.platform.build.Cache;
+import io.github.kotlinmania.spring.boot.buildpack.platform.build.Creator;
+import io.github.kotlinmania.spring.boot.buildpack.platform.build.PullPolicy;
+import io.github.kotlinmania.spring.boot.buildpack.platform.docker.transport.DockerEngineException;
+import io.github.kotlinmania.spring.boot.buildpack.platform.docker.type.Binding;
+import io.github.kotlinmania.spring.boot.buildpack.platform.docker.type.ImageName;
+import io.github.kotlinmania.spring.boot.buildpack.platform.docker.type.ImageReference;
+import io.github.kotlinmania.spring.boot.buildpack.platform.io.ZipFileTarArchive;
+import io.github.kotlinmania.spring.boot.gradle.util.VersionExtractor;
 import org.springframework.util.CollectionUtils;
 import org.springframework.util.StringUtils;
 

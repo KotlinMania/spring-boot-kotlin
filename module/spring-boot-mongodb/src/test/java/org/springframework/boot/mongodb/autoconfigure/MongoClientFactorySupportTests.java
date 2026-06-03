@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.mongodb.autoconfigure;
+package io.github.kotlinmania.spring.boot.mongodb.autoconfigure;
 
 import java.util.Arrays;
 import java.util.List;
@@ -24,7 +24,7 @@ import com.mongodb.MongoClientSettings;
 import org.jspecify.annotations.Nullable;
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.context.properties.EnableConfigurationProperties;
+import io.github.kotlinmania.spring.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Configuration;
 
 import static org.assertj.core.api.Assertions.assertThat;

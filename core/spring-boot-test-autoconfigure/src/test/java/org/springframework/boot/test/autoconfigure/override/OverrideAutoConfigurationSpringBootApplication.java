@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.test.autoconfigure.override;
+package io.github.kotlinmania.spring.boot.test.autoconfigure.override;
 
-import org.springframework.boot.SpringBootConfiguration;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.test.autoconfigure.OverrideAutoConfiguration;
+import io.github.kotlinmania.spring.boot.SpringBootConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.EnableAutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.SpringBootApplication;
+import io.github.kotlinmania.spring.boot.test.autoconfigure.OverrideAutoConfiguration;
 
 /**
  * Example {@link SpringBootApplication @SpringBootApplication} for use with

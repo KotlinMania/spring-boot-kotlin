@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.micrometer.metrics.autoconfigure;
+package io.github.kotlinmania.spring.boot.micrometer.metrics.autoconfigure;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -38,8 +38,8 @@ import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.NoSuchBeanDefinitionException;
 import org.springframework.beans.factory.ObjectProvider;
-import org.springframework.boot.micrometer.metrics.MaximumAllowableTagsMeterFilter;
-import org.springframework.boot.micrometer.metrics.autoconfigure.MeterRegistryPostProcessor.CompositeMeterRegistries;
+import io.github.kotlinmania.spring.boot.micrometer.metrics.MaximumAllowableTagsMeterFilter;
+import io.github.kotlinmania.spring.boot.micrometer.metrics.autoconfigure.MeterRegistryPostProcessor.CompositeMeterRegistries;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.BDDMockito.given;

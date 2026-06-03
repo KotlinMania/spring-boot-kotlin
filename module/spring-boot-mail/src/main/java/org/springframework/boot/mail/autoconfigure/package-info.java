@@ -18,6 +18,6 @@
  * Auto-configuration for email support.
  */
 @NullMarked
-package org.springframework.boot.mail.autoconfigure;
+package io.github.kotlinmania.spring.boot.mail.autoconfigure;
 
 import org.jspecify.annotations.NullMarked;

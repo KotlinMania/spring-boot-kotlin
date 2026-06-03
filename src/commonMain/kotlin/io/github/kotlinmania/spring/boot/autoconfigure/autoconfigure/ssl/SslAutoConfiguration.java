@@ -14,17 +14,17 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.autoconfigure.ssl;
+package io.github.kotlinmania.spring.boot.autoconfigure.ssl;
 
 import org.springframework.beans.factory.ObjectProvider;
-import org.springframework.boot.autoconfigure.AutoConfiguration;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
-import org.springframework.boot.context.properties.EnableConfigurationProperties;
-import org.springframework.boot.io.ApplicationResourceLoader;
-import org.springframework.boot.ssl.DefaultSslBundleRegistry;
-import org.springframework.boot.ssl.SslBundleRegistry;
-import org.springframework.boot.ssl.SslBundles;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.EnableAutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnMissingBean;
+import io.github.kotlinmania.spring.boot.context.properties.EnableConfigurationProperties;
+import io.github.kotlinmania.spring.boot.io.ApplicationResourceLoader;
+import io.github.kotlinmania.spring.boot.ssl.DefaultSslBundleRegistry;
+import io.github.kotlinmania.spring.boot.ssl.SslBundleRegistry;
+import io.github.kotlinmania.spring.boot.ssl.SslBundles;
 import org.springframework.context.annotation.Bean;
 import org.springframework.core.io.ResourceLoader;
 

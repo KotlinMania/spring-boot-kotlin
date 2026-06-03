@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.data.elasticsearch.test.autoconfigure;
+package io.github.kotlinmania.spring.boot.data.elasticsearch.test.autoconfigure;
 
 import java.util.UUID;
 
@@ -25,15 +25,15 @@ import org.testcontainers.junit.jupiter.Testcontainers;
 
 import org.springframework.beans.factory.NoSuchBeanDefinitionException;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.testcontainers.service.connection.ServiceConnection;
-import org.springframework.boot.testcontainers.service.connection.ServiceConnectionAutoConfiguration;
-import org.springframework.boot.testsupport.container.TestImage;
+import io.github.kotlinmania.spring.boot.testcontainers.service.connection.ServiceConnection;
+import io.github.kotlinmania.spring.boot.testcontainers.service.connection.ServiceConnectionAutoConfiguration;
+import io.github.kotlinmania.spring.boot.testsupport.container.TestImage;
 import org.springframework.context.ApplicationContext;
 import org.springframework.data.elasticsearch.client.elc.ElasticsearchTemplate;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatExceptionOfType;
-import static org.springframework.boot.autoconfigure.AutoConfigurationImportedCondition.importedAutoConfiguration;
+import static io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurationImportedCondition.importedAutoConfiguration;
 
 /**
  * Sample test for {@link DataElasticsearchTest @DataElasticsearchTest}.

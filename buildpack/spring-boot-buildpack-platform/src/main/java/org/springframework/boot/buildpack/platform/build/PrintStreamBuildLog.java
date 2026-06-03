@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.buildpack.platform.build;
+package io.github.kotlinmania.spring.boot.buildpack.platform.build;
 
 import java.io.PrintStream;
 import java.util.function.Consumer;
 
-import org.springframework.boot.buildpack.platform.docker.TotalProgressBar;
-import org.springframework.boot.buildpack.platform.docker.TotalProgressEvent;
+import io.github.kotlinmania.spring.boot.buildpack.platform.docker.TotalProgressBar;
+import io.github.kotlinmania.spring.boot.buildpack.platform.docker.TotalProgressEvent;
 
 /**
  * {@link BuildLog} implementation that prints output to a {@link PrintStream}.

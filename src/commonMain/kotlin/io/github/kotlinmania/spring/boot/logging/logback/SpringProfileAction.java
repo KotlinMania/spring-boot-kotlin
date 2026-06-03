@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.logging.logback;
+package io.github.kotlinmania.spring.boot.logging.logback;
 
 import ch.qos.logback.core.joran.action.BaseModelAction;
 import ch.qos.logback.core.joran.spi.SaxEventInterpretationContext;

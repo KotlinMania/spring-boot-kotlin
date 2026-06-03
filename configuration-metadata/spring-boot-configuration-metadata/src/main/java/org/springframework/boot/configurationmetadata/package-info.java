@@ -17,4 +17,4 @@
 /**
  * Spring Boot configuration meta-data parser.
  */
-package org.springframework.boot.configurationmetadata;
+package io.github.kotlinmania.spring.boot.configurationmetadata;

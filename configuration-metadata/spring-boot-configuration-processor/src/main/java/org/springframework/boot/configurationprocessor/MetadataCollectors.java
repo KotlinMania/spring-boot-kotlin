@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.configurationprocessor;
+package io.github.kotlinmania.spring.boot.configurationprocessor;
 
 import java.util.HashMap;
 import java.util.HashSet;
@@ -26,7 +26,7 @@ import javax.annotation.processing.RoundEnvironment;
 import javax.lang.model.element.Element;
 import javax.lang.model.element.TypeElement;
 
-import org.springframework.boot.configurationprocessor.metadata.ItemMetadata;
+import io.github.kotlinmania.spring.boot.configurationprocessor.metadata.ItemMetadata;
 
 /**
  * Container for {@link MetadataCollector}. Usually, either metadata for the whole module

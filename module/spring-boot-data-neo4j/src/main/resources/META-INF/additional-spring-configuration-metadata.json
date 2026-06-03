@@ -53,7 +53,7 @@
     },
     {
       "name": "spring.data.neo4j.repositories.type",
-      "type": "org.springframework.boot.autoconfigure.data.RepositoryType",
+      "type": "io.github.kotlinmania.spring.boot.autoconfigure.data.RepositoryType",
       "description": "Type of Neo4j repositories to enable.",
       "defaultValue": "auto"
     },

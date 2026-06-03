@@ -9,9 +9,9 @@ services:
       - ssl-cert
     command: 'redis-server --tls-port 6379 --port 0 --tls-cert-file /run/secrets/ssl-cert --tls-key-file /run/secrets/ssl-key --tls-ca-cert-file /run/secrets/ssl-ca'
     labels:
-      - 'org.springframework.boot.sslbundle.pem.keystore.certificate=client.crt'
-      - 'org.springframework.boot.sslbundle.pem.keystore.private-key=client.key'
-      - 'org.springframework.boot.sslbundle.pem.truststore.certificate=ca.crt'
+      - 'io.github.kotlinmania.spring.boot.sslbundle.pem.keystore.certificate=client.crt'
+      - 'io.github.kotlinmania.spring.boot.sslbundle.pem.keystore.private-key=client.key'
+      - 'io.github.kotlinmania.spring.boot.sslbundle.pem.truststore.certificate=ca.crt'
 secrets:
   ssl-ca:
     file: 'ca.crt'

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.jetty.autoconfigure.servlet;
+package io.github.kotlinmania.spring.boot.jetty.autoconfigure.servlet;
 
 import java.util.Map;
 
@@ -25,12 +25,12 @@ import org.eclipse.jetty.server.Server;
 import org.junit.jupiter.api.Test;
 
 import org.springframework.beans.factory.config.BeanDefinition;
-import org.springframework.boot.jetty.JettyServerCustomizer;
-import org.springframework.boot.jetty.servlet.JettyServletWebServerFactory;
-import org.springframework.boot.web.server.WebServerFactoryCustomizer;
-import org.springframework.boot.web.server.autoconfigure.servlet.AbstractServletWebServerAutoConfigurationTests;
-import org.springframework.boot.web.servlet.AbstractFilterRegistrationBean;
-import org.springframework.boot.web.servlet.ServletContextInitializer;
+import io.github.kotlinmania.spring.boot.jetty.JettyServerCustomizer;
+import io.github.kotlinmania.spring.boot.jetty.servlet.JettyServletWebServerFactory;
+import io.github.kotlinmania.spring.boot.web.server.WebServerFactoryCustomizer;
+import io.github.kotlinmania.spring.boot.web.server.autoconfigure.servlet.AbstractServletWebServerAutoConfigurationTests;
+import io.github.kotlinmania.spring.boot.web.servlet.AbstractFilterRegistrationBean;
+import io.github.kotlinmania.spring.boot.web.servlet.ServletContextInitializer;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 

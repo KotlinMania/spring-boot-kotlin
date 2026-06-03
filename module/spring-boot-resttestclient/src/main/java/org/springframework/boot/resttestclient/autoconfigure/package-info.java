@@ -18,6 +18,6 @@
  * Auto-configuration for RestTestClient and TestRestTemplate.
  */
 @NullMarked
-package org.springframework.boot.resttestclient.autoconfigure;
+package io.github.kotlinmania.spring.boot.resttestclient.autoconfigure;
 
 import org.jspecify.annotations.NullMarked;

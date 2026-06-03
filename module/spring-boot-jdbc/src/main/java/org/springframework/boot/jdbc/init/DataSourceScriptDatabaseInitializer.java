@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.jdbc.init;
+package io.github.kotlinmania.spring.boot.jdbc.init;
 
 import javax.sql.DataSource;
 
@@ -22,9 +22,9 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
 import org.springframework.beans.factory.InitializingBean;
-import org.springframework.boot.jdbc.EmbeddedDatabaseConnection;
-import org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer;
-import org.springframework.boot.sql.init.DatabaseInitializationSettings;
+import io.github.kotlinmania.spring.boot.jdbc.EmbeddedDatabaseConnection;
+import io.github.kotlinmania.spring.boot.sql.init.AbstractScriptDatabaseInitializer;
+import io.github.kotlinmania.spring.boot.sql.init.DatabaseInitializationSettings;
 import org.springframework.core.io.Resource;
 import org.springframework.jdbc.datasource.init.DatabasePopulatorUtils;
 import org.springframework.jdbc.datasource.init.ResourceDatabasePopulator;

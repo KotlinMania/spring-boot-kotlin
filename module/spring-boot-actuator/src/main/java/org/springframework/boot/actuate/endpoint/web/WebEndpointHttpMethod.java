@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.actuate.endpoint.web;
+package io.github.kotlinmania.spring.boot.actuate.endpoint.web;
 
 /**
  * An enumeration of HTTP methods supported by web endpoint operations.

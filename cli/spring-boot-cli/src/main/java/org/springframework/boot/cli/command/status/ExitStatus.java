@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.cli.command.status;
+package io.github.kotlinmania.spring.boot.cli.command.status;
 
 /**
  * Encapsulation of the outcome of a command.

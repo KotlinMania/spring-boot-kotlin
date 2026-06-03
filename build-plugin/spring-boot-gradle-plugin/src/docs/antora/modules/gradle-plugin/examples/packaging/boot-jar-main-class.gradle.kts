@@ -1,8 +1,8 @@
-import org.springframework.boot.gradle.tasks.bundling.BootJar
+import io.github.kotlinmania.spring.boot.gradle.tasks.bundling.BootJar
 
 plugins {
 	java
-	id("org.springframework.boot") version "{version-spring-boot}"
+	id("io.github.kotlinmania.spring.boot.) version "{version-spring-boot}"
 }
 
 // tag::main-class[]

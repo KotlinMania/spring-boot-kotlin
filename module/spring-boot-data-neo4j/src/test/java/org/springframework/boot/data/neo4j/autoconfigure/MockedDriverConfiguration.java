@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.data.neo4j.autoconfigure;
+package io.github.kotlinmania.spring.boot.data.neo4j.autoconfigure;
 
 import org.mockito.ArgumentMatchers;
 import org.neo4j.driver.Driver;

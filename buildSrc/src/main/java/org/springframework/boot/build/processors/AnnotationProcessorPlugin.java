@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.build.processors;
+package io.github.kotlinmania.spring.boot.build.processors;
 
 import java.util.Map;
 import java.util.TreeMap;

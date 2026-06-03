@@ -14,16 +14,16 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.artemis.testcontainers;
+package io.github.kotlinmania.spring.boot.artemis.testcontainers;
 
 import org.jspecify.annotations.Nullable;
 import org.testcontainers.activemq.ArtemisContainer;
 
-import org.springframework.boot.artemis.autoconfigure.ArtemisConnectionDetails;
-import org.springframework.boot.artemis.autoconfigure.ArtemisMode;
-import org.springframework.boot.testcontainers.service.connection.ContainerConnectionDetailsFactory;
-import org.springframework.boot.testcontainers.service.connection.ContainerConnectionSource;
-import org.springframework.boot.testcontainers.service.connection.ServiceConnection;
+import io.github.kotlinmania.spring.boot.artemis.autoconfigure.ArtemisConnectionDetails;
+import io.github.kotlinmania.spring.boot.artemis.autoconfigure.ArtemisMode;
+import io.github.kotlinmania.spring.boot.testcontainers.service.connection.ContainerConnectionDetailsFactory;
+import io.github.kotlinmania.spring.boot.testcontainers.service.connection.ContainerConnectionSource;
+import io.github.kotlinmania.spring.boot.testcontainers.service.connection.ServiceConnection;
 
 /**
  * {@link ContainerConnectionDetailsFactory} to create {@link ArtemisConnectionDetails}

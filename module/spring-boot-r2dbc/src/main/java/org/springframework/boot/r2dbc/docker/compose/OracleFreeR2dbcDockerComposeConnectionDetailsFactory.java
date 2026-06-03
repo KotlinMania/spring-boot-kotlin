@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.r2dbc.docker.compose;
+package io.github.kotlinmania.spring.boot.r2dbc.docker.compose;
 
-import org.springframework.boot.docker.compose.service.connection.DockerComposeConnectionDetailsFactory;
-import org.springframework.boot.r2dbc.autoconfigure.R2dbcConnectionDetails;
+import io.github.kotlinmania.spring.boot.docker.compose.service.connection.DockerComposeConnectionDetailsFactory;
+import io.github.kotlinmania.spring.boot.r2dbc.autoconfigure.R2dbcConnectionDetails;
 
 /**
  * {@link DockerComposeConnectionDetailsFactory} to create {@link R2dbcConnectionDetails}

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.build.architecture.annotations;
+package io.github.kotlinmania.spring.boot.build.architecture.annotations;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.features.externalconfig.typesafeconfigurationproperties.conversion.datasizes.constructorbinding
+package io.github.kotlinmania.spring.boot.docs.features.externalconfig.typesafeconfigurationproperties.conversion.datasizes.constructorbinding
 
-import org.springframework.boot.context.properties.ConfigurationProperties
-import org.springframework.boot.context.properties.bind.DefaultValue
-import org.springframework.boot.convert.DataSizeUnit
+import io.github.kotlinmania.spring.boot.context.properties.ConfigurationProperties
+import io.github.kotlinmania.spring.boot.context.properties.bind.DefaultValue
+import io.github.kotlinmania.spring.boot.convert.DataSizeUnit
 import org.springframework.util.unit.DataSize
 import org.springframework.util.unit.DataUnit
 

@@ -18,6 +18,6 @@
  * Auto-configuration for ActiveMQ.
  */
 @NullMarked
-package org.springframework.boot.activemq.autoconfigure;
+package io.github.kotlinmania.spring.boot.activemq.autoconfigure;
 
 import org.jspecify.annotations.NullMarked;

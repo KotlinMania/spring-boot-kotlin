@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.gradle.tasks.bundling;
+package io.github.kotlinmania.spring.boot.gradle.tasks.bundling;
 
 import java.io.File;
 import java.util.List;
@@ -37,7 +37,7 @@ import org.gradle.api.tasks.Input;
 import org.gradle.internal.component.external.model.ModuleComponentArtifactIdentifier;
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.loader.tools.LibraryCoordinates;
+import io.github.kotlinmania.spring.boot.loader.tools.LibraryCoordinates;
 
 /**
  * Maps from {@link File} to {@link ComponentArtifactIdentifier}.

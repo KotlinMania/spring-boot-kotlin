@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.hazelcast.autoconfigure;
+package io.github.kotlinmania.spring.boot.hazelcast.autoconfigure;
 
 import java.util.Arrays;
 import java.util.Collections;
@@ -25,13 +25,13 @@ import com.hazelcast.core.HazelcastInstance;
 import org.junit.jupiter.api.Test;
 
 import org.springframework.beans.factory.support.BeanDefinitionRegistry;
-import org.springframework.boot.autoconfigure.AutoConfigurations;
-import org.springframework.boot.hazelcast.autoconfigure.HazelcastJpaDependencyAutoConfiguration.HazelcastInstanceEntityManagerFactoryDependsOnPostProcessor;
-import org.springframework.boot.hibernate.autoconfigure.HibernateJpaAutoConfiguration;
-import org.springframework.boot.jdbc.autoconfigure.DataSourceAutoConfiguration;
-import org.springframework.boot.jpa.autoconfigure.EntityManagerFactoryDependsOnPostProcessor;
-import org.springframework.boot.test.context.assertj.AssertableApplicationContext;
-import org.springframework.boot.test.context.runner.ApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurations;
+import io.github.kotlinmania.spring.boot.hazelcast.autoconfigure.HazelcastJpaDependencyAutoConfiguration.HazelcastInstanceEntityManagerFactoryDependsOnPostProcessor;
+import io.github.kotlinmania.spring.boot.hibernate.autoconfigure.HibernateJpaAutoConfiguration;
+import io.github.kotlinmania.spring.boot.jdbc.autoconfigure.DataSourceAutoConfiguration;
+import io.github.kotlinmania.spring.boot.jpa.autoconfigure.EntityManagerFactoryDependsOnPostProcessor;
+import io.github.kotlinmania.spring.boot.test.context.assertj.AssertableApplicationContext;
+import io.github.kotlinmania.spring.boot.test.context.runner.ApplicationContextRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 

@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.security.autoconfigure.web.reactive;
+package io.github.kotlinmania.spring.boot.security.autoconfigure.web.reactive;
 
 import org.junit.jupiter.api.Test;
 import reactor.core.publisher.Flux;
 
-import org.springframework.boot.autoconfigure.AutoConfigurations;
-import org.springframework.boot.test.context.FilteredClassLoader;
-import org.springframework.boot.test.context.runner.ReactiveWebApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurations;
+import io.github.kotlinmania.spring.boot.test.context.FilteredClassLoader;
+import io.github.kotlinmania.spring.boot.test.context.runner.ReactiveWebApplicationContextRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.ReactiveAuthenticationManager;

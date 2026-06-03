@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.build.architecture.conditionalonmissingbean.valueonly;
+package io.github.kotlinmania.spring.boot.build.architecture.conditionalonmissingbean.valueonly;
 
-import org.springframework.boot.build.architecture.annotations.TestConditionalOnMissingBean;
+import io.github.kotlinmania.spring.boot.build.architecture.annotations.TestConditionalOnMissingBean;
 import org.springframework.context.annotation.Bean;
 
 class TypeSameAsMethodReturnType {

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.security.autoconfigure.actuate.web.servlet;
+package io.github.kotlinmania.spring.boot.security.autoconfigure.actuate.web.servlet;
 
 import java.io.IOException;
 import java.time.Duration;
@@ -28,20 +28,20 @@ import jakarta.servlet.http.HttpServletResponse;
 import org.jspecify.annotations.Nullable;
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.actuate.autoconfigure.endpoint.EndpointAutoConfiguration;
-import org.springframework.boot.actuate.autoconfigure.endpoint.web.WebEndpointAutoConfiguration;
-import org.springframework.boot.actuate.autoconfigure.web.server.ManagementContextAutoConfiguration;
-import org.springframework.boot.actuate.endpoint.annotation.Endpoint;
-import org.springframework.boot.actuate.endpoint.annotation.ReadOperation;
-import org.springframework.boot.actuate.endpoint.annotation.WriteOperation;
-import org.springframework.boot.autoconfigure.AutoConfigurations;
-import org.springframework.boot.jackson.autoconfigure.JacksonAutoConfiguration;
-import org.springframework.boot.security.autoconfigure.SecurityAutoConfiguration;
-import org.springframework.boot.security.autoconfigure.web.servlet.ServletWebSecurityAutoConfiguration;
-import org.springframework.boot.test.context.assertj.AssertableWebApplicationContext;
-import org.springframework.boot.test.context.runner.WebApplicationContextRunner;
-import org.springframework.boot.web.server.WebServer;
-import org.springframework.boot.web.server.servlet.context.AnnotationConfigServletWebServerApplicationContext;
+import io.github.kotlinmania.spring.boot.actuate.autoconfigure.endpoint.EndpointAutoConfiguration;
+import io.github.kotlinmania.spring.boot.actuate.autoconfigure.endpoint.web.WebEndpointAutoConfiguration;
+import io.github.kotlinmania.spring.boot.actuate.autoconfigure.web.server.ManagementContextAutoConfiguration;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.annotation.Endpoint;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.annotation.ReadOperation;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.annotation.WriteOperation;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurations;
+import io.github.kotlinmania.spring.boot.jackson.autoconfigure.JacksonAutoConfiguration;
+import io.github.kotlinmania.spring.boot.security.autoconfigure.SecurityAutoConfiguration;
+import io.github.kotlinmania.spring.boot.security.autoconfigure.web.servlet.ServletWebSecurityAutoConfiguration;
+import io.github.kotlinmania.spring.boot.test.context.assertj.AssertableWebApplicationContext;
+import io.github.kotlinmania.spring.boot.test.context.runner.WebApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.web.server.WebServer;
+import io.github.kotlinmania.spring.boot.web.server.servlet.context.AnnotationConfigServletWebServerApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
@@ -203,14 +203,14 @@ abstract class AbstractEndpointRequestIntegrationTests {
 
 	}
 
-	@org.springframework.boot.actuate.endpoint.web.annotation.ServletEndpoint(id = "se1")
+	@io.github.kotlinmania.spring.boot.actuate.endpoint.web.annotation.ServletEndpoint(id = "se1")
 	@SuppressWarnings({ "deprecation", "removal" })
 	static class TestServletEndpoint
-			implements Supplier<org.springframework.boot.actuate.endpoint.web.EndpointServlet> {
+			implements Supplier<io.github.kotlinmania.spring.boot.actuate.endpoint.web.EndpointServlet> {
 
 		@Override
-		public org.springframework.boot.actuate.endpoint.web.EndpointServlet get() {
-			return new org.springframework.boot.actuate.endpoint.web.EndpointServlet(ExampleServlet.class);
+		public io.github.kotlinmania.spring.boot.actuate.endpoint.web.EndpointServlet get() {
+			return new io.github.kotlinmania.spring.boot.actuate.endpoint.web.EndpointServlet(ExampleServlet.class);
 		}
 
 	}

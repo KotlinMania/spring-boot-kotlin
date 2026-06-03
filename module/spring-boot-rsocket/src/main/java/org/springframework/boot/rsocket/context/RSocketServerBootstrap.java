@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.rsocket.context;
+package io.github.kotlinmania.spring.boot.rsocket.context;
 
 import io.rsocket.SocketAcceptor;
 
-import org.springframework.boot.rsocket.server.RSocketServer;
-import org.springframework.boot.rsocket.server.RSocketServerFactory;
+import io.github.kotlinmania.spring.boot.rsocket.server.RSocketServer;
+import io.github.kotlinmania.spring.boot.rsocket.server.RSocketServerFactory;
 import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.context.ApplicationEventPublisherAware;
 import org.springframework.context.SmartLifecycle;

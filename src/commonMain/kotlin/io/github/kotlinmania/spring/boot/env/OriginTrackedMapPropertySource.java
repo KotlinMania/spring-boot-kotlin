@@ -14,15 +14,15 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.env;
+package io.github.kotlinmania.spring.boot.env;
 
 import java.util.Map;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.origin.Origin;
-import org.springframework.boot.origin.OriginLookup;
-import org.springframework.boot.origin.OriginTrackedValue;
+import io.github.kotlinmania.spring.boot.origin.Origin;
+import io.github.kotlinmania.spring.boot.origin.OriginLookup;
+import io.github.kotlinmania.spring.boot.origin.OriginTrackedValue;
 import org.springframework.core.env.MapPropertySource;
 
 /**

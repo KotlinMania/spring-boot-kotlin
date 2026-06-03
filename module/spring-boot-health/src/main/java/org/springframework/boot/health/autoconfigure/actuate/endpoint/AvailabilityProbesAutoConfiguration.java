@@ -14,18 +14,18 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.health.autoconfigure.actuate.endpoint;
+package io.github.kotlinmania.spring.boot.health.autoconfigure.actuate.endpoint;
 
-import org.springframework.boot.autoconfigure.AutoConfiguration;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
-import org.springframework.boot.autoconfigure.availability.ApplicationAvailabilityAutoConfiguration;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnBooleanProperty;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
-import org.springframework.boot.availability.ApplicationAvailability;
-import org.springframework.boot.health.application.LivenessStateHealthIndicator;
-import org.springframework.boot.health.application.ReadinessStateHealthIndicator;
-import org.springframework.boot.health.autoconfigure.application.AvailabilityHealthContributorAutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.EnableAutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.availability.ApplicationAvailabilityAutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnBooleanProperty;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnClass;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnMissingBean;
+import io.github.kotlinmania.spring.boot.availability.ApplicationAvailability;
+import io.github.kotlinmania.spring.boot.health.application.LivenessStateHealthIndicator;
+import io.github.kotlinmania.spring.boot.health.application.ReadinessStateHealthIndicator;
+import io.github.kotlinmania.spring.boot.health.autoconfigure.application.AvailabilityHealthContributorAutoConfiguration;
 import org.springframework.context.annotation.Bean;
 import org.springframework.core.env.Environment;
 
@@ -38,7 +38,7 @@ import org.springframework.core.env.Environment;
  */
 @AutoConfiguration(after = { AvailabilityHealthContributorAutoConfiguration.class,
 		ApplicationAvailabilityAutoConfiguration.class })
-@ConditionalOnClass(name = "org.springframework.boot.actuate.endpoint.annotation.Endpoint")
+@ConditionalOnClass(name = "io.github.kotlinmania.spring.boot.actuate.endpoint.annotation.Endpoint")
 @ConditionalOnBooleanProperty(name = "management.endpoint.health.probes.enabled", matchIfMissing = true)
 public final class AvailabilityProbesAutoConfiguration {
 

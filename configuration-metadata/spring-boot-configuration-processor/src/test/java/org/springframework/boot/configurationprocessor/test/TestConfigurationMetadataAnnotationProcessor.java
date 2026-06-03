@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.configurationprocessor.test;
+package io.github.kotlinmania.spring.boot.configurationprocessor.test;
 
 import java.util.Arrays;
 import java.util.HashSet;
@@ -24,7 +24,7 @@ import javax.annotation.processing.SupportedAnnotationTypes;
 import javax.annotation.processing.SupportedSourceVersion;
 import javax.lang.model.SourceVersion;
 
-import org.springframework.boot.configurationprocessor.ConfigurationMetadataAnnotationProcessor;
+import io.github.kotlinmania.spring.boot.configurationprocessor.ConfigurationMetadataAnnotationProcessor;
 
 /**
  * Test {@link ConfigurationMetadataAnnotationProcessor}.
@@ -47,37 +47,37 @@ import org.springframework.boot.configurationprocessor.ConfigurationMetadataAnno
 @SupportedSourceVersion(SourceVersion.RELEASE_6)
 public class TestConfigurationMetadataAnnotationProcessor extends ConfigurationMetadataAnnotationProcessor {
 
-	public static final String CONFIGURATION_PROPERTIES_ANNOTATION = "org.springframework.boot.configurationsample.TestConfigurationProperties";
+	public static final String CONFIGURATION_PROPERTIES_ANNOTATION = "io.github.kotlinmania.spring.boot.configurationsample.TestConfigurationProperties";
 
-	public static final String CONFIGURATION_PROPERTIES_SOURCE_ANNOTATION = "org.springframework.boot.configurationsample.TestConfigurationPropertiesSource";
+	public static final String CONFIGURATION_PROPERTIES_SOURCE_ANNOTATION = "io.github.kotlinmania.spring.boot.configurationsample.TestConfigurationPropertiesSource";
 
-	public static final String NESTED_CONFIGURATION_PROPERTY_ANNOTATION = "org.springframework.boot.configurationsample.TestNestedConfigurationProperty";
+	public static final String NESTED_CONFIGURATION_PROPERTY_ANNOTATION = "io.github.kotlinmania.spring.boot.configurationsample.TestNestedConfigurationProperty";
 
-	public static final String DEPRECATED_CONFIGURATION_PROPERTY_ANNOTATION = "org.springframework.boot.configurationsample.TestDeprecatedConfigurationProperty";
+	public static final String DEPRECATED_CONFIGURATION_PROPERTY_ANNOTATION = "io.github.kotlinmania.spring.boot.configurationsample.TestDeprecatedConfigurationProperty";
 
-	public static final String CONSTRUCTOR_BINDING_ANNOTATION = "org.springframework.boot.configurationsample.TestConstructorBinding";
+	public static final String CONSTRUCTOR_BINDING_ANNOTATION = "io.github.kotlinmania.spring.boot.configurationsample.TestConstructorBinding";
 
-	public static final String AUTOWIRED_ANNOTATION = "org.springframework.boot.configurationsample.TestAutowired";
+	public static final String AUTOWIRED_ANNOTATION = "io.github.kotlinmania.spring.boot.configurationsample.TestAutowired";
 
-	public static final String DEFAULT_VALUE_ANNOTATION = "org.springframework.boot.configurationsample.TestDefaultValue";
+	public static final String DEFAULT_VALUE_ANNOTATION = "io.github.kotlinmania.spring.boot.configurationsample.TestDefaultValue";
 
-	public static final String CONTROLLER_ENDPOINT_ANNOTATION = "org.springframework.boot.configurationsample.TestControllerEndpoint";
+	public static final String CONTROLLER_ENDPOINT_ANNOTATION = "io.github.kotlinmania.spring.boot.configurationsample.TestControllerEndpoint";
 
-	public static final String ENDPOINT_ANNOTATION = "org.springframework.boot.configurationsample.TestEndpoint";
+	public static final String ENDPOINT_ANNOTATION = "io.github.kotlinmania.spring.boot.configurationsample.TestEndpoint";
 
-	public static final String JMX_ENDPOINT_ANNOTATION = "org.springframework.boot.configurationsample.TestJmxEndpoint";
+	public static final String JMX_ENDPOINT_ANNOTATION = "io.github.kotlinmania.spring.boot.configurationsample.TestJmxEndpoint";
 
-	public static final String REST_CONTROLLER_ENDPOINT_ANNOTATION = "org.springframework.boot.configurationsample.TestRestControllerEndpoint";
+	public static final String REST_CONTROLLER_ENDPOINT_ANNOTATION = "io.github.kotlinmania.spring.boot.configurationsample.TestRestControllerEndpoint";
 
-	public static final String SERVLET_ENDPOINT_ANNOTATION = "org.springframework.boot.configurationsample.TestServletEndpoint";
+	public static final String SERVLET_ENDPOINT_ANNOTATION = "io.github.kotlinmania.spring.boot.configurationsample.TestServletEndpoint";
 
-	public static final String WEB_ENDPOINT_ANNOTATION = "org.springframework.boot.configurationsample.TestWebEndpoint";
+	public static final String WEB_ENDPOINT_ANNOTATION = "io.github.kotlinmania.spring.boot.configurationsample.TestWebEndpoint";
 
-	public static final String READ_OPERATION_ANNOTATION = "org.springframework.boot.configurationsample.TestReadOperation";
+	public static final String READ_OPERATION_ANNOTATION = "io.github.kotlinmania.spring.boot.configurationsample.TestReadOperation";
 
-	public static final String NAME_ANNOTATION = "org.springframework.boot.configurationsample.TestName";
+	public static final String NAME_ANNOTATION = "io.github.kotlinmania.spring.boot.configurationsample.TestName";
 
-	public static final String ENDPOINT_ACCESS_ENUM = "org.springframework.boot.configurationsample.TestAccess";
+	public static final String ENDPOINT_ACCESS_ENUM = "io.github.kotlinmania.spring.boot.configurationsample.TestAccess";
 
 	public TestConfigurationMetadataAnnotationProcessor() {
 	}

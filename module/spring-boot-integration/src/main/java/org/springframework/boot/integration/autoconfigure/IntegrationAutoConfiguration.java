@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.integration.autoconfigure;
+package io.github.kotlinmania.spring.boot.integration.autoconfigure;
 
 import java.time.Duration;
 
@@ -25,24 +25,24 @@ import io.rsocket.transport.netty.server.TcpServerTransport;
 import org.jspecify.annotations.Nullable;
 
 import org.springframework.beans.factory.ObjectProvider;
-import org.springframework.boot.autoconfigure.AutoConfiguration;
-import org.springframework.boot.autoconfigure.condition.AnyNestedCondition;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnBooleanProperty;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnSingleCandidate;
-import org.springframework.boot.autoconfigure.condition.SearchStrategy;
-import org.springframework.boot.autoconfigure.jmx.JmxAutoConfiguration;
-import org.springframework.boot.autoconfigure.jmx.JmxProperties;
-import org.springframework.boot.autoconfigure.task.DefaultTaskSchedulerConfiguration;
-import org.springframework.boot.autoconfigure.task.TaskSchedulingAutoConfiguration;
-import org.springframework.boot.context.properties.EnableConfigurationProperties;
-import org.springframework.boot.context.properties.PropertyMapper;
-import org.springframework.boot.context.properties.source.MutuallyExclusiveConfigurationPropertiesException;
-import org.springframework.boot.jdbc.init.DataSourceScriptDatabaseInitializer;
-import org.springframework.boot.sql.autoconfigure.init.OnDatabaseInitializationCondition;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.AnyNestedCondition;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnBean;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnBooleanProperty;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnClass;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnMissingBean;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnProperty;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnSingleCandidate;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.SearchStrategy;
+import io.github.kotlinmania.spring.boot.autoconfigure.jmx.JmxAutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.jmx.JmxProperties;
+import io.github.kotlinmania.spring.boot.autoconfigure.task.DefaultTaskSchedulerConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.task.TaskSchedulingAutoConfiguration;
+import io.github.kotlinmania.spring.boot.context.properties.EnableConfigurationProperties;
+import io.github.kotlinmania.spring.boot.context.properties.PropertyMapper;
+import io.github.kotlinmania.spring.boot.context.properties.source.MutuallyExclusiveConfigurationPropertiesException;
+import io.github.kotlinmania.spring.boot.jdbc.init.DataSourceScriptDatabaseInitializer;
+import io.github.kotlinmania.spring.boot.sql.autoconfigure.init.OnDatabaseInitializationCondition;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Conditional;
@@ -71,7 +71,7 @@ import org.springframework.scheduling.support.PeriodicTrigger;
 import org.springframework.util.StringUtils;
 
 /**
- * {@link org.springframework.boot.autoconfigure.EnableAutoConfiguration
+ * {@link io.github.kotlinmania.spring.boot.autoconfigure.EnableAutoConfiguration
  * Auto-configuration} for Spring Integration.
  *
  * @author Artem Bilan
@@ -83,9 +83,9 @@ import org.springframework.util.StringUtils;
  * @author Yanming Zhou
  * @since 4.0.0
  */
-@AutoConfiguration(beforeName = "org.springframework.boot.rsocket.autoconfigure.RSocketMessagingAutoConfiguration",
+@AutoConfiguration(beforeName = "io.github.kotlinmania.spring.boot.rsocket.autoconfigure.RSocketMessagingAutoConfiguration",
 		after = { JmxAutoConfiguration.class, TaskSchedulingAutoConfiguration.class },
-		afterName = "org.springframework.boot.jdbc.autoconfigure.DataSourceAutoConfiguration")
+		afterName = "io.github.kotlinmania.spring.boot.jdbc.autoconfigure.DataSourceAutoConfiguration")
 @ConditionalOnClass(EnableIntegration.class)
 @EnableConfigurationProperties({ IntegrationProperties.class, JmxProperties.class })
 @Import(DefaultTaskSchedulerConfiguration.class)

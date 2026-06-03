@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.test.context.example.scan;
+package io.github.kotlinmania.spring.boot.test.context.example.scan;
 
 /**
  * Example class used in {@code AnnotatedClassFinderTests}.

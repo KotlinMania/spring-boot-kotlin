@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.micrometer.tracing.autoconfigure.otlp;
+package io.github.kotlinmania.spring.boot.micrometer.tracing.autoconfigure.otlp;
 
 import io.micrometer.registry.otlp.ExemplarContextProvider;
 import io.micrometer.registry.otlp.OtlpExemplarContext;
@@ -24,17 +24,17 @@ import io.micrometer.tracing.Tracer;
 import org.jspecify.annotations.Nullable;
 
 import org.springframework.beans.factory.ObjectProvider;
-import org.springframework.boot.autoconfigure.AutoConfiguration;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
-import org.springframework.boot.autoconfigure.condition.NoneNestedConditions;
-import org.springframework.boot.context.properties.EnableConfigurationProperties;
-import org.springframework.boot.micrometer.tracing.autoconfigure.MicrometerTracingAutoConfiguration;
-import org.springframework.boot.micrometer.tracing.autoconfigure.TracingProperties;
-import org.springframework.boot.micrometer.tracing.autoconfigure.TracingProperties.Exemplars.Include;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.EnableAutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnBean;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnClass;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnMissingBean;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnProperty;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.NoneNestedConditions;
+import io.github.kotlinmania.spring.boot.context.properties.EnableConfigurationProperties;
+import io.github.kotlinmania.spring.boot.micrometer.tracing.autoconfigure.MicrometerTracingAutoConfiguration;
+import io.github.kotlinmania.spring.boot.micrometer.tracing.autoconfigure.TracingProperties;
+import io.github.kotlinmania.spring.boot.micrometer.tracing.autoconfigure.TracingProperties.Exemplars.Include;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Conditional;
 import org.springframework.lang.Contract;
@@ -49,7 +49,7 @@ import org.springframework.util.function.SingletonSupplier;
  * @since 4.1.0
  */
 @AutoConfiguration(
-		beforeName = "org.springframework.boot.micrometer.metrics.autoconfigure.export.otlp.OtlpMetricsExportAutoConfiguration",
+		beforeName = "io.github.kotlinmania.spring.boot.micrometer.metrics.autoconfigure.export.otlp.OtlpMetricsExportAutoConfiguration",
 		after = MicrometerTracingAutoConfiguration.class)
 @ConditionalOnBean(Tracer.class)
 @ConditionalOnClass({ Tracer.class, ExemplarContextProvider.class })

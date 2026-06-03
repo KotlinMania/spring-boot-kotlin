@@ -14,18 +14,18 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.http.converter.autoconfigure;
+package io.github.kotlinmania.spring.boot.http.converter.autoconfigure;
 
 import org.springframework.beans.factory.ObjectProvider;
-import org.springframework.boot.autoconfigure.AutoConfiguration;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnWebApplication;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnWebApplication.Type;
-import org.springframework.boot.autoconfigure.condition.NoneNestedConditions;
-import org.springframework.boot.context.properties.EnableConfigurationProperties;
-import org.springframework.boot.http.converter.autoconfigure.HttpMessageConvertersAutoConfiguration.NotReactiveWebApplicationCondition;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.EnableAutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnClass;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnMissingBean;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnWebApplication;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnWebApplication.Type;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.NoneNestedConditions;
+import io.github.kotlinmania.spring.boot.context.properties.EnableConfigurationProperties;
+import io.github.kotlinmania.spring.boot.http.converter.autoconfigure.HttpMessageConvertersAutoConfiguration.NotReactiveWebApplicationCondition;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Conditional;
 import org.springframework.context.annotation.Configuration;
@@ -53,11 +53,11 @@ import org.springframework.http.converter.StringHttpMessageConverter;
  * @since 4.0.0
  */
 @SuppressWarnings("removal")
-@AutoConfiguration(afterName = { "org.springframework.boot.jackson.autoconfigure.JacksonAutoConfiguration",
-		"org.springframework.boot.jackson2.autoconfigure.Jackson2AutoConfiguration",
-		"org.springframework.boot.jsonb.autoconfigure.JsonbAutoConfiguration",
-		"org.springframework.boot.gson.autoconfigure.GsonAutoConfiguration",
-		"org.springframework.boot.kotlinx.serialization.json.autoconfigure.KotlinxSerializationJsonAutoConfiguration" })
+@AutoConfiguration(afterName = { "io.github.kotlinmania.spring.boot.jackson.autoconfigure.JacksonAutoConfiguration",
+		"io.github.kotlinmania.spring.boot.jackson2.autoconfigure.Jackson2AutoConfiguration",
+		"io.github.kotlinmania.spring.boot.jsonb.autoconfigure.JsonbAutoConfiguration",
+		"io.github.kotlinmania.spring.boot.gson.autoconfigure.GsonAutoConfiguration",
+		"io.github.kotlinmania.spring.boot.kotlinx.serialization.json.autoconfigure.KotlinxSerializationJsonAutoConfiguration" })
 @ConditionalOnClass(HttpMessageConverter.class)
 @Conditional(NotReactiveWebApplicationCondition.class)
 @Import({ JacksonHttpMessageConvertersConfiguration.class, Jackson2HttpMessageConvertersConfiguration.class,

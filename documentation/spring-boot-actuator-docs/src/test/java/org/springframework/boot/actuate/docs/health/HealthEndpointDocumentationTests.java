@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.actuate.docs.health;
+package io.github.kotlinmania.spring.boot.actuate.docs.health;
 
 import java.io.File;
 import java.util.Collections;
@@ -26,25 +26,25 @@ import javax.sql.DataSource;
 
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.actuate.docs.MockMvcEndpointDocumentationTests;
-import org.springframework.boot.actuate.endpoint.SecurityContext;
-import org.springframework.boot.autoconfigure.ImportAutoConfiguration;
-import org.springframework.boot.health.actuate.endpoint.AdditionalHealthEndpointPath;
-import org.springframework.boot.health.actuate.endpoint.HealthEndpoint;
-import org.springframework.boot.health.actuate.endpoint.HealthEndpointGroup;
-import org.springframework.boot.health.actuate.endpoint.HealthEndpointGroups;
-import org.springframework.boot.health.actuate.endpoint.HttpCodeStatusMapper;
-import org.springframework.boot.health.actuate.endpoint.StatusAggregator;
-import org.springframework.boot.health.application.DiskSpaceHealthIndicator;
-import org.springframework.boot.health.autoconfigure.registry.HealthContributorNameGenerator;
-import org.springframework.boot.health.contributor.CompositeHealthContributor;
-import org.springframework.boot.health.contributor.Health;
-import org.springframework.boot.health.contributor.HealthContributor;
-import org.springframework.boot.health.contributor.HealthIndicator;
-import org.springframework.boot.health.registry.DefaultHealthContributorRegistry;
-import org.springframework.boot.health.registry.HealthContributorRegistry;
-import org.springframework.boot.jdbc.autoconfigure.DataSourceAutoConfiguration;
-import org.springframework.boot.jdbc.health.DataSourceHealthIndicator;
+import io.github.kotlinmania.spring.boot.actuate.docs.MockMvcEndpointDocumentationTests;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.SecurityContext;
+import io.github.kotlinmania.spring.boot.autoconfigure.ImportAutoConfiguration;
+import io.github.kotlinmania.spring.boot.health.actuate.endpoint.AdditionalHealthEndpointPath;
+import io.github.kotlinmania.spring.boot.health.actuate.endpoint.HealthEndpoint;
+import io.github.kotlinmania.spring.boot.health.actuate.endpoint.HealthEndpointGroup;
+import io.github.kotlinmania.spring.boot.health.actuate.endpoint.HealthEndpointGroups;
+import io.github.kotlinmania.spring.boot.health.actuate.endpoint.HttpCodeStatusMapper;
+import io.github.kotlinmania.spring.boot.health.actuate.endpoint.StatusAggregator;
+import io.github.kotlinmania.spring.boot.health.application.DiskSpaceHealthIndicator;
+import io.github.kotlinmania.spring.boot.health.autoconfigure.registry.HealthContributorNameGenerator;
+import io.github.kotlinmania.spring.boot.health.contributor.CompositeHealthContributor;
+import io.github.kotlinmania.spring.boot.health.contributor.Health;
+import io.github.kotlinmania.spring.boot.health.contributor.HealthContributor;
+import io.github.kotlinmania.spring.boot.health.contributor.HealthIndicator;
+import io.github.kotlinmania.spring.boot.health.registry.DefaultHealthContributorRegistry;
+import io.github.kotlinmania.spring.boot.health.registry.HealthContributorRegistry;
+import io.github.kotlinmania.spring.boot.jdbc.autoconfigure.DataSourceAutoConfiguration;
+import io.github.kotlinmania.spring.boot.jdbc.health.DataSourceHealthIndicator;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.MediaType;

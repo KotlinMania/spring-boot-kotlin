@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.zipkin.autoconfigure;
+package io.github.kotlinmania.spring.boot.zipkin.autoconfigure;
 
 import zipkin2.reporter.HttpEndpointSupplier.Factory;
 
-import org.springframework.boot.autoconfigure.service.connection.ConnectionDetails;
+import io.github.kotlinmania.spring.boot.autoconfigure.service.connection.ConnectionDetails;
 
 /**
  * Details required to establish a connection to a Zipkin server.

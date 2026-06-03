@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.data.jdbc.domain.empty;
+package io.github.kotlinmania.spring.boot.data.jdbc.domain.empty;
 
 public class EmptyDataPackage {
 

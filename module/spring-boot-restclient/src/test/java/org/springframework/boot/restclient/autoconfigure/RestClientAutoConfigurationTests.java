@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.restclient.autoconfigure;
+package io.github.kotlinmania.spring.boot.restclient.autoconfigure;
 
 import java.time.Duration;
 import java.util.List;
@@ -22,20 +22,20 @@ import java.util.List;
 import org.junit.jupiter.api.Test;
 import org.mockito.InOrder;
 
-import org.springframework.boot.autoconfigure.AutoConfigurations;
-import org.springframework.boot.http.client.ClientHttpRequestFactoryBuilder;
-import org.springframework.boot.http.client.HttpClientSettings;
-import org.springframework.boot.http.client.HttpRedirects;
-import org.springframework.boot.http.client.autoconfigure.HttpClientAutoConfiguration;
-import org.springframework.boot.http.client.autoconfigure.imperative.ImperativeHttpClientAutoConfiguration;
-import org.springframework.boot.http.client.autoconfigure.reactive.ReactiveHttpClientAutoConfiguration;
-import org.springframework.boot.http.converter.autoconfigure.ClientHttpMessageConvertersCustomizer;
-import org.springframework.boot.http.converter.autoconfigure.HttpMessageConvertersAutoConfiguration;
-import org.springframework.boot.restclient.RestClientCustomizer;
-import org.springframework.boot.ssl.SslBundle;
-import org.springframework.boot.ssl.SslBundles;
-import org.springframework.boot.test.context.runner.ApplicationContextRunner;
-import org.springframework.boot.test.context.runner.WebApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurations;
+import io.github.kotlinmania.spring.boot.http.client.ClientHttpRequestFactoryBuilder;
+import io.github.kotlinmania.spring.boot.http.client.HttpClientSettings;
+import io.github.kotlinmania.spring.boot.http.client.HttpRedirects;
+import io.github.kotlinmania.spring.boot.http.client.autoconfigure.HttpClientAutoConfiguration;
+import io.github.kotlinmania.spring.boot.http.client.autoconfigure.imperative.ImperativeHttpClientAutoConfiguration;
+import io.github.kotlinmania.spring.boot.http.client.autoconfigure.reactive.ReactiveHttpClientAutoConfiguration;
+import io.github.kotlinmania.spring.boot.http.converter.autoconfigure.ClientHttpMessageConvertersCustomizer;
+import io.github.kotlinmania.spring.boot.http.converter.autoconfigure.HttpMessageConvertersAutoConfiguration;
+import io.github.kotlinmania.spring.boot.restclient.RestClientCustomizer;
+import io.github.kotlinmania.spring.boot.ssl.SslBundle;
+import io.github.kotlinmania.spring.boot.ssl.SslBundles;
+import io.github.kotlinmania.spring.boot.test.context.runner.ApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.test.context.runner.WebApplicationContextRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.annotation.Order;

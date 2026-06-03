@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.jdbc.autoconfigure;
+package io.github.kotlinmania.spring.boot.jdbc.autoconfigure;
 
 import com.zaxxer.hikari.HikariConfigMXBean;
 import com.zaxxer.hikari.HikariDataSource;
@@ -27,13 +27,13 @@ import org.jspecify.annotations.Nullable;
 
 import org.springframework.aot.hint.RuntimeHints;
 import org.springframework.aot.hint.RuntimeHintsRegistrar;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
-import org.springframework.boot.jdbc.DataSourceUnwrapper;
-import org.springframework.boot.jdbc.metadata.CommonsDbcp2DataSourcePoolMetadata;
-import org.springframework.boot.jdbc.metadata.DataSourcePoolMetadataProvider;
-import org.springframework.boot.jdbc.metadata.HikariDataSourcePoolMetadata;
-import org.springframework.boot.jdbc.metadata.OracleUcpDataSourcePoolMetadata;
-import org.springframework.boot.jdbc.metadata.TomcatDataSourcePoolMetadata;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnClass;
+import io.github.kotlinmania.spring.boot.jdbc.DataSourceUnwrapper;
+import io.github.kotlinmania.spring.boot.jdbc.metadata.CommonsDbcp2DataSourcePoolMetadata;
+import io.github.kotlinmania.spring.boot.jdbc.metadata.DataSourcePoolMetadataProvider;
+import io.github.kotlinmania.spring.boot.jdbc.metadata.HikariDataSourcePoolMetadata;
+import io.github.kotlinmania.spring.boot.jdbc.metadata.OracleUcpDataSourcePoolMetadata;
+import io.github.kotlinmania.spring.boot.jdbc.metadata.TomcatDataSourcePoolMetadata;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.ImportRuntimeHints;

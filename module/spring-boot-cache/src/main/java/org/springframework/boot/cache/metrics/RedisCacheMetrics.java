@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.cache.metrics;
+package io.github.kotlinmania.spring.boot.cache.metrics;
 
 import java.util.concurrent.TimeUnit;
 

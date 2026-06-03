@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.data.r2dbc.test.autoconfigure;
+package io.github.kotlinmania.spring.boot.data.r2dbc.test.autoconfigure;
 
 import java.time.Duration;
 import java.util.Map;
@@ -25,14 +25,14 @@ import reactor.core.publisher.Flux;
 import reactor.test.StepVerifier;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.testcontainers.service.connection.ServiceConnectionAutoConfiguration;
-import org.springframework.boot.transaction.autoconfigure.TransactionAutoConfiguration;
-import org.springframework.boot.transaction.autoconfigure.TransactionManagerCustomizationAutoConfiguration;
+import io.github.kotlinmania.spring.boot.testcontainers.service.connection.ServiceConnectionAutoConfiguration;
+import io.github.kotlinmania.spring.boot.transaction.autoconfigure.TransactionAutoConfiguration;
+import io.github.kotlinmania.spring.boot.transaction.autoconfigure.TransactionManagerCustomizationAutoConfiguration;
 import org.springframework.context.ApplicationContext;
 import org.springframework.r2dbc.core.DatabaseClient;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.springframework.boot.autoconfigure.AutoConfigurationImportedCondition.importedAutoConfiguration;
+import static io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurationImportedCondition.importedAutoConfiguration;
 
 /**
  * Integration tests for {@link DataR2dbcTest}.
@@ -40,7 +40,7 @@ import static org.springframework.boot.autoconfigure.AutoConfigurationImportedCo
  * @author Mark Paluch
  */
 @DataR2dbcTest(
-		properties = "spring.sql.init.schemaLocations=classpath:org/springframework/boot/data/r2dbc/test/autoconfigure/schema.sql")
+		properties = "spring.sql.init.schemaLocations=classpath:io.github.kotlinmania.spring.boot.data/r2dbc/test/autoconfigure/schema.sql")
 class DataR2dbcTestIntegrationTests {
 
 	@Autowired

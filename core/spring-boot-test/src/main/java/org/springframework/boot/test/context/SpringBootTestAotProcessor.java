@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.test.context;
+package io.github.kotlinmania.spring.boot.test.context;
 
 import java.io.File;
 import java.nio.file.Path;

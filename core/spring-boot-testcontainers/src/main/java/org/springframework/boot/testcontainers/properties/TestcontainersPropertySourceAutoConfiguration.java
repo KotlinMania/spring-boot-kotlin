@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.testcontainers.properties;
+package io.github.kotlinmania.spring.boot.testcontainers.properties;
 
 import org.testcontainers.containers.GenericContainer;
 
 import org.springframework.beans.factory.config.BeanDefinition;
-import org.springframework.boot.autoconfigure.AutoConfiguration;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnClass;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Role;
 import org.springframework.core.Ordered;
@@ -30,7 +30,7 @@ import org.springframework.test.context.DynamicPropertyRegistry;
 import org.springframework.test.context.support.DynamicPropertyRegistrarBeanInitializer;
 
 /**
- * {@link org.springframework.boot.autoconfigure.EnableAutoConfiguration
+ * {@link io.github.kotlinmania.spring.boot.autoconfigure.EnableAutoConfiguration
  * Auto-configuration} to add support for properties sourced from a Testcontainers
  * {@link GenericContainer container}.
  *

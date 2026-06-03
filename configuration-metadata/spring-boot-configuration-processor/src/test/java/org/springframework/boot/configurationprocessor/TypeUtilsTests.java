@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.configurationprocessor;
+package io.github.kotlinmania.spring.boot.configurationprocessor;
 
 import java.time.Duration;
 import java.util.Map;
@@ -27,13 +27,13 @@ import javax.lang.model.util.ElementFilter;
 
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.configurationprocessor.test.RoundEnvironmentTester;
-import org.springframework.boot.configurationprocessor.test.TestableAnnotationProcessor;
-import org.springframework.boot.configurationsample.generic.AbstractGenericProperties;
-import org.springframework.boot.configurationsample.generic.AbstractIntermediateGenericProperties;
-import org.springframework.boot.configurationsample.generic.MixGenericNameProperties;
-import org.springframework.boot.configurationsample.generic.SimpleGenericProperties;
-import org.springframework.boot.configurationsample.generic.UnresolvedGenericProperties;
+import io.github.kotlinmania.spring.boot.configurationprocessor.test.RoundEnvironmentTester;
+import io.github.kotlinmania.spring.boot.configurationprocessor.test.TestableAnnotationProcessor;
+import io.github.kotlinmania.spring.boot.configurationsample.generic.AbstractGenericProperties;
+import io.github.kotlinmania.spring.boot.configurationsample.generic.AbstractIntermediateGenericProperties;
+import io.github.kotlinmania.spring.boot.configurationsample.generic.MixGenericNameProperties;
+import io.github.kotlinmania.spring.boot.configurationsample.generic.SimpleGenericProperties;
+import io.github.kotlinmania.spring.boot.configurationsample.generic.UnresolvedGenericProperties;
 import org.springframework.core.test.tools.SourceFile;
 import org.springframework.core.test.tools.TestCompiler;
 

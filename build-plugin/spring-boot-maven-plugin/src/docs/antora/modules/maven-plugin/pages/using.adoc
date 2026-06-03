@@ -48,7 +48,7 @@ To configure your project to inherit from the `spring-boot-starter-parent`, set 
 ----
 <!-- Inherit defaults from Spring Boot -->
 <parent>
-	<groupId>org.springframework.boot</groupId>
+	<groupId>io.github.kotlinmania.spring.boot./groupId>
 	<artifactId>spring-boot-starter-parent</artifactId>
 	<version>{version-spring-boot}</version>
 </parent>

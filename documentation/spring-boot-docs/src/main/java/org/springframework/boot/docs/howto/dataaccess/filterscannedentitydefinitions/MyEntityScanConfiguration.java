@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.howto.dataaccess.filterscannedentitydefinitions;
+package io.github.kotlinmania.spring.boot.docs.howto.dataaccess.filterscannedentitydefinitions;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

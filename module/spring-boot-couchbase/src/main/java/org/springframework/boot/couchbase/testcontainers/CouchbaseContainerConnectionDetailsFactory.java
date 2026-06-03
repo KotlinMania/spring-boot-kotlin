@@ -14,16 +14,16 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.couchbase.testcontainers;
+package io.github.kotlinmania.spring.boot.couchbase.testcontainers;
 
 import org.jspecify.annotations.Nullable;
 import org.testcontainers.couchbase.CouchbaseContainer;
 
-import org.springframework.boot.couchbase.autoconfigure.CouchbaseConnectionDetails;
-import org.springframework.boot.ssl.SslBundle;
-import org.springframework.boot.testcontainers.service.connection.ContainerConnectionDetailsFactory;
-import org.springframework.boot.testcontainers.service.connection.ContainerConnectionSource;
-import org.springframework.boot.testcontainers.service.connection.ServiceConnection;
+import io.github.kotlinmania.spring.boot.couchbase.autoconfigure.CouchbaseConnectionDetails;
+import io.github.kotlinmania.spring.boot.ssl.SslBundle;
+import io.github.kotlinmania.spring.boot.testcontainers.service.connection.ContainerConnectionDetailsFactory;
+import io.github.kotlinmania.spring.boot.testcontainers.service.connection.ContainerConnectionSource;
+import io.github.kotlinmania.spring.boot.testcontainers.service.connection.ServiceConnection;
 
 /**
  * {@link ContainerConnectionDetailsFactory} to create {@link CouchbaseConnectionDetails}

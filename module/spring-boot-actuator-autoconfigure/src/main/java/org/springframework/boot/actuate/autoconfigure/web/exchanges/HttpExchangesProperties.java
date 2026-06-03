@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.actuate.autoconfigure.web.exchanges;
+package io.github.kotlinmania.spring.boot.actuate.autoconfigure.web.exchanges;
 
 import java.util.HashSet;
 import java.util.Set;
 
-import org.springframework.boot.actuate.web.exchanges.Include;
-import org.springframework.boot.context.properties.ConfigurationProperties;
+import io.github.kotlinmania.spring.boot.actuate.web.exchanges.Include;
+import io.github.kotlinmania.spring.boot.context.properties.ConfigurationProperties;
 
 /**
  * Configuration properties for recording HTTP exchanges.

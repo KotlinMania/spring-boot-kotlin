@@ -14,17 +14,17 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.autoconfigure.admin;
+package io.github.kotlinmania.spring.boot.autoconfigure.admin;
 
 import javax.management.MalformedObjectNameException;
 
 import org.springframework.beans.factory.ObjectProvider;
-import org.springframework.boot.admin.SpringApplicationAdminMXBean;
-import org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar;
-import org.springframework.boot.autoconfigure.AutoConfiguration;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnBooleanProperty;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
-import org.springframework.boot.autoconfigure.jmx.JmxAutoConfiguration;
+import io.github.kotlinmania.spring.boot.admin.SpringApplicationAdminMXBean;
+import io.github.kotlinmania.spring.boot.admin.SpringApplicationAdminMXBeanRegistrar;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnBooleanProperty;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnMissingBean;
+import io.github.kotlinmania.spring.boot.autoconfigure.jmx.JmxAutoConfiguration;
 import org.springframework.context.annotation.Bean;
 import org.springframework.core.env.Environment;
 import org.springframework.jmx.export.MBeanExporter;
@@ -51,7 +51,7 @@ public final class SpringApplicationAdminJmxAutoConfiguration {
 	/**
 	 * The default {@code ObjectName} of the application admin mbean.
 	 */
-	private static final String DEFAULT_JMX_NAME = "org.springframework.boot:type=Admin,name=SpringApplication";
+	private static final String DEFAULT_JMX_NAME = "io.github.kotlinmania.spring.boot.type=Admin,name=SpringApplication";
 
 	@Bean
 	@ConditionalOnMissingBean

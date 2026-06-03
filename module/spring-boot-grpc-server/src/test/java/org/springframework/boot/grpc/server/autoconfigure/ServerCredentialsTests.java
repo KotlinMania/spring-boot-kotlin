@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.grpc.server.autoconfigure;
+package io.github.kotlinmania.spring.boot.grpc.server.autoconfigure;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -26,12 +26,12 @@ import javax.net.ssl.TrustManagerFactory;
 import io.grpc.TlsServerCredentials.ClientAuth;
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.context.properties.bind.Binder;
-import org.springframework.boot.context.properties.source.MapConfigurationPropertySource;
-import org.springframework.boot.grpc.server.autoconfigure.GrpcServerProperties.Ssl;
-import org.springframework.boot.ssl.SslBundle;
-import org.springframework.boot.ssl.SslBundles;
-import org.springframework.boot.ssl.SslManagerBundle;
+import io.github.kotlinmania.spring.boot.context.properties.bind.Binder;
+import io.github.kotlinmania.spring.boot.context.properties.source.MapConfigurationPropertySource;
+import io.github.kotlinmania.spring.boot.grpc.server.autoconfigure.GrpcServerProperties.Ssl;
+import io.github.kotlinmania.spring.boot.ssl.SslBundle;
+import io.github.kotlinmania.spring.boot.ssl.SslBundles;
+import io.github.kotlinmania.spring.boot.ssl.SslManagerBundle;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatIllegalStateException;

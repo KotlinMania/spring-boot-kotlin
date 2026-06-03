@@ -14,18 +14,18 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.actuate.endpoint.annotation;
+package io.github.kotlinmania.spring.boot.actuate.endpoint.annotation;
 
 import java.util.Collection;
 import java.util.Collections;
 
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.actuate.endpoint.EndpointFilter;
-import org.springframework.boot.actuate.endpoint.ExposableEndpoint;
-import org.springframework.boot.actuate.endpoint.Operation;
-import org.springframework.boot.actuate.endpoint.invoke.OperationInvokerAdvisor;
-import org.springframework.boot.actuate.endpoint.invoke.ParameterValueMapper;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.EndpointFilter;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.ExposableEndpoint;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.Operation;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.invoke.OperationInvokerAdvisor;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.invoke.ParameterValueMapper;
 import org.springframework.context.ApplicationContext;
 
 import static org.assertj.core.api.Assertions.assertThat;

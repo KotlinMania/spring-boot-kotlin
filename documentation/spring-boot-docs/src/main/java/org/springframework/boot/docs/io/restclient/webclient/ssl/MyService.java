@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.io.restclient.webclient.ssl;
+package io.github.kotlinmania.spring.boot.docs.io.restclient.webclient.ssl;
 
 import reactor.core.publisher.Mono;
 
-import org.springframework.boot.webclient.autoconfigure.WebClientSsl;
+import io.github.kotlinmania.spring.boot.webclient.autoconfigure.WebClientSsl;
 import org.springframework.stereotype.Service;
 import org.springframework.web.reactive.function.client.WebClient;
 

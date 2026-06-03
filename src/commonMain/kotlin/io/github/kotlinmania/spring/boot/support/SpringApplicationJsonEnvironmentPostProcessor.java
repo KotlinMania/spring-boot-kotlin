@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.support;
+package io.github.kotlinmania.spring.boot.support;
 
 import java.util.Arrays;
 import java.util.Collection;
@@ -26,13 +26,13 @@ import java.util.Set;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.EnvironmentPostProcessor;
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.json.JsonParser;
-import org.springframework.boot.json.JsonParserFactory;
-import org.springframework.boot.origin.Origin;
-import org.springframework.boot.origin.OriginLookup;
-import org.springframework.boot.origin.PropertySourceOrigin;
+import io.github.kotlinmania.spring.boot.EnvironmentPostProcessor;
+import io.github.kotlinmania.spring.boot.SpringApplication;
+import io.github.kotlinmania.spring.boot.json.JsonParser;
+import io.github.kotlinmania.spring.boot.json.JsonParserFactory;
+import io.github.kotlinmania.spring.boot.origin.Origin;
+import io.github.kotlinmania.spring.boot.origin.OriginLookup;
+import io.github.kotlinmania.spring.boot.origin.PropertySourceOrigin;
 import org.springframework.core.Ordered;
 import org.springframework.core.env.ConfigurableEnvironment;
 import org.springframework.core.env.Environment;

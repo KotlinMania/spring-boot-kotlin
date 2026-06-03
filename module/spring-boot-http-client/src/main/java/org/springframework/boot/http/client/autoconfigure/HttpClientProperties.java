@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.http.client.autoconfigure;
+package io.github.kotlinmania.spring.boot.http.client.autoconfigure;
 
 import java.util.LinkedHashMap;
 import java.util.List;
@@ -22,7 +22,7 @@ import java.util.Map;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.context.properties.NestedConfigurationProperty;
+import io.github.kotlinmania.spring.boot.context.properties.NestedConfigurationProperty;
 
 /**
  * Base class for configuration properties common to both imperative and reactive HTTP

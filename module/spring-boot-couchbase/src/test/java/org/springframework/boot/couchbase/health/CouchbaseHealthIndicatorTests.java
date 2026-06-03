@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.couchbase.health;
+package io.github.kotlinmania.spring.boot.couchbase.health;
 
 import java.util.Arrays;
 import java.util.Collections;
@@ -30,8 +30,8 @@ import com.couchbase.client.core.service.ServiceType;
 import com.couchbase.client.java.Cluster;
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.health.contributor.Health;
-import org.springframework.boot.health.contributor.Status;
+import io.github.kotlinmania.spring.boot.health.contributor.Health;
+import io.github.kotlinmania.spring.boot.health.contributor.Status;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.BDDMockito.given;

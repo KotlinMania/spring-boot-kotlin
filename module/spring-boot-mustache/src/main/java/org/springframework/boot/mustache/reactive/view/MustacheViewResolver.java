@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.mustache.reactive.view;
+package io.github.kotlinmania.spring.boot.mustache.reactive.view;
 
 import java.nio.charset.Charset;
 

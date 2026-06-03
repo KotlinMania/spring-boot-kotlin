@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.context.properties.migrator;
+package io.github.kotlinmania.spring.boot.context.properties.migrator;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -28,16 +28,16 @@ import java.util.function.Predicate;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.configurationmetadata.ConfigurationMetadataProperty;
-import org.springframework.boot.configurationmetadata.ConfigurationMetadataRepository;
-import org.springframework.boot.context.properties.source.ConfigurationProperty;
-import org.springframework.boot.context.properties.source.ConfigurationPropertyName;
-import org.springframework.boot.context.properties.source.ConfigurationPropertySource;
-import org.springframework.boot.context.properties.source.ConfigurationPropertySources;
-import org.springframework.boot.context.properties.source.IterableConfigurationPropertySource;
-import org.springframework.boot.env.OriginTrackedMapPropertySource;
-import org.springframework.boot.origin.OriginTrackedValue;
-import org.springframework.boot.origin.PropertySourceOrigin;
+import io.github.kotlinmania.spring.boot.configurationmetadata.ConfigurationMetadataProperty;
+import io.github.kotlinmania.spring.boot.configurationmetadata.ConfigurationMetadataRepository;
+import io.github.kotlinmania.spring.boot.context.properties.source.ConfigurationProperty;
+import io.github.kotlinmania.spring.boot.context.properties.source.ConfigurationPropertyName;
+import io.github.kotlinmania.spring.boot.context.properties.source.ConfigurationPropertySource;
+import io.github.kotlinmania.spring.boot.context.properties.source.ConfigurationPropertySources;
+import io.github.kotlinmania.spring.boot.context.properties.source.IterableConfigurationPropertySource;
+import io.github.kotlinmania.spring.boot.env.OriginTrackedMapPropertySource;
+import io.github.kotlinmania.spring.boot.origin.OriginTrackedValue;
+import io.github.kotlinmania.spring.boot.origin.PropertySourceOrigin;
 import org.springframework.core.env.ConfigurableEnvironment;
 import org.springframework.core.env.PropertySource;
 import org.springframework.util.Assert;

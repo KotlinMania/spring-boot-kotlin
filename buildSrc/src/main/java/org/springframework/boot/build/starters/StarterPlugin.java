@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.build.starters;
+package io.github.kotlinmania.spring.boot.build.starters;
 
 import java.util.Map;
 import java.util.TreeMap;
@@ -32,11 +32,11 @@ import org.gradle.api.provider.Provider;
 import org.gradle.api.tasks.TaskProvider;
 import org.gradle.api.tasks.bundling.Jar;
 
-import org.springframework.boot.build.ConventionsPlugin;
-import org.springframework.boot.build.DeployedPlugin;
-import org.springframework.boot.build.classpath.CheckClasspathForConflicts;
-import org.springframework.boot.build.classpath.CheckClasspathForUnconstrainedDirectDependencies;
-import org.springframework.boot.build.classpath.CheckClasspathForUnnecessaryExclusions;
+import io.github.kotlinmania.spring.boot.build.ConventionsPlugin;
+import io.github.kotlinmania.spring.boot.build.DeployedPlugin;
+import io.github.kotlinmania.spring.boot.build.classpath.CheckClasspathForConflicts;
+import io.github.kotlinmania.spring.boot.build.classpath.CheckClasspathForUnconstrainedDirectDependencies;
+import io.github.kotlinmania.spring.boot.build.classpath.CheckClasspathForUnnecessaryExclusions;
 import org.springframework.util.StringUtils;
 
 /**

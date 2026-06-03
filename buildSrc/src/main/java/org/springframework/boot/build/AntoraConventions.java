@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.build;
+package io.github.kotlinmania.spring.boot.build;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -47,11 +47,11 @@ import org.gradle.api.tasks.TaskContainer;
 import org.gradle.api.tasks.TaskProvider;
 import tools.jackson.databind.json.JsonMapper;
 
-import org.springframework.boot.build.antora.AntoraAsciidocAttributes;
-import org.springframework.boot.build.antora.CheckJavadocMacros;
-import org.springframework.boot.build.antora.GenerateAntoraPlaybook;
-import org.springframework.boot.build.bom.BomExtension;
-import org.springframework.boot.build.bom.ResolvedBom;
+import io.github.kotlinmania.spring.boot.build.antora.AntoraAsciidocAttributes;
+import io.github.kotlinmania.spring.boot.build.antora.CheckJavadocMacros;
+import io.github.kotlinmania.spring.boot.build.antora.GenerateAntoraPlaybook;
+import io.github.kotlinmania.spring.boot.build.bom.BomExtension;
+import io.github.kotlinmania.spring.boot.build.bom.ResolvedBom;
 import org.springframework.util.Assert;
 import org.springframework.util.StringUtils;
 

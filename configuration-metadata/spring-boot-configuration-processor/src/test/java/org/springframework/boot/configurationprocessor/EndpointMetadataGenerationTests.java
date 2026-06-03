@@ -14,28 +14,28 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.configurationprocessor;
+package io.github.kotlinmania.spring.boot.configurationprocessor;
 
 import java.time.Duration;
 import java.util.Locale;
 
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.configurationprocessor.metadata.ConfigurationMetadata;
-import org.springframework.boot.configurationprocessor.metadata.Metadata;
-import org.springframework.boot.configurationsample.TestAccess;
-import org.springframework.boot.configurationsample.endpoint.CamelCaseEndpoint;
-import org.springframework.boot.configurationsample.endpoint.CustomPropertiesEndpoint;
-import org.springframework.boot.configurationsample.endpoint.EnabledEndpoint;
-import org.springframework.boot.configurationsample.endpoint.NoAccessEndpoint;
-import org.springframework.boot.configurationsample.endpoint.NullableParameterEndpoint;
-import org.springframework.boot.configurationsample.endpoint.ReadOnlyAccessEndpoint;
-import org.springframework.boot.configurationsample.endpoint.SimpleEndpoint;
-import org.springframework.boot.configurationsample.endpoint.SimpleEndpoint2;
-import org.springframework.boot.configurationsample.endpoint.SimpleEndpoint3;
-import org.springframework.boot.configurationsample.endpoint.SpecificEndpoint;
-import org.springframework.boot.configurationsample.endpoint.UnrestrictedAccessEndpoint;
-import org.springframework.boot.configurationsample.endpoint.incremental.IncrementalEndpoint;
+import io.github.kotlinmania.spring.boot.configurationprocessor.metadata.ConfigurationMetadata;
+import io.github.kotlinmania.spring.boot.configurationprocessor.metadata.Metadata;
+import io.github.kotlinmania.spring.boot.configurationsample.TestAccess;
+import io.github.kotlinmania.spring.boot.configurationsample.endpoint.CamelCaseEndpoint;
+import io.github.kotlinmania.spring.boot.configurationsample.endpoint.CustomPropertiesEndpoint;
+import io.github.kotlinmania.spring.boot.configurationsample.endpoint.EnabledEndpoint;
+import io.github.kotlinmania.spring.boot.configurationsample.endpoint.NoAccessEndpoint;
+import io.github.kotlinmania.spring.boot.configurationsample.endpoint.NullableParameterEndpoint;
+import io.github.kotlinmania.spring.boot.configurationsample.endpoint.ReadOnlyAccessEndpoint;
+import io.github.kotlinmania.spring.boot.configurationsample.endpoint.SimpleEndpoint;
+import io.github.kotlinmania.spring.boot.configurationsample.endpoint.SimpleEndpoint2;
+import io.github.kotlinmania.spring.boot.configurationsample.endpoint.SimpleEndpoint3;
+import io.github.kotlinmania.spring.boot.configurationsample.endpoint.SpecificEndpoint;
+import io.github.kotlinmania.spring.boot.configurationsample.endpoint.UnrestrictedAccessEndpoint;
+import io.github.kotlinmania.spring.boot.configurationsample.endpoint.incremental.IncrementalEndpoint;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatRuntimeException;
@@ -134,7 +134,7 @@ class EndpointMetadataGenerationTests extends AbstractMetadataGenerationTests {
 		assertThat(metadata).has(cacheTtl("incremental"));
 		assertThat(metadata.getItems()).hasSize(3);
 		project.replaceText(IncrementalEndpoint.class, "id = \"incremental\"",
-				"id = \"incremental\", defaultAccess = org.springframework.boot.configurationsample.TestAccess.NONE");
+				"id = \"incremental\", defaultAccess = io.github.kotlinmania.spring.boot.configurationsample.TestAccess.NONE");
 		metadata = project.compile();
 		assertThat(metadata)
 			.has(Metadata.withGroup("management.endpoint.incremental").fromSource(IncrementalEndpoint.class));
@@ -192,7 +192,7 @@ class EndpointMetadataGenerationTests extends AbstractMetadataGenerationTests {
 			.havingRootCause()
 			.isInstanceOf(IllegalStateException.class)
 			.withMessage(
-					"Existing property 'management.endpoint.simple.access' from type org.springframework.boot.configurationsample.endpoint.SimpleEndpoint has a conflicting value. Existing value: unrestricted, new value from type org.springframework.boot.configurationsample.endpoint.SimpleEndpoint3: none");
+					"Existing property 'management.endpoint.simple.access' from type io.github.kotlinmania.spring.boot.configurationsample.endpoint.SimpleEndpoint has a conflicting value. Existing value: unrestricted, new value from type io.github.kotlinmania.spring.boot.configurationsample.endpoint.SimpleEndpoint3: none");
 	}
 
 	@Test

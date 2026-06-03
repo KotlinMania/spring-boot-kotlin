@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.gradle.tasks.aot;
+package io.github.kotlinmania.spring.boot.gradle.tasks.aot;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -48,7 +48,7 @@ public abstract class ProcessTestAot extends AbstractAot {
 	private @Nullable FileCollection classpathRoots;
 
 	public ProcessTestAot() {
-		getMainClass().set("org.springframework.boot.test.context.SpringBootTestAotProcessor");
+		getMainClass().set("io.github.kotlinmania.spring.boot.test.context.SpringBootTestAotProcessor");
 	}
 
 	/**

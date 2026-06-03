@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.micrometer.metrics.autoconfigure.ssl;
+package io.github.kotlinmania.spring.boot.micrometer.metrics.autoconfigure.ssl;
 
 import java.time.Clock;
 import java.time.Duration;
@@ -34,11 +34,11 @@ import io.micrometer.core.instrument.Tags;
 import io.micrometer.core.instrument.binder.MeterBinder;
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.info.SslInfo;
-import org.springframework.boot.info.SslInfo.BundleInfo;
-import org.springframework.boot.info.SslInfo.CertificateChainInfo;
-import org.springframework.boot.info.SslInfo.CertificateInfo;
-import org.springframework.boot.ssl.SslBundles;
+import io.github.kotlinmania.spring.boot.info.SslInfo;
+import io.github.kotlinmania.spring.boot.info.SslInfo.BundleInfo;
+import io.github.kotlinmania.spring.boot.info.SslInfo.CertificateChainInfo;
+import io.github.kotlinmania.spring.boot.info.SslInfo.CertificateInfo;
+import io.github.kotlinmania.spring.boot.ssl.SslBundles;
 import org.springframework.util.Assert;
 
 /**

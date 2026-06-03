@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.loader.zip;
+package io.github.kotlinmania.spring.boot.loader.zip;
 
 import java.io.Closeable;
 import java.io.IOException;
@@ -34,7 +34,7 @@ import java.util.function.Function;
 import java.util.stream.Stream;
 import java.util.zip.ZipEntry;
 
-import org.springframework.boot.loader.log.DebugLogger;
+import io.github.kotlinmania.spring.boot.loader.log.DebugLogger;
 
 /**
  * Provides raw access to content from a regular or nested zip file. This class performs

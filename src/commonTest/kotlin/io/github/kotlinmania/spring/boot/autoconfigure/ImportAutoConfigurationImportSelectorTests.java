@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.autoconfigure;
+package io.github.kotlinmania.spring.boot.autoconfigure;
 
 import java.io.IOException;
 import java.lang.annotation.Retention;
@@ -28,7 +28,7 @@ import org.junit.jupiter.api.Test;
 
 import org.springframework.beans.factory.config.ConfigurableListableBeanFactory;
 import org.springframework.beans.factory.support.DefaultListableBeanFactory;
-import org.springframework.boot.testsupport.classpath.resources.WithResource;
+import io.github.kotlinmania.spring.boot.testsupport.classpath.resources.WithResource;
 import org.springframework.core.annotation.AliasFor;
 import org.springframework.core.io.DefaultResourceLoader;
 import org.springframework.core.type.AnnotationMetadata;
@@ -76,33 +76,33 @@ class ImportAutoConfigurationImportSelectorTests {
 
 	@Test
 	@WithResource(
-			name = "META-INF/spring/org.springframework.boot.autoconfigure.ImportAutoConfigurationImportSelectorTests$FromImportsFile.imports",
+			name = "META-INF/spring/io.github.kotlinmania.spring.boot.autoconfigure.ImportAutoConfigurationImportSelectorTests$FromImportsFile.imports",
 			content = """
-					org.springframework.boot.autoconfigure.ImportAutoConfigurationImportSelectorTests$ImportedAutoConfiguration
-					org.springframework.boot.autoconfigure.missing.MissingAutoConfiguration
+					io.github.kotlinmania.spring.boot.autoconfigure.ImportAutoConfigurationImportSelectorTests$ImportedAutoConfiguration
+					io.github.kotlinmania.spring.boot.autoconfigure.missing.MissingAutoConfiguration
 					""")
 	void importsAreSelectedFromImportsFile() throws Exception {
 		AnnotationMetadata annotationMetadata = getAnnotationMetadata(FromImportsFile.class);
 		String[] imports = this.importSelector.selectImports(annotationMetadata);
 		assertThat(imports).containsExactly(
-				"org.springframework.boot.autoconfigure.ImportAutoConfigurationImportSelectorTests$ImportedAutoConfiguration",
-				"org.springframework.boot.autoconfigure.missing.MissingAutoConfiguration");
+				"io.github.kotlinmania.spring.boot.autoconfigure.ImportAutoConfigurationImportSelectorTests$ImportedAutoConfiguration",
+				"io.github.kotlinmania.spring.boot.autoconfigure.missing.MissingAutoConfiguration");
 	}
 
 	@Test
 	@WithResource(
-			name = "META-INF/spring/org.springframework.boot.autoconfigure.ImportAutoConfigurationImportSelectorTests$FromImportsFile.imports",
+			name = "META-INF/spring/io.github.kotlinmania.spring.boot.autoconfigure.ImportAutoConfigurationImportSelectorTests$FromImportsFile.imports",
 			content = """
-					optional:org.springframework.boot.autoconfigure.ImportAutoConfigurationImportSelectorTests$ImportedAutoConfiguration
-					optional:org.springframework.boot.autoconfigure.missing.MissingAutoConfiguration
-					org.springframework.boot.autoconfigure.ImportAutoConfigurationImportSelectorTests$AnotherImportedAutoConfiguration
+					optional:io.github.kotlinmania.spring.boot.autoconfigure.ImportAutoConfigurationImportSelectorTests$ImportedAutoConfiguration
+					optional:io.github.kotlinmania.spring.boot.autoconfigure.missing.MissingAutoConfiguration
+					io.github.kotlinmania.spring.boot.autoconfigure.ImportAutoConfigurationImportSelectorTests$AnotherImportedAutoConfiguration
 					""")
 	void importsSelectedFromImportsFileIgnoreMissingOptionalClasses() throws Exception {
 		AnnotationMetadata annotationMetadata = getAnnotationMetadata(FromImportsFile.class);
 		String[] imports = this.importSelector.selectImports(annotationMetadata);
 		assertThat(imports).containsExactly(
-				"org.springframework.boot.autoconfigure.ImportAutoConfigurationImportSelectorTests$ImportedAutoConfiguration",
-				"org.springframework.boot.autoconfigure.ImportAutoConfigurationImportSelectorTests$AnotherImportedAutoConfiguration");
+				"io.github.kotlinmania.spring.boot.autoconfigure.ImportAutoConfigurationImportSelectorTests$ImportedAutoConfiguration",
+				"io.github.kotlinmania.spring.boot.autoconfigure.ImportAutoConfigurationImportSelectorTests$AnotherImportedAutoConfiguration");
 	}
 
 	@Test
@@ -199,7 +199,7 @@ class ImportAutoConfigurationImportSelectorTests {
 	@Test
 	void determineImportsShouldNotSetPackageImport() throws Exception {
 		Class<?> packageImportsClass = ClassUtils
-			.resolveClassName("org.springframework.boot.autoconfigure.AutoConfigurationPackages.PackageImports", null);
+			.resolveClassName("io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurationPackages.PackageImports", null);
 		Set<Object> selectedImports = this.importSelector
 			.determineImports(getAnnotationMetadata(ImportMetaAutoConfigurationExcludeWithUnrelatedOne.class));
 		for (Object selectedImport : selectedImports) {

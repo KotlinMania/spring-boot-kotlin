@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.webflux.filter;
+package io.github.kotlinmania.spring.boot.webflux.filter;
 
 import org.springframework.core.Ordered;
 import org.springframework.web.server.WebFilter;

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.pulsar.autoconfigure;
+package io.github.kotlinmania.spring.boot.pulsar.autoconfigure;
 
 import org.springframework.pulsar.config.PulsarContainerFactory;
 

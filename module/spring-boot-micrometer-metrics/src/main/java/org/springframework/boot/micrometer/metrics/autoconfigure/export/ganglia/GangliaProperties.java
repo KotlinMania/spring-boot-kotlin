@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.micrometer.metrics.autoconfigure.export.ganglia;
+package io.github.kotlinmania.spring.boot.micrometer.metrics.autoconfigure.export.ganglia;
 
 import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 
 import info.ganglia.gmetric4j.gmetric.GMetric;
 
-import org.springframework.boot.context.properties.ConfigurationProperties;
+import io.github.kotlinmania.spring.boot.context.properties.ConfigurationProperties;
 
 /**
  * {@link ConfigurationProperties @ConfigurationProperties} for configuring Ganglia

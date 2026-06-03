@@ -14,17 +14,17 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.artemis.autoconfigure;
+package io.github.kotlinmania.spring.boot.artemis.autoconfigure;
 
 import jakarta.jms.ConnectionFactory;
 import jakarta.transaction.TransactionManager;
 import org.apache.activemq.artemis.jms.client.ActiveMQXAConnectionFactory;
 
 import org.springframework.beans.factory.ListableBeanFactory;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
-import org.springframework.boot.jms.XAConnectionFactoryWrapper;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnBean;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnClass;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnMissingBean;
+import io.github.kotlinmania.spring.boot.jms.XAConnectionFactoryWrapper;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;

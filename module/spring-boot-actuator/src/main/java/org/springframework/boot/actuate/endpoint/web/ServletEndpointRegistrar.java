@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.actuate.endpoint.web;
+package io.github.kotlinmania.spring.boot.actuate.endpoint.web;
 
 import java.io.IOException;
 import java.util.Collection;
@@ -36,9 +36,9 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.actuate.endpoint.Access;
-import org.springframework.boot.actuate.endpoint.EndpointAccessResolver;
-import org.springframework.boot.web.servlet.ServletContextInitializer;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.Access;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.EndpointAccessResolver;
+import io.github.kotlinmania.spring.boot.web.servlet.ServletContextInitializer;
 import org.springframework.util.Assert;
 import org.springframework.util.StringUtils;
 

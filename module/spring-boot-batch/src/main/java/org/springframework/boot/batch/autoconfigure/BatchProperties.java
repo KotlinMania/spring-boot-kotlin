@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.batch.autoconfigure;
+package io.github.kotlinmania.spring.boot.batch.autoconfigure;
 
-import org.springframework.boot.context.properties.ConfigurationProperties;
+import io.github.kotlinmania.spring.boot.context.properties.ConfigurationProperties;
 
 /**
  * Configuration properties for Spring Batch.

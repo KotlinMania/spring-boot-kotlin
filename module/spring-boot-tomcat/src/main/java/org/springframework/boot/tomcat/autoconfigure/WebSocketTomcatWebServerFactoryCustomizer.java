@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.tomcat.autoconfigure;
+package io.github.kotlinmania.spring.boot.tomcat.autoconfigure;
 
 import org.apache.tomcat.websocket.server.WsSci;
 
-import org.springframework.boot.tomcat.ConfigurableTomcatWebServerFactory;
-import org.springframework.boot.web.server.WebServerFactoryCustomizer;
+import io.github.kotlinmania.spring.boot.tomcat.ConfigurableTomcatWebServerFactory;
+import io.github.kotlinmania.spring.boot.web.server.WebServerFactoryCustomizer;
 
 /**
  * {@link WebServerFactoryCustomizer} that configures Tomcat's WebSocket support.

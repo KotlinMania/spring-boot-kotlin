@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.buildpack.platform.docker;
+package io.github.kotlinmania.spring.boot.buildpack.platform.docker;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 
-import org.springframework.boot.testsupport.system.CapturedOutput;
-import org.springframework.boot.testsupport.system.OutputCaptureExtension;
+import io.github.kotlinmania.spring.boot.testsupport.system.CapturedOutput;
+import io.github.kotlinmania.spring.boot.testsupport.system.OutputCaptureExtension;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

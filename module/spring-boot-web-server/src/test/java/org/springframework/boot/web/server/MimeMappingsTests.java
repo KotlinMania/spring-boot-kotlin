@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.web.server;
+package io.github.kotlinmania.spring.boot.web.server;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -29,9 +29,9 @@ import org.junit.jupiter.api.Test;
 
 import org.springframework.aot.hint.RuntimeHints;
 import org.springframework.aot.hint.predicate.RuntimeHintsPredicates;
-import org.springframework.boot.web.server.MimeMappings.DefaultMimeMappings;
-import org.springframework.boot.web.server.MimeMappings.Mapping;
-import org.springframework.boot.web.server.MimeMappings.MimeMappingsRuntimeHints;
+import io.github.kotlinmania.spring.boot.web.server.MimeMappings.DefaultMimeMappings;
+import io.github.kotlinmania.spring.boot.web.server.MimeMappings.Mapping;
+import io.github.kotlinmania.spring.boot.web.server.MimeMappings.MimeMappingsRuntimeHints;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.support.PropertiesLoaderUtils;
 import org.springframework.test.util.ReflectionTestUtils;
@@ -230,7 +230,7 @@ class MimeMappingsTests {
 		RuntimeHints runtimeHints = new RuntimeHints();
 		new MimeMappingsRuntimeHints().registerHints(runtimeHints, getClass().getClassLoader());
 		assertThat(RuntimeHintsPredicates.resource()
-			.forResource("org/springframework/boot/web/server/mime-mappings.properties")).accepts(runtimeHints);
+			.forResource("io.github.kotlinmania.spring.boot.web/server/mime-mappings.properties")).accepts(runtimeHints);
 	}
 
 }

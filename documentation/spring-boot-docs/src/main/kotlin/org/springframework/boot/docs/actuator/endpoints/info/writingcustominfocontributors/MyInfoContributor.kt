@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.actuator.endpoints.info.writingcustominfocontributors
+package io.github.kotlinmania.spring.boot.docs.actuator.endpoints.info.writingcustominfocontributors
 
-import org.springframework.boot.actuate.info.Info
-import org.springframework.boot.actuate.info.InfoContributor
+import io.github.kotlinmania.spring.boot.actuate.info.Info
+import io.github.kotlinmania.spring.boot.actuate.info.InfoContributor
 import org.springframework.stereotype.Component
 import java.util.Collections
 

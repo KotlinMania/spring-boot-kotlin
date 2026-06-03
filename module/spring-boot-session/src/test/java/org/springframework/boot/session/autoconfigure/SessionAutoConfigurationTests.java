@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.session.autoconfigure;
+package io.github.kotlinmania.spring.boot.session.autoconfigure;
 
 import java.util.Collections;
 
@@ -27,11 +27,11 @@ import org.assertj.core.api.InstanceOfAssertFactories;
 import org.junit.jupiter.api.Test;
 import org.mockito.InOrder;
 
-import org.springframework.boot.autoconfigure.AutoConfigurations;
-import org.springframework.boot.context.properties.EnableConfigurationProperties;
-import org.springframework.boot.test.context.runner.WebApplicationContextRunner;
-import org.springframework.boot.web.server.autoconfigure.ServerProperties;
-import org.springframework.boot.web.servlet.AbstractFilterRegistrationBean;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurations;
+import io.github.kotlinmania.spring.boot.context.properties.EnableConfigurationProperties;
+import io.github.kotlinmania.spring.boot.test.context.runner.WebApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.web.server.autoconfigure.ServerProperties;
+import io.github.kotlinmania.spring.boot.web.servlet.AbstractFilterRegistrationBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.annotation.Order;

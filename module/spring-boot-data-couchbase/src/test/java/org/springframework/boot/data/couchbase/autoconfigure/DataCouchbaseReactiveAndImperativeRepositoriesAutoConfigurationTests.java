@@ -14,18 +14,18 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.data.couchbase.autoconfigure;
+package io.github.kotlinmania.spring.boot.data.couchbase.autoconfigure;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.autoconfigure.TestAutoConfigurationPackage;
-import org.springframework.boot.couchbase.autoconfigure.CouchbaseAutoConfiguration;
-import org.springframework.boot.data.couchbase.domain.city.CityRepository;
-import org.springframework.boot.data.couchbase.domain.city.ReactiveCityRepository;
-import org.springframework.boot.test.context.runner.ApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.autoconfigure.TestAutoConfigurationPackage;
+import io.github.kotlinmania.spring.boot.couchbase.autoconfigure.CouchbaseAutoConfiguration;
+import io.github.kotlinmania.spring.boot.data.couchbase.domain.city.CityRepository;
+import io.github.kotlinmania.spring.boot.data.couchbase.domain.city.ReactiveCityRepository;
+import io.github.kotlinmania.spring.boot.test.context.runner.ApplicationContextRunner;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
 import org.springframework.context.annotation.ImportSelector;

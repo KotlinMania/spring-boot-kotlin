@@ -28,19 +28,19 @@ Maven::
 [source,xml]
 ----
 <dependency>
-	<groupId>org.springframework.boot</groupId>
+	<groupId>io.github.kotlinmania.spring.boot./groupId>
 	<artifactId>spring-boot-starter-webmvc</artifactId>
 	<exclusions>
 		<!-- Exclude the Tomcat dependency -->
 		<exclusion>
-			<groupId>org.springframework.boot</groupId>
+			<groupId>io.github.kotlinmania.spring.boot./groupId>
 			<artifactId>spring-boot-starter-tomcat</artifactId>
 		</exclusion>
 	</exclusions>
 </dependency>
 <!-- Use Jetty instead -->
 <dependency>
-	<groupId>org.springframework.boot</groupId>
+	<groupId>io.github.kotlinmania.spring.boot./groupId>
 	<artifactId>spring-boot-starter-jetty</artifactId>
 </dependency>
 ----
@@ -51,12 +51,12 @@ Gradle::
 [source,gradle]
 ----
 dependencies {
-	implementation('org.springframework.boot:spring-boot-starter-webmvc') {
+	implementation('io.github.kotlinmania.spring.boot.spring-boot-starter-webmvc') {
 		// Exclude the Tomcat dependency
-		exclude group: 'org.springframework.boot', module: 'spring-boot-starter-tomcat'
+		exclude group: 'io.github.kotlinmania.spring.boot., module: 'spring-boot-starter-tomcat'
 	}
 	// Use Jetty instead
-	implementation "org.springframework.boot:spring-boot-starter-jetty"
+	implementation "io.github.kotlinmania.spring.boot.spring-boot-starter-jetty"
 }
 ----
 +
@@ -73,19 +73,19 @@ Maven::
 [source,xml]
 ----
 <dependency>
-	<groupId>org.springframework.boot</groupId>
+	<groupId>io.github.kotlinmania.spring.boot./groupId>
 	<artifactId>spring-boot-starter-webmvc</artifactId>
 	<exclusions>
 		<!-- Exclude the Tomcat dependency -->
 		<exclusion>
-			<groupId>org.springframework.boot</groupId>
+			<groupId>io.github.kotlinmania.spring.boot./groupId>
 			<artifactId>spring-boot-starter-tomcat</artifactId>
 		</exclusion>
 	</exclusions>
 </dependency>
 <!-- Use Jetty instead -->
 <dependency>
-	<groupId>org.springframework.boot</groupId>
+	<groupId>io.github.kotlinmania.spring.boot./groupId>
 	<artifactId>spring-boot-starter-jetty</artifactId>
 	<scope>provided</scope>
 </dependency>
@@ -97,13 +97,13 @@ Gradle::
 [source,gradle]
 ----
 dependencies {
-	implementation('org.springframework.boot:spring-boot-starter-webmvc') {
+	implementation('io.github.kotlinmania.spring.boot.spring-boot-starter-webmvc') {
 		// Exclude the Tomcat dependency
-		exclude group: 'org.springframework.boot', module: 'spring-boot-starter-tomcat'
+		exclude group: 'io.github.kotlinmania.spring.boot., module: 'spring-boot-starter-tomcat'
 	}
 	// Use Jetty instead
-	implementation "org.springframework.boot:spring-boot-starter-jetty"
-	providedRuntime "org.springframework.boot:spring-boot-starter-jetty-runtime"
+	implementation "io.github.kotlinmania.spring.boot.spring-boot-starter-jetty"
+	providedRuntime "io.github.kotlinmania.spring.boot.spring-boot-starter-jetty-runtime"
 }
 ----
 +
@@ -115,7 +115,7 @@ dependencies {
 == Disabling the Web Server
 
 If your classpath contains the necessary bits to start a web server, Spring Boot will automatically start it.
-To disable this behavior configure the javadoc:org.springframework.boot.WebApplicationType[] in your `application.properties`, as shown in the following example:
+To disable this behavior configure the javadoc:io.github.kotlinmania.spring.boot.WebApplicationType[] in your `application.properties`, as shown in the following example:
 
 [configprops,yaml]
 ----
@@ -134,7 +134,7 @@ Thanks to relaxed binding of javadoc:org.springframework.core.env.Environment[] 
 
 To switch off the HTTP endpoints completely but still create a javadoc:org.springframework.web.context.WebApplicationContext[], use `server.port=-1` (doing so is sometimes useful for testing).
 
-For more details, see xref:reference:web/servlet.adoc#web.servlet.embedded-container.customizing[Customizing Embedded Servlet Containers] in the '`Spring Boot Features`' section, or the javadoc:org.springframework.boot.web.server.autoconfigure.ServerProperties[] class.
+For more details, see xref:reference:web/servlet.adoc#web.servlet.embedded-container.customizing[Customizing Embedded Servlet Containers] in the '`Spring Boot Features`' section, or the javadoc:io.github.kotlinmania.spring.boot.web.server.autoconfigure.ServerProperties[] class.
 
 
 
@@ -148,16 +148,16 @@ To scan for a free port (using OS natives to prevent clashes) use `server.port=0
 [[howto.webserver.discover-port]]
 == Discover the HTTP Port at Runtime
 
-You can access the port the server is running on from log output or from the javadoc:org.springframework.boot.web.server.context.WebServerApplicationContext[] through its javadoc:org.springframework.boot.web.server.WebServer[].
+You can access the port the server is running on from log output or from the javadoc:io.github.kotlinmania.spring.boot.web.server.context.WebServerApplicationContext[] through its javadoc:io.github.kotlinmania.spring.boot.web.server.WebServer[].
 The best way to get that and be sure it has been initialized is to add a javadoc:org.springframework.context.annotation.Bean[format=annotation] of type `ApplicationListener<WebServerInitializedEvent>` and pull the container out of the event when it is published.
 
-Tests that use `@SpringBootTest(webEnvironment=WebEnvironment.RANDOM_PORT)` can also inject the actual port into a field by using the javadoc:org.springframework.boot.test.web.server.LocalServerPort[format=annotation] annotation, as shown in the following example:
+Tests that use `@SpringBootTest(webEnvironment=WebEnvironment.RANDOM_PORT)` can also inject the actual port into a field by using the javadoc:io.github.kotlinmania.spring.boot.test.web.server.LocalServerPort[format=annotation] annotation, as shown in the following example:
 
 include-code::MyWebIntegrationTests[]
 
 [NOTE]
 ====
-javadoc:org.springframework.boot.test.web.server.LocalServerPort[format=annotation] is a meta-annotation for `@Value("${local.server.port}")`.
+javadoc:io.github.kotlinmania.spring.boot.test.web.server.LocalServerPort[format=annotation] is a meta-annotation for `@Value("${local.server.port}")`.
 Do not try to inject the port in a regular application.
 As we just saw, the value is set only after the container has been initialized.
 Contrary to a test, application code callbacks are processed early (before the value is actually available).
@@ -168,12 +168,12 @@ Contrary to a test, application code callbacks are processed early (before the v
 [[howto.webserver.build-uri-test-web-server]]
 == Build URI Against the Test Web Server
 
-Tests that start a javadoc:org.springframework.boot.web.server.WebServer[] such as  `@SpringBootTest(webEnvironment=WebEnvironment.RANDOM_PORT)` can get information about
-the running server using javadoc:org.springframework.boot.test.http.server.LocalTestWebServer[], as shown in the following example:
+Tests that start a javadoc:io.github.kotlinmania.spring.boot.web.server.WebServer[] such as  `@SpringBootTest(webEnvironment=WebEnvironment.RANDOM_PORT)` can get information about
+the running server using javadoc:io.github.kotlinmania.spring.boot.test.http.server.LocalTestWebServer[], as shown in the following example:
 
 include-code::MyWebIntegrationTests[]
 
-javadoc:org.springframework.boot.test.http.server.LocalTestWebServer[] provides access to a suitable javadoc:org.springframework.web.util.UriBuilderFactory[].
+javadoc:io.github.kotlinmania.spring.boot.test.http.server.LocalTestWebServer[] provides access to a suitable javadoc:org.springframework.web.util.UriBuilderFactory[].
 It can also be customized to build such an instance on a sub-path of your application.
 
 
@@ -214,7 +214,7 @@ To keep the defaults and configure additional mime types, set the configprop:ser
 == Configure SSL
 
 SSL can be configured declaratively by setting the various `+server.ssl.*+` properties, typically in `application.properties` or `application.yaml`.
-See javadoc:org.springframework.boot.web.server.Ssl[] for details of all of the supported properties.
+See javadoc:io.github.kotlinmania.spring.boot.web.server.Ssl[] for details of all of the supported properties.
 
 The following example shows setting SSL properties using a Java KeyStore file:
 
@@ -367,7 +367,7 @@ The `server.{asterisk}` namespace is quite useful here, and it includes namespac
 See the list of xref:appendix:application-properties/index.adoc[].
 
 The previous sections covered already many common use cases, such as compression, SSL or HTTP/2.
-However, if a configuration key does not exist for your use case, you should then look at javadoc:org.springframework.boot.web.server.WebServerFactoryCustomizer[].
+However, if a configuration key does not exist for your use case, you should then look at javadoc:io.github.kotlinmania.spring.boot.web.server.WebServerFactoryCustomizer[].
 You can declare such a component and get access to the server factory relevant to your choice: you should select the variant for the chosen Server (Tomcat, Jetty, Reactor Netty) and the chosen web stack (servlet or reactive).
 
 The example below is for Tomcat with the `spring-boot-starter-web` (servlet stack):
@@ -375,9 +375,9 @@ The example below is for Tomcat with the `spring-boot-starter-web` (servlet stac
 include-code::MyTomcatWebServerCustomizer[]
 
 NOTE: Spring Boot uses that infrastructure internally to auto-configure the server.
-Auto-configured javadoc:org.springframework.boot.web.server.WebServerFactoryCustomizer[] beans have an order of `0` and will be processed before any user-defined customizers, unless it has an explicit order that states otherwise.
+Auto-configured javadoc:io.github.kotlinmania.spring.boot.web.server.WebServerFactoryCustomizer[] beans have an order of `0` and will be processed before any user-defined customizers, unless it has an explicit order that states otherwise.
 
-Once you have got access to a javadoc:org.springframework.boot.web.server.WebServerFactory[] using the customizer, you can use it to configure specific parts, like connectors, server resources, or the server itself - all using server-specific APIs.
+Once you have got access to a javadoc:io.github.kotlinmania.spring.boot.web.server.WebServerFactory[] using the customizer, you can use it to configure specific parts, like connectors, server resources, or the server itself - all using server-specific APIs.
 
 In addition Spring Boot provides:
 
@@ -387,19 +387,19 @@ In addition Spring Boot provides:
 | Server | Servlet stack | Reactive stack
 
 | Tomcat
-| javadoc:org.springframework.boot.tomcat.servlet.TomcatServletWebServerFactory[]
-| javadoc:org.springframework.boot.tomcat.reactive.TomcatReactiveWebServerFactory[]
+| javadoc:io.github.kotlinmania.spring.boot.tomcat.servlet.TomcatServletWebServerFactory[]
+| javadoc:io.github.kotlinmania.spring.boot.tomcat.reactive.TomcatReactiveWebServerFactory[]
 
 | Jetty
-| javadoc:org.springframework.boot.jetty.servlet.JettyServletWebServerFactory[]
-| javadoc:org.springframework.boot.jetty.reactive.JettyReactiveWebServerFactory[]
+| javadoc:io.github.kotlinmania.spring.boot.jetty.servlet.JettyServletWebServerFactory[]
+| javadoc:io.github.kotlinmania.spring.boot.jetty.reactive.JettyReactiveWebServerFactory[]
 
 | Reactor
 | N/A
-| javadoc:org.springframework.boot.reactor.netty.NettyReactiveWebServerFactory[]
+| javadoc:io.github.kotlinmania.spring.boot.reactor.netty.NettyReactiveWebServerFactory[]
 |===
 
-As a last resort, you can also declare your own javadoc:org.springframework.boot.web.server.WebServerFactory[] bean, which will override the one provided by Spring Boot.
+As a last resort, you can also declare your own javadoc:io.github.kotlinmania.spring.boot.web.server.WebServerFactory[] bean, which will override the one provided by Spring Boot.
 When you do so, auto-configured customizers are still applied on your custom factory, so use that option carefully.
 
 
@@ -423,8 +423,8 @@ However, you must be very careful that they do not cause eager initialization of
 (For example, it is not a good idea to have them depend on your javadoc:javax.sql.DataSource[] or JPA configuration.)
 You can work around such restrictions by initializing the beans lazily when first used instead of on initialization.
 
-In the case of filters and servlets, you can also add mappings and init parameters by adding a javadoc:org.springframework.boot.web.servlet.FilterRegistrationBean[] or a javadoc:org.springframework.boot.web.servlet.ServletRegistrationBean[] instead of or in addition to the underlying component.
-You can also use javadoc:org.springframework.boot.web.servlet.ServletRegistration[format=annotation] and javadoc:org.springframework.boot.web.servlet.FilterRegistration[format=annotation] as an annotation-based alternative to javadoc:org.springframework.boot.web.servlet.ServletRegistrationBean[] and javadoc:org.springframework.boot.web.servlet.FilterRegistrationBean[].
+In the case of filters and servlets, you can also add mappings and init parameters by adding a javadoc:io.github.kotlinmania.spring.boot.web.servlet.FilterRegistrationBean[] or a javadoc:io.github.kotlinmania.spring.boot.web.servlet.ServletRegistrationBean[] instead of or in addition to the underlying component.
+You can also use javadoc:io.github.kotlinmania.spring.boot.web.servlet.ServletRegistration[format=annotation] and javadoc:io.github.kotlinmania.spring.boot.web.servlet.FilterRegistration[format=annotation] as an annotation-based alternative to javadoc:io.github.kotlinmania.spring.boot.web.servlet.ServletRegistrationBean[] and javadoc:io.github.kotlinmania.spring.boot.web.servlet.FilterRegistrationBean[].
 
 [NOTE]
 ====
@@ -449,8 +449,8 @@ include-code::MyFilterConfiguration[]
 [[howto.webserver.add-servlet-filter-listener.using-scanning]]
 === Add Servlets, Filters, and Listeners by Using Classpath Scanning
 
-javadoc:jakarta.servlet.annotation.WebServlet[format=annotation], javadoc:jakarta.servlet.annotation.WebFilter[format=annotation], and javadoc:jakarta.servlet.annotation.WebListener[format=annotation] annotated classes can be automatically registered with an embedded servlet container by annotating a javadoc:org.springframework.context.annotation.Configuration[format=annotation] class with javadoc:org.springframework.boot.web.server.servlet.context.ServletComponentScan[format=annotation] and specifying the package(s) containing the components that you want to register.
-By default, javadoc:org.springframework.boot.web.server.servlet.context.ServletComponentScan[format=annotation] scans from the package of the annotated class.
+javadoc:jakarta.servlet.annotation.WebServlet[format=annotation], javadoc:jakarta.servlet.annotation.WebFilter[format=annotation], and javadoc:jakarta.servlet.annotation.WebListener[format=annotation] annotated classes can be automatically registered with an embedded servlet container by annotating a javadoc:org.springframework.context.annotation.Configuration[format=annotation] class with javadoc:io.github.kotlinmania.spring.boot.web.server.servlet.context.ServletComponentScan[format=annotation] and specifying the package(s) containing the components that you want to register.
+By default, javadoc:io.github.kotlinmania.spring.boot.web.server.servlet.context.ServletComponentScan[format=annotation] scans from the package of the annotated class.
 
 
 
@@ -511,7 +511,7 @@ You can use them in your application by setting configprop:server.forward-header
 TIP: If you are using Tomcat and terminating SSL at the proxy, configprop:server.tomcat.redirect-context-root[] should be set to `false`.
 This allows the `X-Forwarded-Proto` header to be honored before any redirects are performed.
 
-NOTE: If your application runs javadoc:org.springframework.boot.cloud.CloudPlatform#enum-constant-summary[in a supported Cloud Platform], the configprop:server.forward-headers-strategy[] property defaults to `NATIVE`.
+NOTE: If your application runs javadoc:io.github.kotlinmania.spring.boot.cloud.CloudPlatform#enum-constant-summary[in a supported Cloud Platform], the configprop:server.forward-headers-strategy[] property defaults to `NATIVE`.
 In all other instances, it defaults to `NONE`.
 
 
@@ -544,7 +544,7 @@ server:
 
 NOTE: You can trust all proxies by setting the `internal-proxies` to empty (but do not do so in production).
 
-You can take complete control of the configuration of Tomcat's javadoc:org.apache.catalina.valves.RemoteIpValve[] by switching the automatic one off (to do so, set `server.forward-headers-strategy=NONE`) and adding a new valve instance using a javadoc:org.springframework.boot.web.server.WebServerFactoryCustomizer[] bean.
+You can take complete control of the configuration of Tomcat's javadoc:org.apache.catalina.valves.RemoteIpValve[] by switching the automatic one off (to do so, set `server.forward-headers-strategy=NONE`) and adding a new valve instance using a javadoc:io.github.kotlinmania.spring.boot.web.server.WebServerFactoryCustomizer[] bean.
 
 
 
@@ -556,7 +556,7 @@ You can take complete control of the configuration of Tomcat's javadoc:org.apach
 [[howto.webserver.enable-multiple-connectors.tomcat]]
 === Multiple Connectors with Tomcat
 
-You can add an javadoc:org.apache.catalina.connector.Connector[] to the javadoc:org.springframework.boot.tomcat.servlet.TomcatServletWebServerFactory[], which can allow multiple connectors, including HTTP and HTTPS connectors, as shown in the following example:
+You can add an javadoc:org.apache.catalina.connector.Connector[] to the javadoc:io.github.kotlinmania.spring.boot.tomcat.servlet.TomcatServletWebServerFactory[], which can allow multiple connectors, including HTTP and HTTPS connectors, as shown in the following example:
 
 include-code::MyTomcatConfiguration[]
 
@@ -565,7 +565,7 @@ include-code::MyTomcatConfiguration[]
 [[howto.webserver.enable-multiple-connectors.jetty]]
 === Multiple Connectors with Jetty
 
-You can register additional Jetty javadoc:org.eclipse.jetty.server.Connector[] instances by adding a javadoc:org.springframework.boot.jetty.JettyServerCustomizer[] on the javadoc:org.springframework.boot.jetty.ConfigurableJettyWebServerFactory[], as shown in the following example:
+You can register additional Jetty javadoc:org.eclipse.jetty.server.Connector[] instances by adding a javadoc:io.github.kotlinmania.spring.boot.jetty.JettyServerCustomizer[] on the javadoc:io.github.kotlinmania.spring.boot.jetty.ConfigurableJettyWebServerFactory[], as shown in the following example:
 
 include-code::MyJettyConfiguration[]
 

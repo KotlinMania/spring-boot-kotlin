@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docker.compose.lifecycle;
+package io.github.kotlinmania.spring.boot.docker.compose.lifecycle;
 
 import java.util.Set;
 
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.SpringApplicationShutdownHandlers;
-import org.springframework.boot.context.event.ApplicationPreparedEvent;
-import org.springframework.boot.context.properties.bind.Binder;
+import io.github.kotlinmania.spring.boot.SpringApplication;
+import io.github.kotlinmania.spring.boot.SpringApplicationShutdownHandlers;
+import io.github.kotlinmania.spring.boot.context.event.ApplicationPreparedEvent;
+import io.github.kotlinmania.spring.boot.context.properties.bind.Binder;
 import org.springframework.context.ApplicationListener;
 import org.springframework.context.ConfigurableApplicationContext;
 

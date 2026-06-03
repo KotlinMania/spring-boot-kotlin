@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.kafka.autoconfigure;
+package io.github.kotlinmania.spring.boot.kafka.autoconfigure;
 
 import java.io.IOException;
 import java.time.Duration;
@@ -31,21 +31,21 @@ import org.springframework.aot.hint.MemberCategory;
 import org.springframework.aot.hint.RuntimeHints;
 import org.springframework.aot.hint.RuntimeHintsRegistrar;
 import org.springframework.beans.factory.ObjectProvider;
-import org.springframework.boot.autoconfigure.AutoConfiguration;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnBooleanProperty;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnSingleCandidate;
-import org.springframework.boot.context.properties.EnableConfigurationProperties;
-import org.springframework.boot.context.properties.PropertyMapper;
-import org.springframework.boot.kafka.autoconfigure.KafkaConnectionDetails.Configuration;
-import org.springframework.boot.kafka.autoconfigure.KafkaProperties.Jaas;
-import org.springframework.boot.kafka.autoconfigure.KafkaProperties.Retry.Topic.Backoff;
-import org.springframework.boot.kafka.autoconfigure.KafkaProperties.Template;
-import org.springframework.boot.ssl.SslBundle;
-import org.springframework.boot.ssl.SslBundles;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.EnableAutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnBooleanProperty;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnClass;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnMissingBean;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnProperty;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnSingleCandidate;
+import io.github.kotlinmania.spring.boot.context.properties.EnableConfigurationProperties;
+import io.github.kotlinmania.spring.boot.context.properties.PropertyMapper;
+import io.github.kotlinmania.spring.boot.kafka.autoconfigure.KafkaConnectionDetails.Configuration;
+import io.github.kotlinmania.spring.boot.kafka.autoconfigure.KafkaProperties.Jaas;
+import io.github.kotlinmania.spring.boot.kafka.autoconfigure.KafkaProperties.Retry.Topic.Backoff;
+import io.github.kotlinmania.spring.boot.kafka.autoconfigure.KafkaProperties.Template;
+import io.github.kotlinmania.spring.boot.ssl.SslBundle;
+import io.github.kotlinmania.spring.boot.ssl.SslBundles;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Import;
 import org.springframework.context.annotation.ImportRuntimeHints;

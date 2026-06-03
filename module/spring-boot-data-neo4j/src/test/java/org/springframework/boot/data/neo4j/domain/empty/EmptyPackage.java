@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.data.neo4j.domain.empty;
+package io.github.kotlinmania.spring.boot.data.neo4j.domain.empty;
 
 public class EmptyPackage {
 

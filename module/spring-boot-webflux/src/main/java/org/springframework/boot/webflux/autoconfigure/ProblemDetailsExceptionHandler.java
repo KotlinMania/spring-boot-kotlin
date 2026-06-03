@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.webflux.autoconfigure;
+package io.github.kotlinmania.spring.boot.webflux.autoconfigure;
 
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.reactive.result.method.annotation.ResponseEntityExceptionHandler;

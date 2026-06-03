@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.loader.nio.file;
+package io.github.kotlinmania.spring.boot.loader.nio.file;
 
 import java.io.IOException;
 import java.io.UncheckedIOException;
@@ -23,7 +23,7 @@ import java.nio.file.Files;
 import java.nio.file.attribute.FileAttributeView;
 import java.nio.file.attribute.FileStoreAttributeView;
 
-import org.springframework.boot.loader.net.protocol.nested.NestedLocation;
+import io.github.kotlinmania.spring.boot.loader.net.protocol.nested.NestedLocation;
 
 /**
  * {@link FileStore} implementation for {@link NestedLocation nested} jar files.

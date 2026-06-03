@@ -18,6 +18,6 @@
  * Auto-configuration for actuator security using WebFlux.
  */
 @NullMarked
-package org.springframework.boot.security.autoconfigure.actuate.web.reactive;
+package io.github.kotlinmania.spring.boot.security.autoconfigure.actuate.web.reactive;
 
 import org.jspecify.annotations.NullMarked;

@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.actuate.audit;
+package io.github.kotlinmania.spring.boot.actuate.audit;
 
 import java.time.Instant;
 import java.util.Collections;
 
 import net.minidev.json.JSONArray;
 
-import org.springframework.boot.actuate.endpoint.web.test.WebEndpointTest;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.web.test.WebEndpointTest;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.test.web.reactive.server.WebTestClient;

@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.context.properties.bind.validation;
+package io.github.kotlinmania.spring.boot.context.properties.bind.validation;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.origin.Origin;
-import org.springframework.boot.origin.OriginProvider;
+import io.github.kotlinmania.spring.boot.origin.Origin;
+import io.github.kotlinmania.spring.boot.origin.OriginProvider;
 import org.springframework.lang.Contract;
 import org.springframework.validation.FieldError;
 

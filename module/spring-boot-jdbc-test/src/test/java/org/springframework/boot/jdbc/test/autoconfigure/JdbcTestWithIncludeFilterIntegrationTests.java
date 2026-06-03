@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.jdbc.test.autoconfigure;
+package io.github.kotlinmania.spring.boot.jdbc.test.autoconfigure;
 
 import org.junit.jupiter.api.Test;
 
@@ -32,7 +32,7 @@ import static org.assertj.core.api.Assertions.assertThat;
  */
 @JdbcTest(includeFilters = @Filter(Repository.class))
 @TestPropertySource(
-		properties = "spring.sql.init.schemaLocations=classpath:org/springframework/boot/jdbc/test/autoconfigure/schema.sql")
+		properties = "spring.sql.init.schemaLocations=classpath:io.github.kotlinmania.spring.boot.jdbc/test/autoconfigure/schema.sql")
 class JdbcTestWithIncludeFilterIntegrationTests {
 
 	@Autowired

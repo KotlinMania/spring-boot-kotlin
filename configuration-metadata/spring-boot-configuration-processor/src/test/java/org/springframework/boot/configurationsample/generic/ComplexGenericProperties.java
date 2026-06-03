@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.configurationsample.generic;
+package io.github.kotlinmania.spring.boot.configurationsample.generic;
 
-import org.springframework.boot.configurationsample.TestConfigurationProperties;
-import org.springframework.boot.configurationsample.TestNestedConfigurationProperty;
+import io.github.kotlinmania.spring.boot.configurationsample.TestConfigurationProperties;
+import io.github.kotlinmania.spring.boot.configurationsample.TestNestedConfigurationProperty;
 
 /**
  * More advanced generic setup.

@@ -14,23 +14,23 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.autoconfigure.aop;
+package io.github.kotlinmania.spring.boot.autoconfigure.aop;
 
 import org.aspectj.weaver.Advice;
 
 import org.springframework.aop.config.AopConfigUtils;
 import org.springframework.beans.factory.config.BeanFactoryPostProcessor;
 import org.springframework.beans.factory.support.BeanDefinitionRegistry;
-import org.springframework.boot.autoconfigure.AutoConfiguration;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnBooleanProperty;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingClass;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnBooleanProperty;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnClass;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnMissingClass;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
 
 /**
- * {@link org.springframework.boot.autoconfigure.EnableAutoConfiguration
+ * {@link io.github.kotlinmania.spring.boot.autoconfigure.EnableAutoConfiguration
  * Auto-configuration} for Spring's AOP support. Equivalent to enabling
  * {@link EnableAspectJAutoProxy @EnableAspectJAutoProxy} in your configuration.
  * <p>

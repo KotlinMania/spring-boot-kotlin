@@ -1,9 +1,9 @@
 # Connection Details Factories
-org.springframework.boot.autoconfigure.service.connection.ConnectionDetailsFactory=\
-org.springframework.boot.data.redis.docker.compose.RedisDockerComposeConnectionDetailsFactory,\
-org.springframework.boot.data.redis.testcontainers.RedisContainerConnectionDetailsFactory
+io.github.kotlinmania.spring.boot.autoconfigure.service.connection.ConnectionDetailsFactory=\
+io.github.kotlinmania.spring.boot.data.redis.docker.compose.RedisDockerComposeConnectionDetailsFactory,\
+io.github.kotlinmania.spring.boot.data.redis.testcontainers.RedisContainerConnectionDetailsFactory
 
 # Failure Analyzers
-org.springframework.boot.diagnostics.FailureAnalyzer=\
-org.springframework.boot.data.redis.autoconfigure.DataRedisUrlSyntaxFailureAnalyzer
+io.github.kotlinmania.spring.boot.diagnostics.FailureAnalyzer=\
+io.github.kotlinmania.spring.boot.data.redis.autoconfigure.DataRedisUrlSyntaxFailureAnalyzer
 

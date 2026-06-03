@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.autoconfigure.web.format;
+package io.github.kotlinmania.spring.boot.autoconfigure.web.format;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.context.properties.bind;
+package io.github.kotlinmania.spring.boot.context.properties.bind;
 
 import java.lang.annotation.Documented;
 import java.lang.annotation.ElementType;
@@ -29,7 +29,7 @@ import java.lang.annotation.Target;
  * annotation will only be used if the property is not found in the property sources used
  * by the {@link Binder}. For example, if the property is present in the
  * {@link org.springframework.core.env.Environment} when binding to
- * {@link org.springframework.boot.context.properties.ConfigurationProperties @ConfigurationProperties},
+ * {@link io.github.kotlinmania.spring.boot.context.properties.ConfigurationProperties @ConfigurationProperties},
  * the default value for the property will not be used even if the property value is
  * empty.
  * <p>

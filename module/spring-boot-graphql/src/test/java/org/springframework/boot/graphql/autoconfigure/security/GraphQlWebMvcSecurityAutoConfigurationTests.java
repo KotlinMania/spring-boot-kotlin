@@ -14,25 +14,25 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.graphql.autoconfigure.security;
+package io.github.kotlinmania.spring.boot.graphql.autoconfigure.security;
 
 import graphql.schema.idl.TypeRuntimeWiring;
 import org.assertj.core.api.ThrowingConsumer;
 import org.jspecify.annotations.Nullable;
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.autoconfigure.AutoConfigurations;
-import org.springframework.boot.graphql.autoconfigure.Book;
-import org.springframework.boot.graphql.autoconfigure.GraphQlAutoConfiguration;
-import org.springframework.boot.graphql.autoconfigure.GraphQlTestDataFetchers;
-import org.springframework.boot.graphql.autoconfigure.servlet.GraphQlWebMvcAutoConfiguration;
-import org.springframework.boot.http.converter.autoconfigure.HttpMessageConvertersAutoConfiguration;
-import org.springframework.boot.jackson.autoconfigure.JacksonAutoConfiguration;
-import org.springframework.boot.security.autoconfigure.SecurityAutoConfiguration;
-import org.springframework.boot.test.context.runner.WebApplicationContextRunner;
-import org.springframework.boot.testsupport.classpath.resources.WithResource;
-import org.springframework.boot.webmvc.autoconfigure.DispatcherServletAutoConfiguration;
-import org.springframework.boot.webmvc.autoconfigure.WebMvcAutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurations;
+import io.github.kotlinmania.spring.boot.graphql.autoconfigure.Book;
+import io.github.kotlinmania.spring.boot.graphql.autoconfigure.GraphQlAutoConfiguration;
+import io.github.kotlinmania.spring.boot.graphql.autoconfigure.GraphQlTestDataFetchers;
+import io.github.kotlinmania.spring.boot.graphql.autoconfigure.servlet.GraphQlWebMvcAutoConfiguration;
+import io.github.kotlinmania.spring.boot.http.converter.autoconfigure.HttpMessageConvertersAutoConfiguration;
+import io.github.kotlinmania.spring.boot.jackson.autoconfigure.JacksonAutoConfiguration;
+import io.github.kotlinmania.spring.boot.security.autoconfigure.SecurityAutoConfiguration;
+import io.github.kotlinmania.spring.boot.test.context.runner.WebApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.testsupport.classpath.resources.WithResource;
+import io.github.kotlinmania.spring.boot.webmvc.autoconfigure.DispatcherServletAutoConfiguration;
+import io.github.kotlinmania.spring.boot.webmvc.autoconfigure.WebMvcAutoConfiguration;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.graphql.execution.ErrorType;

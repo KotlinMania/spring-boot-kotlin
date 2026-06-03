@@ -14,19 +14,19 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.security.autoconfigure.actuate.web.servlet;
+package io.github.kotlinmania.spring.boot.security.autoconfigure.actuate.web.servlet;
 
-import org.springframework.boot.actuate.autoconfigure.endpoint.web.WebEndpointAutoConfiguration;
-import org.springframework.boot.actuate.endpoint.web.WebServerNamespace;
-import org.springframework.boot.autoconfigure.AutoConfiguration;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnWebApplication;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnWebApplication.Type;
-import org.springframework.boot.health.actuate.endpoint.HealthEndpoint;
-import org.springframework.boot.security.autoconfigure.web.servlet.ConditionalOnDefaultWebSecurity;
-import org.springframework.boot.security.autoconfigure.web.servlet.SecurityFilterProperties;
-import org.springframework.boot.security.autoconfigure.web.servlet.ServletWebSecurityAutoConfiguration;
+import io.github.kotlinmania.spring.boot.actuate.autoconfigure.endpoint.web.WebEndpointAutoConfiguration;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.web.WebServerNamespace;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.EnableAutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnClass;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnWebApplication;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnWebApplication.Type;
+import io.github.kotlinmania.spring.boot.health.actuate.endpoint.HealthEndpoint;
+import io.github.kotlinmania.spring.boot.security.autoconfigure.web.servlet.ConditionalOnDefaultWebSecurity;
+import io.github.kotlinmania.spring.boot.security.autoconfigure.web.servlet.SecurityFilterProperties;
+import io.github.kotlinmania.spring.boot.security.autoconfigure.web.servlet.ServletWebSecurityAutoConfiguration;
 import org.springframework.context.annotation.Bean;
 import org.springframework.core.annotation.Order;
 import org.springframework.core.env.Environment;
@@ -49,8 +49,8 @@ import static org.springframework.security.config.Customizer.withDefaults;
  * @since 4.0.0
  */
 @AutoConfiguration(before = ServletWebSecurityAutoConfiguration.class,
-		afterName = { "org.springframework.boot.health.autoconfigure.actuate.endpoint.HealthEndpointAutoConfiguration",
-				"org.springframework.boot.actuate.autoconfigure.info.InfoEndpointAutoConfiguration" })
+		afterName = { "io.github.kotlinmania.spring.boot.health.autoconfigure.actuate.endpoint.HealthEndpointAutoConfiguration",
+				"io.github.kotlinmania.spring.boot.actuate.autoconfigure.info.InfoEndpointAutoConfiguration" })
 @ConditionalOnWebApplication(type = Type.SERVLET)
 @ConditionalOnClass({ RequestMatcher.class, WebEndpointAutoConfiguration.class })
 @ConditionalOnDefaultWebSecurity
@@ -60,7 +60,7 @@ public final class ManagementWebSecurityAutoConfiguration {
 	@Order(SecurityFilterProperties.BASIC_AUTH_ORDER)
 	SecurityFilterChain managementSecurityFilterChain(Environment environment, HttpSecurity http) {
 		http.authorizeHttpRequests((requests) -> {
-			if (ClassUtils.isPresent("org.springframework.boot.health.actuate.endpoint.HealthEndpoint",
+			if (ClassUtils.isPresent("io.github.kotlinmania.spring.boot.health.actuate.endpoint.HealthEndpoint",
 					getClass().getClassLoader())) {
 				requests.requestMatchers(healthMatcher(), additionalHealthPathsMatcher()).permitAll();
 			}

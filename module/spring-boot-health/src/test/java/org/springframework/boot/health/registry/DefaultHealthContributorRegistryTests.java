@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.health.registry;
+package io.github.kotlinmania.spring.boot.health.registry;
 
 import java.util.Collection;
 import java.util.function.BiConsumer;
@@ -22,10 +22,10 @@ import java.util.function.Consumer;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.health.contributor.HealthContributor;
-import org.springframework.boot.health.contributor.HealthContributors;
-import org.springframework.boot.health.contributor.HealthContributors.Entry;
-import org.springframework.boot.health.contributor.HealthIndicator;
+import io.github.kotlinmania.spring.boot.health.contributor.HealthContributor;
+import io.github.kotlinmania.spring.boot.health.contributor.HealthContributors;
+import io.github.kotlinmania.spring.boot.health.contributor.HealthContributors.Entry;
+import io.github.kotlinmania.spring.boot.health.contributor.HealthIndicator;
 
 import static org.mockito.Mockito.mock;
 

@@ -21,7 +21,7 @@ import tools.jackson.core.JsonGenerator;
 import tools.jackson.databind.SerializationContext;
 import tools.jackson.databind.ValueSerializer;
 
-import org.springframework.boot.jackson.JacksonComponent;
+import io.github.kotlinmania.spring.boot.jackson.JacksonComponent;
 
 @JacksonComponent
 public class SampleJacksonComponent {

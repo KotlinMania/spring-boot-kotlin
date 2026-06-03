@@ -14,26 +14,26 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.tomcat.autoconfigure.reactive;
+package io.github.kotlinmania.spring.boot.tomcat.autoconfigure.reactive;
 
 import org.apache.catalina.startup.Tomcat;
 
 import org.springframework.beans.factory.ObjectProvider;
-import org.springframework.boot.autoconfigure.AutoConfiguration;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnWebApplication;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnWebApplication.Type;
-import org.springframework.boot.context.properties.EnableConfigurationProperties;
-import org.springframework.boot.tomcat.TomcatConnectorCustomizer;
-import org.springframework.boot.tomcat.TomcatContextCustomizer;
-import org.springframework.boot.tomcat.TomcatProtocolHandlerCustomizer;
-import org.springframework.boot.tomcat.autoconfigure.TomcatServerProperties;
-import org.springframework.boot.tomcat.autoconfigure.TomcatWebServerConfiguration;
-import org.springframework.boot.tomcat.reactive.TomcatReactiveWebServerFactory;
-import org.springframework.boot.web.server.autoconfigure.reactive.ReactiveWebServerConfiguration;
-import org.springframework.boot.web.server.reactive.ReactiveWebServerFactory;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.EnableAutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnClass;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnMissingBean;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnWebApplication;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnWebApplication.Type;
+import io.github.kotlinmania.spring.boot.context.properties.EnableConfigurationProperties;
+import io.github.kotlinmania.spring.boot.tomcat.TomcatConnectorCustomizer;
+import io.github.kotlinmania.spring.boot.tomcat.TomcatContextCustomizer;
+import io.github.kotlinmania.spring.boot.tomcat.TomcatProtocolHandlerCustomizer;
+import io.github.kotlinmania.spring.boot.tomcat.autoconfigure.TomcatServerProperties;
+import io.github.kotlinmania.spring.boot.tomcat.autoconfigure.TomcatWebServerConfiguration;
+import io.github.kotlinmania.spring.boot.tomcat.reactive.TomcatReactiveWebServerFactory;
+import io.github.kotlinmania.spring.boot.web.server.autoconfigure.reactive.ReactiveWebServerConfiguration;
+import io.github.kotlinmania.spring.boot.web.server.reactive.ReactiveWebServerFactory;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Import;
 import org.springframework.http.ReactiveHttpInputMessage;

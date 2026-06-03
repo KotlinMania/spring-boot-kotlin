@@ -1,5 +1,5 @@
-org.springframework.boot.security.autoconfigure.SecurityAutoConfiguration
-org.springframework.boot.security.autoconfigure.UserDetailsServiceAutoConfiguration
-org.springframework.boot.security.autoconfigure.web.servlet.SecurityFilterAutoConfiguration
-org.springframework.boot.security.autoconfigure.web.servlet.ServletWebSecurityAutoConfiguration
-org.springframework.boot.security.test.autoconfigure.webmvc.SecurityMockMvcAutoConfiguration
+io.github.kotlinmania.spring.boot.security.autoconfigure.SecurityAutoConfiguration
+io.github.kotlinmania.spring.boot.security.autoconfigure.UserDetailsServiceAutoConfiguration
+io.github.kotlinmania.spring.boot.security.autoconfigure.web.servlet.SecurityFilterAutoConfiguration
+io.github.kotlinmania.spring.boot.security.autoconfigure.web.servlet.ServletWebSecurityAutoConfiguration
+io.github.kotlinmania.spring.boot.security.test.autoconfigure.webmvc.SecurityMockMvcAutoConfiguration

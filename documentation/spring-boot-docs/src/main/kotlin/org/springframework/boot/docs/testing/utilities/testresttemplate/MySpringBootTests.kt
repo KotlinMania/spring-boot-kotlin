@@ -14,17 +14,17 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.testing.utilities.testresttemplate
+package io.github.kotlinmania.spring.boot.docs.testing.utilities.testresttemplate
 
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Test
 import org.springframework.beans.factory.annotation.Autowired
-import org.springframework.boot.test.context.SpringBootTest
-import org.springframework.boot.test.context.SpringBootTest.WebEnvironment
-import org.springframework.boot.test.context.TestConfiguration
-import org.springframework.boot.restclient.RestTemplateBuilder
-import org.springframework.boot.resttestclient.TestRestTemplate
-import org.springframework.boot.resttestclient.autoconfigure.AutoConfigureTestRestTemplate
+import io.github.kotlinmania.spring.boot.test.context.SpringBootTest
+import io.github.kotlinmania.spring.boot.test.context.SpringBootTest.WebEnvironment
+import io.github.kotlinmania.spring.boot.test.context.TestConfiguration
+import io.github.kotlinmania.spring.boot.restclient.RestTemplateBuilder
+import io.github.kotlinmania.spring.boot.resttestclient.TestRestTemplate
+import io.github.kotlinmania.spring.boot.resttestclient.autoconfigure.AutoConfigureTestRestTemplate
 import org.springframework.context.annotation.Bean
 import org.springframework.http.HttpStatus
 import java.time.Duration

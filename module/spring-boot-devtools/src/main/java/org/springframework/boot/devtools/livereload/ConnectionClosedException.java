@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.devtools.livereload;
+package io.github.kotlinmania.spring.boot.devtools.livereload;
 
 import java.io.IOException;
 

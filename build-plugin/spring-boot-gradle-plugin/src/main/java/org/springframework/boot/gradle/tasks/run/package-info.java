@@ -18,6 +18,6 @@
  * Support for running Spring Boot applications.
  */
 @NullMarked
-package org.springframework.boot.gradle.tasks.run;
+package io.github.kotlinmania.spring.boot.gradle.tasks.run;
 
 import org.jspecify.annotations.NullMarked;

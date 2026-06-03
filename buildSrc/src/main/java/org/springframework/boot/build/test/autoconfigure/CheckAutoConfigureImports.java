@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.build.test.autoconfigure;
+package io.github.kotlinmania.spring.boot.build.test.autoconfigure;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -46,7 +46,7 @@ import org.gradle.api.tasks.TaskAction;
 import org.gradle.api.tasks.VerificationException;
 import org.gradle.language.base.plugins.LifecycleBasePlugin;
 
-import org.springframework.boot.build.autoconfigure.AutoConfigurationClass;
+import io.github.kotlinmania.spring.boot.build.autoconfigure.AutoConfigurationClass;
 
 /**
  * Task to check the contents of a project's

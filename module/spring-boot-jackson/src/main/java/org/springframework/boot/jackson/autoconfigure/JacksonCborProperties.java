@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.jackson.autoconfigure;
+package io.github.kotlinmania.spring.boot.jackson.autoconfigure;
 
 import java.util.EnumMap;
 import java.util.Map;
@@ -22,7 +22,7 @@ import java.util.Map;
 import tools.jackson.dataformat.cbor.CBORReadFeature;
 import tools.jackson.dataformat.cbor.CBORWriteFeature;
 
-import org.springframework.boot.context.properties.ConfigurationProperties;
+import io.github.kotlinmania.spring.boot.context.properties.ConfigurationProperties;
 
 /**
  * Configuration properties to configure Jackson's CBOR support.

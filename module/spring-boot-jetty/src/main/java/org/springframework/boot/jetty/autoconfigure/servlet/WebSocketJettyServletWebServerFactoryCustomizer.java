@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.jetty.autoconfigure.servlet;
+package io.github.kotlinmania.spring.boot.jetty.autoconfigure.servlet;
 
 import org.eclipse.jetty.ee11.webapp.AbstractConfiguration;
 import org.eclipse.jetty.ee11.webapp.WebAppContext;
@@ -24,8 +24,8 @@ import org.eclipse.jetty.ee11.websocket.servlet.WebSocketUpgradeFilter;
 import org.eclipse.jetty.websocket.core.server.WebSocketMappings;
 import org.eclipse.jetty.websocket.core.server.WebSocketServerComponents;
 
-import org.springframework.boot.jetty.servlet.JettyServletWebServerFactory;
-import org.springframework.boot.web.server.WebServerFactoryCustomizer;
+import io.github.kotlinmania.spring.boot.jetty.servlet.JettyServletWebServerFactory;
+import io.github.kotlinmania.spring.boot.web.server.WebServerFactoryCustomizer;
 import org.springframework.core.Ordered;
 
 /**

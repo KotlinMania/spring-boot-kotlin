@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docker.compose.lifecycle;
+package io.github.kotlinmania.spring.boot.docker.compose.lifecycle;
 
 import java.io.IOException;
 import java.net.InetSocketAddress;
 import java.net.Socket;
 import java.net.SocketTimeoutException;
 
-import org.springframework.boot.docker.compose.core.RunningService;
+import io.github.kotlinmania.spring.boot.docker.compose.core.RunningService;
 
 /**
  * Checks readiness by connecting to the exposed TCP ports.
@@ -32,7 +32,7 @@ import org.springframework.boot.docker.compose.core.RunningService;
  */
 class TcpConnectServiceReadinessCheck {
 
-	private static final String DISABLE_LABEL = "org.springframework.boot.readiness-check.tcp.disable";
+	private static final String DISABLE_LABEL = "io.github.kotlinmania.spring.boot.readiness-check.tcp.disable";
 
 	private final DockerComposeProperties.Readiness.Tcp properties;
 

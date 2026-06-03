@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.support;
+package io.github.kotlinmania.spring.boot.support;
 
 import java.util.Arrays;
 import java.util.List;
@@ -35,13 +35,13 @@ import org.springframework.beans.factory.aot.BeanFactoryInitializationAotContrib
 import org.springframework.beans.factory.aot.BeanFactoryInitializationAotProcessor;
 import org.springframework.beans.factory.aot.BeanFactoryInitializationCode;
 import org.springframework.beans.factory.config.ConfigurableListableBeanFactory;
-import org.springframework.boot.EnvironmentPostProcessor;
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.bootstrap.ConfigurableBootstrapContext;
-import org.springframework.boot.context.event.ApplicationEnvironmentPreparedEvent;
-import org.springframework.boot.context.event.ApplicationFailedEvent;
-import org.springframework.boot.context.event.ApplicationPreparedEvent;
-import org.springframework.boot.logging.DeferredLogs;
+import io.github.kotlinmania.spring.boot.EnvironmentPostProcessor;
+import io.github.kotlinmania.spring.boot.SpringApplication;
+import io.github.kotlinmania.spring.boot.bootstrap.ConfigurableBootstrapContext;
+import io.github.kotlinmania.spring.boot.context.event.ApplicationEnvironmentPreparedEvent;
+import io.github.kotlinmania.spring.boot.context.event.ApplicationFailedEvent;
+import io.github.kotlinmania.spring.boot.context.event.ApplicationPreparedEvent;
+import io.github.kotlinmania.spring.boot.logging.DeferredLogs;
 import org.springframework.context.ApplicationEvent;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.event.SmartApplicationListener;

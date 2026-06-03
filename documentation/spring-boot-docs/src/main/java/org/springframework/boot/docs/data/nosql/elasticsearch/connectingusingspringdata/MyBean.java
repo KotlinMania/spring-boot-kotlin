@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.data.nosql.elasticsearch.connectingusingspringdata;
+package io.github.kotlinmania.spring.boot.docs.data.nosql.elasticsearch.connectingusingspringdata;
 
 import org.springframework.data.elasticsearch.client.elc.ElasticsearchTemplate;
 import org.springframework.stereotype.Component;

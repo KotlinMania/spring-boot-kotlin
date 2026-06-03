@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.jarmode.tools;
+package io.github.kotlinmania.spring.boot.jarmode.tools;
 
 import java.io.File;
 import java.io.IOException;
@@ -22,7 +22,7 @@ import java.util.jar.Manifest;
 
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.loader.jarmode.JarModeErrorException;
+import io.github.kotlinmania.spring.boot.loader.jarmode.JarModeErrorException;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatExceptionOfType;

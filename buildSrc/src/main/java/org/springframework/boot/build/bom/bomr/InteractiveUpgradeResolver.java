@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.build.bom.bomr;
+package io.github.kotlinmania.spring.boot.build.bom.bomr;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -27,9 +27,9 @@ import java.util.Set;
 
 import org.gradle.api.internal.tasks.userinput.UserInputHandler;
 
-import org.springframework.boot.build.bom.Library;
-import org.springframework.boot.build.bom.Library.VersionAlignment;
-import org.springframework.boot.build.bom.bomr.version.DependencyVersion;
+import io.github.kotlinmania.spring.boot.build.bom.Library;
+import io.github.kotlinmania.spring.boot.build.bom.Library.VersionAlignment;
+import io.github.kotlinmania.spring.boot.build.bom.bomr.version.DependencyVersion;
 
 /**
  * Interactive {@link UpgradeResolver} that uses command line input to choose the upgrades

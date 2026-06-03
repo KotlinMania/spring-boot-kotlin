@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.configurationprocessor;
+package io.github.kotlinmania.spring.boot.configurationprocessor;
 
 import javax.lang.model.element.Element;
 import javax.lang.model.element.ExecutableElement;
@@ -22,7 +22,7 @@ import javax.lang.model.element.TypeElement;
 import javax.lang.model.element.VariableElement;
 import javax.lang.model.type.TypeMirror;
 
-import org.springframework.boot.configurationprocessor.metadata.ItemDeprecation;
+import io.github.kotlinmania.spring.boot.configurationprocessor.metadata.ItemDeprecation;
 
 /**
  * A {@link PropertyDescriptor} for a constructor parameter.

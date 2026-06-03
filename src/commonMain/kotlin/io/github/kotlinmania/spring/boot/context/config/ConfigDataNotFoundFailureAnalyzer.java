@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.context.config;
+package io.github.kotlinmania.spring.boot.context.config;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.diagnostics.AbstractFailureAnalyzer;
-import org.springframework.boot.diagnostics.FailureAnalysis;
-import org.springframework.boot.origin.Origin;
+import io.github.kotlinmania.spring.boot.diagnostics.AbstractFailureAnalyzer;
+import io.github.kotlinmania.spring.boot.diagnostics.FailureAnalysis;
+import io.github.kotlinmania.spring.boot.origin.Origin;
 
 /**
  * An implementation of {@link AbstractFailureAnalyzer} to analyze failures caused by

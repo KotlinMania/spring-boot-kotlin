@@ -14,18 +14,18 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.security.saml2.autoconfigure;
+package io.github.kotlinmania.spring.boot.security.saml2.autoconfigure;
 
 import java.util.Collections;
 import java.util.Map;
 
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.context.properties.bind.Bindable;
-import org.springframework.boot.context.properties.bind.Binder;
-import org.springframework.boot.context.properties.source.ConfigurationPropertySource;
-import org.springframework.boot.context.properties.source.MapConfigurationPropertySource;
-import org.springframework.boot.security.saml2.autoconfigure.Saml2RelyingPartyProperties.Registration;
+import io.github.kotlinmania.spring.boot.context.properties.bind.Bindable;
+import io.github.kotlinmania.spring.boot.context.properties.bind.Binder;
+import io.github.kotlinmania.spring.boot.context.properties.source.ConfigurationPropertySource;
+import io.github.kotlinmania.spring.boot.context.properties.source.MapConfigurationPropertySource;
+import io.github.kotlinmania.spring.boot.security.saml2.autoconfigure.Saml2RelyingPartyProperties.Registration;
 import org.springframework.security.saml2.provider.service.registration.RelyingPartyRegistration;
 import org.springframework.security.saml2.provider.service.registration.Saml2MessageBinding;
 

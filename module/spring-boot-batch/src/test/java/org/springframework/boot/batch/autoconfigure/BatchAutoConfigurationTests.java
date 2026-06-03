@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.batch.autoconfigure;
+package io.github.kotlinmania.spring.boot.batch.autoconfigure;
 
 import java.util.Arrays;
 import java.util.Collections;
@@ -31,11 +31,11 @@ import org.springframework.batch.core.converter.JsonJobParametersConverter;
 import org.springframework.batch.core.job.Job;
 import org.springframework.batch.core.launch.JobOperator;
 import org.springframework.batch.core.repository.JobRepository;
-import org.springframework.boot.autoconfigure.AutoConfigurations;
-import org.springframework.boot.batch.autoconfigure.BatchAutoConfiguration.SpringBootBatchDefaultConfiguration;
-import org.springframework.boot.test.context.FilteredClassLoader;
-import org.springframework.boot.test.context.runner.ApplicationContextRunner;
-import org.springframework.boot.test.system.OutputCaptureExtension;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurations;
+import io.github.kotlinmania.spring.boot.batch.autoconfigure.BatchAutoConfiguration.SpringBootBatchDefaultConfiguration;
+import io.github.kotlinmania.spring.boot.test.context.FilteredClassLoader;
+import io.github.kotlinmania.spring.boot.test.context.runner.ApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.test.system.OutputCaptureExtension;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.annotation.Order;

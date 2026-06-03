@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.devtools.tests;
+package io.github.kotlinmania.spring.boot.devtools.tests;
 
 import java.io.File;
 import java.time.Duration;
@@ -26,8 +26,8 @@ import java.util.function.BiFunction;
 import org.awaitility.Awaitility;
 import org.awaitility.core.ConditionTimeoutException;
 
-import org.springframework.boot.devtools.RemoteSpringApplication;
-import org.springframework.boot.devtools.tests.JvmLauncher.LaunchedJvm;
+import io.github.kotlinmania.spring.boot.devtools.RemoteSpringApplication;
+import io.github.kotlinmania.spring.boot.devtools.tests.JvmLauncher.LaunchedJvm;
 import org.springframework.util.StringUtils;
 
 import static org.hamcrest.Matchers.containsString;

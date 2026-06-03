@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.webflux.actuate.endpoint.web;
+package io.github.kotlinmania.spring.boot.webflux.actuate.endpoint.web;
 
 import java.lang.reflect.Method;
 import java.nio.charset.StandardCharsets;
@@ -36,22 +36,22 @@ import org.springframework.aot.hint.RuntimeHints;
 import org.springframework.aot.hint.RuntimeHintsRegistrar;
 import org.springframework.aot.hint.annotation.Reflective;
 import org.springframework.aot.hint.annotation.ReflectiveRuntimeHintsRegistrar;
-import org.springframework.boot.actuate.endpoint.InvalidEndpointRequestException;
-import org.springframework.boot.actuate.endpoint.InvocationContext;
-import org.springframework.boot.actuate.endpoint.OperationArgumentResolver;
-import org.springframework.boot.actuate.endpoint.OperationType;
-import org.springframework.boot.actuate.endpoint.ProducibleOperationArgumentResolver;
-import org.springframework.boot.actuate.endpoint.SecurityContext;
-import org.springframework.boot.actuate.endpoint.invoke.OperationInvoker;
-import org.springframework.boot.actuate.endpoint.web.EndpointMapping;
-import org.springframework.boot.actuate.endpoint.web.EndpointMediaTypes;
-import org.springframework.boot.actuate.endpoint.web.ExposableWebEndpoint;
-import org.springframework.boot.actuate.endpoint.web.WebEndpointResponse;
-import org.springframework.boot.actuate.endpoint.web.WebOperation;
-import org.springframework.boot.actuate.endpoint.web.WebOperationRequestPredicate;
-import org.springframework.boot.actuate.endpoint.web.WebServerNamespace;
-import org.springframework.boot.web.server.context.WebServerApplicationContext;
-import org.springframework.boot.webflux.actuate.endpoint.web.AbstractWebFluxEndpointHandlerMapping.AbstractWebFluxEndpointHandlerMappingRuntimeHints;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.InvalidEndpointRequestException;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.InvocationContext;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.OperationArgumentResolver;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.OperationType;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.ProducibleOperationArgumentResolver;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.SecurityContext;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.invoke.OperationInvoker;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.web.EndpointMapping;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.web.EndpointMediaTypes;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.web.ExposableWebEndpoint;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.web.WebEndpointResponse;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.web.WebOperation;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.web.WebOperationRequestPredicate;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.web.WebServerNamespace;
+import io.github.kotlinmania.spring.boot.web.server.context.WebServerApplicationContext;
+import io.github.kotlinmania.spring.boot.webflux.actuate.endpoint.web.AbstractWebFluxEndpointHandlerMapping.AbstractWebFluxEndpointHandlerMappingRuntimeHints;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.ImportRuntimeHints;
 import org.springframework.http.HttpMethod;

@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.autoconfigure.context;
+package io.github.kotlinmania.spring.boot.autoconfigure.context;
 
 import java.time.Duration;
 
-import org.springframework.boot.context.properties.ConfigurationProperties;
+import io.github.kotlinmania.spring.boot.context.properties.ConfigurationProperties;
 
 /**
  * Configuration properties for lifecycle processing.

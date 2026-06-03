@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.micrometer.metrics.autoconfigure.export.graphite;
+package io.github.kotlinmania.spring.boot.micrometer.metrics.autoconfigure.export.graphite;
 
 import java.time.Duration;
 import java.util.concurrent.TimeUnit;
@@ -22,7 +22,7 @@ import java.util.concurrent.TimeUnit;
 import io.micrometer.graphite.GraphiteProtocol;
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.context.properties.ConfigurationProperties;
+import io.github.kotlinmania.spring.boot.context.properties.ConfigurationProperties;
 import org.springframework.util.ObjectUtils;
 
 /**

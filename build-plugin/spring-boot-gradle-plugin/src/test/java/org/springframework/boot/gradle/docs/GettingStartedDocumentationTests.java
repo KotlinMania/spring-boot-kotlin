@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.gradle.docs;
+package io.github.kotlinmania.spring.boot.gradle.docs;
 
 import org.junit.jupiter.api.TestTemplate;
 import org.junit.jupiter.api.extension.ExtendWith;
 
-import org.springframework.boot.gradle.junit.GradleMultiDslExtension;
-import org.springframework.boot.testsupport.gradle.testkit.GradleBuild;
+import io.github.kotlinmania.spring.boot.gradle.junit.GradleMultiDslExtension;
+import io.github.kotlinmania.spring.boot.testsupport.gradle.testkit.GradleBuild;
 
 /**
  * Tests for the getting started documentation.

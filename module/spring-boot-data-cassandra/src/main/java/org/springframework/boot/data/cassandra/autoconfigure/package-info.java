@@ -18,6 +18,6 @@
  * Auto-configuration for Spring Data Cassandra.
  */
 @NullMarked
-package org.springframework.boot.data.cassandra.autoconfigure;
+package io.github.kotlinmania.spring.boot.data.cassandra.autoconfigure;
 
 import org.jspecify.annotations.NullMarked;

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.session.jdbc.autoconfigure;
+package io.github.kotlinmania.spring.boot.session.jdbc.autoconfigure;
 
 import java.time.Duration;
 
@@ -25,21 +25,21 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import org.springframework.beans.factory.config.ConfigurableListableBeanFactory;
-import org.springframework.boot.autoconfigure.AutoConfigurations;
-import org.springframework.boot.flyway.autoconfigure.FlywayAutoConfiguration;
-import org.springframework.boot.jdbc.autoconfigure.DataSourceAutoConfiguration;
-import org.springframework.boot.jdbc.autoconfigure.DataSourceTransactionManagerAutoConfiguration;
-import org.springframework.boot.jdbc.autoconfigure.JdbcTemplateAutoConfiguration;
-import org.springframework.boot.jdbc.init.DataSourceScriptDatabaseInitializer;
-import org.springframework.boot.liquibase.autoconfigure.LiquibaseAutoConfiguration;
-import org.springframework.boot.session.autoconfigure.AbstractSessionAutoConfigurationTests;
-import org.springframework.boot.session.autoconfigure.SessionAutoConfiguration;
-import org.springframework.boot.session.autoconfigure.SessionTimeout;
-import org.springframework.boot.sql.init.DatabaseInitializationMode;
-import org.springframework.boot.sql.init.DatabaseInitializationSettings;
-import org.springframework.boot.test.context.runner.WebApplicationContextRunner;
-import org.springframework.boot.testsupport.classpath.resources.WithResource;
-import org.springframework.boot.web.server.autoconfigure.ServerProperties;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurations;
+import io.github.kotlinmania.spring.boot.flyway.autoconfigure.FlywayAutoConfiguration;
+import io.github.kotlinmania.spring.boot.jdbc.autoconfigure.DataSourceAutoConfiguration;
+import io.github.kotlinmania.spring.boot.jdbc.autoconfigure.DataSourceTransactionManagerAutoConfiguration;
+import io.github.kotlinmania.spring.boot.jdbc.autoconfigure.JdbcTemplateAutoConfiguration;
+import io.github.kotlinmania.spring.boot.jdbc.init.DataSourceScriptDatabaseInitializer;
+import io.github.kotlinmania.spring.boot.liquibase.autoconfigure.LiquibaseAutoConfiguration;
+import io.github.kotlinmania.spring.boot.session.autoconfigure.AbstractSessionAutoConfigurationTests;
+import io.github.kotlinmania.spring.boot.session.autoconfigure.SessionAutoConfiguration;
+import io.github.kotlinmania.spring.boot.session.autoconfigure.SessionTimeout;
+import io.github.kotlinmania.spring.boot.sql.init.DatabaseInitializationMode;
+import io.github.kotlinmania.spring.boot.sql.init.DatabaseInitializationSettings;
+import io.github.kotlinmania.spring.boot.test.context.runner.WebApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.testsupport.classpath.resources.WithResource;
+import io.github.kotlinmania.spring.boot.web.server.autoconfigure.ServerProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
@@ -123,7 +123,7 @@ class JdbcSessionAutoConfigurationTests extends AbstractSessionAutoConfiguration
 	@Test
 	void customTableName() {
 		this.contextRunner.withPropertyValues("spring.session.jdbc.table-name=FOO_BAR",
-				"spring.session.jdbc.schema=classpath:org/springframework/boot/session/jdbc/autoconfigure/custom-schema-h2.sql")
+				"spring.session.jdbc.schema=classpath:io.github.kotlinmania.spring.boot.session/jdbc/autoconfigure/custom-schema-h2.sql")
 			.run((context) -> {
 				JdbcIndexedSessionRepository repository = validateSessionRepository(context,
 						JdbcIndexedSessionRepository.class);

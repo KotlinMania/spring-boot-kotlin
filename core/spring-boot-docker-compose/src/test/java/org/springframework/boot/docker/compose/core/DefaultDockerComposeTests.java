@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docker.compose.core;
+package io.github.kotlinmania.spring.boot.docker.compose.core;
 
 import java.time.Duration;
 import java.util.Collections;
@@ -23,11 +23,11 @@ import java.util.Map;
 
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.docker.compose.core.DockerCliInspectResponse.Config;
-import org.springframework.boot.docker.compose.core.DockerCliInspectResponse.ExposedPort;
-import org.springframework.boot.docker.compose.core.DockerCliInspectResponse.HostConfig;
-import org.springframework.boot.docker.compose.core.DockerCliInspectResponse.NetworkSettings;
-import org.springframework.boot.logging.LogLevel;
+import io.github.kotlinmania.spring.boot.docker.compose.core.DockerCliInspectResponse.Config;
+import io.github.kotlinmania.spring.boot.docker.compose.core.DockerCliInspectResponse.ExposedPort;
+import io.github.kotlinmania.spring.boot.docker.compose.core.DockerCliInspectResponse.HostConfig;
+import io.github.kotlinmania.spring.boot.docker.compose.core.DockerCliInspectResponse.NetworkSettings;
+import io.github.kotlinmania.spring.boot.logging.LogLevel;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.entry;

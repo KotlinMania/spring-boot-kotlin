@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.loader.jarmode;
+package io.github.kotlinmania.spring.boot.loader.jarmode;
 
 /**
  * Interface registered in {@code spring.factories} to provides extended 'jarmode'

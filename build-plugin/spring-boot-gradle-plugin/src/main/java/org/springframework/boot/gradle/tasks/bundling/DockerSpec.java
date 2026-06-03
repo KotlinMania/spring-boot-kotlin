@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.gradle.tasks.bundling;
+package io.github.kotlinmania.spring.boot.gradle.tasks.bundling;
 
 import javax.inject.Inject;
 
@@ -27,8 +27,8 @@ import org.gradle.api.tasks.Nested;
 import org.gradle.api.tasks.Optional;
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.buildpack.platform.build.BuilderDockerConfiguration;
-import org.springframework.boot.buildpack.platform.docker.configuration.DockerRegistryAuthentication;
+import io.github.kotlinmania.spring.boot.buildpack.platform.build.BuilderDockerConfiguration;
+import io.github.kotlinmania.spring.boot.buildpack.platform.docker.configuration.DockerRegistryAuthentication;
 
 /**
  * Encapsulates Docker configuration options.

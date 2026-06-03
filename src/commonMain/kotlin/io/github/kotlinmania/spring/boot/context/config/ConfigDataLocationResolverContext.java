@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.context.config;
+package io.github.kotlinmania.spring.boot.context.config;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.EnvironmentPostProcessor;
-import org.springframework.boot.bootstrap.ConfigurableBootstrapContext;
-import org.springframework.boot.context.properties.bind.Binder;
+import io.github.kotlinmania.spring.boot.EnvironmentPostProcessor;
+import io.github.kotlinmania.spring.boot.bootstrap.ConfigurableBootstrapContext;
+import io.github.kotlinmania.spring.boot.context.properties.bind.Binder;
 
 /**
  * Context provided to {@link ConfigDataLocationResolver} methods.

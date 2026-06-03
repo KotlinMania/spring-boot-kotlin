@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.logging.logback;
+package io.github.kotlinmania.spring.boot.logging.logback;
 
 import java.util.Iterator;
 import java.util.List;
@@ -29,15 +29,15 @@ import org.jspecify.annotations.Nullable;
 import org.slf4j.Marker;
 import org.slf4j.event.KeyValuePair;
 
-import org.springframework.boot.json.JsonWriter;
-import org.springframework.boot.json.JsonWriter.PairExtractor;
-import org.springframework.boot.logging.StackTracePrinter;
-import org.springframework.boot.logging.structured.CommonStructuredLogFormat;
-import org.springframework.boot.logging.structured.ContextPairs;
-import org.springframework.boot.logging.structured.ElasticCommonSchemaProperties;
-import org.springframework.boot.logging.structured.JsonWriterStructuredLogFormatter;
-import org.springframework.boot.logging.structured.StructuredLogFormatter;
-import org.springframework.boot.logging.structured.StructuredLoggingJsonMembersCustomizer;
+import io.github.kotlinmania.spring.boot.json.JsonWriter;
+import io.github.kotlinmania.spring.boot.json.JsonWriter.PairExtractor;
+import io.github.kotlinmania.spring.boot.logging.StackTracePrinter;
+import io.github.kotlinmania.spring.boot.logging.structured.CommonStructuredLogFormat;
+import io.github.kotlinmania.spring.boot.logging.structured.ContextPairs;
+import io.github.kotlinmania.spring.boot.logging.structured.ElasticCommonSchemaProperties;
+import io.github.kotlinmania.spring.boot.logging.structured.JsonWriterStructuredLogFormatter;
+import io.github.kotlinmania.spring.boot.logging.structured.StructuredLogFormatter;
+import io.github.kotlinmania.spring.boot.logging.structured.StructuredLoggingJsonMembersCustomizer;
 import org.springframework.core.env.Environment;
 
 /**

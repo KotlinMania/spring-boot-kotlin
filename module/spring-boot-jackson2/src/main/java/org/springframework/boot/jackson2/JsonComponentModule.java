@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.jackson2;
+package io.github.kotlinmania.spring.boot.jackson2;
 
 import java.lang.reflect.Modifier;
 import java.util.ArrayList;
@@ -60,7 +60,7 @@ import org.springframework.util.ObjectUtils;
  * @since 4.0.0
  * @see JsonComponent
  * @deprecated since 4.0.0 for removal in 4.3.0 in favor of Jackson 3 and
- * {@link org.springframework.boot.jackson.JacksonComponentModule}.
+ * {@link io.github.kotlinmania.spring.boot.jackson.JacksonComponentModule}.
  */
 @Deprecated(since = "4.0.0", forRemoval = true)
 @SuppressWarnings("removal")

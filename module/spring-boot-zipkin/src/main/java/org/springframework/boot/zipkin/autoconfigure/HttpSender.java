@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.zipkin.autoconfigure;
+package io.github.kotlinmania.spring.boot.zipkin.autoconfigure;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;

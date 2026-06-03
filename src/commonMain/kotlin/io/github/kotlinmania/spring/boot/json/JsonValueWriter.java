@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.json;
+package io.github.kotlinmania.spring.boot.json;
 
 import java.io.IOException;
 import java.io.UncheckedIOException;
@@ -31,10 +31,10 @@ import java.util.function.Predicate;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.json.JsonWriter.MemberPath;
-import org.springframework.boot.json.JsonWriter.NameProcessor;
-import org.springframework.boot.json.JsonWriter.ValueProcessor;
-import org.springframework.boot.util.LambdaSafe;
+import io.github.kotlinmania.spring.boot.json.JsonWriter.MemberPath;
+import io.github.kotlinmania.spring.boot.json.JsonWriter.NameProcessor;
+import io.github.kotlinmania.spring.boot.json.JsonWriter.ValueProcessor;
+import io.github.kotlinmania.spring.boot.util.LambdaSafe;
 import org.springframework.util.Assert;
 import org.springframework.util.ObjectUtils;
 import org.springframework.util.StringUtils;

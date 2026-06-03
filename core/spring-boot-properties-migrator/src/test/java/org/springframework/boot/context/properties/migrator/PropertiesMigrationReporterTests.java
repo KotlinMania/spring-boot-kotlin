@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.context.properties.migrator;
+package io.github.kotlinmania.spring.boot.context.properties.migrator;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -26,13 +26,13 @@ import java.util.Map;
 import org.jspecify.annotations.Nullable;
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.configurationmetadata.ConfigurationMetadataRepository;
-import org.springframework.boot.configurationmetadata.ConfigurationMetadataRepositoryJsonBuilder;
-import org.springframework.boot.configurationmetadata.SimpleConfigurationMetadataRepository;
-import org.springframework.boot.env.PropertiesPropertySourceLoader;
-import org.springframework.boot.origin.Origin;
-import org.springframework.boot.origin.OriginLookup;
-import org.springframework.boot.origin.PropertySourceOrigin;
+import io.github.kotlinmania.spring.boot.configurationmetadata.ConfigurationMetadataRepository;
+import io.github.kotlinmania.spring.boot.configurationmetadata.ConfigurationMetadataRepositoryJsonBuilder;
+import io.github.kotlinmania.spring.boot.configurationmetadata.SimpleConfigurationMetadataRepository;
+import io.github.kotlinmania.spring.boot.env.PropertiesPropertySourceLoader;
+import io.github.kotlinmania.spring.boot.origin.Origin;
+import io.github.kotlinmania.spring.boot.origin.OriginLookup;
+import io.github.kotlinmania.spring.boot.origin.PropertySourceOrigin;
 import org.springframework.core.env.ConfigurableEnvironment;
 import org.springframework.core.env.MapPropertySource;
 import org.springframework.core.env.MutablePropertySources;

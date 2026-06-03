@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.http.client.autoconfigure.service;
+package io.github.kotlinmania.spring.boot.http.client.autoconfigure.service;
 
-import org.springframework.boot.autoconfigure.AutoConfiguration;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.context.annotation.Bean;
 import org.springframework.core.env.Environment;
 

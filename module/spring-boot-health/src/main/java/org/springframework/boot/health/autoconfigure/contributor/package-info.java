@@ -18,6 +18,6 @@
  * Auto-configuration for health contributors.
  */
 @NullMarked
-package org.springframework.boot.health.autoconfigure.contributor;
+package io.github.kotlinmania.spring.boot.health.autoconfigure.contributor;
 
 import org.jspecify.annotations.NullMarked;

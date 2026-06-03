@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.tomcat;
+package io.github.kotlinmania.spring.boot.tomcat;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -30,11 +30,11 @@ import org.apache.tomcat.util.net.SSLHostConfigCertificate.Type;
 import org.apache.tomcat.util.net.openssl.ciphers.OpenSSLCipherConfigurationParser;
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.ssl.SslBundle;
-import org.springframework.boot.ssl.SslBundleKey;
-import org.springframework.boot.ssl.SslOptions;
-import org.springframework.boot.ssl.SslStoreBundle;
-import org.springframework.boot.web.server.Ssl.ClientAuth;
+import io.github.kotlinmania.spring.boot.ssl.SslBundle;
+import io.github.kotlinmania.spring.boot.ssl.SslBundleKey;
+import io.github.kotlinmania.spring.boot.ssl.SslOptions;
+import io.github.kotlinmania.spring.boot.ssl.SslStoreBundle;
+import io.github.kotlinmania.spring.boot.web.server.Ssl.ClientAuth;
 import org.springframework.util.Assert;
 import org.springframework.util.StringUtils;
 

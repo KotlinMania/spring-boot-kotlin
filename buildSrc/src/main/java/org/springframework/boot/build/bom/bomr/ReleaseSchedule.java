@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.build.bom.bomr;
+package io.github.kotlinmania.spring.boot.build.bom.bomr;
 
 import java.time.LocalDate;
 import java.time.OffsetDateTime;
@@ -25,7 +25,7 @@ import java.util.Objects;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import org.springframework.boot.build.bom.bomr.version.DependencyVersion;
+import io.github.kotlinmania.spring.boot.build.bom.bomr.version.DependencyVersion;
 import org.springframework.http.ResponseEntity;
 import org.springframework.util.LinkedCaseInsensitiveMap;
 import org.springframework.web.client.RestOperations;

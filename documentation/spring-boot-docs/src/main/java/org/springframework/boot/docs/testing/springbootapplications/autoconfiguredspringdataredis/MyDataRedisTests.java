@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.testing.springbootapplications.autoconfiguredspringdataredis;
+package io.github.kotlinmania.spring.boot.docs.testing.springbootapplications.autoconfiguredspringdataredis;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.data.redis.test.autoconfigure.DataRedisTest;
+import io.github.kotlinmania.spring.boot.data.redis.test.autoconfigure.DataRedisTest;
 
 @DataRedisTest
 class MyDataRedisTests {

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.actuate.web.mappings;
+package io.github.kotlinmania.spring.boot.actuate.web.mappings;
 
 import java.util.Collection;
 import java.util.Collections;
@@ -28,20 +28,20 @@ import jakarta.servlet.ServletException;
 import jakarta.servlet.ServletRegistration;
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.actuate.web.mappings.MappingsEndpoint.ApplicationMappingsDescriptor;
-import org.springframework.boot.actuate.web.mappings.MappingsEndpoint.ContextMappingsDescriptor;
-import org.springframework.boot.servlet.actuate.web.mappings.FilterRegistrationMappingDescription;
-import org.springframework.boot.servlet.actuate.web.mappings.FiltersMappingDescriptionProvider;
-import org.springframework.boot.servlet.actuate.web.mappings.ServletRegistrationMappingDescription;
-import org.springframework.boot.servlet.actuate.web.mappings.ServletsMappingDescriptionProvider;
-import org.springframework.boot.test.context.runner.ReactiveWebApplicationContextRunner;
-import org.springframework.boot.test.context.runner.WebApplicationContextRunner;
-import org.springframework.boot.web.context.servlet.AnnotationConfigServletWebApplicationContext;
-import org.springframework.boot.web.servlet.ServletRegistrationBean;
-import org.springframework.boot.webflux.actuate.web.mappings.DispatcherHandlerMappingDescription;
-import org.springframework.boot.webflux.actuate.web.mappings.DispatcherHandlersMappingDescriptionProvider;
-import org.springframework.boot.webmvc.actuate.web.mappings.DispatcherServletMappingDescription;
-import org.springframework.boot.webmvc.actuate.web.mappings.DispatcherServletsMappingDescriptionProvider;
+import io.github.kotlinmania.spring.boot.actuate.web.mappings.MappingsEndpoint.ApplicationMappingsDescriptor;
+import io.github.kotlinmania.spring.boot.actuate.web.mappings.MappingsEndpoint.ContextMappingsDescriptor;
+import io.github.kotlinmania.spring.boot.servlet.actuate.web.mappings.FilterRegistrationMappingDescription;
+import io.github.kotlinmania.spring.boot.servlet.actuate.web.mappings.FiltersMappingDescriptionProvider;
+import io.github.kotlinmania.spring.boot.servlet.actuate.web.mappings.ServletRegistrationMappingDescription;
+import io.github.kotlinmania.spring.boot.servlet.actuate.web.mappings.ServletsMappingDescriptionProvider;
+import io.github.kotlinmania.spring.boot.test.context.runner.ReactiveWebApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.test.context.runner.WebApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.web.context.servlet.AnnotationConfigServletWebApplicationContext;
+import io.github.kotlinmania.spring.boot.web.servlet.ServletRegistrationBean;
+import io.github.kotlinmania.spring.boot.webflux.actuate.web.mappings.DispatcherHandlerMappingDescription;
+import io.github.kotlinmania.spring.boot.webflux.actuate.web.mappings.DispatcherHandlersMappingDescriptionProvider;
+import io.github.kotlinmania.spring.boot.webmvc.actuate.web.mappings.DispatcherServletMappingDescription;
+import io.github.kotlinmania.spring.boot.webmvc.actuate.web.mappings.DispatcherServletsMappingDescriptionProvider;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

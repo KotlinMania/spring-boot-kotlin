@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.data.elasticsearch.domain.empty;
+package io.github.kotlinmania.spring.boot.data.elasticsearch.domain.empty;
 
 public class EmptyDataPackage {
 

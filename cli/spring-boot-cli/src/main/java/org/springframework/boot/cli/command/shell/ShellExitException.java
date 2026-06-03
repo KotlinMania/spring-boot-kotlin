@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.cli.command.shell;
+package io.github.kotlinmania.spring.boot.cli.command.shell;
 
-import org.springframework.boot.cli.command.CommandException;
+import io.github.kotlinmania.spring.boot.cli.command.CommandException;
 
 /**
  * Exception used to stop the {@link Shell}.

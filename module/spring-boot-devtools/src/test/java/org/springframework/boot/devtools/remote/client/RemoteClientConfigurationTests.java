@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.devtools.remote.client;
+package io.github.kotlinmania.spring.boot.devtools.remote.client;
 
 import java.io.IOException;
 import java.time.Duration;
@@ -29,21 +29,21 @@ import org.junit.jupiter.api.extension.ExtendWith;
 
 import org.springframework.beans.factory.BeanCreationException;
 import org.springframework.beans.factory.NoSuchBeanDefinitionException;
-import org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer;
-import org.springframework.boot.devtools.classpath.ClassPathChangedEvent;
-import org.springframework.boot.devtools.classpath.ClassPathFileSystemWatcher;
-import org.springframework.boot.devtools.filewatch.ChangedFiles;
-import org.springframework.boot.devtools.livereload.LiveReloadServer;
-import org.springframework.boot.devtools.remote.server.Dispatcher;
-import org.springframework.boot.devtools.remote.server.DispatcherFilter;
-import org.springframework.boot.devtools.restart.MockRestarter;
-import org.springframework.boot.devtools.restart.RestartScopeInitializer;
-import org.springframework.boot.test.system.CapturedOutput;
-import org.springframework.boot.test.system.OutputCaptureExtension;
-import org.springframework.boot.test.util.TestPropertyValues;
-import org.springframework.boot.tomcat.servlet.TomcatServletWebServerFactory;
-import org.springframework.boot.web.server.WebServer;
-import org.springframework.boot.web.server.servlet.context.AnnotationConfigServletWebServerApplicationContext;
+import io.github.kotlinmania.spring.boot.devtools.autoconfigure.OptionalLiveReloadServer;
+import io.github.kotlinmania.spring.boot.devtools.classpath.ClassPathChangedEvent;
+import io.github.kotlinmania.spring.boot.devtools.classpath.ClassPathFileSystemWatcher;
+import io.github.kotlinmania.spring.boot.devtools.filewatch.ChangedFiles;
+import io.github.kotlinmania.spring.boot.devtools.livereload.LiveReloadServer;
+import io.github.kotlinmania.spring.boot.devtools.remote.server.Dispatcher;
+import io.github.kotlinmania.spring.boot.devtools.remote.server.DispatcherFilter;
+import io.github.kotlinmania.spring.boot.devtools.restart.MockRestarter;
+import io.github.kotlinmania.spring.boot.devtools.restart.RestartScopeInitializer;
+import io.github.kotlinmania.spring.boot.test.system.CapturedOutput;
+import io.github.kotlinmania.spring.boot.test.system.OutputCaptureExtension;
+import io.github.kotlinmania.spring.boot.test.util.TestPropertyValues;
+import io.github.kotlinmania.spring.boot.tomcat.servlet.TomcatServletWebServerFactory;
+import io.github.kotlinmania.spring.boot.web.server.WebServer;
+import io.github.kotlinmania.spring.boot.web.server.servlet.context.AnnotationConfigServletWebServerApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

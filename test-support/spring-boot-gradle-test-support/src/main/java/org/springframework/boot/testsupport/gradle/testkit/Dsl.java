@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.testsupport.gradle.testkit;
+package io.github.kotlinmania.spring.boot.testsupport.gradle.testkit;
 
 /**
  * The DSLs supported by Gradle and demonstrated in the documentation samples.

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package commonMain.kotlin.io.github.kotlinmania.spring.boot.admin;
+package io.github.kotlinmania.spring.boot.admin;
 
 import org.jspecify.annotations.Nullable;
 
@@ -30,7 +30,7 @@ public interface SpringApplicationAdminMXBean {
 	/**
 	 * Specify if the application has fully started and is now ready.
 	 * @return {@code true} if the application is ready
-	 * @see org.springframework.boot.context.event.ApplicationReadyEvent
+	 * @see io.github.kotlinmania.spring.boot.context.event.ApplicationReadyEvent
 	 */
 	boolean isReady();
 

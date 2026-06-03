@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.security.test.autoconfigure.webmvc;
+package io.github.kotlinmania.spring.boot.security.test.autoconfigure.webmvc;
 
-import org.springframework.boot.webmvc.test.autoconfigure.WebMvcTest;
+import io.github.kotlinmania.spring.boot.webmvc.test.autoconfigure.WebMvcTest;
 import org.springframework.security.config.annotation.web.WebSecurityConfigurer;
 import org.springframework.security.config.annotation.web.builders.WebSecurity;
 import org.springframework.stereotype.Component;

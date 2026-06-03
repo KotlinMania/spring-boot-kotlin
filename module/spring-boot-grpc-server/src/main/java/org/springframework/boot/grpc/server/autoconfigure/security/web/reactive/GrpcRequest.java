@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.grpc.server.autoconfigure.security.web.reactive;
+package io.github.kotlinmania.spring.boot.grpc.server.autoconfigure.security.web.reactive;
 
 import java.util.Collection;
 import java.util.Collections;
@@ -27,8 +27,8 @@ import java.util.stream.Stream;
 import org.jspecify.annotations.Nullable;
 import reactor.core.publisher.Mono;
 
-import org.springframework.boot.grpc.server.autoconfigure.security.web.servlet.GrpcRequest.GrpcServletRequestMatcher;
-import org.springframework.boot.security.web.reactive.ApplicationContextServerWebExchangeMatcher;
+import io.github.kotlinmania.spring.boot.grpc.server.autoconfigure.security.web.servlet.GrpcRequest.GrpcServletRequestMatcher;
+import io.github.kotlinmania.spring.boot.security.web.reactive.ApplicationContextServerWebExchangeMatcher;
 import org.springframework.grpc.server.service.GrpcServiceDiscoverer;
 import org.springframework.security.web.server.util.matcher.OrServerWebExchangeMatcher;
 import org.springframework.security.web.server.util.matcher.PathPatternParserServerWebExchangeMatcher;

@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.actuate.docs.sbom;
+package io.github.kotlinmania.spring.boot.actuate.docs.sbom;
 
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.actuate.docs.MockMvcEndpointDocumentationTests;
-import org.springframework.boot.actuate.sbom.SbomEndpoint;
-import org.springframework.boot.actuate.sbom.SbomEndpointWebExtension;
-import org.springframework.boot.actuate.sbom.SbomProperties;
+import io.github.kotlinmania.spring.boot.actuate.docs.MockMvcEndpointDocumentationTests;
+import io.github.kotlinmania.spring.boot.actuate.sbom.SbomEndpoint;
+import io.github.kotlinmania.spring.boot.actuate.sbom.SbomEndpointWebExtension;
+import io.github.kotlinmania.spring.boot.actuate.sbom.SbomProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.io.ResourceLoader;
@@ -58,7 +58,7 @@ class SbomEndpointDocumentationTests extends MockMvcEndpointDocumentationTests {
 		SbomProperties sbomProperties() {
 			SbomProperties properties = new SbomProperties();
 			properties.getApplication()
-				.setLocation("classpath:org/springframework/boot/actuate/docs/sbom/cyclonedx.json");
+				.setLocation("classpath:io.github.kotlinmania.spring.boot.actuate/docs/sbom/cyclonedx.json");
 			return properties;
 		}
 

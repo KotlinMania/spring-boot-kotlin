@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.bootstrap;
+package io.github.kotlinmania.spring.boot.bootstrap;
 
 /**
  * A {@link BootstrapContext} that also provides configuration methods through the

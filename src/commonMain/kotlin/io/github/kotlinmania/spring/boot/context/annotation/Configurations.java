@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.context.annotation;
+package io.github.kotlinmania.spring.boot.context.annotation;
 
 import java.util.ArrayList;
 import java.util.Arrays;

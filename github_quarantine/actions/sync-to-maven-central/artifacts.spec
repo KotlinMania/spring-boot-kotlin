@@ -8,7 +8,7 @@
               "@build.name": "${buildName}",
               "@build.number": "${buildNumber}",
               "path": {
-                "$nmatch": "org/springframework/boot/spring-boot-docs/*"
+                "$nmatch": "io.github.kotlinmania.spring.boot.spring-boot-docs/*"
               }
             }
           ]

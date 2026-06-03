@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.features.externalconfig;
+package io.github.kotlinmania.spring.boot.docs.features.externalconfig;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;

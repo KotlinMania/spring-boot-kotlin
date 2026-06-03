@@ -14,16 +14,16 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.cache.autoconfigure;
+package io.github.kotlinmania.spring.boot.cache.autoconfigure;
 
 import javax.cache.CacheManager;
 
 import org.ehcache.jsr107.EhcacheCachingProvider;
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.cache.autoconfigure.CacheAutoConfigurationTests.DefaultCacheConfiguration;
-import org.springframework.boot.testsupport.classpath.ClassPathExclusions;
-import org.springframework.boot.testsupport.classpath.resources.WithResource;
+import io.github.kotlinmania.spring.boot.cache.autoconfigure.CacheAutoConfigurationTests.DefaultCacheConfiguration;
+import io.github.kotlinmania.spring.boot.testsupport.classpath.ClassPathExclusions;
+import io.github.kotlinmania.spring.boot.testsupport.classpath.resources.WithResource;
 import org.springframework.cache.jcache.JCacheCacheManager;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.Resource;

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.cloudfoundry.autoconfigure.actuate.endpoint.reactive;
+package io.github.kotlinmania.spring.boot.cloudfoundry.autoconfigure.actuate.endpoint.reactive;
 
 import java.util.Locale;
 
@@ -23,10 +23,10 @@ import org.apache.commons.logging.LogFactory;
 import org.jspecify.annotations.Nullable;
 import reactor.core.publisher.Mono;
 
-import org.springframework.boot.cloudfoundry.autoconfigure.actuate.endpoint.CloudFoundryAuthorizationException;
-import org.springframework.boot.cloudfoundry.autoconfigure.actuate.endpoint.CloudFoundryAuthorizationException.Reason;
-import org.springframework.boot.cloudfoundry.autoconfigure.actuate.endpoint.SecurityResponse;
-import org.springframework.boot.cloudfoundry.autoconfigure.actuate.endpoint.Token;
+import io.github.kotlinmania.spring.boot.cloudfoundry.autoconfigure.actuate.endpoint.CloudFoundryAuthorizationException;
+import io.github.kotlinmania.spring.boot.cloudfoundry.autoconfigure.actuate.endpoint.CloudFoundryAuthorizationException.Reason;
+import io.github.kotlinmania.spring.boot.cloudfoundry.autoconfigure.actuate.endpoint.SecurityResponse;
+import io.github.kotlinmania.spring.boot.cloudfoundry.autoconfigure.actuate.endpoint.Token;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.server.reactive.ServerHttpRequest;
 import org.springframework.util.Assert;

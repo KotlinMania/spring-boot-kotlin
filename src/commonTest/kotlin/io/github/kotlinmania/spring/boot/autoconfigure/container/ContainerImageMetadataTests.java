@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.autoconfigure.container;
+package io.github.kotlinmania.spring.boot.autoconfigure.container;
 
 import org.junit.jupiter.api.Test;
 

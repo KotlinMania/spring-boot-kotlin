@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.graphql.test.autoconfigure;
+package io.github.kotlinmania.spring.boot.graphql.test.autoconfigure;
 
 import java.util.Arrays;
 import java.util.Collections;
@@ -23,10 +23,10 @@ import java.util.Set;
 
 import graphql.execution.instrumentation.Instrumentation;
 
-import org.springframework.boot.context.TypeExcludeFilter;
-import org.springframework.boot.graphql.autoconfigure.GraphQlSourceBuilderCustomizer;
-import org.springframework.boot.jackson.JacksonComponent;
-import org.springframework.boot.test.context.filter.annotation.StandardAnnotationCustomizableTypeExcludeFilter;
+import io.github.kotlinmania.spring.boot.context.TypeExcludeFilter;
+import io.github.kotlinmania.spring.boot.graphql.autoconfigure.GraphQlSourceBuilderCustomizer;
+import io.github.kotlinmania.spring.boot.jackson.JacksonComponent;
+import io.github.kotlinmania.spring.boot.test.context.filter.annotation.StandardAnnotationCustomizableTypeExcludeFilter;
 import org.springframework.core.convert.converter.Converter;
 import org.springframework.core.convert.converter.GenericConverter;
 import org.springframework.graphql.execution.DataFetcherExceptionResolver;
@@ -46,7 +46,7 @@ class GraphQlTypeExcludeFilter extends StandardAnnotationCustomizableTypeExclude
 	private static final Class<?>[] NO_CONTROLLERS = {};
 
 	private static final String[] OPTIONAL_INCLUDES = { "tools.jackson.databind.JacksonModule",
-			"com.fasterxml.jackson.databind.Module", "org.springframework.boot.jackson2.JsonComponent" };
+			"com.fasterxml.jackson.databind.Module", "io.github.kotlinmania.spring.boot.jackson2.JsonComponent" };
 
 	private static final Set<Class<?>> KNOWN_INCLUDES;
 

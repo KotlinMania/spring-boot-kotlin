@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.webclient.test.autoconfigure;
+package io.github.kotlinmania.spring.boot.webclient.test.autoconfigure;
 
 import org.junit.jupiter.api.Test;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.context.properties.ConfigurationProperties;
+import io.github.kotlinmania.spring.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.ApplicationContext;
 
 import static org.assertj.core.api.Assertions.assertThat;

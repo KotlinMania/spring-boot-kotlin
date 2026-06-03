@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.context.config;
+package io.github.kotlinmania.spring.boot.context.config;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -27,7 +27,7 @@ import org.jspecify.annotations.Nullable;
 import org.springframework.aot.hint.RuntimeHints;
 import org.springframework.aot.hint.RuntimeHintsRegistrar;
 import org.springframework.aot.hint.support.FilePatternResourceHintsRegistrar;
-import org.springframework.boot.env.PropertySourceLoader;
+import io.github.kotlinmania.spring.boot.env.PropertySourceLoader;
 import org.springframework.core.io.support.SpringFactoriesLoader;
 import org.springframework.util.ResourceUtils;
 

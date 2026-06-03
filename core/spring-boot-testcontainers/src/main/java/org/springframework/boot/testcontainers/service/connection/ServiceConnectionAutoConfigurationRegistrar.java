@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.testcontainers.service.connection;
+package io.github.kotlinmania.spring.boot.testcontainers.service.connection;
 
 import java.util.LinkedHashSet;
 import java.util.Set;
@@ -28,9 +28,9 @@ import org.springframework.beans.factory.annotation.AnnotatedBeanDefinition;
 import org.springframework.beans.factory.config.BeanDefinition;
 import org.springframework.beans.factory.config.ConfigurableListableBeanFactory;
 import org.springframework.beans.factory.support.BeanDefinitionRegistry;
-import org.springframework.boot.autoconfigure.service.connection.ConnectionDetailsFactories;
-import org.springframework.boot.origin.Origin;
-import org.springframework.boot.testcontainers.beans.TestcontainerBeanDefinition;
+import io.github.kotlinmania.spring.boot.autoconfigure.service.connection.ConnectionDetailsFactories;
+import io.github.kotlinmania.spring.boot.origin.Origin;
+import io.github.kotlinmania.spring.boot.testcontainers.beans.TestcontainerBeanDefinition;
 import org.springframework.context.annotation.ImportBeanDefinitionRegistrar;
 import org.springframework.core.annotation.MergedAnnotation;
 import org.springframework.core.annotation.MergedAnnotations;

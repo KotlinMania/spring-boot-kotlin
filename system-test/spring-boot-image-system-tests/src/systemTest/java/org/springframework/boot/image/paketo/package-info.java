@@ -15,6 +15,6 @@
  */
 
 @NullMarked
-package org.springframework.boot.image.paketo;
+package io.github.kotlinmania.spring.boot.image.paketo;
 
 import org.jspecify.annotations.NullMarked;

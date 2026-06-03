@@ -14,15 +14,15 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.grpc.server.autoconfigure.security.web.reactive;
+package io.github.kotlinmania.spring.boot.grpc.server.autoconfigure.security.web.reactive;
 
 import io.grpc.BindableService;
 import io.grpc.ServerServiceDefinition;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.grpc.server.autoconfigure.security.web.reactive.GrpcRequest.GrpcReactiveRequestMatcher;
-import org.springframework.boot.web.context.reactive.GenericReactiveWebApplicationContext;
+import io.github.kotlinmania.spring.boot.grpc.server.autoconfigure.security.web.reactive.GrpcRequest.GrpcReactiveRequestMatcher;
+import io.github.kotlinmania.spring.boot.web.context.reactive.GenericReactiveWebApplicationContext;
 import org.springframework.context.ApplicationContext;
 import org.springframework.grpc.server.service.DefaultGrpcServiceDiscoverer;
 import org.springframework.grpc.server.service.GrpcServiceDiscoverer;

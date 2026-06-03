@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.build.bom.bomr;
+package io.github.kotlinmania.spring.boot.build.bom.bomr;
 
 import java.net.URI;
 import java.util.Collection;
@@ -35,8 +35,8 @@ import org.gradle.internal.artifacts.repositories.AuthenticationSupportedInterna
 import org.w3c.dom.Document;
 import org.w3c.dom.NodeList;
 
-import org.springframework.boot.build.bom.bomr.version.DependencyVersion;
-import org.springframework.boot.build.xml.XmlDocument;
+import io.github.kotlinmania.spring.boot.build.bom.bomr.version.DependencyVersion;
+import io.github.kotlinmania.spring.boot.build.xml.XmlDocument;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;

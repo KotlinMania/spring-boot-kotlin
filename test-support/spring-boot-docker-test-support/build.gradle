@@ -16,7 +16,7 @@
 
 plugins {
 	id "java-library"
-	id "org.springframework.boot.optional-dependencies"
+	id "io.github.kotlinmania.spring.boot.optional-dependencies"
 }
 
 description = "Spring Boot Docker Testing Support"

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.actuator.observability
+package io.github.kotlinmania.spring.boot.docs.actuator.observability
 
 import io.micrometer.observation.Observation
 import io.micrometer.observation.ObservationRegistry;

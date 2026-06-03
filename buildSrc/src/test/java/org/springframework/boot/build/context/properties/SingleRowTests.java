@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.build.context.properties;
+package io.github.kotlinmania.spring.boot.build.context.properties;
 
 import org.junit.jupiter.api.Test;
 

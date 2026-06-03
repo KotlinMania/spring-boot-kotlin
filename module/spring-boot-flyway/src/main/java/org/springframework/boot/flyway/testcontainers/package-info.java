@@ -18,6 +18,6 @@
  * Support for testcontainers Flyway service connections.
  */
 @NullMarked
-package org.springframework.boot.flyway.testcontainers;
+package io.github.kotlinmania.spring.boot.flyway.testcontainers;
 
 import org.jspecify.annotations.NullMarked;

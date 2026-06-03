@@ -14,16 +14,16 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.context.config;
+package io.github.kotlinmania.spring.boot.context.config;
 
 import java.util.Collections;
 import java.util.List;
 
-import org.springframework.boot.bootstrap.BootstrapContext;
-import org.springframework.boot.bootstrap.BootstrapRegistry;
-import org.springframework.boot.bootstrap.ConfigurableBootstrapContext;
-import org.springframework.boot.context.properties.bind.Binder;
-import org.springframework.boot.logging.DeferredLogFactory;
+import io.github.kotlinmania.spring.boot.bootstrap.BootstrapContext;
+import io.github.kotlinmania.spring.boot.bootstrap.BootstrapRegistry;
+import io.github.kotlinmania.spring.boot.bootstrap.ConfigurableBootstrapContext;
+import io.github.kotlinmania.spring.boot.context.properties.bind.Binder;
+import io.github.kotlinmania.spring.boot.logging.DeferredLogFactory;
 import org.springframework.core.Ordered;
 import org.springframework.core.annotation.Order;
 import org.springframework.core.env.Environment;

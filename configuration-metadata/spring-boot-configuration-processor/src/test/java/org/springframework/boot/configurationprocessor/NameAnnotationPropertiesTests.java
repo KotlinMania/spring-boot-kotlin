@@ -14,18 +14,18 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.configurationprocessor;
+package io.github.kotlinmania.spring.boot.configurationprocessor;
 
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.configurationprocessor.metadata.ConfigurationMetadata;
-import org.springframework.boot.configurationprocessor.metadata.Metadata;
-import org.springframework.boot.configurationsample.name.ConstructorParameterNameAnnotationProperties;
-import org.springframework.boot.configurationsample.name.DuplicateNameConstructorParameterProperties;
-import org.springframework.boot.configurationsample.name.DuplicateNameJavaBeanProperties;
-import org.springframework.boot.configurationsample.name.JavaBeanNameAnnotationProperties;
-import org.springframework.boot.configurationsample.name.LombokNameAnnotationProperties;
-import org.springframework.boot.configurationsample.name.RecordComponentNameAnnotationProperties;
+import io.github.kotlinmania.spring.boot.configurationprocessor.metadata.ConfigurationMetadata;
+import io.github.kotlinmania.spring.boot.configurationprocessor.metadata.Metadata;
+import io.github.kotlinmania.spring.boot.configurationsample.name.ConstructorParameterNameAnnotationProperties;
+import io.github.kotlinmania.spring.boot.configurationsample.name.DuplicateNameConstructorParameterProperties;
+import io.github.kotlinmania.spring.boot.configurationsample.name.DuplicateNameJavaBeanProperties;
+import io.github.kotlinmania.spring.boot.configurationsample.name.JavaBeanNameAnnotationProperties;
+import io.github.kotlinmania.spring.boot.configurationsample.name.LombokNameAnnotationProperties;
+import io.github.kotlinmania.spring.boot.configurationsample.name.RecordComponentNameAnnotationProperties;
 import org.springframework.core.test.tools.CompilationException;
 
 import static org.assertj.core.api.Assertions.assertThat;

@@ -19,6 +19,6 @@
  * specification.
  */
 @NullMarked
-package org.springframework.boot.servlet.autoconfigure;
+package io.github.kotlinmania.spring.boot.servlet.autoconfigure;
 
 import org.jspecify.annotations.NullMarked;

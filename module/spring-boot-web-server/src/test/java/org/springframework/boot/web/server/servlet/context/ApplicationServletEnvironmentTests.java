@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.web.server.servlet.context;
+package io.github.kotlinmania.spring.boot.web.server.servlet.context;
 
-import org.springframework.boot.AbstractApplicationEnvironmentTests;
-import org.springframework.boot.web.context.servlet.ApplicationServletEnvironment;
+import io.github.kotlinmania.spring.boot.AbstractApplicationEnvironmentTests;
+import io.github.kotlinmania.spring.boot.web.context.servlet.ApplicationServletEnvironment;
 import org.springframework.core.env.StandardEnvironment;
 
 /**

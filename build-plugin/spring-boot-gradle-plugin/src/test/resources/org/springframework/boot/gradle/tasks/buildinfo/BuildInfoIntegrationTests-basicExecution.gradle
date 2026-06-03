@@ -15,12 +15,12 @@
  */
 
 plugins {
-	id 'org.springframework.boot' version '{version}' apply false
+	id 'io.github.kotlinmania.spring.boot. version '{version}' apply false
 }
 
 version = '0.1.0'
 
-tasks.register("buildInfo", org.springframework.boot.gradle.tasks.buildinfo.BuildInfo) {
+tasks.register("buildInfo", io.github.kotlinmania.spring.boot.gradle.tasks.buildinfo.BuildInfo) {
 	properties {
 		artifact = 'foo'
 		group = 'foo'

@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.autoconfigureprocessor;
+package io.github.kotlinmania.spring.boot.autoconfigureprocessor;
 
-import org.springframework.boot.autoconfigureprocessor.TestConditionalOnWebApplication.Type;
+import io.github.kotlinmania.spring.boot.autoconfigureprocessor.TestConditionalOnWebApplication.Type;
 
 /**
  * Test configuration with an annotated class.

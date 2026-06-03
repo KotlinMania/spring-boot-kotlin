@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.gradle.tasks.aot;
+package io.github.kotlinmania.spring.boot.gradle.tasks.aot;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -35,7 +35,7 @@ import org.gradle.api.tasks.TaskAction;
 public abstract class ProcessAot extends AbstractAot {
 
 	public ProcessAot() {
-		getMainClass().set("org.springframework.boot.SpringApplicationAotProcessor");
+		getMainClass().set("io.github.kotlinmania.spring.boot.SpringApplicationAotProcessor");
 	}
 
 	/**

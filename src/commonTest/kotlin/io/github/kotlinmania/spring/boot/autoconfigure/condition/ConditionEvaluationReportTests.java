@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.autoconfigure.condition;
+package io.github.kotlinmania.spring.boot.autoconfigure.condition;
 
 import java.time.Duration;
 import java.util.Iterator;
@@ -30,13 +30,13 @@ import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.config.ConfigurableListableBeanFactory;
 import org.springframework.beans.factory.support.DefaultListableBeanFactory;
-import org.springframework.boot.autoconfigure.AutoConfiguration;
-import org.springframework.boot.autoconfigure.ImportAutoConfiguration;
-import org.springframework.boot.autoconfigure.condition.ConditionEvaluationReport.ConditionAndOutcome;
-import org.springframework.boot.autoconfigure.condition.ConditionEvaluationReport.ConditionAndOutcomes;
-import org.springframework.boot.autoconfigure.condition.config.UniqueShortNameAutoConfiguration;
-import org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportMessage;
-import org.springframework.boot.test.util.TestPropertyValues;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.ImportAutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionEvaluationReport.ConditionAndOutcome;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionEvaluationReport.ConditionAndOutcomes;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.config.UniqueShortNameAutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.logging.ConditionEvaluationReportMessage;
+import io.github.kotlinmania.spring.boot.test.util.TestPropertyValues;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Condition;
@@ -233,14 +233,14 @@ class ConditionEvaluationReportTests {
 	void reportWhenSameShortNamePresentMoreThanOnceShouldUseFullyQualifiedName() {
 		AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext();
 		context.register(UniqueShortNameAutoConfiguration.class,
-				org.springframework.boot.autoconfigure.condition.config.first.SampleAutoConfiguration.class,
-				org.springframework.boot.autoconfigure.condition.config.second.SampleAutoConfiguration.class);
+				io.github.kotlinmania.spring.boot.autoconfigure.condition.config.first.SampleAutoConfiguration.class,
+				io.github.kotlinmania.spring.boot.autoconfigure.condition.config.second.SampleAutoConfiguration.class);
 		context.refresh();
 		ConditionEvaluationReport report = ConditionEvaluationReport.get(context.getBeanFactory());
 		assertThat(report.getConditionAndOutcomesBySource()).containsKeys(
-				"org.springframework.boot.autoconfigure.condition.config.UniqueShortNameAutoConfiguration",
-				"org.springframework.boot.autoconfigure.condition.config.first.SampleAutoConfiguration",
-				"org.springframework.boot.autoconfigure.condition.config.second.SampleAutoConfiguration");
+				"io.github.kotlinmania.spring.boot.autoconfigure.condition.config.UniqueShortNameAutoConfiguration",
+				"io.github.kotlinmania.spring.boot.autoconfigure.condition.config.first.SampleAutoConfiguration",
+				"io.github.kotlinmania.spring.boot.autoconfigure.condition.config.second.SampleAutoConfiguration");
 		context.close();
 	}
 
@@ -248,16 +248,16 @@ class ConditionEvaluationReportTests {
 	void reportMessageWhenSameShortNamePresentMoreThanOnceShouldUseFullyQualifiedName() {
 		AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext();
 		context.register(UniqueShortNameAutoConfiguration.class,
-				org.springframework.boot.autoconfigure.condition.config.first.SampleAutoConfiguration.class,
-				org.springframework.boot.autoconfigure.condition.config.second.SampleAutoConfiguration.class);
+				io.github.kotlinmania.spring.boot.autoconfigure.condition.config.first.SampleAutoConfiguration.class,
+				io.github.kotlinmania.spring.boot.autoconfigure.condition.config.second.SampleAutoConfiguration.class);
 		context.refresh();
 		ConditionEvaluationReport report = ConditionEvaluationReport.get(context.getBeanFactory());
 		String reportMessage = new ConditionEvaluationReportMessage(report).toString();
 		assertThat(reportMessage).contains("UniqueShortNameAutoConfiguration",
-				"org.springframework.boot.autoconfigure.condition.config.first.SampleAutoConfiguration",
-				"org.springframework.boot.autoconfigure.condition.config.second.SampleAutoConfiguration");
+				"io.github.kotlinmania.spring.boot.autoconfigure.condition.config.first.SampleAutoConfiguration",
+				"io.github.kotlinmania.spring.boot.autoconfigure.condition.config.second.SampleAutoConfiguration");
 		assertThat(reportMessage)
-			.doesNotContain("org.springframework.boot.autoconfigure.condition.config.UniqueShortNameAutoConfiguration");
+			.doesNotContain("io.github.kotlinmania.spring.boot.autoconfigure.condition.config.UniqueShortNameAutoConfiguration");
 		context.close();
 	}
 

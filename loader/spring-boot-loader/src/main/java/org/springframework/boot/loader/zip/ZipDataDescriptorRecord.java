@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.loader.zip;
+package io.github.kotlinmania.spring.boot.loader.zip;
 
 import java.io.IOException;
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
 
-import org.springframework.boot.loader.log.DebugLogger;
+import io.github.kotlinmania.spring.boot.loader.log.DebugLogger;
 
 /**
  * A ZIP File "Data Descriptor" record.

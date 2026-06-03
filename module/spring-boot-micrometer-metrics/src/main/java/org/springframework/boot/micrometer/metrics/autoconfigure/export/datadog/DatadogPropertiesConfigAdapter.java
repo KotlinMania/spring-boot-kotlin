@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.micrometer.metrics.autoconfigure.export.datadog;
+package io.github.kotlinmania.spring.boot.micrometer.metrics.autoconfigure.export.datadog;
 
 import io.micrometer.datadog.DatadogConfig;
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.micrometer.metrics.autoconfigure.export.properties.StepRegistryPropertiesConfigAdapter;
+import io.github.kotlinmania.spring.boot.micrometer.metrics.autoconfigure.export.properties.StepRegistryPropertiesConfigAdapter;
 
 /**
  * Adapter to convert {@link DatadogProperties} to a {@link DatadogConfig}.

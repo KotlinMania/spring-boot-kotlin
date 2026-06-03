@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.io.restclient.clienthttprequestfactory.configuration;
+package io.github.kotlinmania.spring.boot.docs.io.restclient.clienthttprequestfactory.configuration;
 
 import java.net.ProxySelector;
 
-import org.springframework.boot.http.client.ClientHttpRequestFactoryBuilder;
+import io.github.kotlinmania.spring.boot.http.client.ClientHttpRequestFactoryBuilder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 

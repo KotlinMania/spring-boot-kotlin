@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.webflux.actuate.web.exchanges;
+package io.github.kotlinmania.spring.boot.webflux.actuate.web.exchanges;
 
 import java.util.Collections;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
-import org.springframework.boot.actuate.web.exchanges.RecordableHttpResponse;
+import io.github.kotlinmania.spring.boot.actuate.web.exchanges.RecordableHttpResponse;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.server.reactive.ServerHttpResponse;
 

@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.web.servlet.embeddedcontainer.applicationcontext
+package io.github.kotlinmania.spring.boot.docs.web.servlet.embeddedcontainer.applicationcontext
 
 import jakarta.servlet.ServletContext
-import org.springframework.boot.context.event.ApplicationStartedEvent
+import io.github.kotlinmania.spring.boot.context.event.ApplicationStartedEvent
 import org.springframework.context.ApplicationContext
 import org.springframework.context.ApplicationListener
 import org.springframework.web.context.WebApplicationContext

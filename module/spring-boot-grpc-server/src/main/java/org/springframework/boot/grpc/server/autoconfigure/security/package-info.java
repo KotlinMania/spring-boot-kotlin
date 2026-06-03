@@ -18,6 +18,6 @@
  * Auto-configuration for gRPC server security.
  */
 @NullMarked
-package org.springframework.boot.grpc.server.autoconfigure.security;
+package io.github.kotlinmania.spring.boot.grpc.server.autoconfigure.security;
 
 import org.jspecify.annotations.NullMarked;

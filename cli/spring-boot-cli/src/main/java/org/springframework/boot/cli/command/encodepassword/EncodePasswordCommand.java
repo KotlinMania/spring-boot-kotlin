@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.cli.command.encodepassword;
+package io.github.kotlinmania.spring.boot.cli.command.encodepassword;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -28,12 +28,12 @@ import java.util.function.Supplier;
 import joptsimple.OptionSet;
 import joptsimple.OptionSpec;
 
-import org.springframework.boot.cli.command.Command;
-import org.springframework.boot.cli.command.HelpExample;
-import org.springframework.boot.cli.command.OptionParsingCommand;
-import org.springframework.boot.cli.command.options.OptionHandler;
-import org.springframework.boot.cli.command.status.ExitStatus;
-import org.springframework.boot.cli.util.Log;
+import io.github.kotlinmania.spring.boot.cli.command.Command;
+import io.github.kotlinmania.spring.boot.cli.command.HelpExample;
+import io.github.kotlinmania.spring.boot.cli.command.OptionParsingCommand;
+import io.github.kotlinmania.spring.boot.cli.command.options.OptionHandler;
+import io.github.kotlinmania.spring.boot.cli.command.status.ExitStatus;
+import io.github.kotlinmania.spring.boot.cli.util.Log;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.factory.PasswordEncoderFactories;
 import org.springframework.security.crypto.password.PasswordEncoder;

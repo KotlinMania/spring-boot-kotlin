@@ -14,15 +14,15 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.actuate.endpoint.annotation;
+package io.github.kotlinmania.spring.boot.actuate.endpoint.annotation;
 
 import java.lang.reflect.Method;
 import java.util.Locale;
 
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.actuate.endpoint.OperationType;
-import org.springframework.boot.actuate.endpoint.Producible;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.OperationType;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.Producible;
 import org.springframework.core.annotation.AnnotationAttributes;
 import org.springframework.util.MimeType;
 import org.springframework.util.ReflectionUtils;

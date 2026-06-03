@@ -14,26 +14,26 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.health.autoconfigure.application;
+package io.github.kotlinmania.spring.boot.health.autoconfigure.application;
 
 import java.time.Duration;
 import java.util.List;
 
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.autoconfigure.AutoConfigurations;
-import org.springframework.boot.autoconfigure.ssl.SslAutoConfiguration;
-import org.springframework.boot.health.application.SslHealthIndicator;
-import org.springframework.boot.health.autoconfigure.application.SslHealthContributorAutoConfigurationTests.CustomSslInfoConfiguration.CustomSslHealthIndicator;
-import org.springframework.boot.health.autoconfigure.registry.HealthContributorRegistryAutoConfiguration;
-import org.springframework.boot.health.contributor.Health;
-import org.springframework.boot.health.contributor.HealthIndicator;
-import org.springframework.boot.health.contributor.Status;
-import org.springframework.boot.info.SslInfo;
-import org.springframework.boot.info.SslInfo.CertificateChainInfo;
-import org.springframework.boot.ssl.SslBundles;
-import org.springframework.boot.test.context.runner.ApplicationContextRunner;
-import org.springframework.boot.testsupport.classpath.resources.WithPackageResources;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurations;
+import io.github.kotlinmania.spring.boot.autoconfigure.ssl.SslAutoConfiguration;
+import io.github.kotlinmania.spring.boot.health.application.SslHealthIndicator;
+import io.github.kotlinmania.spring.boot.health.autoconfigure.application.SslHealthContributorAutoConfigurationTests.CustomSslInfoConfiguration.CustomSslHealthIndicator;
+import io.github.kotlinmania.spring.boot.health.autoconfigure.registry.HealthContributorRegistryAutoConfiguration;
+import io.github.kotlinmania.spring.boot.health.contributor.Health;
+import io.github.kotlinmania.spring.boot.health.contributor.HealthIndicator;
+import io.github.kotlinmania.spring.boot.health.contributor.Status;
+import io.github.kotlinmania.spring.boot.info.SslInfo;
+import io.github.kotlinmania.spring.boot.info.SslInfo.CertificateChainInfo;
+import io.github.kotlinmania.spring.boot.ssl.SslBundles;
+import io.github.kotlinmania.spring.boot.test.context.runner.ApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.testsupport.classpath.resources.WithPackageResources;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 

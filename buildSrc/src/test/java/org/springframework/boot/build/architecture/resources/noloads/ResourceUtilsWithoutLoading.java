@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.build.architecture.resources.noloads;
+package io.github.kotlinmania.spring.boot.build.architecture.resources.noloads;
 
 import java.net.MalformedURLException;
 import java.net.URL;

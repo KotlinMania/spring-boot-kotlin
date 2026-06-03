@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.build.springframework;
+package io.github.kotlinmania.spring.boot.build.springframework;
 
 import org.gradle.api.Task;
 

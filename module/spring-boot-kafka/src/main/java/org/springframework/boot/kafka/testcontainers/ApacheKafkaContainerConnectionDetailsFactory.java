@@ -14,18 +14,18 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.kafka.testcontainers;
+package io.github.kotlinmania.spring.boot.kafka.testcontainers;
 
 import java.util.List;
 
 import org.jspecify.annotations.Nullable;
 import org.testcontainers.kafka.KafkaContainer;
 
-import org.springframework.boot.kafka.autoconfigure.KafkaConnectionDetails;
-import org.springframework.boot.ssl.SslBundle;
-import org.springframework.boot.testcontainers.service.connection.ContainerConnectionDetailsFactory;
-import org.springframework.boot.testcontainers.service.connection.ContainerConnectionSource;
-import org.springframework.boot.testcontainers.service.connection.ServiceConnection;
+import io.github.kotlinmania.spring.boot.kafka.autoconfigure.KafkaConnectionDetails;
+import io.github.kotlinmania.spring.boot.ssl.SslBundle;
+import io.github.kotlinmania.spring.boot.testcontainers.service.connection.ContainerConnectionDetailsFactory;
+import io.github.kotlinmania.spring.boot.testcontainers.service.connection.ContainerConnectionSource;
+import io.github.kotlinmania.spring.boot.testcontainers.service.connection.ServiceConnection;
 
 /**
  * {@link ContainerConnectionDetailsFactory} to create {@link KafkaConnectionDetails} from

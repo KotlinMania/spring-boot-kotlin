@@ -18,6 +18,6 @@
  * Auto-configuration for Data JPA tests.
  */
 @NullMarked
-package org.springframework.boot.data.jpa.test.autoconfigure;
+package io.github.kotlinmania.spring.boot.data.jpa.test.autoconfigure;
 
 import org.jspecify.annotations.NullMarked;

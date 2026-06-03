@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.autoconfigure.info;
+package io.github.kotlinmania.spring.boot.autoconfigure.info;
 
 import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
 
-import org.springframework.boot.context.properties.ConfigurationProperties;
+import io.github.kotlinmania.spring.boot.context.properties.ConfigurationProperties;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.Resource;
 

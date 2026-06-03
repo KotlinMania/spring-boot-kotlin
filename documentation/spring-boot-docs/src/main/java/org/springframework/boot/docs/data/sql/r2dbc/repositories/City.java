@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.data.sql.r2dbc.repositories;
+package io.github.kotlinmania.spring.boot.docs.data.sql.r2dbc.repositories;
 
 public class City {
 

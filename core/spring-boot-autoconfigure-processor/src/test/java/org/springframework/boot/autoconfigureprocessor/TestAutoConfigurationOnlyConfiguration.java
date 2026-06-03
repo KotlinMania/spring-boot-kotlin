@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.autoconfigureprocessor;
+package io.github.kotlinmania.spring.boot.autoconfigureprocessor;
 
 /**
  * Tests a plain {@code @AutoConfiguration} annotated class.

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.micrometer.tracing.brave.autoconfigure;
+package io.github.kotlinmania.spring.boot.micrometer.tracing.brave.autoconfigure;
 
 import java.util.Collections;
 import java.util.HashMap;
@@ -51,13 +51,13 @@ import io.micrometer.tracing.propagation.Propagator;
 import org.assertj.core.api.InstanceOfAssertFactories;
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.autoconfigure.AutoConfigurations;
-import org.springframework.boot.context.properties.IncompatibleConfigurationException;
-import org.springframework.boot.micrometer.observation.autoconfigure.ObservationAutoConfiguration;
-import org.springframework.boot.micrometer.tracing.autoconfigure.MicrometerTracingAutoConfiguration;
-import org.springframework.boot.micrometer.tracing.brave.autoconfigure.BraveAutoConfigurationTests.SpanHandlerConfiguration.AdditionalSpanHandler;
-import org.springframework.boot.test.context.FilteredClassLoader;
-import org.springframework.boot.test.context.runner.ApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurations;
+import io.github.kotlinmania.spring.boot.context.properties.IncompatibleConfigurationException;
+import io.github.kotlinmania.spring.boot.micrometer.observation.autoconfigure.ObservationAutoConfiguration;
+import io.github.kotlinmania.spring.boot.micrometer.tracing.autoconfigure.MicrometerTracingAutoConfiguration;
+import io.github.kotlinmania.spring.boot.micrometer.tracing.brave.autoconfigure.BraveAutoConfigurationTests.SpanHandlerConfiguration.AdditionalSpanHandler;
+import io.github.kotlinmania.spring.boot.test.context.FilteredClassLoader;
+import io.github.kotlinmania.spring.boot.test.context.runner.ApplicationContextRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.annotation.Order;

@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.actuate.endpoint.web.annotation;
+package io.github.kotlinmania.spring.boot.actuate.endpoint.web.annotation;
 
-import org.springframework.boot.actuate.endpoint.ExposableEndpoint;
-import org.springframework.boot.actuate.endpoint.Operation;
-import org.springframework.boot.actuate.endpoint.web.PathMappedEndpoint;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.ExposableEndpoint;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.Operation;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.web.PathMappedEndpoint;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 /**

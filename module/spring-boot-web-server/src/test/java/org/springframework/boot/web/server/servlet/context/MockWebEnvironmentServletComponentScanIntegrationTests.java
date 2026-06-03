@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.web.server.servlet.context;
+package io.github.kotlinmania.spring.boot.web.server.servlet.context;
 
 import java.io.File;
 import java.io.FileWriter;
@@ -33,16 +33,16 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.io.TempDir;
 
-import org.springframework.boot.testsupport.classpath.ForkedClassPath;
-import org.springframework.boot.web.context.servlet.AnnotationConfigServletWebApplicationContext;
-import org.springframework.boot.web.server.servlet.WebListenerRegistrar;
-import org.springframework.boot.web.server.servlet.WebListenerRegistry;
-import org.springframework.boot.web.server.servlet.context.testcomponents.filter.TestFilter;
-import org.springframework.boot.web.server.servlet.context.testcomponents.listener.TestListener;
-import org.springframework.boot.web.server.servlet.context.testcomponents.servlet.TestMultipartServlet;
-import org.springframework.boot.web.server.servlet.context.testcomponents.servlet.TestServlet;
-import org.springframework.boot.web.servlet.RegistrationBean;
-import org.springframework.boot.web.servlet.ServletRegistrationBean;
+import io.github.kotlinmania.spring.boot.testsupport.classpath.ForkedClassPath;
+import io.github.kotlinmania.spring.boot.web.context.servlet.AnnotationConfigServletWebApplicationContext;
+import io.github.kotlinmania.spring.boot.web.server.servlet.WebListenerRegistrar;
+import io.github.kotlinmania.spring.boot.web.server.servlet.WebListenerRegistry;
+import io.github.kotlinmania.spring.boot.web.server.servlet.context.testcomponents.filter.TestFilter;
+import io.github.kotlinmania.spring.boot.web.server.servlet.context.testcomponents.listener.TestListener;
+import io.github.kotlinmania.spring.boot.web.server.servlet.context.testcomponents.servlet.TestMultipartServlet;
+import io.github.kotlinmania.spring.boot.web.server.servlet.context.testcomponents.servlet.TestServlet;
+import io.github.kotlinmania.spring.boot.web.servlet.RegistrationBean;
+import io.github.kotlinmania.spring.boot.web.servlet.ServletRegistrationBean;
 import org.springframework.mock.web.MockServletContext;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -141,7 +141,7 @@ class MockWebEnvironmentServletComponentScanIntegrationTests {
 		this.context.setServletContext(new MockServletContext());
 	}
 
-	@ServletComponentScan(basePackages = "org.springframework.boot.web.server.servlet.context.testcomponents")
+	@ServletComponentScan(basePackages = "io.github.kotlinmania.spring.boot.web.server.servlet.context.testcomponents")
 	static class ScanningConfiguration {
 
 	}

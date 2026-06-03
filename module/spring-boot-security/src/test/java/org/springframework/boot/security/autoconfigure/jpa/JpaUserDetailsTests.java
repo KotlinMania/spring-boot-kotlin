@@ -14,16 +14,16 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.security.autoconfigure.jpa;
+package io.github.kotlinmania.spring.boot.security.autoconfigure.jpa;
 
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.autoconfigure.context.PropertyPlaceholderAutoConfiguration;
-import org.springframework.boot.hibernate.autoconfigure.HibernateJpaAutoConfiguration;
-import org.springframework.boot.jdbc.autoconfigure.DataSourceAutoConfiguration;
-import org.springframework.boot.jdbc.autoconfigure.EmbeddedDataSourceConfiguration;
-import org.springframework.boot.security.autoconfigure.SecurityAutoConfiguration;
-import org.springframework.boot.test.context.SpringBootContextLoader;
+import io.github.kotlinmania.spring.boot.autoconfigure.context.PropertyPlaceholderAutoConfiguration;
+import io.github.kotlinmania.spring.boot.hibernate.autoconfigure.HibernateJpaAutoConfiguration;
+import io.github.kotlinmania.spring.boot.jdbc.autoconfigure.DataSourceAutoConfiguration;
+import io.github.kotlinmania.spring.boot.jdbc.autoconfigure.EmbeddedDataSourceConfiguration;
+import io.github.kotlinmania.spring.boot.security.autoconfigure.SecurityAutoConfiguration;
+import io.github.kotlinmania.spring.boot.test.context.SpringBootContextLoader;
 import org.springframework.context.annotation.Import;
 import org.springframework.test.annotation.DirtiesContext;
 import org.springframework.test.context.ContextConfiguration;

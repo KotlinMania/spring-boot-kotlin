@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.integration.autoconfigure;
+package io.github.kotlinmania.spring.boot.integration.autoconfigure;
 
 import org.springframework.integration.scheduling.PollerMetadata;
 

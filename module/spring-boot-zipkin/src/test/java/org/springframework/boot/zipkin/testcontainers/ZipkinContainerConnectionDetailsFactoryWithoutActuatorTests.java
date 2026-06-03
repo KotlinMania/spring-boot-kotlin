@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.zipkin.testcontainers;
+package io.github.kotlinmania.spring.boot.zipkin.testcontainers;
 
 import org.junit.jupiter.api.Test;
 
 import org.springframework.aot.hint.RuntimeHints;
-import org.springframework.boot.testcontainers.service.connection.ContainerConnectionDetailsFactoryHints;
-import org.springframework.boot.testsupport.classpath.ClassPathExclusions;
+import io.github.kotlinmania.spring.boot.testcontainers.service.connection.ContainerConnectionDetailsFactoryHints;
+import io.github.kotlinmania.spring.boot.testsupport.classpath.ClassPathExclusions;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

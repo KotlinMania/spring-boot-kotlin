@@ -14,18 +14,18 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.reactor.netty.autoconfigure;
+package io.github.kotlinmania.spring.boot.reactor.netty.autoconfigure;
 
 import org.junit.jupiter.api.Test;
 import reactor.netty.http.server.HttpServer;
 
-import org.springframework.boot.autoconfigure.AutoConfigurations;
-import org.springframework.boot.reactor.netty.NettyReactiveWebServerFactory;
-import org.springframework.boot.reactor.netty.NettyServerCustomizer;
-import org.springframework.boot.test.context.runner.ApplicationContextRunner;
-import org.springframework.boot.web.server.WebServerFactoryCustomizer;
-import org.springframework.boot.web.server.autoconfigure.reactive.AbstractReactiveWebServerAutoConfigurationTests;
-import org.springframework.boot.web.server.reactive.ReactiveWebServerFactory;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurations;
+import io.github.kotlinmania.spring.boot.reactor.netty.NettyReactiveWebServerFactory;
+import io.github.kotlinmania.spring.boot.reactor.netty.NettyServerCustomizer;
+import io.github.kotlinmania.spring.boot.test.context.runner.ApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.web.server.WebServerFactoryCustomizer;
+import io.github.kotlinmania.spring.boot.web.server.autoconfigure.reactive.AbstractReactiveWebServerAutoConfigurationTests;
+import io.github.kotlinmania.spring.boot.web.server.reactive.ReactiveWebServerFactory;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 

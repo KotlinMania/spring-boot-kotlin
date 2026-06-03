@@ -21,7 +21,7 @@ import ch.qos.logback.classic.spi.ILoggingEvent;
 import ch.qos.logback.classic.spi.IThrowableProxy;
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.logging.structured.StructuredLogFormatter;
+import io.github.kotlinmania.spring.boot.logging.structured.StructuredLogFormatter;
 import org.springframework.core.env.Environment;
 
 public class CustomStructuredLogFormatter implements StructuredLogFormatter<ILoggingEvent> {

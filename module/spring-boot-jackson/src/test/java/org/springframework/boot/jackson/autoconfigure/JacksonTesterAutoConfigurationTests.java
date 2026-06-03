@@ -14,17 +14,17 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.jackson.autoconfigure;
+package io.github.kotlinmania.spring.boot.jackson.autoconfigure;
 
 import org.junit.jupiter.api.Test;
 
 import org.springframework.aot.hint.predicate.ReflectionHintsPredicates;
 import org.springframework.aot.hint.predicate.RuntimeHintsPredicates;
 import org.springframework.aot.test.generate.TestGenerationContext;
-import org.springframework.boot.autoconfigure.AutoConfigurations;
-import org.springframework.boot.test.autoconfigure.json.JsonTestersAutoConfiguration;
-import org.springframework.boot.test.context.runner.ApplicationContextRunner;
-import org.springframework.boot.test.json.JacksonTester;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurations;
+import io.github.kotlinmania.spring.boot.test.autoconfigure.json.JsonTestersAutoConfiguration;
+import io.github.kotlinmania.spring.boot.test.context.runner.ApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.test.json.JacksonTester;
 import org.springframework.context.aot.ApplicationContextAotGenerator;
 import org.springframework.context.support.GenericApplicationContext;
 

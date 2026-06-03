@@ -18,6 +18,6 @@
  * Classes related to the auto-configuration of a reactive web server using Jetty.
  */
 @NullMarked
-package org.springframework.boot.jetty.autoconfigure.reactive;
+package io.github.kotlinmania.spring.boot.jetty.autoconfigure.reactive;
 
 import org.jspecify.annotations.NullMarked;

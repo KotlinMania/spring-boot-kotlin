@@ -22,10 +22,10 @@ import java.io.FileOutputStream;
 import org.jspecify.annotations.Nullable;
 import smoketest.parent.ServiceProperties;
 
-import org.springframework.boot.ApplicationArguments;
-import org.springframework.boot.ApplicationRunner;
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.context.properties.EnableConfigurationProperties;
+import io.github.kotlinmania.spring.boot.ApplicationArguments;
+import io.github.kotlinmania.spring.boot.ApplicationRunner;
+import io.github.kotlinmania.spring.boot.SpringApplication;
+import io.github.kotlinmania.spring.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.util.Assert;
 

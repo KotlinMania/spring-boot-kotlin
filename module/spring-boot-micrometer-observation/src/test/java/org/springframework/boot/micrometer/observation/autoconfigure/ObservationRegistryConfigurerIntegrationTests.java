@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.micrometer.observation.autoconfigure;
+package io.github.kotlinmania.spring.boot.micrometer.observation.autoconfigure;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -23,8 +23,8 @@ import io.micrometer.observation.ObservationRegistry;
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.autoconfigure.AutoConfigurations;
-import org.springframework.boot.test.context.runner.ApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurations;
+import io.github.kotlinmania.spring.boot.test.context.runner.ApplicationContextRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 

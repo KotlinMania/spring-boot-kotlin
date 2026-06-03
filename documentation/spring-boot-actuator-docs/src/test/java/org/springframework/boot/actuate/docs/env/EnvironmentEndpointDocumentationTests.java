@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.actuate.docs.env;
+package io.github.kotlinmania.spring.boot.actuate.docs.env;
 
 import java.util.Collections;
 import java.util.List;
@@ -27,9 +27,9 @@ import org.junit.jupiter.api.Test;
 import tools.jackson.databind.SerializationFeature;
 import tools.jackson.databind.json.JsonMapper;
 
-import org.springframework.boot.actuate.docs.MockMvcEndpointDocumentationTests;
-import org.springframework.boot.actuate.endpoint.Show;
-import org.springframework.boot.actuate.env.EnvironmentEndpoint;
+import io.github.kotlinmania.spring.boot.actuate.docs.MockMvcEndpointDocumentationTests;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.Show;
+import io.github.kotlinmania.spring.boot.actuate.env.EnvironmentEndpoint;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.env.AbstractEnvironment;
@@ -55,7 +55,7 @@ import static org.springframework.restdocs.payload.PayloadDocumentation.response
  *
  * @author Andy Wilkinson
  */
-@TestPropertySource(properties = "spring.config.location=classpath:/org/springframework/boot/actuate/docs/env/")
+@TestPropertySource(properties = "spring.config.location=classpath:/io.github.kotlinmania.spring.boot.actuate/docs/env/")
 class EnvironmentEndpointDocumentationTests extends MockMvcEndpointDocumentationTests {
 
 	private static final FieldDescriptor activeProfiles = fieldWithPath("activeProfiles")
@@ -76,7 +76,7 @@ class EnvironmentEndpointDocumentationTests extends MockMvcEndpointDocumentation
 			.apply(document("env/all",
 					preprocessResponse(
 							replacePattern(Pattern.compile(
-									"org/springframework/boot/actuate/autoconfigure/endpoint/web/documentation/"), ""),
+									"io.github.kotlinmania.spring.boot.actuate/autoconfigure/endpoint/web/documentation/"), ""),
 							filterProperties()),
 					responseFields(activeProfiles, defaultProfiles, propertySources, propertySourceName,
 							fieldWithPath("propertySources.[].properties")
@@ -93,7 +93,7 @@ class EnvironmentEndpointDocumentationTests extends MockMvcEndpointDocumentation
 		assertThat(this.mvc.get().uri("/actuator/env/com.example.cache.max-size")).hasStatusOk()
 			.apply(document("env/single",
 					preprocessResponse(replacePattern(Pattern
-						.compile("org/springframework/boot/actuate/autoconfigure/endpoint/web/documentation/"), "")),
+						.compile("io.github.kotlinmania.spring.boot.actuate/autoconfigure/endpoint/web/documentation/"), "")),
 					responseFields(
 							fieldWithPath("property").description("Property from the environment, if found.")
 								.optional(),

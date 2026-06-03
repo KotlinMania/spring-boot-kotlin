@@ -18,6 +18,6 @@
  * Auto-configuration for SendGrid.
  */
 @NullMarked
-package org.springframework.boot.sendgrid.autoconfigure;
+package io.github.kotlinmania.spring.boot.sendgrid.autoconfigure;
 
 import org.jspecify.annotations.NullMarked;

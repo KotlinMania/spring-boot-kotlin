@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.jarmode.tools;
+package io.github.kotlinmania.spring.boot.jarmode.tools;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -42,7 +42,7 @@ import org.junit.jupiter.api.io.TempDir;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 
-import org.springframework.boot.loader.jarmode.JarModeErrorException;
+import io.github.kotlinmania.spring.boot.loader.jarmode.JarModeErrorException;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.util.FileCopyUtils;
 

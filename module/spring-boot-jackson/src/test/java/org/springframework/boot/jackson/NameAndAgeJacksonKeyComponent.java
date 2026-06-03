@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.jackson;
+package io.github.kotlinmania.spring.boot.jackson;
 
 import tools.jackson.core.JsonGenerator;
 import tools.jackson.databind.DeserializationContext;
@@ -22,7 +22,7 @@ import tools.jackson.databind.KeyDeserializer;
 import tools.jackson.databind.SerializationContext;
 import tools.jackson.databind.ValueSerializer;
 
-import org.springframework.boot.jackson.types.NameAndAge;
+import io.github.kotlinmania.spring.boot.jackson.types.NameAndAge;
 
 /**
  * Sample {@link JacksonComponent @JacksonComponent} used for tests.

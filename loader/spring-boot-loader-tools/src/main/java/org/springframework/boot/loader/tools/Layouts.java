@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.loader.tools;
+package io.github.kotlinmania.spring.boot.loader.tools;
 
 import java.io.File;
 import java.util.Collections;
@@ -68,7 +68,7 @@ public final class Layouts {
 
 		@Override
 		public @Nullable String getLauncherClassName() {
-			return "org.springframework.boot.loader.launch.JarLauncher";
+			return "io.github.kotlinmania.spring.boot.loader.launch.JarLauncher";
 		}
 
 		@Override
@@ -110,7 +110,7 @@ public final class Layouts {
 
 		@Override
 		public String getLauncherClassName() {
-			return "org.springframework.boot.loader.launch.PropertiesLauncher";
+			return "io.github.kotlinmania.spring.boot.loader.launch.PropertiesLauncher";
 		}
 
 	}
@@ -150,7 +150,7 @@ public final class Layouts {
 
 		@Override
 		public String getLauncherClassName() {
-			return "org.springframework.boot.loader.launch.WarLauncher";
+			return "io.github.kotlinmania.spring.boot.loader.launch.WarLauncher";
 		}
 
 		@Override

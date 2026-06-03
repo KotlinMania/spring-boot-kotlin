@@ -18,6 +18,6 @@
  * Support classes related to auto-configuration involving containers.
  */
 @NullMarked
-package org.springframework.boot.autoconfigure.container;
+package io.github.kotlinmania.spring.boot.autoconfigure.container;
 
 import org.jspecify.annotations.NullMarked;

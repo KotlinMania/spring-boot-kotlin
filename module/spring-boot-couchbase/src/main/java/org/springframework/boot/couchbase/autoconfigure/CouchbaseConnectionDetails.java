@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.couchbase.autoconfigure;
+package io.github.kotlinmania.spring.boot.couchbase.autoconfigure;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.autoconfigure.service.connection.ConnectionDetails;
-import org.springframework.boot.ssl.SslBundle;
+import io.github.kotlinmania.spring.boot.autoconfigure.service.connection.ConnectionDetails;
+import io.github.kotlinmania.spring.boot.ssl.SslBundle;
 
 /**
  * Details required to establish a connection to a Couchbase service.

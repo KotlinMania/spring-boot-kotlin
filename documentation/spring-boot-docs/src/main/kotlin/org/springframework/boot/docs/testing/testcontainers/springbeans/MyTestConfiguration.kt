@@ -13,9 +13,9 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.springframework.boot.docs.testing.testcontainers.springbeans
+package io.github.kotlinmania.spring.boot.docs.testing.testcontainers.springbeans
 
-import org.springframework.boot.test.context.TestConfiguration
+import io.github.kotlinmania.spring.boot.test.context.TestConfiguration
 import org.springframework.context.annotation.Bean
 import org.testcontainers.mongodb.MongoDBContainer
 import org.testcontainers.utility.DockerImageName

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.build.antora;
+package io.github.kotlinmania.spring.boot.build.antora;
 
 import org.gradle.api.Project;
 import org.gradle.api.artifacts.Configuration;
@@ -25,7 +25,7 @@ import org.gradle.api.tasks.TaskContainer;
 import org.gradle.api.tasks.TaskProvider;
 import org.gradle.api.tasks.bundling.Zip;
 
-import org.springframework.boot.build.AntoraConventions;
+import io.github.kotlinmania.spring.boot.build.AntoraConventions;
 
 /**
  * A contribution of source to Antora.

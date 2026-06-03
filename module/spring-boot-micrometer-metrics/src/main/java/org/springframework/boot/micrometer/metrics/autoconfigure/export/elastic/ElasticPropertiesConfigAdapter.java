@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.micrometer.metrics.autoconfigure.export.elastic;
+package io.github.kotlinmania.spring.boot.micrometer.metrics.autoconfigure.export.elastic;
 
 import io.micrometer.elastic.ElasticConfig;
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.micrometer.metrics.autoconfigure.export.properties.StepRegistryPropertiesConfigAdapter;
+import io.github.kotlinmania.spring.boot.micrometer.metrics.autoconfigure.export.properties.StepRegistryPropertiesConfigAdapter;
 
 /**
  * Adapter to convert {@link ElasticProperties} to an {@link ElasticConfig}.

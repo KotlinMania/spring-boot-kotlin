@@ -18,6 +18,6 @@
  * Metrics for caches.
  */
 @NullMarked
-package org.springframework.boot.cache.metrics;
+package io.github.kotlinmania.spring.boot.cache.metrics;
 
 import org.jspecify.annotations.NullMarked;

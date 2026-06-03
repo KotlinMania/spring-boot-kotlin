@@ -14,15 +14,15 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.context.config;
+package io.github.kotlinmania.spring.boot.context.config;
 
 import java.io.IOException;
 import java.util.List;
 
-import org.springframework.boot.context.config.ConfigData.Option;
-import org.springframework.boot.context.config.ConfigData.PropertySourceOptions;
-import org.springframework.boot.origin.Origin;
-import org.springframework.boot.origin.OriginTrackedResource;
+import io.github.kotlinmania.spring.boot.context.config.ConfigData.Option;
+import io.github.kotlinmania.spring.boot.context.config.ConfigData.PropertySourceOptions;
+import io.github.kotlinmania.spring.boot.origin.Origin;
+import io.github.kotlinmania.spring.boot.origin.OriginTrackedResource;
 import org.springframework.core.env.PropertySource;
 import org.springframework.core.io.Resource;
 

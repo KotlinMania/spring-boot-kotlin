@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.web.error;
+package io.github.kotlinmania.spring.boot.web.error;
 
 /**
  * Interface for a registry that holds {@link ErrorPage ErrorPages}.

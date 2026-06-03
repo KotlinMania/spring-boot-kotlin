@@ -18,6 +18,6 @@
  * Support for testcontainers Neo4J service connections.
  */
 @NullMarked
-package org.springframework.boot.neo4j.testcontainers;
+package io.github.kotlinmania.spring.boot.neo4j.testcontainers;
 
 import org.jspecify.annotations.NullMarked;

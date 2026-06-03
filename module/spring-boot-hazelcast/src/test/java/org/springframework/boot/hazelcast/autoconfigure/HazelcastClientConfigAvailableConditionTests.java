@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.hazelcast.autoconfigure;
+package io.github.kotlinmania.spring.boot.hazelcast.autoconfigure;
 
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.autoconfigure.condition.ConditionOutcome;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionOutcome;
 import org.springframework.context.annotation.ConditionContext;
 import org.springframework.core.env.Environment;
 import org.springframework.core.io.DefaultResourceLoader;
@@ -41,7 +41,7 @@ class HazelcastClientConfigAvailableConditionTests {
 	@Test
 	void explicitConfigurationWithClientConfigMatches() {
 		ConditionOutcome outcome = getMatchOutcome(new MockEnvironment().withProperty("spring.hazelcast.config",
-				"classpath:org/springframework/boot/hazelcast/autoconfigure/hazelcast-client-specific.xml"));
+				"classpath:io.github.kotlinmania.spring.boot.hazelcast/autoconfigure/hazelcast-client-specific.xml"));
 		assertThat(outcome.isMatch()).isTrue();
 		assertThat(outcome.getMessage()).contains("Hazelcast client configuration detected");
 	}
@@ -49,7 +49,7 @@ class HazelcastClientConfigAvailableConditionTests {
 	@Test
 	void explicitConfigurationWithServerConfigDoesNotMatch() {
 		ConditionOutcome outcome = getMatchOutcome(new MockEnvironment().withProperty("spring.hazelcast.config",
-				"classpath:org/springframework/boot/hazelcast/autoconfigure/hazelcast-specific.xml"));
+				"classpath:io.github.kotlinmania.spring.boot.hazelcast/autoconfigure/hazelcast-specific.xml"));
 		assertThat(outcome.isMatch()).isFalse();
 		assertThat(outcome.getMessage()).contains("Hazelcast server configuration detected");
 	}
@@ -57,7 +57,7 @@ class HazelcastClientConfigAvailableConditionTests {
 	@Test
 	void explicitConfigurationWithMissingConfigDoesNotMatch() {
 		ConditionOutcome outcome = getMatchOutcome(new MockEnvironment().withProperty("spring.hazelcast.config",
-				"classpath:org/springframework/boot/hazelcast/autoconfigure/test-config-does-not-exist.xml"));
+				"classpath:io.github.kotlinmania.spring.boot.hazelcast/autoconfigure/test-config-does-not-exist.xml"));
 		assertThat(outcome.isMatch()).isFalse();
 		assertThat(outcome.getMessage()).contains("Hazelcast configuration does not exist");
 	}

@@ -18,6 +18,6 @@
  * Web client utilities.
  */
 @NullMarked
-package org.springframework.boot.restclient;
+package io.github.kotlinmania.spring.boot.restclient;
 
 import org.jspecify.annotations.NullMarked;

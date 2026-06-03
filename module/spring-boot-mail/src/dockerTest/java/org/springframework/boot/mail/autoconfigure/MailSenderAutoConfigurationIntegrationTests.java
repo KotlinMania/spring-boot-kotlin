@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.mail.autoconfigure;
+package io.github.kotlinmania.spring.boot.mail.autoconfigure;
 
 import java.net.SocketTimeoutException;
 import java.security.cert.CertPathBuilderException;
@@ -35,11 +35,11 @@ import org.testcontainers.junit.jupiter.Container;
 import org.testcontainers.junit.jupiter.Testcontainers;
 import org.testcontainers.utility.MountableFile;
 
-import org.springframework.boot.autoconfigure.AutoConfigurations;
-import org.springframework.boot.autoconfigure.ssl.SslAutoConfiguration;
-import org.springframework.boot.test.context.runner.ApplicationContextRunner;
-import org.springframework.boot.testsupport.container.MailpitContainer;
-import org.springframework.boot.testsupport.container.TestImage;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurations;
+import io.github.kotlinmania.spring.boot.autoconfigure.ssl.SslAutoConfiguration;
+import io.github.kotlinmania.spring.boot.test.context.runner.ApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.testsupport.container.MailpitContainer;
+import io.github.kotlinmania.spring.boot.testsupport.container.TestImage;
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSenderImpl;
 
@@ -95,9 +95,9 @@ class MailSenderAutoConfigurationIntegrationTests {
 		private static final MailpitContainer mailpit = TestImage.container(MailpitContainer.class)
 			.withSmtpRequireTls(true)
 			.withSmtpTlsCert(MountableFile
-				.forClasspathResource("/org/springframework/boot/mail/autoconfigure/ssl/test-server.crt"))
+				.forClasspathResource("/io.github.kotlinmania.spring.boot.mail/autoconfigure/ssl/test-server.crt"))
 			.withSmtpTlsKey(MountableFile
-				.forClasspathResource("/org/springframework/boot/mail/autoconfigure/ssl/test-server.key"))
+				.forClasspathResource("/io.github.kotlinmania.spring.boot.mail/autoconfigure/ssl/test-server.key"))
 			.withPop3Auth("user:pass");
 
 		private final ApplicationContextRunner contextRunner = new ApplicationContextRunner()
@@ -108,9 +108,9 @@ class MailSenderAutoConfigurationIntegrationTests {
 			this.contextRunner.withPropertyValues("spring.mail.host:" + mailpit.getHost(),
 					"spring.mail.port:" + mailpit.getSmtpPort(), "spring.mail.ssl.enabled:true",
 					"spring.mail.ssl.bundle:test-bundle",
-					"spring.ssl.bundle.pem.test-bundle.truststore.certificate=classpath:org/springframework/boot/mail/autoconfigure/ssl/test-ca.crt",
-					"spring.ssl.bundle.pem.test-bundle.keystore.certificate=classpath:org/springframework/boot/mail/autoconfigure/ssl/test-client.crt",
-					"spring.ssl.bundle.pem.test-bundle.keystore.private-key=classpath:org/springframework/boot/mail/autoconfigure/ssl/test-client.key",
+					"spring.ssl.bundle.pem.test-bundle.truststore.certificate=classpath:io.github.kotlinmania.spring.boot.mail/autoconfigure/ssl/test-ca.crt",
+					"spring.ssl.bundle.pem.test-bundle.keystore.certificate=classpath:io.github.kotlinmania.spring.boot.mail/autoconfigure/ssl/test-client.crt",
+					"spring.ssl.bundle.pem.test-bundle.keystore.private-key=classpath:io.github.kotlinmania.spring.boot.mail/autoconfigure/ssl/test-client.key",
 					"spring.mail.properties.mail.pop3.host:" + mailpit.getHost(),
 					"spring.mail.properties.mail.pop3.port:" + mailpit.getPop3Port())
 				.run((context) -> {
@@ -137,9 +137,9 @@ class MailSenderAutoConfigurationIntegrationTests {
 			this.contextRunner.withPropertyValues("spring.mail.host:" + mailpit.getHost(),
 					"spring.mail.port:" + mailpit.getSmtpPort(), "spring.mail.properties.mail.smtp.timeout:1000",
 					"spring.mail.ssl.bundle:test-bundle",
-					"spring.ssl.bundle.pem.test-bundle.truststore.certificate=classpath:org/springframework/boot/mail/autoconfigure/ssl/test-ca.crt",
-					"spring.ssl.bundle.pem.test-bundle.keystore.certificate=classpath:org/springframework/boot/mail/autoconfigure/ssl/test-client.crt",
-					"spring.ssl.bundle.pem.test-bundle.keystore.private-key=classpath:org/springframework/boot/mail/autoconfigure/ssl/test-client.key")
+					"spring.ssl.bundle.pem.test-bundle.truststore.certificate=classpath:io.github.kotlinmania.spring.boot.mail/autoconfigure/ssl/test-ca.crt",
+					"spring.ssl.bundle.pem.test-bundle.keystore.certificate=classpath:io.github.kotlinmania.spring.boot.mail/autoconfigure/ssl/test-client.crt",
+					"spring.ssl.bundle.pem.test-bundle.keystore.private-key=classpath:io.github.kotlinmania.spring.boot.mail/autoconfigure/ssl/test-client.key")
 				.run((context) -> {
 					JavaMailSenderImpl mailSender = context.getBean(JavaMailSenderImpl.class);
 					assertThatException().isThrownBy(() -> mailSender.send(createMessage("Should fail")))
@@ -156,9 +156,9 @@ class MailSenderAutoConfigurationIntegrationTests {
 		private static final MailpitContainer mailpit = TestImage.container(MailpitContainer.class)
 			.withSmtpRequireStarttls(true)
 			.withSmtpTlsCert(MountableFile
-				.forClasspathResource("/org/springframework/boot/mail/autoconfigure/ssl/test-server.crt"))
+				.forClasspathResource("/io.github.kotlinmania.spring.boot.mail/autoconfigure/ssl/test-server.crt"))
 			.withSmtpTlsKey(MountableFile
-				.forClasspathResource("/org/springframework/boot/mail/autoconfigure/ssl/test-server.key"))
+				.forClasspathResource("/io.github.kotlinmania.spring.boot.mail/autoconfigure/ssl/test-server.key"))
 			.withPop3Auth("user:pass");
 
 		final ApplicationContextRunner contextRunner = new ApplicationContextRunner()
@@ -170,9 +170,9 @@ class MailSenderAutoConfigurationIntegrationTests {
 					"spring.mail.port:" + mailpit.getSmtpPort(),
 					"spring.mail.properties.mail.smtp.starttls.enable:true",
 					"spring.mail.properties.mail.smtp.starttls.required:true", "spring.mail.ssl.bundle:test-bundle",
-					"spring.ssl.bundle.pem.test-bundle.truststore.certificate=classpath:org/springframework/boot/mail/autoconfigure/ssl/test-ca.crt",
-					"spring.ssl.bundle.pem.test-bundle.keystore.certificate=classpath:org/springframework/boot/mail/autoconfigure/ssl/test-client.crt",
-					"spring.ssl.bundle.pem.test-bundle.keystore.private-key=classpath:org/springframework/boot/mail/autoconfigure/ssl/test-client.key",
+					"spring.ssl.bundle.pem.test-bundle.truststore.certificate=classpath:io.github.kotlinmania.spring.boot.mail/autoconfigure/ssl/test-ca.crt",
+					"spring.ssl.bundle.pem.test-bundle.keystore.certificate=classpath:io.github.kotlinmania.spring.boot.mail/autoconfigure/ssl/test-client.crt",
+					"spring.ssl.bundle.pem.test-bundle.keystore.private-key=classpath:io.github.kotlinmania.spring.boot.mail/autoconfigure/ssl/test-client.key",
 					"spring.mail.properties.mail.pop3.host:" + mailpit.getHost(),
 					"spring.mail.properties.mail.pop3.port:" + mailpit.getPop3Port())
 				.run((context) -> {
@@ -188,9 +188,9 @@ class MailSenderAutoConfigurationIntegrationTests {
 					"spring.mail.port:" + mailpit.getSmtpPort(), "spring.mail.ssl.enabled:true",
 					"spring.mail.properties.mail.smtp.starttls.enable:true",
 					"spring.mail.properties.mail.smtp.starttls.required:true", "spring.mail.ssl.bundle:test-bundle",
-					"spring.ssl.bundle.pem.test-bundle.truststore.certificate=classpath:org/springframework/boot/mail/autoconfigure/ssl/test-ca.crt",
-					"spring.ssl.bundle.pem.test-bundle.keystore.certificate=classpath:org/springframework/boot/mail/autoconfigure/ssl/test-client.crt",
-					"spring.ssl.bundle.pem.test-bundle.keystore.private-key=classpath:org/springframework/boot/mail/autoconfigure/ssl/test-client.key",
+					"spring.ssl.bundle.pem.test-bundle.truststore.certificate=classpath:io.github.kotlinmania.spring.boot.mail/autoconfigure/ssl/test-ca.crt",
+					"spring.ssl.bundle.pem.test-bundle.keystore.certificate=classpath:io.github.kotlinmania.spring.boot.mail/autoconfigure/ssl/test-client.crt",
+					"spring.ssl.bundle.pem.test-bundle.keystore.private-key=classpath:io.github.kotlinmania.spring.boot.mail/autoconfigure/ssl/test-client.key",
 					"spring.mail.properties.mail.pop3.host:" + mailpit.getHost(),
 					"spring.mail.properties.mail.pop3.port:" + mailpit.getPop3Port())
 				.run((context) -> {

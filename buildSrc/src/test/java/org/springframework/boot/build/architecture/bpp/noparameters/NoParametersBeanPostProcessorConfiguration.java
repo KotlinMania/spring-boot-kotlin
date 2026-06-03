@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.build.architecture.bpp.noparameters;
+package io.github.kotlinmania.spring.boot.build.architecture.bpp.noparameters;
 
 import org.springframework.beans.factory.config.BeanPostProcessor;
 import org.springframework.context.annotation.Bean;

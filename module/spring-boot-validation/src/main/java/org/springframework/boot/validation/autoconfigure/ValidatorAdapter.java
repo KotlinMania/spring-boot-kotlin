@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.validation.autoconfigure;
+package io.github.kotlinmania.spring.boot.validation.autoconfigure;
 
 import jakarta.validation.ValidationException;
 import org.jspecify.annotations.Nullable;
@@ -23,7 +23,7 @@ import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.DisposableBean;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.NoSuchBeanDefinitionException;
-import org.springframework.boot.validation.MessageInterpolatorFactory;
+import io.github.kotlinmania.spring.boot.validation.MessageInterpolatorFactory;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
 import org.springframework.context.MessageSource;

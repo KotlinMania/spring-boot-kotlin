@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.context.event;
+package io.github.kotlinmania.spring.boot.context.event;
 
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.bootstrap.ConfigurableBootstrapContext;
+import io.github.kotlinmania.spring.boot.SpringApplication;
+import io.github.kotlinmania.spring.boot.bootstrap.ConfigurableBootstrapContext;
 import org.springframework.core.env.ConfigurableEnvironment;
 import org.springframework.core.env.Environment;
 

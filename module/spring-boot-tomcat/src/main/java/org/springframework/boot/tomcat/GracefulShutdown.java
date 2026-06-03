@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.tomcat;
+package io.github.kotlinmania.spring.boot.tomcat;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -30,8 +30,8 @@ import org.apache.catalina.startup.Tomcat;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
-import org.springframework.boot.web.server.GracefulShutdownCallback;
-import org.springframework.boot.web.server.GracefulShutdownResult;
+import io.github.kotlinmania.spring.boot.web.server.GracefulShutdownCallback;
+import io.github.kotlinmania.spring.boot.web.server.GracefulShutdownResult;
 
 /**
  * Handles Tomcat graceful shutdown.

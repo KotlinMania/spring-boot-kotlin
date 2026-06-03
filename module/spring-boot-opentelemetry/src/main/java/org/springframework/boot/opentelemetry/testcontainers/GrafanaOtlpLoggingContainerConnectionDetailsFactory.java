@@ -14,17 +14,17 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.opentelemetry.testcontainers;
+package io.github.kotlinmania.spring.boot.opentelemetry.testcontainers;
 
 import org.jspecify.annotations.Nullable;
 import org.testcontainers.grafana.LgtmStackContainer;
 
-import org.springframework.boot.opentelemetry.autoconfigure.logging.otlp.OtlpLoggingConnectionDetails;
-import org.springframework.boot.opentelemetry.autoconfigure.logging.otlp.Transport;
-import org.springframework.boot.ssl.SslBundle;
-import org.springframework.boot.testcontainers.service.connection.ContainerConnectionDetailsFactory;
-import org.springframework.boot.testcontainers.service.connection.ContainerConnectionSource;
-import org.springframework.boot.testcontainers.service.connection.ServiceConnection;
+import io.github.kotlinmania.spring.boot.opentelemetry.autoconfigure.logging.otlp.OtlpLoggingConnectionDetails;
+import io.github.kotlinmania.spring.boot.opentelemetry.autoconfigure.logging.otlp.Transport;
+import io.github.kotlinmania.spring.boot.ssl.SslBundle;
+import io.github.kotlinmania.spring.boot.testcontainers.service.connection.ContainerConnectionDetailsFactory;
+import io.github.kotlinmania.spring.boot.testcontainers.service.connection.ContainerConnectionSource;
+import io.github.kotlinmania.spring.boot.testcontainers.service.connection.ServiceConnection;
 
 /**
  * {@link ContainerConnectionDetailsFactory} to create

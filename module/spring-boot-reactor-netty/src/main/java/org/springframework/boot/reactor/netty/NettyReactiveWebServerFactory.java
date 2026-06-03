@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.reactor.netty;
+package io.github.kotlinmania.spring.boot.reactor.netty;
 
 import java.net.InetSocketAddress;
 import java.time.Duration;
@@ -29,12 +29,12 @@ import org.jspecify.annotations.Nullable;
 import reactor.netty.http.HttpProtocol;
 import reactor.netty.http.server.HttpServer;
 
-import org.springframework.boot.ssl.SslBundles;
-import org.springframework.boot.web.server.Shutdown;
-import org.springframework.boot.web.server.Ssl;
-import org.springframework.boot.web.server.WebServer;
-import org.springframework.boot.web.server.reactive.AbstractReactiveWebServerFactory;
-import org.springframework.boot.web.server.reactive.ReactiveWebServerFactory;
+import io.github.kotlinmania.spring.boot.ssl.SslBundles;
+import io.github.kotlinmania.spring.boot.web.server.Shutdown;
+import io.github.kotlinmania.spring.boot.web.server.Ssl;
+import io.github.kotlinmania.spring.boot.web.server.WebServer;
+import io.github.kotlinmania.spring.boot.web.server.reactive.AbstractReactiveWebServerFactory;
+import io.github.kotlinmania.spring.boot.web.server.reactive.ReactiveWebServerFactory;
 import org.springframework.http.client.ReactorResourceFactory;
 import org.springframework.http.server.reactive.HttpHandler;
 import org.springframework.http.server.reactive.ReactorHttpHandlerAdapter;

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.io.restclient.webclient
+package io.github.kotlinmania.spring.boot.docs.io.restclient.webclient
 
 import org.springframework.stereotype.Service
 import org.springframework.web.reactive.function.client.WebClient

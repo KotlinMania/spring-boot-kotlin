@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.data.jdbc.domain.city;
+package io.github.kotlinmania.spring.boot.data.jdbc.domain.city;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.relational.core.mapping.Table;

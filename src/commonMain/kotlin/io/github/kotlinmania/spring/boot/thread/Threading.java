@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.thread;
+package io.github.kotlinmania.spring.boot.thread;
 
-import org.springframework.boot.system.JavaVersion;
+import io.github.kotlinmania.spring.boot.system.JavaVersion;
 import org.springframework.core.env.Environment;
 
 /**

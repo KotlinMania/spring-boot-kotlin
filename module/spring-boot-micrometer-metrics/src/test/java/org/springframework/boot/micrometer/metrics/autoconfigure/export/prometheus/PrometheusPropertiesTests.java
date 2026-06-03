@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.micrometer.metrics.autoconfigure.export.prometheus;
+package io.github.kotlinmania.spring.boot.micrometer.metrics.autoconfigure.export.prometheus;
 
 import org.junit.jupiter.api.Test;
 

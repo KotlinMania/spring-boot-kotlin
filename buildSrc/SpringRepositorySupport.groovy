@@ -94,7 +94,7 @@ class SpringRepositoriesExtension {
 	def mavenRepositoriesExcludingBootGroup() {
 		addRepositories { maven ->
 			maven.content { content ->
-				content.excludeGroup("org.springframework.boot")
+				content.excludeGroup("io.github.kotlinmania.spring.boot.)
 			}
 		}
 	}

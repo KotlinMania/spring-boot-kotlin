@@ -18,6 +18,6 @@
  * Observation integration for RestClient and RestTemplate.
  */
 @NullMarked
-package org.springframework.boot.restclient.observation;
+package io.github.kotlinmania.spring.boot.restclient.observation;
 
 import org.jspecify.annotations.NullMarked;

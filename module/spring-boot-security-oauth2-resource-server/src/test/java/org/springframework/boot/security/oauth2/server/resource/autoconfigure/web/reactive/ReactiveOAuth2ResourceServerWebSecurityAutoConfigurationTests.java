@@ -14,20 +14,20 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.security.oauth2.server.resource.autoconfigure.web.reactive;
+package io.github.kotlinmania.spring.boot.security.oauth2.server.resource.autoconfigure.web.reactive;
 
 import java.time.Duration;
 
 import org.jspecify.annotations.Nullable;
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.autoconfigure.AutoConfigurations;
-import org.springframework.boot.security.autoconfigure.actuate.web.reactive.ReactiveManagementWebSecurityAutoConfiguration;
-import org.springframework.boot.security.autoconfigure.web.reactive.ReactiveWebSecurityAutoConfiguration;
-import org.springframework.boot.security.oauth2.server.resource.autoconfigure.reactive.ReactiveOAuth2ResourceServerAutoConfiguration;
-import org.springframework.boot.test.context.assertj.AssertableReactiveWebApplicationContext;
-import org.springframework.boot.test.context.runner.ReactiveWebApplicationContextRunner;
-import org.springframework.boot.webflux.autoconfigure.WebFluxAutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurations;
+import io.github.kotlinmania.spring.boot.security.autoconfigure.actuate.web.reactive.ReactiveManagementWebSecurityAutoConfiguration;
+import io.github.kotlinmania.spring.boot.security.autoconfigure.web.reactive.ReactiveWebSecurityAutoConfiguration;
+import io.github.kotlinmania.spring.boot.security.oauth2.server.resource.autoconfigure.reactive.ReactiveOAuth2ResourceServerAutoConfiguration;
+import io.github.kotlinmania.spring.boot.test.context.assertj.AssertableReactiveWebApplicationContext;
+import io.github.kotlinmania.spring.boot.test.context.runner.ReactiveWebApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.webflux.autoconfigure.WebFluxAutoConfiguration;
 import org.springframework.context.ApplicationContext;
 import org.springframework.security.authentication.ReactiveAuthenticationManager;
 import org.springframework.security.authentication.ReactiveAuthenticationManagerResolver;

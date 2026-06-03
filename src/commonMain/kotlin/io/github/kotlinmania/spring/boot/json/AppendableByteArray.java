@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.json;
+package io.github.kotlinmania.spring.boot.json;
 
 import java.io.IOException;
 import java.lang.ref.SoftReference;

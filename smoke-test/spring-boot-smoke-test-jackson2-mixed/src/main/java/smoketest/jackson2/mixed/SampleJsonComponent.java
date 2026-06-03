@@ -22,7 +22,7 @@ import com.fasterxml.jackson.core.JsonGenerator;
 import com.fasterxml.jackson.databind.JsonSerializer;
 import com.fasterxml.jackson.databind.SerializerProvider;
 
-import org.springframework.boot.jackson2.JsonComponent;
+import io.github.kotlinmania.spring.boot.jackson2.JsonComponent;
 
 @JsonComponent
 @SuppressWarnings("removal")

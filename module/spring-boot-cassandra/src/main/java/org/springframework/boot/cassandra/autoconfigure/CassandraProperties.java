@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.cassandra.autoconfigure;
+package io.github.kotlinmania.spring.boot.cassandra.autoconfigure;
 
 import java.time.Duration;
 import java.util.List;
@@ -22,7 +22,7 @@ import java.util.List;
 import com.datastax.oss.driver.api.core.DefaultConsistencyLevel;
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.context.properties.ConfigurationProperties;
+import io.github.kotlinmania.spring.boot.context.properties.ConfigurationProperties;
 import org.springframework.core.io.Resource;
 import org.springframework.util.StringUtils;
 

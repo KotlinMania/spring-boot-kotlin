@@ -19,6 +19,6 @@
  * annotations.
  */
 @NullMarked
-package org.springframework.boot.context.annotation;
+package io.github.kotlinmania.spring.boot.context.annotation;
 
 import org.jspecify.annotations.NullMarked;

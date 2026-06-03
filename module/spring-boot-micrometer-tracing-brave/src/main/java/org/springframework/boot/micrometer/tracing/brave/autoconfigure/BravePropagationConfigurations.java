@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.micrometer.tracing.brave.autoconfigure;
+package io.github.kotlinmania.spring.boot.micrometer.tracing.brave.autoconfigure;
 
 import java.util.List;
 
@@ -34,12 +34,12 @@ import io.micrometer.tracing.brave.bridge.BraveBaggageManager;
 import org.jspecify.annotations.Nullable;
 
 import org.springframework.beans.factory.ObjectProvider;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnBooleanProperty;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
-import org.springframework.boot.context.properties.EnableConfigurationProperties;
-import org.springframework.boot.micrometer.tracing.autoconfigure.ConditionalOnEnabledTracingExport;
-import org.springframework.boot.micrometer.tracing.autoconfigure.TracingProperties;
-import org.springframework.boot.micrometer.tracing.autoconfigure.TracingProperties.Baggage.Correlation;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnBooleanProperty;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnMissingBean;
+import io.github.kotlinmania.spring.boot.context.properties.EnableConfigurationProperties;
+import io.github.kotlinmania.spring.boot.micrometer.tracing.autoconfigure.ConditionalOnEnabledTracingExport;
+import io.github.kotlinmania.spring.boot.micrometer.tracing.autoconfigure.TracingProperties;
+import io.github.kotlinmania.spring.boot.micrometer.tracing.autoconfigure.TracingProperties.Baggage.Correlation;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.annotation.Order;

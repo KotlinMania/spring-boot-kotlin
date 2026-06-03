@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.retry;
+package io.github.kotlinmania.spring.boot.retry;
 
 import java.time.Duration;
 import java.util.ArrayList;
@@ -24,7 +24,7 @@ import java.util.function.Predicate;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.context.properties.PropertyMapper;
+import io.github.kotlinmania.spring.boot.context.properties.PropertyMapper;
 import org.springframework.core.retry.RetryPolicy;
 import org.springframework.core.retry.RetryPolicy.Builder;
 

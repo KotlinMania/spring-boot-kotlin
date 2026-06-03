@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.build.architecture.bfpp.nonstatic;
+package io.github.kotlinmania.spring.boot.build.architecture.bfpp.nonstatic;
 
 import org.springframework.beans.factory.config.BeanFactoryPostProcessor;
 import org.springframework.context.annotation.Bean;

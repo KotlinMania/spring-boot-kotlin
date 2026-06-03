@@ -18,6 +18,6 @@
  * Auto-configuration for Logback metrics.
  */
 @NullMarked
-package org.springframework.boot.micrometer.metrics.autoconfigure.logging.logback;
+package io.github.kotlinmania.spring.boot.micrometer.metrics.autoconfigure.logging.logback;
 
 import org.jspecify.annotations.NullMarked;

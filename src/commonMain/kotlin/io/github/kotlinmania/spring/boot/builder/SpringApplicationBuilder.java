@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.builder;
+package io.github.kotlinmania.spring.boot.builder;
 
 import java.util.Arrays;
 import java.util.Collection;
@@ -31,13 +31,13 @@ import org.jspecify.annotations.Nullable;
 
 import org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory;
 import org.springframework.beans.factory.support.BeanNameGenerator;
-import org.springframework.boot.ApplicationContextFactory;
-import org.springframework.boot.Banner;
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.WebApplicationType;
-import org.springframework.boot.bootstrap.BootstrapRegistry;
-import org.springframework.boot.bootstrap.BootstrapRegistryInitializer;
-import org.springframework.boot.convert.ApplicationConversionService;
+import io.github.kotlinmania.spring.boot.ApplicationContextFactory;
+import io.github.kotlinmania.spring.boot.Banner;
+import io.github.kotlinmania.spring.boot.SpringApplication;
+import io.github.kotlinmania.spring.boot.WebApplicationType;
+import io.github.kotlinmania.spring.boot.bootstrap.BootstrapRegistry;
+import io.github.kotlinmania.spring.boot.bootstrap.BootstrapRegistryInitializer;
+import io.github.kotlinmania.spring.boot.convert.ApplicationConversionService;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextInitializer;
 import org.springframework.context.ApplicationListener;

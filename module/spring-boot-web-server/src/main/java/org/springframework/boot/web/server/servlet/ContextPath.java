@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.web.server.servlet;
+package io.github.kotlinmania.spring.boot.web.server.servlet;
 
 import org.springframework.util.Assert;
 

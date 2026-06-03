@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.grpc.server.autoconfigure.health;
+package io.github.kotlinmania.spring.boot.grpc.server.autoconfigure.health;
 
 import java.util.Collections;
 
@@ -22,14 +22,14 @@ import io.grpc.health.v1.HealthCheckResponse.ServingStatus;
 import org.junit.jupiter.api.Test;
 
 import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.boot.autoconfigure.AutoConfigurations;
-import org.springframework.boot.context.properties.EnableConfigurationProperties;
-import org.springframework.boot.grpc.server.health.HealthCheckedGrpcComponent;
-import org.springframework.boot.grpc.server.health.HealthCheckedGrpcComponents;
-import org.springframework.boot.grpc.server.health.StatusAggregator;
-import org.springframework.boot.grpc.server.health.StatusMapper;
-import org.springframework.boot.health.contributor.Status;
-import org.springframework.boot.test.context.runner.ApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurations;
+import io.github.kotlinmania.spring.boot.context.properties.EnableConfigurationProperties;
+import io.github.kotlinmania.spring.boot.grpc.server.health.HealthCheckedGrpcComponent;
+import io.github.kotlinmania.spring.boot.grpc.server.health.HealthCheckedGrpcComponents;
+import io.github.kotlinmania.spring.boot.grpc.server.health.StatusAggregator;
+import io.github.kotlinmania.spring.boot.grpc.server.health.StatusMapper;
+import io.github.kotlinmania.spring.boot.health.contributor.Status;
+import io.github.kotlinmania.spring.boot.test.context.runner.ApplicationContextRunner;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

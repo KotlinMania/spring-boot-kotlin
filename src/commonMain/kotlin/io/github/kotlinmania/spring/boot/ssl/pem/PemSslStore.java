@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.ssl.pem;
+package io.github.kotlinmania.spring.boot.ssl.pem;
 
 import java.security.KeyStore;
 import java.security.PrivateKey;
@@ -23,7 +23,7 @@ import java.util.List;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.io.ApplicationResourceLoader;
+import io.github.kotlinmania.spring.boot.io.ApplicationResourceLoader;
 import org.springframework.core.io.ResourceLoader;
 import org.springframework.util.Assert;
 

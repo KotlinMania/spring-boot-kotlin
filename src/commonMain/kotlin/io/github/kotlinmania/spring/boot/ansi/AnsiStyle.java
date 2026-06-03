@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.ansi;
+package io.github.kotlinmania.spring.boot.ansi;
 
 /**
  * {@link AnsiElement Ansi} styles.

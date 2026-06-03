@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.jpa.autoconfigure;
+package io.github.kotlinmania.spring.boot.jpa.autoconfigure;
 
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.diagnostics.FailureAnalysis;
+import io.github.kotlinmania.spring.boot.diagnostics.FailureAnalysis;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

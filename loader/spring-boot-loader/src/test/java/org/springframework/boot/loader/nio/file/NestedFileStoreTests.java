@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.loader.nio.file;
+package io.github.kotlinmania.spring.boot.loader.nio.file;
 
 import java.io.File;
 import java.nio.file.FileStore;

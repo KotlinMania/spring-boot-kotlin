@@ -16,8 +16,8 @@
 
 package smoketest.integration;
 
-import org.springframework.boot.ApplicationArguments;
-import org.springframework.boot.ApplicationRunner;
+import io.github.kotlinmania.spring.boot.ApplicationArguments;
+import io.github.kotlinmania.spring.boot.ApplicationRunner;
 import org.springframework.stereotype.Component;
 
 @Component

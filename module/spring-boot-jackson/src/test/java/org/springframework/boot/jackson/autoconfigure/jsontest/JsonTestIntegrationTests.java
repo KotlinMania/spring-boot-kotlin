@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.jackson.autoconfigure.jsontest;
+package io.github.kotlinmania.spring.boot.jackson.autoconfigure.jsontest;
 
 import java.util.Date;
 import java.util.UUID;
@@ -22,13 +22,13 @@ import java.util.UUID;
 import org.junit.jupiter.api.Test;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.jackson.autoconfigure.jsontest.app.ExampleBasicObject;
-import org.springframework.boot.jackson.autoconfigure.jsontest.app.ExampleCustomObject;
-import org.springframework.boot.jackson.autoconfigure.jsontest.app.ExampleJsonApplication;
-import org.springframework.boot.jackson.autoconfigure.jsontest.app.ExampleJsonObjectWithView;
-import org.springframework.boot.test.autoconfigure.json.JsonTest;
-import org.springframework.boot.test.json.JacksonTester;
-import org.springframework.boot.test.json.JsonContent;
+import io.github.kotlinmania.spring.boot.jackson.autoconfigure.jsontest.app.ExampleBasicObject;
+import io.github.kotlinmania.spring.boot.jackson.autoconfigure.jsontest.app.ExampleCustomObject;
+import io.github.kotlinmania.spring.boot.jackson.autoconfigure.jsontest.app.ExampleJsonApplication;
+import io.github.kotlinmania.spring.boot.jackson.autoconfigure.jsontest.app.ExampleJsonObjectWithView;
+import io.github.kotlinmania.spring.boot.test.autoconfigure.json.JsonTest;
+import io.github.kotlinmania.spring.boot.test.json.JacksonTester;
+import io.github.kotlinmania.spring.boot.test.json.JsonContent;
 import org.springframework.test.context.ContextConfiguration;
 
 import static org.assertj.core.api.Assertions.assertThat;

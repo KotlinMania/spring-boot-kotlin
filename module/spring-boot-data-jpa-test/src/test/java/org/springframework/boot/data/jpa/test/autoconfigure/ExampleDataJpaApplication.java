@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.data.jpa.test.autoconfigure;
+package io.github.kotlinmania.spring.boot.data.jpa.test.autoconfigure;
 
 import javax.sql.DataSource;
 
-import org.springframework.boot.autoconfigure.SpringBootApplication;
+import io.github.kotlinmania.spring.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseBuilder;
 import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseType;

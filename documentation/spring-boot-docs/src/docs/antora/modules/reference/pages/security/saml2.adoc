@@ -47,7 +47,7 @@ repositories {
 == Relying Party
 
 If you have `spring-security-saml2-service-provider` on your classpath, you can take advantage of some auto-configuration to set up a SAML 2.0 Relying Party.
-This configuration makes use of the properties under javadoc:org.springframework.boot.security.saml2.autoconfigure.Saml2RelyingPartyProperties[].
+This configuration makes use of the properties under javadoc:io.github.kotlinmania.spring.boot.security.saml2.autoconfigure.Saml2RelyingPartyProperties[].
 
 A relying party registration represents a paired configuration between an Identity Provider, IDP, and a Service Provider, SP.
 You can register multiple relying parties under the `spring.security.saml2.relyingparty` prefix, as shown in the following example:

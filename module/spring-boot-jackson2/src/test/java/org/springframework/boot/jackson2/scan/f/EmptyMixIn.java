@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.jackson2.scan.f;
+package io.github.kotlinmania.spring.boot.jackson2.scan.f;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-import org.springframework.boot.jackson2.JsonMixin;
+import io.github.kotlinmania.spring.boot.jackson2.JsonMixin;
 
 @JsonMixin
 @Deprecated(since = "4.0.0", forRemoval = true)

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.gson.autoconfigure;
+package io.github.kotlinmania.spring.boot.gson.autoconfigure;
 
 import java.util.List;
 import java.util.stream.Stream;

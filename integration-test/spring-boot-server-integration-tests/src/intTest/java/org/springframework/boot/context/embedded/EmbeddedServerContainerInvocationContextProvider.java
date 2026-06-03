@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.context.embedded;
+package io.github.kotlinmania.spring.boot.context.embedded;
 
 import java.io.File;
 import java.io.IOException;
@@ -44,7 +44,7 @@ import org.junit.jupiter.api.extension.TestTemplateInvocationContext;
 import org.junit.jupiter.api.extension.TestTemplateInvocationContextProvider;
 
 import org.springframework.beans.BeanUtils;
-import org.springframework.boot.testsupport.BuildOutput;
+import io.github.kotlinmania.spring.boot.testsupport.BuildOutput;
 import org.springframework.http.client.HttpComponentsClientHttpRequestFactory;
 import org.springframework.util.FileSystemUtils;
 import org.springframework.util.ReflectionUtils;

@@ -14,16 +14,16 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.logging.structured;
+package io.github.kotlinmania.spring.boot.logging.structured;
 
 import java.nio.charset.Charset;
 import java.util.function.Consumer;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.json.JsonWriter;
-import org.springframework.boot.json.JsonWriter.Members;
-import org.springframework.boot.util.LambdaSafe;
+import io.github.kotlinmania.spring.boot.json.JsonWriter;
+import io.github.kotlinmania.spring.boot.json.JsonWriter.Members;
+import io.github.kotlinmania.spring.boot.util.LambdaSafe;
 
 /**
  * Base class for {@link StructuredLogFormatter} implementations that generates JSON using

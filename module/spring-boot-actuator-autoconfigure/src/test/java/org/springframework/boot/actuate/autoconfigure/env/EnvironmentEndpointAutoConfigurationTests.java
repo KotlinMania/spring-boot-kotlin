@@ -14,24 +14,24 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.actuate.autoconfigure.env;
+package io.github.kotlinmania.spring.boot.actuate.autoconfigure.env;
 
 import java.util.Map;
 import java.util.Set;
 
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.actuate.endpoint.SanitizingFunction;
-import org.springframework.boot.actuate.endpoint.Show;
-import org.springframework.boot.actuate.env.EnvironmentEndpoint;
-import org.springframework.boot.actuate.env.EnvironmentEndpoint.EnvironmentDescriptor;
-import org.springframework.boot.actuate.env.EnvironmentEndpoint.PropertySourceDescriptor;
-import org.springframework.boot.actuate.env.EnvironmentEndpoint.PropertyValueDescriptor;
-import org.springframework.boot.actuate.env.EnvironmentEndpointWebExtension;
-import org.springframework.boot.autoconfigure.AutoConfigurations;
-import org.springframework.boot.test.context.assertj.AssertableApplicationContext;
-import org.springframework.boot.test.context.runner.ApplicationContextRunner;
-import org.springframework.boot.test.context.runner.ContextConsumer;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.SanitizingFunction;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.Show;
+import io.github.kotlinmania.spring.boot.actuate.env.EnvironmentEndpoint;
+import io.github.kotlinmania.spring.boot.actuate.env.EnvironmentEndpoint.EnvironmentDescriptor;
+import io.github.kotlinmania.spring.boot.actuate.env.EnvironmentEndpoint.PropertySourceDescriptor;
+import io.github.kotlinmania.spring.boot.actuate.env.EnvironmentEndpoint.PropertyValueDescriptor;
+import io.github.kotlinmania.spring.boot.actuate.env.EnvironmentEndpointWebExtension;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurations;
+import io.github.kotlinmania.spring.boot.test.context.assertj.AssertableApplicationContext;
+import io.github.kotlinmania.spring.boot.test.context.runner.ApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.test.context.runner.ContextConsumer;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.annotation.Order;

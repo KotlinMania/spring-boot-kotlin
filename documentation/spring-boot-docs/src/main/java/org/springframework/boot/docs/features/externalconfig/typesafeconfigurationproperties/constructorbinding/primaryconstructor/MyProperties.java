@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.features.externalconfig.typesafeconfigurationproperties.constructorbinding.primaryconstructor;
+package io.github.kotlinmania.spring.boot.docs.features.externalconfig.typesafeconfigurationproperties.constructorbinding.primaryconstructor;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.context.properties.ConfigurationProperties;
+import io.github.kotlinmania.spring.boot.context.properties.ConfigurationProperties;
 
 @ConfigurationProperties("my")
 public class MyProperties {

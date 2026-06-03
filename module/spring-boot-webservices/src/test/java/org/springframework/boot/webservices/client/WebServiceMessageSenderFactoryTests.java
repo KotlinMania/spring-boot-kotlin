@@ -14,16 +14,16 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.webservices.client;
+package io.github.kotlinmania.spring.boot.webservices.client;
 
 import java.time.Duration;
 
 import org.eclipse.jetty.client.HttpClient;
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.http.client.ClientHttpRequestFactoryBuilder;
-import org.springframework.boot.http.client.HttpClientSettings;
-import org.springframework.boot.testsupport.classpath.ClassPathExclusions;
+import io.github.kotlinmania.spring.boot.http.client.ClientHttpRequestFactoryBuilder;
+import io.github.kotlinmania.spring.boot.http.client.HttpClientSettings;
+import io.github.kotlinmania.spring.boot.testsupport.classpath.ClassPathExclusions;
 import org.springframework.http.client.ClientHttpRequestFactory;
 import org.springframework.http.client.HttpComponentsClientHttpRequestFactory;
 import org.springframework.http.client.JdkClientHttpRequestFactory;

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.amqp.autoconfigure;
+package io.github.kotlinmania.spring.boot.amqp.autoconfigure;
 
 import java.io.IOException;
 import java.security.NoSuchAlgorithmException;
@@ -77,14 +77,14 @@ import org.springframework.amqp.support.converter.MessageConversionException;
 import org.springframework.amqp.support.converter.MessageConverter;
 import org.springframework.amqp.support.converter.SerializerMessageConverter;
 import org.springframework.beans.factory.NoSuchBeanDefinitionException;
-import org.springframework.boot.autoconfigure.AutoConfigurations;
-import org.springframework.boot.autoconfigure.ssl.SslAutoConfiguration;
-import org.springframework.boot.context.properties.source.InvalidConfigurationPropertyValueException;
-import org.springframework.boot.test.context.FilteredClassLoader;
-import org.springframework.boot.test.context.assertj.AssertableApplicationContext;
-import org.springframework.boot.test.context.runner.ApplicationContextRunner;
-import org.springframework.boot.test.system.CapturedOutput;
-import org.springframework.boot.test.system.OutputCaptureExtension;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurations;
+import io.github.kotlinmania.spring.boot.autoconfigure.ssl.SslAutoConfiguration;
+import io.github.kotlinmania.spring.boot.context.properties.source.InvalidConfigurationPropertyValueException;
+import io.github.kotlinmania.spring.boot.test.context.FilteredClassLoader;
+import io.github.kotlinmania.spring.boot.test.context.assertj.AssertableApplicationContext;
+import io.github.kotlinmania.spring.boot.test.context.runner.ApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.test.system.CapturedOutput;
+import io.github.kotlinmania.spring.boot.test.system.OutputCaptureExtension;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
@@ -961,7 +961,7 @@ class RabbitAutoConfigurationTests {
 	void enableSslWithBundle() {
 		this.contextRunner.withUserConfiguration(TestConfiguration.class)
 			.withPropertyValues("spring.rabbitmq.ssl.bundle=test-bundle",
-					"spring.ssl.bundle.jks.test-bundle.keystore.location=classpath:org/springframework/boot/amqp/autoconfigure/test.jks",
+					"spring.ssl.bundle.jks.test-bundle.keystore.location=classpath:io.github.kotlinmania.spring.boot.amqp/autoconfigure/test.jks",
 					"spring.ssl.bundle.jks.test-bundle.keystore.password=secret")
 			.run((context) -> {
 				com.rabbitmq.client.ConnectionFactory rabbitConnectionFactory = getTargetConnectionFactory(context);
@@ -974,7 +974,7 @@ class RabbitAutoConfigurationTests {
 	void enableSslWithBundleAndWithoutHostnameVerification() {
 		this.contextRunner.withUserConfiguration(TestConfiguration.class)
 			.withPropertyValues("spring.rabbitmq.ssl.bundle=test-bundle", "spring.rabbitmq.ssl.verify-hostname=false",
-					"spring.ssl.bundle.jks.test-bundle.keystore.location=classpath:org/springframework/boot/amqp/autoconfigure/test.jks",
+					"spring.ssl.bundle.jks.test-bundle.keystore.location=classpath:io.github.kotlinmania.spring.boot.amqp/autoconfigure/test.jks",
 					"spring.ssl.bundle.jks.test-bundle.keystore.password=secret")
 			.run((context) -> {
 				com.rabbitmq.client.ConnectionFactory rabbitConnectionFactory = getTargetConnectionFactory(context);
@@ -987,9 +987,9 @@ class RabbitAutoConfigurationTests {
 	void enableSslWithKeystoreTypeAndTrustStoreTypeShouldWork() {
 		this.contextRunner.withUserConfiguration(TestConfiguration.class)
 			.withPropertyValues("spring.rabbitmq.ssl.enabled:true",
-					"spring.rabbitmq.ssl.key-store=/org/springframework/boot/amqp/autoconfigure/test.jks",
+					"spring.rabbitmq.ssl.key-store=/io.github.kotlinmania.spring.boot.amqp/autoconfigure/test.jks",
 					"spring.rabbitmq.ssl.key-store-type=jks", "spring.rabbitmq.ssl.key-store-password=secret",
-					"spring.rabbitmq.ssl.trust-store=/org/springframework/boot/amqp/autoconfigure/test.jks",
+					"spring.rabbitmq.ssl.trust-store=/io.github.kotlinmania.spring.boot.amqp/autoconfigure/test.jks",
 					"spring.rabbitmq.ssl.trust-store-type=jks", "spring.rabbitmq.ssl.trust-store-password=secret")
 			.run((context) -> assertThat(context).hasNotFailed());
 	}
@@ -1021,10 +1021,10 @@ class RabbitAutoConfigurationTests {
 	void enableSslWithValidStoreAlgorithmShouldWork() {
 		this.contextRunner.withUserConfiguration(TestConfiguration.class)
 			.withPropertyValues("spring.rabbitmq.ssl.enabled:true",
-					"spring.rabbitmq.ssl.key-store=/org/springframework/boot/amqp/autoconfigure/test.jks",
+					"spring.rabbitmq.ssl.key-store=/io.github.kotlinmania.spring.boot.amqp/autoconfigure/test.jks",
 					"spring.rabbitmq.ssl.key-store-type=jks", "spring.rabbitmq.ssl.key-store-password=secret",
 					"spring.rabbitmq.ssl.key-store-algorithm=PKIX",
-					"spring.rabbitmq.ssl.trust-store=/org/springframework/boot/amqp/autoconfigure/test.jks",
+					"spring.rabbitmq.ssl.trust-store=/io.github.kotlinmania.spring.boot.amqp/autoconfigure/test.jks",
 					"spring.rabbitmq.ssl.trust-store-type=jks", "spring.rabbitmq.ssl.trust-store-password=secret",
 					"spring.rabbitmq.ssl.trust-store-algorithm=PKIX")
 			.run((context) -> assertThat(context).hasNotFailed());
@@ -1034,7 +1034,7 @@ class RabbitAutoConfigurationTests {
 	void enableSslWithInvalidKeyStoreAlgorithmShouldFail() {
 		this.contextRunner.withUserConfiguration(TestConfiguration.class)
 			.withPropertyValues("spring.rabbitmq.ssl.enabled:true",
-					"spring.rabbitmq.ssl.key-store=/org/springframework/boot/amqp/autoconfigure/test.jks",
+					"spring.rabbitmq.ssl.key-store=/io.github.kotlinmania.spring.boot.amqp/autoconfigure/test.jks",
 					"spring.rabbitmq.ssl.key-store-type=jks", "spring.rabbitmq.ssl.key-store-password=secret",
 					"spring.rabbitmq.ssl.key-store-algorithm=test-invalid-algo")
 			.run((context) -> {
@@ -1048,7 +1048,7 @@ class RabbitAutoConfigurationTests {
 	void enableSslWithInvalidTrustStoreAlgorithmShouldFail() {
 		this.contextRunner.withUserConfiguration(TestConfiguration.class)
 			.withPropertyValues("spring.rabbitmq.ssl.enabled:true",
-					"spring.rabbitmq.ssl.trust-store=/org/springframework/boot/amqp/autoconfigure/test.jks",
+					"spring.rabbitmq.ssl.trust-store=/io.github.kotlinmania.spring.boot.amqp/autoconfigure/test.jks",
 					"spring.rabbitmq.ssl.trust-store-type=jks", "spring.rabbitmq.ssl.trust-store-password=secret",
 					"spring.rabbitmq.ssl.trust-store-algorithm=test-invalid-algo")
 			.run((context) -> {

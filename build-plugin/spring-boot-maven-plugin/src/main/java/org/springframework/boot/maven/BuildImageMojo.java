@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.maven;
+package io.github.kotlinmania.spring.boot.maven;
 
 import java.io.File;
 import java.io.IOException;
@@ -36,20 +36,20 @@ import org.apache.maven.plugins.annotations.Parameter;
 import org.apache.maven.project.MavenProjectHelper;
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.buildpack.platform.build.AbstractBuildLog;
-import org.springframework.boot.buildpack.platform.build.BuildLog;
-import org.springframework.boot.buildpack.platform.build.BuildRequest;
-import org.springframework.boot.buildpack.platform.build.Builder;
-import org.springframework.boot.buildpack.platform.build.BuilderDockerConfiguration;
-import org.springframework.boot.buildpack.platform.build.Creator;
-import org.springframework.boot.buildpack.platform.build.PullPolicy;
-import org.springframework.boot.buildpack.platform.docker.TotalProgressEvent;
-import org.springframework.boot.buildpack.platform.io.Owner;
-import org.springframework.boot.buildpack.platform.io.TarArchive;
-import org.springframework.boot.loader.tools.EntryWriter;
-import org.springframework.boot.loader.tools.ImagePackager;
-import org.springframework.boot.loader.tools.LayoutFactory;
-import org.springframework.boot.loader.tools.Libraries;
+import io.github.kotlinmania.spring.boot.buildpack.platform.build.AbstractBuildLog;
+import io.github.kotlinmania.spring.boot.buildpack.platform.build.BuildLog;
+import io.github.kotlinmania.spring.boot.buildpack.platform.build.BuildRequest;
+import io.github.kotlinmania.spring.boot.buildpack.platform.build.Builder;
+import io.github.kotlinmania.spring.boot.buildpack.platform.build.BuilderDockerConfiguration;
+import io.github.kotlinmania.spring.boot.buildpack.platform.build.Creator;
+import io.github.kotlinmania.spring.boot.buildpack.platform.build.PullPolicy;
+import io.github.kotlinmania.spring.boot.buildpack.platform.docker.TotalProgressEvent;
+import io.github.kotlinmania.spring.boot.buildpack.platform.io.Owner;
+import io.github.kotlinmania.spring.boot.buildpack.platform.io.TarArchive;
+import io.github.kotlinmania.spring.boot.loader.tools.EntryWriter;
+import io.github.kotlinmania.spring.boot.loader.tools.ImagePackager;
+import io.github.kotlinmania.spring.boot.loader.tools.LayoutFactory;
+import io.github.kotlinmania.spring.boot.loader.tools.Libraries;
 import org.springframework.util.Assert;
 import org.springframework.util.StringUtils;
 

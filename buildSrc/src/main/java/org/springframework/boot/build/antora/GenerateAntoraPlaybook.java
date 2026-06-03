@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.build.antora;
+package io.github.kotlinmania.spring.boot.build.antora;
 
 import java.io.File;
 import java.io.FileWriter;
@@ -48,8 +48,8 @@ import org.gradle.api.tasks.TaskAction;
 import org.yaml.snakeyaml.DumperOptions;
 import org.yaml.snakeyaml.Yaml;
 
-import org.springframework.boot.build.AntoraConventions;
-import org.springframework.boot.build.antora.Extensions.AntoraExtensionsConfiguration.ZipContentsCollector.AlwaysInclude;
+import io.github.kotlinmania.spring.boot.build.AntoraConventions;
+import io.github.kotlinmania.spring.boot.build.antora.Extensions.AntoraExtensionsConfiguration.ZipContentsCollector.AlwaysInclude;
 
 /**
  * Task to generate a local Antora playbook.

@@ -15,6 +15,6 @@
  */
 
 @NullUnmarked
-package org.springframework.boot.cli.json;
+package io.github.kotlinmania.spring.boot.cli.json;
 
 import org.jspecify.annotations.NullUnmarked;

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.grpc.server.autoconfigure;
+package io.github.kotlinmania.spring.boot.grpc.server.autoconfigure;
 
 import java.net.InetAddress;
 import java.time.Duration;
@@ -25,8 +25,8 @@ import io.grpc.TlsServerCredentials.ClientAuth;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.context.properties.bind.Binder;
-import org.springframework.boot.context.properties.source.MapConfigurationPropertySource;
+import io.github.kotlinmania.spring.boot.context.properties.bind.Binder;
+import io.github.kotlinmania.spring.boot.context.properties.source.MapConfigurationPropertySource;
 import org.springframework.util.unit.DataSize;
 
 import static org.assertj.core.api.Assertions.assertThat;

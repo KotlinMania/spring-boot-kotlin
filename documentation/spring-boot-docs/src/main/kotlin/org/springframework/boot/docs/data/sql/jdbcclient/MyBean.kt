@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.data.sql.jdbcclient
+package io.github.kotlinmania.spring.boot.docs.data.sql.jdbcclient
 
 import org.springframework.jdbc.core.simple.JdbcClient
 import org.springframework.stereotype.Component

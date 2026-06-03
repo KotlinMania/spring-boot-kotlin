@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.webflux.autoconfigure.actuate.web;
+package io.github.kotlinmania.spring.boot.webflux.autoconfigure.actuate.web;
 
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
@@ -30,28 +30,28 @@ import org.jspecify.annotations.Nullable;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.io.TempDir;
 
-import org.springframework.boot.actuate.autoconfigure.endpoint.EndpointAutoConfiguration;
-import org.springframework.boot.actuate.autoconfigure.endpoint.web.WebEndpointAutoConfiguration;
-import org.springframework.boot.actuate.autoconfigure.web.server.ManagementContextAutoConfiguration;
-import org.springframework.boot.actuate.endpoint.annotation.Endpoint;
-import org.springframework.boot.actuate.endpoint.annotation.ReadOperation;
-import org.springframework.boot.autoconfigure.AutoConfigurations;
-import org.springframework.boot.convert.ApplicationConversionService;
-import org.springframework.boot.env.ConfigTreePropertySource;
-import org.springframework.boot.test.context.assertj.AssertableReactiveWebApplicationContext;
-import org.springframework.boot.test.context.runner.ContextConsumer;
-import org.springframework.boot.test.context.runner.ReactiveWebApplicationContextRunner;
-import org.springframework.boot.testsupport.classpath.ClassPathExclusions;
-import org.springframework.boot.testsupport.web.servlet.DirtiesUrlFactories;
-import org.springframework.boot.tomcat.TomcatWebServer;
-import org.springframework.boot.tomcat.autoconfigure.actuate.web.server.TomcatReactiveManagementContextAutoConfiguration;
-import org.springframework.boot.tomcat.autoconfigure.reactive.TomcatReactiveWebServerAutoConfiguration;
-import org.springframework.boot.web.server.WebServer;
-import org.springframework.boot.web.server.context.ServerPortInfoApplicationContextInitializer;
-import org.springframework.boot.web.server.context.WebServerInitializedEvent;
-import org.springframework.boot.web.server.reactive.context.AnnotationConfigReactiveWebServerApplicationContext;
-import org.springframework.boot.webflux.autoconfigure.HttpHandlerAutoConfiguration;
-import org.springframework.boot.webflux.autoconfigure.WebFluxAutoConfiguration;
+import io.github.kotlinmania.spring.boot.actuate.autoconfigure.endpoint.EndpointAutoConfiguration;
+import io.github.kotlinmania.spring.boot.actuate.autoconfigure.endpoint.web.WebEndpointAutoConfiguration;
+import io.github.kotlinmania.spring.boot.actuate.autoconfigure.web.server.ManagementContextAutoConfiguration;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.annotation.Endpoint;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.annotation.ReadOperation;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurations;
+import io.github.kotlinmania.spring.boot.convert.ApplicationConversionService;
+import io.github.kotlinmania.spring.boot.env.ConfigTreePropertySource;
+import io.github.kotlinmania.spring.boot.test.context.assertj.AssertableReactiveWebApplicationContext;
+import io.github.kotlinmania.spring.boot.test.context.runner.ContextConsumer;
+import io.github.kotlinmania.spring.boot.test.context.runner.ReactiveWebApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.testsupport.classpath.ClassPathExclusions;
+import io.github.kotlinmania.spring.boot.testsupport.web.servlet.DirtiesUrlFactories;
+import io.github.kotlinmania.spring.boot.tomcat.TomcatWebServer;
+import io.github.kotlinmania.spring.boot.tomcat.autoconfigure.actuate.web.server.TomcatReactiveManagementContextAutoConfiguration;
+import io.github.kotlinmania.spring.boot.tomcat.autoconfigure.reactive.TomcatReactiveWebServerAutoConfiguration;
+import io.github.kotlinmania.spring.boot.web.server.WebServer;
+import io.github.kotlinmania.spring.boot.web.server.context.ServerPortInfoApplicationContextInitializer;
+import io.github.kotlinmania.spring.boot.web.server.context.WebServerInitializedEvent;
+import io.github.kotlinmania.spring.boot.web.server.reactive.context.AnnotationConfigReactiveWebServerApplicationContext;
+import io.github.kotlinmania.spring.boot.webflux.autoconfigure.HttpHandlerAutoConfiguration;
+import io.github.kotlinmania.spring.boot.webflux.autoconfigure.WebFluxAutoConfiguration;
 import org.springframework.context.ApplicationListener;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.core.convert.support.ConfigurableConversionService;
@@ -128,7 +128,7 @@ class WebFluxManagementChildContextConfigurationIntegrationTests {
 	}
 
 	@Test
-	@ClassPathExclusions(packages = "org.springframework.boot.health.actuate.endpoint")
+	@ClassPathExclusions(packages = "io.github.kotlinmania.spring.boot.health.actuate.endpoint")
 	void refreshSucceedsWithoutHealth() {
 		this.runner.run((context) -> assertThat(context).hasNotFailed());
 	}

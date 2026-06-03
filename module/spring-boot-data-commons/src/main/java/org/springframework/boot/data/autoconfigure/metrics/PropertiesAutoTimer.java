@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.data.autoconfigure.metrics;
+package io.github.kotlinmania.spring.boot.data.autoconfigure.metrics;
 
 import io.micrometer.core.instrument.Timer.Builder;
 
-import org.springframework.boot.data.autoconfigure.metrics.DataMetricsProperties.Repository.Autotime;
-import org.springframework.boot.data.metrics.AutoTimer;
+import io.github.kotlinmania.spring.boot.data.autoconfigure.metrics.DataMetricsProperties.Repository.Autotime;
+import io.github.kotlinmania.spring.boot.data.metrics.AutoTimer;
 
 /**
  * {@link AutoTimer} whose behavior is configured by {@link Autotime} properties.

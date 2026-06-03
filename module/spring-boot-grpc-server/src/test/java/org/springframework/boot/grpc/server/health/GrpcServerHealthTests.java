@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.grpc.server.health;
+package io.github.kotlinmania.spring.boot.grpc.server.health;
 
 import java.util.Collections;
 import java.util.LinkedHashMap;
@@ -26,14 +26,14 @@ import org.jspecify.annotations.Nullable;
 import org.junit.jupiter.api.Test;
 import reactor.core.publisher.Mono;
 
-import org.springframework.boot.health.contributor.CompositeHealthContributor;
-import org.springframework.boot.health.contributor.Health;
-import org.springframework.boot.health.contributor.HealthContributor;
-import org.springframework.boot.health.contributor.HealthIndicator;
-import org.springframework.boot.health.contributor.ReactiveHealthIndicator;
-import org.springframework.boot.health.contributor.Status;
-import org.springframework.boot.health.registry.DefaultHealthContributorRegistry;
-import org.springframework.boot.health.registry.DefaultReactiveHealthContributorRegistry;
+import io.github.kotlinmania.spring.boot.health.contributor.CompositeHealthContributor;
+import io.github.kotlinmania.spring.boot.health.contributor.Health;
+import io.github.kotlinmania.spring.boot.health.contributor.HealthContributor;
+import io.github.kotlinmania.spring.boot.health.contributor.HealthIndicator;
+import io.github.kotlinmania.spring.boot.health.contributor.ReactiveHealthIndicator;
+import io.github.kotlinmania.spring.boot.health.contributor.Status;
+import io.github.kotlinmania.spring.boot.health.registry.DefaultHealthContributorRegistry;
+import io.github.kotlinmania.spring.boot.health.registry.DefaultReactiveHealthContributorRegistry;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatIllegalArgumentException;

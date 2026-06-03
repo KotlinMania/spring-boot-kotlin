@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.configurationprocessor.test;
+package io.github.kotlinmania.spring.boot.configurationprocessor.test;
 
 import java.io.InputStream;
 
-import org.springframework.boot.configurationprocessor.metadata.ConfigurationMetadata;
-import org.springframework.boot.configurationprocessor.metadata.JsonMarshaller;
+import io.github.kotlinmania.spring.boot.configurationprocessor.metadata.ConfigurationMetadata;
+import io.github.kotlinmania.spring.boot.configurationprocessor.metadata.JsonMarshaller;
 import org.springframework.core.test.tools.Compiled;
 import org.springframework.core.test.tools.TestCompiler;
 

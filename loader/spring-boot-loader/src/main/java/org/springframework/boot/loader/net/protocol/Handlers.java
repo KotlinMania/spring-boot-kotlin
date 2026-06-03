@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.loader.net.protocol;
+package io.github.kotlinmania.spring.boot.loader.net.protocol;
 
 import java.net.URL;
 import java.net.URLStreamHandler;

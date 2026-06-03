@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.jdbc;
+package io.github.kotlinmania.spring.boot.jdbc;
 
 import javax.sql.DataSource;
 import javax.sql.XADataSource;

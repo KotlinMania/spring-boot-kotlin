@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.micrometer.metrics.autoconfigure.export.otlp;
+package io.github.kotlinmania.spring.boot.micrometer.metrics.autoconfigure.export.otlp;
 
 import java.io.IOException;
 import java.net.URI;
@@ -30,8 +30,8 @@ import javax.net.ssl.SSLParameters;
 import io.micrometer.core.ipc.http.HttpSender;
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.ssl.SslBundle;
-import org.springframework.boot.ssl.SslOptions;
+import io.github.kotlinmania.spring.boot.ssl.SslBundle;
+import io.github.kotlinmania.spring.boot.ssl.SslOptions;
 
 /**
  * {@link HttpSender} implementation using the JDK {@link HttpClient}.

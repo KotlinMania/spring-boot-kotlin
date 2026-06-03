@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.jdbc;
+package io.github.kotlinmania.spring.boot.jdbc;
 
 import javax.sql.DataSource;
 
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.testsupport.classpath.ClassPathExclusions;
+import io.github.kotlinmania.spring.boot.testsupport.classpath.ClassPathExclusions;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

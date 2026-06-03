@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.test.context;
+package io.github.kotlinmania.spring.boot.test.context;
 
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Method;
@@ -27,7 +27,7 @@ import java.util.regex.Pattern;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.test.context.PropertyMapping.Skip;
+import io.github.kotlinmania.spring.boot.test.context.PropertyMapping.Skip;
 import org.springframework.core.annotation.MergedAnnotation;
 import org.springframework.core.annotation.MergedAnnotationPredicates;
 import org.springframework.core.annotation.MergedAnnotations;

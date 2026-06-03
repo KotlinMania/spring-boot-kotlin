@@ -5,7 +5,7 @@
 <plugin>
   <name>Spring Boot Maven Plugin</name>
   <description></description>
-  <groupId>org.springframework.boot</groupId>
+  <groupId>io.github.kotlinmania.spring.boot./groupId>
   <artifactId>spring-boot-maven-plugin</artifactId>
   <version>2.2.0.GRADLE-SNAPSHOT</version>
   <goalPrefix>spring-boot</goalPrefix>
@@ -23,7 +23,7 @@
       <requiresOnline>false</requiresOnline>
       <inheritedByDefault>true</inheritedByDefault>
       <phase>generate-resources</phase>
-      <implementation>org.springframework.boot.maven.BuildInfoMojo</implementation>
+      <implementation>io.github.kotlinmania.spring.boot.maven.BuildInfoMojo</implementation>
       <language>java</language>
       <instantiationStrategy>per-lookup</instantiationStrategy>
       <executionStrategy>once-per-session</executionStrategy>
@@ -92,7 +92,7 @@ Call &lt;code&gt;mvn spring-boot:help -Ddetail=true -Dgoal=&amp;lt;goal-name&amp
       <aggregator>false</aggregator>
       <requiresOnline>false</requiresOnline>
       <inheritedByDefault>true</inheritedByDefault>
-      <implementation>org.springframework.boot.maven.HelpMojo</implementation>
+      <implementation>io.github.kotlinmania.spring.boot.maven.HelpMojo</implementation>
       <language>java</language>
       <instantiationStrategy>per-lookup</instantiationStrategy>
       <executionStrategy>once-per-session</executionStrategy>
@@ -147,7 +147,7 @@ to package a JAR with nested dependencies (and no main class, so not executable)
       <requiresOnline>false</requiresOnline>
       <inheritedByDefault>true</inheritedByDefault>
       <phase>package</phase>
-      <implementation>org.springframework.boot.maven.RepackageMojo</implementation>
+      <implementation>io.github.kotlinmania.spring.boot.maven.RepackageMojo</implementation>
       <language>java</language>
       <instantiationStrategy>per-lookup</instantiationStrategy>
       <executionStrategy>once-per-session</executionStrategy>
@@ -265,7 +265,7 @@ a {@code groupId} and {@code artifactId} mandatory properties and an optional
         </parameter>
         <parameter>
           <name>layout</name>
-          <type>org.springframework.boot.maven.RepackageMojo$LayoutType</type>
+          <type>io.github.kotlinmania.spring.boot.maven.RepackageMojo$LayoutType</type>
           <since>1.0.0</since>
           <required>false</required>
           <editable>true</editable>
@@ -275,7 +275,7 @@ archive type.</description>
         </parameter>
         <parameter>
           <name>layoutFactory</name>
-          <type>org.springframework.boot.loader.tools.LayoutFactory</type>
+          <type>io.github.kotlinmania.spring.boot.loader.tools.LayoutFactory</type>
           <since>1.5.0</since>
           <required>false</required>
           <editable>true</editable>
@@ -336,7 +336,7 @@ Specify each library as a {@code &lt;dependency&gt;} with a {@code &lt;groupId&g
         <finalName implementation="java.lang.String" default-value="${project.build.finalName}"/>
         <includeSystemScope implementation="boolean" default-value="false"/>
         <includes implementation="java.util.List">${spring-boot.includes}</includes>
-        <layout implementation="org.springframework.boot.maven.RepackageMojo$LayoutType">${spring-boot.repackage.layout}</layout>
+        <layout implementation="io.github.kotlinmania.spring.boot.maven.RepackageMojo$LayoutType">${spring-boot.repackage.layout}</layout>
         <outputDirectory implementation="java.io.File" default-value="${project.build.directory}"/>
         <project implementation="org.apache.maven.project.MavenProject" default-value="${project}"/>
         <skip implementation="boolean" default-value="false">${spring-boot.repackage.skip}</skip>
@@ -360,7 +360,7 @@ Specify each library as a {@code &lt;dependency&gt;} with a {@code &lt;groupId&g
       <inheritedByDefault>true</inheritedByDefault>
       <phase>validate</phase>
       <executePhase>test-compile</executePhase>
-      <implementation>org.springframework.boot.maven.RunMojo</implementation>
+      <implementation>io.github.kotlinmania.spring.boot.maven.RunMojo</implementation>
       <language>java</language>
       <instantiationStrategy>per-lookup</instantiationStrategy>
       <executionStrategy>once-per-session</executionStrategy>
@@ -595,7 +595,7 @@ stopped after.</description>
       <requiresOnline>false</requiresOnline>
       <inheritedByDefault>true</inheritedByDefault>
       <phase>pre-integration-test</phase>
-      <implementation>org.springframework.boot.maven.StartMojo</implementation>
+      <implementation>io.github.kotlinmania.spring.boot.maven.StartMojo</implementation>
       <language>java</language>
       <instantiationStrategy>per-lookup</instantiationStrategy>
       <executionStrategy>once-per-session</executionStrategy>
@@ -850,7 +850,7 @@ once a test suite has completed.</description>
       <requiresOnline>false</requiresOnline>
       <inheritedByDefault>true</inheritedByDefault>
       <phase>post-integration-test</phase>
-      <implementation>org.springframework.boot.maven.StopMojo</implementation>
+      <implementation>io.github.kotlinmania.spring.boot.maven.StopMojo</implementation>
       <language>java</language>
       <instantiationStrategy>per-lookup</instantiationStrategy>
       <executionStrategy>once-per-session</executionStrategy>

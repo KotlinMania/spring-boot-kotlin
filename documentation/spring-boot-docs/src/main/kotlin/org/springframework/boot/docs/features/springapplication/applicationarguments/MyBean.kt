@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.features.springapplication.applicationarguments
+package io.github.kotlinmania.spring.boot.docs.features.springapplication.applicationarguments
 
-import org.springframework.boot.ApplicationArguments
+import io.github.kotlinmania.spring.boot.ApplicationArguments
 import org.springframework.stereotype.Component
 
 @Component

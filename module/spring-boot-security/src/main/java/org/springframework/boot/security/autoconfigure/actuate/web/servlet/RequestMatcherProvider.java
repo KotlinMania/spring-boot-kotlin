@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.security.autoconfigure.actuate.web.servlet;
+package io.github.kotlinmania.spring.boot.security.autoconfigure.actuate.web.servlet;
 
 import org.jspecify.annotations.Nullable;
 

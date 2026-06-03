@@ -1,1 +1,1 @@
-org.springframework.boot.jackson2.autoconfigure.Jackson2AutoConfiguration
+io.github.kotlinmania.spring.boot.jackson2.autoconfigure.Jackson2AutoConfiguration

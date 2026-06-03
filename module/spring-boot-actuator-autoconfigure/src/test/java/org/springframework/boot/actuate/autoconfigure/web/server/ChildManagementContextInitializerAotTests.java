@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.actuate.autoconfigure.web.server;
+package io.github.kotlinmania.spring.boot.actuate.autoconfigure.web.server;
 
 import java.util.function.Consumer;
 
@@ -25,18 +25,18 @@ import org.junit.jupiter.api.extension.ExtendWith;
 
 import org.springframework.aot.AotDetector;
 import org.springframework.aot.test.generate.TestGenerationContext;
-import org.springframework.boot.WebApplicationType;
-import org.springframework.boot.actuate.autoconfigure.endpoint.EndpointAutoConfiguration;
-import org.springframework.boot.actuate.autoconfigure.endpoint.web.WebEndpointAutoConfiguration;
-import org.springframework.boot.test.system.CapturedOutput;
-import org.springframework.boot.test.system.OutputCaptureExtension;
-import org.springframework.boot.test.util.TestPropertyValues;
-import org.springframework.boot.web.server.WebServer;
-import org.springframework.boot.web.server.servlet.MockServletWebServer;
-import org.springframework.boot.web.server.servlet.MockServletWebServerFactory;
-import org.springframework.boot.web.server.servlet.context.AnnotationConfigServletWebServerApplicationContext;
-import org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext;
-import org.springframework.boot.web.servlet.ServletContextInitializer;
+import io.github.kotlinmania.spring.boot.WebApplicationType;
+import io.github.kotlinmania.spring.boot.actuate.autoconfigure.endpoint.EndpointAutoConfiguration;
+import io.github.kotlinmania.spring.boot.actuate.autoconfigure.endpoint.web.WebEndpointAutoConfiguration;
+import io.github.kotlinmania.spring.boot.test.system.CapturedOutput;
+import io.github.kotlinmania.spring.boot.test.system.OutputCaptureExtension;
+import io.github.kotlinmania.spring.boot.test.util.TestPropertyValues;
+import io.github.kotlinmania.spring.boot.web.server.WebServer;
+import io.github.kotlinmania.spring.boot.web.server.servlet.MockServletWebServer;
+import io.github.kotlinmania.spring.boot.web.server.servlet.MockServletWebServerFactory;
+import io.github.kotlinmania.spring.boot.web.server.servlet.context.AnnotationConfigServletWebServerApplicationContext;
+import io.github.kotlinmania.spring.boot.web.server.servlet.context.ServletWebServerApplicationContext;
+import io.github.kotlinmania.spring.boot.web.servlet.ServletContextInitializer;
 import org.springframework.context.ApplicationContextInitializer;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

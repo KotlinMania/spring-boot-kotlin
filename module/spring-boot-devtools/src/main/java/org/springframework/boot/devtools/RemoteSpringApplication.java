@@ -14,25 +14,25 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.devtools;
+package io.github.kotlinmania.spring.boot.devtools;
 
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
-import org.springframework.boot.Banner;
-import org.springframework.boot.ResourceBanner;
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.WebApplicationType;
-import org.springframework.boot.context.config.ConfigDataEnvironmentPostProcessor;
-import org.springframework.boot.context.logging.LoggingApplicationListener;
-import org.springframework.boot.devtools.remote.client.RemoteClientConfiguration;
-import org.springframework.boot.devtools.restart.RestartInitializer;
-import org.springframework.boot.devtools.restart.RestartScopeInitializer;
-import org.springframework.boot.devtools.restart.Restarter;
-import org.springframework.boot.support.AnsiOutputApplicationListener;
-import org.springframework.boot.support.EnvironmentPostProcessorApplicationListener;
-import org.springframework.boot.support.EnvironmentPostProcessorsFactory;
+import io.github.kotlinmania.spring.boot.Banner;
+import io.github.kotlinmania.spring.boot.ResourceBanner;
+import io.github.kotlinmania.spring.boot.SpringApplication;
+import io.github.kotlinmania.spring.boot.WebApplicationType;
+import io.github.kotlinmania.spring.boot.context.config.ConfigDataEnvironmentPostProcessor;
+import io.github.kotlinmania.spring.boot.context.logging.LoggingApplicationListener;
+import io.github.kotlinmania.spring.boot.devtools.remote.client.RemoteClientConfiguration;
+import io.github.kotlinmania.spring.boot.devtools.restart.RestartInitializer;
+import io.github.kotlinmania.spring.boot.devtools.restart.RestartScopeInitializer;
+import io.github.kotlinmania.spring.boot.devtools.restart.Restarter;
+import io.github.kotlinmania.spring.boot.support.AnsiOutputApplicationListener;
+import io.github.kotlinmania.spring.boot.support.EnvironmentPostProcessorApplicationListener;
+import io.github.kotlinmania.spring.boot.support.EnvironmentPostProcessorsFactory;
 import org.springframework.context.ApplicationContextInitializer;
 import org.springframework.context.ApplicationListener;
 import org.springframework.core.io.ClassPathResource;

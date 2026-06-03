@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.ssl.jks;
+package io.github.kotlinmania.spring.boot.ssl.jks;
 
 import java.security.KeyStore;
 

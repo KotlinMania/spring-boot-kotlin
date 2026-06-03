@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.grpc.server.health;
+package io.github.kotlinmania.spring.boot.grpc.server.health;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
@@ -22,7 +22,7 @@ import java.util.Map;
 import io.grpc.health.v1.HealthCheckResponse.ServingStatus;
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.health.contributor.Status;
+import io.github.kotlinmania.spring.boot.health.contributor.Status;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

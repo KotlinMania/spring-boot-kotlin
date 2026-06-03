@@ -14,15 +14,15 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.devtools.logger;
+package io.github.kotlinmania.spring.boot.devtools.logger;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
 
 import org.apache.commons.logging.Log;
 
-import org.springframework.boot.context.event.ApplicationPreparedEvent;
-import org.springframework.boot.logging.DeferredLog;
+import io.github.kotlinmania.spring.boot.context.event.ApplicationPreparedEvent;
+import io.github.kotlinmania.spring.boot.logging.DeferredLog;
 import org.springframework.context.ApplicationListener;
 
 /**

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.autoconfigure.ssl;
+package io.github.kotlinmania.spring.boot.autoconfigure.ssl;
 
 import java.security.KeyStore;
 import java.util.ArrayList;
@@ -22,13 +22,13 @@ import java.util.List;
 
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.autoconfigure.AutoConfigurations;
-import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.boot.context.properties.EnableConfigurationProperties;
-import org.springframework.boot.ssl.SslBundle;
-import org.springframework.boot.ssl.SslBundleRegistry;
-import org.springframework.boot.ssl.SslBundles;
-import org.springframework.boot.test.context.runner.ApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurations;
+import io.github.kotlinmania.spring.boot.context.properties.ConfigurationProperties;
+import io.github.kotlinmania.spring.boot.context.properties.EnableConfigurationProperties;
+import io.github.kotlinmania.spring.boot.ssl.SslBundle;
+import io.github.kotlinmania.spring.boot.ssl.SslBundleRegistry;
+import io.github.kotlinmania.spring.boot.ssl.SslBundles;
+import io.github.kotlinmania.spring.boot.test.context.runner.ApplicationContextRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -54,7 +54,7 @@ class SslAutoConfigurationTests {
 	@Test
 	void sslBundlesCreatedWithCertificates() {
 		List<String> propertyValues = new ArrayList<>();
-		String location = "classpath:org/springframework/boot/autoconfigure/ssl/";
+		String location = "classpath:io.github.kotlinmania.spring.boot.autoconfigure/ssl/";
 		propertyValues.add("spring.ssl.bundle.pem.first.key.alias=alias1");
 		propertyValues.add("spring.ssl.bundle.pem.first.key.password=secret1");
 		propertyValues.add("spring.ssl.bundle.pem.first.keystore.certificate=" + location + "rsa-cert.pem");
@@ -104,7 +104,7 @@ class SslAutoConfigurationTests {
 	@Test
 	void sslBundlesCreatedWithCustomSslBundle() {
 		List<String> propertyValues = new ArrayList<>();
-		String location = "classpath:org/springframework/boot/autoconfigure/ssl/";
+		String location = "classpath:io.github.kotlinmania.spring.boot.autoconfigure/ssl/";
 		propertyValues.add("custom.ssl.key.alias=alias1");
 		propertyValues.add("custom.ssl.key.password=secret1");
 		propertyValues.add("custom.ssl.keystore.certificate=" + location + "rsa-cert.pem");
@@ -135,7 +135,7 @@ class SslAutoConfigurationTests {
 	@Test
 	void sslBundleWithoutClassPathPrefix() {
 		List<String> propertyValues = new ArrayList<>();
-		String location = "src/test/resources/org/springframework/boot/autoconfigure/ssl/";
+		String location = "src/test/resources/io.github.kotlinmania.spring.boot.autoconfigure/ssl/";
 		propertyValues.add("spring.ssl.bundle.pem.test.key.alias=alias1");
 		propertyValues.add("spring.ssl.bundle.pem.test.key.password=secret1");
 		propertyValues.add("spring.ssl.bundle.pem.test.keystore.certificate=" + location + "rsa-cert.pem");

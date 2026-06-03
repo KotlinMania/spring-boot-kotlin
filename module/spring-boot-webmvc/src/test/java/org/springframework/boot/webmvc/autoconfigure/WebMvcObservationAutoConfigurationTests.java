@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.webmvc.autoconfigure;
+package io.github.kotlinmania.spring.boot.webmvc.autoconfigure;
 
 import java.util.EnumSet;
 
@@ -30,18 +30,18 @@ import jakarta.servlet.Filter;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 
-import org.springframework.boot.autoconfigure.AutoConfigurations;
-import org.springframework.boot.micrometer.metrics.MaximumAllowableTagsMeterFilter;
-import org.springframework.boot.micrometer.metrics.autoconfigure.MetricsAutoConfiguration;
-import org.springframework.boot.micrometer.metrics.autoconfigure.MetricsProperties;
-import org.springframework.boot.micrometer.observation.autoconfigure.ObservationAutoConfiguration;
-import org.springframework.boot.micrometer.observation.autoconfigure.ObservationProperties;
-import org.springframework.boot.test.context.FilteredClassLoader;
-import org.springframework.boot.test.context.assertj.AssertableWebApplicationContext;
-import org.springframework.boot.test.context.runner.WebApplicationContextRunner;
-import org.springframework.boot.test.system.CapturedOutput;
-import org.springframework.boot.test.system.OutputCaptureExtension;
-import org.springframework.boot.web.servlet.FilterRegistrationBean;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurations;
+import io.github.kotlinmania.spring.boot.micrometer.metrics.MaximumAllowableTagsMeterFilter;
+import io.github.kotlinmania.spring.boot.micrometer.metrics.autoconfigure.MetricsAutoConfiguration;
+import io.github.kotlinmania.spring.boot.micrometer.metrics.autoconfigure.MetricsProperties;
+import io.github.kotlinmania.spring.boot.micrometer.observation.autoconfigure.ObservationAutoConfiguration;
+import io.github.kotlinmania.spring.boot.micrometer.observation.autoconfigure.ObservationProperties;
+import io.github.kotlinmania.spring.boot.test.context.FilteredClassLoader;
+import io.github.kotlinmania.spring.boot.test.context.assertj.AssertableWebApplicationContext;
+import io.github.kotlinmania.spring.boot.test.context.runner.WebApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.test.system.CapturedOutput;
+import io.github.kotlinmania.spring.boot.test.system.OutputCaptureExtension;
+import io.github.kotlinmania.spring.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.Ordered;

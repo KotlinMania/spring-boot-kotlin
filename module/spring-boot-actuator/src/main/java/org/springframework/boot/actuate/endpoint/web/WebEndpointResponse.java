@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.actuate.endpoint.web;
+package io.github.kotlinmania.spring.boot.actuate.endpoint.web;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.actuate.endpoint.Producible;
-import org.springframework.boot.actuate.endpoint.web.annotation.EndpointWebExtension;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.Producible;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.web.annotation.EndpointWebExtension;
 import org.springframework.util.MimeType;
 
 /**

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.amqp.testcontainers;
+package io.github.kotlinmania.spring.boot.amqp.testcontainers;
 
 import java.time.Duration;
 import java.util.ArrayList;
@@ -32,17 +32,17 @@ import org.testcontainers.utility.MountableFile;
 
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.amqp.autoconfigure.EnvironmentBuilderCustomizer;
-import org.springframework.boot.amqp.autoconfigure.RabbitAutoConfiguration;
-import org.springframework.boot.amqp.autoconfigure.RabbitConnectionDetails;
-import org.springframework.boot.amqp.autoconfigure.RabbitStreamConnectionDetails;
-import org.springframework.boot.amqp.testcontainers.RabbitContainerConnectionDetailsFactory.RabbitMqContainerConnectionDetails;
-import org.springframework.boot.amqp.testcontainers.RabbitStreamContainerConnectionDetailsFactory.RabbitMqStreamContainerConnectionDetails;
-import org.springframework.boot.autoconfigure.ImportAutoConfiguration;
-import org.springframework.boot.testcontainers.service.connection.PemKeyStore;
-import org.springframework.boot.testcontainers.service.connection.PemTrustStore;
-import org.springframework.boot.testcontainers.service.connection.ServiceConnection;
-import org.springframework.boot.testsupport.container.TestImage;
+import io.github.kotlinmania.spring.boot.amqp.autoconfigure.EnvironmentBuilderCustomizer;
+import io.github.kotlinmania.spring.boot.amqp.autoconfigure.RabbitAutoConfiguration;
+import io.github.kotlinmania.spring.boot.amqp.autoconfigure.RabbitConnectionDetails;
+import io.github.kotlinmania.spring.boot.amqp.autoconfigure.RabbitStreamConnectionDetails;
+import io.github.kotlinmania.spring.boot.amqp.testcontainers.RabbitContainerConnectionDetailsFactory.RabbitMqContainerConnectionDetails;
+import io.github.kotlinmania.spring.boot.amqp.testcontainers.RabbitStreamContainerConnectionDetailsFactory.RabbitMqStreamContainerConnectionDetails;
+import io.github.kotlinmania.spring.boot.autoconfigure.ImportAutoConfiguration;
+import io.github.kotlinmania.spring.boot.testcontainers.service.connection.PemKeyStore;
+import io.github.kotlinmania.spring.boot.testcontainers.service.connection.PemTrustStore;
+import io.github.kotlinmania.spring.boot.testcontainers.service.connection.ServiceConnection;
+import io.github.kotlinmania.spring.boot.testsupport.container.TestImage;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.rabbit.stream.producer.RabbitStreamTemplate;
@@ -68,9 +68,9 @@ class RabbitStreamWithSslContainerConnectionDetailsFactoryIntegrationTests {
 
 	@Container
 	@ServiceConnection(type = RabbitStreamConnectionDetails.class)
-	@PemTrustStore(certificate = "classpath:org/springframework/boot/amqp/ca.crt")
-	@PemKeyStore(certificate = "classpath:org/springframework/boot/amqp/client.crt",
-			privateKey = "classpath:org/springframework/boot/amqp/client.key")
+	@PemTrustStore(certificate = "classpath:io.github.kotlinmania.spring.boot.amqp/ca.crt")
+	@PemKeyStore(certificate = "classpath:io.github.kotlinmania.spring.boot.amqp/client.crt",
+			privateKey = "classpath:io.github.kotlinmania.spring.boot.amqp/client.key")
 	static final RabbitMQContainer rabbit = getRabbitMqStreamContainer();
 
 	private static RabbitMQContainer getRabbitMqStreamContainer() {
@@ -80,15 +80,15 @@ class RabbitStreamWithSslContainerConnectionDetailsFactoryIntegrationTests {
 		container.withCopyToContainer(Transferable.of(enabledPlugins), "/etc/rabbitmq/enabled_plugins");
 		container.withCopyFileToContainer(
 				MountableFile
-					.forClasspathResource("org/springframework/boot/amqp/testcontainers/rabbitmq-stream-ssl.conf"),
+					.forClasspathResource("io.github.kotlinmania.spring.boot.amqp/testcontainers/rabbitmq-stream-ssl.conf"),
 				"/etc/rabbitmq/rabbitmq.conf");
-		container.withCopyFileToContainer(MountableFile.forClasspathResource("org/springframework/boot/amqp/ca.crt"),
+		container.withCopyFileToContainer(MountableFile.forClasspathResource("io.github.kotlinmania.spring.boot.amqp/ca.crt"),
 				"/etc/rabbitmq/ca.crt");
 		container.withCopyFileToContainer(
-				MountableFile.forClasspathResource("org/springframework/boot/amqp/server.key"),
+				MountableFile.forClasspathResource("io.github.kotlinmania.spring.boot.amqp/server.key"),
 				"/etc/rabbitmq/server.key");
 		container.withCopyFileToContainer(
-				MountableFile.forClasspathResource("org/springframework/boot/amqp/server.crt"),
+				MountableFile.forClasspathResource("io.github.kotlinmania.spring.boot.amqp/server.crt"),
 				"/etc/rabbitmq/server.crt");
 		return container;
 	}

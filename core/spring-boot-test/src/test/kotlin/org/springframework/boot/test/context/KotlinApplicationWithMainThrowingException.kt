@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.test.context
+package io.github.kotlinmania.spring.boot.test.context
 
-import org.springframework.boot.SpringBootConfiguration
-import org.springframework.boot.runApplication
+import io.github.kotlinmania.spring.boot.SpringBootConfiguration
+import io.github.kotlinmania.spring.boot.runApplication
 
 @SpringBootConfiguration(proxyBeanMethods = false)
 open class KotlinApplicationWithMainThrowingException

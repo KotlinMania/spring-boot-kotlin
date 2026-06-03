@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.webflux.autoconfigure;
+package io.github.kotlinmania.spring.boot.webflux.autoconfigure;
 
-import org.springframework.boot.autoconfigure.web.WebProperties.Resources;
+import io.github.kotlinmania.spring.boot.autoconfigure.web.WebProperties.Resources;
 import org.springframework.util.Assert;
 import org.springframework.web.reactive.config.ResourceChainRegistration;
 import org.springframework.web.reactive.config.ResourceHandlerRegistration;

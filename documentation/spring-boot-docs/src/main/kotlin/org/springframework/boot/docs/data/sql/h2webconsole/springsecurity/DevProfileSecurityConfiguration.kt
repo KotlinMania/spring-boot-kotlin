@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.data.sql.h2webconsole.springsecurity
+package io.github.kotlinmania.spring.boot.docs.data.sql.h2webconsole.springsecurity
 
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration

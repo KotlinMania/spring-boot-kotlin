@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.actuate.autoconfigure.endpoint.jmx;
+package io.github.kotlinmania.spring.boot.actuate.autoconfigure.endpoint.jmx;
 
 import java.util.Arrays;
 import java.util.HashSet;
@@ -27,16 +27,16 @@ import javax.management.ObjectName;
 import org.junit.jupiter.api.Test;
 import org.mockito.ArgumentCaptor;
 
-import org.springframework.boot.actuate.autoconfigure.endpoint.EndpointAutoConfiguration;
-import org.springframework.boot.actuate.endpoint.annotation.Endpoint;
-import org.springframework.boot.actuate.endpoint.annotation.ReadOperation;
-import org.springframework.boot.actuate.endpoint.jmx.EndpointObjectNameFactory;
-import org.springframework.boot.actuate.endpoint.jmx.JmxEndpointExporter;
-import org.springframework.boot.actuate.endpoint.jmx.annotation.JmxEndpointDiscoverer;
-import org.springframework.boot.autoconfigure.AutoConfigurations;
-import org.springframework.boot.autoconfigure.jmx.JmxAutoConfiguration;
-import org.springframework.boot.test.context.runner.ApplicationContextRunner;
-import org.springframework.boot.test.context.runner.ContextConsumer;
+import io.github.kotlinmania.spring.boot.actuate.autoconfigure.endpoint.EndpointAutoConfiguration;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.annotation.Endpoint;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.annotation.ReadOperation;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.jmx.EndpointObjectNameFactory;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.jmx.JmxEndpointExporter;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.jmx.annotation.JmxEndpointDiscoverer;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurations;
+import io.github.kotlinmania.spring.boot.autoconfigure.jmx.JmxAutoConfiguration;
+import io.github.kotlinmania.spring.boot.test.context.runner.ApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.test.context.runner.ContextConsumer;
 import org.springframework.context.ConfigurableApplicationContext;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -105,7 +105,7 @@ class JmxEndpointAutoConfigurationTests {
 		then(this.mBeanServer).should(times(3)).registerMBean(any(Object.class), objectName.capture());
 		Set<ObjectName> uniqueValues = new HashSet<>(objectName.getAllValues());
 		assertThat(uniqueValues).hasSize(3);
-		assertThat(uniqueValues).allMatch((name) -> name.getDomain().equals("org.springframework.boot"));
+		assertThat(uniqueValues).allMatch((name) -> name.getDomain().equals("io.github.kotlinmania.spring.boot.));
 		assertThat(uniqueValues).allMatch((name) -> name.getKeyProperty("type").equals("Endpoint"));
 		assertThat(uniqueValues).allMatch((name) -> name.getKeyProperty("name").equals("Test"));
 		assertThat(uniqueValues).allMatch((name) -> name.getKeyProperty("context") != null);

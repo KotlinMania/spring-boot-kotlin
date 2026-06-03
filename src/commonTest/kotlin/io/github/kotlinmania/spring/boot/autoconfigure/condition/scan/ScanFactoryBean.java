@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.autoconfigure.condition.scan;
+package io.github.kotlinmania.spring.boot.autoconfigure.condition.scan;
 
 import org.springframework.beans.factory.FactoryBean;
 import org.springframework.util.Assert;

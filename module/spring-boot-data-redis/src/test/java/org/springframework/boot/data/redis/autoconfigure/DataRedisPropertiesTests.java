@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.data.redis.autoconfigure;
+package io.github.kotlinmania.spring.boot.data.redis.autoconfigure;
 
 import io.lettuce.core.cluster.ClusterTopologyRefreshOptions;
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.data.redis.autoconfigure.DataRedisProperties.Lettuce;
+import io.github.kotlinmania.spring.boot.data.redis.autoconfigure.DataRedisProperties.Lettuce;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

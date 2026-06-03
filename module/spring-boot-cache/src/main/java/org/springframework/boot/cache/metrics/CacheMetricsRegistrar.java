@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.cache.metrics;
+package io.github.kotlinmania.spring.boot.cache.metrics;
 
 import java.util.Collection;
 import java.util.Objects;
@@ -25,7 +25,7 @@ import io.micrometer.core.instrument.Tags;
 import io.micrometer.core.instrument.binder.MeterBinder;
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.util.LambdaSafe;
+import io.github.kotlinmania.spring.boot.util.LambdaSafe;
 import org.springframework.cache.Cache;
 import org.springframework.cache.transaction.TransactionAwareCacheDecorator;
 import org.springframework.util.ClassUtils;

@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.configurationmetadata.changelog;
+package io.github.kotlinmania.spring.boot.configurationmetadata.changelog;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import org.springframework.boot.configurationmetadata.ConfigurationMetadataProperty;
-import org.springframework.boot.configurationmetadata.ConfigurationMetadataRepository;
-import org.springframework.boot.configurationmetadata.Deprecation.Level;
+import io.github.kotlinmania.spring.boot.configurationmetadata.ConfigurationMetadataProperty;
+import io.github.kotlinmania.spring.boot.configurationmetadata.ConfigurationMetadataRepository;
+import io.github.kotlinmania.spring.boot.configurationmetadata.Deprecation.Level;
 
 /**
  * A changelog containing differences computed from two repositories of configuration

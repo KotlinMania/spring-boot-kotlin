@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.micrometer.tracing.opentelemetry.autoconfigure.zipkin;
+package io.github.kotlinmania.spring.boot.micrometer.tracing.opentelemetry.autoconfigure.zipkin;
 
 import io.opentelemetry.exporter.zipkin.ZipkinSpanExporter;
 import zipkin2.Span;
@@ -23,12 +23,12 @@ import zipkin2.reporter.BytesMessageSender;
 import zipkin2.reporter.Encoding;
 import zipkin2.reporter.SpanBytesEncoder;
 
-import org.springframework.boot.autoconfigure.AutoConfiguration;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
-import org.springframework.boot.micrometer.tracing.autoconfigure.ConditionalOnEnabledTracingExport;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.EnableAutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnBean;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnClass;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnMissingBean;
+import io.github.kotlinmania.spring.boot.micrometer.tracing.autoconfigure.ConditionalOnEnabledTracingExport;
 import org.springframework.context.annotation.Bean;
 
 /**
@@ -43,7 +43,7 @@ import org.springframework.context.annotation.Bean;
  * @deprecated since 4.0.4 for removal in 4.2.0
  */
 @SuppressWarnings("deprecation")
-@AutoConfiguration(afterName = "org.springframework.boot.zipkin.autoconfigure.ZipkinAutoConfiguration")
+@AutoConfiguration(afterName = "io.github.kotlinmania.spring.boot.zipkin.autoconfigure.ZipkinAutoConfiguration")
 @ConditionalOnClass({ ZipkinSpanExporter.class, Span.class })
 @Deprecated(since = "4.0.4", forRemoval = true)
 public final class ZipkinWithOpenTelemetryTracingAutoConfiguration {

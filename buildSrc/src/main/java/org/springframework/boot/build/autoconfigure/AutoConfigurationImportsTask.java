@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.build.autoconfigure;
+package io.github.kotlinmania.spring.boot.build.autoconfigure;
 
 import java.io.File;
 import java.io.IOException;
@@ -41,7 +41,7 @@ public abstract class AutoConfigurationImportsTask extends DefaultTask {
 	/**
 	 * The path of the {@code AutoConfiguration.imports} file.
 	 */
-	public static final String IMPORTS_FILE = "META-INF/spring/org.springframework.boot.autoconfigure.AutoConfiguration.imports";
+	public static final String IMPORTS_FILE = "META-INF/spring/io.github.kotlinmania.spring.boot.autoconfigure.AutoConfiguration.imports";
 
 	private FileCollection sourceFiles = getProject().getObjects().fileCollection();
 

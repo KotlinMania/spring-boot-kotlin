@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.features.externalconfig.typesafeconfigurationproperties.usingannotatedtypes;
+package io.github.kotlinmania.spring.boot.docs.features.externalconfig.typesafeconfigurationproperties.usingannotatedtypes;
 
 import org.springframework.stereotype.Service;
 

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.cassandra.health;
+package io.github.kotlinmania.spring.boot.cassandra.health;
 
 import java.time.Duration;
 import java.util.ArrayList;
@@ -34,8 +34,8 @@ import org.junit.jupiter.api.Test;
 import reactor.core.publisher.Mono;
 import reactor.test.StepVerifier;
 
-import org.springframework.boot.health.contributor.Health;
-import org.springframework.boot.health.contributor.Status;
+import io.github.kotlinmania.spring.boot.health.contributor.Health;
+import io.github.kotlinmania.spring.boot.health.contributor.Status;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatIllegalArgumentException;

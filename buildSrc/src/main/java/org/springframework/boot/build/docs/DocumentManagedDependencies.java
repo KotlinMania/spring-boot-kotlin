@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.build.docs;
+package io.github.kotlinmania.spring.boot.build.docs;
 
 import java.io.File;
 import java.io.FileWriter;
@@ -32,10 +32,10 @@ import org.gradle.api.tasks.PathSensitive;
 import org.gradle.api.tasks.PathSensitivity;
 import org.gradle.api.tasks.TaskAction;
 
-import org.springframework.boot.build.bom.ResolvedBom;
-import org.springframework.boot.build.bom.ResolvedBom.Bom;
-import org.springframework.boot.build.bom.ResolvedBom.Id;
-import org.springframework.boot.build.bom.ResolvedBom.ResolvedLibrary;
+import io.github.kotlinmania.spring.boot.build.bom.ResolvedBom;
+import io.github.kotlinmania.spring.boot.build.bom.ResolvedBom.Bom;
+import io.github.kotlinmania.spring.boot.build.bom.ResolvedBom.Id;
+import io.github.kotlinmania.spring.boot.build.bom.ResolvedBom.ResolvedLibrary;
 
 /**
  * Task for documenting {@link ResolvedBom boms'} managed dependencies.

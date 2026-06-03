@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.data.jdbc.autoconfigure;
+package io.github.kotlinmania.spring.boot.data.jdbc.autoconfigure;
 
 import java.lang.annotation.Annotation;
 
-import org.springframework.boot.autoconfigure.data.AbstractRepositoryConfigurationSourceSupport;
+import io.github.kotlinmania.spring.boot.autoconfigure.data.AbstractRepositoryConfigurationSourceSupport;
 import org.springframework.context.annotation.ImportBeanDefinitionRegistrar;
 import org.springframework.data.jdbc.repository.config.EnableJdbcRepositories;
 import org.springframework.data.jdbc.repository.config.JdbcRepositoryConfigExtension;

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.gradle.tasks.buildinfo;
+package io.github.kotlinmania.spring.boot.gradle.tasks.buildinfo;
 
 import java.io.File;
 import java.io.FileReader;
@@ -27,8 +27,8 @@ import org.gradle.api.Project;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.io.TempDir;
 
-import org.springframework.boot.gradle.junit.GradleProjectBuilder;
-import org.springframework.boot.testsupport.classpath.ClassPathExclusions;
+import io.github.kotlinmania.spring.boot.gradle.junit.GradleProjectBuilder;
+import io.github.kotlinmania.spring.boot.testsupport.classpath.ClassPathExclusions;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatException;

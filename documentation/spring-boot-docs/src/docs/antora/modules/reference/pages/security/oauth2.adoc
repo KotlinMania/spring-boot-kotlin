@@ -9,7 +9,7 @@ https://oauth.net/2/[OAuth2] is a widely used authorization framework.
 == Client
 
 If you have `spring-security-oauth2-client` on your classpath, you can take advantage of some auto-configuration to set up OAuth2/Open ID Connect clients.
-This configuration makes use of the properties under javadoc:org.springframework.boot.security.oauth2.client.autoconfigure.OAuth2ClientProperties[].
+This configuration makes use of the properties under javadoc:io.github.kotlinmania.spring.boot.security.oauth2.client.autoconfigure.OAuth2ClientProperties[].
 The same properties are applicable to both servlet and reactive web applications.
 
 Each registration must specify an OAuth 2 provider.
@@ -212,7 +212,7 @@ spring:
 Again, the same properties are applicable for both servlet and reactive applications.
 
 The result is an auto-configured introspector. Either a javadoc:org.springframework.security.oauth2.server.resource.introspection.SpringOpaqueTokenIntrospector[] or, in a reactive application, a javadoc:org.springframework.security.oauth2.server.resource.introspection.SpringReactiveOpaqueTokenIntrospector[].
-These auto-configured introspectors can be customized using javadoc:org.springframework.boot.security.oauth2.server.resource.autoconfigure.SpringOpaqueTokenIntrospectorBuilderCustomizer[] and javadoc:org.springframework.boot.security.oauth2.server.resource.autoconfigure.reactive.SpringReactiveOpaqueTokenIntrospectorBuilderCustomizer[] beans respectively.
+These auto-configured introspectors can be customized using javadoc:io.github.kotlinmania.spring.boot.security.oauth2.server.resource.autoconfigure.SpringOpaqueTokenIntrospectorBuilderCustomizer[] and javadoc:io.github.kotlinmania.spring.boot.security.oauth2.server.resource.autoconfigure.reactive.SpringReactiveOpaqueTokenIntrospectorBuilderCustomizer[] beans respectively.
 
 To take complete control of the introspection, define your own javadoc:org.springframework.security.oauth2.server.resource.introspection.OpaqueTokenIntrospector[] or javadoc:org.springframework.security.oauth2.server.resource.introspection.ReactiveOpaqueTokenIntrospector[] bean.
 

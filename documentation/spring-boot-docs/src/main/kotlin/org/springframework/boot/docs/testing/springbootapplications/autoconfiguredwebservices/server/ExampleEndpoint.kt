@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.testing.springbootapplications.autoconfiguredwebservices.server
+package io.github.kotlinmania.spring.boot.docs.testing.springbootapplications.autoconfiguredwebservices.server
 
 import javax.xml.transform.Source
 

@@ -18,6 +18,6 @@
  * Support classes for Servlet-based web servers.
  */
 @NullMarked
-package org.springframework.boot.web.servlet.support;
+package io.github.kotlinmania.spring.boot.web.servlet.support;
 
 import org.jspecify.annotations.NullMarked;

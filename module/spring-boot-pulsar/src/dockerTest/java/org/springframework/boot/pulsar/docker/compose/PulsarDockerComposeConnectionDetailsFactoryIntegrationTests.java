@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.pulsar.docker.compose;
+package io.github.kotlinmania.spring.boot.pulsar.docker.compose;
 
-import org.springframework.boot.docker.compose.service.connection.test.DockerComposeTest;
-import org.springframework.boot.pulsar.autoconfigure.PulsarConnectionDetails;
-import org.springframework.boot.testsupport.container.TestImage;
+import io.github.kotlinmania.spring.boot.docker.compose.service.connection.test.DockerComposeTest;
+import io.github.kotlinmania.spring.boot.pulsar.autoconfigure.PulsarConnectionDetails;
+import io.github.kotlinmania.spring.boot.testsupport.container.TestImage;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.build.mavenplugin;
+package io.github.kotlinmania.spring.boot.build.mavenplugin;
 
 import java.io.File;
 import java.io.FileWriter;
@@ -83,13 +83,13 @@ import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
-import org.springframework.boot.build.DeployedPlugin;
-import org.springframework.boot.build.MavenRepositoryPlugin;
-import org.springframework.boot.build.bom.ResolvedBom;
-import org.springframework.boot.build.bom.ResolvedBom.ResolvedLibrary;
-import org.springframework.boot.build.optional.OptionalDependenciesPlugin;
-import org.springframework.boot.build.test.DockerTestPlugin;
-import org.springframework.boot.build.test.IntegrationTestPlugin;
+import io.github.kotlinmania.spring.boot.build.DeployedPlugin;
+import io.github.kotlinmania.spring.boot.build.MavenRepositoryPlugin;
+import io.github.kotlinmania.spring.boot.build.bom.ResolvedBom;
+import io.github.kotlinmania.spring.boot.build.bom.ResolvedBom.ResolvedLibrary;
+import io.github.kotlinmania.spring.boot.build.optional.OptionalDependenciesPlugin;
+import io.github.kotlinmania.spring.boot.build.test.DockerTestPlugin;
+import io.github.kotlinmania.spring.boot.build.test.IntegrationTestPlugin;
 import org.springframework.core.CollectionFactory;
 
 /**

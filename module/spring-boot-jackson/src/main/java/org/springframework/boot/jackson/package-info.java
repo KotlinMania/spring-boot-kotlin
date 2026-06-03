@@ -18,6 +18,6 @@
  * Custom enhancements and support for the Jackson project.
  */
 @NullMarked
-package org.springframework.boot.jackson;
+package io.github.kotlinmania.spring.boot.jackson;
 
 import org.jspecify.annotations.NullMarked;

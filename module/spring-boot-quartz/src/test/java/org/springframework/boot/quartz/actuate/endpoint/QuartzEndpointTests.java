@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.quartz.actuate.endpoint;
+package io.github.kotlinmania.spring.boot.quartz.actuate.endpoint;
 
 import java.time.Duration;
 import java.time.Instant;
@@ -62,12 +62,12 @@ import org.quartz.TriggerKey;
 import org.quartz.impl.matchers.GroupMatcher;
 import org.quartz.spi.OperableTrigger;
 
-import org.springframework.boot.quartz.actuate.endpoint.QuartzEndpoint.QuartzDescriptor;
-import org.springframework.boot.quartz.actuate.endpoint.QuartzEndpoint.QuartzJobDetailsDescriptor;
-import org.springframework.boot.quartz.actuate.endpoint.QuartzEndpoint.QuartzJobGroupSummaryDescriptor;
-import org.springframework.boot.quartz.actuate.endpoint.QuartzEndpoint.QuartzJobSummaryDescriptor;
-import org.springframework.boot.quartz.actuate.endpoint.QuartzEndpoint.QuartzJobTriggerDescriptor;
-import org.springframework.boot.quartz.actuate.endpoint.QuartzEndpoint.QuartzTriggerGroupSummaryDescriptor;
+import io.github.kotlinmania.spring.boot.quartz.actuate.endpoint.QuartzEndpoint.QuartzDescriptor;
+import io.github.kotlinmania.spring.boot.quartz.actuate.endpoint.QuartzEndpoint.QuartzJobDetailsDescriptor;
+import io.github.kotlinmania.spring.boot.quartz.actuate.endpoint.QuartzEndpoint.QuartzJobGroupSummaryDescriptor;
+import io.github.kotlinmania.spring.boot.quartz.actuate.endpoint.QuartzEndpoint.QuartzJobSummaryDescriptor;
+import io.github.kotlinmania.spring.boot.quartz.actuate.endpoint.QuartzEndpoint.QuartzJobTriggerDescriptor;
+import io.github.kotlinmania.spring.boot.quartz.actuate.endpoint.QuartzEndpoint.QuartzTriggerGroupSummaryDescriptor;
 import org.springframework.scheduling.quartz.DelegatingJob;
 import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.util.MultiValueMap;

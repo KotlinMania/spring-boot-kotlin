@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.buildpack.platform.build;
+package io.github.kotlinmania.spring.boot.buildpack.platform.build;
 
 import java.util.Objects;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.buildpack.platform.docker.type.VolumeName;
+import io.github.kotlinmania.spring.boot.buildpack.platform.docker.type.VolumeName;
 import org.springframework.util.Assert;
 import org.springframework.util.ObjectUtils;
 

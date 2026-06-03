@@ -15,9 +15,9 @@
  */
 
 /**
- * Classes supporting application concerns and the org.springframework.boot package.
+ * Classes supporting application concerns and the io.github.kotlinmania.spring.boot.package.
  */
 @NullMarked
-package org.springframework.boot.support;
+package io.github.kotlinmania.spring.boot.support;
 
 import org.jspecify.annotations.NullMarked;

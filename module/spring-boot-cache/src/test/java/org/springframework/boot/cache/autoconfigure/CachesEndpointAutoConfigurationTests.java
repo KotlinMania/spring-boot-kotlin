@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.cache.autoconfigure;
+package io.github.kotlinmania.spring.boot.cache.autoconfigure;
 
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.autoconfigure.AutoConfigurations;
-import org.springframework.boot.cache.actuate.endpoint.CachesEndpoint;
-import org.springframework.boot.cache.actuate.endpoint.CachesEndpointWebExtension;
-import org.springframework.boot.test.context.runner.ApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurations;
+import io.github.kotlinmania.spring.boot.cache.actuate.endpoint.CachesEndpoint;
+import io.github.kotlinmania.spring.boot.cache.actuate.endpoint.CachesEndpointWebExtension;
+import io.github.kotlinmania.spring.boot.test.context.runner.ApplicationContextRunner;
 import org.springframework.cache.CacheManager;
 
 import static org.assertj.core.api.Assertions.assertThat;

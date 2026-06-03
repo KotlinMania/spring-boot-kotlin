@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.cloudfoundry.autoconfigure.actuate.endpoint.servlet;
+package io.github.kotlinmania.spring.boot.cloudfoundry.autoconfigure.actuate.endpoint.servlet;
 
 import java.util.Collection;
 import java.util.Collections;
@@ -33,18 +33,18 @@ import org.springframework.aot.hint.RuntimeHints;
 import org.springframework.aot.hint.RuntimeHintsRegistrar;
 import org.springframework.aot.hint.annotation.Reflective;
 import org.springframework.aot.hint.annotation.ReflectiveRuntimeHintsRegistrar;
-import org.springframework.boot.actuate.endpoint.EndpointId;
-import org.springframework.boot.actuate.endpoint.ExposableEndpoint;
-import org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver;
-import org.springframework.boot.actuate.endpoint.web.EndpointMapping;
-import org.springframework.boot.actuate.endpoint.web.EndpointMediaTypes;
-import org.springframework.boot.actuate.endpoint.web.ExposableWebEndpoint;
-import org.springframework.boot.actuate.endpoint.web.Link;
-import org.springframework.boot.actuate.endpoint.web.WebOperation;
-import org.springframework.boot.cloudfoundry.autoconfigure.actuate.endpoint.AccessLevel;
-import org.springframework.boot.cloudfoundry.autoconfigure.actuate.endpoint.SecurityResponse;
-import org.springframework.boot.cloudfoundry.autoconfigure.actuate.endpoint.servlet.CloudFoundryWebEndpointServletHandlerMapping.CloudFoundryWebEndpointServletHandlerMappingRuntimeHints;
-import org.springframework.boot.webmvc.actuate.endpoint.web.AbstractWebMvcEndpointHandlerMapping;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.EndpointId;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.ExposableEndpoint;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.web.EndpointLinksResolver;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.web.EndpointMapping;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.web.EndpointMediaTypes;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.web.ExposableWebEndpoint;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.web.Link;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.web.WebOperation;
+import io.github.kotlinmania.spring.boot.cloudfoundry.autoconfigure.actuate.endpoint.AccessLevel;
+import io.github.kotlinmania.spring.boot.cloudfoundry.autoconfigure.actuate.endpoint.SecurityResponse;
+import io.github.kotlinmania.spring.boot.cloudfoundry.autoconfigure.actuate.endpoint.servlet.CloudFoundryWebEndpointServletHandlerMapping.CloudFoundryWebEndpointServletHandlerMappingRuntimeHints;
+import io.github.kotlinmania.spring.boot.webmvc.actuate.endpoint.web.AbstractWebMvcEndpointHandlerMapping;
 import org.springframework.context.annotation.ImportRuntimeHints;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

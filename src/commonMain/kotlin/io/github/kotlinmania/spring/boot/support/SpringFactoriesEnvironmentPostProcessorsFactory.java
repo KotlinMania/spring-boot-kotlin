@@ -14,18 +14,18 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.support;
+package io.github.kotlinmania.spring.boot.support;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import org.springframework.boot.EnvironmentPostProcessor;
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.bootstrap.BootstrapContext;
-import org.springframework.boot.bootstrap.BootstrapRegistry;
-import org.springframework.boot.bootstrap.ConfigurableBootstrapContext;
-import org.springframework.boot.logging.DeferredLogFactory;
+import io.github.kotlinmania.spring.boot.EnvironmentPostProcessor;
+import io.github.kotlinmania.spring.boot.SpringApplication;
+import io.github.kotlinmania.spring.boot.bootstrap.BootstrapContext;
+import io.github.kotlinmania.spring.boot.bootstrap.BootstrapRegistry;
+import io.github.kotlinmania.spring.boot.bootstrap.ConfigurableBootstrapContext;
+import io.github.kotlinmania.spring.boot.logging.DeferredLogFactory;
 import org.springframework.core.annotation.AnnotationAwareOrderComparator;
 import org.springframework.core.env.ConfigurableEnvironment;
 import org.springframework.core.io.support.SpringFactoriesLoader;
@@ -59,14 +59,14 @@ class SpringFactoriesEnvironmentPostProcessorsFactory implements EnvironmentPost
 	}
 
 	@SuppressWarnings("removal")
-	private List<org.springframework.boot.env.EnvironmentPostProcessor> loadDeprecatedPostProcessors(
+	private List<io.github.kotlinmania.spring.boot.env.EnvironmentPostProcessor> loadDeprecatedPostProcessors(
 			ArgumentResolver argumentResolver) {
-		return this.loader.load(org.springframework.boot.env.EnvironmentPostProcessor.class, argumentResolver);
+		return this.loader.load(io.github.kotlinmania.spring.boot.env.EnvironmentPostProcessor.class, argumentResolver);
 	}
 
 	@SuppressWarnings("removal")
 	record Adapter(
-			org.springframework.boot.env.EnvironmentPostProcessor postProcessor) implements EnvironmentPostProcessor {
+			io.github.kotlinmania.spring.boot.env.EnvironmentPostProcessor postProcessor) implements EnvironmentPostProcessor {
 
 		@Override
 		public void postProcessEnvironment(ConfigurableEnvironment environment, SpringApplication application) {
@@ -77,7 +77,7 @@ class SpringFactoriesEnvironmentPostProcessorsFactory implements EnvironmentPost
 			if (source instanceof EnvironmentPostProcessor environmentPostProcessor) {
 				return environmentPostProcessor;
 			}
-			return new Adapter((org.springframework.boot.env.EnvironmentPostProcessor) source);
+			return new Adapter((io.github.kotlinmania.spring.boot.env.EnvironmentPostProcessor) source);
 		}
 
 	}

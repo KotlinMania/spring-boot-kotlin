@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.data.redis.autoconfigure;
+package io.github.kotlinmania.spring.boot.data.redis.autoconfigure;
 
 import com.redis.testcontainers.RedisContainer;
 import org.junit.jupiter.api.AfterEach;
@@ -23,13 +23,13 @@ import org.junit.jupiter.api.Test;
 import org.testcontainers.junit.jupiter.Container;
 import org.testcontainers.junit.jupiter.Testcontainers;
 
-import org.springframework.boot.autoconfigure.TestAutoConfigurationPackage;
-import org.springframework.boot.autoconfigure.context.PropertyPlaceholderAutoConfiguration;
-import org.springframework.boot.data.redis.domain.city.City;
-import org.springframework.boot.data.redis.domain.city.CityRepository;
-import org.springframework.boot.data.redis.domain.empty.EmptyPackage;
-import org.springframework.boot.test.util.TestPropertyValues;
-import org.springframework.boot.testsupport.container.TestImage;
+import io.github.kotlinmania.spring.boot.autoconfigure.TestAutoConfigurationPackage;
+import io.github.kotlinmania.spring.boot.autoconfigure.context.PropertyPlaceholderAutoConfiguration;
+import io.github.kotlinmania.spring.boot.data.redis.domain.city.City;
+import io.github.kotlinmania.spring.boot.data.redis.domain.city.CityRepository;
+import io.github.kotlinmania.spring.boot.data.redis.domain.empty.EmptyPackage;
+import io.github.kotlinmania.spring.boot.test.util.TestPropertyValues;
+import io.github.kotlinmania.spring.boot.testsupport.container.TestImage;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.redis.repository.configuration.EnableRedisRepositories;

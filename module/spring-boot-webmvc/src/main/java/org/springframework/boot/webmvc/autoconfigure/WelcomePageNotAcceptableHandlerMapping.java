@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.webmvc.autoconfigure;
+package io.github.kotlinmania.spring.boot.webmvc.autoconfigure;
 
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.autoconfigure.template.TemplateAvailabilityProviders;
+import io.github.kotlinmania.spring.boot.autoconfigure.template.TemplateAvailabilityProviders;
 import org.springframework.context.ApplicationContext;
 import org.springframework.core.io.Resource;
 import org.springframework.http.HttpStatus;

@@ -1,2 +1,2 @@
-org.springframework.boot.data.jpa.autoconfigure.DataJpaRepositoriesAutoConfiguration
-org.springframework.boot.hibernate.autoconfigure.HibernateJpaAutoConfiguration
+io.github.kotlinmania.spring.boot.data.jpa.autoconfigure.DataJpaRepositoriesAutoConfiguration
+io.github.kotlinmania.spring.boot.hibernate.autoconfigure.HibernateJpaAutoConfiguration

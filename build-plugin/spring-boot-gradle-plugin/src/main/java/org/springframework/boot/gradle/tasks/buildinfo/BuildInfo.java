@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.gradle.tasks.buildinfo;
+package io.github.kotlinmania.spring.boot.gradle.tasks.buildinfo;
 
 import java.io.File;
 import java.io.IOException;
@@ -33,8 +33,8 @@ import org.gradle.api.tasks.TaskAction;
 import org.gradle.api.tasks.TaskExecutionException;
 import org.gradle.work.DisableCachingByDefault;
 
-import org.springframework.boot.loader.tools.BuildPropertiesWriter;
-import org.springframework.boot.loader.tools.BuildPropertiesWriter.ProjectDetails;
+import io.github.kotlinmania.spring.boot.loader.tools.BuildPropertiesWriter;
+import io.github.kotlinmania.spring.boot.loader.tools.BuildPropertiesWriter.ProjectDetails;
 
 /**
  * {@link Task} for generating a build info properties file from

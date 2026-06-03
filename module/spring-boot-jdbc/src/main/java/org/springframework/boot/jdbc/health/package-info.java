@@ -18,6 +18,6 @@
  * Health integration for JDBC.
  */
 @NullMarked
-package org.springframework.boot.jdbc.health;
+package io.github.kotlinmania.spring.boot.jdbc.health;
 
 import org.jspecify.annotations.NullMarked;

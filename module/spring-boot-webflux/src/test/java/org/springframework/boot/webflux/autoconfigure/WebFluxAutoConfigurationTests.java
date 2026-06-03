@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.webflux.autoconfigure;
+package io.github.kotlinmania.spring.boot.webflux.autoconfigure;
 
 import java.time.Duration;
 import java.time.LocalDateTime;
@@ -48,23 +48,23 @@ import reactor.core.publisher.Mono;
 import org.springframework.aop.support.AopUtils;
 import org.springframework.aot.hint.RuntimeHints;
 import org.springframework.aot.hint.predicate.RuntimeHintsPredicates;
-import org.springframework.boot.autoconfigure.AutoConfigurations;
-import org.springframework.boot.autoconfigure.task.TaskExecutionAutoConfiguration;
-import org.springframework.boot.http.codec.CodecCustomizer;
-import org.springframework.boot.test.context.runner.ApplicationContextRunner;
-import org.springframework.boot.test.context.runner.ContextConsumer;
-import org.springframework.boot.test.context.runner.ReactiveWebApplicationContextRunner;
-import org.springframework.boot.testsupport.classpath.resources.WithResource;
-import org.springframework.boot.validation.autoconfigure.ValidationAutoConfiguration;
-import org.springframework.boot.validation.autoconfigure.ValidatorAdapter;
-import org.springframework.boot.web.context.reactive.ReactiveWebApplicationContext;
-import org.springframework.boot.web.server.autoconfigure.ServerProperties;
-import org.springframework.boot.web.server.reactive.MockReactiveWebServerFactory;
-import org.springframework.boot.webflux.autoconfigure.WebFluxAutoConfiguration.WebFluxConfig;
-import org.springframework.boot.webflux.autoconfigure.WebFluxAutoConfiguration.WebFluxValidatorRuntimeHints;
-import org.springframework.boot.webflux.autoconfigure.WebFluxAutoConfigurationTests.OrderedControllerAdviceBeansConfiguration.HighestOrderedControllerAdvice;
-import org.springframework.boot.webflux.autoconfigure.WebFluxAutoConfigurationTests.OrderedControllerAdviceBeansConfiguration.LowestOrderedControllerAdvice;
-import org.springframework.boot.webflux.filter.OrderedHiddenHttpMethodFilter;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurations;
+import io.github.kotlinmania.spring.boot.autoconfigure.task.TaskExecutionAutoConfiguration;
+import io.github.kotlinmania.spring.boot.http.codec.CodecCustomizer;
+import io.github.kotlinmania.spring.boot.test.context.runner.ApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.test.context.runner.ContextConsumer;
+import io.github.kotlinmania.spring.boot.test.context.runner.ReactiveWebApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.testsupport.classpath.resources.WithResource;
+import io.github.kotlinmania.spring.boot.validation.autoconfigure.ValidationAutoConfiguration;
+import io.github.kotlinmania.spring.boot.validation.autoconfigure.ValidatorAdapter;
+import io.github.kotlinmania.spring.boot.web.context.reactive.ReactiveWebApplicationContext;
+import io.github.kotlinmania.spring.boot.web.server.autoconfigure.ServerProperties;
+import io.github.kotlinmania.spring.boot.web.server.reactive.MockReactiveWebServerFactory;
+import io.github.kotlinmania.spring.boot.webflux.autoconfigure.WebFluxAutoConfiguration.WebFluxConfig;
+import io.github.kotlinmania.spring.boot.webflux.autoconfigure.WebFluxAutoConfiguration.WebFluxValidatorRuntimeHints;
+import io.github.kotlinmania.spring.boot.webflux.autoconfigure.WebFluxAutoConfigurationTests.OrderedControllerAdviceBeansConfiguration.HighestOrderedControllerAdvice;
+import io.github.kotlinmania.spring.boot.webflux.autoconfigure.WebFluxAutoConfigurationTests.OrderedControllerAdviceBeansConfiguration.LowestOrderedControllerAdvice;
+import io.github.kotlinmania.spring.boot.webflux.filter.OrderedHiddenHttpMethodFilter;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

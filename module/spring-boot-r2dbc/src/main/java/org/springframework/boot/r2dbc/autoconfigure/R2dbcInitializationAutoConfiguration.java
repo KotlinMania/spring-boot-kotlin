@@ -14,20 +14,20 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.r2dbc.autoconfigure;
+package io.github.kotlinmania.spring.boot.r2dbc.autoconfigure;
 
 import io.r2dbc.spi.ConnectionFactory;
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.autoconfigure.AutoConfiguration;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnSingleCandidate;
-import org.springframework.boot.context.properties.EnableConfigurationProperties;
-import org.springframework.boot.r2dbc.ConnectionFactoryBuilder;
-import org.springframework.boot.sql.autoconfigure.init.ConditionalOnSqlInitialization;
-import org.springframework.boot.sql.autoconfigure.init.SqlInitializationProperties;
-import org.springframework.boot.sql.init.dependency.DatabaseInitializationDependencyConfigurer;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnClass;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnMissingBean;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnSingleCandidate;
+import io.github.kotlinmania.spring.boot.context.properties.EnableConfigurationProperties;
+import io.github.kotlinmania.spring.boot.r2dbc.ConnectionFactoryBuilder;
+import io.github.kotlinmania.spring.boot.sql.autoconfigure.init.ConditionalOnSqlInitialization;
+import io.github.kotlinmania.spring.boot.sql.autoconfigure.init.SqlInitializationProperties;
+import io.github.kotlinmania.spring.boot.sql.init.dependency.DatabaseInitializationDependencyConfigurer;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Import;
 import org.springframework.r2dbc.connection.init.DatabasePopulator;
@@ -45,7 +45,7 @@ import org.springframework.util.StringUtils;
 @ConditionalOnClass({ ConnectionFactory.class, DatabasePopulator.class })
 @ConditionalOnSingleCandidate(ConnectionFactory.class)
 @ConditionalOnMissingBean(value = ApplicationR2dbcScriptDatabaseInitializer.class,
-		type = "org.springframework.boot.jdbc.autoconfigure.ApplicationDataSourceScriptDatabaseInitializer")
+		type = "io.github.kotlinmania.spring.boot.jdbc.autoconfigure.ApplicationDataSourceScriptDatabaseInitializer")
 @ConditionalOnSqlInitialization
 @Import(DatabaseInitializationDependencyConfigurer.class)
 @EnableConfigurationProperties(SqlInitializationProperties.class)

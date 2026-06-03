@@ -2,12 +2,12 @@
 = Profiles
 
 Spring Profiles provide a way to segregate parts of your application configuration and make it be available only in certain environments.
-Any javadoc:org.springframework.stereotype.Component[format=annotation], javadoc:org.springframework.context.annotation.Configuration[format=annotation] or javadoc:org.springframework.boot.context.properties.ConfigurationProperties[format=annotation] can be marked with javadoc:org.springframework.context.annotation.Profile[format=annotation] to limit when it is loaded, as shown in the following example:
+Any javadoc:org.springframework.stereotype.Component[format=annotation], javadoc:org.springframework.context.annotation.Configuration[format=annotation] or javadoc:io.github.kotlinmania.spring.boot.context.properties.ConfigurationProperties[format=annotation] can be marked with javadoc:org.springframework.context.annotation.Profile[format=annotation] to limit when it is loaded, as shown in the following example:
 
 include-code::ProductionConfiguration[]
 
-NOTE: If javadoc:org.springframework.boot.context.properties.ConfigurationProperties[format=annotation] beans are registered through javadoc:org.springframework.boot.context.properties.EnableConfigurationProperties[format=annotation] instead of automatic scanning, the javadoc:org.springframework.context.annotation.Profile[format=annotation] annotation needs to be specified on the javadoc:org.springframework.context.annotation.Configuration[format=annotation] class that has the javadoc:org.springframework.boot.context.properties.EnableConfigurationProperties[format=annotation] annotation.
-In the case where javadoc:org.springframework.boot.context.properties.ConfigurationProperties[format=annotation] are scanned, javadoc:org.springframework.context.annotation.Profile[format=annotation] can be specified on the javadoc:org.springframework.boot.context.properties.ConfigurationProperties[format=annotation] class itself.
+NOTE: If javadoc:io.github.kotlinmania.spring.boot.context.properties.ConfigurationProperties[format=annotation] beans are registered through javadoc:io.github.kotlinmania.spring.boot.context.properties.EnableConfigurationProperties[format=annotation] instead of automatic scanning, the javadoc:org.springframework.context.annotation.Profile[format=annotation] annotation needs to be specified on the javadoc:org.springframework.context.annotation.Configuration[format=annotation] class that has the javadoc:io.github.kotlinmania.spring.boot.context.properties.EnableConfigurationProperties[format=annotation] annotation.
+In the case where javadoc:io.github.kotlinmania.spring.boot.context.properties.ConfigurationProperties[format=annotation] are scanned, javadoc:org.springframework.context.annotation.Profile[format=annotation] can be specified on the javadoc:io.github.kotlinmania.spring.boot.context.properties.ConfigurationProperties[format=annotation] class itself.
 
 You can use a configprop:spring.profiles.active[] javadoc:org.springframework.core.env.Environment[] property to specify which profiles are active.
 You can specify the property in any of the ways described earlier in this chapter.
@@ -82,8 +82,8 @@ spring:
 
 Sometimes, it is useful to have properties that *add* to the active profiles rather than replace them.
 The configprop:spring.profiles.include[] property can be used to add active profiles on top of those activated by the configprop:spring.profiles.active[] property.
-The javadoc:org.springframework.boot.SpringApplication[] entry point also has a Java API for setting additional profiles.
-See the `setAdditionalProfiles()` method in javadoc:org.springframework.boot.SpringApplication[].
+The javadoc:io.github.kotlinmania.spring.boot.SpringApplication[] entry point also has a Java API for setting additional profiles.
+See the `setAdditionalProfiles()` method in javadoc:io.github.kotlinmania.spring.boot.SpringApplication[].
 
 For example, when an application with the following properties is run, the common and local profiles will be activated even when it runs using the `--spring.profiles.active` switch:
 
@@ -145,5 +145,5 @@ It is also possible to activate profiles by using Spring's javadoc:org.springfra
 [[features.profiles.profile-specific-configuration-files]]
 == Profile-specific Configuration Files
 
-Profile-specific variants of both `application.properties` (or `application.yaml`) and files referenced through javadoc:org.springframework.boot.context.properties.ConfigurationProperties[format=annotation] are considered as files and loaded.
+Profile-specific variants of both `application.properties` (or `application.yaml`) and files referenced through javadoc:io.github.kotlinmania.spring.boot.context.properties.ConfigurationProperties[format=annotation] are considered as files and loaded.
 See xref:features/external-config.adoc#features.external-config.files.profile-specific[] for details.

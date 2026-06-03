@@ -14,18 +14,18 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.graphql.autoconfigure.observation;
+package io.github.kotlinmania.spring.boot.graphql.autoconfigure.observation;
 
 import graphql.GraphQL;
 import io.micrometer.observation.Observation;
 import io.micrometer.observation.ObservationRegistry;
 
 import org.springframework.beans.factory.ObjectProvider;
-import org.springframework.boot.autoconfigure.AutoConfiguration;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.EnableAutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnBean;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnClass;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.graphql.execution.GraphQlSource;
 import org.springframework.graphql.observation.DataFetcherObservationConvention;
@@ -41,7 +41,7 @@ import org.springframework.graphql.observation.GraphQlObservationInstrumentation
  * @since 4.0.0
  */
 @AutoConfiguration(
-		afterName = "org.springframework.boot.micrometer.observation.autoconfigure.ObservationAutoConfiguration")
+		afterName = "io.github.kotlinmania.spring.boot.micrometer.observation.autoconfigure.ObservationAutoConfiguration")
 @ConditionalOnBean(ObservationRegistry.class)
 @ConditionalOnClass({ GraphQL.class, GraphQlSource.class, Observation.class })
 public final class GraphQlObservationAutoConfiguration {

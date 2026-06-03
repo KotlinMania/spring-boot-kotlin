@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.maven;
+package io.github.kotlinmania.spring.boot.maven;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -44,15 +44,15 @@ import org.jspecify.annotations.Nullable;
 import org.w3c.dom.Document;
 import org.xml.sax.InputSource;
 
-import org.springframework.boot.loader.tools.Layout;
-import org.springframework.boot.loader.tools.LayoutFactory;
-import org.springframework.boot.loader.tools.Layouts.Expanded;
-import org.springframework.boot.loader.tools.Layouts.Jar;
-import org.springframework.boot.loader.tools.Layouts.None;
-import org.springframework.boot.loader.tools.Layouts.War;
-import org.springframework.boot.loader.tools.Libraries;
-import org.springframework.boot.loader.tools.Packager;
-import org.springframework.boot.loader.tools.layer.CustomLayers;
+import io.github.kotlinmania.spring.boot.loader.tools.Layout;
+import io.github.kotlinmania.spring.boot.loader.tools.LayoutFactory;
+import io.github.kotlinmania.spring.boot.loader.tools.Layouts.Expanded;
+import io.github.kotlinmania.spring.boot.loader.tools.Layouts.Jar;
+import io.github.kotlinmania.spring.boot.loader.tools.Layouts.None;
+import io.github.kotlinmania.spring.boot.loader.tools.Layouts.War;
+import io.github.kotlinmania.spring.boot.loader.tools.Libraries;
+import io.github.kotlinmania.spring.boot.loader.tools.Packager;
+import io.github.kotlinmania.spring.boot.loader.tools.layer.CustomLayers;
 
 /**
  * Abstract base class for classes that work with an {@link Packager}.
@@ -64,7 +64,7 @@ import org.springframework.boot.loader.tools.layer.CustomLayers;
  */
 public abstract class AbstractPackagerMojo extends AbstractDependencyFilterMojo {
 
-	private static final org.springframework.boot.loader.tools.Layers IMPLICIT_LAYERS = org.springframework.boot.loader.tools.Layers.IMPLICIT;
+	private static final io.github.kotlinmania.spring.boot.loader.tools.Layers IMPLICIT_LAYERS = io.github.kotlinmania.spring.boot.loader.tools.Layers.IMPLICIT;
 
 	/**
 	 * The Maven project.
@@ -196,7 +196,7 @@ public abstract class AbstractPackagerMojo extends AbstractDependencyFilterMojo 
 		return this.includeTools;
 	}
 
-	private org.springframework.boot.loader.tools.Layers loadLayersConfiguration() {
+	private io.github.kotlinmania.spring.boot.loader.tools.Layers loadLayersConfiguration() {
 		File configuration = this.layers.getConfiguration();
 		if (configuration != null) {
 			return getCustomLayers(configuration.getAbsolutePath(), () -> new FileInputStream(configuration));

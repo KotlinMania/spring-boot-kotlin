@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.webflux.autoconfigure.error;
+package io.github.kotlinmania.spring.boot.webflux.autoconfigure.error;
 
 import java.util.Collections;
 import java.util.List;
@@ -25,11 +25,11 @@ import org.jspecify.annotations.Nullable;
 import reactor.core.publisher.Mono;
 
 import org.springframework.beans.factory.InitializingBean;
-import org.springframework.boot.autoconfigure.template.TemplateAvailabilityProviders;
-import org.springframework.boot.autoconfigure.web.WebProperties.Resources;
-import org.springframework.boot.web.error.ErrorAttributeOptions;
-import org.springframework.boot.webflux.error.ErrorAttributes;
-import org.springframework.boot.webflux.error.ErrorWebExceptionHandler;
+import io.github.kotlinmania.spring.boot.autoconfigure.template.TemplateAvailabilityProviders;
+import io.github.kotlinmania.spring.boot.autoconfigure.web.WebProperties.Resources;
+import io.github.kotlinmania.spring.boot.web.error.ErrorAttributeOptions;
+import io.github.kotlinmania.spring.boot.webflux.error.ErrorAttributes;
+import io.github.kotlinmania.spring.boot.webflux.error.ErrorWebExceptionHandler;
 import org.springframework.context.ApplicationContext;
 import org.springframework.core.io.Resource;
 import org.springframework.core.log.LogMessage;

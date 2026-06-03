@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.test.mock.web;
+package io.github.kotlinmania.spring.boot.test.mock.web;
 
 import java.io.File;
 import java.io.IOException;

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.persistence.autoconfigure.scan.c;
+package io.github.kotlinmania.spring.boot.persistence.autoconfigure.scan.c;
 
 import jakarta.persistence.Entity;
 

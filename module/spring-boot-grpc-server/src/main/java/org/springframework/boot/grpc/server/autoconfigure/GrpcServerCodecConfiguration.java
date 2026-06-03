@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.grpc.server.autoconfigure;
+package io.github.kotlinmania.spring.boot.grpc.server.autoconfigure;
 
 import java.util.List;
 
@@ -24,7 +24,7 @@ import io.grpc.Decompressor;
 import io.grpc.DecompressorRegistry;
 import io.grpc.ServerBuilder;
 
-import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 

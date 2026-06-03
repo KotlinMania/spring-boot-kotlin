@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.json;
+package io.github.kotlinmania.spring.boot.json;
 
 import org.springframework.util.ClassUtils;
 

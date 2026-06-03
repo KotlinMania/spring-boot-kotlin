@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docker.compose.service.connection.test;
+package io.github.kotlinmania.spring.boot.docker.compose.service.connection.test;
 
 import java.lang.annotation.Documented;
 import java.lang.annotation.ElementType;
@@ -25,11 +25,11 @@ import java.lang.annotation.Target;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.service.connection.ConnectionDetails;
-import org.springframework.boot.testsupport.container.DisabledIfDockerUnavailable;
-import org.springframework.boot.testsupport.container.TestImage;
-import org.springframework.boot.testsupport.process.DisabledIfProcessUnavailable;
+import io.github.kotlinmania.spring.boot.SpringApplication;
+import io.github.kotlinmania.spring.boot.autoconfigure.service.connection.ConnectionDetails;
+import io.github.kotlinmania.spring.boot.testsupport.container.DisabledIfDockerUnavailable;
+import io.github.kotlinmania.spring.boot.testsupport.container.TestImage;
+import io.github.kotlinmania.spring.boot.testsupport.process.DisabledIfProcessUnavailable;
 
 /**
  * A {@link Test test} that exercises Spring Boot's Docker Compose support.

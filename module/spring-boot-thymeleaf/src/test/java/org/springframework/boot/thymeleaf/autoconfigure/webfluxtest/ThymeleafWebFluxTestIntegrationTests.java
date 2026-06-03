@@ -14,18 +14,18 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.thymeleaf.autoconfigure.webfluxtest;
+package io.github.kotlinmania.spring.boot.thymeleaf.autoconfigure.webfluxtest;
 
 import org.junit.jupiter.api.Test;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.thymeleaf.autoconfigure.ThymeleafAutoConfiguration;
-import org.springframework.boot.webflux.test.autoconfigure.WebFluxTest;
+import io.github.kotlinmania.spring.boot.thymeleaf.autoconfigure.ThymeleafAutoConfiguration;
+import io.github.kotlinmania.spring.boot.webflux.test.autoconfigure.WebFluxTest;
 import org.springframework.context.ApplicationContext;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatNoException;
-import static org.springframework.boot.autoconfigure.AutoConfigurationImportedCondition.importedAutoConfiguration;
+import static io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurationImportedCondition.importedAutoConfiguration;
 
 /**
  * Integration tests for Thymeleaf with {@link WebFluxTest @WebFluxTest}.

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.ant;
+package io.github.kotlinmania.spring.boot.ant;
 
 import org.apache.tools.ant.BuildException;
 import org.apache.tools.ant.Project;

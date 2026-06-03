@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.devtools.remote.client;
+package io.github.kotlinmania.spring.boot.devtools.remote.client;
 
 import java.io.ByteArrayInputStream;
 import java.io.File;
@@ -31,15 +31,15 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.io.TempDir;
 
-import org.springframework.boot.devtools.classpath.ClassPathChangedEvent;
-import org.springframework.boot.devtools.filewatch.ChangedFile;
-import org.springframework.boot.devtools.filewatch.ChangedFile.Type;
-import org.springframework.boot.devtools.filewatch.ChangedFiles;
-import org.springframework.boot.devtools.restart.classloader.ClassLoaderFile;
-import org.springframework.boot.devtools.restart.classloader.ClassLoaderFile.Kind;
-import org.springframework.boot.devtools.restart.classloader.ClassLoaderFiles;
-import org.springframework.boot.devtools.restart.classloader.ClassLoaderFiles.SourceDirectory;
-import org.springframework.boot.devtools.test.MockClientHttpRequestFactory;
+import io.github.kotlinmania.spring.boot.devtools.classpath.ClassPathChangedEvent;
+import io.github.kotlinmania.spring.boot.devtools.filewatch.ChangedFile;
+import io.github.kotlinmania.spring.boot.devtools.filewatch.ChangedFile.Type;
+import io.github.kotlinmania.spring.boot.devtools.filewatch.ChangedFiles;
+import io.github.kotlinmania.spring.boot.devtools.restart.classloader.ClassLoaderFile;
+import io.github.kotlinmania.spring.boot.devtools.restart.classloader.ClassLoaderFile.Kind;
+import io.github.kotlinmania.spring.boot.devtools.restart.classloader.ClassLoaderFiles;
+import io.github.kotlinmania.spring.boot.devtools.restart.classloader.ClassLoaderFiles.SourceDirectory;
+import io.github.kotlinmania.spring.boot.devtools.test.MockClientHttpRequestFactory;
 import org.springframework.http.HttpStatus;
 import org.springframework.mock.http.client.MockClientHttpRequest;
 import org.springframework.util.FileCopyUtils;

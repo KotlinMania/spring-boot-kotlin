@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.jdbc.test.autoconfigure;
+package io.github.kotlinmania.spring.boot.jdbc.test.autoconfigure;
 
 import java.lang.annotation.Documented;
 import java.lang.annotation.ElementType;
@@ -25,11 +25,11 @@ import java.lang.annotation.Target;
 
 import javax.sql.DataSource;
 
-import org.springframework.boot.autoconfigure.ImportAutoConfiguration;
-import org.springframework.boot.autoconfigure.container.ContainerImageMetadata;
-import org.springframework.boot.jdbc.EmbeddedDatabaseConnection;
-import org.springframework.boot.test.context.PropertyMapping;
-import org.springframework.boot.test.context.PropertyMapping.Skip;
+import io.github.kotlinmania.spring.boot.autoconfigure.ImportAutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.container.ContainerImageMetadata;
+import io.github.kotlinmania.spring.boot.jdbc.EmbeddedDatabaseConnection;
+import io.github.kotlinmania.spring.boot.test.context.PropertyMapping;
+import io.github.kotlinmania.spring.boot.test.context.PropertyMapping.Skip;
 import org.springframework.context.annotation.Primary;
 import org.springframework.test.context.DynamicPropertySource;
 

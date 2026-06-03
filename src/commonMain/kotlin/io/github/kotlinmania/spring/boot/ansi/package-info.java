@@ -17,9 +17,9 @@
 /**
  * Support classes to provide ANSI color output.
  *
- * @see org.springframework.boot.ansi.AnsiOutput
+ * @see io.github.kotlinmania.spring.boot.ansi.AnsiOutput
  */
 @NullMarked
-package org.springframework.boot.ansi;
+package io.github.kotlinmania.spring.boot.ansi;
 
 import org.jspecify.annotations.NullMarked;

@@ -1,7 +1,7 @@
-org.springframework.boot.grpc.server.autoconfigure.GrpcServerAutoConfiguration
-org.springframework.boot.grpc.server.autoconfigure.GrpcServerObservationAutoConfiguration
-org.springframework.boot.grpc.server.autoconfigure.GrpcServerServicesAutoConfiguration
-org.springframework.boot.grpc.server.autoconfigure.health.GrpcServerHealthAutoConfiguration
-org.springframework.boot.grpc.server.autoconfigure.health.GrpcServerHealthSchedulerAutoConfiguration
-org.springframework.boot.grpc.server.autoconfigure.security.GrpcServerOAuth2ResourceServerAutoConfiguration
-org.springframework.boot.grpc.server.autoconfigure.security.GrpcServerSecurityAutoConfiguration
+io.github.kotlinmania.spring.boot.grpc.server.autoconfigure.GrpcServerAutoConfiguration
+io.github.kotlinmania.spring.boot.grpc.server.autoconfigure.GrpcServerObservationAutoConfiguration
+io.github.kotlinmania.spring.boot.grpc.server.autoconfigure.GrpcServerServicesAutoConfiguration
+io.github.kotlinmania.spring.boot.grpc.server.autoconfigure.health.GrpcServerHealthAutoConfiguration
+io.github.kotlinmania.spring.boot.grpc.server.autoconfigure.health.GrpcServerHealthSchedulerAutoConfiguration
+io.github.kotlinmania.spring.boot.grpc.server.autoconfigure.security.GrpcServerOAuth2ResourceServerAutoConfiguration
+io.github.kotlinmania.spring.boot.grpc.server.autoconfigure.security.GrpcServerSecurityAutoConfiguration

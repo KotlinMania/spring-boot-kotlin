@@ -14,15 +14,15 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.jdbc.docker.compose;
+package io.github.kotlinmania.spring.boot.jdbc.docker.compose;
 
 import java.util.Collections;
 import java.util.Map;
 
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.docker.compose.core.ConnectionPorts;
-import org.springframework.boot.docker.compose.core.RunningService;
+import io.github.kotlinmania.spring.boot.docker.compose.core.ConnectionPorts;
+import io.github.kotlinmania.spring.boot.docker.compose.core.RunningService;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatIllegalArgumentException;
@@ -63,14 +63,14 @@ class JdbcUrlBuilderTests {
 
 	@Test
 	void buildWhenHasParamsLabelBuildsUrl() {
-		RunningService service = mockService(456, Map.of("org.springframework.boot.jdbc.parameters", "foo=bar"));
+		RunningService service = mockService(456, Map.of("io.github.kotlinmania.spring.boot.jdbc.parameters", "foo=bar"));
 		String url = this.builder.build(service, "mydb");
 		assertThat(url).isEqualTo("jdbc:mydb://myhost:456/mydb?foo=bar");
 	}
 
 	@Test
 	void buildWithCustomAppendParametersWhenHasParamsLabelBuildsUrl() {
-		RunningService service = mockService(456, Map.of("org.springframework.boot.jdbc.parameters", "foo=bar"));
+		RunningService service = mockService(456, Map.of("io.github.kotlinmania.spring.boot.jdbc.parameters", "foo=bar"));
 		String url = new JdbcUrlBuilder("mydb", 1234) {
 
 			@Override

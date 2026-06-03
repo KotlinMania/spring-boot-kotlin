@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.maven;
+package io.github.kotlinmania.spring.boot.maven;
 
 import com.github.dockerjava.api.DockerClient;
 import org.junit.jupiter.api.BeforeEach;
@@ -24,12 +24,12 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.testcontainers.junit.jupiter.Container;
 import org.testcontainers.junit.jupiter.Testcontainers;
 
-import org.springframework.boot.buildpack.platform.docker.DockerApi;
-import org.springframework.boot.buildpack.platform.docker.UpdateListener;
-import org.springframework.boot.buildpack.platform.docker.type.Image;
-import org.springframework.boot.buildpack.platform.docker.type.ImageReference;
-import org.springframework.boot.testsupport.container.RegistryContainer;
-import org.springframework.boot.testsupport.container.TestImage;
+import io.github.kotlinmania.spring.boot.buildpack.platform.docker.DockerApi;
+import io.github.kotlinmania.spring.boot.buildpack.platform.docker.UpdateListener;
+import io.github.kotlinmania.spring.boot.buildpack.platform.docker.type.Image;
+import io.github.kotlinmania.spring.boot.buildpack.platform.docker.type.ImageReference;
+import io.github.kotlinmania.spring.boot.testsupport.container.RegistryContainer;
+import io.github.kotlinmania.spring.boot.testsupport.container.TestImage;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.devtools.remote.server;
+package io.github.kotlinmania.spring.boot.devtools.remote.server;
 
 import org.springframework.http.server.ServerHttpRequest;
 

@@ -14,18 +14,18 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.reactor.netty.autoconfigure;
+package io.github.kotlinmania.spring.boot.reactor.netty.autoconfigure;
 
 import java.nio.charset.StandardCharsets;
 
 import org.junit.jupiter.api.Test;
 import reactor.core.publisher.Mono;
 
-import org.springframework.boot.reactor.netty.autoconfigure.AutoConfigureWebServerReactorNettyTests.ReactiveConfiguration;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.boot.test.context.SpringBootTest.WebEnvironment;
-import org.springframework.boot.test.web.server.LocalServerPort;
-import org.springframework.boot.web.server.test.AutoConfigureWebServer;
+import io.github.kotlinmania.spring.boot.reactor.netty.autoconfigure.AutoConfigureWebServerReactorNettyTests.ReactiveConfiguration;
+import io.github.kotlinmania.spring.boot.test.context.SpringBootTest;
+import io.github.kotlinmania.spring.boot.test.context.SpringBootTest.WebEnvironment;
+import io.github.kotlinmania.spring.boot.test.web.server.LocalServerPort;
+import io.github.kotlinmania.spring.boot.web.server.test.AutoConfigureWebServer;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.io.buffer.DataBuffer;

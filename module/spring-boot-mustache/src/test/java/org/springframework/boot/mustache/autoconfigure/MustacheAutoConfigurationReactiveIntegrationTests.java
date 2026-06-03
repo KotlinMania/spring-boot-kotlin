@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.mustache.autoconfigure;
+package io.github.kotlinmania.spring.boot.mustache.autoconfigure;
 
 import java.util.Date;
 
@@ -23,15 +23,15 @@ import org.junit.jupiter.api.Test;
 
 import org.springframework.beans.factory.ObjectProvider;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.WebApplicationType;
-import org.springframework.boot.autoconfigure.context.PropertyPlaceholderAutoConfiguration;
-import org.springframework.boot.mustache.reactive.view.MustacheView;
-import org.springframework.boot.mustache.reactive.view.MustacheViewResolver;
-import org.springframework.boot.reactor.netty.autoconfigure.NettyReactiveWebServerAutoConfiguration;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.boot.test.context.SpringBootTest.WebEnvironment;
-import org.springframework.boot.webtestclient.autoconfigure.AutoConfigureWebTestClient;
+import io.github.kotlinmania.spring.boot.SpringApplication;
+import io.github.kotlinmania.spring.boot.WebApplicationType;
+import io.github.kotlinmania.spring.boot.autoconfigure.context.PropertyPlaceholderAutoConfiguration;
+import io.github.kotlinmania.spring.boot.mustache.reactive.view.MustacheView;
+import io.github.kotlinmania.spring.boot.mustache.reactive.view.MustacheViewResolver;
+import io.github.kotlinmania.spring.boot.reactor.netty.autoconfigure.NettyReactiveWebServerAutoConfiguration;
+import io.github.kotlinmania.spring.boot.test.context.SpringBootTest;
+import io.github.kotlinmania.spring.boot.test.context.SpringBootTest.WebEnvironment;
+import io.github.kotlinmania.spring.boot.webtestclient.autoconfigure.AutoConfigureWebTestClient;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -130,9 +130,9 @@ class MustacheAutoConfigurationReactiveIntegrationTests {
 		MustacheViewResolver viewResolver() {
 			Mustache.Compiler compiler = Mustache.compiler()
 				.withLoader(new MustacheResourceTemplateLoader(
-						"classpath:/org/springframework/boot/mustache/autoconfigure/", ".html"));
+						"classpath:/io.github.kotlinmania.spring.boot.mustache/autoconfigure/", ".html"));
 			MustacheViewResolver resolver = new MustacheViewResolver(compiler);
-			resolver.setPrefix("classpath:/org/springframework/boot/mustache/autoconfigure/");
+			resolver.setPrefix("classpath:/io.github.kotlinmania.spring.boot.mustache/autoconfigure/");
 			resolver.setSuffix(".html");
 			return resolver;
 		}

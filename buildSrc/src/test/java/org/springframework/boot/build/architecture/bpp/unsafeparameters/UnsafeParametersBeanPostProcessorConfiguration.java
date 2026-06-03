@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.build.architecture.bpp.unsafeparameters;
+package io.github.kotlinmania.spring.boot.build.architecture.bpp.unsafeparameters;
 
 import org.springframework.beans.factory.config.BeanPostProcessor;
 import org.springframework.context.ApplicationContext;

@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.howto.traditionaldeployment.weblogic
+package io.github.kotlinmania.spring.boot.docs.howto.traditionaldeployment.weblogic
 
-import org.springframework.boot.autoconfigure.SpringBootApplication
-import org.springframework.boot.web.servlet.support.SpringBootServletInitializer
+import io.github.kotlinmania.spring.boot.autoconfigure.SpringBootApplication
+import io.github.kotlinmania.spring.boot.web.servlet.support.SpringBootServletInitializer
 import org.springframework.web.WebApplicationInitializer
 
 @SpringBootApplication

@@ -14,17 +14,17 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.activemq.autoconfigure;
+package io.github.kotlinmania.spring.boot.activemq.autoconfigure;
 
 import jakarta.jms.ConnectionFactory;
 import org.apache.activemq.ActiveMQConnectionFactory;
 import org.junit.jupiter.api.Test;
 import org.messaginghub.pooled.jms.JmsPoolConnectionFactory;
 
-import org.springframework.boot.autoconfigure.AutoConfigurations;
-import org.springframework.boot.jms.autoconfigure.JmsAutoConfiguration;
-import org.springframework.boot.test.context.FilteredClassLoader;
-import org.springframework.boot.test.context.runner.ApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurations;
+import io.github.kotlinmania.spring.boot.jms.autoconfigure.JmsAutoConfiguration;
+import io.github.kotlinmania.spring.boot.test.context.FilteredClassLoader;
+import io.github.kotlinmania.spring.boot.test.context.runner.ApplicationContextRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.jms.connection.CachingConnectionFactory;

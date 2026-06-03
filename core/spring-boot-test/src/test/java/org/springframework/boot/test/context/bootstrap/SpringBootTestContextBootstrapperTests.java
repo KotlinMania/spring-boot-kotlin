@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.test.context.bootstrap;
+package io.github.kotlinmania.spring.boot.test.context.bootstrap;
 
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.boot.test.context.SpringBootTest.WebEnvironment;
-import org.springframework.boot.test.context.SpringBootTestContextBootstrapper;
+import io.github.kotlinmania.spring.boot.test.context.SpringBootTest;
+import io.github.kotlinmania.spring.boot.test.context.SpringBootTest.WebEnvironment;
+import io.github.kotlinmania.spring.boot.test.context.SpringBootTestContextBootstrapper;
 import org.springframework.test.context.BootstrapContext;
 import org.springframework.test.context.CacheAwareContextLoaderDelegate;
 import org.springframework.test.context.MergedContextConfiguration;

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.grpc.test.autoconfigure;
+package io.github.kotlinmania.spring.boot.grpc.test.autoconfigure;
 
 import io.grpc.ManagedChannel;
 import org.junit.jupiter.api.Test;

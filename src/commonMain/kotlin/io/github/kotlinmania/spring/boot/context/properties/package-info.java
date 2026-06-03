@@ -17,10 +17,10 @@
 /**
  * Support for external configuration properties.
  *
- * @see org.springframework.boot.context.properties.ConfigurationProperties
- * @see org.springframework.boot.context.properties.EnableConfigurationProperties
+ * @see io.github.kotlinmania.spring.boot.context.properties.ConfigurationProperties
+ * @see io.github.kotlinmania.spring.boot.context.properties.EnableConfigurationProperties
  */
 @NullMarked
-package org.springframework.boot.context.properties;
+package io.github.kotlinmania.spring.boot.context.properties;
 
 import org.jspecify.annotations.NullMarked;

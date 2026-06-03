@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.build;
+package io.github.kotlinmania.spring.boot.build;
 
 import javax.inject.Inject;
 
@@ -29,7 +29,7 @@ import org.gradle.api.tasks.TaskAction;
 
 /**
  * Tasks for syncing the source code of a Spring Boot application, filtering its
- * {@code build.gradle} to set the version of its {@code org.springframework.boot} plugin.
+ * {@code build.gradle} to set the version of its {@code io.github.kotlinmania.spring.boot. plugin.
  *
  * @author Andy Wilkinson
  */
@@ -57,8 +57,8 @@ public abstract class SyncAppSource extends DefaultTask {
 		this.fileSystemOperations.sync((copySpec) -> {
 			copySpec.from(getSourceDirectory());
 			copySpec.into(getDestinationDirectory());
-			copySpec.filter((line) -> line.replace("id \"org.springframework.boot\"",
-					"id \"org.springframework.boot\" version \"" + getPluginVersion().get() + "\""));
+			copySpec.filter((line) -> line.replace("id \"io.github.kotlinmania.spring.boot."",
+					"id \"io.github.kotlinmania.spring.boot." version \"" + getPluginVersion().get() + "\""));
 		});
 	}
 

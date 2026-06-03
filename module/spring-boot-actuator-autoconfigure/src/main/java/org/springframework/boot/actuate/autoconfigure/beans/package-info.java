@@ -18,6 +18,6 @@
  * Auto-configuration for actuator Spring Bean concerns.
  */
 @NullMarked
-package org.springframework.boot.actuate.autoconfigure.beans;
+package io.github.kotlinmania.spring.boot.actuate.autoconfigure.beans;
 
 import org.jspecify.annotations.NullMarked;

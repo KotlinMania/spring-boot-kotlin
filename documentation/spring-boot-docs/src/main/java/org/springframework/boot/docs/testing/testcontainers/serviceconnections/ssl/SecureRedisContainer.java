@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.testing.testcontainers.serviceconnections.ssl;
+package io.github.kotlinmania.spring.boot.docs.testing.testcontainers.serviceconnections.ssl;
 
 import com.redis.testcontainers.RedisContainer;
 

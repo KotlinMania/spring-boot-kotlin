@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.actuate.autoconfigure.web.server;
+package io.github.kotlinmania.spring.boot.actuate.autoconfigure.web.server;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -25,12 +25,12 @@ import org.jspecify.annotations.Nullable;
 import org.springframework.beans.factory.BeanFactoryUtils;
 import org.springframework.beans.factory.ListableBeanFactory;
 import org.springframework.beans.factory.NoSuchBeanDefinitionException;
-import org.springframework.boot.util.LambdaSafe;
-import org.springframework.boot.web.server.ConfigurableWebServerFactory;
-import org.springframework.boot.web.server.Ssl;
-import org.springframework.boot.web.server.WebServerFactory;
-import org.springframework.boot.web.server.WebServerFactoryCustomizer;
-import org.springframework.boot.web.server.autoconfigure.ServerProperties;
+import io.github.kotlinmania.spring.boot.util.LambdaSafe;
+import io.github.kotlinmania.spring.boot.web.server.ConfigurableWebServerFactory;
+import io.github.kotlinmania.spring.boot.web.server.Ssl;
+import io.github.kotlinmania.spring.boot.web.server.WebServerFactory;
+import io.github.kotlinmania.spring.boot.web.server.WebServerFactoryCustomizer;
+import io.github.kotlinmania.spring.boot.web.server.autoconfigure.ServerProperties;
 import org.springframework.core.Ordered;
 import org.springframework.util.Assert;
 

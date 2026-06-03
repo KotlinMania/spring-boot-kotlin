@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.loader.log;
+package io.github.kotlinmania.spring.boot.loader.log;
 
 /**
  * Simple logger class used for {@link System#err} debugging.

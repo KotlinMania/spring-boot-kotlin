@@ -18,6 +18,6 @@
  * Auto-configuration for Spring MVC actuator web endpoint support.
  */
 @NullMarked
-package org.springframework.boot.webmvc.autoconfigure.actuate.endpoint.web;
+package io.github.kotlinmania.spring.boot.webmvc.autoconfigure.actuate.endpoint.web;
 
 import org.jspecify.annotations.NullMarked;

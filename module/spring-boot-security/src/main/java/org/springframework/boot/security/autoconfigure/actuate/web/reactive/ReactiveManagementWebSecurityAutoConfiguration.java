@@ -14,20 +14,20 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.security.autoconfigure.actuate.web.reactive;
+package io.github.kotlinmania.spring.boot.security.autoconfigure.actuate.web.reactive;
 
 import reactor.core.publisher.Mono;
 
-import org.springframework.boot.actuate.autoconfigure.endpoint.web.WebEndpointAutoConfiguration;
-import org.springframework.boot.actuate.endpoint.web.WebServerNamespace;
-import org.springframework.boot.autoconfigure.AutoConfiguration;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnWebApplication;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnWebApplication.Type;
-import org.springframework.boot.health.actuate.endpoint.HealthEndpoint;
-import org.springframework.boot.security.autoconfigure.web.reactive.ReactiveWebSecurityAutoConfiguration;
+import io.github.kotlinmania.spring.boot.actuate.autoconfigure.endpoint.web.WebEndpointAutoConfiguration;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.web.WebServerNamespace;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.EnableAutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnClass;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnMissingBean;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnWebApplication;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnWebApplication.Type;
+import io.github.kotlinmania.spring.boot.health.actuate.endpoint.HealthEndpoint;
+import io.github.kotlinmania.spring.boot.security.autoconfigure.web.reactive.ReactiveWebSecurityAutoConfiguration;
 import org.springframework.context.annotation.Bean;
 import org.springframework.security.authentication.ReactiveAuthenticationManager;
 import org.springframework.security.config.annotation.web.reactive.EnableWebFluxSecurity;
@@ -53,9 +53,9 @@ import static org.springframework.security.config.Customizer.withDefaults;
  * @since 4.0.0
  */
 @AutoConfiguration(before = ReactiveWebSecurityAutoConfiguration.class,
-		afterName = { "org.springframework.boot.health.autoconfigure.actuate.endpoint.HealthEndpointAutoConfiguration",
-				"org.springframework.boot.actuate.autoconfigure.info.InfoEndpointAutoConfiguration",
-				"org.springframework.boot.actuate.autoconfigure.endpoint.web.WebEndpointAutoConfiguration" })
+		afterName = { "io.github.kotlinmania.spring.boot.health.autoconfigure.actuate.endpoint.HealthEndpointAutoConfiguration",
+				"io.github.kotlinmania.spring.boot.actuate.autoconfigure.info.InfoEndpointAutoConfiguration",
+				"io.github.kotlinmania.spring.boot.actuate.autoconfigure.endpoint.web.WebEndpointAutoConfiguration" })
 @ConditionalOnClass({ EnableWebFluxSecurity.class, WebFilterChainProxy.class, WebEndpointAutoConfiguration.class })
 @ConditionalOnMissingBean({ SecurityWebFilterChain.class, WebFilterChainProxy.class })
 @ConditionalOnWebApplication(type = Type.REACTIVE)
@@ -64,7 +64,7 @@ public final class ReactiveManagementWebSecurityAutoConfiguration {
 	@Bean
 	SecurityWebFilterChain springSecurityFilterChain(ServerHttpSecurity http, PreFlightRequestHandler handler) {
 		http.authorizeExchange((exchanges) -> {
-			if (ClassUtils.isPresent("org.springframework.boot.health.actuate.endpoint.HealthEndpoint",
+			if (ClassUtils.isPresent("io.github.kotlinmania.spring.boot.health.actuate.endpoint.HealthEndpoint",
 					getClass().getClassLoader())) {
 				exchanges.matchers(healthMatcher(), additionalHealthPathsMatcher()).permitAll();
 			}

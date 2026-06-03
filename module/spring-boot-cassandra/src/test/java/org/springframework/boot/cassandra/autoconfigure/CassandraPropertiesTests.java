@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.cassandra.autoconfigure;
+package io.github.kotlinmania.spring.boot.cassandra.autoconfigure;
 
 import java.time.Duration;
 

@@ -14,15 +14,15 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.test.autoconfigure;
+package io.github.kotlinmania.spring.boot.test.autoconfigure;
 
 import java.util.List;
 
 import org.jspecify.annotations.Nullable;
 
 import org.springframework.aot.AotDetector;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
-import org.springframework.boot.test.util.TestPropertyValues;
+import io.github.kotlinmania.spring.boot.autoconfigure.EnableAutoConfiguration;
+import io.github.kotlinmania.spring.boot.test.util.TestPropertyValues;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.test.context.ContextConfigurationAttributes;
 import org.springframework.test.context.ContextCustomizer;

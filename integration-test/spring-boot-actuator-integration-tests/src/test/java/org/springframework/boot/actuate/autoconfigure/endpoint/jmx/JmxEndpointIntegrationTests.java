@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.actuate.autoconfigure.endpoint.jmx;
+package io.github.kotlinmania.spring.boot.actuate.autoconfigure.endpoint.jmx;
 
 import javax.management.InstanceNotFoundException;
 import javax.management.IntrospectionException;
@@ -26,18 +26,18 @@ import javax.management.ReflectionException;
 
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.LazyInitializationBeanFactoryPostProcessor;
-import org.springframework.boot.actuate.audit.InMemoryAuditEventRepository;
-import org.springframework.boot.actuate.autoconfigure.beans.BeansEndpointAutoConfiguration;
-import org.springframework.boot.actuate.autoconfigure.context.ShutdownEndpointAutoConfiguration;
-import org.springframework.boot.actuate.autoconfigure.endpoint.EndpointAutoConfiguration;
-import org.springframework.boot.actuate.web.exchanges.InMemoryHttpExchangeRepository;
-import org.springframework.boot.autoconfigure.AutoConfigurations;
-import org.springframework.boot.autoconfigure.jmx.JmxAutoConfiguration;
-import org.springframework.boot.health.autoconfigure.actuate.endpoint.HealthEndpointAutoConfiguration;
-import org.springframework.boot.health.autoconfigure.contributor.HealthContributorAutoConfiguration;
-import org.springframework.boot.health.autoconfigure.registry.HealthContributorRegistryAutoConfiguration;
-import org.springframework.boot.test.context.runner.WebApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.LazyInitializationBeanFactoryPostProcessor;
+import io.github.kotlinmania.spring.boot.actuate.audit.InMemoryAuditEventRepository;
+import io.github.kotlinmania.spring.boot.actuate.autoconfigure.beans.BeansEndpointAutoConfiguration;
+import io.github.kotlinmania.spring.boot.actuate.autoconfigure.context.ShutdownEndpointAutoConfiguration;
+import io.github.kotlinmania.spring.boot.actuate.autoconfigure.endpoint.EndpointAutoConfiguration;
+import io.github.kotlinmania.spring.boot.actuate.web.exchanges.InMemoryHttpExchangeRepository;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurations;
+import io.github.kotlinmania.spring.boot.autoconfigure.jmx.JmxAutoConfiguration;
+import io.github.kotlinmania.spring.boot.health.autoconfigure.actuate.endpoint.HealthEndpointAutoConfiguration;
+import io.github.kotlinmania.spring.boot.health.autoconfigure.contributor.HealthContributorAutoConfiguration;
+import io.github.kotlinmania.spring.boot.health.autoconfigure.registry.HealthContributorRegistryAutoConfiguration;
+import io.github.kotlinmania.spring.boot.test.context.runner.WebApplicationContextRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.util.StringUtils;
@@ -129,7 +129,7 @@ class JmxEndpointIntegrationTests {
 	}
 
 	private ObjectName getDefaultObjectName(String endpointId) {
-		return getObjectName("org.springframework.boot", endpointId);
+		return getObjectName("io.github.kotlinmania.spring.boot., endpointId);
 	}
 
 	private ObjectName getObjectName(String domain, String endpointId) {

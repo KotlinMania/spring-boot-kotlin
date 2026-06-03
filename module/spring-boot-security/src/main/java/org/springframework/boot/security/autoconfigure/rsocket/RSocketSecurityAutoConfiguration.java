@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.security.autoconfigure.rsocket;
+package io.github.kotlinmania.spring.boot.security.autoconfigure.rsocket;
 
-import org.springframework.boot.autoconfigure.AutoConfiguration;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
-import org.springframework.boot.rsocket.autoconfigure.RSocketMessageHandlerCustomizer;
-import org.springframework.boot.rsocket.server.RSocketServerCustomizer;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.EnableAutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnClass;
+import io.github.kotlinmania.spring.boot.rsocket.autoconfigure.RSocketMessageHandlerCustomizer;
+import io.github.kotlinmania.spring.boot.rsocket.server.RSocketServerCustomizer;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.rsocket.EnableRSocketSecurity;

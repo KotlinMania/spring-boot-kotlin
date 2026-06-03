@@ -14,21 +14,21 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.neo4j.autoconfigure.health;
+package io.github.kotlinmania.spring.boot.neo4j.autoconfigure.health;
 
 import org.junit.jupiter.api.Test;
 import org.neo4j.driver.Driver;
 import reactor.core.publisher.Flux;
 
-import org.springframework.boot.autoconfigure.AutoConfigurations;
-import org.springframework.boot.health.autoconfigure.contributor.HealthContributorAutoConfiguration;
-import org.springframework.boot.health.contributor.AbstractHealthIndicator;
-import org.springframework.boot.health.contributor.Health;
-import org.springframework.boot.health.contributor.HealthIndicator;
-import org.springframework.boot.neo4j.health.Neo4jHealthIndicator;
-import org.springframework.boot.neo4j.health.Neo4jReactiveHealthIndicator;
-import org.springframework.boot.test.context.FilteredClassLoader;
-import org.springframework.boot.test.context.runner.ApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurations;
+import io.github.kotlinmania.spring.boot.health.autoconfigure.contributor.HealthContributorAutoConfiguration;
+import io.github.kotlinmania.spring.boot.health.contributor.AbstractHealthIndicator;
+import io.github.kotlinmania.spring.boot.health.contributor.Health;
+import io.github.kotlinmania.spring.boot.health.contributor.HealthIndicator;
+import io.github.kotlinmania.spring.boot.neo4j.health.Neo4jHealthIndicator;
+import io.github.kotlinmania.spring.boot.neo4j.health.Neo4jReactiveHealthIndicator;
+import io.github.kotlinmania.spring.boot.test.context.FilteredClassLoader;
+import io.github.kotlinmania.spring.boot.test.context.runner.ApplicationContextRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 

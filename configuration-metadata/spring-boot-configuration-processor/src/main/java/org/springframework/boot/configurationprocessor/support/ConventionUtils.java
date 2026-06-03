@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.configurationprocessor.support;
+package io.github.kotlinmania.spring.boot.configurationprocessor.support;
 
 import java.util.Arrays;
 import java.util.Collections;

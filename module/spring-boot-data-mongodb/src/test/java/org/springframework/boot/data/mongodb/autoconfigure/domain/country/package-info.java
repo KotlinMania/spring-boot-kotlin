@@ -15,6 +15,6 @@
  */
 
 @NullMarked
-package org.springframework.boot.data.mongodb.autoconfigure.domain.country;
+package io.github.kotlinmania.spring.boot.data.mongodb.autoconfigure.domain.country;
 
 import org.jspecify.annotations.NullMarked;

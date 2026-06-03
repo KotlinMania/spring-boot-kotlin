@@ -18,6 +18,6 @@
  * Utilities and classes related to validation.
  */
 @NullMarked
-package org.springframework.boot.validation;
+package io.github.kotlinmania.spring.boot.validation;
 
 import org.jspecify.annotations.NullMarked;

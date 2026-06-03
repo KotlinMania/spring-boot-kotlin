@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.buildpack.platform.docker.ssl;
+package io.github.kotlinmania.spring.boot.buildpack.platform.docker.ssl;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
@@ -46,8 +46,8 @@ import javax.crypto.spec.PBEKeySpec;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.buildpack.platform.docker.ssl.PemPrivateKeyParser.DerElement.TagType;
-import org.springframework.boot.buildpack.platform.docker.ssl.PemPrivateKeyParser.DerElement.ValueType;
+import io.github.kotlinmania.spring.boot.buildpack.platform.docker.ssl.PemPrivateKeyParser.DerElement.TagType;
+import io.github.kotlinmania.spring.boot.buildpack.platform.docker.ssl.PemPrivateKeyParser.DerElement.ValueType;
 import org.springframework.util.Assert;
 
 /**

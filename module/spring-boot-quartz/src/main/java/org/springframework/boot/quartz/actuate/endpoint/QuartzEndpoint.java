@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.quartz.actuate.endpoint;
+package io.github.kotlinmania.spring.boot.quartz.actuate.endpoint;
 
 import java.time.Duration;
 import java.time.Instant;
@@ -50,12 +50,12 @@ import org.quartz.TriggerKey;
 import org.quartz.impl.matchers.GroupMatcher;
 import org.quartz.utils.Key;
 
-import org.springframework.boot.actuate.endpoint.OperationResponseBody;
-import org.springframework.boot.actuate.endpoint.SanitizableData;
-import org.springframework.boot.actuate.endpoint.Sanitizer;
-import org.springframework.boot.actuate.endpoint.SanitizingFunction;
-import org.springframework.boot.actuate.endpoint.annotation.Endpoint;
-import org.springframework.boot.actuate.endpoint.annotation.ReadOperation;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.OperationResponseBody;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.SanitizableData;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.Sanitizer;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.SanitizingFunction;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.annotation.Endpoint;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.annotation.ReadOperation;
 import org.springframework.lang.Contract;
 import org.springframework.util.Assert;
 

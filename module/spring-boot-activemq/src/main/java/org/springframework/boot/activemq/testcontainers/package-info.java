@@ -18,6 +18,6 @@
  * Support for testcontainers ActiveMQ service connections.
  */
 @NullMarked
-package org.springframework.boot.activemq.testcontainers;
+package io.github.kotlinmania.spring.boot.activemq.testcontainers;
 
 import org.jspecify.annotations.NullMarked;

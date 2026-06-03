@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.web.server.autoconfigure.servlet;
+package io.github.kotlinmania.spring.boot.web.server.autoconfigure.servlet;
 
 import jakarta.servlet.DispatcherType;
 import org.jspecify.annotations.Nullable;
@@ -26,16 +26,16 @@ import org.springframework.beans.factory.ObjectProvider;
 import org.springframework.beans.factory.config.ConfigurableListableBeanFactory;
 import org.springframework.beans.factory.support.BeanDefinitionRegistry;
 import org.springframework.beans.factory.support.RootBeanDefinition;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingFilterBean;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
-import org.springframework.boot.context.properties.EnableConfigurationProperties;
-import org.springframework.boot.ssl.SslBundles;
-import org.springframework.boot.web.error.ErrorPageRegistrarBeanPostProcessor;
-import org.springframework.boot.web.server.WebServerFactoryCustomizerBeanPostProcessor;
-import org.springframework.boot.web.server.autoconfigure.ServerProperties;
-import org.springframework.boot.web.server.servlet.CookieSameSiteSupplier;
-import org.springframework.boot.web.server.servlet.WebListenerRegistrar;
-import org.springframework.boot.web.servlet.FilterRegistrationBean;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnMissingFilterBean;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnProperty;
+import io.github.kotlinmania.spring.boot.context.properties.EnableConfigurationProperties;
+import io.github.kotlinmania.spring.boot.ssl.SslBundles;
+import io.github.kotlinmania.spring.boot.web.error.ErrorPageRegistrarBeanPostProcessor;
+import io.github.kotlinmania.spring.boot.web.server.WebServerFactoryCustomizerBeanPostProcessor;
+import io.github.kotlinmania.spring.boot.web.server.autoconfigure.ServerProperties;
+import io.github.kotlinmania.spring.boot.web.server.servlet.CookieSameSiteSupplier;
+import io.github.kotlinmania.spring.boot.web.server.servlet.WebListenerRegistrar;
+import io.github.kotlinmania.spring.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;

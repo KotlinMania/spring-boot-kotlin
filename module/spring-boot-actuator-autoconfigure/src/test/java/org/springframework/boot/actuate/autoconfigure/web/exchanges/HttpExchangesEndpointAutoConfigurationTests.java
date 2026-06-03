@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.actuate.autoconfigure.web.exchanges;
+package io.github.kotlinmania.spring.boot.actuate.autoconfigure.web.exchanges;
 
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.actuate.web.exchanges.HttpExchangesEndpoint;
-import org.springframework.boot.actuate.web.exchanges.InMemoryHttpExchangeRepository;
-import org.springframework.boot.autoconfigure.AutoConfigurations;
-import org.springframework.boot.test.context.runner.WebApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.actuate.web.exchanges.HttpExchangesEndpoint;
+import io.github.kotlinmania.spring.boot.actuate.web.exchanges.InMemoryHttpExchangeRepository;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurations;
+import io.github.kotlinmania.spring.boot.test.context.runner.WebApplicationContextRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 

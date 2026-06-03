@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.devtools.classpath;
+package io.github.kotlinmania.spring.boot.devtools.classpath;
 
 import java.net.URL;
 
@@ -23,8 +23,8 @@ import org.jspecify.annotations.Nullable;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.DisposableBean;
 import org.springframework.beans.factory.InitializingBean;
-import org.springframework.boot.devtools.filewatch.FileSystemWatcher;
-import org.springframework.boot.devtools.filewatch.FileSystemWatcherFactory;
+import io.github.kotlinmania.spring.boot.devtools.filewatch.FileSystemWatcher;
+import io.github.kotlinmania.spring.boot.devtools.filewatch.FileSystemWatcherFactory;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
 import org.springframework.util.Assert;

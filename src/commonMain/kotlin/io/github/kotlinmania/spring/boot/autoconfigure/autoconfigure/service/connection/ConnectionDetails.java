@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.autoconfigure.service.connection;
+package io.github.kotlinmania.spring.boot.autoconfigure.service.connection;
 
-import org.springframework.boot.origin.OriginProvider;
+import io.github.kotlinmania.spring.boot.origin.OriginProvider;
 
 /**
  * Base interface for types that provide the details required to establish a connection to

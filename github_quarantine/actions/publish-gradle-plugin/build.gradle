@@ -19,10 +19,10 @@ plugins {
 }
 
 tasks.register("publishExisting", com.gradle.publish.PublishExistingTask) {
-	pluginId = "org.springframework.boot"
+	pluginId = "io.github.kotlinmania.spring.boot.
 	fileRepositoryRoot = new File("${repositoryRoot}")
 	pluginVersion = "${bootVersion}"
-	pluginCoordinates = "org.springframework.boot:spring-boot-gradle-plugin:${bootVersion}"
+	pluginCoordinates = "io.github.kotlinmania.spring.boot.spring-boot-gradle-plugin:${bootVersion}"
 	displayName = "Spring Boot Gradle Plugin"
 	pluginDescription = "Spring Boot Gradle Plugin"
 	website = "https://spring.io/projects/spring-boot"

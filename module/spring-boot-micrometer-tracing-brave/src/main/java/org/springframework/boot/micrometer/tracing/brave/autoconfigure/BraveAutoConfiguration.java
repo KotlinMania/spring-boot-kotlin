@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.micrometer.tracing.brave.autoconfigure;
+package io.github.kotlinmania.spring.boot.micrometer.tracing.brave.autoconfigure;
 
 import java.util.List;
 
@@ -42,16 +42,16 @@ import io.micrometer.tracing.exporter.SpanReporter;
 import io.micrometer.tracing.propagation.Propagator;
 
 import org.springframework.beans.factory.ObjectProvider;
-import org.springframework.boot.autoconfigure.AutoConfiguration;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
-import org.springframework.boot.context.properties.EnableConfigurationProperties;
-import org.springframework.boot.context.properties.IncompatibleConfigurationException;
-import org.springframework.boot.micrometer.tracing.autoconfigure.MicrometerTracingAutoConfiguration;
-import org.springframework.boot.micrometer.tracing.autoconfigure.NoopTracerAutoConfiguration;
-import org.springframework.boot.micrometer.tracing.autoconfigure.TracingProperties;
-import org.springframework.boot.micrometer.tracing.autoconfigure.TracingProperties.Propagation.PropagationType;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.EnableAutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnClass;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnMissingBean;
+import io.github.kotlinmania.spring.boot.context.properties.EnableConfigurationProperties;
+import io.github.kotlinmania.spring.boot.context.properties.IncompatibleConfigurationException;
+import io.github.kotlinmania.spring.boot.micrometer.tracing.autoconfigure.MicrometerTracingAutoConfiguration;
+import io.github.kotlinmania.spring.boot.micrometer.tracing.autoconfigure.NoopTracerAutoConfiguration;
+import io.github.kotlinmania.spring.boot.micrometer.tracing.autoconfigure.TracingProperties;
+import io.github.kotlinmania.spring.boot.micrometer.tracing.autoconfigure.TracingProperties.Propagation.PropagationType;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Import;
 import org.springframework.core.Ordered;

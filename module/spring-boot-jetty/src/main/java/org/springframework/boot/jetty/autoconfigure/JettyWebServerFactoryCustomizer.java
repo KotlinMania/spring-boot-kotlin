@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.jetty.autoconfigure;
+package io.github.kotlinmania.spring.boot.jetty.autoconfigure;
 
 import java.time.Duration;
 import java.util.Arrays;
@@ -32,12 +32,12 @@ import org.eclipse.jetty.server.Handler;
 import org.eclipse.jetty.server.HttpConfiguration;
 import org.eclipse.jetty.server.RequestLogWriter;
 
-import org.springframework.boot.cloud.CloudPlatform;
-import org.springframework.boot.context.properties.PropertyMapper;
-import org.springframework.boot.jetty.ConfigurableJettyWebServerFactory;
-import org.springframework.boot.jetty.autoconfigure.JettyServerProperties.Accesslog;
-import org.springframework.boot.web.server.WebServerFactoryCustomizer;
-import org.springframework.boot.web.server.autoconfigure.ServerProperties;
+import io.github.kotlinmania.spring.boot.cloud.CloudPlatform;
+import io.github.kotlinmania.spring.boot.context.properties.PropertyMapper;
+import io.github.kotlinmania.spring.boot.jetty.ConfigurableJettyWebServerFactory;
+import io.github.kotlinmania.spring.boot.jetty.autoconfigure.JettyServerProperties.Accesslog;
+import io.github.kotlinmania.spring.boot.web.server.WebServerFactoryCustomizer;
+import io.github.kotlinmania.spring.boot.web.server.autoconfigure.ServerProperties;
 import org.springframework.core.Ordered;
 import org.springframework.core.env.Environment;
 import org.springframework.util.CollectionUtils;

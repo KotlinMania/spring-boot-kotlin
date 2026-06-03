@@ -14,21 +14,21 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.cloudfoundry.autoconfigure.actuate.endpoint.reactive;
+package io.github.kotlinmania.spring.boot.cloudfoundry.autoconfigure.actuate.endpoint.reactive;
 
 import reactor.core.publisher.Mono;
 
-import org.springframework.boot.actuate.endpoint.ApiVersion;
-import org.springframework.boot.actuate.endpoint.SecurityContext;
-import org.springframework.boot.actuate.endpoint.annotation.EndpointExtension;
-import org.springframework.boot.actuate.endpoint.annotation.ReadOperation;
-import org.springframework.boot.actuate.endpoint.annotation.Selector;
-import org.springframework.boot.actuate.endpoint.annotation.Selector.Match;
-import org.springframework.boot.actuate.endpoint.web.WebEndpointResponse;
-import org.springframework.boot.cloudfoundry.autoconfigure.actuate.endpoint.EndpointCloudFoundryExtension;
-import org.springframework.boot.health.actuate.endpoint.HealthDescriptor;
-import org.springframework.boot.health.actuate.endpoint.HealthEndpoint;
-import org.springframework.boot.health.actuate.endpoint.ReactiveHealthEndpointWebExtension;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.ApiVersion;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.SecurityContext;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.annotation.EndpointExtension;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.annotation.ReadOperation;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.annotation.Selector;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.annotation.Selector.Match;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.web.WebEndpointResponse;
+import io.github.kotlinmania.spring.boot.cloudfoundry.autoconfigure.actuate.endpoint.EndpointCloudFoundryExtension;
+import io.github.kotlinmania.spring.boot.health.actuate.endpoint.HealthDescriptor;
+import io.github.kotlinmania.spring.boot.health.actuate.endpoint.HealthEndpoint;
+import io.github.kotlinmania.spring.boot.health.actuate.endpoint.ReactiveHealthEndpointWebExtension;
 
 /**
  * Reactive {@link EndpointExtension @EndpointExtension} for the {@link HealthEndpoint}

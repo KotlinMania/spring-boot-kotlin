@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.artemis.docker.compose;
+package io.github.kotlinmania.spring.boot.artemis.docker.compose;
 
 import java.util.Map;
 

@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.configurationsample.incremental;
+package io.github.kotlinmania.spring.boot.configurationsample.incremental;
 
-import org.springframework.boot.configurationsample.TestConfigurationProperties;
+import io.github.kotlinmania.spring.boot.configurationsample.TestConfigurationProperties;
 
 @TestConfigurationProperties("foo")
 public class FooProperties {

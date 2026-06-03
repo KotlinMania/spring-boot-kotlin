@@ -18,6 +18,6 @@
  * Actuator reactive request mappings support.
  */
 @NullMarked
-package org.springframework.boot.webflux.actuate.web.mappings;
+package io.github.kotlinmania.spring.boot.webflux.actuate.web.mappings;
 
 import org.jspecify.annotations.NullMarked;

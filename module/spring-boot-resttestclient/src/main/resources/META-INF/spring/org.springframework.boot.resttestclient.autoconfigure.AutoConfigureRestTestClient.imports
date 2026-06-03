@@ -1,1 +1,1 @@
-org.springframework.boot.resttestclient.autoconfigure.RestTestClientTestAutoConfiguration
+io.github.kotlinmania.spring.boot.resttestclient.autoconfigure.RestTestClientTestAutoConfiguration

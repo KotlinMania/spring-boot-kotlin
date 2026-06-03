@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.logging.logback;
+package io.github.kotlinmania.spring.boot.logging.logback;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -28,11 +28,11 @@ import ch.qos.logback.classic.Level;
 import ch.qos.logback.classic.spi.ILoggingEvent;
 import ch.qos.logback.core.pattern.CompositeConverter;
 
-import org.springframework.boot.ansi.AnsiBackground;
-import org.springframework.boot.ansi.AnsiColor;
-import org.springframework.boot.ansi.AnsiElement;
-import org.springframework.boot.ansi.AnsiOutput;
-import org.springframework.boot.ansi.AnsiStyle;
+import io.github.kotlinmania.spring.boot.ansi.AnsiBackground;
+import io.github.kotlinmania.spring.boot.ansi.AnsiColor;
+import io.github.kotlinmania.spring.boot.ansi.AnsiElement;
+import io.github.kotlinmania.spring.boot.ansi.AnsiOutput;
+import io.github.kotlinmania.spring.boot.ansi.AnsiStyle;
 
 /**
  * Logback {@link CompositeConverter} to color output using the {@link AnsiOutput} class.

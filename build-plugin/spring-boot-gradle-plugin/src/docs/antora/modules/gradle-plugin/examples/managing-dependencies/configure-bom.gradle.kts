@@ -2,7 +2,7 @@ import io.spring.gradle.dependencymanagement.dsl.DependencyManagementExtension
 
 plugins {
 	java
-	id("org.springframework.boot") version "{version-spring-boot}"
+	id("io.github.kotlinmania.spring.boot.) version "{version-spring-boot}"
 }
 
 // tag::configure-bom[]
@@ -10,7 +10,7 @@ apply(plugin = "io.spring.dependency-management")
 
 the<DependencyManagementExtension>().apply {
 	imports {
-		mavenBom(org.springframework.boot.gradle.plugin.SpringBootPlugin.BOM_COORDINATES)
+		mavenBom(io.github.kotlinmania.spring.boot.gradle.plugin.SpringBootPlugin.BOM_COORDINATES)
 	}
 }
 // end::configure-bom[]
@@ -18,7 +18,7 @@ the<DependencyManagementExtension>().apply {
 the<DependencyManagementExtension>().apply {
 	resolutionStrategy {
 		eachDependency {
-			if (requested.group == "org.springframework.boot") {
+			if (requested.group == "io.github.kotlinmania.spring.boot.) {
 				useVersion("TEST-SNAPSHOT")
 			}
 		}

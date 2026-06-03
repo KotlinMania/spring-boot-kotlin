@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.http.client.reactive;
+package io.github.kotlinmania.spring.boot.http.client.reactive;
 
 import java.net.ProxySelector;
 import java.net.http.HttpClient;
@@ -23,9 +23,9 @@ import java.util.concurrent.Executor;
 
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.http.client.HttpClientSettings;
-import org.springframework.boot.http.client.InetAddressFilter;
-import org.springframework.boot.http.client.JdkHttpClientBuilder;
+import io.github.kotlinmania.spring.boot.http.client.HttpClientSettings;
+import io.github.kotlinmania.spring.boot.http.client.InetAddressFilter;
+import io.github.kotlinmania.spring.boot.http.client.JdkHttpClientBuilder;
 import org.springframework.core.task.SimpleAsyncTaskExecutor;
 import org.springframework.http.client.reactive.JdkClientHttpConnector;
 import org.springframework.test.util.ReflectionTestUtils;

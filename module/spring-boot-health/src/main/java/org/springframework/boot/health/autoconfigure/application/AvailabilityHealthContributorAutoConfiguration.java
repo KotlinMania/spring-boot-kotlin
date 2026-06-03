@@ -14,19 +14,19 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.health.autoconfigure.application;
+package io.github.kotlinmania.spring.boot.health.autoconfigure.application;
 
-import org.springframework.boot.autoconfigure.AutoConfiguration;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
-import org.springframework.boot.autoconfigure.availability.ApplicationAvailabilityAutoConfiguration;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnBooleanProperty;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
-import org.springframework.boot.availability.ApplicationAvailability;
-import org.springframework.boot.health.application.AvailabilityStateHealthIndicator;
-import org.springframework.boot.health.application.LivenessStateHealthIndicator;
-import org.springframework.boot.health.application.ReadinessStateHealthIndicator;
-import org.springframework.boot.health.contributor.Health;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.EnableAutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.availability.ApplicationAvailabilityAutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnBooleanProperty;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnClass;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnMissingBean;
+import io.github.kotlinmania.spring.boot.availability.ApplicationAvailability;
+import io.github.kotlinmania.spring.boot.health.application.AvailabilityStateHealthIndicator;
+import io.github.kotlinmania.spring.boot.health.application.LivenessStateHealthIndicator;
+import io.github.kotlinmania.spring.boot.health.application.ReadinessStateHealthIndicator;
+import io.github.kotlinmania.spring.boot.health.contributor.Health;
 import org.springframework.context.annotation.Bean;
 
 /**

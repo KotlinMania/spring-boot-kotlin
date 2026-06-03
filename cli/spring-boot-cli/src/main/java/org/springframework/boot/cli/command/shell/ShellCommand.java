@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.cli.command.shell;
+package io.github.kotlinmania.spring.boot.cli.command.shell;
 
-import org.springframework.boot.cli.command.AbstractCommand;
-import org.springframework.boot.cli.command.Command;
-import org.springframework.boot.cli.command.status.ExitStatus;
+import io.github.kotlinmania.spring.boot.cli.command.AbstractCommand;
+import io.github.kotlinmania.spring.boot.cli.command.Command;
+import io.github.kotlinmania.spring.boot.cli.command.status.ExitStatus;
 
 /**
  * {@link Command} to start a nested REPL shell.

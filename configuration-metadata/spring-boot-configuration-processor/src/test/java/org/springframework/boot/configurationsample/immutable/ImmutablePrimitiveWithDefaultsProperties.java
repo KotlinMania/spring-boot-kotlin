@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.configurationsample.immutable;
+package io.github.kotlinmania.spring.boot.configurationsample.immutable;
 
-import org.springframework.boot.configurationsample.TestDefaultValue;
+import io.github.kotlinmania.spring.boot.configurationsample.TestDefaultValue;
 
 /**
  * Simple immutable properties with primitive types and defaults.

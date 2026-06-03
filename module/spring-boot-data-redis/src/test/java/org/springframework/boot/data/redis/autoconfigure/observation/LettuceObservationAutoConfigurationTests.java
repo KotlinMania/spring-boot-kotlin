@@ -14,16 +14,16 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.data.redis.autoconfigure.observation;
+package io.github.kotlinmania.spring.boot.data.redis.autoconfigure.observation;
 
 import io.lettuce.core.resource.ClientResources;
 import io.lettuce.core.tracing.MicrometerTracing;
 import io.micrometer.observation.tck.TestObservationRegistry;
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.autoconfigure.AutoConfigurations;
-import org.springframework.boot.data.redis.autoconfigure.DataRedisAutoConfiguration;
-import org.springframework.boot.test.context.runner.ApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurations;
+import io.github.kotlinmania.spring.boot.data.redis.autoconfigure.DataRedisAutoConfiguration;
+import io.github.kotlinmania.spring.boot.test.context.runner.ApplicationContextRunner;
 import org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory;
 
 import static org.assertj.core.api.Assertions.assertThat;

@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.web.server.servlet;
+package io.github.kotlinmania.spring.boot.web.server.servlet;
 
 import java.io.File;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.system.ApplicationHome;
-import org.springframework.boot.system.ApplicationTemp;
+import io.github.kotlinmania.spring.boot.system.ApplicationHome;
+import io.github.kotlinmania.spring.boot.system.ApplicationTemp;
 import org.springframework.util.Assert;
 
 /**

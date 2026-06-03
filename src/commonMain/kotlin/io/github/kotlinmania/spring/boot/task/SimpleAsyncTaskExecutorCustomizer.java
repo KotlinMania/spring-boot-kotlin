@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.task;
+package io.github.kotlinmania.spring.boot.task;
 
 import org.springframework.core.task.SimpleAsyncTaskExecutor;
 

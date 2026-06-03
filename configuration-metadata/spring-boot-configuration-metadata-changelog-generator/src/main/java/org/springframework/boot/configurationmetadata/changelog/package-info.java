@@ -17,4 +17,4 @@
 /**
  * Spring Boot configuration metadata changelog generator.
  */
-package org.springframework.boot.configurationmetadata.changelog;
+package io.github.kotlinmania.spring.boot.configurationmetadata.changelog;

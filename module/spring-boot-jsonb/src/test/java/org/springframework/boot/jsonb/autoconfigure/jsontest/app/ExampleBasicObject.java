@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.jsonb.autoconfigure.jsontest.app;
+package io.github.kotlinmania.spring.boot.jsonb.autoconfigure.jsontest.app;
 
 import java.util.Objects;
 

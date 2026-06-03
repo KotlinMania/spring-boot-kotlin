@@ -14,18 +14,18 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.graphql.autoconfigure.data;
+package io.github.kotlinmania.spring.boot.graphql.autoconfigure.data;
 
 import java.util.Optional;
 
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.autoconfigure.AutoConfigurations;
-import org.springframework.boot.graphql.autoconfigure.Book;
-import org.springframework.boot.graphql.autoconfigure.GraphQlAutoConfiguration;
-import org.springframework.boot.test.context.FilteredClassLoader;
-import org.springframework.boot.test.context.runner.WebApplicationContextRunner;
-import org.springframework.boot.testsupport.classpath.resources.WithResource;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurations;
+import io.github.kotlinmania.spring.boot.graphql.autoconfigure.Book;
+import io.github.kotlinmania.spring.boot.graphql.autoconfigure.GraphQlAutoConfiguration;
+import io.github.kotlinmania.spring.boot.test.context.FilteredClassLoader;
+import io.github.kotlinmania.spring.boot.test.context.runner.WebApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.testsupport.classpath.resources.WithResource;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.querydsl.QuerydslPredicateExecutor;

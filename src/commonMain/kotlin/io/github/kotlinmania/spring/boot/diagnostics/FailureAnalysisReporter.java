@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.diagnostics;
+package io.github.kotlinmania.spring.boot.diagnostics;
 
 /**
  * Reports a {@code FailureAnalysis} to the user.

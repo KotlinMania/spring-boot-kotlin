@@ -18,6 +18,6 @@
  * Auto-configuration for Spring Data MongoDB health.
  */
 @NullMarked
-package org.springframework.boot.mongodb.autoconfigure.health;
+package io.github.kotlinmania.spring.boot.mongodb.autoconfigure.health;
 
 import org.jspecify.annotations.NullMarked;

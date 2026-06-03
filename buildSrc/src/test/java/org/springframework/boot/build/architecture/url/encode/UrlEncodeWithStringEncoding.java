@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.build.architecture.url.encode;
+package io.github.kotlinmania.spring.boot.build.architecture.url.encode;
 
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;

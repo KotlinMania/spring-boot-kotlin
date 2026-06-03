@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.actuate.endpoint.annotation;
+package io.github.kotlinmania.spring.boot.actuate.endpoint.annotation;
 
-import org.springframework.boot.actuate.endpoint.ExposableEndpoint;
-import org.springframework.boot.actuate.endpoint.Operation;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.ExposableEndpoint;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.Operation;
 
 /**
  * An {@link ExposableEndpoint endpoint} discovered by an {@link EndpointDiscoverer}.

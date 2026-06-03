@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.web.context.servlet;
+package io.github.kotlinmania.spring.boot.web.context.servlet;
 
 import jakarta.servlet.ServletContext;
 import jakarta.servlet.ServletException;
@@ -22,8 +22,8 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
 import org.springframework.beans.factory.config.ConfigurableListableBeanFactory;
-import org.springframework.boot.web.servlet.ServletContextInitializer;
-import org.springframework.boot.web.servlet.ServletContextInitializerBeans;
+import io.github.kotlinmania.spring.boot.web.servlet.ServletContextInitializer;
+import io.github.kotlinmania.spring.boot.web.servlet.ServletContextInitializerBeans;
 import org.springframework.web.context.ConfigurableWebApplicationContext;
 import org.springframework.web.context.WebApplicationContext;
 import org.springframework.web.context.support.ServletContextScope;

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.webflux.actuate.web.exchanges;
+package io.github.kotlinmania.spring.boot.webflux.actuate.web.exchanges;
 
 import java.net.InetSocketAddress;
 import java.net.URI;

@@ -1,1 +1,1 @@
-org.springframework.boot.cache.autoconfigure.CacheAutoConfiguration
+io.github.kotlinmania.spring.boot.cache.autoconfigure.CacheAutoConfiguration

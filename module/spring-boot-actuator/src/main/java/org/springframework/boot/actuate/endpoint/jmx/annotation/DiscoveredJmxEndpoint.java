@@ -14,16 +14,16 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.actuate.endpoint.jmx.annotation;
+package io.github.kotlinmania.spring.boot.actuate.endpoint.jmx.annotation;
 
 import java.util.Collection;
 
-import org.springframework.boot.actuate.endpoint.Access;
-import org.springframework.boot.actuate.endpoint.EndpointId;
-import org.springframework.boot.actuate.endpoint.annotation.AbstractDiscoveredEndpoint;
-import org.springframework.boot.actuate.endpoint.annotation.EndpointDiscoverer;
-import org.springframework.boot.actuate.endpoint.jmx.ExposableJmxEndpoint;
-import org.springframework.boot.actuate.endpoint.jmx.JmxOperation;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.Access;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.EndpointId;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.annotation.AbstractDiscoveredEndpoint;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.annotation.EndpointDiscoverer;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.jmx.ExposableJmxEndpoint;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.jmx.JmxOperation;
 
 /**
  * A discovered {@link ExposableJmxEndpoint JMX endpoint}.

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.kotlinx.serialization.json.autoconfigure;
+package io.github.kotlinmania.spring.boot.kotlinx.serialization.json.autoconfigure;
 
 import kotlinx.serialization.json.Json;
 import kotlinx.serialization.json.JsonBuilder;

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.configurationsample.generic;
+package io.github.kotlinmania.spring.boot.configurationsample.generic;
 
 /**
  * Properties with unresolved generic types that use identical generic parameter names but

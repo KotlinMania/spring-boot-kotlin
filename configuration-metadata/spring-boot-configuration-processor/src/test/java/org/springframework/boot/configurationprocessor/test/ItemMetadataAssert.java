@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.configurationprocessor.test;
+package io.github.kotlinmania.spring.boot.configurationprocessor.test;
 
 import java.util.function.Function;
 
@@ -23,9 +23,9 @@ import org.assertj.core.api.AssertProvider;
 import org.assertj.core.api.Assertions;
 import org.assertj.core.api.ObjectAssert;
 
-import org.springframework.boot.configurationprocessor.metadata.ItemDeprecation;
-import org.springframework.boot.configurationprocessor.metadata.ItemMetadata;
-import org.springframework.boot.configurationprocessor.metadata.ItemMetadata.ItemType;
+import io.github.kotlinmania.spring.boot.configurationprocessor.metadata.ItemDeprecation;
+import io.github.kotlinmania.spring.boot.configurationprocessor.metadata.ItemMetadata;
+import io.github.kotlinmania.spring.boot.configurationprocessor.metadata.ItemMetadata.ItemType;
 
 /**
  * AssertJ assert for {@link ItemMetadata}.

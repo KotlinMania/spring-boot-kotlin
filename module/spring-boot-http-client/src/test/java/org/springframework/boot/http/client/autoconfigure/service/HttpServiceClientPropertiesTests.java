@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.http.client.autoconfigure.service;
+package io.github.kotlinmania.spring.boot.http.client.autoconfigure.service;
 
 import java.time.Duration;
 import java.util.List;
@@ -24,11 +24,11 @@ import org.junit.jupiter.api.Test;
 
 import org.springframework.aot.hint.RuntimeHints;
 import org.springframework.aot.hint.predicate.RuntimeHintsPredicates;
-import org.springframework.boot.context.properties.EnableConfigurationProperties;
-import org.springframework.boot.http.client.HttpRedirects;
-import org.springframework.boot.http.client.autoconfigure.ApiversionProperties;
-import org.springframework.boot.http.client.autoconfigure.HttpClientProperties;
-import org.springframework.boot.http.client.autoconfigure.service.HttpServiceClientProperties.HttpServiceClientPropertiesRuntimeHints;
+import io.github.kotlinmania.spring.boot.context.properties.EnableConfigurationProperties;
+import io.github.kotlinmania.spring.boot.http.client.HttpRedirects;
+import io.github.kotlinmania.spring.boot.http.client.autoconfigure.ApiversionProperties;
+import io.github.kotlinmania.spring.boot.http.client.autoconfigure.HttpClientProperties;
+import io.github.kotlinmania.spring.boot.http.client.autoconfigure.service.HttpServiceClientProperties.HttpServiceClientPropertiesRuntimeHints;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.mock.env.MockEnvironment;
 

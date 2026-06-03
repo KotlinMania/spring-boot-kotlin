@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.actuate.audit.listener;
+package io.github.kotlinmania.spring.boot.actuate.audit.listener;
 
-import org.springframework.boot.actuate.audit.AuditEvent;
+import io.github.kotlinmania.spring.boot.actuate.audit.AuditEvent;
 import org.springframework.context.ApplicationListener;
 
 /**

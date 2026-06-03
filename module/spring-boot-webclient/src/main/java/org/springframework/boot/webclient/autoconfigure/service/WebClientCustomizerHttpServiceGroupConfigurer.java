@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.webclient.autoconfigure.service;
+package io.github.kotlinmania.spring.boot.webclient.autoconfigure.service;
 
 import org.springframework.beans.factory.ObjectProvider;
-import org.springframework.boot.webclient.WebClientCustomizer;
+import io.github.kotlinmania.spring.boot.webclient.WebClientCustomizer;
 import org.springframework.web.reactive.function.client.WebClient;
 import org.springframework.web.reactive.function.client.support.WebClientHttpServiceGroupConfigurer;
 import org.springframework.web.service.registry.HttpServiceGroup;

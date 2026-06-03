@@ -14,16 +14,16 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.grpc.server.autoconfigure.security;
+package io.github.kotlinmania.spring.boot.grpc.server.autoconfigure.security;
 
 import java.util.HashMap;
 
 import org.junit.jupiter.api.Test;
 import org.mockito.ArgumentCaptor;
 
-import org.springframework.boot.grpc.server.GrpcServletRegistration;
-import org.springframework.boot.grpc.server.autoconfigure.security.GrpcDisableCsrfHttpConfigurer.GrpcCsrfRequestMatcher;
-import org.springframework.boot.test.util.TestPropertyValues;
+import io.github.kotlinmania.spring.boot.grpc.server.GrpcServletRegistration;
+import io.github.kotlinmania.spring.boot.grpc.server.autoconfigure.security.GrpcDisableCsrfHttpConfigurer.GrpcCsrfRequestMatcher;
+import io.github.kotlinmania.spring.boot.test.util.TestPropertyValues;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.StaticApplicationContext;
 import org.springframework.grpc.server.service.GrpcServiceDiscoverer;

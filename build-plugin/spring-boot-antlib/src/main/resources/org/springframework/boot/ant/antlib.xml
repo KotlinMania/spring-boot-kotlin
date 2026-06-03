@@ -1,10 +1,10 @@
 <?xml version="1.0"?>
 <antlib>
 
-	<taskdef name="findmainclass" classname="org.springframework.boot.ant.FindMainClass" />
+	<taskdef name="findmainclass" classname="io.github.kotlinmania.spring.boot.ant.FindMainClass" />
 
 	<!-- unadvertised taskdef to help pull antlib resources from within the antlib.xml file -->
-	<taskdef name="spring-boot-antlib-share-antlib-loader" classname="org.springframework.boot.ant.ShareAntlibLoader" />
+	<taskdef name="spring-boot-antlib-share-antlib-loader" classname="io.github.kotlinmania.spring.boot.ant.ShareAntlibLoader" />
 
 	<macrodef name="exejar" description="Create a spring-boot executable jar">
 		<attribute name="destfile" />
@@ -21,7 +21,7 @@
 			<local name="start-class" />
 
 			<findmainclass
-				xmlns="antlib:org.springframework.boot.ant"
+				xmlns="antlib:io.github.kotlinmania.spring.boot.ant"
 				property="start-class"
 				mainclass="@{start-class}"
 				classesroot="@{classes}" />
@@ -29,7 +29,7 @@
 			<echo>Using start class ${start-class}</echo>
 
 			<spring-boot-antlib-share-antlib-loader
-				xmlns="antlib:org.springframework.boot.ant"
+				xmlns="antlib:io.github.kotlinmania.spring.boot.ant"
 				refid="spring.boot.antlib.loader" />
 
 			<local name="spring-boot.version" />
@@ -61,7 +61,7 @@
 				<zipfileset src="${destdir}/dependency/spring-boot-loader.jar" />
 				<manifest>
 					<attribute name="Main-Class"
-						value="org.springframework.boot.loader.launch.JarLauncher" />
+						value="io.github.kotlinmania.spring.boot.loader.launch.JarLauncher" />
 					<attribute name="Start-Class" value="${start-class}" />
 					<attribute name="Spring-Boot-Classes" value="BOOT-INF/classes/" />
 					<attribute name="Spring-Boot-Lib" value="BOOT-INF/lib/" />

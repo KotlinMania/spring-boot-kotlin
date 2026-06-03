@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.http.converter.autoconfigure;
+package io.github.kotlinmania.spring.boot.http.converter.autoconfigure;
 
-import org.springframework.boot.autoconfigure.preinitialize.BackgroundPreinitializer;
+import io.github.kotlinmania.spring.boot.autoconfigure.preinitialize.BackgroundPreinitializer;
 import org.springframework.http.converter.HttpMessageConverter;
 import org.springframework.http.converter.support.AllEncompassingFormHttpMessageConverter;
 

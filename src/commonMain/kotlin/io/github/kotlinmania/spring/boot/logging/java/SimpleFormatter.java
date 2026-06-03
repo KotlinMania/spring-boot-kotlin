@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.logging.java;
+package io.github.kotlinmania.spring.boot.logging.java;
 
 import java.io.PrintWriter;
 import java.io.StringWriter;
@@ -22,7 +22,7 @@ import java.util.Date;
 import java.util.logging.Formatter;
 import java.util.logging.LogRecord;
 
-import org.springframework.boot.logging.LoggingSystemProperty;
+import io.github.kotlinmania.spring.boot.logging.LoggingSystemProperty;
 
 /**
  * Simple 'Java Logging' {@link Formatter}.

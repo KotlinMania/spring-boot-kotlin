@@ -18,6 +18,6 @@
  * Web server test utilities and support classes.
  */
 @NullMarked
-package org.springframework.boot.test.web.server;
+package io.github.kotlinmania.spring.boot.test.web.server;
 
 import org.jspecify.annotations.NullMarked;

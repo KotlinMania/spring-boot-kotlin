@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.tomcat.autoconfigure;
+package io.github.kotlinmania.spring.boot.tomcat.autoconfigure;
 
 import java.time.Duration;
 import java.util.List;
@@ -32,17 +32,17 @@ import org.apache.coyote.UpgradeProtocol;
 import org.apache.coyote.http11.AbstractHttp11Protocol;
 import org.apache.coyote.http2.Http2Protocol;
 
-import org.springframework.boot.autoconfigure.web.ErrorProperties;
-import org.springframework.boot.autoconfigure.web.ErrorProperties.IncludeAttribute;
-import org.springframework.boot.autoconfigure.web.WebProperties;
-import org.springframework.boot.cloud.CloudPlatform;
-import org.springframework.boot.context.properties.PropertyMapper;
-import org.springframework.boot.tomcat.ConfigurableTomcatWebServerFactory;
-import org.springframework.boot.tomcat.autoconfigure.TomcatServerProperties.Accesslog;
-import org.springframework.boot.tomcat.autoconfigure.TomcatServerProperties.Remoteip;
-import org.springframework.boot.tomcat.autoconfigure.TomcatServerProperties.UseApr;
-import org.springframework.boot.web.server.WebServerFactoryCustomizer;
-import org.springframework.boot.web.server.autoconfigure.ServerProperties;
+import io.github.kotlinmania.spring.boot.autoconfigure.web.ErrorProperties;
+import io.github.kotlinmania.spring.boot.autoconfigure.web.ErrorProperties.IncludeAttribute;
+import io.github.kotlinmania.spring.boot.autoconfigure.web.WebProperties;
+import io.github.kotlinmania.spring.boot.cloud.CloudPlatform;
+import io.github.kotlinmania.spring.boot.context.properties.PropertyMapper;
+import io.github.kotlinmania.spring.boot.tomcat.ConfigurableTomcatWebServerFactory;
+import io.github.kotlinmania.spring.boot.tomcat.autoconfigure.TomcatServerProperties.Accesslog;
+import io.github.kotlinmania.spring.boot.tomcat.autoconfigure.TomcatServerProperties.Remoteip;
+import io.github.kotlinmania.spring.boot.tomcat.autoconfigure.TomcatServerProperties.UseApr;
+import io.github.kotlinmania.spring.boot.web.server.WebServerFactoryCustomizer;
+import io.github.kotlinmania.spring.boot.web.server.autoconfigure.ServerProperties;
 import org.springframework.core.Ordered;
 import org.springframework.core.env.Environment;
 import org.springframework.util.Assert;

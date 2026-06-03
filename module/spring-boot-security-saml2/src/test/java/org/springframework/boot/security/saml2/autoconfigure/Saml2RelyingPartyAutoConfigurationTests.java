@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.security.saml2.autoconfigure;
+package io.github.kotlinmania.spring.boot.security.saml2.autoconfigure;
 
 import java.io.InputStream;
 import java.util.List;
@@ -26,16 +26,16 @@ import okio.Buffer;
 import org.jspecify.annotations.Nullable;
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.autoconfigure.AutoConfigurations;
-import org.springframework.boot.security.autoconfigure.SecurityAutoConfiguration;
-import org.springframework.boot.security.autoconfigure.actuate.web.servlet.ManagementWebSecurityAutoConfiguration;
-import org.springframework.boot.security.autoconfigure.web.servlet.ServletWebSecurityAutoConfiguration;
-import org.springframework.boot.test.context.FilteredClassLoader;
-import org.springframework.boot.test.context.assertj.AssertableWebApplicationContext;
-import org.springframework.boot.test.context.runner.ApplicationContextRunner;
-import org.springframework.boot.test.context.runner.WebApplicationContextRunner;
-import org.springframework.boot.testsupport.classpath.resources.WithPackageResources;
-import org.springframework.boot.webmvc.autoconfigure.WebMvcAutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurations;
+import io.github.kotlinmania.spring.boot.security.autoconfigure.SecurityAutoConfiguration;
+import io.github.kotlinmania.spring.boot.security.autoconfigure.actuate.web.servlet.ManagementWebSecurityAutoConfiguration;
+import io.github.kotlinmania.spring.boot.security.autoconfigure.web.servlet.ServletWebSecurityAutoConfiguration;
+import io.github.kotlinmania.spring.boot.test.context.FilteredClassLoader;
+import io.github.kotlinmania.spring.boot.test.context.assertj.AssertableWebApplicationContext;
+import io.github.kotlinmania.spring.boot.test.context.runner.ApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.test.context.runner.WebApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.testsupport.classpath.resources.WithPackageResources;
+import io.github.kotlinmania.spring.boot.webmvc.autoconfigure.WebMvcAutoConfiguration;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.io.ClassPathResource;
@@ -289,8 +289,8 @@ class Saml2RelyingPartyAutoConfigurationTests {
 			setupMockResponse(server, new ClassPathResource("idp-metadata"));
 			this.contextRunner.withPropertyValues(PREFIX + ".foo.assertingparty.metadata-uri=" + metadataUrl,
 					PREFIX + ".foo.assertingparty.singlesignon.sign-request=true",
-					PREFIX + ".foo.signing.credentials[0].private-key-location=classpath:org/springframework/boot/security/saml2/autoconfigure/rsa.key",
-					PREFIX + ".foo.signing.credentials[0].certificate-location=classpath:org/springframework/boot/security/saml2/autoconfigure/rsa.crt")
+					PREFIX + ".foo.signing.credentials[0].private-key-location=classpath:io.github.kotlinmania.spring.boot.security/saml2/autoconfigure/rsa.key",
+					PREFIX + ".foo.signing.credentials[0].certificate-location=classpath:io.github.kotlinmania.spring.boot.security/saml2/autoconfigure/rsa.crt")
 				.run((context) -> {
 					RelyingPartyRegistrationRepository repository = context
 						.getBean(RelyingPartyRegistrationRepository.class);

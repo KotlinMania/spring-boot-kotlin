@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.web.server.test;
+package io.github.kotlinmania.spring.boot.web.server.test;
 
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.boot.test.context.SpringBootTest.WebEnvironment;
+import io.github.kotlinmania.spring.boot.test.context.SpringBootTest;
+import io.github.kotlinmania.spring.boot.test.context.SpringBootTest.WebEnvironment;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.test.annotation.DirtiesContext;
 import org.springframework.web.bind.annotation.RestController;

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.autoconfigure.data;
+package io.github.kotlinmania.spring.boot.autoconfigure.data;
 
 import java.lang.annotation.Documented;
 import java.lang.annotation.ElementType;

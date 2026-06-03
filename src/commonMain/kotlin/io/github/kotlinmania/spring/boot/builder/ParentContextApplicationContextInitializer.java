@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.builder;
+package io.github.kotlinmania.spring.boot.builder;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextInitializer;

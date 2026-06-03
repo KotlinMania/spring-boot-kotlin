@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.jetty;
+package io.github.kotlinmania.spring.boot.jetty;
 
 import org.eclipse.jetty.server.Server;
 
-import org.springframework.boot.jetty.servlet.JettyServletWebServerFactory;
+import io.github.kotlinmania.spring.boot.jetty.servlet.JettyServletWebServerFactory;
 
 /**
  * Callback interface that can be used to customize a Jetty {@link Server}.

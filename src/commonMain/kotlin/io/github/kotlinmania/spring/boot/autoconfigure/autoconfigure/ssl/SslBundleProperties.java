@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.autoconfigure.ssl;
+package io.github.kotlinmania.spring.boot.autoconfigure.ssl;
 
 import java.util.Set;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.ssl.SslBundle;
+import io.github.kotlinmania.spring.boot.ssl.SslBundle;
 
 /**
  * Base class for SSL Bundle properties.

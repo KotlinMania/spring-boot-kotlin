@@ -18,6 +18,6 @@
  * Custom support for Flyway database migration.
  */
 @NullMarked
-package org.springframework.boot.flyway;
+package io.github.kotlinmania.spring.boot.flyway;
 
 import org.jspecify.annotations.NullMarked;

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docker.compose.core;
+package io.github.kotlinmania.spring.boot.docker.compose.core;
 
 import java.time.Duration;
 import java.util.ArrayList;
@@ -24,7 +24,7 @@ import java.util.Locale;
 import java.util.Objects;
 import java.util.function.Function;
 
-import org.springframework.boot.logging.LogLevel;
+import io.github.kotlinmania.spring.boot.logging.LogLevel;
 
 /**
  * Commands that can be executed by the {@link DockerCli}.

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.actuate.web.mappings;
+package io.github.kotlinmania.spring.boot.actuate.web.mappings;
 
 import org.springframework.asm.Type;
 import org.springframework.web.method.HandlerMethod;

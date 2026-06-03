@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.data.jdbc.test.autoconfigure;
+package io.github.kotlinmania.spring.boot.data.jdbc.test.autoconfigure;
 
 import java.util.Collections;
 import java.util.Set;
 
-import org.springframework.boot.context.TypeExcludeFilter;
-import org.springframework.boot.test.context.filter.annotation.StandardAnnotationCustomizableTypeExcludeFilter;
+import io.github.kotlinmania.spring.boot.context.TypeExcludeFilter;
+import io.github.kotlinmania.spring.boot.test.context.filter.annotation.StandardAnnotationCustomizableTypeExcludeFilter;
 import org.springframework.data.jdbc.repository.config.AbstractJdbcConfiguration;
 
 /**

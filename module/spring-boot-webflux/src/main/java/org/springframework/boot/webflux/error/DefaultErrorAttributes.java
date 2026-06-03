@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.webflux.error;
+package io.github.kotlinmania.spring.boot.webflux.error;
 
 import java.io.PrintWriter;
 import java.io.StringWriter;
@@ -25,9 +25,9 @@ import java.util.Optional;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.web.error.Error;
-import org.springframework.boot.web.error.ErrorAttributeOptions;
-import org.springframework.boot.web.error.ErrorAttributeOptions.Include;
+import io.github.kotlinmania.spring.boot.web.error.Error;
+import io.github.kotlinmania.spring.boot.web.error.ErrorAttributeOptions;
+import io.github.kotlinmania.spring.boot.web.error.ErrorAttributeOptions.Include;
 import org.springframework.core.annotation.MergedAnnotation;
 import org.springframework.core.annotation.MergedAnnotations;
 import org.springframework.core.annotation.MergedAnnotations.SearchStrategy;

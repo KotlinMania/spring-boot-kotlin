@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.security.autoconfigure.web.reactive;
+package io.github.kotlinmania.spring.boot.security.autoconfigure.web.reactive;
 
 import org.junit.jupiter.api.Test;
 

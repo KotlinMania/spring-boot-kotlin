@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.gradle.docs;
+package io.github.kotlinmania.spring.boot.gradle.docs;
 
 /**
  * @author Phillip Webb

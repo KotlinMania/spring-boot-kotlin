@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.webmvc.autoconfigure.actuate.web;
+package io.github.kotlinmania.spring.boot.webmvc.autoconfigure.actuate.web;
 
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.servlet.filter.OrderedRequestContextFilter;
-import org.springframework.boot.test.context.runner.WebApplicationContextRunner;
-import org.springframework.boot.webmvc.autoconfigure.DispatcherServletPath;
+import io.github.kotlinmania.spring.boot.servlet.filter.OrderedRequestContextFilter;
+import io.github.kotlinmania.spring.boot.test.context.runner.WebApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.webmvc.autoconfigure.DispatcherServletPath;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.context.request.RequestContextListener;

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.origin;
+package io.github.kotlinmania.spring.boot.origin;
 
 import java.net.URI;
 

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.diagnostics;
+package io.github.kotlinmania.spring.boot.diagnostics;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;

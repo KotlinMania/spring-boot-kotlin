@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.build.test;
+package io.github.kotlinmania.spring.boot.build.test;
 
 import org.gradle.api.Project;
 import org.gradle.api.provider.Provider;
@@ -24,7 +24,7 @@ import org.gradle.api.services.BuildServiceParameters;
 /**
  * Build service for Docker-based tests. The maximum number of {@code dockerTest} tasks
  * that can run in parallel can be configured using
- * {@code org.springframework.boot.dockertest.max-parallel-tasks}. By default, only a
+ * {@code io.github.kotlinmania.spring.boot.dockertest.max-parallel-tasks}. By default, only a
  * single {@code dockerTest} task will run at a time.
  *
  * @author Andy Wilkinson
@@ -39,7 +39,7 @@ abstract class DockerTestBuildService implements BuildService<BuildServiceParame
 	}
 
 	private static int maxParallelTasks(Project project) {
-		Object property = project.findProperty("org.springframework.boot.dockertest.max-parallel-tasks");
+		Object property = project.findProperty("io.github.kotlinmania.spring.boot.dockertest.max-parallel-tasks");
 		if (property == null) {
 			return 1;
 		}

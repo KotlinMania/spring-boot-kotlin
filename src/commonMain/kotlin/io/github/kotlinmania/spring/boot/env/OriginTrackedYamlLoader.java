@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.env;
+package io.github.kotlinmania.spring.boot.env;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -40,10 +40,10 @@ import org.yaml.snakeyaml.representer.Representer;
 import org.yaml.snakeyaml.resolver.Resolver;
 
 import org.springframework.beans.factory.config.YamlProcessor;
-import org.springframework.boot.origin.Origin;
-import org.springframework.boot.origin.OriginTrackedValue;
-import org.springframework.boot.origin.TextResourceOrigin;
-import org.springframework.boot.origin.TextResourceOrigin.Location;
+import io.github.kotlinmania.spring.boot.origin.Origin;
+import io.github.kotlinmania.spring.boot.origin.OriginTrackedValue;
+import io.github.kotlinmania.spring.boot.origin.TextResourceOrigin;
+import io.github.kotlinmania.spring.boot.origin.TextResourceOrigin.Location;
 import org.springframework.core.io.Resource;
 
 /**

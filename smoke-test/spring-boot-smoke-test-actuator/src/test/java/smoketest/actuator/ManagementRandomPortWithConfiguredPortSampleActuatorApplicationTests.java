@@ -18,10 +18,10 @@ package smoketest.actuator;
 
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.resttestclient.TestRestTemplate;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.boot.test.web.server.LocalManagementPort;
-import org.springframework.boot.test.web.server.LocalServerPort;
+import io.github.kotlinmania.spring.boot.resttestclient.TestRestTemplate;
+import io.github.kotlinmania.spring.boot.test.context.SpringBootTest;
+import io.github.kotlinmania.spring.boot.test.web.server.LocalManagementPort;
+import io.github.kotlinmania.spring.boot.test.web.server.LocalServerPort;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 

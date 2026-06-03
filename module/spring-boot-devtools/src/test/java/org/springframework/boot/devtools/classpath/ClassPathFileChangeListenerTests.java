@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.devtools.classpath;
+package io.github.kotlinmania.spring.boot.devtools.classpath;
 
 import java.io.File;
 import java.util.Collections;
@@ -26,9 +26,9 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 
-import org.springframework.boot.devtools.filewatch.ChangedFile;
-import org.springframework.boot.devtools.filewatch.ChangedFiles;
-import org.springframework.boot.devtools.filewatch.FileSystemWatcher;
+import io.github.kotlinmania.spring.boot.devtools.filewatch.ChangedFile;
+import io.github.kotlinmania.spring.boot.devtools.filewatch.ChangedFiles;
+import io.github.kotlinmania.spring.boot.devtools.filewatch.FileSystemWatcher;
 import org.springframework.context.ApplicationEventPublisher;
 
 import static org.assertj.core.api.Assertions.assertThat;

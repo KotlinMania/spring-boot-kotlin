@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.webflux.actuate.web.mappings;
+package io.github.kotlinmania.spring.boot.webflux.actuate.web.mappings;
 
 import java.util.ArrayDeque;
 import java.util.ArrayList;
@@ -34,9 +34,9 @@ import reactor.core.publisher.Mono;
 import org.springframework.aot.hint.BindingReflectionHintsRegistrar;
 import org.springframework.aot.hint.RuntimeHints;
 import org.springframework.aot.hint.RuntimeHintsRegistrar;
-import org.springframework.boot.actuate.web.mappings.HandlerMethodDescription;
-import org.springframework.boot.actuate.web.mappings.MappingDescriptionProvider;
-import org.springframework.boot.webflux.actuate.web.mappings.DispatcherHandlersMappingDescriptionProvider.DispatcherHandlersMappingDescriptionProviderRuntimeHints;
+import io.github.kotlinmania.spring.boot.actuate.web.mappings.HandlerMethodDescription;
+import io.github.kotlinmania.spring.boot.actuate.web.mappings.MappingDescriptionProvider;
+import io.github.kotlinmania.spring.boot.webflux.actuate.web.mappings.DispatcherHandlersMappingDescriptionProvider.DispatcherHandlersMappingDescriptionProviderRuntimeHints;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.ImportRuntimeHints;
 import org.springframework.core.io.Resource;

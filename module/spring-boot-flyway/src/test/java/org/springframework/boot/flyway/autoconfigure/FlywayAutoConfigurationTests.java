@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.flyway.autoconfigure;
+package io.github.kotlinmania.spring.boot.flyway.autoconfigure;
 
 import java.io.Serializable;
 import java.lang.annotation.ElementType;
@@ -57,24 +57,24 @@ import org.postgresql.Driver;
 import org.springframework.aot.hint.RuntimeHints;
 import org.springframework.aot.hint.predicate.RuntimeHintsPredicates;
 import org.springframework.beans.factory.BeanCreationException;
-import org.springframework.boot.autoconfigure.AutoConfigurations;
-import org.springframework.boot.context.properties.EnableConfigurationProperties;
-import org.springframework.boot.flyway.autoconfigure.FlywayAutoConfiguration.FlywayAutoConfigurationRuntimeHints;
-import org.springframework.boot.flyway.autoconfigure.FlywayAutoConfiguration.OracleFlywayConfigurationCustomizer;
-import org.springframework.boot.flyway.autoconfigure.FlywayAutoConfiguration.PostgresqlFlywayConfigurationCustomizer;
-import org.springframework.boot.flyway.autoconfigure.FlywayAutoConfiguration.SqlServerFlywayConfigurationCustomizer;
-import org.springframework.boot.jdbc.DataSourceBuilder;
-import org.springframework.boot.jdbc.SchemaManagement;
-import org.springframework.boot.jdbc.autoconfigure.DataSourceProperties;
-import org.springframework.boot.jdbc.autoconfigure.EmbeddedDataSourceConfiguration;
-import org.springframework.boot.jdbc.autoconfigure.JdbcConnectionDetails;
-import org.springframework.boot.test.context.FilteredClassLoader;
-import org.springframework.boot.test.context.assertj.AssertableApplicationContext;
-import org.springframework.boot.test.context.runner.ApplicationContextRunner;
-import org.springframework.boot.test.context.runner.ContextConsumer;
-import org.springframework.boot.test.system.OutputCaptureExtension;
-import org.springframework.boot.testsupport.classpath.resources.ResourcePath;
-import org.springframework.boot.testsupport.classpath.resources.WithResource;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurations;
+import io.github.kotlinmania.spring.boot.context.properties.EnableConfigurationProperties;
+import io.github.kotlinmania.spring.boot.flyway.autoconfigure.FlywayAutoConfiguration.FlywayAutoConfigurationRuntimeHints;
+import io.github.kotlinmania.spring.boot.flyway.autoconfigure.FlywayAutoConfiguration.OracleFlywayConfigurationCustomizer;
+import io.github.kotlinmania.spring.boot.flyway.autoconfigure.FlywayAutoConfiguration.PostgresqlFlywayConfigurationCustomizer;
+import io.github.kotlinmania.spring.boot.flyway.autoconfigure.FlywayAutoConfiguration.SqlServerFlywayConfigurationCustomizer;
+import io.github.kotlinmania.spring.boot.jdbc.DataSourceBuilder;
+import io.github.kotlinmania.spring.boot.jdbc.SchemaManagement;
+import io.github.kotlinmania.spring.boot.jdbc.autoconfigure.DataSourceProperties;
+import io.github.kotlinmania.spring.boot.jdbc.autoconfigure.EmbeddedDataSourceConfiguration;
+import io.github.kotlinmania.spring.boot.jdbc.autoconfigure.JdbcConnectionDetails;
+import io.github.kotlinmania.spring.boot.test.context.FilteredClassLoader;
+import io.github.kotlinmania.spring.boot.test.context.assertj.AssertableApplicationContext;
+import io.github.kotlinmania.spring.boot.test.context.runner.ApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.test.context.runner.ContextConsumer;
+import io.github.kotlinmania.spring.boot.test.system.OutputCaptureExtension;
+import io.github.kotlinmania.spring.boot.testsupport.classpath.resources.ResourcePath;
+import io.github.kotlinmania.spring.boot.testsupport.classpath.resources.WithResource;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
@@ -1308,7 +1308,7 @@ class FlywayAutoConfigurationTests {
 					<?xml version="1.0" encoding="UTF-8"?>
 					<persistence version="2.0" xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence https://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
 						<persistence-unit name="manually-configured">
-							<class>org.springframework.boot.flyway.autoconfigure.FlywayAutoConfigurationTests$City</class>
+							<class>io.github.kotlinmania.spring.boot.flyway.autoconfigure.FlywayAutoConfigurationTests$City</class>
 							<exclude-unlisted-classes>true</exclude-unlisted-classes>
 						</persistence-unit>
 					</persistence>

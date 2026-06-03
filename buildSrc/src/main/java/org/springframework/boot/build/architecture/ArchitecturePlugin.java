@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.build.architecture;
+package io.github.kotlinmania.spring.boot.build.architecture;
 
 import org.gradle.api.Plugin;
 import org.gradle.api.Project;

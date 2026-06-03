@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.graphql.autoconfigure.servlet;
+package io.github.kotlinmania.spring.boot.graphql.autoconfigure.servlet;
 
 import java.util.Collections;
 import java.util.Map;
@@ -28,19 +28,19 @@ import org.jspecify.annotations.Nullable;
 import org.springframework.aot.hint.RuntimeHints;
 import org.springframework.aot.hint.RuntimeHintsRegistrar;
 import org.springframework.beans.factory.ObjectProvider;
-import org.springframework.boot.autoconfigure.AutoConfiguration;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnWebApplication;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnWebApplication.Type;
-import org.springframework.boot.context.properties.EnableConfigurationProperties;
-import org.springframework.boot.graphql.autoconfigure.GraphQlAutoConfiguration;
-import org.springframework.boot.graphql.autoconfigure.GraphQlCorsProperties;
-import org.springframework.boot.graphql.autoconfigure.GraphQlProperties;
-import org.springframework.boot.http.converter.autoconfigure.ServerHttpMessageConvertersCustomizer;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.EnableAutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnBean;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnClass;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnMissingBean;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnProperty;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnWebApplication;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnWebApplication.Type;
+import io.github.kotlinmania.spring.boot.context.properties.EnableConfigurationProperties;
+import io.github.kotlinmania.spring.boot.graphql.autoconfigure.GraphQlAutoConfiguration;
+import io.github.kotlinmania.spring.boot.graphql.autoconfigure.GraphQlCorsProperties;
+import io.github.kotlinmania.spring.boot.graphql.autoconfigure.GraphQlProperties;
+import io.github.kotlinmania.spring.boot.http.converter.autoconfigure.ServerHttpMessageConvertersCustomizer;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.ImportRuntimeHints;

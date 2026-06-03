@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.autoconfigure.task;
+package io.github.kotlinmania.spring.boot.autoconfigure.task;
 
 import java.util.List;
 import java.util.concurrent.Executor;
@@ -28,17 +28,17 @@ import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.ObjectProvider;
 import org.springframework.beans.factory.config.BeanFactoryPostProcessor;
 import org.springframework.beans.factory.config.BeanPostProcessor;
-import org.springframework.boot.autoconfigure.condition.AnyNestedCondition;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnThreading;
-import org.springframework.boot.task.SimpleAsyncTaskExecutorBuilder;
-import org.springframework.boot.task.SimpleAsyncTaskExecutorCustomizer;
-import org.springframework.boot.task.ThreadPoolTaskExecutorBuilder;
-import org.springframework.boot.task.ThreadPoolTaskExecutorCustomizer;
-import org.springframework.boot.thread.Threading;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.AnyNestedCondition;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnBean;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnClass;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnMissingBean;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnProperty;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnThreading;
+import io.github.kotlinmania.spring.boot.task.SimpleAsyncTaskExecutorBuilder;
+import io.github.kotlinmania.spring.boot.task.SimpleAsyncTaskExecutorCustomizer;
+import io.github.kotlinmania.spring.boot.task.ThreadPoolTaskExecutorBuilder;
+import io.github.kotlinmania.spring.boot.task.ThreadPoolTaskExecutorCustomizer;
+import io.github.kotlinmania.spring.boot.thread.Threading;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Conditional;

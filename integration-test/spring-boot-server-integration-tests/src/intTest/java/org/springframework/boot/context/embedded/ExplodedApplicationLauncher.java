@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.context.embedded;
+package io.github.kotlinmania.spring.boot.context.embedded;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -55,8 +55,8 @@ class ExplodedApplicationLauncher extends AbstractApplicationLauncher {
 
 	@Override
 	protected List<String> getArguments(File archive, File serverPortFile) {
-		String mainClass = (archive.getName().endsWith(".war") ? "org.springframework.boot.loader.launch.WarLauncher"
-				: "org.springframework.boot.loader.launch.JarLauncher");
+		String mainClass = (archive.getName().endsWith(".war") ? "io.github.kotlinmania.spring.boot.loader.launch.WarLauncher"
+				: "io.github.kotlinmania.spring.boot.loader.launch.JarLauncher");
 		try {
 			explodeArchive(archive);
 			return Arrays.asList("-cp", this.exploded.getAbsolutePath(), mainClass, serverPortFile.getAbsolutePath());

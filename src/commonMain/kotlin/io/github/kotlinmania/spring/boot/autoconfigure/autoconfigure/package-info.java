@@ -17,9 +17,9 @@
 /**
  * Spring Boot's auto-configuration capabilities.
  *
- * @see org.springframework.boot.autoconfigure.EnableAutoConfiguration
+ * @see io.github.kotlinmania.spring.boot.autoconfigure.EnableAutoConfiguration
  */
 @NullMarked
-package org.springframework.boot.autoconfigure;
+package io.github.kotlinmania.spring.boot.autoconfigure;
 
 import org.jspecify.annotations.NullMarked;

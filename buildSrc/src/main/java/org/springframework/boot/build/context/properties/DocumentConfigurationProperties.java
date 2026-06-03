@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.build.context.properties;
+package io.github.kotlinmania.spring.boot.build.context.properties;
 
 import java.io.IOException;
 
@@ -30,7 +30,7 @@ import org.gradle.api.tasks.PathSensitive;
 import org.gradle.api.tasks.PathSensitivity;
 import org.gradle.api.tasks.TaskAction;
 
-import org.springframework.boot.build.context.properties.Snippet.Config;
+import io.github.kotlinmania.spring.boot.build.context.properties.Snippet.Config;
 
 /**
  * {@link Task} used to document auto-configuration classes.

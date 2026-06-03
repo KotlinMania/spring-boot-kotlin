@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.quartz.autoconfigure;
+package io.github.kotlinmania.spring.boot.quartz.autoconfigure;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.boot.jdbc.init.DatabaseInitializationProperties;
+import io.github.kotlinmania.spring.boot.context.properties.ConfigurationProperties;
+import io.github.kotlinmania.spring.boot.jdbc.init.DatabaseInitializationProperties;
 
 /**
  * Configuration properties for the Quartz Scheduler integration when using a JDBC job

@@ -19,9 +19,9 @@ package smoketest.graphql;
 import org.junit.jupiter.api.Test;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.graphql.test.autoconfigure.tester.AutoConfigureHttpGraphQlTester;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.boot.test.context.SpringBootTest.WebEnvironment;
+import io.github.kotlinmania.spring.boot.graphql.test.autoconfigure.tester.AutoConfigureHttpGraphQlTester;
+import io.github.kotlinmania.spring.boot.test.context.SpringBootTest;
+import io.github.kotlinmania.spring.boot.test.context.SpringBootTest.WebEnvironment;
 import org.springframework.graphql.test.tester.HttpGraphQlTester;
 
 /**

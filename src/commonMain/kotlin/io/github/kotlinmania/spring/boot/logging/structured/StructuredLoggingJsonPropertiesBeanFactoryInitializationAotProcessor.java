@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.logging.structured;
+package io.github.kotlinmania.spring.boot.logging.structured;
 
 import java.util.Set;
 
@@ -28,7 +28,7 @@ import org.springframework.beans.factory.aot.BeanFactoryInitializationAotContrib
 import org.springframework.beans.factory.aot.BeanFactoryInitializationAotProcessor;
 import org.springframework.beans.factory.aot.BeanFactoryInitializationCode;
 import org.springframework.beans.factory.config.ConfigurableListableBeanFactory;
-import org.springframework.boot.logging.structured.StructuredLoggingJsonProperties.StackTrace;
+import io.github.kotlinmania.spring.boot.logging.structured.StructuredLoggingJsonProperties.StackTrace;
 import org.springframework.core.env.Environment;
 
 /**

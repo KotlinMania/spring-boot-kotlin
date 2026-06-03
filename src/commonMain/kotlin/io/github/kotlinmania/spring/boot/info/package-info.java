@@ -18,6 +18,6 @@
  * Support for providing information about an application.
  */
 @NullMarked
-package org.springframework.boot.info;
+package io.github.kotlinmania.spring.boot.info;
 
 import org.jspecify.annotations.NullMarked;

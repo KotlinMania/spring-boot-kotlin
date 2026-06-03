@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.micrometer.metrics.autoconfigure.export.stackdriver;
+package io.github.kotlinmania.spring.boot.micrometer.metrics.autoconfigure.export.stackdriver;
 
 import java.util.Map;
 
 import io.micrometer.stackdriver.StackdriverConfig;
 
-import org.springframework.boot.micrometer.metrics.autoconfigure.export.properties.StepRegistryPropertiesConfigAdapter;
+import io.github.kotlinmania.spring.boot.micrometer.metrics.autoconfigure.export.properties.StepRegistryPropertiesConfigAdapter;
 
 /**
  * Adapter to convert {@link StackdriverProperties} to a {@link StackdriverConfig}.

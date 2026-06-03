@@ -14,23 +14,23 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.http.client.autoconfigure.imperative;
+package io.github.kotlinmania.spring.boot.http.client.autoconfigure.imperative;
 
 import java.util.List;
 
 import org.springframework.beans.factory.ObjectProvider;
-import org.springframework.boot.autoconfigure.AutoConfiguration;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
-import org.springframework.boot.context.properties.EnableConfigurationProperties;
-import org.springframework.boot.http.client.ClientHttpRequestFactoryBuilder;
-import org.springframework.boot.http.client.HttpClientSettings;
-import org.springframework.boot.http.client.JdkClientHttpRequestFactoryBuilder;
-import org.springframework.boot.http.client.autoconfigure.ClientHttpRequestFactoryBuilderCustomizer;
-import org.springframework.boot.http.client.autoconfigure.HttpClientAutoConfiguration;
-import org.springframework.boot.thread.Threading;
-import org.springframework.boot.util.LambdaSafe;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.EnableAutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnClass;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnMissingBean;
+import io.github.kotlinmania.spring.boot.context.properties.EnableConfigurationProperties;
+import io.github.kotlinmania.spring.boot.http.client.ClientHttpRequestFactoryBuilder;
+import io.github.kotlinmania.spring.boot.http.client.HttpClientSettings;
+import io.github.kotlinmania.spring.boot.http.client.JdkClientHttpRequestFactoryBuilder;
+import io.github.kotlinmania.spring.boot.http.client.autoconfigure.ClientHttpRequestFactoryBuilderCustomizer;
+import io.github.kotlinmania.spring.boot.http.client.autoconfigure.HttpClientAutoConfiguration;
+import io.github.kotlinmania.spring.boot.thread.Threading;
+import io.github.kotlinmania.spring.boot.util.LambdaSafe;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Conditional;
 import org.springframework.context.annotation.Lazy;

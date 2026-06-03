@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.using.structuringyourcode.locatingthemainclass;
+package io.github.kotlinmania.spring.boot.docs.using.structuringyourcode.locatingthemainclass;
 
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
+import io.github.kotlinmania.spring.boot.SpringApplication;
+import io.github.kotlinmania.spring.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 public class MyApplication {

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.graphql.test.autoconfigure;
+package io.github.kotlinmania.spring.boot.graphql.test.autoconfigure;
 
 import org.springframework.graphql.data.method.annotation.Argument;
 import org.springframework.graphql.data.method.annotation.QueryMapping;

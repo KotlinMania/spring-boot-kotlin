@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.testing.springbootapplications.autoconfiguredspringdatajpa.withoutdb
+package io.github.kotlinmania.spring.boot.docs.testing.springbootapplications.autoconfiguredspringdatajpa.withoutdb
 
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Test
 import org.springframework.beans.factory.annotation.Autowired
-import org.springframework.boot.data.jpa.test.autoconfigure.DataJpaTest
-import org.springframework.boot.jpa.test.autoconfigure.TestEntityManager
+import io.github.kotlinmania.spring.boot.data.jpa.test.autoconfigure.DataJpaTest
+import io.github.kotlinmania.spring.boot.jpa.test.autoconfigure.TestEntityManager
 
 @DataJpaTest
 class MyRepositoryTests(@Autowired val entityManager: TestEntityManager, @Autowired val repository: UserRepository) {

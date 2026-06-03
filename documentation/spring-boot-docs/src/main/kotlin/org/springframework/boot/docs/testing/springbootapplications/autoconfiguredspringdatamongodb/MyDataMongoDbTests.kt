@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.testing.springbootapplications.autoconfiguredspringdatamongodb
+package io.github.kotlinmania.spring.boot.docs.testing.springbootapplications.autoconfiguredspringdatamongodb
 
 import org.springframework.beans.factory.annotation.Autowired
-import org.springframework.boot.data.mongodb.test.autoconfigure.DataMongoTest
+import io.github.kotlinmania.spring.boot.data.mongodb.test.autoconfigure.DataMongoTest
 import org.springframework.data.mongodb.core.MongoTemplate
 
 @DataMongoTest

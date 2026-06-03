@@ -14,17 +14,17 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.testcontainers;
+package io.github.kotlinmania.spring.boot.testcontainers;
 
 import javax.sql.DataSource;
 
 import org.junit.jupiter.api.Test;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.boot.testcontainers.context.ImportTestcontainers;
-import org.springframework.boot.testcontainers.service.connection.DatabaseConnectionDetails;
-import org.springframework.boot.testsupport.container.DisabledIfDockerUnavailable;
+import io.github.kotlinmania.spring.boot.test.context.SpringBootTest;
+import io.github.kotlinmania.spring.boot.testcontainers.context.ImportTestcontainers;
+import io.github.kotlinmania.spring.boot.testcontainers.service.connection.DatabaseConnectionDetails;
+import io.github.kotlinmania.spring.boot.testsupport.container.DisabledIfDockerUnavailable;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.weaving.LoadTimeWeaverAware;

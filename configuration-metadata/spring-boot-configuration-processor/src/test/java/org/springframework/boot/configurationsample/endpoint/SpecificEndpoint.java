@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.configurationsample.endpoint;
+package io.github.kotlinmania.spring.boot.configurationsample.endpoint;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.configurationsample.TestAccess;
-import org.springframework.boot.configurationsample.TestReadOperation;
-import org.springframework.boot.configurationsample.TestWebEndpoint;
+import io.github.kotlinmania.spring.boot.configurationsample.TestAccess;
+import io.github.kotlinmania.spring.boot.configurationsample.TestReadOperation;
+import io.github.kotlinmania.spring.boot.configurationsample.TestWebEndpoint;
 
 /**
  * A meta-annotated endpoint. Also with a package private read operation that has an

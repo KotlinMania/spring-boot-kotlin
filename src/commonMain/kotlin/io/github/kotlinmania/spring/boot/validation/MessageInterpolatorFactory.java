@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.validation;
+package io.github.kotlinmania.spring.boot.validation;
 
 import java.util.Collections;
 import java.util.LinkedHashSet;

@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.gson.autoconfigure;
+package io.github.kotlinmania.spring.boot.gson.autoconfigure;
 
 import com.google.gson.FieldNamingPolicy;
 import com.google.gson.Gson;
 import com.google.gson.LongSerializationPolicy;
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.context.properties.ConfigurationProperties;
+import io.github.kotlinmania.spring.boot.context.properties.ConfigurationProperties;
 
 /**
  * Configuration properties to configure {@link Gson}.

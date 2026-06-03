@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.cache.autoconfigure.metrics;
+package io.github.kotlinmania.spring.boot.cache.autoconfigure.metrics;
 
 import com.hazelcast.core.Hazelcast;
 import com.hazelcast.spring.cache.HazelcastCache;
@@ -23,14 +23,14 @@ import org.cache2k.Cache2kBuilder;
 import org.cache2k.extra.micrometer.Cache2kCacheMetrics;
 import org.cache2k.extra.spring.SpringCache2kCache;
 
-import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
-import org.springframework.boot.cache.metrics.Cache2kCacheMeterBinderProvider;
-import org.springframework.boot.cache.metrics.CacheMeterBinderProvider;
-import org.springframework.boot.cache.metrics.CaffeineCacheMeterBinderProvider;
-import org.springframework.boot.cache.metrics.HazelcastCacheMeterBinderProvider;
-import org.springframework.boot.cache.metrics.JCacheCacheMeterBinderProvider;
-import org.springframework.boot.cache.metrics.RedisCacheMeterBinderProvider;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnClass;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnMissingBean;
+import io.github.kotlinmania.spring.boot.cache.metrics.Cache2kCacheMeterBinderProvider;
+import io.github.kotlinmania.spring.boot.cache.metrics.CacheMeterBinderProvider;
+import io.github.kotlinmania.spring.boot.cache.metrics.CaffeineCacheMeterBinderProvider;
+import io.github.kotlinmania.spring.boot.cache.metrics.HazelcastCacheMeterBinderProvider;
+import io.github.kotlinmania.spring.boot.cache.metrics.JCacheCacheMeterBinderProvider;
+import io.github.kotlinmania.spring.boot.cache.metrics.RedisCacheMeterBinderProvider;
 import org.springframework.cache.caffeine.CaffeineCache;
 import org.springframework.cache.jcache.JCacheCache;
 import org.springframework.context.annotation.Bean;

@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.rsocket.server;
+package io.github.kotlinmania.spring.boot.rsocket.server;
 
 import java.net.InetAddress;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.ssl.SslBundles;
-import org.springframework.boot.web.server.Ssl;
+import io.github.kotlinmania.spring.boot.ssl.SslBundles;
+import io.github.kotlinmania.spring.boot.web.server.Ssl;
 import org.springframework.util.unit.DataSize;
 
 /**

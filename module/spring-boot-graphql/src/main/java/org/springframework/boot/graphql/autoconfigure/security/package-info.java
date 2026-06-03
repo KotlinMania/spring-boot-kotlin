@@ -18,6 +18,6 @@
  * Auto-configuration classes for Security support in Spring GraphQL.
  */
 @NullMarked
-package org.springframework.boot.graphql.autoconfigure.security;
+package io.github.kotlinmania.spring.boot.graphql.autoconfigure.security;
 
 import org.jspecify.annotations.NullMarked;

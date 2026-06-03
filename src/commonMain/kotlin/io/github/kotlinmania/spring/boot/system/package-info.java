@@ -18,6 +18,6 @@
  * General system support classes.
  */
 @NullMarked
-package org.springframework.boot.system;
+package io.github.kotlinmania.spring.boot.system;
 
 import org.jspecify.annotations.NullMarked;

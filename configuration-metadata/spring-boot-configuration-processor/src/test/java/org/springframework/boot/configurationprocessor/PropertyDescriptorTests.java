@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.configurationprocessor;
+package io.github.kotlinmania.spring.boot.configurationprocessor;
 
 import java.util.function.BiConsumer;
 
@@ -23,9 +23,9 @@ import javax.lang.model.element.TypeElement;
 import javax.lang.model.element.VariableElement;
 import javax.lang.model.util.ElementFilter;
 
-import org.springframework.boot.configurationprocessor.test.ItemMetadataAssert;
-import org.springframework.boot.configurationprocessor.test.RoundEnvironmentTester;
-import org.springframework.boot.configurationprocessor.test.TestableAnnotationProcessor;
+import io.github.kotlinmania.spring.boot.configurationprocessor.test.ItemMetadataAssert;
+import io.github.kotlinmania.spring.boot.configurationprocessor.test.RoundEnvironmentTester;
+import io.github.kotlinmania.spring.boot.configurationprocessor.test.TestableAnnotationProcessor;
 import org.springframework.core.test.tools.SourceFile;
 import org.springframework.core.test.tools.TestCompiler;
 

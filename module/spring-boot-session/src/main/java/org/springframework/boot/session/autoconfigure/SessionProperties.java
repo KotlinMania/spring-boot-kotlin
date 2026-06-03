@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.session.autoconfigure;
+package io.github.kotlinmania.spring.boot.session.autoconfigure;
 
 import java.time.Duration;
 import java.time.temporal.ChronoUnit;
@@ -25,9 +25,9 @@ import java.util.function.Supplier;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.boot.convert.DurationUnit;
-import org.springframework.boot.web.servlet.DispatcherType;
+import io.github.kotlinmania.spring.boot.context.properties.ConfigurationProperties;
+import io.github.kotlinmania.spring.boot.convert.DurationUnit;
+import io.github.kotlinmania.spring.boot.web.servlet.DispatcherType;
 import org.springframework.session.web.http.SessionRepositoryFilter;
 
 /**

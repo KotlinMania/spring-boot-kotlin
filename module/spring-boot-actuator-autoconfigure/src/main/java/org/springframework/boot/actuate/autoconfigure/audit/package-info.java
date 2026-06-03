@@ -18,6 +18,6 @@
  * Auto-configuration for actuator audit concerns.
  */
 @NullMarked
-package org.springframework.boot.actuate.autoconfigure.audit;
+package io.github.kotlinmania.spring.boot.actuate.autoconfigure.audit;
 
 import org.jspecify.annotations.NullMarked;

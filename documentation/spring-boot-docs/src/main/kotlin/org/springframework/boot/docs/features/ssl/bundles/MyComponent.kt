@@ -13,9 +13,9 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.springframework.boot.docs.features.ssl.bundles
+package io.github.kotlinmania.spring.boot.docs.features.ssl.bundles
 
-import org.springframework.boot.ssl.SslBundles
+import io.github.kotlinmania.spring.boot.ssl.SslBundles
 import org.springframework.stereotype.Component
 
 @Component

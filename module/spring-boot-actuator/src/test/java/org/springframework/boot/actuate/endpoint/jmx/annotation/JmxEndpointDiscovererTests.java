@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.actuate.endpoint.jmx.annotation;
+package io.github.kotlinmania.spring.boot.actuate.endpoint.jmx.annotation;
 
 import java.util.Collection;
 import java.util.Collections;
@@ -30,19 +30,19 @@ import org.junit.jupiter.api.Test;
 import org.springframework.aot.hint.MemberCategory;
 import org.springframework.aot.hint.RuntimeHints;
 import org.springframework.aot.hint.predicate.RuntimeHintsPredicates;
-import org.springframework.boot.actuate.endpoint.EndpointId;
-import org.springframework.boot.actuate.endpoint.annotation.DeleteOperation;
-import org.springframework.boot.actuate.endpoint.annotation.Endpoint;
-import org.springframework.boot.actuate.endpoint.annotation.ReadOperation;
-import org.springframework.boot.actuate.endpoint.annotation.WriteOperation;
-import org.springframework.boot.actuate.endpoint.invoke.convert.ConversionServiceParameterValueMapper;
-import org.springframework.boot.actuate.endpoint.invoker.cache.CachingOperationInvoker;
-import org.springframework.boot.actuate.endpoint.invoker.cache.CachingOperationInvokerAdvisor;
-import org.springframework.boot.actuate.endpoint.jmx.ExposableJmxEndpoint;
-import org.springframework.boot.actuate.endpoint.jmx.JmxOperation;
-import org.springframework.boot.actuate.endpoint.jmx.JmxOperationParameter;
-import org.springframework.boot.actuate.endpoint.jmx.annotation.JmxEndpointDiscoverer.JmxEndpointDiscovererRuntimeHints;
-import org.springframework.boot.actuate.endpoint.web.annotation.WebEndpoint;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.EndpointId;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.annotation.DeleteOperation;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.annotation.Endpoint;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.annotation.ReadOperation;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.annotation.WriteOperation;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.invoke.convert.ConversionServiceParameterValueMapper;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.invoker.cache.CachingOperationInvoker;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.invoker.cache.CachingOperationInvokerAdvisor;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.jmx.ExposableJmxEndpoint;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.jmx.JmxOperation;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.jmx.JmxOperationParameter;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.jmx.annotation.JmxEndpointDiscoverer.JmxEndpointDiscovererRuntimeHints;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.web.annotation.WebEndpoint;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

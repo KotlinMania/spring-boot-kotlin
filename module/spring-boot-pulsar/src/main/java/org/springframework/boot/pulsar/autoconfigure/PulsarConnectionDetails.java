@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.pulsar.autoconfigure;
+package io.github.kotlinmania.spring.boot.pulsar.autoconfigure;
 
-import org.springframework.boot.autoconfigure.service.connection.ConnectionDetails;
+import io.github.kotlinmania.spring.boot.autoconfigure.service.connection.ConnectionDetails;
 
 /**
  * Details required to establish a connection to a Pulsar service.

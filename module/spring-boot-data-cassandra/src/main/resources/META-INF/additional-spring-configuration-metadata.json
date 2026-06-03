@@ -160,7 +160,7 @@
     },
     {
       "name": "spring.data.cassandra.repositories.type",
-      "type": "org.springframework.boot.autoconfigure.data.RepositoryType",
+      "type": "io.github.kotlinmania.spring.boot.autoconfigure.data.RepositoryType",
       "description": "Type of Cassandra repositories to enable.",
       "defaultValue": "auto"
     },

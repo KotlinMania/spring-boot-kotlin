@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.actuator.metrics.supported.mongodb.connectionpool;
+package io.github.kotlinmania.spring.boot.docs.actuator.metrics.supported.mongodb.connectionpool;
 
 import com.mongodb.event.ConnectionPoolCreatedEvent;
 import io.micrometer.core.instrument.Tag;

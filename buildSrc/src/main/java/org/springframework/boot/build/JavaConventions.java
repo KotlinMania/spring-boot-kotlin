@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.build;
+package io.github.kotlinmania.spring.boot.build;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -62,13 +62,13 @@ import org.gradle.jvm.toolchain.JavaCompiler;
 import org.gradle.jvm.toolchain.JavaInstallationMetadata;
 import org.gradle.jvm.toolchain.JavaLanguageVersion;
 
-import org.springframework.boot.build.architecture.ArchitecturePlugin;
-import org.springframework.boot.build.classpath.CheckClasspathForProhibitedDependencies;
-import org.springframework.boot.build.optional.OptionalDependenciesPlugin;
-import org.springframework.boot.build.springframework.CheckAotFactories;
-import org.springframework.boot.build.springframework.CheckSpringFactories;
-import org.springframework.boot.build.testing.TestFailuresPlugin;
-import org.springframework.boot.build.toolchain.ToolchainPlugin;
+import io.github.kotlinmania.spring.boot.build.architecture.ArchitecturePlugin;
+import io.github.kotlinmania.spring.boot.build.classpath.CheckClasspathForProhibitedDependencies;
+import io.github.kotlinmania.spring.boot.build.optional.OptionalDependenciesPlugin;
+import io.github.kotlinmania.spring.boot.build.springframework.CheckAotFactories;
+import io.github.kotlinmania.spring.boot.build.springframework.CheckSpringFactories;
+import io.github.kotlinmania.spring.boot.build.testing.TestFailuresPlugin;
+import io.github.kotlinmania.spring.boot.build.toolchain.ToolchainPlugin;
 import org.springframework.util.StringUtils;
 
 /**
@@ -165,7 +165,7 @@ class JavaConventions {
 	private void configureJarManifestConventions(Project project) {
 		TaskProvider<ExtractResources> extractLegalResources = project.getTasks()
 			.register("extractLegalResources", ExtractResources.class, (task) -> {
-				task.getPackageName().set("org.springframework.boot.build.legal");
+				task.getPackageName().set("io.github.kotlinmania.spring.boot.build.legal");
 				task.getDestinationDirectory().set(project.getLayout().getBuildDirectory().dir("legal"));
 				task.getResourceNames().set(Arrays.asList("LICENSE.txt", "NOTICE.txt"));
 				task.getProperties().put("version", project.getVersion().toString());

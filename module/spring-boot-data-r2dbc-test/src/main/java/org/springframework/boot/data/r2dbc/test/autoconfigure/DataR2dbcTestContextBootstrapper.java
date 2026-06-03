@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.data.r2dbc.test.autoconfigure;
+package io.github.kotlinmania.spring.boot.data.r2dbc.test.autoconfigure;
 
-import org.springframework.boot.test.autoconfigure.TestSliceTestContextBootstrapper;
+import io.github.kotlinmania.spring.boot.test.autoconfigure.TestSliceTestContextBootstrapper;
 import org.springframework.test.context.TestContextBootstrapper;
 
 /**

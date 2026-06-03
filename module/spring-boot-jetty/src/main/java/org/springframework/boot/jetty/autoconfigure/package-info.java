@@ -18,6 +18,6 @@
  * Auto-configuration for Jetty.
  */
 @NullMarked
-package org.springframework.boot.jetty.autoconfigure;
+package io.github.kotlinmania.spring.boot.jetty.autoconfigure;
 
 import org.jspecify.annotations.NullMarked;

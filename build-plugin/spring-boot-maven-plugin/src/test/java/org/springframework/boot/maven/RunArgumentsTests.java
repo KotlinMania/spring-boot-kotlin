@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.maven;
+package io.github.kotlinmania.spring.boot.maven;
 
 import org.jspecify.annotations.Nullable;
 import org.junit.jupiter.api.Test;

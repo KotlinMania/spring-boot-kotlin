@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.messaging.kafka.streams;
+package io.github.kotlinmania.spring.boot.docs.messaging.kafka.streams;
 
 import java.util.Locale;
 

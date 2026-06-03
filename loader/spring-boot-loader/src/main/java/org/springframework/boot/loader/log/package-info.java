@@ -17,4 +17,4 @@
 /**
  * Debug {@link java.lang.System#err} logging support.
  */
-package org.springframework.boot.loader.log;
+package io.github.kotlinmania.spring.boot.loader.log;

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.web.server.servlet;
+package io.github.kotlinmania.spring.boot.web.server.servlet;
 
 import java.util.function.Supplier;
 import java.util.regex.Pattern;
@@ -22,7 +22,7 @@ import java.util.regex.Pattern;
 import jakarta.servlet.http.Cookie;
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.web.server.Cookie.SameSite;
+import io.github.kotlinmania.spring.boot.web.server.Cookie.SameSite;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatIllegalArgumentException;

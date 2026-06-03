@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package commonMain.kotlin.io.github.kotlinmania.spring.boot.ansi;
+package io.github.kotlinmania.spring.boot.ansi;
 
 import org.springframework.util.Assert;
 

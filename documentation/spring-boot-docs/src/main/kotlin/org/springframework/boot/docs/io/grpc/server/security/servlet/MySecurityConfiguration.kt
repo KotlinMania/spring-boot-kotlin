@@ -1,6 +1,6 @@
-package org.springframework.boot.docs.io.grpc.server.security.servlet
+package io.github.kotlinmania.spring.boot.docs.io.grpc.server.security.servlet
 
-import org.springframework.boot.grpc.server.autoconfigure.security.web.servlet.GrpcRequest
+import io.github.kotlinmania.spring.boot.grpc.server.autoconfigure.security.web.servlet.GrpcRequest
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
 import org.springframework.security.config.Customizer.withDefaults

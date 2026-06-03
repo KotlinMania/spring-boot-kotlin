@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.webflux.actuate.web.mappings;
+package io.github.kotlinmania.spring.boot.webflux.actuate.web.mappings;
 
 import org.springframework.web.reactive.function.server.HandlerFunction;
 

@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.rsocket.context;
+package io.github.kotlinmania.spring.boot.rsocket.context;
 
 import java.net.InetSocketAddress;
 import java.util.HashMap;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.boot.rsocket.server.RSocketServer;
+import io.github.kotlinmania.spring.boot.rsocket.server.RSocketServer;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextInitializer;
 import org.springframework.context.ApplicationListener;

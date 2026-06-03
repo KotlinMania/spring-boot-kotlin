@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.build.docs;
+package io.github.kotlinmania.spring.boot.build.docs;
 
 import java.io.File;
 import java.io.IOException;

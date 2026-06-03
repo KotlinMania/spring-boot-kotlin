@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.support;
+package io.github.kotlinmania.spring.boot.support;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -23,12 +23,12 @@ import java.util.List;
 import org.apache.commons.logging.Log;
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.EnvironmentPostProcessor;
-import org.springframework.boot.bootstrap.BootstrapContext;
-import org.springframework.boot.bootstrap.BootstrapRegistry;
-import org.springframework.boot.bootstrap.ConfigurableBootstrapContext;
-import org.springframework.boot.logging.DeferredLogFactory;
-import org.springframework.boot.util.Instantiator;
+import io.github.kotlinmania.spring.boot.EnvironmentPostProcessor;
+import io.github.kotlinmania.spring.boot.bootstrap.BootstrapContext;
+import io.github.kotlinmania.spring.boot.bootstrap.BootstrapRegistry;
+import io.github.kotlinmania.spring.boot.bootstrap.ConfigurableBootstrapContext;
+import io.github.kotlinmania.spring.boot.logging.DeferredLogFactory;
+import io.github.kotlinmania.spring.boot.util.Instantiator;
 import org.springframework.util.Assert;
 
 /**

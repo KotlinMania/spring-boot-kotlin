@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.info;
+package io.github.kotlinmania.spring.boot.info;
 
 import java.time.Instant;
 import java.time.format.DateTimeFormatter;
@@ -29,7 +29,7 @@ import org.jspecify.annotations.Nullable;
 
 import org.springframework.aot.hint.RuntimeHints;
 import org.springframework.aot.hint.RuntimeHintsRegistrar;
-import org.springframework.boot.info.GitProperties.GitPropertiesRuntimeHints;
+import io.github.kotlinmania.spring.boot.info.GitProperties.GitPropertiesRuntimeHints;
 import org.springframework.context.annotation.ImportRuntimeHints;
 
 /**

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.context.properties.bind;
+package io.github.kotlinmania.spring.boot.context.properties.bind;
 
 import java.beans.PropertyEditor;
 import java.lang.annotation.Annotation;
@@ -35,7 +35,7 @@ import org.springframework.beans.SimpleTypeConverter;
 import org.springframework.beans.propertyeditors.CustomBooleanEditor;
 import org.springframework.beans.propertyeditors.CustomNumberEditor;
 import org.springframework.beans.propertyeditors.FileEditor;
-import org.springframework.boot.convert.ApplicationConversionService;
+import io.github.kotlinmania.spring.boot.convert.ApplicationConversionService;
 import org.springframework.core.ResolvableType;
 import org.springframework.core.convert.ConversionException;
 import org.springframework.core.convert.ConversionFailedException;

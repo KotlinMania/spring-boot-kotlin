@@ -1,7 +1,7 @@
 # Connection Details Factories
-org.springframework.boot.autoconfigure.service.connection.ConnectionDetailsFactory=\
-org.springframework.boot.opentelemetry.docker.compose.OtlpLoggingDockerComposeConnectionDetailsFactory,\
-org.springframework.boot.opentelemetry.testcontainers.GrafanaOtlpLoggingContainerConnectionDetailsFactory,\
-org.springframework.boot.opentelemetry.testcontainers.OtelCollectorOltpLoggingContainerConnectionDetailsFactory
-org.springframework.boot.EnvironmentPostProcessor=\
-org.springframework.boot.opentelemetry.autoconfigure.OpenTelemetryEnvironmentVariableEnvironmentPostProcessor
+io.github.kotlinmania.spring.boot.autoconfigure.service.connection.ConnectionDetailsFactory=\
+io.github.kotlinmania.spring.boot.opentelemetry.docker.compose.OtlpLoggingDockerComposeConnectionDetailsFactory,\
+io.github.kotlinmania.spring.boot.opentelemetry.testcontainers.GrafanaOtlpLoggingContainerConnectionDetailsFactory,\
+io.github.kotlinmania.spring.boot.opentelemetry.testcontainers.OtelCollectorOltpLoggingContainerConnectionDetailsFactory
+io.github.kotlinmania.spring.boot.EnvironmentPostProcessor=\
+io.github.kotlinmania.spring.boot.opentelemetry.autoconfigure.OpenTelemetryEnvironmentVariableEnvironmentPostProcessor

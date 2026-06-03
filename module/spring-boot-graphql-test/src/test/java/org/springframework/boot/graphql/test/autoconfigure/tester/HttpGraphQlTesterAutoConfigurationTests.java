@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.graphql.test.autoconfigure.tester;
+package io.github.kotlinmania.spring.boot.graphql.test.autoconfigure.tester;
 
 import java.net.URI;
 
@@ -22,12 +22,12 @@ import org.assertj.core.api.InstanceOfAssertFactories;
 import org.jspecify.annotations.Nullable;
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.autoconfigure.AutoConfigurations;
-import org.springframework.boot.test.context.runner.ApplicationContextRunner;
-import org.springframework.boot.test.http.server.LocalTestWebServer;
-import org.springframework.boot.test.http.server.LocalTestWebServer.Scheme;
-import org.springframework.boot.testsupport.classpath.resources.WithResource;
-import org.springframework.boot.webtestclient.autoconfigure.WebTestClientAutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurations;
+import io.github.kotlinmania.spring.boot.test.context.runner.ApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.test.http.server.LocalTestWebServer;
+import io.github.kotlinmania.spring.boot.test.http.server.LocalTestWebServer.Scheme;
+import io.github.kotlinmania.spring.boot.testsupport.classpath.resources.WithResource;
+import io.github.kotlinmania.spring.boot.webtestclient.autoconfigure.WebTestClientAutoConfiguration;
 import org.springframework.graphql.test.tester.HttpGraphQlTester;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.web.util.UriBuilderFactory;
@@ -66,8 +66,8 @@ class HttpGraphQlTesterAutoConfigurationTests {
 	@Test
 	@WithResource(name = "META-INF/spring.factories",
 			content = """
-					org.springframework.boot.test.http.server.LocalTestWebServer$Provider=\
-					org.springframework.boot.graphql.test.autoconfigure.tester.HttpGraphQlTesterAutoConfigurationTests$TestLocalTestWebServerProvider
+					io.github.kotlinmania.spring.boot.test.http.server.LocalTestWebServer$Provider=\
+					io.github.kotlinmania.spring.boot.graphql.test.autoconfigure.tester.HttpGraphQlTesterAutoConfigurationTests$TestLocalTestWebServerProvider
 					""")
 	void shouldContributeTesterBoundToHttpServer() {
 		this.contextRunner.withConfiguration(AutoConfigurations.of(WebTestClientAutoConfiguration.class))
@@ -85,8 +85,8 @@ class HttpGraphQlTesterAutoConfigurationTests {
 	@Test
 	@WithResource(name = "META-INF/spring.factories",
 			content = """
-					org.springframework.boot.test.http.server.LocalTestWebServer$Provider=\
-					org.springframework.boot.graphql.test.autoconfigure.tester.HttpGraphQlTesterAutoConfigurationTests$TestLocalTestWebServerProvider
+					io.github.kotlinmania.spring.boot.test.http.server.LocalTestWebServer$Provider=\
+					io.github.kotlinmania.spring.boot.graphql.test.autoconfigure.tester.HttpGraphQlTesterAutoConfigurationTests$TestLocalTestWebServerProvider
 					""")
 	void shouldContributeTesterBoundToHttpServerUsingCustomGraphQlHttpPath() {
 		this.contextRunner.withConfiguration(AutoConfigurations.of(WebTestClientAutoConfiguration.class))

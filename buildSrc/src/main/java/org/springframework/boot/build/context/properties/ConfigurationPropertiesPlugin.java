@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.build.context.properties;
+package io.github.kotlinmania.spring.boot.build.context.properties;
 
 import java.util.Map;
 import java.util.stream.Collectors;
@@ -136,7 +136,7 @@ public class ConfigurationPropertiesPlugin implements Plugin<Project> {
 			.getByName(SourceSet.MAIN_SOURCE_SET_NAME);
 		compileJava.getOptions()
 			.getCompilerArgs()
-			.add("-Aorg.springframework.boot.configurationprocessor.additionalMetadataLocations="
+			.add("-Aio.github.kotlinmania.spring.boot.configurationprocessor.additionalMetadataLocations="
 					+ StringUtils.collectionToCommaDelimitedString(mainSourceSet.getResources()
 						.getSourceDirectories()
 						.getFiles()

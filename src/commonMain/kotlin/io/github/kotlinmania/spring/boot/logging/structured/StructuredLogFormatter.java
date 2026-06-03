@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.logging.structured;
+package io.github.kotlinmania.spring.boot.logging.structured;
 
 import java.nio.charset.Charset;
 
-import org.springframework.boot.logging.StackTracePrinter;
+import io.github.kotlinmania.spring.boot.logging.StackTracePrinter;
 import org.springframework.core.env.Environment;
 
 /**

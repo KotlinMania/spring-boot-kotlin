@@ -1,1 +1,1 @@
-org.springframework.boot.activemq.autoconfigure.ActiveMQAutoConfiguration
+io.github.kotlinmania.spring.boot.activemq.autoconfigure.ActiveMQAutoConfiguration

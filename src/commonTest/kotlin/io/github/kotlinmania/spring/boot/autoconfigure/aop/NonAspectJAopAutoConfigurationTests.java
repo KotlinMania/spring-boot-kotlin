@@ -14,18 +14,18 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.autoconfigure.aop;
+package io.github.kotlinmania.spring.boot.autoconfigure.aop;
 
 import org.junit.jupiter.api.Test;
 
 import org.springframework.aop.config.AopConfigUtils;
 import org.springframework.aop.framework.autoproxy.AutoProxyUtils;
 import org.springframework.beans.factory.config.BeanDefinition;
-import org.springframework.boot.autoconfigure.AutoConfigurations;
-import org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener;
-import org.springframework.boot.logging.LogLevel;
-import org.springframework.boot.test.context.runner.ApplicationContextRunner;
-import org.springframework.boot.testsupport.classpath.ClassPathExclusions;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurations;
+import io.github.kotlinmania.spring.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener;
+import io.github.kotlinmania.spring.boot.logging.LogLevel;
+import io.github.kotlinmania.spring.boot.test.context.runner.ApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.testsupport.classpath.ClassPathExclusions;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

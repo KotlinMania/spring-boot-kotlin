@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.loader.net.protocol.jar;
+package io.github.kotlinmania.spring.boot.loader.net.protocol.jar;
 
 import java.io.BufferedInputStream;
 import java.io.ByteArrayInputStream;
@@ -34,8 +34,8 @@ import java.util.function.Supplier;
 import java.util.jar.JarEntry;
 import java.util.jar.JarFile;
 
-import org.springframework.boot.loader.jar.NestedJarFile;
-import org.springframework.boot.loader.net.util.UrlDecoder;
+import io.github.kotlinmania.spring.boot.loader.jar.NestedJarFile;
+import io.github.kotlinmania.spring.boot.loader.net.util.UrlDecoder;
 
 /**
  * {@link java.net.JarURLConnection} alternative to

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.web.context.reactive;
+package io.github.kotlinmania.spring.boot.web.context.reactive;
 
 import org.springframework.context.ConfigurableApplicationContext;
 

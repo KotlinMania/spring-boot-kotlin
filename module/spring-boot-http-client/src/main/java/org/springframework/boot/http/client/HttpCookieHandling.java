@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.http.client;
+package io.github.kotlinmania.spring.boot.http.client;
 
 /**
  * Cookie handling strategies supported by HTTP clients.

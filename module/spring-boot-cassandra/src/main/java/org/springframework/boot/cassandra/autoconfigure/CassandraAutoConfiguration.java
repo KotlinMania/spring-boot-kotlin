@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.cassandra.autoconfigure;
+package io.github.kotlinmania.spring.boot.cassandra.autoconfigure;
 
 import java.io.IOException;
 import java.time.Duration;
@@ -38,21 +38,21 @@ import org.jspecify.annotations.Nullable;
 
 import org.springframework.beans.factory.ObjectProvider;
 import org.springframework.beans.factory.config.ConfigurableBeanFactory;
-import org.springframework.boot.autoconfigure.AutoConfiguration;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
-import org.springframework.boot.cassandra.autoconfigure.CassandraProperties.Connection;
-import org.springframework.boot.cassandra.autoconfigure.CassandraProperties.Controlconnection;
-import org.springframework.boot.cassandra.autoconfigure.CassandraProperties.Request;
-import org.springframework.boot.cassandra.autoconfigure.CassandraProperties.Ssl;
-import org.springframework.boot.cassandra.autoconfigure.CassandraProperties.Throttler;
-import org.springframework.boot.cassandra.autoconfigure.CassandraProperties.ThrottlerType;
-import org.springframework.boot.context.properties.EnableConfigurationProperties;
-import org.springframework.boot.context.properties.PropertyMapper;
-import org.springframework.boot.ssl.SslBundle;
-import org.springframework.boot.ssl.SslBundles;
-import org.springframework.boot.ssl.SslOptions;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.EnableAutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnClass;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnMissingBean;
+import io.github.kotlinmania.spring.boot.cassandra.autoconfigure.CassandraProperties.Connection;
+import io.github.kotlinmania.spring.boot.cassandra.autoconfigure.CassandraProperties.Controlconnection;
+import io.github.kotlinmania.spring.boot.cassandra.autoconfigure.CassandraProperties.Request;
+import io.github.kotlinmania.spring.boot.cassandra.autoconfigure.CassandraProperties.Ssl;
+import io.github.kotlinmania.spring.boot.cassandra.autoconfigure.CassandraProperties.Throttler;
+import io.github.kotlinmania.spring.boot.cassandra.autoconfigure.CassandraProperties.ThrottlerType;
+import io.github.kotlinmania.spring.boot.context.properties.EnableConfigurationProperties;
+import io.github.kotlinmania.spring.boot.context.properties.PropertyMapper;
+import io.github.kotlinmania.spring.boot.ssl.SslBundle;
+import io.github.kotlinmania.spring.boot.ssl.SslBundles;
+import io.github.kotlinmania.spring.boot.ssl.SslOptions;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.context.annotation.Scope;

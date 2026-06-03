@@ -10,12 +10,12 @@ If you use Maven, the following dependency adds logging for you:
 [source,xml]
 ----
 <dependency>
-	<groupId>org.springframework.boot</groupId>
+	<groupId>io.github.kotlinmania.spring.boot./groupId>
 	<artifactId>spring-boot-starter-web</artifactId>
 </dependency>
 ----
 
-Spring Boot has a javadoc:org.springframework.boot.logging.LoggingSystem[] abstraction that attempts to configure logging based on the content of the classpath.
+Spring Boot has a javadoc:io.github.kotlinmania.spring.boot.logging.LoggingSystem[] abstraction that attempts to configure logging based on the content of the classpath.
 If Logback is available, it is the first choice.
 
 If the only change you need to make to logging is to set the levels of various loggers, you can do so in `application.properties` by using the "logging.level" prefix, as shown in the following example:
@@ -30,7 +30,7 @@ logging:
 
 You can also set the location of a file to which the log will be written (in addition to the console) by using `logging.file.name`.
 
-To configure the more fine-grained settings of a logging system, you need to use the native configuration format supported by the javadoc:org.springframework.boot.logging.LoggingSystem[] in question.
+To configure the more fine-grained settings of a logging system, you need to use the native configuration format supported by the javadoc:io.github.kotlinmania.spring.boot.logging.LoggingSystem[] in question.
 By default, Spring Boot picks up the native configuration from its default location for the system (such as `classpath:logback.xml` for Logback), but you can set the location of the config file by using the configprop:logging.config[] property.
 
 
@@ -47,7 +47,7 @@ TIP: The Logback documentation has a https://logback.qos.ch/manual/configuration
 Spring Boot provides a number of logback configurations that can be `included` in your own configuration.
 These includes are designed to allow certain common Spring Boot conventions to be re-applied.
 
-The following files are provided under `org/springframework/boot/logging/logback/`:
+The following files are provided under `io.github.kotlinmania.spring.boot.logging/logback/`:
 
 * `defaults.xml` - Provides conversion rules, pattern properties and common logger configurations.
 * `console-appender.xml` - Adds a javadoc:ch.qos.logback.core.ConsoleAppender[] using the `CONSOLE_LOG_PATTERN`.
@@ -63,8 +63,8 @@ A typical custom `logback.xml` file would look something like this:
 ----
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration>
-	<include resource="org/springframework/boot/logging/logback/defaults.xml"/>
-	<include resource="org/springframework/boot/logging/logback/console-appender.xml" />
+	<include resource="io.github.kotlinmania.spring.boot.logging/logback/defaults.xml"/>
+	<include resource="io.github.kotlinmania.spring.boot.logging/logback/console-appender.xml" />
 	<root level="INFO">
 		<appender-ref ref="CONSOLE" />
 	</root>
@@ -72,7 +72,7 @@ A typical custom `logback.xml` file would look something like this:
 </configuration>
 ----
 
-Your logback configuration file can also make use of System properties that the javadoc:org.springframework.boot.logging.LoggingSystem[] takes care of creating for you:
+Your logback configuration file can also make use of System properties that the javadoc:io.github.kotlinmania.spring.boot.logging.LoggingSystem[] takes care of creating for you:
 
 * `$\{PID}`: The current process ID.
 * `$\{LOG_FILE}`: Whether `logging.file.name` was set in Boot's external configuration.
@@ -100,9 +100,9 @@ If you want to disable console logging and write output only to a file, you need
 ----
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration>
-	<include resource="org/springframework/boot/logging/logback/defaults.xml" />
+	<include resource="io.github.kotlinmania.spring.boot.logging/logback/defaults.xml" />
 	<property name="LOG_FILE" value="${LOG_FILE:-${LOG_PATH:-${LOG_TEMP:-${java.io.tmpdir:-/tmp}}/}spring.log}"/>
-	<include resource="org/springframework/boot/logging/logback/file-appender.xml" />
+	<include resource="io.github.kotlinmania.spring.boot.logging/logback/file-appender.xml" />
 	<root level="INFO">
 		<appender-ref ref="FILE" />
 	</root>
@@ -133,21 +133,21 @@ The following example shows how to set up the starters in Maven:
 [source,xml]
 ----
 <dependency>
-	<groupId>org.springframework.boot</groupId>
+	<groupId>io.github.kotlinmania.spring.boot./groupId>
 	<artifactId>spring-boot-starter-web</artifactId>
 </dependency>
 <dependency>
-	<groupId>org.springframework.boot</groupId>
+	<groupId>io.github.kotlinmania.spring.boot./groupId>
 	<artifactId>spring-boot-starter</artifactId>
 	<exclusions>
 		<exclusion>
-			<groupId>org.springframework.boot</groupId>
+			<groupId>io.github.kotlinmania.spring.boot./groupId>
 			<artifactId>spring-boot-starter-logging</artifactId>
 		</exclusion>
 	</exclusions>
 </dependency>
 <dependency>
-	<groupId>org.springframework.boot</groupId>
+	<groupId>io.github.kotlinmania.spring.boot./groupId>
 	<artifactId>spring-boot-starter-log4j2</artifactId>
 </dependency>
 ----
@@ -159,10 +159,10 @@ To do so, declare a dependency on the Log4j 2 starter and tell Gradle that any o
 [source,gradle]
 ----
 dependencies {
-	implementation "org.springframework.boot:spring-boot-starter-log4j2"
+	implementation "io.github.kotlinmania.spring.boot.spring-boot-starter-log4j2"
 	modules {
-		module("org.springframework.boot:spring-boot-starter-logging") {
-			replacedBy("org.springframework.boot:spring-boot-starter-log4j2", "Use Log4j2 instead of Logback")
+		module("io.github.kotlinmania.spring.boot.spring-boot-starter-logging") {
+			replacedBy("io.github.kotlinmania.spring.boot.spring-boot-starter-log4j2", "Use Log4j2 instead of Logback")
 		}
 	}
 }

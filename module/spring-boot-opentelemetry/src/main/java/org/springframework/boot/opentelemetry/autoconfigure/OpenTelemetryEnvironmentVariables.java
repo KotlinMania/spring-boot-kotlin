@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.opentelemetry.autoconfigure;
+package io.github.kotlinmania.spring.boot.opentelemetry.autoconfigure;
 
 import java.time.Duration;
 import java.util.List;
@@ -24,9 +24,9 @@ import java.util.function.Function;
 import org.apache.commons.logging.Log;
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.logging.DeferredLogFactory;
-import org.springframework.boot.origin.Origin;
-import org.springframework.boot.origin.OriginTrackedValue;
+import io.github.kotlinmania.spring.boot.logging.DeferredLogFactory;
+import io.github.kotlinmania.spring.boot.origin.Origin;
+import io.github.kotlinmania.spring.boot.origin.OriginTrackedValue;
 import org.springframework.util.Assert;
 import org.springframework.util.StringUtils;
 

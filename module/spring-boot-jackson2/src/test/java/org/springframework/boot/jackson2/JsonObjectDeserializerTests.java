@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.jackson2;
+package io.github.kotlinmania.spring.boot.jackson2;
 
 import java.io.InputStream;
 import java.math.BigDecimal;
@@ -54,11 +54,11 @@ class JsonObjectDeserializerTests {
 	void deserializeObjectShouldReadJson() throws Exception {
 		NameAndAgeJsonComponent.Deserializer deserializer = new NameAndAgeJsonComponent.Deserializer();
 		SimpleModule module = new SimpleModule();
-		module.addDeserializer(org.springframework.boot.jackson2.types.NameAndAge.class, deserializer);
+		module.addDeserializer(io.github.kotlinmania.spring.boot.jackson2.types.NameAndAge.class, deserializer);
 		ObjectMapper mapper = new ObjectMapper();
 		mapper.registerModule(module);
-		org.springframework.boot.jackson2.types.NameAndAge nameAndAge = mapper
-			.readValue("{\"name\":\"spring\",\"age\":100}", org.springframework.boot.jackson2.types.NameAndAge.class);
+		io.github.kotlinmania.spring.boot.jackson2.types.NameAndAge nameAndAge = mapper
+			.readValue("{\"name\":\"spring\",\"age\":100}", io.github.kotlinmania.spring.boot.jackson2.types.NameAndAge.class);
 		assertThat(nameAndAge.getName()).isEqualTo("spring");
 		assertThat(nameAndAge.getAge()).isEqualTo(100);
 	}

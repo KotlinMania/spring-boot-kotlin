@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.context.config;
+package io.github.kotlinmania.spring.boot.context.config;
 
 import java.io.File;
 import java.util.ArrayDeque;
@@ -32,10 +32,10 @@ import java.util.stream.Collectors;
 import org.apache.commons.logging.Log;
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.context.config.LocationResourceLoader.ResourceType;
-import org.springframework.boot.context.properties.bind.Binder;
-import org.springframework.boot.env.PropertySourceLoader;
-import org.springframework.boot.logging.DeferredLogFactory;
+import io.github.kotlinmania.spring.boot.context.config.LocationResourceLoader.ResourceType;
+import io.github.kotlinmania.spring.boot.context.properties.bind.Binder;
+import io.github.kotlinmania.spring.boot.env.PropertySourceLoader;
+import io.github.kotlinmania.spring.boot.logging.DeferredLogFactory;
 import org.springframework.core.Ordered;
 import org.springframework.core.env.Environment;
 import org.springframework.core.io.ClassPathResource;

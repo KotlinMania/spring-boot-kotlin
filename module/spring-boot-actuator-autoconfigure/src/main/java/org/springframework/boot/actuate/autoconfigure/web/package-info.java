@@ -18,6 +18,6 @@
  * Core classes for auto-configuration of actuator web concerns.
  */
 @NullMarked
-package org.springframework.boot.actuate.autoconfigure.web;
+package io.github.kotlinmania.spring.boot.actuate.autoconfigure.web;
 
 import org.jspecify.annotations.NullMarked;

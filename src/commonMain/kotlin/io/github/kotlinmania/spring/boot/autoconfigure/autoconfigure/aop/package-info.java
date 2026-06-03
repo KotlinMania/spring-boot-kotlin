@@ -18,6 +18,6 @@
  * Auto-configuration for Spring AOP.
  */
 @NullMarked
-package org.springframework.boot.autoconfigure.aop;
+package io.github.kotlinmania.spring.boot.autoconfigure.aop;
 
 import org.jspecify.annotations.NullMarked;

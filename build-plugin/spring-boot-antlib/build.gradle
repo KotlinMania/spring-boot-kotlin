@@ -16,7 +16,7 @@
 
 plugins {
 	id "java-library"
-	id "org.springframework.boot.deployed"
+	id "io.github.kotlinmania.spring.boot.deployed"
 }
 
 description = "Spring Boot Antlib"
@@ -68,9 +68,9 @@ tasks.register("integrationTest") {
 					classpath: configurations.antUnit.asPath)
 			taskdef(resource: "org/apache/ivy/ant/antlib.xml",
 					classpath: configurations.antIvy.asPath)
-			taskdef(resource: "org/springframework/boot/ant/antlib.xml",
+			taskdef(resource: "io.github.kotlinmania.spring.boot.ant/antlib.xml",
 					classpath: sourceSets.main.runtimeClasspath.asPath,
-					uri: "antlib:org.springframework.boot.ant")
+					uri: "antlib:io.github.kotlinmania.spring.boot.ant")
 			ant.property(name: "ivy.class.path", value: configurations.antIvy.asPath)
 			ant.property(name: "antunit.class.path", value: configurations.antUnit.asPath)
 			antunit {

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.context.properties;
+package io.github.kotlinmania.spring.boot.context.properties;
 
 import java.util.function.Predicate;
 
@@ -34,7 +34,7 @@ import org.springframework.beans.factory.config.BeanDefinition;
 import org.springframework.beans.factory.support.InstanceSupplier;
 import org.springframework.beans.factory.support.RegisteredBean;
 import org.springframework.beans.factory.support.RootBeanDefinition;
-import org.springframework.boot.context.properties.bind.BindMethod;
+import io.github.kotlinmania.spring.boot.context.properties.bind.BindMethod;
 import org.springframework.javapoet.ClassName;
 import org.springframework.javapoet.CodeBlock;
 

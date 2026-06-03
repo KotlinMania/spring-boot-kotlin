@@ -18,6 +18,6 @@
  * Auto-configuration for exporting traces with OTLP.
  */
 @NullMarked
-package org.springframework.boot.micrometer.tracing.opentelemetry.autoconfigure.otlp;
+package io.github.kotlinmania.spring.boot.micrometer.tracing.opentelemetry.autoconfigure.otlp;
 
 import org.jspecify.annotations.NullMarked;

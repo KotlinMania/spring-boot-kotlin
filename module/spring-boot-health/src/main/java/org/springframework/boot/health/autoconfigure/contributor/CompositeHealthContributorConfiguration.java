@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.health.autoconfigure.contributor;
+package io.github.kotlinmania.spring.boot.health.autoconfigure.contributor;
 
 import java.util.Map;
 import java.util.function.Function;
 
-import org.springframework.boot.health.contributor.CompositeHealthContributor;
-import org.springframework.boot.health.contributor.HealthContributor;
-import org.springframework.boot.health.contributor.HealthIndicator;
+import io.github.kotlinmania.spring.boot.health.contributor.CompositeHealthContributor;
+import io.github.kotlinmania.spring.boot.health.contributor.HealthContributor;
+import io.github.kotlinmania.spring.boot.health.contributor.HealthIndicator;
 
 /**
  * Base class for health contributor configurations that can combine source beans into a

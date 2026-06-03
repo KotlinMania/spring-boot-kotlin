@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.task;
+package io.github.kotlinmania.spring.boot.task;
 
 import java.time.Duration;
 import java.util.Arrays;
@@ -24,7 +24,7 @@ import java.util.Set;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.context.properties.PropertyMapper;
+import io.github.kotlinmania.spring.boot.context.properties.PropertyMapper;
 import org.springframework.core.task.TaskDecorator;
 import org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler;
 import org.springframework.util.Assert;

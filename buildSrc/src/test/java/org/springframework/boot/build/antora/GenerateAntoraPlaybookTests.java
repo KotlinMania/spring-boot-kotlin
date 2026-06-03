@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.build.antora;
+package io.github.kotlinmania.spring.boot.build.antora;
 
 import java.io.File;
 import java.nio.file.Files;
@@ -26,8 +26,8 @@ import org.gradle.testfixtures.ProjectBuilder;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.io.TempDir;
 
-import org.springframework.boot.build.antora.Extensions.AntoraExtensionsConfiguration.ZipContentsCollector.AlwaysInclude;
-import org.springframework.boot.build.antora.GenerateAntoraPlaybook.AntoraExtensions.ZipContentsCollector;
+import io.github.kotlinmania.spring.boot.build.antora.Extensions.AntoraExtensionsConfiguration.ZipContentsCollector.AlwaysInclude;
+import io.github.kotlinmania.spring.boot.build.antora.GenerateAntoraPlaybook.AntoraExtensions.ZipContentsCollector;
 import org.springframework.util.function.ThrowingConsumer;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -53,7 +53,7 @@ class GenerateAntoraPlaybookTests {
 		String actual = Files.readString(this.temp.toPath()
 			.resolve("rootproject/project/build/generated/docs/antora-playbook/antora-playbook.yml"));
 		String expected = Files
-			.readString(Path.of("src/test/resources/org/springframework/boot/build/antora/expected-playbook.yml"));
+			.readString(Path.of("src/test/resources/io.github.kotlinmania.spring.boot.build/antora/expected-playbook.yml"));
 		assertThat(actual.replace('\\', '/')).isEqualToNormalizingNewlines(expected.replace('\\', '/'));
 	}
 

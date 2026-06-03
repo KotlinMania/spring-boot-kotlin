@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.jackson2;
+package io.github.kotlinmania.spring.boot.jackson2;
 
 import java.lang.annotation.Documented;
 import java.lang.annotation.ElementType;
@@ -59,7 +59,7 @@ import org.springframework.stereotype.Component;
  * @author Phillip Webb
  * @author Paul Aly
  * @deprecated since 4.0.0 for removal in 4.3.0 in favor of Jackson 3 and
- * {@link org.springframework.boot.jackson.JacksonComponent}.
+ * {@link io.github.kotlinmania.spring.boot.jackson.JacksonComponent}.
  */
 @Target(ElementType.TYPE)
 @Retention(RetentionPolicy.RUNTIME)

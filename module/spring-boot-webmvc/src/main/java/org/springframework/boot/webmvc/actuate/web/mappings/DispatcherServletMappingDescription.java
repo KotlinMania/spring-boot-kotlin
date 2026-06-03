@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.webmvc.actuate.web.mappings;
+package io.github.kotlinmania.spring.boot.webmvc.actuate.web.mappings;
 
 import org.jspecify.annotations.Nullable;
 

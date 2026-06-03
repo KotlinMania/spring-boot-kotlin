@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.configurationmetadata.changelog;
+package io.github.kotlinmania.spring.boot.configurationmetadata.changelog;
 
 import java.io.File;
 import java.io.FileWriter;
@@ -37,8 +37,8 @@ import java.util.function.Predicate;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-import org.springframework.boot.configurationmetadata.ConfigurationMetadataProperty;
-import org.springframework.boot.configurationmetadata.Deprecation;
+import io.github.kotlinmania.spring.boot.configurationmetadata.ConfigurationMetadataProperty;
+import io.github.kotlinmania.spring.boot.configurationmetadata.Deprecation;
 
 /**
  * Writes a {@link Changelog} using asciidoc markup.

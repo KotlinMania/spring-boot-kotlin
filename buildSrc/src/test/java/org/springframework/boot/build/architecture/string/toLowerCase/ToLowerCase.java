@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.build.architecture.string.toLowerCase;
+package io.github.kotlinmania.spring.boot.build.architecture.string.toLowerCase;
 
 class ToLowerCase {
 

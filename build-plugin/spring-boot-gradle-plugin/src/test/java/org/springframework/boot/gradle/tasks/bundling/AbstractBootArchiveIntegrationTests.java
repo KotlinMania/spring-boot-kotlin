@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.gradle.tasks.bundling;
+package io.github.kotlinmania.spring.boot.gradle.tasks.bundling;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -54,9 +54,9 @@ import org.gradle.testkit.runner.TaskOutcome;
 import org.junit.jupiter.api.Assumptions;
 import org.junit.jupiter.api.TestTemplate;
 
-import org.springframework.boot.loader.tools.JarModeLibrary;
-import org.springframework.boot.testsupport.FileUtils;
-import org.springframework.boot.testsupport.gradle.testkit.GradleBuild;
+import io.github.kotlinmania.spring.boot.loader.tools.JarModeLibrary;
+import io.github.kotlinmania.spring.boot.testsupport.FileUtils;
+import io.github.kotlinmania.spring.boot.testsupport.gradle.testkit.GradleBuild;
 import org.springframework.util.FileSystemUtils;
 import org.springframework.util.StringUtils;
 

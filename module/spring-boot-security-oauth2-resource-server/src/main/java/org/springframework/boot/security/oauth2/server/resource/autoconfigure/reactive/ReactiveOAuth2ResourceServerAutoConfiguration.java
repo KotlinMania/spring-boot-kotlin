@@ -14,18 +14,18 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.security.oauth2.server.resource.autoconfigure.reactive;
+package io.github.kotlinmania.spring.boot.security.oauth2.server.resource.autoconfigure.reactive;
 
 import reactor.core.publisher.Mono;
 
-import org.springframework.boot.autoconfigure.AutoConfiguration;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
-import org.springframework.boot.context.properties.EnableConfigurationProperties;
-import org.springframework.boot.security.autoconfigure.ReactiveUserDetailsServiceAutoConfiguration;
-import org.springframework.boot.security.autoconfigure.actuate.web.reactive.ReactiveManagementWebSecurityAutoConfiguration;
-import org.springframework.boot.security.autoconfigure.web.reactive.ReactiveWebSecurityAutoConfiguration;
-import org.springframework.boot.security.oauth2.server.resource.autoconfigure.OAuth2ResourceServerProperties;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.EnableAutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnClass;
+import io.github.kotlinmania.spring.boot.context.properties.EnableConfigurationProperties;
+import io.github.kotlinmania.spring.boot.security.autoconfigure.ReactiveUserDetailsServiceAutoConfiguration;
+import io.github.kotlinmania.spring.boot.security.autoconfigure.actuate.web.reactive.ReactiveManagementWebSecurityAutoConfiguration;
+import io.github.kotlinmania.spring.boot.security.autoconfigure.web.reactive.ReactiveWebSecurityAutoConfiguration;
+import io.github.kotlinmania.spring.boot.security.oauth2.server.resource.autoconfigure.OAuth2ResourceServerProperties;
 import org.springframework.context.annotation.Import;
 import org.springframework.security.oauth2.server.resource.authentication.BearerTokenAuthenticationToken;
 

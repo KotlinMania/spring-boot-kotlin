@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.transaction.autoconfigure;
+package io.github.kotlinmania.spring.boot.transaction.autoconfigure;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -23,7 +23,7 @@ import java.util.List;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.util.LambdaSafe;
+import io.github.kotlinmania.spring.boot.util.LambdaSafe;
 import org.springframework.transaction.TransactionManager;
 
 /**

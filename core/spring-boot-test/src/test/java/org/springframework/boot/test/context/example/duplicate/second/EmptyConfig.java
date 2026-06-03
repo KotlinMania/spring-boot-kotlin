@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.test.context.example.duplicate.second;
+package io.github.kotlinmania.spring.boot.test.context.example.duplicate.second;
 
 import org.springframework.context.annotation.Configuration;
 

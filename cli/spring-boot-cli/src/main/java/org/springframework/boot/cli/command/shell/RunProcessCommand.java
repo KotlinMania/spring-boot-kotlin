@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.cli.command.shell;
+package io.github.kotlinmania.spring.boot.cli.command.shell;
 
 import java.io.IOException;
 import java.util.Arrays;
@@ -22,10 +22,10 @@ import java.util.Collection;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.cli.command.AbstractCommand;
-import org.springframework.boot.cli.command.Command;
-import org.springframework.boot.cli.command.status.ExitStatus;
-import org.springframework.boot.loader.tools.RunProcess;
+import io.github.kotlinmania.spring.boot.cli.command.AbstractCommand;
+import io.github.kotlinmania.spring.boot.cli.command.Command;
+import io.github.kotlinmania.spring.boot.cli.command.status.ExitStatus;
+import io.github.kotlinmania.spring.boot.loader.tools.RunProcess;
 import org.springframework.util.Assert;
 import org.springframework.util.StringUtils;
 

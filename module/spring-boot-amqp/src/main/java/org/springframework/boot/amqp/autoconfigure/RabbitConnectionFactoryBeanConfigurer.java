@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.amqp.autoconfigure;
+package io.github.kotlinmania.spring.boot.amqp.autoconfigure;
 
 import java.time.Duration;
 
@@ -23,10 +23,10 @@ import com.rabbitmq.client.impl.CredentialsRefreshService;
 import org.jspecify.annotations.Nullable;
 
 import org.springframework.amqp.rabbit.connection.RabbitConnectionFactoryBean;
-import org.springframework.boot.amqp.autoconfigure.RabbitConnectionDetails.Address;
-import org.springframework.boot.context.properties.PropertyMapper;
-import org.springframework.boot.ssl.SslBundle;
-import org.springframework.boot.ssl.SslBundles;
+import io.github.kotlinmania.spring.boot.amqp.autoconfigure.RabbitConnectionDetails.Address;
+import io.github.kotlinmania.spring.boot.context.properties.PropertyMapper;
+import io.github.kotlinmania.spring.boot.ssl.SslBundle;
+import io.github.kotlinmania.spring.boot.ssl.SslBundles;
 import org.springframework.core.io.ResourceLoader;
 import org.springframework.util.Assert;
 import org.springframework.util.unit.DataSize;

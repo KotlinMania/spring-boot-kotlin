@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.artemis.testcontainers;
+package io.github.kotlinmania.spring.boot.artemis.testcontainers;
 
 import java.time.Duration;
 import java.util.ArrayList;
@@ -26,12 +26,12 @@ import org.testcontainers.junit.jupiter.Container;
 import org.testcontainers.junit.jupiter.Testcontainers;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.artemis.autoconfigure.ArtemisAutoConfiguration;
-import org.springframework.boot.autoconfigure.ImportAutoConfiguration;
-import org.springframework.boot.jms.autoconfigure.JmsAutoConfiguration;
-import org.springframework.boot.testcontainers.service.connection.ServiceConnection;
-import org.springframework.boot.testsupport.container.ArtemisLegacyContainer;
-import org.springframework.boot.testsupport.container.TestImage;
+import io.github.kotlinmania.spring.boot.artemis.autoconfigure.ArtemisAutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.ImportAutoConfiguration;
+import io.github.kotlinmania.spring.boot.jms.autoconfigure.JmsAutoConfiguration;
+import io.github.kotlinmania.spring.boot.testcontainers.service.connection.ServiceConnection;
+import io.github.kotlinmania.spring.boot.testsupport.container.ArtemisLegacyContainer;
+import io.github.kotlinmania.spring.boot.testsupport.container.TestImage;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.jms.annotation.JmsListener;

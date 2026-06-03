@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.cloudfoundry.autoconfigure.actuate.endpoint;
+package io.github.kotlinmania.spring.boot.cloudfoundry.autoconfigure.actuate.endpoint;
 
 import org.jspecify.annotations.Nullable;
 

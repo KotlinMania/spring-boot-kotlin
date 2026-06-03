@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.tomcat.reactive;
+package io.github.kotlinmania.spring.boot.tomcat.reactive;
 
 import java.net.ConnectException;
 import java.time.Duration;
@@ -38,17 +38,17 @@ import org.awaitility.Awaitility;
 import org.junit.jupiter.api.Test;
 import org.mockito.InOrder;
 
-import org.springframework.boot.testsupport.junit.EnabledOnLocale;
-import org.springframework.boot.tomcat.TomcatAccess;
-import org.springframework.boot.tomcat.TomcatConnectorCustomizer;
-import org.springframework.boot.tomcat.TomcatContextCustomizer;
-import org.springframework.boot.tomcat.TomcatProtocolHandlerCustomizer;
-import org.springframework.boot.tomcat.TomcatWebServer;
-import org.springframework.boot.web.server.PortInUseException;
-import org.springframework.boot.web.server.Shutdown;
-import org.springframework.boot.web.server.WebServerException;
-import org.springframework.boot.web.server.reactive.AbstractReactiveWebServerFactoryTests;
-import org.springframework.boot.web.server.reactive.ConfigurableReactiveWebServerFactory;
+import io.github.kotlinmania.spring.boot.testsupport.junit.EnabledOnLocale;
+import io.github.kotlinmania.spring.boot.tomcat.TomcatAccess;
+import io.github.kotlinmania.spring.boot.tomcat.TomcatConnectorCustomizer;
+import io.github.kotlinmania.spring.boot.tomcat.TomcatContextCustomizer;
+import io.github.kotlinmania.spring.boot.tomcat.TomcatProtocolHandlerCustomizer;
+import io.github.kotlinmania.spring.boot.tomcat.TomcatWebServer;
+import io.github.kotlinmania.spring.boot.web.server.PortInUseException;
+import io.github.kotlinmania.spring.boot.web.server.Shutdown;
+import io.github.kotlinmania.spring.boot.web.server.WebServerException;
+import io.github.kotlinmania.spring.boot.web.server.reactive.AbstractReactiveWebServerFactoryTests;
+import io.github.kotlinmania.spring.boot.web.server.reactive.ConfigurableReactiveWebServerFactory;
 import org.springframework.http.server.reactive.HttpHandler;
 import org.springframework.web.reactive.function.client.WebClient;
 

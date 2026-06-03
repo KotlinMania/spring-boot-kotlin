@@ -18,6 +18,6 @@
  * Auto-configuration for actuator ApplicationStartup concerns.
  */
 @NullMarked
-package org.springframework.boot.actuate.autoconfigure.startup;
+package io.github.kotlinmania.spring.boot.actuate.autoconfigure.startup;
 
 import org.jspecify.annotations.NullMarked;

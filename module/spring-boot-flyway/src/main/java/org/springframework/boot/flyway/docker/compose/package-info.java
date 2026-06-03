@@ -18,6 +18,6 @@
  * Support for Docker Compose Flyway service connections.
  */
 @NullMarked
-package org.springframework.boot.flyway.docker.compose;
+package io.github.kotlinmania.spring.boot.flyway.docker.compose;
 
 import org.jspecify.annotations.NullMarked;

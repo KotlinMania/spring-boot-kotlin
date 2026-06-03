@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.configurationprocessor.metadata;
+package io.github.kotlinmania.spring.boot.configurationprocessor.metadata;
 
 /**
  * Describe an item deprecation.

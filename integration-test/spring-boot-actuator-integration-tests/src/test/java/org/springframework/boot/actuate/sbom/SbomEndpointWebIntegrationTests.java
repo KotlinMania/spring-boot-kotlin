@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.actuate.sbom;
+package io.github.kotlinmania.spring.boot.actuate.sbom;
 
 import net.minidev.json.JSONArray;
 
-import org.springframework.boot.actuate.endpoint.web.test.WebEndpointTest;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.web.test.WebEndpointTest;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.io.ResourceLoader;
@@ -54,7 +54,7 @@ class SbomEndpointWebIntegrationTests {
 		@Bean
 		SbomProperties sbomProperties() {
 			SbomProperties properties = new SbomProperties();
-			properties.getApplication().setLocation("classpath:org/springframework/boot/actuate/sbom/cyclonedx.json");
+			properties.getApplication().setLocation("classpath:io.github.kotlinmania.spring.boot.actuate/sbom/cyclonedx.json");
 			return properties;
 		}
 

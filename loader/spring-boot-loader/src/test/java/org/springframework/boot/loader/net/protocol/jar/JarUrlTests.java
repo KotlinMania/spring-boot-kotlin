@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.loader.net.protocol.jar;
+package io.github.kotlinmania.spring.boot.loader.net.protocol.jar;
 
 import java.io.File;
 import java.net.MalformedURLException;
@@ -25,7 +25,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.io.TempDir;
 
-import org.springframework.boot.loader.net.util.UrlDecoder;
+import io.github.kotlinmania.spring.boot.loader.net.util.UrlDecoder;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

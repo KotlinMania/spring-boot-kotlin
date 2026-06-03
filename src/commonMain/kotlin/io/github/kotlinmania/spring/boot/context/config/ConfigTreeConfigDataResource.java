@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.context.config;
+package io.github.kotlinmania.spring.boot.context.config;
 
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.Objects;
 
-import org.springframework.boot.env.ConfigTreePropertySource;
+import io.github.kotlinmania.spring.boot.env.ConfigTreePropertySource;
 import org.springframework.util.Assert;
 
 /**

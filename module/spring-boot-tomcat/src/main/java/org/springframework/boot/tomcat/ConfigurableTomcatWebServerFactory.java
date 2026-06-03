@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.tomcat;
+package io.github.kotlinmania.spring.boot.tomcat;
 
 import java.io.File;
 import java.nio.charset.Charset;
@@ -25,9 +25,9 @@ import org.apache.catalina.Valve;
 import org.apache.catalina.connector.Connector;
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.tomcat.reactive.TomcatReactiveWebServerFactory;
-import org.springframework.boot.tomcat.servlet.TomcatServletWebServerFactory;
-import org.springframework.boot.web.server.ConfigurableWebServerFactory;
+import io.github.kotlinmania.spring.boot.tomcat.reactive.TomcatReactiveWebServerFactory;
+import io.github.kotlinmania.spring.boot.tomcat.servlet.TomcatServletWebServerFactory;
+import io.github.kotlinmania.spring.boot.web.server.ConfigurableWebServerFactory;
 
 /**
  * {@link ConfigurableWebServerFactory} for Tomcat-specific features.

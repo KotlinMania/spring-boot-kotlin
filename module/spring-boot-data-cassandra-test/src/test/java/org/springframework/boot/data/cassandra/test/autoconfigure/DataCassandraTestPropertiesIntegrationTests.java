@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.data.cassandra.test.autoconfigure;
+package io.github.kotlinmania.spring.boot.data.cassandra.test.autoconfigure;
 
 import com.datastax.oss.driver.api.core.CqlSession;
 import com.datastax.oss.driver.api.core.context.DriverContext;
@@ -23,8 +23,8 @@ import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.data.cassandra.test.autoconfigure.DataCassandraTestPropertiesIntegrationTests.CassandraMockConfiguration;
-import org.springframework.boot.test.context.TestConfiguration;
+import io.github.kotlinmania.spring.boot.data.cassandra.test.autoconfigure.DataCassandraTestPropertiesIntegrationTests.CassandraMockConfiguration;
+import io.github.kotlinmania.spring.boot.test.context.TestConfiguration;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Import;
 import org.springframework.core.env.Environment;

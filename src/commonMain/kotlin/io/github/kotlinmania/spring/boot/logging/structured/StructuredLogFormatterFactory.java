@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.logging.structured;
+package io.github.kotlinmania.spring.boot.logging.structured;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -25,13 +25,13 @@ import java.util.function.Consumer;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.json.JsonWriter.Members;
-import org.springframework.boot.logging.StackTracePrinter;
-import org.springframework.boot.logging.structured.StructuredLoggingJsonProperties.Context;
-import org.springframework.boot.util.Instantiator;
-import org.springframework.boot.util.Instantiator.AvailableParameters;
-import org.springframework.boot.util.Instantiator.FailureHandler;
-import org.springframework.boot.util.LambdaSafe;
+import io.github.kotlinmania.spring.boot.json.JsonWriter.Members;
+import io.github.kotlinmania.spring.boot.logging.StackTracePrinter;
+import io.github.kotlinmania.spring.boot.logging.structured.StructuredLoggingJsonProperties.Context;
+import io.github.kotlinmania.spring.boot.util.Instantiator;
+import io.github.kotlinmania.spring.boot.util.Instantiator.AvailableParameters;
+import io.github.kotlinmania.spring.boot.util.Instantiator.FailureHandler;
+import io.github.kotlinmania.spring.boot.util.LambdaSafe;
 import org.springframework.core.GenericTypeResolver;
 import org.springframework.core.env.Environment;
 import org.springframework.core.io.support.SpringFactoriesLoader;

@@ -16,7 +16,7 @@ To add the actuator to a Maven-based project, add the following starter dependen
 ----
 <dependencies>
 	<dependency>
-		<groupId>org.springframework.boot</groupId>
+		<groupId>io.github.kotlinmania.spring.boot./groupId>
 		<artifactId>spring-boot-starter-actuator</artifactId>
 	</dependency>
 </dependencies>
@@ -27,6 +27,6 @@ For Gradle, use the following declaration:
 [source,gradle]
 ----
 dependencies {
-	implementation 'org.springframework.boot:spring-boot-starter-actuator'
+	implementation 'io.github.kotlinmania.spring.boot.spring-boot-starter-actuator'
 }
 ----

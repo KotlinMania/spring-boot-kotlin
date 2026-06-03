@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.web.server.servlet.context;
+package io.github.kotlinmania.spring.boot.web.server.servlet.context;
 
 import jakarta.servlet.Servlet;
 import org.jspecify.annotations.Nullable;
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.web.server.servlet.MockServletWebServerFactory;
+import io.github.kotlinmania.spring.boot.web.server.servlet.MockServletWebServerFactory;
 import org.springframework.core.io.ClassPathResource;
 
 import static org.assertj.core.api.Assertions.assertThat;

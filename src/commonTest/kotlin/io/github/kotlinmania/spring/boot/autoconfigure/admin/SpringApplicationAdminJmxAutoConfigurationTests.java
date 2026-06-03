@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.autoconfigure.admin;
+package io.github.kotlinmania.spring.boot.autoconfigure.admin;
 
 import java.lang.management.ManagementFactory;
 
@@ -28,11 +28,11 @@ import org.junit.jupiter.api.Test;
 
 import org.springframework.beans.factory.BeanFactoryUtils;
 import org.springframework.beans.factory.NoSuchBeanDefinitionException;
-import org.springframework.boot.WebApplicationType;
-import org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar;
-import org.springframework.boot.autoconfigure.AutoConfigurations;
-import org.springframework.boot.builder.SpringApplicationBuilder;
-import org.springframework.boot.test.context.runner.ApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.WebApplicationType;
+import io.github.kotlinmania.spring.boot.admin.SpringApplicationAdminMXBeanRegistrar;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurations;
+import io.github.kotlinmania.spring.boot.builder.SpringApplicationBuilder;
+import io.github.kotlinmania.spring.boot.test.context.runner.ApplicationContextRunner;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -53,7 +53,7 @@ class SpringApplicationAdminJmxAutoConfigurationTests {
 
 	private static final String ENABLE_ADMIN_PROP = "spring.application.admin.enabled=true";
 
-	private static final String DEFAULT_JMX_NAME = "org.springframework.boot:type=Admin,name=SpringApplication";
+	private static final String DEFAULT_JMX_NAME = "io.github.kotlinmania.spring.boot.type=Admin,name=SpringApplication";
 
 	private final MBeanServer server = ManagementFactory.getPlatformMBeanServer();
 

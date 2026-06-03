@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.persistence.autoconfigure.scan.a;
+package io.github.kotlinmania.spring.boot.persistence.autoconfigure.scan.a;
 
 import jakarta.persistence.Embeddable;
 

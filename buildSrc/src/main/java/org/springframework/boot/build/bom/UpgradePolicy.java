@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.build.bom;
+package io.github.kotlinmania.spring.boot.build.bom;
 
 import java.util.function.BiPredicate;
 
-import org.springframework.boot.build.bom.bomr.version.DependencyVersion;
+import io.github.kotlinmania.spring.boot.build.bom.bomr.version.DependencyVersion;
 
 /**
  * Policies used to decide which versions are considered as possible upgrades.

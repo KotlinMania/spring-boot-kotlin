@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.testing.springbootapplications.detectingwebapptype;
+package io.github.kotlinmania.spring.boot.docs.testing.springbootapplications.detectingwebapptype;
 
-import org.springframework.boot.test.context.SpringBootTest;
+import io.github.kotlinmania.spring.boot.test.context.SpringBootTest;
 
 @SpringBootTest(properties = "spring.main.web-application-type=reactive")
 class MyWebFluxTests {

@@ -1,2 +1,2 @@
-org.springframework.boot.jetty.autoconfigure.reactive.JettyReactiveWebServerAutoConfiguration
-org.springframework.boot.jetty.autoconfigure.servlet.JettyServletWebServerAutoConfiguration
+io.github.kotlinmania.spring.boot.jetty.autoconfigure.reactive.JettyReactiveWebServerAutoConfiguration
+io.github.kotlinmania.spring.boot.jetty.autoconfigure.servlet.JettyServletWebServerAutoConfiguration

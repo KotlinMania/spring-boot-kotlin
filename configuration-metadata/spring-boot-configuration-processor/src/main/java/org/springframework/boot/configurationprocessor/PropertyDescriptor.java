@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.configurationprocessor;
+package io.github.kotlinmania.spring.boot.configurationprocessor;
 
 import java.util.Arrays;
 
@@ -24,10 +24,10 @@ import javax.lang.model.element.ExecutableElement;
 import javax.lang.model.element.TypeElement;
 import javax.lang.model.type.TypeMirror;
 
-import org.springframework.boot.configurationprocessor.metadata.ConfigurationMetadata;
-import org.springframework.boot.configurationprocessor.metadata.ItemDeprecation;
-import org.springframework.boot.configurationprocessor.metadata.ItemHint;
-import org.springframework.boot.configurationprocessor.metadata.ItemMetadata;
+import io.github.kotlinmania.spring.boot.configurationprocessor.metadata.ConfigurationMetadata;
+import io.github.kotlinmania.spring.boot.configurationprocessor.metadata.ItemDeprecation;
+import io.github.kotlinmania.spring.boot.configurationprocessor.metadata.ItemHint;
+import io.github.kotlinmania.spring.boot.configurationprocessor.metadata.ItemMetadata;
 
 /**
  * Description of a property that can be candidate for metadata generation.

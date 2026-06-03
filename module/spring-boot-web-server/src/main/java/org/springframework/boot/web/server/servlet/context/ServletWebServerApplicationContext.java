@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.web.server.servlet.context;
+package io.github.kotlinmania.spring.boot.web.server.servlet.context;
 
 import java.util.Collections;
 import java.util.HashMap;
@@ -35,18 +35,18 @@ import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.config.ConfigurableListableBeanFactory;
 import org.springframework.beans.factory.config.Scope;
 import org.springframework.beans.factory.support.DefaultListableBeanFactory;
-import org.springframework.boot.WebApplicationType;
-import org.springframework.boot.availability.AvailabilityChangeEvent;
-import org.springframework.boot.availability.ReadinessState;
-import org.springframework.boot.web.context.servlet.WebApplicationContextInitializer;
-import org.springframework.boot.web.server.WebServer;
-import org.springframework.boot.web.server.context.ConfigurableWebServerApplicationContext;
-import org.springframework.boot.web.server.context.MissingWebServerFactoryBeanException;
-import org.springframework.boot.web.server.context.WebServerGracefulShutdownLifecycle;
-import org.springframework.boot.web.server.servlet.ServletWebServerFactory;
-import org.springframework.boot.web.servlet.FilterRegistrationBean;
-import org.springframework.boot.web.servlet.ServletContextInitializer;
-import org.springframework.boot.web.servlet.ServletRegistrationBean;
+import io.github.kotlinmania.spring.boot.WebApplicationType;
+import io.github.kotlinmania.spring.boot.availability.AvailabilityChangeEvent;
+import io.github.kotlinmania.spring.boot.availability.ReadinessState;
+import io.github.kotlinmania.spring.boot.web.context.servlet.WebApplicationContextInitializer;
+import io.github.kotlinmania.spring.boot.web.server.WebServer;
+import io.github.kotlinmania.spring.boot.web.server.context.ConfigurableWebServerApplicationContext;
+import io.github.kotlinmania.spring.boot.web.server.context.MissingWebServerFactoryBeanException;
+import io.github.kotlinmania.spring.boot.web.server.context.WebServerGracefulShutdownLifecycle;
+import io.github.kotlinmania.spring.boot.web.server.servlet.ServletWebServerFactory;
+import io.github.kotlinmania.spring.boot.web.servlet.FilterRegistrationBean;
+import io.github.kotlinmania.spring.boot.web.servlet.ServletContextInitializer;
+import io.github.kotlinmania.spring.boot.web.servlet.ServletRegistrationBean;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextException;
 import org.springframework.core.io.Resource;
@@ -231,7 +231,7 @@ public class ServletWebServerApplicationContext extends GenericWebApplicationCon
 	 * @return the self initializer
 	 * @see #prepareWebApplicationContext(ServletContext)
 	 */
-	private org.springframework.boot.web.servlet.ServletContextInitializer getSelfInitializer() {
+	private io.github.kotlinmania.spring.boot.web.servlet.ServletContextInitializer getSelfInitializer() {
 		return new WebApplicationContextInitializer(this)::initialize;
 	}
 

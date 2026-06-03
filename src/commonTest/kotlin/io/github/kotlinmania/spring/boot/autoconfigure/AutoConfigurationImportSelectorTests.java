@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.autoconfigure;
+package io.github.kotlinmania.spring.boot.autoconfigure;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
@@ -37,8 +37,8 @@ import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.BeanFactoryAware;
 import org.springframework.beans.factory.config.ConfigurableListableBeanFactory;
 import org.springframework.beans.factory.support.DefaultListableBeanFactory;
-import org.springframework.boot.context.annotation.ImportCandidates;
-import org.springframework.boot.testsupport.classpath.resources.WithResource;
+import io.github.kotlinmania.spring.boot.context.annotation.ImportCandidates;
+import io.github.kotlinmania.spring.boot.testsupport.classpath.resources.WithResource;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.DeferredImportSelector.Group;
 import org.springframework.context.annotation.DeferredImportSelector.Group.Entry;
@@ -56,14 +56,14 @@ import static org.assertj.core.api.Assertions.assertThatIllegalStateException;
  * @author Stephane Nicoll
  * @author Madhura Bhave
  */
-@WithResource(name = "META-INF/spring/org.springframework.boot.autoconfigure.AutoConfiguration.imports", content = """
+@WithResource(name = "META-INF/spring/io.github.kotlinmania.spring.boot.autoconfigure.AutoConfiguration.imports", content = """
 		com.example.one.FirstAutoConfiguration
 		com.example.two.SecondAutoConfiguration
 		com.example.three.ThirdAutoConfiguration
 		com.example.four.FourthAutoConfiguration
 		com.example.five.FifthAutoConfiguration
 		com.example.six.SixthAutoConfiguration
-		org.springframework.boot.autoconfigure.AutoConfigurationImportSelectorTests$SeventhAutoConfiguration
+		io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurationImportSelectorTests$SeventhAutoConfiguration
 		""")
 class AutoConfigurationImportSelectorTests {
 
@@ -188,18 +188,18 @@ class AutoConfigurationImportSelectorTests {
 	@Test
 	void nonAutoConfigurationPropertyExclusionsWhenPresentOnClassPathShouldThrowException() {
 		this.environment.setProperty("spring.autoconfigure.exclude",
-				"org.springframework.boot.autoconfigure.AutoConfigurationImportSelectorTests.TestConfiguration");
+				"io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurationImportSelectorTests.TestConfiguration");
 		assertThatIllegalStateException().isThrownBy(() -> selectImports(BasicEnableAutoConfiguration.class));
 	}
 
 	@Test
 	void nameAndPropertyExclusionsWhenNotPresentOnClasspathShouldNotThrowException() {
 		this.environment.setProperty("spring.autoconfigure.exclude",
-				"org.springframework.boot.autoconfigure.DoesNotExist2");
+				"io.github.kotlinmania.spring.boot.autoconfigure.DoesNotExist2");
 		selectImports(EnableAutoConfigurationWithAbsentClassNameExclude.class);
 		assertThat(getLastEvent().getExclusions()).containsExactlyInAnyOrder(
-				"org.springframework.boot.autoconfigure.DoesNotExist1",
-				"org.springframework.boot.autoconfigure.DoesNotExist2");
+				"io.github.kotlinmania.spring.boot.autoconfigure.DoesNotExist1",
+				"io.github.kotlinmania.spring.boot.autoconfigure.DoesNotExist2");
 	}
 
 	@Test
@@ -365,12 +365,12 @@ class AutoConfigurationImportSelectorTests {
 	}
 
 	@EnableAutoConfiguration(
-			excludeName = "org.springframework.boot.autoconfigure.AutoConfigurationImportSelectorTests.TestConfiguration")
+			excludeName = "io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurationImportSelectorTests.TestConfiguration")
 	private final class EnableAutoConfigurationWithFaultyClassNameExclude {
 
 	}
 
-	@EnableAutoConfiguration(excludeName = "org.springframework.boot.autoconfigure.DoesNotExist1")
+	@EnableAutoConfiguration(excludeName = "io.github.kotlinmania.spring.boot.autoconfigure.DoesNotExist1")
 	private final class EnableAutoConfigurationWithAbsentClassNameExclude {
 
 	}
@@ -407,10 +407,10 @@ class AutoConfigurationImportSelectorTests {
 	@Target(ElementType.METHOD)
 	@Retention(RetentionPolicy.RUNTIME)
 	@WithResource(
-			name = "META-INF/spring/org.springframework.boot.autoconfigure.AutoConfigurationImportSelectorTests$TestAutoConfiguration.imports",
+			name = "META-INF/spring/io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurationImportSelectorTests$TestAutoConfiguration.imports",
 			content = """
-					org.springframework.boot.autoconfigure.AutoConfigurationImportSelectorTests$AfterDeprecatedAutoConfiguration
-					org.springframework.boot.autoconfigure.AutoConfigurationImportSelectorTests$ReplacementAutoConfiguration
+					io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurationImportSelectorTests$AfterDeprecatedAutoConfiguration
+					io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurationImportSelectorTests$ReplacementAutoConfiguration
 					""")
 	@interface WithTestAutoConfigurationImportsResource {
 
@@ -419,10 +419,10 @@ class AutoConfigurationImportSelectorTests {
 	@Target(ElementType.METHOD)
 	@Retention(RetentionPolicy.RUNTIME)
 	@WithResource(
-			name = "META-INF/spring/org.springframework.boot.autoconfigure.AutoConfigurationImportSelectorTests$TestAutoConfiguration.replacements",
+			name = "META-INF/spring/io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurationImportSelectorTests$TestAutoConfiguration.replacements",
 			content = """
-					org.springframework.boot.autoconfigure.AutoConfigurationImportSelectorTests$DeprecatedAutoConfiguration=\
-					org.springframework.boot.autoconfigure.AutoConfigurationImportSelectorTests$ReplacementAutoConfiguration
+					io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurationImportSelectorTests$DeprecatedAutoConfiguration=\
+					io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurationImportSelectorTests$ReplacementAutoConfiguration
 					""")
 	@interface WithTestAutoConfigurationReplacementsResource {
 

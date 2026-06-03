@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.convert;
+package io.github.kotlinmania.spring.boot.convert;
 
 /**
  * Converter to support mapping of YAML style {@code "false"} and {@code "true"} to enums

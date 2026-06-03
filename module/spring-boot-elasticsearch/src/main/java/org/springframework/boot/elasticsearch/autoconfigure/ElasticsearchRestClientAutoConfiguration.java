@@ -14,18 +14,18 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.elasticsearch.autoconfigure;
+package io.github.kotlinmania.spring.boot.elasticsearch.autoconfigure;
 
 import co.elastic.clients.transport.rest5_client.low_level.Rest5ClientBuilder;
 
-import org.springframework.boot.autoconfigure.AutoConfiguration;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
-import org.springframework.boot.autoconfigure.ssl.SslAutoConfiguration;
-import org.springframework.boot.context.properties.EnableConfigurationProperties;
-import org.springframework.boot.elasticsearch.autoconfigure.ElasticsearchRestClientConfigurations.RestClientBuilderConfiguration;
-import org.springframework.boot.elasticsearch.autoconfigure.ElasticsearchRestClientConfigurations.RestClientConfiguration;
-import org.springframework.boot.elasticsearch.autoconfigure.ElasticsearchRestClientConfigurations.RestClientSnifferConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.EnableAutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnClass;
+import io.github.kotlinmania.spring.boot.autoconfigure.ssl.SslAutoConfiguration;
+import io.github.kotlinmania.spring.boot.context.properties.EnableConfigurationProperties;
+import io.github.kotlinmania.spring.boot.elasticsearch.autoconfigure.ElasticsearchRestClientConfigurations.RestClientBuilderConfiguration;
+import io.github.kotlinmania.spring.boot.elasticsearch.autoconfigure.ElasticsearchRestClientConfigurations.RestClientConfiguration;
+import io.github.kotlinmania.spring.boot.elasticsearch.autoconfigure.ElasticsearchRestClientConfigurations.RestClientSnifferConfiguration;
 import org.springframework.context.annotation.Import;
 
 /**

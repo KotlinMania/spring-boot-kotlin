@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.amqp.autoconfigure;
+package io.github.kotlinmania.spring.boot.amqp.autoconfigure;
 
 import org.jspecify.annotations.Nullable;
 
 import org.springframework.amqp.rabbit.connection.RabbitConnectionFactoryBean;
-import org.springframework.boot.ssl.SslBundle;
+import io.github.kotlinmania.spring.boot.ssl.SslBundle;
 
 /**
  * A {@link RabbitConnectionFactoryBean} that can be configured with custom SSL trust

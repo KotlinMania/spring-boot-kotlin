@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.actuate.sbom;
+package io.github.kotlinmania.spring.boot.actuate.sbom;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -27,10 +27,10 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.EnumSource;
 import org.junit.jupiter.params.provider.EnumSource.Mode;
 
-import org.springframework.boot.actuate.endpoint.web.WebEndpointResponse;
-import org.springframework.boot.actuate.sbom.SbomEndpointWebExtension.SbomType;
-import org.springframework.boot.actuate.sbom.SbomProperties.Sbom;
-import org.springframework.boot.testsupport.classpath.resources.WithResource;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.web.WebEndpointResponse;
+import io.github.kotlinmania.spring.boot.actuate.sbom.SbomEndpointWebExtension.SbomType;
+import io.github.kotlinmania.spring.boot.actuate.sbom.SbomProperties.Sbom;
+import io.github.kotlinmania.spring.boot.testsupport.classpath.resources.WithResource;
 import org.springframework.context.support.GenericApplicationContext;
 import org.springframework.core.io.Resource;
 import org.springframework.http.MediaType;
@@ -54,7 +54,7 @@ class SbomEndpointWebExtensionTests {
 
 	@Test
 	void shouldReturnHttpOk() {
-		this.properties.getApplication().setLocation("classpath:org/springframework/boot/actuate/sbom/cyclonedx.json");
+		this.properties.getApplication().setLocation("classpath:io.github.kotlinmania.spring.boot.actuate/sbom/cyclonedx.json");
 		WebEndpointResponse<Resource> response = createWebExtension().sbom("application");
 		assertThat(response.getStatus()).isEqualTo(200);
 	}
@@ -67,21 +67,21 @@ class SbomEndpointWebExtensionTests {
 
 	@Test
 	void shouldAutoDetectContentTypeForCycloneDx() {
-		this.properties.getApplication().setLocation("classpath:org/springframework/boot/actuate/sbom/cyclonedx.json");
+		this.properties.getApplication().setLocation("classpath:io.github.kotlinmania.spring.boot.actuate/sbom/cyclonedx.json");
 		WebEndpointResponse<Resource> response = createWebExtension().sbom("application");
 		assertThat(response.getContentType()).isEqualTo(MimeType.valueOf("application/vnd.cyclonedx+json"));
 	}
 
 	@Test
 	void shouldAutoDetectContentTypeForSpdx() {
-		this.properties.getApplication().setLocation("classpath:org/springframework/boot/actuate/sbom/spdx.json");
+		this.properties.getApplication().setLocation("classpath:io.github.kotlinmania.spring.boot.actuate/sbom/spdx.json");
 		WebEndpointResponse<Resource> response = createWebExtension().sbom("application");
 		assertThat(response.getContentType()).isEqualTo(MimeType.valueOf("application/spdx+json"));
 	}
 
 	@Test
 	void shouldAutoDetectContentTypeForSyft() {
-		this.properties.getApplication().setLocation("classpath:org/springframework/boot/actuate/sbom/syft.json");
+		this.properties.getApplication().setLocation("classpath:io.github.kotlinmania.spring.boot.actuate/sbom/syft.json");
 		WebEndpointResponse<Resource> response = createWebExtension().sbom("application");
 		assertThat(response.getContentType()).isEqualTo(MimeType.valueOf("application/vnd.syft+json"));
 	}
@@ -96,7 +96,7 @@ class SbomEndpointWebExtensionTests {
 
 	@Test
 	void shouldUseContentTypeIfSet() {
-		this.properties.getApplication().setLocation("classpath:org/springframework/boot/actuate/sbom/cyclonedx.json");
+		this.properties.getApplication().setLocation("classpath:io.github.kotlinmania.spring.boot.actuate/sbom/cyclonedx.json");
 		this.properties.getApplication().setMediaType(MimeType.valueOf("text/plain"));
 		WebEndpointResponse<Resource> response = createWebExtension().sbom("application");
 		assertThat(response.getContentType()).isEqualTo(MimeType.valueOf("text/plain"));
@@ -105,7 +105,7 @@ class SbomEndpointWebExtensionTests {
 	@Test
 	void shouldUseContentTypeForAdditionalSbomsIfSet() {
 		this.properties.getAdditional()
-			.put("alpha", sbom("classpath:org/springframework/boot/actuate/sbom/cyclonedx.json",
+			.put("alpha", sbom("classpath:io.github.kotlinmania.spring.boot.actuate/sbom/cyclonedx.json",
 					MediaType.valueOf("text/plain")));
 		WebEndpointResponse<Resource> response = createWebExtension().sbom("alpha");
 		assertThat(response.getContentType()).isEqualTo(MimeType.valueOf("text/plain"));

@@ -18,6 +18,6 @@
  * Auto-configuration for Spring Session JDBC.
  */
 @NullMarked
-package org.springframework.boot.session.jdbc.autoconfigure;
+package io.github.kotlinmania.spring.boot.session.jdbc.autoconfigure;
 
 import org.jspecify.annotations.NullMarked;

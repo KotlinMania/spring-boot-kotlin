@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.build.groovyscripts;
+package io.github.kotlinmania.spring.boot.build.groovyscripts;
 
 import java.io.File;
 import java.lang.reflect.Method;
@@ -158,7 +158,7 @@ class SpringRepositoriesExtensionTests {
 		SpringRepositoriesExtension extension = createExtension("0.0.0-SNAPSHOT", "oss");
 		extension.mavenRepositoriesExcludingBootGroup();
 		assertThat(this.contents).hasSize(1);
-		verify(this.contents.get(0)).excludeGroup("org.springframework.boot");
+		verify(this.contents.get(0)).excludeGroup("io.github.kotlinmania.spring.boot.);
 	}
 
 	@Test

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.persistence.autoconfigure;
+package io.github.kotlinmania.spring.boot.persistence.autoconfigure;
 
 import java.io.Serializable;
 import java.lang.annotation.ElementType;
@@ -38,8 +38,8 @@ import org.jspecify.annotations.Nullable;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.test.util.TestPropertyValues;
-import org.springframework.boot.testsupport.classpath.resources.WithResource;
+import io.github.kotlinmania.spring.boot.test.util.TestPropertyValues;
+import io.github.kotlinmania.spring.boot.testsupport.classpath.resources.WithResource;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -185,7 +185,7 @@ class PersistenceExceptionTranslationAutoConfigurationTests {
 					<?xml version="1.0" encoding="UTF-8"?>
 					<persistence version="2.0" xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence https://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
 						<persistence-unit name="manually-configured">
-							<class>org.springframework.boot.transaction.autoconfigure.PersistenceExceptionTranslationAutoConfigurationTests$City</class>
+							<class>io.github.kotlinmania.spring.boot.transaction.autoconfigure.PersistenceExceptionTranslationAutoConfigurationTests$City</class>
 							<exclude-unlisted-classes>true</exclude-unlisted-classes>
 						</persistence-unit>
 					</persistence>

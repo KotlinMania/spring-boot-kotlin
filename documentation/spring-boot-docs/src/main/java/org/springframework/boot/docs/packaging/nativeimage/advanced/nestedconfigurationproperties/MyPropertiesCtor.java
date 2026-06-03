@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.packaging.nativeimage.advanced.nestedconfigurationproperties;
+package io.github.kotlinmania.spring.boot.docs.packaging.nativeimage.advanced.nestedconfigurationproperties;
 
-import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.boot.context.properties.NestedConfigurationProperty;
+import io.github.kotlinmania.spring.boot.context.properties.ConfigurationProperties;
+import io.github.kotlinmania.spring.boot.context.properties.NestedConfigurationProperty;
 
 @ConfigurationProperties("my.properties")
 public class MyPropertiesCtor {

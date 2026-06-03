@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.integration.autoconfigure;
+package io.github.kotlinmania.spring.boot.integration.autoconfigure;
 
 import java.util.Collection;
 import java.util.Collections;
@@ -23,7 +23,7 @@ import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.BeanFactoryAware;
 import org.springframework.beans.factory.support.BeanDefinitionRegistry;
-import org.springframework.boot.autoconfigure.AutoConfigurationPackages;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurationPackages;
 import org.springframework.core.annotation.AnnotationAttributes;
 import org.springframework.core.type.AnnotationMetadata;
 import org.springframework.integration.annotation.IntegrationComponentScan;

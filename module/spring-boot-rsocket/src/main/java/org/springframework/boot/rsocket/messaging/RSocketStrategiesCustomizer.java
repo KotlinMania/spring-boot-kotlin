@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.rsocket.messaging;
+package io.github.kotlinmania.spring.boot.rsocket.messaging;
 
 import org.springframework.messaging.rsocket.RSocketStrategies;
 

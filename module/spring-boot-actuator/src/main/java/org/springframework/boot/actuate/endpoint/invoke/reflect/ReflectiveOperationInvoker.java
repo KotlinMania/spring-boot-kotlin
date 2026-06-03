@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.actuate.endpoint.invoke.reflect;
+package io.github.kotlinmania.spring.boot.actuate.endpoint.invoke.reflect;
 
 import java.lang.reflect.Method;
 import java.util.Set;
@@ -22,11 +22,11 @@ import java.util.stream.Collectors;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.actuate.endpoint.InvocationContext;
-import org.springframework.boot.actuate.endpoint.invoke.MissingParametersException;
-import org.springframework.boot.actuate.endpoint.invoke.OperationInvoker;
-import org.springframework.boot.actuate.endpoint.invoke.OperationParameter;
-import org.springframework.boot.actuate.endpoint.invoke.ParameterValueMapper;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.InvocationContext;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.invoke.MissingParametersException;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.invoke.OperationInvoker;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.invoke.OperationParameter;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.invoke.ParameterValueMapper;
 import org.springframework.core.style.ToStringCreator;
 import org.springframework.util.Assert;
 import org.springframework.util.ReflectionUtils;

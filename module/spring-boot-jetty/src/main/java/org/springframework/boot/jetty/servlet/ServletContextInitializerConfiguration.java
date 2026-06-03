@@ -14,15 +14,15 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.jetty.servlet;
+package io.github.kotlinmania.spring.boot.jetty.servlet;
 
 import jakarta.servlet.ServletException;
 import org.eclipse.jetty.ee11.webapp.AbstractConfiguration;
 import org.eclipse.jetty.ee11.webapp.Configuration;
 import org.eclipse.jetty.ee11.webapp.WebAppContext;
 
-import org.springframework.boot.web.server.servlet.ServletContextInitializers;
-import org.springframework.boot.web.servlet.ServletContextInitializer;
+import io.github.kotlinmania.spring.boot.web.server.servlet.ServletContextInitializers;
+import io.github.kotlinmania.spring.boot.web.servlet.ServletContextInitializer;
 import org.springframework.util.Assert;
 
 /**

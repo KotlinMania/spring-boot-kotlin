@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.servlet.autoconfigure;
+package io.github.kotlinmania.spring.boot.servlet.autoconfigure;
 
 import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.context.properties.ConfigurationProperties;
+import io.github.kotlinmania.spring.boot.context.properties.ConfigurationProperties;
 
 /**
  * {@link ConfigurationProperties @ConfigurationProperties} for Servlet encoding.

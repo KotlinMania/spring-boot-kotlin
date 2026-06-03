@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.autoconfigure;
+package io.github.kotlinmania.spring.boot.autoconfigure;
 
 import java.util.List;
 
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.autoconfigure.packagestest.one.FirstConfiguration;
-import org.springframework.boot.autoconfigure.packagestest.two.SecondConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.packagestest.one.FirstConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.packagestest.two.SecondConfiguration;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.Configuration;
 

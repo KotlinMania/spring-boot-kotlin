@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.build.springframework;
+package io.github.kotlinmania.spring.boot.build.springframework;
 
 import java.io.File;
 import java.io.FileInputStream;

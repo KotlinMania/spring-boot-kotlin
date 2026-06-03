@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.gradle.plugin;
+package io.github.kotlinmania.spring.boot.gradle.plugin;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -38,7 +38,7 @@ import org.gradle.api.tasks.application.CreateStartScripts;
 import org.gradle.jvm.application.scripts.TemplateBasedScriptGenerator;
 import org.gradle.util.GradleVersion;
 
-import org.springframework.boot.gradle.tasks.run.BootRun;
+import io.github.kotlinmania.spring.boot.gradle.tasks.run.BootRun;
 import org.springframework.util.Assert;
 
 /**

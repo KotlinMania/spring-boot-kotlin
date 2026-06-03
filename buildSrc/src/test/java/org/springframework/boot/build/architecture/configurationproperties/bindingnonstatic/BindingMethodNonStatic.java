@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.build.architecture.configurationproperties.bindingnonstatic;
+package io.github.kotlinmania.spring.boot.build.architecture.configurationproperties.bindingnonstatic;
 
 import java.util.List;
 
-import org.springframework.boot.build.architecture.annotations.TestConfigurationPropertiesBinding;
+import io.github.kotlinmania.spring.boot.build.architecture.annotations.TestConfigurationPropertiesBinding;
 import org.springframework.context.annotation.Bean;
 
 public class BindingMethodNonStatic {

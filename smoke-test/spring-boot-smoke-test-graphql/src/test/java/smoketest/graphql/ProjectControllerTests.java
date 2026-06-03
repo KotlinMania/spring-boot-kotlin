@@ -19,7 +19,7 @@ package smoketest.graphql;
 import org.junit.jupiter.api.Test;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.graphql.test.autoconfigure.GraphQlTest;
+import io.github.kotlinmania.spring.boot.graphql.test.autoconfigure.GraphQlTest;
 import org.springframework.graphql.test.tester.GraphQlTester;
 
 @GraphQlTest(ProjectController.class)

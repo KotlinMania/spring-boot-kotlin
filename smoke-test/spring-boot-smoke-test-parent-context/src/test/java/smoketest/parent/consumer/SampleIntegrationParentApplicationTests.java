@@ -29,7 +29,7 @@ import org.junit.jupiter.api.io.TempDir;
 import smoketest.parent.SampleParentContextApplication;
 import smoketest.parent.producer.ProducerApplication;
 
-import org.springframework.boot.SpringApplication;
+import io.github.kotlinmania.spring.boot.SpringApplication;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.core.io.DefaultResourceLoader;
 import org.springframework.core.io.Resource;

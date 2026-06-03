@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.servlet.actuate.web.exchanges;
+package io.github.kotlinmania.spring.boot.servlet.actuate.web.exchanges;
 
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
@@ -23,7 +23,7 @@ import java.util.Map;
 
 import jakarta.servlet.http.HttpServletResponse;
 
-import org.springframework.boot.actuate.web.exchanges.RecordableHttpResponse;
+import io.github.kotlinmania.spring.boot.actuate.web.exchanges.RecordableHttpResponse;
 
 /**
  * An adapter that exposes an {@link HttpServletResponse} as a

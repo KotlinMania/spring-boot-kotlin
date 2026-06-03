@@ -17,9 +17,9 @@
 /**
  * Support for jOOQ.
  *
- * @see org.springframework.boot.json.JsonParser
+ * @see io.github.kotlinmania.spring.boot.json.JsonParser
  */
 @NullMarked
-package org.springframework.boot.jooq;
+package io.github.kotlinmania.spring.boot.jooq;
 
 import org.jspecify.annotations.NullMarked;

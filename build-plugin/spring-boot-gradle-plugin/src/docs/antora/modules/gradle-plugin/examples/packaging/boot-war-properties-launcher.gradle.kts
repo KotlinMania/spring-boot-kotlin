@@ -1,8 +1,8 @@
-import org.springframework.boot.gradle.tasks.bundling.BootWar
+import io.github.kotlinmania.spring.boot.gradle.tasks.bundling.BootWar
 
 plugins {
 	war
-	id("org.springframework.boot") version "{version-spring-boot}"
+	id("io.github.kotlinmania.spring.boot.) version "{version-spring-boot}"
 }
 
 tasks.named<BootWar>("bootWar") {
@@ -12,7 +12,7 @@ tasks.named<BootWar>("bootWar") {
 // tag::properties-launcher[]
 tasks.named<BootWar>("bootWar") {
 	manifest {
-		attributes("Main-Class" to "org.springframework.boot.loader.launch.PropertiesLauncher")
+		attributes("Main-Class" to "io.github.kotlinmania.spring.boot.loader.launch.PropertiesLauncher")
 	}
 }
 // end::properties-launcher[]

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.build.properties;
+package io.github.kotlinmania.spring.boot.build.properties;
 
 import java.util.Locale;
 

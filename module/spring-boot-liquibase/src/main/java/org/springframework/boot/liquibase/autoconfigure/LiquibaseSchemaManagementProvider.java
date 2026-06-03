@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.liquibase.autoconfigure;
+package io.github.kotlinmania.spring.boot.liquibase.autoconfigure;
 
 import java.util.stream.StreamSupport;
 
@@ -23,8 +23,8 @@ import javax.sql.DataSource;
 import liquibase.integration.spring.SpringLiquibase;
 
 import org.springframework.beans.factory.ObjectProvider;
-import org.springframework.boot.jdbc.SchemaManagement;
-import org.springframework.boot.jdbc.SchemaManagementProvider;
+import io.github.kotlinmania.spring.boot.jdbc.SchemaManagement;
+import io.github.kotlinmania.spring.boot.jdbc.SchemaManagementProvider;
 
 /**
  * A Liquibase {@link SchemaManagementProvider} that determines if the schema is managed

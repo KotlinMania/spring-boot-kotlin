@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.actuator.metrics.supported.mongodb.command
+package io.github.kotlinmania.spring.boot.docs.actuator.metrics.supported.mongodb.command
 
 import com.mongodb.event.CommandEvent
 import io.micrometer.core.instrument.Tag

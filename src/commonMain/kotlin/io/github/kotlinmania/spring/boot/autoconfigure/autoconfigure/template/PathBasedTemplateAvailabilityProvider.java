@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.autoconfigure.template;
+package io.github.kotlinmania.spring.boot.autoconfigure.template;
 
 import java.util.List;
 
-import org.springframework.boot.context.properties.bind.Binder;
+import io.github.kotlinmania.spring.boot.context.properties.bind.Binder;
 import org.springframework.core.env.Environment;
 import org.springframework.core.io.ResourceLoader;
 import org.springframework.util.ClassUtils;

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.configurationprocessor;
+package io.github.kotlinmania.spring.boot.configurationprocessor;
 
 import java.util.LinkedHashSet;
 import java.util.List;
@@ -22,9 +22,9 @@ import java.util.Set;
 import java.util.function.Consumer;
 import java.util.function.Predicate;
 
-import org.springframework.boot.configurationprocessor.metadata.ConfigurationMetadata;
-import org.springframework.boot.configurationprocessor.metadata.ItemHint;
-import org.springframework.boot.configurationprocessor.metadata.ItemMetadata;
+import io.github.kotlinmania.spring.boot.configurationprocessor.metadata.ConfigurationMetadata;
+import io.github.kotlinmania.spring.boot.configurationprocessor.metadata.ItemHint;
+import io.github.kotlinmania.spring.boot.configurationprocessor.metadata.ItemMetadata;
 
 /**
  * Used by {@link ConfigurationMetadataAnnotationProcessor} to collect

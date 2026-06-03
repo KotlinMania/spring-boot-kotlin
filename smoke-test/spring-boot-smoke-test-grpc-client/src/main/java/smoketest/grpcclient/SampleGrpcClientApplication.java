@@ -20,9 +20,9 @@ import smoketest.grpcclient.proto.HelloReply;
 import smoketest.grpcclient.proto.HelloRequest;
 import smoketest.grpcclient.proto.HelloWorldGrpc.HelloWorldBlockingStub;
 
-import org.springframework.boot.ApplicationRunner;
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
+import io.github.kotlinmania.spring.boot.ApplicationRunner;
+import io.github.kotlinmania.spring.boot.SpringApplication;
+import io.github.kotlinmania.spring.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 import org.springframework.grpc.client.ImportGrpcClients;
 

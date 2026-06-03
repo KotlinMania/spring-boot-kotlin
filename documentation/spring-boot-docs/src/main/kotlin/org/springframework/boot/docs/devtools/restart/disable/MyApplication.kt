@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.devtools.restart.disable
+package io.github.kotlinmania.spring.boot.docs.devtools.restart.disable
 
-import org.springframework.boot.autoconfigure.SpringBootApplication
-import org.springframework.boot.docs.using.structuringyourcode.locatingthemainclass.MyApplication
-import org.springframework.boot.runApplication
+import io.github.kotlinmania.spring.boot.autoconfigure.SpringBootApplication
+import io.github.kotlinmania.spring.boot.docs.using.structuringyourcode.locatingthemainclass.MyApplication
+import io.github.kotlinmania.spring.boot.runApplication
 
 @SpringBootApplication
 class MyApplication

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.jdbc.autoconfigure.health;
+package io.github.kotlinmania.spring.boot.jdbc.autoconfigure.health;
 
 import java.sql.SQLException;
 import java.util.Collection;
@@ -32,21 +32,21 @@ import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.ObjectProvider;
 import org.springframework.beans.factory.config.ConfigurableListableBeanFactory;
 import org.springframework.beans.factory.support.SimpleAutowireCandidateResolver;
-import org.springframework.boot.autoconfigure.AutoConfiguration;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
-import org.springframework.boot.context.properties.EnableConfigurationProperties;
-import org.springframework.boot.health.autoconfigure.contributor.ConditionalOnEnabledHealthIndicator;
-import org.springframework.boot.health.contributor.CompositeHealthContributor;
-import org.springframework.boot.health.contributor.HealthContributor;
-import org.springframework.boot.health.contributor.HealthContributors;
-import org.springframework.boot.jdbc.autoconfigure.DataSourceAutoConfiguration;
-import org.springframework.boot.jdbc.health.DataSourceHealthIndicator;
-import org.springframework.boot.jdbc.metadata.CompositeDataSourcePoolMetadataProvider;
-import org.springframework.boot.jdbc.metadata.DataSourcePoolMetadata;
-import org.springframework.boot.jdbc.metadata.DataSourcePoolMetadataProvider;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.EnableAutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnBean;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnClass;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnMissingBean;
+import io.github.kotlinmania.spring.boot.context.properties.EnableConfigurationProperties;
+import io.github.kotlinmania.spring.boot.health.autoconfigure.contributor.ConditionalOnEnabledHealthIndicator;
+import io.github.kotlinmania.spring.boot.health.contributor.CompositeHealthContributor;
+import io.github.kotlinmania.spring.boot.health.contributor.HealthContributor;
+import io.github.kotlinmania.spring.boot.health.contributor.HealthContributors;
+import io.github.kotlinmania.spring.boot.jdbc.autoconfigure.DataSourceAutoConfiguration;
+import io.github.kotlinmania.spring.boot.jdbc.health.DataSourceHealthIndicator;
+import io.github.kotlinmania.spring.boot.jdbc.metadata.CompositeDataSourcePoolMetadataProvider;
+import io.github.kotlinmania.spring.boot.jdbc.metadata.DataSourcePoolMetadata;
+import io.github.kotlinmania.spring.boot.jdbc.metadata.DataSourcePoolMetadataProvider;
 import org.springframework.context.annotation.Bean;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.datasource.lookup.AbstractRoutingDataSource;

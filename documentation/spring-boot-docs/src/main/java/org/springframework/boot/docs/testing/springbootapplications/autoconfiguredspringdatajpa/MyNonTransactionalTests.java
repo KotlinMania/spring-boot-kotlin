@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.testing.springbootapplications.autoconfiguredspringdatajpa;
+package io.github.kotlinmania.spring.boot.docs.testing.springbootapplications.autoconfiguredspringdatajpa;
 
-import org.springframework.boot.data.jpa.test.autoconfigure.DataJpaTest;
+import io.github.kotlinmania.spring.boot.data.jpa.test.autoconfigure.DataJpaTest;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 

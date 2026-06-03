@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.autoconfigure.condition;
+package io.github.kotlinmania.spring.boot.autoconfigure.condition;
 
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Method;
@@ -46,9 +46,9 @@ import org.springframework.beans.factory.config.BeanDefinition;
 import org.springframework.beans.factory.config.ConfigurableListableBeanFactory;
 import org.springframework.beans.factory.config.SingletonBeanRegistry;
 import org.springframework.beans.factory.support.AbstractBeanDefinition;
-import org.springframework.boot.autoconfigure.AutoConfigurationMetadata;
-import org.springframework.boot.autoconfigure.condition.ConditionMessage.Builder;
-import org.springframework.boot.autoconfigure.condition.ConditionMessage.Style;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurationMetadata;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionMessage.Builder;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionMessage.Style;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Condition;
 import org.springframework.context.annotation.ConditionContext;

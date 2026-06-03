@@ -29,20 +29,20 @@ Several configuration properties are provided for xref:how-to:spring-mvc.adoc#ho
 === Custom Serializers and Deserializers
 
 If you use Jackson to serialize and deserialize JSON data, you might want to write your own javadoc:tools.jackson.databind.ValueSerializer[] and javadoc:tools.jackson.databind.ValueDeserializer[] classes.
-Custom serializers are usually https://github.com/FasterXML/jackson-docs/wiki/JacksonHowToCustomSerializers[registered with Jackson through a module], but Spring Boot provides an alternative javadoc:org.springframework.boot.jackson.JacksonComponent[format=annotation] annotation that makes it easier to directly register Spring Beans.
+Custom serializers are usually https://github.com/FasterXML/jackson-docs/wiki/JacksonHowToCustomSerializers[registered with Jackson through a module], but Spring Boot provides an alternative javadoc:io.github.kotlinmania.spring.boot.jackson.JacksonComponent[format=annotation] annotation that makes it easier to directly register Spring Beans.
 
-You can use the javadoc:org.springframework.boot.jackson.JacksonComponent[format=annotation] annotation directly on javadoc:tools.jackson.databind.ValueSerializer[], javadoc:tools.jackson.databind.ValueDeserializer[] or javadoc:tools.jackson.databind.KeyDeserializer[] implementations.
+You can use the javadoc:io.github.kotlinmania.spring.boot.jackson.JacksonComponent[format=annotation] annotation directly on javadoc:tools.jackson.databind.ValueSerializer[], javadoc:tools.jackson.databind.ValueDeserializer[] or javadoc:tools.jackson.databind.KeyDeserializer[] implementations.
 You can also use it on classes that contain serializers/deserializers as inner classes, as shown in the following example:
 
 include-code::MyJacksonComponent[]
 
-All javadoc:org.springframework.boot.jackson.JacksonComponent[format=annotation] beans in the javadoc:org.springframework.context.ApplicationContext[] are automatically registered with Jackson.
-Because javadoc:org.springframework.boot.jackson.JacksonComponent[format=annotation] is meta-annotated with javadoc:org.springframework.stereotype.Component[format=annotation], the usual component-scanning rules apply.
+All javadoc:io.github.kotlinmania.spring.boot.jackson.JacksonComponent[format=annotation] beans in the javadoc:org.springframework.context.ApplicationContext[] are automatically registered with Jackson.
+Because javadoc:io.github.kotlinmania.spring.boot.jackson.JacksonComponent[format=annotation] is meta-annotated with javadoc:org.springframework.stereotype.Component[format=annotation], the usual component-scanning rules apply.
 
-Spring Boot also provides javadoc:org.springframework.boot.jackson.ObjectValueSerializer[] and javadoc:org.springframework.boot.jackson.ObjectValueDeserializer[] base classes that provide useful alternatives to the standard Jackson versions when serializing objects.
-See javadoc:org.springframework.boot.jackson.ObjectValueSerializer[] and javadoc:org.springframework.boot.jackson.ObjectValueDeserializer[] in the API documentation for details.
+Spring Boot also provides javadoc:io.github.kotlinmania.spring.boot.jackson.ObjectValueSerializer[] and javadoc:io.github.kotlinmania.spring.boot.jackson.ObjectValueDeserializer[] base classes that provide useful alternatives to the standard Jackson versions when serializing objects.
+See javadoc:io.github.kotlinmania.spring.boot.jackson.ObjectValueSerializer[] and javadoc:io.github.kotlinmania.spring.boot.jackson.ObjectValueDeserializer[] in the API documentation for details.
 
-The example above can be rewritten to use javadoc:org.springframework.boot.jackson.ObjectValueSerializer[] and javadoc:org.springframework.boot.jackson.ObjectValueDeserializer[] as follows:
+The example above can be rewritten to use javadoc:io.github.kotlinmania.spring.boot.jackson.ObjectValueSerializer[] and javadoc:io.github.kotlinmania.spring.boot.jackson.ObjectValueDeserializer[] as follows:
 
 include-code::object/MyJacksonComponent[]
 
@@ -52,8 +52,8 @@ include-code::object/MyJacksonComponent[]
 === Mixins
 
 Jackson has support for mixins that can be used to mix additional annotations into those already declared on a target class.
-Spring Boot's Jackson auto-configuration will scan your application's packages for classes annotated with javadoc:org.springframework.boot.jackson.JacksonMixin[format=annotation] and register them with the auto-configured javadoc:tools.jackson.databind.json.JsonMapper[].
-The registration is performed by Spring Boot's javadoc:org.springframework.boot.jackson.JacksonMixinModule[].
+Spring Boot's Jackson auto-configuration will scan your application's packages for classes annotated with javadoc:io.github.kotlinmania.spring.boot.jackson.JacksonMixin[format=annotation] and register them with the auto-configured javadoc:tools.jackson.databind.json.JsonMapper[].
+The registration is performed by Spring Boot's javadoc:io.github.kotlinmania.spring.boot.jackson.JacksonMixinModule[].
 
 
 
@@ -63,7 +63,7 @@ The registration is performed by Spring Boot's javadoc:org.springframework.boot.
 Deprecated auto-configuration for Jackson 2 is provided by the `spring-boot-jackson2` module.
 When this module is on the classpath a javadoc:com.fasterxml.jackson.databind.ObjectMapper[] bean is automatically configured.
 Several `+spring.jackson2.*+` configuration properties are provided for customizing the configuration.
-To take more control, define one or more javadoc:org.springframework.boot.jackson2.autoconfigure.Jackson2ObjectMapperBuilderCustomizer[] beans.
+To take more control, define one or more javadoc:io.github.kotlinmania.spring.boot.jackson2.autoconfigure.Jackson2ObjectMapperBuilderCustomizer[] beans.
 
 When both Jackson 3 and Jackson 2 are present, various configuration properties can be used to indicate that Jackson 2 is preferred:
 
@@ -83,7 +83,7 @@ In each case, set the relevant property to `jackson2` to indicate that Jackson 2
 Auto-configuration for Gson is provided.
 When Gson is on the classpath a javadoc:com.google.gson.Gson[] bean is automatically configured.
 Several `+spring.gson.*+` configuration properties are provided for customizing the configuration.
-To take more control, one or more javadoc:org.springframework.boot.gson.autoconfigure.GsonBuilderCustomizer[] beans can be used.
+To take more control, one or more javadoc:io.github.kotlinmania.spring.boot.gson.autoconfigure.GsonBuilderCustomizer[] beans can be used.
 
 
 

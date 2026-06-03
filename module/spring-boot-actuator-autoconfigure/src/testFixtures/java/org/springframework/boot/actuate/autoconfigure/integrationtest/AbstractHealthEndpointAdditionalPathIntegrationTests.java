@@ -14,15 +14,15 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.actuate.autoconfigure.integrationtest;
+package io.github.kotlinmania.spring.boot.actuate.autoconfigure.integrationtest;
 
 import java.util.function.Consumer;
 
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.test.context.assertj.ApplicationContextAssertProvider;
-import org.springframework.boot.test.context.runner.AbstractApplicationContextRunner;
-import org.springframework.boot.test.context.runner.ContextConsumer;
+import io.github.kotlinmania.spring.boot.test.context.assertj.ApplicationContextAssertProvider;
+import io.github.kotlinmania.spring.boot.test.context.runner.AbstractApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.test.context.runner.ContextConsumer;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.reactive.server.WebTestClient;

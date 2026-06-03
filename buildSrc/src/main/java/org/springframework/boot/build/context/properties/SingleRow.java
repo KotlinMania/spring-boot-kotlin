@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.build.context.properties;
+package io.github.kotlinmania.spring.boot.build.context.properties;
 
 import java.util.Arrays;
 import java.util.stream.Collectors;
 
-import org.springframework.boot.build.context.properties.ConfigurationProperty.Deprecation;
+import io.github.kotlinmania.spring.boot.build.context.properties.ConfigurationProperty.Deprecation;
 
 /**
  * Table row containing a single configuration property.

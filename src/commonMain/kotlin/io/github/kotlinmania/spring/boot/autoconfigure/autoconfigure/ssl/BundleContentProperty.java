@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.autoconfigure.ssl;
+package io.github.kotlinmania.spring.boot.autoconfigure.ssl;
 
 import java.nio.file.Path;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.ssl.pem.PemContent;
+import io.github.kotlinmania.spring.boot.ssl.pem.PemContent;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.ResourceLoader;
 import org.springframework.util.Assert;

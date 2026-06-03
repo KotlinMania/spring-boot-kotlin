@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.elasticsearch.docker.compose;
+package io.github.kotlinmania.spring.boot.elasticsearch.docker.compose;
 
 import java.util.Collections;
 import java.util.Map;

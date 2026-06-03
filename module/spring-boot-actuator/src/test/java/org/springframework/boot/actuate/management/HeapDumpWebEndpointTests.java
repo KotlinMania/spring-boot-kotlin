@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.actuate.management;
+package io.github.kotlinmania.spring.boot.actuate.management;
 
 import java.nio.file.Files;
 import java.util.concurrent.CountDownLatch;

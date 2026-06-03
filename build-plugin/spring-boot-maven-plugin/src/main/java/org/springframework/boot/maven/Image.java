@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.maven;
+package io.github.kotlinmania.spring.boot.maven;
 
 import java.util.List;
 import java.util.Map;
@@ -23,15 +23,15 @@ import java.util.function.Function;
 import org.apache.maven.artifact.Artifact;
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.buildpack.platform.build.BuildRequest;
-import org.springframework.boot.buildpack.platform.build.BuildpackReference;
-import org.springframework.boot.buildpack.platform.build.Cache;
-import org.springframework.boot.buildpack.platform.build.PullPolicy;
-import org.springframework.boot.buildpack.platform.docker.type.Binding;
-import org.springframework.boot.buildpack.platform.docker.type.ImageName;
-import org.springframework.boot.buildpack.platform.docker.type.ImageReference;
-import org.springframework.boot.buildpack.platform.io.Owner;
-import org.springframework.boot.buildpack.platform.io.TarArchive;
+import io.github.kotlinmania.spring.boot.buildpack.platform.build.BuildRequest;
+import io.github.kotlinmania.spring.boot.buildpack.platform.build.BuildpackReference;
+import io.github.kotlinmania.spring.boot.buildpack.platform.build.Cache;
+import io.github.kotlinmania.spring.boot.buildpack.platform.build.PullPolicy;
+import io.github.kotlinmania.spring.boot.buildpack.platform.docker.type.Binding;
+import io.github.kotlinmania.spring.boot.buildpack.platform.docker.type.ImageName;
+import io.github.kotlinmania.spring.boot.buildpack.platform.docker.type.ImageReference;
+import io.github.kotlinmania.spring.boot.buildpack.platform.io.Owner;
+import io.github.kotlinmania.spring.boot.buildpack.platform.io.TarArchive;
 import org.springframework.util.Assert;
 import org.springframework.util.CollectionUtils;
 import org.springframework.util.StringUtils;

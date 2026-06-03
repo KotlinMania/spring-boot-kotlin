@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.logging.structured;
+package io.github.kotlinmania.spring.boot.logging.structured;
 
 import java.util.Map;
 
-import org.springframework.boot.json.JsonWriter.MemberPath;
-import org.springframework.boot.json.JsonWriter.Members;
-import org.springframework.boot.util.Instantiator;
+import io.github.kotlinmania.spring.boot.json.JsonWriter.MemberPath;
+import io.github.kotlinmania.spring.boot.json.JsonWriter.Members;
+import io.github.kotlinmania.spring.boot.util.Instantiator;
 import org.springframework.util.CollectionUtils;
 
 /**

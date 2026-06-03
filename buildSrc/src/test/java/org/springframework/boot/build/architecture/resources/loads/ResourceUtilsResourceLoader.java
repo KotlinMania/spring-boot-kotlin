@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.build.architecture.resources.loads;
+package io.github.kotlinmania.spring.boot.build.architecture.resources.loads;
 
 import java.io.FileNotFoundException;
 

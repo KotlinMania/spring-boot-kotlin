@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.build.bom.bomr;
+package io.github.kotlinmania.spring.boot.build.bom.bomr;
 
 import java.time.OffsetDateTime;
 import java.util.List;
@@ -29,13 +29,13 @@ import org.gradle.api.tasks.TaskAction;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import org.springframework.boot.build.bom.BomExtension;
-import org.springframework.boot.build.bom.Library;
-import org.springframework.boot.build.bom.bomr.ReleaseSchedule.Release;
-import org.springframework.boot.build.bom.bomr.github.Milestone;
-import org.springframework.boot.build.bom.bomr.version.DependencyVersion;
-import org.springframework.boot.build.properties.BuildProperties;
-import org.springframework.boot.build.properties.BuildType;
+import io.github.kotlinmania.spring.boot.build.bom.BomExtension;
+import io.github.kotlinmania.spring.boot.build.bom.Library;
+import io.github.kotlinmania.spring.boot.build.bom.bomr.ReleaseSchedule.Release;
+import io.github.kotlinmania.spring.boot.build.bom.bomr.github.Milestone;
+import io.github.kotlinmania.spring.boot.build.bom.bomr.version.DependencyVersion;
+import io.github.kotlinmania.spring.boot.build.properties.BuildProperties;
+import io.github.kotlinmania.spring.boot.build.properties.BuildType;
 
 /**
  * A {@link Task} to move to snapshot dependencies.

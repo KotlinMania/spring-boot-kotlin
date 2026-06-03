@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.jdbc.docker.compose;
+package io.github.kotlinmania.spring.boot.jdbc.docker.compose;
 
-import org.springframework.boot.docker.compose.service.connection.DockerComposeConnectionDetailsFactory;
-import org.springframework.boot.jdbc.autoconfigure.JdbcConnectionDetails;
+import io.github.kotlinmania.spring.boot.docker.compose.service.connection.DockerComposeConnectionDetailsFactory;
+import io.github.kotlinmania.spring.boot.jdbc.autoconfigure.JdbcConnectionDetails;
 
 /**
  * {@link DockerComposeConnectionDetailsFactory} to create {@link JdbcConnectionDetails}

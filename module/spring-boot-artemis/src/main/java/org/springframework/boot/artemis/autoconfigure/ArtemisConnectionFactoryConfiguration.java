@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.artemis.autoconfigure;
+package io.github.kotlinmania.spring.boot.artemis.autoconfigure;
 
 import jakarta.jms.ConnectionFactory;
 import org.apache.activemq.artemis.jms.client.ActiveMQConnectionFactory;
@@ -22,11 +22,11 @@ import org.apache.commons.pool2.PooledObject;
 import org.messaginghub.pooled.jms.JmsPoolConnectionFactory;
 
 import org.springframework.beans.factory.ListableBeanFactory;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnBooleanProperty;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
-import org.springframework.boot.jms.autoconfigure.JmsPoolConnectionFactoryFactory;
-import org.springframework.boot.jms.autoconfigure.JmsProperties;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnBooleanProperty;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnClass;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnMissingBean;
+import io.github.kotlinmania.spring.boot.jms.autoconfigure.JmsPoolConnectionFactoryFactory;
+import io.github.kotlinmania.spring.boot.jms.autoconfigure.JmsProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.jms.connection.CachingConnectionFactory;

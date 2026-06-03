@@ -18,7 +18,7 @@ package smoketest.bootstrapregistry.external.svn;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.context.config.ConfigDataResource;
+import io.github.kotlinmania.spring.boot.context.config.ConfigDataResource;
 
 /**
  * A subversion {@link ConfigDataResource}.

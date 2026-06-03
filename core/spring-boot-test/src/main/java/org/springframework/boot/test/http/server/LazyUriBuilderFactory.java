@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.test.http.server;
+package io.github.kotlinmania.spring.boot.test.http.server;
 
 import java.net.URI;
 import java.util.Map;

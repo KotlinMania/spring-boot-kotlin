@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.webmvc;
+package io.github.kotlinmania.spring.boot.webmvc;
 
 import org.jspecify.annotations.Nullable;
 
 import org.springframework.aot.hint.RuntimeHints;
 import org.springframework.aot.hint.RuntimeHintsRegistrar;
 import org.springframework.aot.hint.TypeReference;
-import org.springframework.boot.WebApplicationType;
+import io.github.kotlinmania.spring.boot.WebApplicationType;
 import org.springframework.core.annotation.Order;
 import org.springframework.util.ClassUtils;
 

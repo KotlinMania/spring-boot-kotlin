@@ -18,6 +18,6 @@
  * Classes for running a nested shell in the CLI.
  */
 @NullMarked
-package org.springframework.boot.cli.command.shell;
+package io.github.kotlinmania.spring.boot.cli.command.shell;
 
 import org.jspecify.annotations.NullMarked;

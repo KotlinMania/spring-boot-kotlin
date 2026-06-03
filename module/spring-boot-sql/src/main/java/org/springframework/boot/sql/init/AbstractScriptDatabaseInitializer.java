@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.sql.init;
+package io.github.kotlinmania.spring.boot.sql.init;
 
 import java.io.IOException;
 import java.nio.charset.Charset;

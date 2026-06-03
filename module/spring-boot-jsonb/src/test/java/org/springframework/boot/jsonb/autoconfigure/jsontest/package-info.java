@@ -15,6 +15,6 @@
  */
 
 @NullMarked
-package org.springframework.boot.jsonb.autoconfigure.jsontest;
+package io.github.kotlinmania.spring.boot.jsonb.autoconfigure.jsontest;
 
 import org.jspecify.annotations.NullMarked;

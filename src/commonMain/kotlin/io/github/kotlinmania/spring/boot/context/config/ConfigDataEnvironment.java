@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.context.config;
+package io.github.kotlinmania.spring.boot.context.config;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -26,17 +26,17 @@ import java.util.Set;
 import org.apache.commons.logging.Log;
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.bootstrap.BootstrapRegistry.InstanceSupplier;
-import org.springframework.boot.bootstrap.BootstrapRegistry.Scope;
-import org.springframework.boot.bootstrap.ConfigurableBootstrapContext;
-import org.springframework.boot.context.config.ConfigDataEnvironmentContributors.BinderOption;
-import org.springframework.boot.context.properties.bind.BindException;
-import org.springframework.boot.context.properties.bind.Bindable;
-import org.springframework.boot.context.properties.bind.Binder;
-import org.springframework.boot.context.properties.bind.PlaceholdersResolver;
-import org.springframework.boot.context.properties.source.ConfigurationPropertySource;
-import org.springframework.boot.env.DefaultPropertiesPropertySource;
-import org.springframework.boot.logging.DeferredLogFactory;
+import io.github.kotlinmania.spring.boot.bootstrap.BootstrapRegistry.InstanceSupplier;
+import io.github.kotlinmania.spring.boot.bootstrap.BootstrapRegistry.Scope;
+import io.github.kotlinmania.spring.boot.bootstrap.ConfigurableBootstrapContext;
+import io.github.kotlinmania.spring.boot.context.config.ConfigDataEnvironmentContributors.BinderOption;
+import io.github.kotlinmania.spring.boot.context.properties.bind.BindException;
+import io.github.kotlinmania.spring.boot.context.properties.bind.Bindable;
+import io.github.kotlinmania.spring.boot.context.properties.bind.Binder;
+import io.github.kotlinmania.spring.boot.context.properties.bind.PlaceholdersResolver;
+import io.github.kotlinmania.spring.boot.context.properties.source.ConfigurationPropertySource;
+import io.github.kotlinmania.spring.boot.env.DefaultPropertiesPropertySource;
+import io.github.kotlinmania.spring.boot.logging.DeferredLogFactory;
 import org.springframework.core.env.ConfigurableEnvironment;
 import org.springframework.core.env.Environment;
 import org.springframework.core.env.MutablePropertySources;

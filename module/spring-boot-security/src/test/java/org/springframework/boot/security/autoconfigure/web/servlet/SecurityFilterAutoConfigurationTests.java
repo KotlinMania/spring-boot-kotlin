@@ -14,24 +14,24 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.security.autoconfigure.web.servlet;
+package io.github.kotlinmania.spring.boot.security.autoconfigure.web.servlet;
 
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.autoconfigure.ImportAutoConfiguration;
-import org.springframework.boot.autoconfigure.context.PropertyPlaceholderAutoConfiguration;
-import org.springframework.boot.http.converter.autoconfigure.HttpMessageConvertersAutoConfiguration;
-import org.springframework.boot.jackson.autoconfigure.JacksonAutoConfiguration;
-import org.springframework.boot.security.autoconfigure.SecurityAutoConfiguration;
-import org.springframework.boot.security.autoconfigure.web.servlet.SecurityFilterAutoConfigurationEarlyInitializationTests.ConverterBean;
-import org.springframework.boot.security.autoconfigure.web.servlet.SecurityFilterAutoConfigurationEarlyInitializationTests.DeserializerBean;
-import org.springframework.boot.security.autoconfigure.web.servlet.SecurityFilterAutoConfigurationEarlyInitializationTests.ExampleController;
-import org.springframework.boot.security.autoconfigure.web.servlet.SecurityFilterAutoConfigurationEarlyInitializationTests.JacksonModuleBean;
-import org.springframework.boot.servlet.filter.OrderedRequestContextFilter;
-import org.springframework.boot.web.context.servlet.AnnotationConfigServletWebApplicationContext;
-import org.springframework.boot.web.servlet.DelegatingFilterProxyRegistrationBean;
-import org.springframework.boot.webmvc.autoconfigure.DispatcherServletAutoConfiguration;
-import org.springframework.boot.webmvc.autoconfigure.WebMvcAutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.ImportAutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.context.PropertyPlaceholderAutoConfiguration;
+import io.github.kotlinmania.spring.boot.http.converter.autoconfigure.HttpMessageConvertersAutoConfiguration;
+import io.github.kotlinmania.spring.boot.jackson.autoconfigure.JacksonAutoConfiguration;
+import io.github.kotlinmania.spring.boot.security.autoconfigure.SecurityAutoConfiguration;
+import io.github.kotlinmania.spring.boot.security.autoconfigure.web.servlet.SecurityFilterAutoConfigurationEarlyInitializationTests.ConverterBean;
+import io.github.kotlinmania.spring.boot.security.autoconfigure.web.servlet.SecurityFilterAutoConfigurationEarlyInitializationTests.DeserializerBean;
+import io.github.kotlinmania.spring.boot.security.autoconfigure.web.servlet.SecurityFilterAutoConfigurationEarlyInitializationTests.ExampleController;
+import io.github.kotlinmania.spring.boot.security.autoconfigure.web.servlet.SecurityFilterAutoConfigurationEarlyInitializationTests.JacksonModuleBean;
+import io.github.kotlinmania.spring.boot.servlet.filter.OrderedRequestContextFilter;
+import io.github.kotlinmania.spring.boot.web.context.servlet.AnnotationConfigServletWebApplicationContext;
+import io.github.kotlinmania.spring.boot.web.servlet.DelegatingFilterProxyRegistrationBean;
+import io.github.kotlinmania.spring.boot.webmvc.autoconfigure.DispatcherServletAutoConfiguration;
+import io.github.kotlinmania.spring.boot.webmvc.autoconfigure.WebMvcAutoConfiguration;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
 import org.springframework.mock.web.MockServletContext;

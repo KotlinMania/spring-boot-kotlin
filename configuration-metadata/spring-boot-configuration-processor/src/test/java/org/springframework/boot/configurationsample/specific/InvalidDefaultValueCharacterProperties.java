@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.configurationsample.specific;
+package io.github.kotlinmania.spring.boot.configurationsample.specific;
 
-import org.springframework.boot.configurationsample.TestConfigurationProperties;
-import org.springframework.boot.configurationsample.TestConstructorBinding;
-import org.springframework.boot.configurationsample.TestDefaultValue;
+import io.github.kotlinmania.spring.boot.configurationsample.TestConfigurationProperties;
+import io.github.kotlinmania.spring.boot.configurationsample.TestConstructorBinding;
+import io.github.kotlinmania.spring.boot.configurationsample.TestDefaultValue;
 
 /**
  * Demonstrates that an invalid default character value leads to a compilation failure.

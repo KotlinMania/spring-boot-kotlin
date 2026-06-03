@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.maven;
+package io.github.kotlinmania.spring.boot.maven;
 
 import java.io.File;
 import java.net.URL;
@@ -64,7 +64,7 @@ public class ProcessTestAotMojo extends AbstractAotMojo {
 
 	private static final String JUNIT_PLATFORM_LAUNCHER_ARTIFACT_ID = "junit-platform-launcher";
 
-	private static final String AOT_PROCESSOR_CLASS_NAME = "org.springframework.boot.test.context.SpringBootTestAotProcessor";
+	private static final String AOT_PROCESSOR_CLASS_NAME = "io.github.kotlinmania.spring.boot.test.context.SpringBootTestAotProcessor";
 
 	/**
 	 * Directory containing the classes and resource files that should be packaged into

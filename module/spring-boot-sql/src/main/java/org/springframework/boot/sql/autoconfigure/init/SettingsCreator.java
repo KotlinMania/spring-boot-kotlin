@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.sql.autoconfigure.init;
+package io.github.kotlinmania.spring.boot.sql.autoconfigure.init;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.sql.init.DatabaseInitializationSettings;
+import io.github.kotlinmania.spring.boot.sql.init.DatabaseInitializationSettings;
 
 /**
  * Helpers class for creating {@link DatabaseInitializationSettings} from

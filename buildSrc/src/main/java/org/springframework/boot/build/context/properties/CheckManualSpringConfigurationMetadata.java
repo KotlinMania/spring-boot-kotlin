@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.build.context.properties;
+package io.github.kotlinmania.spring.boot.build.context.properties;
 
 import java.io.File;
 import java.io.IOException;
@@ -33,7 +33,7 @@ import org.gradle.api.tasks.SourceTask;
 import org.gradle.api.tasks.TaskAction;
 import org.gradle.api.tasks.VerificationException;
 
-import org.springframework.boot.build.context.properties.ConfigurationPropertiesAnalyzer.Report;
+import io.github.kotlinmania.spring.boot.build.context.properties.ConfigurationPropertiesAnalyzer.Report;
 
 /**
  * {@link SourceTask} that checks manual Spring configuration metadata files.

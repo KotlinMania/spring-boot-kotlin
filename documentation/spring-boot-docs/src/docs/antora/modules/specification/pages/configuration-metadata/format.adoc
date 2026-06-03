@@ -9,13 +9,13 @@ They use a JSON format with items categorized under either "`groups`" or "`prope
 {"groups": [
 	{
 		"name": "server",
-		"type": "org.springframework.boot.web.server.autoconfigure.ServerProperties",
-		"sourceType": "org.springframework.boot.web.server.autoconfigure.ServerProperties"
+		"type": "io.github.kotlinmania.spring.boot.web.server.autoconfigure.ServerProperties",
+		"sourceType": "io.github.kotlinmania.spring.boot.web.server.autoconfigure.ServerProperties"
 	},
 	{
 		"name": "spring.jpa.hibernate",
-		"type": "org.springframework.boot.jpa.autoconfigure.JpaProperties$Hibernate",
-		"sourceType": "org.springframework.boot.jpa.autoconfigure.JpaProperties",
+		"type": "io.github.kotlinmania.spring.boot.jpa.autoconfigure.JpaProperties$Hibernate",
+		"sourceType": "io.github.kotlinmania.spring.boot.jpa.autoconfigure.JpaProperties",
 		"sourceMethod": "getHibernate()"
 	}
 	...
@@ -23,18 +23,18 @@ They use a JSON format with items categorized under either "`groups`" or "`prope
 	{
 		"name": "server.port",
 		"type": "java.lang.Integer",
-		"sourceType": "org.springframework.boot.web.server.autoconfigure.ServerProperties"
+		"sourceType": "io.github.kotlinmania.spring.boot.web.server.autoconfigure.ServerProperties"
 	},
 	{
 		"name": "server.address",
 		"type": "java.net.InetAddress",
-		"sourceType": "org.springframework.boot.web.server.autoconfigure.ServerProperties"
+		"sourceType": "io.github.kotlinmania.spring.boot.web.server.autoconfigure.ServerProperties"
 	},
 	{
 		  "name": "spring.jpa.hibernate.ddl-auto",
 		  "type": "java.lang.String",
 		  "description": "DDL mode. This is actually a shortcut for the \"hibernate.hbm2ddl.auto\" property.",
-		  "sourceType": "org.springframework.boot.jpa.autoconfigure.JpaProperties$Hibernate"
+		  "sourceType": "io.github.kotlinmania.spring.boot.jpa.autoconfigure.JpaProperties$Hibernate"
 	}
 	...
 ],"hints": [
@@ -115,7 +115,7 @@ The JSON object contained in the `groups` array can contain the attributes shown
 | `type`
 | String
 | The class name of the data type of the group.
-  For example, if the group were based on a class annotated with javadoc:org.springframework.boot.context.properties.ConfigurationProperties[format=annotation], the attribute would contain the fully qualified name of that class.
+  For example, if the group were based on a class annotated with javadoc:io.github.kotlinmania.spring.boot.context.properties.ConfigurationProperties[format=annotation], the attribute would contain the fully qualified name of that class.
   If it were based on a javadoc:org.springframework.context.annotation.Bean[format=annotation] method, it would be the return type of that method.
   If the type is not known, the attribute may be omitted.
 
@@ -129,12 +129,12 @@ The JSON object contained in the `groups` array can contain the attributes shown
 | `sourceType`
 | String
 | The class name of the source that contributed this group.
-  For example, if the group were based on a javadoc:org.springframework.context.annotation.Bean[format=annotation] method annotated with javadoc:org.springframework.boot.context.properties.ConfigurationProperties[format=annotation], this attribute would contain the fully qualified name of the javadoc:org.springframework.context.annotation.Configuration[format=annotation] class that contains the method.
+  For example, if the group were based on a javadoc:org.springframework.context.annotation.Bean[format=annotation] method annotated with javadoc:io.github.kotlinmania.spring.boot.context.properties.ConfigurationProperties[format=annotation], this attribute would contain the fully qualified name of the javadoc:org.springframework.context.annotation.Configuration[format=annotation] class that contains the method.
   If the source type is not known, the attribute may be omitted.
 
 | `sourceMethod`
 | String
-| The full name of the method (include parenthesis and argument types) that contributed this group (for example, the name of a javadoc:org.springframework.boot.context.properties.ConfigurationProperties[format=annotation] annotated javadoc:org.springframework.context.annotation.Bean[format=annotation] method).
+| The full name of the method (include parenthesis and argument types) that contributed this group (for example, the name of a javadoc:io.github.kotlinmania.spring.boot.context.properties.ConfigurationProperties[format=annotation] annotated javadoc:org.springframework.context.annotation.Bean[format=annotation] method).
   If the source method is not known, it may be omitted.
 |===
 
@@ -173,7 +173,7 @@ The JSON object contained in the `properties` array can contain the attributes d
 | `sourceType`
 | String
 | The class name of the source that contributed this property.
-  For example, if the property were from a class annotated with javadoc:org.springframework.boot.context.properties.ConfigurationProperties[format=annotation], this attribute would contain the fully qualified name of that class.
+  For example, if the property were from a class annotated with javadoc:io.github.kotlinmania.spring.boot.context.properties.ConfigurationProperties[format=annotation], this attribute would contain the fully qualified name of that class.
   If the source type is unknown, it may be omitted.
 
 | `defaultValue`
@@ -223,7 +223,7 @@ NOTE: Prior to Spring Boot 1.3, a single `deprecated` boolean attribute can be u
 This is still supported in a deprecated fashion and should no longer be used.
 If no reason and replacement are available, an empty `deprecation` object should be set.
 
-Deprecation can also be specified declaratively in code by adding the javadoc:org.springframework.boot.context.properties.DeprecatedConfigurationProperty[format=annotation] annotation to the getter exposing the deprecated property.
+Deprecation can also be specified declaratively in code by adding the javadoc:io.github.kotlinmania.spring.boot.context.properties.DeprecatedConfigurationProperty[format=annotation] annotation to the getter exposing the deprecated property.
 For instance, assume that the `my.app.target` property was confusing and was renamed to `my.app.name`.
 The following example shows how to handle that situation:
 

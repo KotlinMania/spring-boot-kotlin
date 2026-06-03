@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.cli.command.shell;
+package io.github.kotlinmania.spring.boot.cli.command.shell;
 
 import jline.console.ConsoleReader;
 
-import org.springframework.boot.cli.command.AbstractCommand;
-import org.springframework.boot.cli.command.status.ExitStatus;
+import io.github.kotlinmania.spring.boot.cli.command.AbstractCommand;
+import io.github.kotlinmania.spring.boot.cli.command.status.ExitStatus;
 
 /**
  * Clear the {@link Shell} screen.

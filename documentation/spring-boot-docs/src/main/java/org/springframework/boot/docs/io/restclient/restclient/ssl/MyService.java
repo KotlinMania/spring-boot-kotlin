@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.io.restclient.restclient.ssl;
+package io.github.kotlinmania.spring.boot.docs.io.restclient.restclient.ssl;
 
-import org.springframework.boot.restclient.autoconfigure.RestClientSsl;
+import io.github.kotlinmania.spring.boot.restclient.autoconfigure.RestClientSsl;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestClient;
 

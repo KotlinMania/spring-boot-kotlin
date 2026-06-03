@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.testcontainers.service.connection;
+package io.github.kotlinmania.spring.boot.testcontainers.service.connection;
 
 import java.util.function.Supplier;
 
 import org.testcontainers.containers.Container;
 
-import org.springframework.boot.origin.Origin;
+import io.github.kotlinmania.spring.boot.origin.Origin;
 import org.springframework.core.annotation.MergedAnnotation;
 
 /**

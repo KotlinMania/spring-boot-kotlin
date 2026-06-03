@@ -18,6 +18,6 @@
  * Shared utility classes.
  */
 @NullMarked
-package org.springframework.boot.gradle.util;
+package io.github.kotlinmania.spring.boot.gradle.util;
 
 import org.jspecify.annotations.NullMarked;

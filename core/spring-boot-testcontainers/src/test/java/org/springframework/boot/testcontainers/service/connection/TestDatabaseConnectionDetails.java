@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.testcontainers.service.connection;
+package io.github.kotlinmania.spring.boot.testcontainers.service.connection;
 
 import org.testcontainers.containers.JdbcDatabaseContainer;
 
-import org.springframework.boot.testcontainers.service.connection.ContainerConnectionDetailsFactory.ContainerConnectionDetails;
+import io.github.kotlinmania.spring.boot.testcontainers.service.connection.ContainerConnectionDetailsFactory.ContainerConnectionDetails;
 
 class TestDatabaseConnectionDetails extends ContainerConnectionDetails<JdbcDatabaseContainer<?>>
 		implements DatabaseConnectionDetails {

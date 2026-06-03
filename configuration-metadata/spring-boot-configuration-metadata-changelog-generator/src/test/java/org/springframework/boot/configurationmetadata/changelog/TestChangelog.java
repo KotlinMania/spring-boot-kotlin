@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.configurationmetadata.changelog;
+package io.github.kotlinmania.spring.boot.configurationmetadata.changelog;
 
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 
-import org.springframework.boot.configurationmetadata.ConfigurationMetadataRepository;
-import org.springframework.boot.configurationmetadata.ConfigurationMetadataRepositoryJsonBuilder;
+import io.github.kotlinmania.spring.boot.configurationmetadata.ConfigurationMetadataRepository;
+import io.github.kotlinmania.spring.boot.configurationmetadata.ConfigurationMetadataRepositoryJsonBuilder;
 
 /**
  * Factory to create test {@link Changelog} instance.

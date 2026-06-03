@@ -19,6 +19,6 @@
  * buffering steps and measuring their processing time.
  */
 @NullMarked
-package org.springframework.boot.context.metrics.buffering;
+package io.github.kotlinmania.spring.boot.context.metrics.buffering;
 
 import org.jspecify.annotations.NullMarked;

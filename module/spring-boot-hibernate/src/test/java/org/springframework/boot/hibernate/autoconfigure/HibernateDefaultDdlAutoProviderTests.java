@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.hibernate.autoconfigure;
+package io.github.kotlinmania.spring.boot.hibernate.autoconfigure;
 
 import java.util.Collections;
 
@@ -22,11 +22,11 @@ import javax.sql.DataSource;
 
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.autoconfigure.AutoConfigurations;
-import org.springframework.boot.jdbc.SchemaManagement;
-import org.springframework.boot.jdbc.SchemaManagementProvider;
-import org.springframework.boot.jdbc.autoconfigure.DataSourceAutoConfiguration;
-import org.springframework.boot.test.context.runner.ApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurations;
+import io.github.kotlinmania.spring.boot.jdbc.SchemaManagement;
+import io.github.kotlinmania.spring.boot.jdbc.SchemaManagementProvider;
+import io.github.kotlinmania.spring.boot.jdbc.autoconfigure.DataSourceAutoConfiguration;
+import io.github.kotlinmania.spring.boot.test.context.runner.ApplicationContextRunner;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.BDDMockito.given;

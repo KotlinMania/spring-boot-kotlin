@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.actuate.docs.web.mappings;
+package io.github.kotlinmania.spring.boot.actuate.docs.web.mappings;
 
 import java.time.Duration;
 import java.util.ArrayList;
@@ -25,14 +25,14 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 
-import org.springframework.boot.actuate.docs.AbstractEndpointDocumentationTests;
-import org.springframework.boot.actuate.web.mappings.MappingDescriptionProvider;
-import org.springframework.boot.actuate.web.mappings.MappingsEndpoint;
-import org.springframework.boot.reactor.netty.NettyReactiveWebServerFactory;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.boot.test.context.SpringBootTest.WebEnvironment;
-import org.springframework.boot.test.web.server.LocalServerPort;
-import org.springframework.boot.webflux.actuate.web.mappings.DispatcherHandlersMappingDescriptionProvider;
+import io.github.kotlinmania.spring.boot.actuate.docs.AbstractEndpointDocumentationTests;
+import io.github.kotlinmania.spring.boot.actuate.web.mappings.MappingDescriptionProvider;
+import io.github.kotlinmania.spring.boot.actuate.web.mappings.MappingsEndpoint;
+import io.github.kotlinmania.spring.boot.reactor.netty.NettyReactiveWebServerFactory;
+import io.github.kotlinmania.spring.boot.test.context.SpringBootTest;
+import io.github.kotlinmania.spring.boot.test.context.SpringBootTest.WebEnvironment;
+import io.github.kotlinmania.spring.boot.test.web.server.LocalServerPort;
+import io.github.kotlinmania.spring.boot.webflux.actuate.web.mappings.DispatcherHandlersMappingDescriptionProvider;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.gradle.tasks.aot;
+package io.github.kotlinmania.spring.boot.gradle.tasks.aot;
 
 import java.util.ArrayList;
 import java.util.List;

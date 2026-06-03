@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.actuate.endpoint.web.test;
+package io.github.kotlinmania.spring.boot.actuate.endpoint.web.test;
 
 import java.time.Duration;
 import java.util.ArrayList;
@@ -36,10 +36,10 @@ import org.junit.jupiter.api.extension.TestTemplateInvocationContext;
 import org.junit.jupiter.api.extension.TestTemplateInvocationContextProvider;
 import org.junit.platform.commons.util.AnnotationUtils;
 
-import org.springframework.boot.actuate.endpoint.web.test.WebEndpointTest.Infrastructure;
-import org.springframework.boot.web.server.context.WebServerInitializedEvent;
-import org.springframework.boot.web.server.reactive.context.AnnotationConfigReactiveWebServerApplicationContext;
-import org.springframework.boot.web.server.servlet.context.AnnotationConfigServletWebServerApplicationContext;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.web.test.WebEndpointTest.Infrastructure;
+import io.github.kotlinmania.spring.boot.web.server.context.WebServerInitializedEvent;
+import io.github.kotlinmania.spring.boot.web.server.reactive.context.AnnotationConfigReactiveWebServerApplicationContext;
+import io.github.kotlinmania.spring.boot.web.server.servlet.context.AnnotationConfigServletWebServerApplicationContext;
 import org.springframework.context.ApplicationListener;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigRegistry;

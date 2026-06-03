@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.image.assertions;
+package io.github.kotlinmania.spring.boot.image.assertions;
 
 import java.io.IOException;
 
 import com.github.dockerjava.api.model.ContainerConfig;
 
-import org.springframework.boot.buildpack.platform.docker.type.ImageReference;
+import io.github.kotlinmania.spring.boot.buildpack.platform.docker.type.ImageReference;
 
 /**
  * Factory class for custom AssertJ {@link org.assertj.core.api.Assert}s related to images

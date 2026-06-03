@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.data.neo4j.domain.country;
+package io.github.kotlinmania.spring.boot.data.neo4j.domain.country;
 
 import java.io.Serializable;
 

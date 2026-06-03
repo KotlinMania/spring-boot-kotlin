@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.logging.log4j2;
+package io.github.kotlinmania.spring.boot.logging.log4j2;
 
 import java.math.BigDecimal;
 import java.util.Set;
@@ -32,17 +32,17 @@ import org.apache.logging.log4j.message.Message;
 import org.apache.logging.log4j.util.ReadOnlyStringMap;
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.json.JsonWriter;
-import org.springframework.boot.json.JsonWriter.Members;
-import org.springframework.boot.json.WritableJson;
-import org.springframework.boot.logging.StackTracePrinter;
-import org.springframework.boot.logging.structured.CommonStructuredLogFormat;
-import org.springframework.boot.logging.structured.ContextPairs;
-import org.springframework.boot.logging.structured.ContextPairs.Joiner;
-import org.springframework.boot.logging.structured.GraylogExtendedLogFormatProperties;
-import org.springframework.boot.logging.structured.JsonWriterStructuredLogFormatter;
-import org.springframework.boot.logging.structured.StructuredLogFormatter;
-import org.springframework.boot.logging.structured.StructuredLoggingJsonMembersCustomizer;
+import io.github.kotlinmania.spring.boot.json.JsonWriter;
+import io.github.kotlinmania.spring.boot.json.JsonWriter.Members;
+import io.github.kotlinmania.spring.boot.json.WritableJson;
+import io.github.kotlinmania.spring.boot.logging.StackTracePrinter;
+import io.github.kotlinmania.spring.boot.logging.structured.CommonStructuredLogFormat;
+import io.github.kotlinmania.spring.boot.logging.structured.ContextPairs;
+import io.github.kotlinmania.spring.boot.logging.structured.ContextPairs.Joiner;
+import io.github.kotlinmania.spring.boot.logging.structured.GraylogExtendedLogFormatProperties;
+import io.github.kotlinmania.spring.boot.logging.structured.JsonWriterStructuredLogFormatter;
+import io.github.kotlinmania.spring.boot.logging.structured.StructuredLogFormatter;
+import io.github.kotlinmania.spring.boot.logging.structured.StructuredLoggingJsonMembersCustomizer;
 import org.springframework.core.env.Environment;
 import org.springframework.core.log.LogMessage;
 import org.springframework.util.ObjectUtils;

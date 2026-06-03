@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.howto.springmvc.writejsonrestservice;
+package io.github.kotlinmania.spring.boot.docs.howto.springmvc.writejsonrestservice;
 
 public class MyThing {
 

@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.actuator.endpoints.health.writingcustomhealthindicators
+package io.github.kotlinmania.spring.boot.docs.actuator.endpoints.health.writingcustomhealthindicators
 
-import org.springframework.boot.health.contributor.Health
-import org.springframework.boot.health.contributor.HealthIndicator
+import io.github.kotlinmania.spring.boot.health.contributor.Health
+import io.github.kotlinmania.spring.boot.health.contributor.HealthIndicator
 import org.springframework.stereotype.Component
 
 @Component

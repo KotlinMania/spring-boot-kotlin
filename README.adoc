@@ -26,8 +26,8 @@ Here is a quick teaser of a complete Spring Boot application in Java:
 
 [source,java]
 ----
-import org.springframework.boot.*;
-import org.springframework.boot.autoconfigure.*;
+import io.github.kotlinmania.spring.boot.*;
+import io.github.kotlinmania.spring.boot.autoconfigure.*;
 import org.springframework.web.bind.annotation.*;
 
 @RestController

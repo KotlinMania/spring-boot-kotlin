@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.build.architecture;
+package io.github.kotlinmania.spring.boot.build.architecture;
 
 import java.util.Map;
 
@@ -53,13 +53,13 @@ public enum ArchitectureCheckAnnotation {
 	CONFIGURATION_PROPERTIES_BINDING;
 
 	private static final Map<String, String> annotationNameToClassName = Map.of(CONDITIONAL_ON_CLASS.name(),
-			"org.springframework.boot.autoconfigure.condition.ConditionalOnClass", CONDITIONAL_ON_MISSING_BEAN.name(),
-			"org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean",
-			CONFIGURATION_PROPERTIES.name(), "org.springframework.boot.context.properties.ConfigurationProperties",
+			"io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnClass", CONDITIONAL_ON_MISSING_BEAN.name(),
+			"io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnMissingBean",
+			CONFIGURATION_PROPERTIES.name(), "io.github.kotlinmania.spring.boot.context.properties.ConfigurationProperties",
 			DEPRECATED_CONFIGURATION_PROPERTY.name(),
-			"org.springframework.boot.context.properties.DeprecatedConfigurationProperty",
+			"io.github.kotlinmania.spring.boot.context.properties.DeprecatedConfigurationProperty",
 			CONFIGURATION_PROPERTIES_BINDING.name(),
-			"org.springframework.boot.context.properties.ConfigurationPropertiesBinding");
+			"io.github.kotlinmania.spring.boot.context.properties.ConfigurationPropertiesBinding");
 
 	static Map<String, String> asMap() {
 		return annotationNameToClassName;

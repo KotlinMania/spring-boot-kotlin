@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.actuate.info;
+package io.github.kotlinmania.spring.boot.actuate.info;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -25,11 +25,11 @@ import java.util.Properties;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.context.properties.bind.Bindable;
-import org.springframework.boot.context.properties.bind.Binder;
-import org.springframework.boot.context.properties.source.ConfigurationPropertySource;
-import org.springframework.boot.context.properties.source.ConfigurationPropertySources;
-import org.springframework.boot.info.InfoProperties;
+import io.github.kotlinmania.spring.boot.context.properties.bind.Bindable;
+import io.github.kotlinmania.spring.boot.context.properties.bind.Binder;
+import io.github.kotlinmania.spring.boot.context.properties.source.ConfigurationPropertySource;
+import io.github.kotlinmania.spring.boot.context.properties.source.ConfigurationPropertySources;
+import io.github.kotlinmania.spring.boot.info.InfoProperties;
 import org.springframework.core.env.PropertySource;
 import org.springframework.util.Assert;
 import org.springframework.util.StringUtils;

@@ -1,1 +1,1 @@
-org.springframework.boot.thymeleaf.autoconfigure.ThymeleafAutoConfiguration
+io.github.kotlinmania.spring.boot.thymeleaf.autoconfigure.ThymeleafAutoConfiguration

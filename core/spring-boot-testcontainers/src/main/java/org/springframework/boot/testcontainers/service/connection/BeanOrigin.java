@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.testcontainers.service.connection;
+package io.github.kotlinmania.spring.boot.testcontainers.service.connection;
 
 import java.util.Objects;
 
 import org.jspecify.annotations.Nullable;
 
 import org.springframework.beans.factory.config.BeanDefinition;
-import org.springframework.boot.origin.Origin;
+import io.github.kotlinmania.spring.boot.origin.Origin;
 
 /**
  * {@link Origin} backed by a Spring Bean.

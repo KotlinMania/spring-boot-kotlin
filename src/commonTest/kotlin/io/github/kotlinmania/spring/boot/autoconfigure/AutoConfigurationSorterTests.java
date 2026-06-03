@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.autoconfigure;
+package io.github.kotlinmania.spring.boot.autoconfigure;
 
 import java.io.IOException;
 import java.util.Arrays;
@@ -320,7 +320,7 @@ class AutoConfigurationSorterTests {
 
 	}
 
-	@AutoConfigureAfter(name = "org.springframework.boot.autoconfigure.AutoConfigurationSorterTests$AutoConfigureB")
+	@AutoConfigureAfter(name = "io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurationSorterTests$AutoConfigureB")
 	static class AutoConfigureA2 {
 
 	}
@@ -355,7 +355,7 @@ class AutoConfigurationSorterTests {
 	}
 
 	// @DeprecatedAutoConfiguration(replacement =
-	// "org.springframework.boot.autoconfigure.AutoConfigurationSorterTests$AutoConfigureC")
+	// "io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurationSorterTests$AutoConfigureC")
 	public static class DeprecatedAutoConfigureC {
 
 	}
@@ -374,7 +374,7 @@ class AutoConfigurationSorterTests {
 
 	}
 
-	@AutoConfigureBefore(name = "org.springframework.boot.autoconfigure.AutoConfigurationSorterTests$AutoConfigureB")
+	@AutoConfigureBefore(name = "io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurationSorterTests$AutoConfigureB")
 	static class AutoConfigureW2 {
 
 	}
@@ -394,7 +394,7 @@ class AutoConfigurationSorterTests {
 	}
 
 	// @DeprecatedAutoConfiguration(replacement =
-	// "org.springframework.boot.autoconfigure.AutoConfigurationSorterTests$AutoConfigureY")
+	// "io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurationSorterTests$AutoConfigureY")
 	public static class DeprecatedAutoConfigureY {
 
 	}

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.maven;
+package io.github.kotlinmania.spring.boot.maven;
 
 import java.io.File;
 import java.io.FileWriter;
@@ -91,7 +91,7 @@ class MavenBuild {
 	private Map<String, String> getPomReplacements() {
 		Map<String, String> replacements = new HashMap<>();
 		replacements.put("java.version", "17");
-		replacements.put("project.groupId", "org.springframework.boot");
+		replacements.put("project.groupId", "io.github.kotlinmania.spring.boot.);
 		replacements.put("project.artifactId", "spring-boot-maven-plugin");
 		replacements.putAll(new Versions().asMap());
 		return Collections.unmodifiableMap(replacements);

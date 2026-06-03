@@ -16,8 +16,8 @@
 
 package smoketest.coroutines
 
-import org.springframework.boot.autoconfigure.SpringBootApplication
-import org.springframework.boot.runApplication
+import io.github.kotlinmania.spring.boot.autoconfigure.SpringBootApplication
+import io.github.kotlinmania.spring.boot.runApplication
 
 @SpringBootApplication
 class SampleCoroutinesApplication

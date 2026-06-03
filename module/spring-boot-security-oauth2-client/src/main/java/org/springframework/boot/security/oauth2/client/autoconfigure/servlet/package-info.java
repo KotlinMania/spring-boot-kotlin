@@ -18,6 +18,6 @@
  * Auto-configuration for Spring Security's OAuth 2 client.
  */
 @NullMarked
-package org.springframework.boot.security.oauth2.client.autoconfigure.servlet;
+package io.github.kotlinmania.spring.boot.security.oauth2.client.autoconfigure.servlet;
 
 import org.jspecify.annotations.NullMarked;

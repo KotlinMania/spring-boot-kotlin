@@ -18,6 +18,6 @@
  * Classes related to Spring's {@link org.springframework.context.ApplicationContext}.
  */
 @NullMarked
-package org.springframework.boot.context;
+package io.github.kotlinmania.spring.boot.context;
 
 import org.jspecify.annotations.NullMarked;

@@ -4,7 +4,7 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd">
 
 	<bean id="example"
-		class="org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBeanTests.ExampleFactoryBean">
+		class="io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnMissingBeanTests.ExampleFactoryBean">
 		<constructor-arg value="${value:bar}" />
 	</bean>
 

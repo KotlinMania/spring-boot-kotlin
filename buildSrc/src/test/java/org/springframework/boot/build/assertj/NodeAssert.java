@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.build.assertj;
+package io.github.kotlinmania.spring.boot.build.assertj;
 
 import java.io.File;
 
@@ -29,7 +29,7 @@ import org.assertj.core.api.StringAssert;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 
-import org.springframework.boot.build.xml.XmlDocument;
+import io.github.kotlinmania.spring.boot.build.xml.XmlDocument;
 
 /**
  * AssertJ {@link AssertProvider} for {@link Node} assertions.

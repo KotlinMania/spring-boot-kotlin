@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.health.actuate.endpoint;
+package io.github.kotlinmania.spring.boot.health.actuate.endpoint;
 
 import java.time.Duration;
 import java.util.Collections;
@@ -26,17 +26,17 @@ import org.jspecify.annotations.Nullable;
 import org.junit.jupiter.api.Test;
 import reactor.core.publisher.Mono;
 
-import org.springframework.boot.actuate.endpoint.ApiVersion;
-import org.springframework.boot.actuate.endpoint.SecurityContext;
-import org.springframework.boot.actuate.endpoint.web.WebEndpointResponse;
-import org.springframework.boot.health.actuate.endpoint.HealthEndpointSupport.Result;
-import org.springframework.boot.health.contributor.CompositeReactiveHealthContributor;
-import org.springframework.boot.health.contributor.Health;
-import org.springframework.boot.health.contributor.ReactiveHealthContributor;
-import org.springframework.boot.health.contributor.ReactiveHealthIndicator;
-import org.springframework.boot.health.contributor.Status;
-import org.springframework.boot.health.registry.DefaultReactiveHealthContributorRegistry;
-import org.springframework.boot.health.registry.ReactiveHealthContributorRegistry;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.ApiVersion;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.SecurityContext;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.web.WebEndpointResponse;
+import io.github.kotlinmania.spring.boot.health.actuate.endpoint.HealthEndpointSupport.Result;
+import io.github.kotlinmania.spring.boot.health.contributor.CompositeReactiveHealthContributor;
+import io.github.kotlinmania.spring.boot.health.contributor.Health;
+import io.github.kotlinmania.spring.boot.health.contributor.ReactiveHealthContributor;
+import io.github.kotlinmania.spring.boot.health.contributor.ReactiveHealthIndicator;
+import io.github.kotlinmania.spring.boot.health.contributor.Status;
+import io.github.kotlinmania.spring.boot.health.registry.DefaultReactiveHealthContributorRegistry;
+import io.github.kotlinmania.spring.boot.health.registry.ReactiveHealthContributorRegistry;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.Mockito.mock;

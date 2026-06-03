@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.build.antora;
+package io.github.kotlinmania.spring.boot.build.antora;
 
 import org.gradle.api.Project;
 import org.gradle.api.file.CopySpec;
 
-import org.springframework.boot.build.antora.Extensions.AntoraExtensionsConfiguration.ZipContentsCollector.AlwaysInclude;
+import io.github.kotlinmania.spring.boot.build.antora.Extensions.AntoraExtensionsConfiguration.ZipContentsCollector.AlwaysInclude;
 
 /**
  * A contribution of aggregate content that cannot be consumed by other projects.

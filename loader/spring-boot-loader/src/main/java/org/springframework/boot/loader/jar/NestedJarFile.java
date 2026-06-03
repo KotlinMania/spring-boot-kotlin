@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.loader.jar;
+package io.github.kotlinmania.spring.boot.loader.jar;
 
 import java.io.File;
 import java.io.FilterInputStream;
@@ -43,11 +43,11 @@ import java.util.zip.Inflater;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipException;
 
-import org.springframework.boot.loader.log.DebugLogger;
-import org.springframework.boot.loader.ref.Cleaner;
-import org.springframework.boot.loader.zip.CloseableDataBlock;
-import org.springframework.boot.loader.zip.ZipContent;
-import org.springframework.boot.loader.zip.ZipContent.Entry;
+import io.github.kotlinmania.spring.boot.loader.log.DebugLogger;
+import io.github.kotlinmania.spring.boot.loader.ref.Cleaner;
+import io.github.kotlinmania.spring.boot.loader.zip.CloseableDataBlock;
+import io.github.kotlinmania.spring.boot.loader.zip.ZipContent;
+import io.github.kotlinmania.spring.boot.loader.zip.ZipContent.Entry;
 
 /**
  * Extended variant of {@link JarFile} that behaves in the same way but can open nested

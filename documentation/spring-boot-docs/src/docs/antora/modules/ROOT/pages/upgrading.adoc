@@ -43,7 +43,7 @@ To enable that feature, add the following dependency to your project:
 [source,xml]
 ----
 <dependency>
-	<groupId>org.springframework.boot</groupId>
+	<groupId>io.github.kotlinmania.spring.boot./groupId>
 	<artifactId>spring-boot-properties-migrator</artifactId>
 	<scope>runtime</scope>
 </dependency>

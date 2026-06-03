@@ -22,8 +22,8 @@ description = "Spring Boot Log4j2 smoke test"
 
 dependencies {
 	modules {
-		module("org.springframework.boot:spring-boot-starter-logging") {
-			replacedBy("org.springframework.boot:spring-boot-starter-log4j2", "Use Log4j2 instead of Logback")
+		module("io.github.kotlinmania.spring.boot.spring-boot-starter-logging") {
+			replacedBy("io.github.kotlinmania.spring.boot.spring-boot-starter-log4j2", "Use Log4j2 instead of Logback")
 		}
 	}
 

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.actuate.docs.audit;
+package io.github.kotlinmania.spring.boot.actuate.docs.audit;
 
 import java.time.Instant;
 import java.time.format.DateTimeFormatter;
@@ -23,10 +23,10 @@ import java.util.List;
 
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.actuate.audit.AuditEvent;
-import org.springframework.boot.actuate.audit.AuditEventRepository;
-import org.springframework.boot.actuate.audit.AuditEventsEndpoint;
-import org.springframework.boot.actuate.docs.MockMvcEndpointDocumentationTests;
+import io.github.kotlinmania.spring.boot.actuate.audit.AuditEvent;
+import io.github.kotlinmania.spring.boot.actuate.audit.AuditEventRepository;
+import io.github.kotlinmania.spring.boot.actuate.audit.AuditEventsEndpoint;
+import io.github.kotlinmania.spring.boot.actuate.docs.MockMvcEndpointDocumentationTests;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.test.context.bean.override.mockito.MockitoBean;

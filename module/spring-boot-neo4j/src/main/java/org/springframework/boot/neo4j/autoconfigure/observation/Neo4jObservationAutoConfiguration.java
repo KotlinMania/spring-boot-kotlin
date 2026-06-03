@@ -14,18 +14,18 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.neo4j.autoconfigure.observation;
+package io.github.kotlinmania.spring.boot.neo4j.autoconfigure.observation;
 
 import io.micrometer.observation.Observation;
 import io.micrometer.observation.ObservationRegistry;
 import org.neo4j.driver.Config.ConfigBuilder;
 import org.neo4j.driver.observation.micrometer.MicrometerObservationProvider;
 
-import org.springframework.boot.autoconfigure.AutoConfiguration;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
-import org.springframework.boot.neo4j.autoconfigure.ConfigBuilderCustomizer;
-import org.springframework.boot.neo4j.autoconfigure.Neo4jAutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnBean;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnClass;
+import io.github.kotlinmania.spring.boot.neo4j.autoconfigure.ConfigBuilderCustomizer;
+import io.github.kotlinmania.spring.boot.neo4j.autoconfigure.Neo4jAutoConfiguration;
 import org.springframework.context.annotation.Bean;
 import org.springframework.core.annotation.Order;
 
@@ -36,7 +36,7 @@ import org.springframework.core.annotation.Order;
  * @since 4.0.0
  */
 @AutoConfiguration(before = Neo4jAutoConfiguration.class,
-		afterName = "org.springframework.boot.micrometer.observation.autoconfigure.ObservationAutoConfiguration")
+		afterName = "io.github.kotlinmania.spring.boot.micrometer.observation.autoconfigure.ObservationAutoConfiguration")
 @ConditionalOnBean(ObservationRegistry.class)
 @ConditionalOnClass({ ConfigBuilder.class, MicrometerObservationProvider.class, Observation.class })
 public final class Neo4jObservationAutoConfiguration {

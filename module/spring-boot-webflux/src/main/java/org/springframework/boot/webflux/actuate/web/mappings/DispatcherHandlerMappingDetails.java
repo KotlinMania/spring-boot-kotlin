@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.webflux.actuate.web.mappings;
+package io.github.kotlinmania.spring.boot.webflux.actuate.web.mappings;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.actuate.web.mappings.HandlerMethodDescription;
+import io.github.kotlinmania.spring.boot.actuate.web.mappings.HandlerMethodDescription;
 import org.springframework.web.reactive.DispatcherHandler;
 
 /**

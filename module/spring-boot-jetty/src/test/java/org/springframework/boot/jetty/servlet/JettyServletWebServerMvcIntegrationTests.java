@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.jetty.servlet;
+package io.github.kotlinmania.spring.boot.jetty.servlet;
 
-import org.springframework.boot.jetty.JettyWebServer;
-import org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext;
-import org.springframework.boot.web.servlet.context.AbstractServletWebServerMvcIntegrationTests;
+import io.github.kotlinmania.spring.boot.jetty.JettyWebServer;
+import io.github.kotlinmania.spring.boot.web.server.servlet.context.ServletWebServerApplicationContext;
+import io.github.kotlinmania.spring.boot.web.servlet.context.AbstractServletWebServerMvcIntegrationTests;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 

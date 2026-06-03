@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.devtools.classpath;
+package io.github.kotlinmania.spring.boot.devtools.classpath;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.devtools.filewatch.ChangedFile;
+import io.github.kotlinmania.spring.boot.devtools.filewatch.ChangedFile;
 import org.springframework.util.AntPathMatcher;
 import org.springframework.util.StringUtils;
 

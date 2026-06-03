@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.configurationsample.method;
+package io.github.kotlinmania.spring.boot.configurationsample.method;
 
 public class NestedProperty {
 

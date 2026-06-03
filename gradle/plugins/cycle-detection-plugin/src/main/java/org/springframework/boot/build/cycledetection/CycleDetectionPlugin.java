@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.build.cycledetection;
+package io.github.kotlinmania.spring.boot.build.cycledetection;
 
 import java.util.HashMap;
 import java.util.LinkedHashSet;

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.test.system;
+package io.github.kotlinmania.spring.boot.test.system;
 
 import org.junit.Rule;
 import org.junit.Test;

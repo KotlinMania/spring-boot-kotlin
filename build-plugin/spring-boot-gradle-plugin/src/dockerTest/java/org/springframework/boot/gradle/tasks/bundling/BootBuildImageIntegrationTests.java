@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.gradle.tasks.bundling;
+package io.github.kotlinmania.spring.boot.gradle.tasks.bundling;
 
 import java.io.File;
 import java.io.FileWriter;
@@ -40,18 +40,18 @@ import org.junit.jupiter.api.TestTemplate;
 import org.junit.jupiter.api.condition.EnabledOnOs;
 import org.junit.jupiter.api.condition.OS;
 
-import org.springframework.boot.buildpack.platform.docker.DockerApi;
-import org.springframework.boot.buildpack.platform.docker.DockerApi.ImageApi;
-import org.springframework.boot.buildpack.platform.docker.DockerApi.VolumeApi;
-import org.springframework.boot.buildpack.platform.docker.transport.DockerEngineException;
-import org.springframework.boot.buildpack.platform.docker.type.Image;
-import org.springframework.boot.buildpack.platform.docker.type.ImageReference;
-import org.springframework.boot.buildpack.platform.docker.type.VolumeName;
-import org.springframework.boot.buildpack.platform.io.FilePermissions;
-import org.springframework.boot.gradle.junit.GradleCompatibility;
-import org.springframework.boot.testsupport.container.DisabledIfDockerUnavailable;
-import org.springframework.boot.testsupport.gradle.testkit.GradleBuild;
-import org.springframework.boot.testsupport.junit.DisabledOnOs;
+import io.github.kotlinmania.spring.boot.buildpack.platform.docker.DockerApi;
+import io.github.kotlinmania.spring.boot.buildpack.platform.docker.DockerApi.ImageApi;
+import io.github.kotlinmania.spring.boot.buildpack.platform.docker.DockerApi.VolumeApi;
+import io.github.kotlinmania.spring.boot.buildpack.platform.docker.transport.DockerEngineException;
+import io.github.kotlinmania.spring.boot.buildpack.platform.docker.type.Image;
+import io.github.kotlinmania.spring.boot.buildpack.platform.docker.type.ImageReference;
+import io.github.kotlinmania.spring.boot.buildpack.platform.docker.type.VolumeName;
+import io.github.kotlinmania.spring.boot.buildpack.platform.io.FilePermissions;
+import io.github.kotlinmania.spring.boot.gradle.junit.GradleCompatibility;
+import io.github.kotlinmania.spring.boot.testsupport.container.DisabledIfDockerUnavailable;
+import io.github.kotlinmania.spring.boot.testsupport.gradle.testkit.GradleBuild;
+import io.github.kotlinmania.spring.boot.testsupport.junit.DisabledOnOs;
 import org.springframework.util.FileSystemUtils;
 import org.springframework.util.StreamUtils;
 

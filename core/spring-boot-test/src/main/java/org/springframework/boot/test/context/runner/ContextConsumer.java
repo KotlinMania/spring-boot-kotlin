@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.test.context.runner;
+package io.github.kotlinmania.spring.boot.test.context.runner;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.util.Assert;

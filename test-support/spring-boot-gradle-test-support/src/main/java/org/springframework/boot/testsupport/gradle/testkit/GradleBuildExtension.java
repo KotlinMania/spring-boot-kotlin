@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.testsupport.gradle.testkit;
+package io.github.kotlinmania.spring.boot.testsupport.gradle.testkit;
 
 import java.io.File;
 import java.lang.reflect.Field;

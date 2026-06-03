@@ -18,6 +18,6 @@
  * Support for Testcontainers OpenTelemetry logging service connections.
  */
 @NullMarked
-package org.springframework.boot.opentelemetry.testcontainers;
+package io.github.kotlinmania.spring.boot.opentelemetry.testcontainers;
 
 import org.jspecify.annotations.NullMarked;

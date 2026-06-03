@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.micrometer.metrics.autoconfigure.export.dynatrace;
+package io.github.kotlinmania.spring.boot.micrometer.metrics.autoconfigure.export.dynatrace;
 
 import java.util.Map;
 
@@ -22,8 +22,8 @@ import io.micrometer.dynatrace.DynatraceApiVersion;
 import io.micrometer.dynatrace.DynatraceConfig;
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.micrometer.metrics.autoconfigure.export.dynatrace.DynatraceProperties.V2;
-import org.springframework.boot.micrometer.metrics.autoconfigure.export.properties.StepRegistryPropertiesConfigAdapter;
+import io.github.kotlinmania.spring.boot.micrometer.metrics.autoconfigure.export.dynatrace.DynatraceProperties.V2;
+import io.github.kotlinmania.spring.boot.micrometer.metrics.autoconfigure.export.properties.StepRegistryPropertiesConfigAdapter;
 
 /**
  * Adapter to convert {@link DynatraceProperties} to a {@link DynatraceConfig}.

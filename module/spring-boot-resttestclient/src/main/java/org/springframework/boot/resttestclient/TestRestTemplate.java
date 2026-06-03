@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.resttestclient;
+package io.github.kotlinmania.spring.boot.resttestclient;
 
 import java.net.URI;
 import java.security.KeyManagementException;
@@ -37,15 +37,15 @@ import org.apache.hc.core5.ssl.SSLContextBuilder;
 import org.apache.hc.core5.ssl.TrustStrategy;
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.http.client.ClientHttpRequestFactoryBuilder;
-import org.springframework.boot.http.client.HttpClientSettings;
-import org.springframework.boot.http.client.HttpComponentsClientHttpRequestFactoryBuilder;
-import org.springframework.boot.http.client.HttpComponentsHttpClientBuilder.TlsSocketStrategyFactory;
-import org.springframework.boot.http.client.HttpCookieHandling;
-import org.springframework.boot.http.client.HttpRedirects;
-import org.springframework.boot.restclient.RestTemplateBuilder;
-import org.springframework.boot.resttestclient.autoconfigure.AutoConfigureTestRestTemplate;
-import org.springframework.boot.ssl.SslBundle;
+import io.github.kotlinmania.spring.boot.http.client.ClientHttpRequestFactoryBuilder;
+import io.github.kotlinmania.spring.boot.http.client.HttpClientSettings;
+import io.github.kotlinmania.spring.boot.http.client.HttpComponentsClientHttpRequestFactoryBuilder;
+import io.github.kotlinmania.spring.boot.http.client.HttpComponentsHttpClientBuilder.TlsSocketStrategyFactory;
+import io.github.kotlinmania.spring.boot.http.client.HttpCookieHandling;
+import io.github.kotlinmania.spring.boot.http.client.HttpRedirects;
+import io.github.kotlinmania.spring.boot.restclient.RestTemplateBuilder;
+import io.github.kotlinmania.spring.boot.resttestclient.autoconfigure.AutoConfigureTestRestTemplate;
+import io.github.kotlinmania.spring.boot.ssl.SslBundle;
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
@@ -192,7 +192,7 @@ public class TestRestTemplate {
 	@SuppressWarnings("removal")
 	public @Nullable String getRootUri() {
 		UriTemplateHandler uriTemplateHandler = this.restTemplate.getUriTemplateHandler();
-		if (uriTemplateHandler instanceof org.springframework.boot.restclient.RootUriTemplateHandler rootHandler) {
+		if (uriTemplateHandler instanceof io.github.kotlinmania.spring.boot.restclient.RootUriTemplateHandler rootHandler) {
 			return rootHandler.getRootUri();
 		}
 		return uriTemplateHandler.expand("").toString();

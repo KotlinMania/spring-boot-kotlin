@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.grpc.client.autoconfigure;
+package io.github.kotlinmania.spring.boot.grpc.client.autoconfigure;
 
 import java.util.Collections;
 import java.util.LinkedHashMap;
@@ -22,8 +22,8 @@ import java.util.Map;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.grpc.client.autoconfigure.GrpcClientProperties.Channel;
-import org.springframework.boot.grpc.client.autoconfigure.GrpcClientProperties.Channel.Health;
+import io.github.kotlinmania.spring.boot.grpc.client.autoconfigure.GrpcClientProperties.Channel;
+import io.github.kotlinmania.spring.boot.grpc.client.autoconfigure.GrpcClientProperties.Channel.Health;
 import org.springframework.util.Assert;
 
 /**

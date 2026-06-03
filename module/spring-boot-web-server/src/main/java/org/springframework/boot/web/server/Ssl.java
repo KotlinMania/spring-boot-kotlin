@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.web.server;
+package io.github.kotlinmania.spring.boot.web.server;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.context.properties.ConfigurationPropertiesSource;
+import io.github.kotlinmania.spring.boot.context.properties.ConfigurationPropertiesSource;
 import org.springframework.lang.Contract;
 
 /**

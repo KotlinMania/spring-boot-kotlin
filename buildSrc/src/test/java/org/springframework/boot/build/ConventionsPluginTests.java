@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.build;
+package io.github.kotlinmania.spring.boot.build;
 
 import java.io.File;
 import java.io.FileWriter;
@@ -76,7 +76,7 @@ class ConventionsPluginTests {
 		try (PrintWriter out = new PrintWriter(new FileWriter(this.buildFile))) {
 			out.println("plugins {");
 			out.println("    id 'java'");
-			out.println("    id 'org.springframework.boot.conventions'");
+			out.println("    id 'io.github.kotlinmania.spring.boot.conventions'");
 			out.println("}");
 			out.println("version = '1.2.3'");
 			out.println("java {");
@@ -108,7 +108,7 @@ class ConventionsPluginTests {
 			out.println("plugins {");
 			out.println("    id 'java'");
 			out.println("    id 'maven-publish'");
-			out.println("    id 'org.springframework.boot.conventions'");
+			out.println("    id 'io.github.kotlinmania.spring.boot.conventions'");
 			out.println("}");
 			out.println("version = '1.2.3'");
 			out.println("java {");
@@ -139,7 +139,7 @@ class ConventionsPluginTests {
 			out.println("plugins {");
 			out.println("    id 'java'");
 			out.println("    id 'maven-publish'");
-			out.println("    id 'org.springframework.boot.conventions'");
+			out.println("    id 'io.github.kotlinmania.spring.boot.conventions'");
 			out.println("}");
 			out.println("version = '1.2.3'");
 			out.println("java {");
@@ -185,7 +185,7 @@ class ConventionsPluginTests {
 		try (PrintWriter out = new PrintWriter(new FileWriter(this.buildFile))) {
 			out.println("plugins {");
 			out.println("    id 'java'");
-			out.println("    id 'org.springframework.boot.conventions'");
+			out.println("    id 'io.github.kotlinmania.spring.boot.conventions'");
 			out.println("}");
 			out.println("description 'Test'");
 			out.println("task retryConfig {");
@@ -207,7 +207,7 @@ class ConventionsPluginTests {
 		try (PrintWriter out = new PrintWriter(new FileWriter(this.buildFile))) {
 			out.println("plugins {");
 			out.println("    id 'java'");
-			out.println("    id 'org.springframework.boot.conventions'");
+			out.println("    id 'io.github.kotlinmania.spring.boot.conventions'");
 			out.println("}");
 			out.println("description 'Test'");
 			out.println("task retryConfig {");

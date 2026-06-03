@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.netty.autoconfigure;
+package io.github.kotlinmania.spring.boot.netty.autoconfigure;
 
 import io.netty.util.ResourceLeakDetector;
 import io.netty.util.ResourceLeakDetector.Level;

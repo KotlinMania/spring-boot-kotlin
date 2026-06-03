@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.jetty.reactive;
+package io.github.kotlinmania.spring.boot.jetty.reactive;
 
 import java.net.InetSocketAddress;
 
@@ -27,17 +27,17 @@ import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.server.handler.StatisticsHandler;
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.jetty.ConfigurableJettyWebServerFactory;
-import org.springframework.boot.jetty.ForwardHeadersCustomizer;
-import org.springframework.boot.jetty.JettyServerCustomizer;
-import org.springframework.boot.jetty.JettyWebServer;
-import org.springframework.boot.jetty.JettyWebServerFactory;
-import org.springframework.boot.jetty.servlet.JettyServletWebServerFactory;
-import org.springframework.boot.web.server.Shutdown;
-import org.springframework.boot.web.server.Ssl;
-import org.springframework.boot.web.server.WebServer;
-import org.springframework.boot.web.server.reactive.ConfigurableReactiveWebServerFactory;
-import org.springframework.boot.web.server.reactive.ReactiveWebServerFactory;
+import io.github.kotlinmania.spring.boot.jetty.ConfigurableJettyWebServerFactory;
+import io.github.kotlinmania.spring.boot.jetty.ForwardHeadersCustomizer;
+import io.github.kotlinmania.spring.boot.jetty.JettyServerCustomizer;
+import io.github.kotlinmania.spring.boot.jetty.JettyWebServer;
+import io.github.kotlinmania.spring.boot.jetty.JettyWebServerFactory;
+import io.github.kotlinmania.spring.boot.jetty.servlet.JettyServletWebServerFactory;
+import io.github.kotlinmania.spring.boot.web.server.Shutdown;
+import io.github.kotlinmania.spring.boot.web.server.Ssl;
+import io.github.kotlinmania.spring.boot.web.server.WebServer;
+import io.github.kotlinmania.spring.boot.web.server.reactive.ConfigurableReactiveWebServerFactory;
+import io.github.kotlinmania.spring.boot.web.server.reactive.ReactiveWebServerFactory;
 import org.springframework.http.client.reactive.JettyResourceFactory;
 import org.springframework.http.server.reactive.HttpHandler;
 import org.springframework.http.server.reactive.ServletHttpHandlerAdapter;

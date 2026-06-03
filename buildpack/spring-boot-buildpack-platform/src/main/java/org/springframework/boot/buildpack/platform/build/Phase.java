@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.buildpack.platform.build;
+package io.github.kotlinmania.spring.boot.buildpack.platform.build;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -24,9 +24,9 @@ import java.util.Map;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.buildpack.platform.docker.type.Binding;
-import org.springframework.boot.buildpack.platform.docker.type.ContainerConfig;
-import org.springframework.boot.buildpack.platform.docker.type.ImageReference;
+import io.github.kotlinmania.spring.boot.buildpack.platform.docker.type.Binding;
+import io.github.kotlinmania.spring.boot.buildpack.platform.docker.type.ContainerConfig;
+import io.github.kotlinmania.spring.boot.buildpack.platform.docker.type.ImageReference;
 import org.springframework.util.StringUtils;
 
 /**

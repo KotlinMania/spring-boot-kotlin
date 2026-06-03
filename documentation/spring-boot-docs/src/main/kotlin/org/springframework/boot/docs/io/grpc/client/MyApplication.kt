@@ -1,8 +1,8 @@
-package org.springframework.boot.docs.io.grpc.client
+package io.github.kotlinmania.spring.boot.docs.io.grpc.client
 
-import org.springframework.boot.autoconfigure.SpringBootApplication
-import org.springframework.boot.docs.features.springapplication.MyApplication
-import org.springframework.boot.runApplication
+import io.github.kotlinmania.spring.boot.autoconfigure.SpringBootApplication
+import io.github.kotlinmania.spring.boot.docs.features.springapplication.MyApplication
+import io.github.kotlinmania.spring.boot.runApplication
 import org.springframework.grpc.client.ImportGrpcClients
 
 @SpringBootApplication(proxyBeanMethods = false)

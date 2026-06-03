@@ -1,2 +1,2 @@
-org.springframework.boot.tomcat.autoconfigure.actuate.web.server.TomcatReactiveManagementChildContextConfiguration
-org.springframework.boot.tomcat.autoconfigure.actuate.web.server.TomcatServletManagementChildContextConfiguration
+io.github.kotlinmania.spring.boot.tomcat.autoconfigure.actuate.web.server.TomcatReactiveManagementChildContextConfiguration
+io.github.kotlinmania.spring.boot.tomcat.autoconfigure.actuate.web.server.TomcatServletManagementChildContextConfiguration

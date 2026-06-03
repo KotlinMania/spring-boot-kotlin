@@ -14,15 +14,15 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.jooq;
+package io.github.kotlinmania.spring.boot.jooq;
 
 import java.util.Collections;
 import java.util.Set;
 
 import org.jooq.DSLContext;
 
-import org.springframework.boot.sql.init.dependency.AbstractBeansOfTypeDependsOnDatabaseInitializationDetector;
-import org.springframework.boot.sql.init.dependency.DependsOnDatabaseInitializationDetector;
+import io.github.kotlinmania.spring.boot.sql.init.dependency.AbstractBeansOfTypeDependsOnDatabaseInitializationDetector;
+import io.github.kotlinmania.spring.boot.sql.init.dependency.DependsOnDatabaseInitializationDetector;
 
 /**
  * {@link DependsOnDatabaseInitializationDetector} for jOOQ.

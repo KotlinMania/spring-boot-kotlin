@@ -14,15 +14,15 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.logging.structured;
+package io.github.kotlinmania.spring.boot.logging.structured;
 
 import org.jspecify.annotations.Nullable;
 
 import org.springframework.aot.hint.RuntimeHints;
 import org.springframework.aot.hint.RuntimeHintsRegistrar;
-import org.springframework.boot.context.properties.bind.BindableRuntimeHintsRegistrar;
-import org.springframework.boot.context.properties.bind.Binder;
-import org.springframework.boot.json.JsonWriter;
+import io.github.kotlinmania.spring.boot.context.properties.bind.BindableRuntimeHintsRegistrar;
+import io.github.kotlinmania.spring.boot.context.properties.bind.Binder;
+import io.github.kotlinmania.spring.boot.json.JsonWriter;
 import org.springframework.core.env.Environment;
 import org.springframework.util.StringUtils;
 

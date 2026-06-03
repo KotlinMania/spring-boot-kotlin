@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.liquibase.actuate.endpoint;
+package io.github.kotlinmania.spring.boot.liquibase.actuate.endpoint;
 
 import java.time.Instant;
 import java.util.HashMap;
@@ -33,9 +33,9 @@ import liquibase.database.jvm.JdbcConnection;
 import liquibase.integration.spring.SpringLiquibase;
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.actuate.endpoint.OperationResponseBody;
-import org.springframework.boot.actuate.endpoint.annotation.Endpoint;
-import org.springframework.boot.actuate.endpoint.annotation.ReadOperation;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.OperationResponseBody;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.annotation.Endpoint;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.annotation.ReadOperation;
 import org.springframework.context.ApplicationContext;
 import org.springframework.util.Assert;
 import org.springframework.util.StringUtils;

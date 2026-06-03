@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.cache.autoconfigure;
+package io.github.kotlinmania.spring.boot.cache.autoconfigure;
 
 import java.util.LinkedHashSet;
 import java.util.List;
@@ -22,11 +22,11 @@ import java.util.List;
 import org.jspecify.annotations.Nullable;
 
 import org.springframework.beans.factory.ObjectProvider;
-import org.springframework.boot.autoconfigure.AutoConfigureAfter;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
-import org.springframework.boot.cache.autoconfigure.CacheProperties.Redis;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigureAfter;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnBean;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnClass;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnMissingBean;
+import io.github.kotlinmania.spring.boot.cache.autoconfigure.CacheProperties.Redis;
 import org.springframework.cache.CacheManager;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Conditional;
@@ -47,7 +47,7 @@ import org.springframework.data.redis.serializer.RedisSerializationContext.Seria
  */
 @Configuration(proxyBeanMethods = false)
 @ConditionalOnClass(RedisConnectionFactory.class)
-@AutoConfigureAfter(name = "org.springframework.boot.data.redis.autoconfigure.RedisAutoConfiguration")
+@AutoConfigureAfter(name = "io.github.kotlinmania.spring.boot.data.redis.autoconfigure.RedisAutoConfiguration")
 @ConditionalOnBean(RedisConnectionFactory.class)
 @ConditionalOnMissingBean(CacheManager.class)
 @Conditional(CacheCondition.class)

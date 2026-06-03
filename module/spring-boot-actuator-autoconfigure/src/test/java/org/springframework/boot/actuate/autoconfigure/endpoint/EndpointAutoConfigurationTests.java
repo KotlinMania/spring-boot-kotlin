@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.actuate.autoconfigure.endpoint;
+package io.github.kotlinmania.spring.boot.actuate.autoconfigure.endpoint;
 
 import java.lang.annotation.Annotation;
 import java.util.Collections;
@@ -23,12 +23,12 @@ import java.util.Set;
 import org.jspecify.annotations.Nullable;
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.actuate.endpoint.annotation.EndpointConverter;
-import org.springframework.boot.actuate.endpoint.invoke.OperationParameter;
-import org.springframework.boot.actuate.endpoint.invoke.ParameterMappingException;
-import org.springframework.boot.actuate.endpoint.invoke.ParameterValueMapper;
-import org.springframework.boot.autoconfigure.AutoConfigurations;
-import org.springframework.boot.test.context.runner.ApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.annotation.EndpointConverter;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.invoke.OperationParameter;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.invoke.ParameterMappingException;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.invoke.ParameterValueMapper;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurations;
+import io.github.kotlinmania.spring.boot.test.context.runner.ApplicationContextRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.convert.ConverterNotFoundException;

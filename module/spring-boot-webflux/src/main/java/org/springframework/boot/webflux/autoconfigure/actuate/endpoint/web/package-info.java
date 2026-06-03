@@ -18,6 +18,6 @@
  * Auto-configuration for Spring WebFlux actuator web endpoint support.
  */
 @NullMarked
-package org.springframework.boot.webflux.autoconfigure.actuate.endpoint.web;
+package io.github.kotlinmania.spring.boot.webflux.autoconfigure.actuate.endpoint.web;
 
 import org.jspecify.annotations.NullMarked;

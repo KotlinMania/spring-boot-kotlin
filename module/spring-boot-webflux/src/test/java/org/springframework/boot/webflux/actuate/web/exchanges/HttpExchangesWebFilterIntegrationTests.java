@@ -14,17 +14,17 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.webflux.actuate.web.exchanges;
+package io.github.kotlinmania.spring.boot.webflux.actuate.web.exchanges;
 
 import java.util.EnumSet;
 
 import org.junit.jupiter.api.Test;
 import reactor.core.publisher.Mono;
 
-import org.springframework.boot.actuate.web.exchanges.HttpExchangeRepository;
-import org.springframework.boot.actuate.web.exchanges.InMemoryHttpExchangeRepository;
-import org.springframework.boot.actuate.web.exchanges.Include;
-import org.springframework.boot.test.context.runner.ReactiveWebApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.actuate.web.exchanges.HttpExchangeRepository;
+import io.github.kotlinmania.spring.boot.actuate.web.exchanges.InMemoryHttpExchangeRepository;
+import io.github.kotlinmania.spring.boot.actuate.web.exchanges.Include;
+import io.github.kotlinmania.spring.boot.test.context.runner.ReactiveWebApplicationContextRunner;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

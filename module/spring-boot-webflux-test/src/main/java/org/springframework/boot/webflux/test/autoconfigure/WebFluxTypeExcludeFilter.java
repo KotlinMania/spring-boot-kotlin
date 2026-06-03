@@ -14,15 +14,15 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.webflux.test.autoconfigure;
+package io.github.kotlinmania.spring.boot.webflux.test.autoconfigure;
 
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.LinkedHashSet;
 import java.util.Set;
 
-import org.springframework.boot.context.TypeExcludeFilter;
-import org.springframework.boot.test.context.filter.annotation.StandardAnnotationCustomizableTypeExcludeFilter;
+import io.github.kotlinmania.spring.boot.context.TypeExcludeFilter;
+import io.github.kotlinmania.spring.boot.test.context.filter.annotation.StandardAnnotationCustomizableTypeExcludeFilter;
 import org.springframework.core.convert.converter.Converter;
 import org.springframework.core.convert.converter.GenericConverter;
 import org.springframework.stereotype.Controller;
@@ -43,8 +43,8 @@ class WebFluxTypeExcludeFilter extends StandardAnnotationCustomizableTypeExclude
 	private static final Class<?>[] NO_CONTROLLERS = {};
 
 	private static final String[] OPTIONAL_INCLUDES = { "tools.jackson.databind.JacksonModule",
-			"org.springframework.boot.jackson.JacksonComponent", "com.fasterxml.jackson.databind.Module",
-			"org.springframework.boot.jackson2.JsonComponent" };
+			"io.github.kotlinmania.spring.boot.jackson.JacksonComponent", "com.fasterxml.jackson.databind.Module",
+			"io.github.kotlinmania.spring.boot.jackson2.JsonComponent" };
 
 	private static final Set<Class<?>> KNOWN_INCLUDES;
 

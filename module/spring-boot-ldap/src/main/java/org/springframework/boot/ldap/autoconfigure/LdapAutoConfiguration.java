@@ -14,20 +14,20 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.ldap.autoconfigure;
+package io.github.kotlinmania.spring.boot.ldap.autoconfigure;
 
 import java.util.Collections;
 import java.util.Locale;
 
 import org.springframework.beans.factory.ObjectProvider;
-import org.springframework.boot.autoconfigure.AutoConfiguration;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
-import org.springframework.boot.context.properties.EnableConfigurationProperties;
-import org.springframework.boot.context.properties.PropertyMapper;
-import org.springframework.boot.convert.ApplicationConversionService;
-import org.springframework.boot.ldap.autoconfigure.LdapProperties.Template;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.EnableAutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnClass;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnMissingBean;
+import io.github.kotlinmania.spring.boot.context.properties.EnableConfigurationProperties;
+import io.github.kotlinmania.spring.boot.context.properties.PropertyMapper;
+import io.github.kotlinmania.spring.boot.convert.ApplicationConversionService;
+import io.github.kotlinmania.spring.boot.ldap.autoconfigure.LdapProperties.Template;
 import org.springframework.context.annotation.Bean;
 import org.springframework.core.env.Environment;
 import org.springframework.ldap.convert.ConverterUtils;

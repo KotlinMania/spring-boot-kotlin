@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.buildpack.platform.docker.configuration;
+package io.github.kotlinmania.spring.boot.buildpack.platform.docker.configuration;
 
 import java.io.IOException;
 import java.lang.invoke.MethodHandles;
@@ -33,9 +33,9 @@ import tools.jackson.core.JacksonException;
 import tools.jackson.databind.JsonNode;
 import tools.jackson.databind.node.NullNode;
 
-import org.springframework.boot.buildpack.platform.json.MappedObject;
-import org.springframework.boot.buildpack.platform.json.SharedJsonMapper;
-import org.springframework.boot.buildpack.platform.system.Environment;
+import io.github.kotlinmania.spring.boot.buildpack.platform.json.MappedObject;
+import io.github.kotlinmania.spring.boot.buildpack.platform.json.SharedJsonMapper;
+import io.github.kotlinmania.spring.boot.buildpack.platform.system.Environment;
 import org.springframework.util.Assert;
 import org.springframework.util.StringUtils;
 import org.springframework.util.function.SingletonSupplier;

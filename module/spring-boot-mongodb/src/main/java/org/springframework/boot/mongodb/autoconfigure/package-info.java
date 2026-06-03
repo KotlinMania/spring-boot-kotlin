@@ -18,6 +18,6 @@
  * Auto-configuration for MongoDB.
  */
 @NullMarked
-package org.springframework.boot.mongodb.autoconfigure;
+package io.github.kotlinmania.spring.boot.mongodb.autoconfigure;
 
 import org.jspecify.annotations.NullMarked;

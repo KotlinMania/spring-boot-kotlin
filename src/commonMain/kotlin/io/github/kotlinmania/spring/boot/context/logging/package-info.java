@@ -18,6 +18,6 @@
  * Logging integration with Spring's Application Context.
  */
 @NullMarked
-package org.springframework.boot.context.logging;
+package io.github.kotlinmania.spring.boot.context.logging;
 
 import org.jspecify.annotations.NullMarked;

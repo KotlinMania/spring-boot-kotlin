@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.cli.command.init;
+package io.github.kotlinmania.spring.boot.cli.command.init;
 
 import java.io.IOException;
 import java.net.URI;
@@ -26,8 +26,8 @@ import java.util.Map;
 import org.jspecify.annotations.Nullable;
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.cli.json.JSONException;
-import org.springframework.boot.cli.json.JSONObject;
+import io.github.kotlinmania.spring.boot.cli.json.JSONException;
+import io.github.kotlinmania.spring.boot.cli.json.JSONObject;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.Resource;
 import org.springframework.util.StreamUtils;

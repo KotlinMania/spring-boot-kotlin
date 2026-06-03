@@ -15,7 +15,7 @@
  */
 
 plugins {
-	id "org.springframework.boot.starter"
+	id "io.github.kotlinmania.spring.boot.starter"
 }
 
 description = "Classic starter for testing Spring Boot applications with libraries including JUnit Jupiter, Hamcrest and Mockito"

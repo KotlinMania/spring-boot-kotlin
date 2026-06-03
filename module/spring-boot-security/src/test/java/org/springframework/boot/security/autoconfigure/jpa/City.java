@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.security.autoconfigure.jpa;
+package io.github.kotlinmania.spring.boot.security.autoconfigure.jpa;
 
 import java.io.Serializable;
 

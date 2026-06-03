@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.test.autoconfigure.json;
+package io.github.kotlinmania.spring.boot.test.autoconfigure.json;
 
 import java.lang.reflect.Method;
 
@@ -25,7 +25,7 @@ import org.springframework.aot.hint.MemberCategory;
 import org.springframework.aot.hint.ReflectionHints;
 import org.springframework.aot.hint.RuntimeHints;
 import org.springframework.aot.hint.RuntimeHintsRegistrar;
-import org.springframework.boot.test.json.AbstractJsonMarshalTester;
+import io.github.kotlinmania.spring.boot.test.json.AbstractJsonMarshalTester;
 import org.springframework.core.ResolvableType;
 import org.springframework.util.Assert;
 import org.springframework.util.ReflectionUtils;

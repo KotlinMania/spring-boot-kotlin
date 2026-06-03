@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.autoconfigure.web;
+package io.github.kotlinmania.spring.boot.autoconfigure.web;
 
 import java.time.Duration;
 
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.autoconfigure.web.WebProperties.Resources;
-import org.springframework.boot.autoconfigure.web.WebProperties.Resources.Cache;
+import io.github.kotlinmania.spring.boot.autoconfigure.web.WebProperties.Resources;
+import io.github.kotlinmania.spring.boot.autoconfigure.web.WebProperties.Resources.Cache;
 import org.springframework.http.CacheControl;
 
 import static org.assertj.core.api.Assertions.assertThat;

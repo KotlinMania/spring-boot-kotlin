@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.data.nosql.redis.receiving
+package io.github.kotlinmania.spring.boot.docs.data.nosql.redis.receiving
 
 import org.springframework.data.redis.annotation.RedisListener
 import org.springframework.stereotype.Component

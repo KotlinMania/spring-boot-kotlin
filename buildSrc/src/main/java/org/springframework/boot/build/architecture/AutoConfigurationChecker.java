@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.build.architecture;
+package io.github.kotlinmania.spring.boot.build.architecture;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -65,7 +65,7 @@ class AutoConfigurationChecker {
 
 	private static final class AutoConfigurations {
 
-		private static final String SPRING_BOOT_ROOT_PACKAGE = "org.springframework.boot";
+		private static final String SPRING_BOOT_ROOT_PACKAGE = "io.github.kotlinmania.spring.boot.;
 
 		private static final String IMPORT = "org.springframework.context.annotation.Import";
 

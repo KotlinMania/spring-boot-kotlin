@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.data.jpa.test.autoconfigure;
+package io.github.kotlinmania.spring.boot.data.jpa.test.autoconfigure;
 
 import org.springframework.stereotype.Component;
 

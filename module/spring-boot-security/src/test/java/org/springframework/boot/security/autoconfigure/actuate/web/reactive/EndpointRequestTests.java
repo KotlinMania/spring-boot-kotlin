@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.security.autoconfigure.actuate.web.reactive;
+package io.github.kotlinmania.spring.boot.security.autoconfigure.actuate.web.reactive;
 
 import java.time.Duration;
 import java.util.ArrayList;
@@ -25,17 +25,17 @@ import org.assertj.core.api.AssertDelegateTarget;
 import org.jspecify.annotations.Nullable;
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.actuate.autoconfigure.endpoint.web.WebEndpointProperties;
-import org.springframework.boot.actuate.endpoint.EndpointId;
-import org.springframework.boot.actuate.endpoint.ExposableEndpoint;
-import org.springframework.boot.actuate.endpoint.Operation;
-import org.springframework.boot.actuate.endpoint.annotation.Endpoint;
-import org.springframework.boot.actuate.endpoint.web.PathMappedEndpoint;
-import org.springframework.boot.actuate.endpoint.web.PathMappedEndpoints;
-import org.springframework.boot.actuate.endpoint.web.WebServerNamespace;
-import org.springframework.boot.test.util.TestPropertyValues;
-import org.springframework.boot.web.server.WebServer;
-import org.springframework.boot.web.server.context.WebServerApplicationContext;
+import io.github.kotlinmania.spring.boot.actuate.autoconfigure.endpoint.web.WebEndpointProperties;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.EndpointId;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.ExposableEndpoint;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.Operation;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.annotation.Endpoint;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.web.PathMappedEndpoint;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.web.PathMappedEndpoints;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.web.WebServerNamespace;
+import io.github.kotlinmania.spring.boot.test.util.TestPropertyValues;
+import io.github.kotlinmania.spring.boot.web.server.WebServer;
+import io.github.kotlinmania.spring.boot.web.server.context.WebServerApplicationContext;
 import org.springframework.context.support.StaticApplicationContext;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.server.reactive.ServerHttpRequest;
@@ -534,7 +534,7 @@ class EndpointRequestTests {
 
 	}
 
-	@org.springframework.boot.actuate.endpoint.web.annotation.ServletEndpoint(id = "baz")
+	@io.github.kotlinmania.spring.boot.actuate.endpoint.web.annotation.ServletEndpoint(id = "baz")
 	@SuppressWarnings("removal")
 	static class BazServletEndpoint {
 

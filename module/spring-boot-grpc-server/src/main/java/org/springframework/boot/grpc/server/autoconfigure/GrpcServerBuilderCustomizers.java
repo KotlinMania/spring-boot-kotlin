@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.grpc.server.autoconfigure;
+package io.github.kotlinmania.spring.boot.grpc.server.autoconfigure;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -26,7 +26,7 @@ import io.grpc.ServerBuilder;
 import org.jspecify.annotations.Nullable;
 
 import org.springframework.beans.factory.ObjectProvider;
-import org.springframework.boot.util.LambdaSafe;
+import io.github.kotlinmania.spring.boot.util.LambdaSafe;
 import org.springframework.grpc.server.ServerBuilderCustomizer;
 
 /**

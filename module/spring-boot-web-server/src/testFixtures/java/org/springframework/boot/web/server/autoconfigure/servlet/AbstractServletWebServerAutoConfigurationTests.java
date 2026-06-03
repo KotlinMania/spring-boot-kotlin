@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.web.server.autoconfigure.servlet;
+package io.github.kotlinmania.spring.boot.web.server.autoconfigure.servlet;
 
 import java.io.IOException;
 
@@ -32,20 +32,20 @@ import jakarta.websocket.server.ServerEndpoint;
 import org.junit.jupiter.api.Test;
 
 import org.springframework.beans.factory.config.BeanPostProcessor;
-import org.springframework.boot.autoconfigure.AutoConfigurations;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnExpression;
-import org.springframework.boot.test.context.runner.WebApplicationContextRunner;
-import org.springframework.boot.web.server.WebServer;
-import org.springframework.boot.web.server.WebServerFactoryCustomizer;
-import org.springframework.boot.web.server.context.WebServerApplicationContext;
-import org.springframework.boot.web.server.servlet.ConfigurableServletWebServerFactory;
-import org.springframework.boot.web.server.servlet.CookieSameSiteSupplier;
-import org.springframework.boot.web.server.servlet.MockServletWebServerFactory;
-import org.springframework.boot.web.server.servlet.ServletWebServerFactory;
-import org.springframework.boot.web.server.servlet.context.AnnotationConfigServletWebServerApplicationContext;
-import org.springframework.boot.web.servlet.FilterRegistrationBean;
-import org.springframework.boot.web.servlet.ServletContextInitializer;
-import org.springframework.boot.web.servlet.ServletRegistrationBean;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurations;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnExpression;
+import io.github.kotlinmania.spring.boot.test.context.runner.WebApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.web.server.WebServer;
+import io.github.kotlinmania.spring.boot.web.server.WebServerFactoryCustomizer;
+import io.github.kotlinmania.spring.boot.web.server.context.WebServerApplicationContext;
+import io.github.kotlinmania.spring.boot.web.server.servlet.ConfigurableServletWebServerFactory;
+import io.github.kotlinmania.spring.boot.web.server.servlet.CookieSameSiteSupplier;
+import io.github.kotlinmania.spring.boot.web.server.servlet.MockServletWebServerFactory;
+import io.github.kotlinmania.spring.boot.web.server.servlet.ServletWebServerFactory;
+import io.github.kotlinmania.spring.boot.web.server.servlet.context.AnnotationConfigServletWebServerApplicationContext;
+import io.github.kotlinmania.spring.boot.web.servlet.FilterRegistrationBean;
+import io.github.kotlinmania.spring.boot.web.servlet.ServletContextInitializer;
+import io.github.kotlinmania.spring.boot.web.servlet.ServletRegistrationBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.Ordered;

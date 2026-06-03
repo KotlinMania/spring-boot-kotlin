@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.loader.tools.layer;
+package io.github.kotlinmania.spring.boot.loader.tools.layer;
 
-import org.springframework.boot.loader.tools.Layer;
+import io.github.kotlinmania.spring.boot.loader.tools.Layer;
 
 /**
  * Strategy used by {@link CustomLayers} to select the layer of an item.

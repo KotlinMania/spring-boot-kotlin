@@ -18,6 +18,6 @@
  * Auto-configuration for Neo4j observation.
  */
 @NullMarked
-package org.springframework.boot.neo4j.autoconfigure.observation;
+package io.github.kotlinmania.spring.boot.neo4j.autoconfigure.observation;
 
 import org.jspecify.annotations.NullMarked;

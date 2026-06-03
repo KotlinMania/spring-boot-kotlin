@@ -14,16 +14,16 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.security.oauth2.client.autoconfigure;
+package io.github.kotlinmania.spring.boot.security.oauth2.client.autoconfigure;
 
 import java.util.HashMap;
 import java.util.Map;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.context.properties.PropertyMapper;
-import org.springframework.boot.convert.ApplicationConversionService;
-import org.springframework.boot.security.oauth2.client.autoconfigure.OAuth2ClientProperties.Provider;
+import io.github.kotlinmania.spring.boot.context.properties.PropertyMapper;
+import io.github.kotlinmania.spring.boot.convert.ApplicationConversionService;
+import io.github.kotlinmania.spring.boot.security.oauth2.client.autoconfigure.OAuth2ClientProperties.Provider;
 import org.springframework.core.convert.ConversionException;
 import org.springframework.security.config.oauth2.client.CommonOAuth2Provider;
 import org.springframework.security.oauth2.client.registration.ClientRegistration;

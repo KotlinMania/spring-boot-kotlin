@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.webmvc.error;
+package io.github.kotlinmania.spring.boot.webmvc.error;
 
 import java.lang.reflect.Method;
 import java.util.Collections;
@@ -27,8 +27,8 @@ import jakarta.servlet.http.HttpServletResponse;
 import org.jspecify.annotations.Nullable;
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.web.error.ErrorAttributeOptions;
-import org.springframework.boot.web.error.ErrorAttributeOptions.Include;
+import io.github.kotlinmania.spring.boot.web.error.ErrorAttributeOptions;
+import io.github.kotlinmania.spring.boot.web.error.ErrorAttributeOptions.Include;
 import org.springframework.context.MessageSourceResolvable;
 import org.springframework.core.MethodParameter;
 import org.springframework.http.HttpStatus;
@@ -248,7 +248,7 @@ class DefaultErrorAttributesTests {
 		}
 		if (options.isIncluded(Include.BINDING_ERRORS)) {
 			assertThat(attributes).containsEntry("errors",
-					org.springframework.boot.web.error.Error.wrapIfNecessary(errors));
+					io.github.kotlinmania.spring.boot.web.error.Error.wrapIfNecessary(errors));
 		}
 		else {
 			assertThat(attributes).doesNotContainKey("errors");

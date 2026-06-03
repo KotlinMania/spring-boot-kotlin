@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.build.architecture.beans.regular;
+package io.github.kotlinmania.spring.boot.build.architecture.beans.regular;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

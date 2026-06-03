@@ -18,6 +18,6 @@
  * Spring gRPC server support classes.
  */
 @NullMarked
-package org.springframework.boot.grpc.server;
+package io.github.kotlinmania.spring.boot.grpc.server;
 
 import org.jspecify.annotations.NullMarked;

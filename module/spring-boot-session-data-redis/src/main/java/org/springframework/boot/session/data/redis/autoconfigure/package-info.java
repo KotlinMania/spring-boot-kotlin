@@ -18,6 +18,6 @@
  * Auto-configuration for Spring Session Data Redis.
  */
 @NullMarked
-package org.springframework.boot.session.data.redis.autoconfigure;
+package io.github.kotlinmania.spring.boot.session.data.redis.autoconfigure;
 
 import org.jspecify.annotations.NullMarked;

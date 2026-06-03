@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.web.servlet.support;
+package io.github.kotlinmania.spring.boot.web.servlet.support;
 
 import jakarta.servlet.DispatcherType;
 
-import org.springframework.boot.web.error.ErrorPageRegistrarBeanPostProcessor;
-import org.springframework.boot.web.servlet.FilterRegistrationBean;
+import io.github.kotlinmania.spring.boot.web.error.ErrorPageRegistrarBeanPostProcessor;
+import io.github.kotlinmania.spring.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 

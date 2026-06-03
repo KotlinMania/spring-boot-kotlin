@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.webflux.test.autoconfigure;
+package io.github.kotlinmania.spring.boot.webflux.test.autoconfigure;
 
 import org.junit.jupiter.api.Test;
 
@@ -24,7 +24,7 @@ import org.springframework.test.web.reactive.server.WebTestClient;
 
 /**
  * Tests for {@link WebFluxTest @WebFluxTest} to validate
- * {@link org.springframework.boot.jackson2.JsonComponent} beans are discovered.
+ * {@link io.github.kotlinmania.spring.boot.jackson2.JsonComponent} beans are discovered.
  *
  * @author Stephane Nicoll
  */

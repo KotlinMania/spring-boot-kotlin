@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.opentelemetry.autoconfigure;
+package io.github.kotlinmania.spring.boot.opentelemetry.autoconfigure;
 
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.context.properties.EnableConfigurationProperties;
-import org.springframework.boot.test.context.runner.ApplicationContextRunner;
-import org.springframework.boot.testsupport.classpath.ClassPathExclusions;
+import io.github.kotlinmania.spring.boot.context.properties.EnableConfigurationProperties;
+import io.github.kotlinmania.spring.boot.test.context.runner.ApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.testsupport.classpath.ClassPathExclusions;
 import org.springframework.context.annotation.Configuration;
 
 import static org.assertj.core.api.Assertions.assertThat;

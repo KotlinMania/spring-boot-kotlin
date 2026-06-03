@@ -17,4 +17,4 @@
 /**
  * Classes to help when shelling out to processes in tests.
  */
-package org.springframework.boot.testsupport.process;
+package io.github.kotlinmania.spring.boot.testsupport.process;

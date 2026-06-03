@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.configurationsample.source;
+package io.github.kotlinmania.spring.boot.configurationsample.source;
 
 import lombok.Getter;
 import lombok.Setter;

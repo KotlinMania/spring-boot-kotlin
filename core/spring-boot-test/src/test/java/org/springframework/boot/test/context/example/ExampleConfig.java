@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.test.context.example;
+package io.github.kotlinmania.spring.boot.test.context.example;
 
-import org.springframework.boot.SpringBootConfiguration;
+import io.github.kotlinmania.spring.boot.SpringBootConfiguration;
 
 /**
  * Example config used in {@code AnnotatedClassFinderTests}.

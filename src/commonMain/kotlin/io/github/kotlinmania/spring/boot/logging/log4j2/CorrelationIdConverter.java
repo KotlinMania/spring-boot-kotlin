@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.logging.log4j2;
+package io.github.kotlinmania.spring.boot.logging.log4j2;
 
 import org.apache.logging.log4j.core.LogEvent;
 import org.apache.logging.log4j.core.config.plugins.Plugin;
@@ -26,7 +26,7 @@ import org.apache.logging.log4j.util.PerformanceSensitive;
 import org.apache.logging.log4j.util.ReadOnlyStringMap;
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.logging.CorrelationIdFormatter;
+import io.github.kotlinmania.spring.boot.logging.CorrelationIdFormatter;
 import org.springframework.util.ObjectUtils;
 
 /**

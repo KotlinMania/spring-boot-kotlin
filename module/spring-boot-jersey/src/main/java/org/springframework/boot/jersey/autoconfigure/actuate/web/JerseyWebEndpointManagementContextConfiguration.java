@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.jersey.autoconfigure.actuate.web;
+package io.github.kotlinmania.spring.boot.jersey.autoconfigure.actuate.web;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -31,32 +31,32 @@ import org.glassfish.jersey.server.ResourceConfig;
 import org.glassfish.jersey.server.model.Resource;
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.actuate.autoconfigure.endpoint.condition.ConditionalOnAvailableEndpoint;
-import org.springframework.boot.actuate.autoconfigure.endpoint.expose.EndpointExposure;
-import org.springframework.boot.actuate.autoconfigure.endpoint.web.WebEndpointProperties;
-import org.springframework.boot.actuate.autoconfigure.web.ManagementContextConfiguration;
-import org.springframework.boot.actuate.autoconfigure.web.server.ConditionalOnManagementPort;
-import org.springframework.boot.actuate.autoconfigure.web.server.ManagementPortType;
-import org.springframework.boot.actuate.endpoint.EndpointId;
-import org.springframework.boot.actuate.endpoint.ExposableEndpoint;
-import org.springframework.boot.actuate.endpoint.OperationResponseBody;
-import org.springframework.boot.actuate.endpoint.annotation.Endpoint;
-import org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver;
-import org.springframework.boot.actuate.endpoint.web.EndpointMapping;
-import org.springframework.boot.actuate.endpoint.web.EndpointMediaTypes;
-import org.springframework.boot.actuate.endpoint.web.ExposableWebEndpoint;
-import org.springframework.boot.actuate.endpoint.web.WebEndpointsSupplier;
-import org.springframework.boot.actuate.endpoint.web.WebServerNamespace;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnWebApplication;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnWebApplication.Type;
-import org.springframework.boot.health.actuate.endpoint.HealthEndpoint;
-import org.springframework.boot.health.actuate.endpoint.HealthEndpointGroups;
-import org.springframework.boot.jersey.actuate.endpoint.web.JerseyEndpointResourceFactory;
-import org.springframework.boot.jersey.actuate.endpoint.web.JerseyHealthEndpointAdditionalPathResourceFactory;
-import org.springframework.boot.jersey.autoconfigure.ResourceConfigCustomizer;
+import io.github.kotlinmania.spring.boot.actuate.autoconfigure.endpoint.condition.ConditionalOnAvailableEndpoint;
+import io.github.kotlinmania.spring.boot.actuate.autoconfigure.endpoint.expose.EndpointExposure;
+import io.github.kotlinmania.spring.boot.actuate.autoconfigure.endpoint.web.WebEndpointProperties;
+import io.github.kotlinmania.spring.boot.actuate.autoconfigure.web.ManagementContextConfiguration;
+import io.github.kotlinmania.spring.boot.actuate.autoconfigure.web.server.ConditionalOnManagementPort;
+import io.github.kotlinmania.spring.boot.actuate.autoconfigure.web.server.ManagementPortType;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.EndpointId;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.ExposableEndpoint;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.OperationResponseBody;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.annotation.Endpoint;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.web.EndpointLinksResolver;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.web.EndpointMapping;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.web.EndpointMediaTypes;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.web.ExposableWebEndpoint;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.web.WebEndpointsSupplier;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.web.WebServerNamespace;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnBean;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnClass;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnMissingBean;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnWebApplication;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnWebApplication.Type;
+import io.github.kotlinmania.spring.boot.health.actuate.endpoint.HealthEndpoint;
+import io.github.kotlinmania.spring.boot.health.actuate.endpoint.HealthEndpointGroups;
+import io.github.kotlinmania.spring.boot.jersey.actuate.endpoint.web.JerseyEndpointResourceFactory;
+import io.github.kotlinmania.spring.boot.jersey.actuate.endpoint.web.JerseyHealthEndpointAdditionalPathResourceFactory;
+import io.github.kotlinmania.spring.boot.jersey.autoconfigure.ResourceConfigCustomizer;
 import org.springframework.context.annotation.Bean;
 import org.springframework.core.env.Environment;
 import org.springframework.util.StringUtils;
@@ -84,7 +84,7 @@ class JerseyWebEndpointManagementContextConfiguration {
 	@SuppressWarnings("removal")
 	JerseyWebEndpointsResourcesRegistrar jerseyWebEndpointsResourcesRegistrar(Environment environment,
 			WebEndpointsSupplier webEndpointsSupplier,
-			org.springframework.boot.actuate.endpoint.web.annotation.ServletEndpointsSupplier servletEndpointsSupplier,
+			io.github.kotlinmania.spring.boot.actuate.endpoint.web.annotation.ServletEndpointsSupplier servletEndpointsSupplier,
 			EndpointMediaTypes endpointMediaTypes, WebEndpointProperties webEndpointProperties) {
 		String basePath = webEndpointProperties.getBasePath();
 		boolean shouldRegisterLinks = shouldRegisterLinksMapping(webEndpointProperties, environment, basePath);
@@ -108,10 +108,10 @@ class JerseyWebEndpointManagementContextConfiguration {
 	}
 
 	@Bean
-	@ConditionalOnBean(org.springframework.boot.actuate.endpoint.jackson.EndpointJackson2ObjectMapper.class)
+	@ConditionalOnBean(io.github.kotlinmania.spring.boot.actuate.endpoint.jackson.EndpointJackson2ObjectMapper.class)
 	@SuppressWarnings("removal")
 	ResourceConfigCustomizer endpointJackson2ObjectMapperResourceConfigCustomizer(
-			org.springframework.boot.actuate.endpoint.jackson.EndpointJackson2ObjectMapper endpointJackson2ObjectMapper) {
+			io.github.kotlinmania.spring.boot.actuate.endpoint.jackson.EndpointJackson2ObjectMapper endpointJackson2ObjectMapper) {
 		return (config) -> config.register(
 				new EndpointJackson2ObjectMapperContextResolver(endpointJackson2ObjectMapper), ContextResolver.class);
 	}
@@ -130,7 +130,7 @@ class JerseyWebEndpointManagementContextConfiguration {
 
 		private final WebEndpointsSupplier webEndpointsSupplier;
 
-		private final org.springframework.boot.actuate.endpoint.web.annotation.ServletEndpointsSupplier servletEndpointsSupplier;
+		private final io.github.kotlinmania.spring.boot.actuate.endpoint.web.annotation.ServletEndpointsSupplier servletEndpointsSupplier;
 
 		private final EndpointMediaTypes mediaTypes;
 
@@ -139,7 +139,7 @@ class JerseyWebEndpointManagementContextConfiguration {
 		private final boolean shouldRegisterLinks;
 
 		JerseyWebEndpointsResourcesRegistrar(WebEndpointsSupplier webEndpointsSupplier,
-				org.springframework.boot.actuate.endpoint.web.annotation.ServletEndpointsSupplier servletEndpointsSupplier,
+				io.github.kotlinmania.spring.boot.actuate.endpoint.web.annotation.ServletEndpointsSupplier servletEndpointsSupplier,
 				EndpointMediaTypes endpointMediaTypes, String basePath, boolean shouldRegisterLinks) {
 			this.webEndpointsSupplier = webEndpointsSupplier;
 			this.servletEndpointsSupplier = servletEndpointsSupplier;
@@ -155,7 +155,7 @@ class JerseyWebEndpointManagementContextConfiguration {
 
 		private void register(ResourceConfig config) {
 			Collection<ExposableWebEndpoint> webEndpoints = this.webEndpointsSupplier.getEndpoints();
-			Collection<org.springframework.boot.actuate.endpoint.web.ExposableServletEndpoint> servletEndpoints = this.servletEndpointsSupplier
+			Collection<io.github.kotlinmania.spring.boot.actuate.endpoint.web.ExposableServletEndpoint> servletEndpoints = this.servletEndpointsSupplier
 				.getEndpoints();
 			EndpointLinksResolver linksResolver = getLinksResolver(webEndpoints, servletEndpoints);
 			EndpointMapping mapping = new EndpointMapping(this.basePath);
@@ -165,7 +165,7 @@ class JerseyWebEndpointManagementContextConfiguration {
 		}
 
 		private EndpointLinksResolver getLinksResolver(Collection<ExposableWebEndpoint> webEndpoints,
-				Collection<org.springframework.boot.actuate.endpoint.web.ExposableServletEndpoint> servletEndpoints) {
+				Collection<io.github.kotlinmania.spring.boot.actuate.endpoint.web.ExposableServletEndpoint> servletEndpoints) {
 			List<ExposableEndpoint<?>> endpoints = new ArrayList<>(webEndpoints.size() + servletEndpoints.size());
 			endpoints.addAll(webEndpoints);
 			endpoints.addAll(servletEndpoints);
@@ -224,10 +224,10 @@ class JerseyWebEndpointManagementContextConfiguration {
 	@Priority(Priorities.USER - 100)
 	private static final class EndpointJackson2ObjectMapperContextResolver implements ContextResolver<ObjectMapper> {
 
-		private final org.springframework.boot.actuate.endpoint.jackson.EndpointJackson2ObjectMapper mapper;
+		private final io.github.kotlinmania.spring.boot.actuate.endpoint.jackson.EndpointJackson2ObjectMapper mapper;
 
 		private EndpointJackson2ObjectMapperContextResolver(
-				org.springframework.boot.actuate.endpoint.jackson.EndpointJackson2ObjectMapper mapper) {
+				io.github.kotlinmania.spring.boot.actuate.endpoint.jackson.EndpointJackson2ObjectMapper mapper) {
 			this.mapper = mapper;
 		}
 

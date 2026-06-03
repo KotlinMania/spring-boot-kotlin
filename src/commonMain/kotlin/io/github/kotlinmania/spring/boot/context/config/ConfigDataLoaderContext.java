@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.context.config;
+package io.github.kotlinmania.spring.boot.context.config;
 
-import org.springframework.boot.EnvironmentPostProcessor;
-import org.springframework.boot.bootstrap.ConfigurableBootstrapContext;
+import io.github.kotlinmania.spring.boot.EnvironmentPostProcessor;
+import io.github.kotlinmania.spring.boot.bootstrap.ConfigurableBootstrapContext;
 
 /**
  * Context provided to {@link ConfigDataLoader} methods.

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.opentelemetry.autoconfigure;
+package io.github.kotlinmania.spring.boot.opentelemetry.autoconfigure;
 
 import java.nio.charset.StandardCharsets;
 import java.util.Collections;

@@ -65,8 +65,8 @@ spring:
       max-connections: 50
 ----
 
-TIP: See javadoc:org.springframework.boot.activemq.autoconfigure.ActiveMQProperties[] for more of the supported options.
-You can also register an arbitrary number of beans that implement javadoc:org.springframework.boot.activemq.autoconfigure.ActiveMQConnectionFactoryCustomizer[] for more advanced customizations.
+TIP: See javadoc:io.github.kotlinmania.spring.boot.activemq.autoconfigure.ActiveMQProperties[] for more of the supported options.
+You can also register an arbitrary number of beans that implement javadoc:io.github.kotlinmania.spring.boot.activemq.autoconfigure.ActiveMQConnectionFactoryCustomizer[] for more advanced customizations.
 
 By default, ActiveMQ "Classic" creates a destination if it does not yet exist so that destinations are resolved against their provided names.
 
@@ -120,7 +120,7 @@ spring:
       max-connections: 50
 ----
 
-See javadoc:org.springframework.boot.artemis.autoconfigure.ArtemisProperties[] for more supported options.
+See javadoc:io.github.kotlinmania.spring.boot.artemis.autoconfigure.ArtemisProperties[] for more supported options.
 
 No JNDI lookup is involved, and destinations are resolved against their names, using either the `name` attribute in the ActiveMQ Artemis configuration or the names provided through configuration.
 
@@ -163,7 +163,7 @@ If a javadoc:org.springframework.jms.support.destination.DestinationResolver[], 
 
 In most scenarios, message listener containers should be configured against the native javadoc:jakarta.jms.ConnectionFactory[].
 This way each listener container has its own connection and this gives full responsibility to it in terms of local recovery.
-The auto-configuration uses javadoc:org.springframework.boot.jms.ConnectionFactoryUnwrapper[] to unwrap the native connection factory from the auto-configured one.
+The auto-configuration uses javadoc:io.github.kotlinmania.spring.boot.jms.ConnectionFactoryUnwrapper[] to unwrap the native connection factory from the auto-configured one.
 
 NOTE: The auto-configuration only unwraps `CachedConnectionFactory`.
 
@@ -180,19 +180,19 @@ include-code::MyBean[]
 
 TIP: See the javadoc:org.springframework.jms.annotation.EnableJms[format=annotation] API documentation for more details.
 
-If you need to create more javadoc:org.springframework.jms.config.JmsListenerContainerFactory[] instances or if you want to override the default, Spring Boot provides a javadoc:org.springframework.boot.jms.autoconfigure.DefaultJmsListenerContainerFactoryConfigurer[] that you can use to initialize a javadoc:org.springframework.jms.config.DefaultJmsListenerContainerFactory[] with the same settings as the one that is auto-configured.
+If you need to create more javadoc:org.springframework.jms.config.JmsListenerContainerFactory[] instances or if you want to override the default, Spring Boot provides a javadoc:io.github.kotlinmania.spring.boot.jms.autoconfigure.DefaultJmsListenerContainerFactoryConfigurer[] that you can use to initialize a javadoc:org.springframework.jms.config.DefaultJmsListenerContainerFactory[] with the same settings as the one that is auto-configured.
 
 For instance, the following example exposes another factory that uses a specific javadoc:org.springframework.jms.support.converter.MessageConverter[]:
 
 include-code::custom/MyJmsConfiguration[]
 
-NOTE: In the example above, the customization uses javadoc:org.springframework.boot.jms.ConnectionFactoryUnwrapper[] to associate the native connection factory to the message listener container the same way the auto-configured factory does.
+NOTE: In the example above, the customization uses javadoc:io.github.kotlinmania.spring.boot.jms.ConnectionFactoryUnwrapper[] to associate the native connection factory to the message listener container the same way the auto-configured factory does.
 
 Then you can use the factory in any javadoc:org.springframework.jms.annotation.JmsListener[format=annotation]-annotated method as follows:
 
 include-code::custom/MyBean[]
 
-Analogous to `DefaultJmsListenerContainerFactoryConfigurer`, Spring Boot also provides a javadoc:org.springframework.boot.jms.autoconfigure.SimpleJmsListenerContainerFactoryConfigurer[] that you can use to initialize a javadoc:org.springframework.jms.config.SimpleJmsListenerContainerFactory[] and apply the related settings that auto-configuration provides.
+Analogous to `DefaultJmsListenerContainerFactoryConfigurer`, Spring Boot also provides a javadoc:io.github.kotlinmania.spring.boot.jms.autoconfigure.SimpleJmsListenerContainerFactoryConfigurer[] that you can use to initialize a javadoc:org.springframework.jms.config.SimpleJmsListenerContainerFactory[] and apply the related settings that auto-configuration provides.
 
 TIP: In contrast to javadoc:org.springframework.jms.listener.DefaultMessageListenerContainer[] that uses a pull-based mechanism (polling) to process messages, javadoc:org.springframework.jms.listener.SimpleMessageListenerContainer[] uses a push-based mechanism that's very close to the spirit of the standalone JMS specification.
 To learn more about the differences between the two listener containers, consult their respective javadocs and {url-spring-framework-docs}/integration/jms/using.html#jms-mdp[Spring Framework reference documentation].

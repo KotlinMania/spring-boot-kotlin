@@ -16,7 +16,7 @@
 
 package smoketest.simple;
 
-import org.springframework.boot.ExitCodeGenerator;
+import io.github.kotlinmania.spring.boot.ExitCodeGenerator;
 
 public class ExitException extends RuntimeException implements ExitCodeGenerator {
 

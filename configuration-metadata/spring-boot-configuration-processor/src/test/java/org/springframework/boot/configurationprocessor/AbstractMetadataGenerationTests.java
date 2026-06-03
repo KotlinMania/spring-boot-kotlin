@@ -14,15 +14,15 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.configurationprocessor;
+package io.github.kotlinmania.spring.boot.configurationprocessor;
 
 import java.util.Arrays;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicReference;
 
-import org.springframework.boot.configurationprocessor.metadata.ConfigurationMetadata;
-import org.springframework.boot.configurationprocessor.test.CompiledMetadataReader;
-import org.springframework.boot.configurationprocessor.test.TestConfigurationMetadataAnnotationProcessor;
+import io.github.kotlinmania.spring.boot.configurationprocessor.metadata.ConfigurationMetadata;
+import io.github.kotlinmania.spring.boot.configurationprocessor.test.CompiledMetadataReader;
+import io.github.kotlinmania.spring.boot.configurationprocessor.test.TestConfigurationMetadataAnnotationProcessor;
 import org.springframework.core.test.tools.ResourceFile;
 import org.springframework.core.test.tools.SourceFile;
 import org.springframework.core.test.tools.TestCompiler;

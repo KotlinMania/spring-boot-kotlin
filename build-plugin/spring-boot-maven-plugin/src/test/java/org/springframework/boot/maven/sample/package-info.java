@@ -18,6 +18,6 @@
  * Sample code for testing the Maven plugin for Spring Boot.
  */
 @NullMarked
-package org.springframework.boot.maven.sample;
+package io.github.kotlinmania.spring.boot.maven.sample;
 
 import org.jspecify.annotations.NullMarked;

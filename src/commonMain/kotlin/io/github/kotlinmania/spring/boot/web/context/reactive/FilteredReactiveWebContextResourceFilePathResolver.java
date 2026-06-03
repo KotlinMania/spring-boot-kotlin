@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.web.context.reactive;
+package io.github.kotlinmania.spring.boot.web.context.reactive;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.io.ApplicationResourceLoader;
-import org.springframework.boot.io.ApplicationResourceLoader.FilePathResolver;
+import io.github.kotlinmania.spring.boot.io.ApplicationResourceLoader;
+import io.github.kotlinmania.spring.boot.io.ApplicationResourceLoader.FilePathResolver;
 import org.springframework.core.io.Resource;
 
 /**

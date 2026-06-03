@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.loader.tools;
+package io.github.kotlinmania.spring.boot.loader.tools;
 
 import ch.qos.logback.classic.Level;
 import org.slf4j.ILoggerFactory;

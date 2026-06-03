@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.security.autoconfigure;
+package io.github.kotlinmania.spring.boot.security.autoconfigure;
 
-import org.springframework.boot.autoconfigure.condition.AnyNestedCondition;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingClass;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.AnyNestedCondition;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnMissingClass;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.context.annotation.Condition;
 
 /**

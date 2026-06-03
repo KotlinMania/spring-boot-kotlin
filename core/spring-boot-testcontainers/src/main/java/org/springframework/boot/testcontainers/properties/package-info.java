@@ -18,6 +18,6 @@
  * Dynamic container properties support.
  */
 @NullMarked
-package org.springframework.boot.testcontainers.properties;
+package io.github.kotlinmania.spring.boot.testcontainers.properties;
 
 import org.jspecify.annotations.NullMarked;

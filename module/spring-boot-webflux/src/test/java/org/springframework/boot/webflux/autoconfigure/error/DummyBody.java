@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.webflux.autoconfigure.error;
+package io.github.kotlinmania.spring.boot.webflux.autoconfigure.error;
 
 import jakarta.validation.constraints.NotNull;
 

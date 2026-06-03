@@ -18,6 +18,6 @@
  * Auto-configuration for Log4J2 metrics.
  */
 @NullMarked
-package org.springframework.boot.micrometer.metrics.autoconfigure.logging.log4j2;
+package io.github.kotlinmania.spring.boot.micrometer.metrics.autoconfigure.logging.log4j2;
 
 import org.jspecify.annotations.NullMarked;

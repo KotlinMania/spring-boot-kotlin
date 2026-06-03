@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.grpc.client.autoconfigure;
+package io.github.kotlinmania.spring.boot.grpc.client.autoconfigure;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -28,8 +28,8 @@ import io.grpc.ManagedChannelBuilder;
 import io.grpc.netty.NettyChannelBuilder;
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.grpc.client.autoconfigure.GrpcClientProperties.Channel;
-import org.springframework.boot.grpc.client.autoconfigure.ServiceConfig.HealthCheckConfig;
+import io.github.kotlinmania.spring.boot.grpc.client.autoconfigure.GrpcClientProperties.Channel;
+import io.github.kotlinmania.spring.boot.grpc.client.autoconfigure.ServiceConfig.HealthCheckConfig;
 import org.springframework.grpc.client.GrpcChannelBuilderCustomizer;
 
 import static org.assertj.core.api.Assertions.assertThat;

@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.webclient.autoconfigure;
+package io.github.kotlinmania.spring.boot.webclient.autoconfigure;
 
 import java.util.function.Consumer;
 
-import org.springframework.boot.http.client.HttpClientSettings;
-import org.springframework.boot.http.client.reactive.ClientHttpConnectorBuilder;
-import org.springframework.boot.ssl.SslBundle;
-import org.springframework.boot.ssl.SslBundles;
+import io.github.kotlinmania.spring.boot.http.client.HttpClientSettings;
+import io.github.kotlinmania.spring.boot.http.client.reactive.ClientHttpConnectorBuilder;
+import io.github.kotlinmania.spring.boot.ssl.SslBundle;
+import io.github.kotlinmania.spring.boot.ssl.SslBundles;
 import org.springframework.http.client.reactive.ClientHttpConnector;
 import org.springframework.web.reactive.function.client.WebClient;
 

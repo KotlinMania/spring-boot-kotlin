@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.configurationprocessor;
+package io.github.kotlinmania.spring.boot.configurationprocessor;
 
 import java.util.Collections;
 import java.util.LinkedHashMap;
@@ -34,7 +34,7 @@ import javax.lang.model.type.TypeMirror;
 import javax.lang.model.util.ElementFilter;
 import javax.tools.Diagnostic.Kind;
 
-import org.springframework.boot.configurationprocessor.ConfigurationPropertiesSourceResolver.SourceMetadata;
+import io.github.kotlinmania.spring.boot.configurationprocessor.ConfigurationPropertiesSourceResolver.SourceMetadata;
 
 /**
  * Resolve {@link PropertyDescriptor} instances.

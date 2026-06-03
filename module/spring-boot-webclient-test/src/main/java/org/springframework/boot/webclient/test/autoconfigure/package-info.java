@@ -18,6 +18,6 @@
  * Auto-configuration for web clients.
  */
 @NullMarked
-package org.springframework.boot.webclient.test.autoconfigure;
+package io.github.kotlinmania.spring.boot.webclient.test.autoconfigure;
 
 import org.jspecify.annotations.NullMarked;

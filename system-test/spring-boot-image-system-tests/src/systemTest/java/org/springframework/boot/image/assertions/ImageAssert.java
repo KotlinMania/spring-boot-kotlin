@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.image.assertions;
+package io.github.kotlinmania.spring.boot.image.assertions;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
@@ -29,10 +29,10 @@ import org.apache.commons.compress.archivers.tar.TarArchiveInputStream;
 import org.assertj.core.api.AbstractAssert;
 import org.assertj.core.api.ListAssert;
 
-import org.springframework.boot.buildpack.platform.docker.DockerApi;
-import org.springframework.boot.buildpack.platform.docker.type.ImageReference;
-import org.springframework.boot.buildpack.platform.docker.type.Layer;
-import org.springframework.boot.test.json.JsonContentAssert;
+import io.github.kotlinmania.spring.boot.buildpack.platform.docker.DockerApi;
+import io.github.kotlinmania.spring.boot.buildpack.platform.docker.type.ImageReference;
+import io.github.kotlinmania.spring.boot.buildpack.platform.docker.type.Layer;
+import io.github.kotlinmania.spring.boot.test.json.JsonContentAssert;
 import org.springframework.lang.CheckReturnValue;
 import org.springframework.util.StreamUtils;
 

@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.build.architecture.tangled;
+package io.github.kotlinmania.spring.boot.build.architecture.tangled;
 
-import org.springframework.boot.build.architecture.tangled.sub.TangledTwo;
+import io.github.kotlinmania.spring.boot.build.architecture.tangled.sub.TangledTwo;
 
 public final class TangledOne {
 

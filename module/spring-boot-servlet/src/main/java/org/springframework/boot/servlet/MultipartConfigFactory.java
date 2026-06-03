@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.servlet;
+package io.github.kotlinmania.spring.boot.servlet;
 
 import jakarta.servlet.MultipartConfigElement;
 import org.jspecify.annotations.Nullable;

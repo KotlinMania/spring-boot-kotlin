@@ -18,6 +18,6 @@
  * Classes for {@link java.lang.System System}-related testing.
  */
 @NullMarked
-package org.springframework.boot.test.system;
+package io.github.kotlinmania.spring.boot.test.system;
 
 import org.jspecify.annotations.NullMarked;

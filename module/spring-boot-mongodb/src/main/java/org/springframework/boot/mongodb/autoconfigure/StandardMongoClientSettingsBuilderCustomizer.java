@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.mongodb.autoconfigure;
+package io.github.kotlinmania.spring.boot.mongodb.autoconfigure;
 
 import com.mongodb.MongoClientSettings;
 import com.mongodb.connection.SslSettings;
 import org.bson.UuidRepresentation;
 
-import org.springframework.boot.ssl.SslBundle;
+import io.github.kotlinmania.spring.boot.ssl.SslBundle;
 import org.springframework.core.Ordered;
 import org.springframework.util.Assert;
 

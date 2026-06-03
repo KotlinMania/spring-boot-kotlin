@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.couchbase.autoconfigure;
+package io.github.kotlinmania.spring.boot.couchbase.autoconfigure;
 
 import java.time.Duration;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.context.properties.ConfigurationProperties;
+import io.github.kotlinmania.spring.boot.context.properties.ConfigurationProperties;
 import org.springframework.util.StringUtils;
 
 /**

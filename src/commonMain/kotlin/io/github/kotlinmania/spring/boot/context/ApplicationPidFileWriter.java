@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.context;
+package io.github.kotlinmania.spring.boot.context;
 
 import java.io.File;
 import java.io.IOException;
@@ -28,12 +28,12 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.context.event.ApplicationEnvironmentPreparedEvent;
-import org.springframework.boot.context.event.ApplicationPreparedEvent;
-import org.springframework.boot.context.event.ApplicationReadyEvent;
-import org.springframework.boot.context.event.SpringApplicationEvent;
-import org.springframework.boot.system.ApplicationPid;
-import org.springframework.boot.system.SystemProperties;
+import io.github.kotlinmania.spring.boot.context.event.ApplicationEnvironmentPreparedEvent;
+import io.github.kotlinmania.spring.boot.context.event.ApplicationPreparedEvent;
+import io.github.kotlinmania.spring.boot.context.event.ApplicationReadyEvent;
+import io.github.kotlinmania.spring.boot.context.event.SpringApplicationEvent;
+import io.github.kotlinmania.spring.boot.system.ApplicationPid;
+import io.github.kotlinmania.spring.boot.system.SystemProperties;
 import org.springframework.context.ApplicationListener;
 import org.springframework.core.Ordered;
 import org.springframework.core.env.Environment;
@@ -123,7 +123,7 @@ public class ApplicationPidFileWriter implements ApplicationListener<SpringAppli
 	/**
 	 * Sets the type of application event that will trigger writing of the PID file.
 	 * Defaults to {@link ApplicationPreparedEvent}. NOTE: If you use the
-	 * {@link org.springframework.boot.context.event.ApplicationStartingEvent} to trigger
+	 * {@link io.github.kotlinmania.spring.boot.context.event.ApplicationStartingEvent} to trigger
 	 * the write, you will not be able to specify the PID filename in the Spring
 	 * {@link Environment}.
 	 * @param triggerEventType the trigger event type

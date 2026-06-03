@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.cli.command.init;
+package io.github.kotlinmania.spring.boot.cli.command.init;
 
 import java.io.File;
 import java.io.IOException;
@@ -36,9 +36,9 @@ import org.apache.hc.core5.http.message.BasicHeader;
 import org.apache.hc.core5.http.message.StatusLine;
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.cli.json.JSONException;
-import org.springframework.boot.cli.json.JSONObject;
-import org.springframework.boot.cli.util.Log;
+import io.github.kotlinmania.spring.boot.cli.json.JSONException;
+import io.github.kotlinmania.spring.boot.cli.json.JSONObject;
+import io.github.kotlinmania.spring.boot.cli.util.Log;
 import org.springframework.util.FileCopyUtils;
 import org.springframework.util.StringUtils;
 

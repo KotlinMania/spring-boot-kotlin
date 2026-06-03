@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.security.oauth2.client.autoconfigure;
+package io.github.kotlinmania.spring.boot.security.oauth2.client.autoconfigure;
 
 import org.junit.jupiter.api.Test;
 

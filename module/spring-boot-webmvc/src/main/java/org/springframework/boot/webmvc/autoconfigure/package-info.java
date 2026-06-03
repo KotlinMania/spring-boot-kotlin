@@ -18,6 +18,6 @@
  * Auto-configuration for Spring MVC.
  */
 @NullMarked
-package org.springframework.boot.webmvc.autoconfigure;
+package io.github.kotlinmania.spring.boot.webmvc.autoconfigure;
 
 import org.jspecify.annotations.NullMarked;

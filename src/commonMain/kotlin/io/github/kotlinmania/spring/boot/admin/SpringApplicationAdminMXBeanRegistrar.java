@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package commonMain.kotlin.io.github.kotlinmania.spring.boot.admin;
+package io.github.kotlinmania.spring.boot.admin;
 
 import java.lang.management.ManagementFactory;
 
@@ -29,7 +29,7 @@ import org.jspecify.annotations.Nullable;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.DisposableBean;
 import org.springframework.beans.factory.InitializingBean;
-import org.springframework.boot.context.event.ApplicationReadyEvent;
+import io.github.kotlinmania.spring.boot.context.event.ApplicationReadyEvent;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
 import org.springframework.context.ApplicationEvent;

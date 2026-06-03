@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.jdbc.autoconfigure;
+package io.github.kotlinmania.spring.boot.jdbc.autoconfigure;
 
 import javax.sql.DataSource;
 
@@ -22,14 +22,14 @@ import org.junit.jupiter.api.Test;
 
 import org.springframework.beans.factory.config.BeanDefinition;
 import org.springframework.beans.factory.config.ConfigurableListableBeanFactory;
-import org.springframework.boot.autoconfigure.AutoConfigurations;
-import org.springframework.boot.jdbc.init.DataSourceScriptDatabaseInitializer;
-import org.springframework.boot.sql.autoconfigure.init.ApplicationScriptDatabaseInitializer;
-import org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer;
-import org.springframework.boot.sql.init.DatabaseInitializationSettings;
-import org.springframework.boot.sql.init.dependency.DependsOnDatabaseInitialization;
-import org.springframework.boot.test.context.FilteredClassLoader;
-import org.springframework.boot.test.context.runner.ApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurations;
+import io.github.kotlinmania.spring.boot.jdbc.init.DataSourceScriptDatabaseInitializer;
+import io.github.kotlinmania.spring.boot.sql.autoconfigure.init.ApplicationScriptDatabaseInitializer;
+import io.github.kotlinmania.spring.boot.sql.init.AbstractScriptDatabaseInitializer;
+import io.github.kotlinmania.spring.boot.sql.init.DatabaseInitializationSettings;
+import io.github.kotlinmania.spring.boot.sql.init.dependency.DependsOnDatabaseInitialization;
+import io.github.kotlinmania.spring.boot.test.context.FilteredClassLoader;
+import io.github.kotlinmania.spring.boot.test.context.runner.ApplicationContextRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.jdbc.datasource.init.DatabasePopulator;

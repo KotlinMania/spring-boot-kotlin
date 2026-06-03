@@ -18,6 +18,6 @@
  * Auto-configuration for embedded LDAP.
  */
 @NullMarked
-package org.springframework.boot.ldap.autoconfigure.embedded;
+package io.github.kotlinmania.spring.boot.ldap.autoconfigure.embedded;
 
 import org.jspecify.annotations.NullMarked;

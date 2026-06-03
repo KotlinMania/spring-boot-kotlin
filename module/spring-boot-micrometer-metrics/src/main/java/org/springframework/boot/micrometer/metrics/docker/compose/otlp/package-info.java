@@ -18,6 +18,6 @@
  * Support for Docker Compose OpenTelemetry metrics service connections.
  */
 @NullMarked
-package org.springframework.boot.micrometer.metrics.docker.compose.otlp;
+package io.github.kotlinmania.spring.boot.micrometer.metrics.docker.compose.otlp;
 
 import org.jspecify.annotations.NullMarked;

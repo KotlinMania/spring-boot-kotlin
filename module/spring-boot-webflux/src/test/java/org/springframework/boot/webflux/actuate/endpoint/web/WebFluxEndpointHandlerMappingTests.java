@@ -14,15 +14,15 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.webflux.actuate.endpoint.web;
+package io.github.kotlinmania.spring.boot.webflux.actuate.endpoint.web;
 
 import org.junit.jupiter.api.Test;
 
 import org.springframework.aot.hint.RuntimeHints;
 import org.springframework.aot.hint.predicate.RuntimeHintsPredicates;
-import org.springframework.boot.actuate.endpoint.web.Link;
-import org.springframework.boot.webflux.actuate.endpoint.web.WebFluxEndpointHandlerMapping.WebFluxEndpointHandlerMappingRuntimeHints;
-import org.springframework.boot.webflux.actuate.endpoint.web.WebFluxEndpointHandlerMapping.WebFluxLinksHandler;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.web.Link;
+import io.github.kotlinmania.spring.boot.webflux.actuate.endpoint.web.WebFluxEndpointHandlerMapping.WebFluxEndpointHandlerMappingRuntimeHints;
+import io.github.kotlinmania.spring.boot.webflux.actuate.endpoint.web.WebFluxEndpointHandlerMapping.WebFluxLinksHandler;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

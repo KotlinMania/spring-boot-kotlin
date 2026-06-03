@@ -23,11 +23,11 @@ description = "Spring Boot Build"
 defaultTasks 'build'
 
 allprojects {
-	group = "org.springframework.boot"
+	group = "io.github.kotlinmania.spring.boot.
 }
 
 subprojects {
-	apply plugin: "org.springframework.boot.conventions"
+	apply plugin: "io.github.kotlinmania.spring.boot.conventions"
 
 	repositories {
 		mavenCentral()

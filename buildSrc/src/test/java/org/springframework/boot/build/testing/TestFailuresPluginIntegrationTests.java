@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.build.testing;
+package io.github.kotlinmania.spring.boot.build.testing;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -156,7 +156,7 @@ class TestFailuresPluginIntegrationTests {
 		withPrintWriter(new File(dir, "build.gradle"), (writer) -> {
 			writer.println("plugins {");
 			writer.println("	id 'java'");
-			writer.println("	id 'org.springframework.boot.test-failures'");
+			writer.println("	id 'io.github.kotlinmania.spring.boot.test-failures'");
 			writer.println("}");
 			writer.println();
 			writer.println("repositories {");

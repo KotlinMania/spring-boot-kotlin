@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.gradle.tasks.run;
+package io.github.kotlinmania.spring.boot.gradle.tasks.run;
 
 import java.io.File;
 import java.util.Set;

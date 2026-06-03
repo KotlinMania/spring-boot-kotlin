@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.devtools.tests;
+package io.github.kotlinmania.spring.boot.devtools.tests;
 
 import java.io.File;
 import java.io.FileInputStream;

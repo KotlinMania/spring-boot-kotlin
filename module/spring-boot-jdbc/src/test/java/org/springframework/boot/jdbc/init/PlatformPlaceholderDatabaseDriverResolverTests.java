@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.jdbc.init;
+package io.github.kotlinmania.spring.boot.jdbc.init;
 
 import java.sql.Connection;
 import java.sql.DatabaseMetaData;
@@ -24,7 +24,7 @@ import javax.sql.DataSource;
 
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.jdbc.DatabaseDriver;
+import io.github.kotlinmania.spring.boot.jdbc.DatabaseDriver;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatIllegalStateException;

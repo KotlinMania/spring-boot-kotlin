@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.tomcat.servlet;
+package io.github.kotlinmania.spring.boot.tomcat.servlet;
 
 import java.util.Collections;
 import java.util.LinkedHashSet;

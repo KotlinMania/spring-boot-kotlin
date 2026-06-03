@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.web.servlet.support;
+package io.github.kotlinmania.spring.boot.web.servlet.support;
 
 import java.sql.Driver;
 import java.sql.DriverManager;
@@ -31,17 +31,17 @@ import org.apache.commons.logging.LogFactory;
 import org.jspecify.annotations.Nullable;
 import reactor.core.scheduler.Schedulers;
 
-import org.springframework.boot.ApplicationContextFactory;
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.WebApplicationType;
-import org.springframework.boot.builder.ParentContextApplicationContextInitializer;
-import org.springframework.boot.builder.SpringApplicationBuilder;
-import org.springframework.boot.context.event.ApplicationEnvironmentPreparedEvent;
-import org.springframework.boot.context.logging.LoggingApplicationListener;
-import org.springframework.boot.web.context.servlet.AnnotationConfigServletWebApplicationContext;
-import org.springframework.boot.web.context.servlet.ApplicationServletEnvironment;
-import org.springframework.boot.web.context.servlet.WebApplicationContextInitializer;
-import org.springframework.boot.web.servlet.ServletContextInitializer;
+import io.github.kotlinmania.spring.boot.ApplicationContextFactory;
+import io.github.kotlinmania.spring.boot.SpringApplication;
+import io.github.kotlinmania.spring.boot.WebApplicationType;
+import io.github.kotlinmania.spring.boot.builder.ParentContextApplicationContextInitializer;
+import io.github.kotlinmania.spring.boot.builder.SpringApplicationBuilder;
+import io.github.kotlinmania.spring.boot.context.event.ApplicationEnvironmentPreparedEvent;
+import io.github.kotlinmania.spring.boot.context.logging.LoggingApplicationListener;
+import io.github.kotlinmania.spring.boot.web.context.servlet.AnnotationConfigServletWebApplicationContext;
+import io.github.kotlinmania.spring.boot.web.context.servlet.ApplicationServletEnvironment;
+import io.github.kotlinmania.spring.boot.web.context.servlet.WebApplicationContextInitializer;
+import io.github.kotlinmania.spring.boot.web.servlet.ServletContextInitializer;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextException;
 import org.springframework.context.ApplicationListener;

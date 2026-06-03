@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.session.jdbc.autoconfigure;
+package io.github.kotlinmania.spring.boot.session.jdbc.autoconfigure;
 
 import java.util.Collections;
 import java.util.Set;
 
-import org.springframework.boot.sql.init.dependency.AbstractBeansOfTypeDependsOnDatabaseInitializationDetector;
-import org.springframework.boot.sql.init.dependency.DependsOnDatabaseInitializationDetector;
+import io.github.kotlinmania.spring.boot.sql.init.dependency.AbstractBeansOfTypeDependsOnDatabaseInitializationDetector;
+import io.github.kotlinmania.spring.boot.sql.init.dependency.DependsOnDatabaseInitializationDetector;
 import org.springframework.session.jdbc.JdbcIndexedSessionRepository;
 
 /**

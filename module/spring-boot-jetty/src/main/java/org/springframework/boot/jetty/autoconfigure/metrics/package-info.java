@@ -18,6 +18,6 @@
  * Auto-configuration for Jetty metrics.
  */
 @NullMarked
-package org.springframework.boot.jetty.autoconfigure.metrics;
+package io.github.kotlinmania.spring.boot.jetty.autoconfigure.metrics;
 
 import org.jspecify.annotations.NullMarked;

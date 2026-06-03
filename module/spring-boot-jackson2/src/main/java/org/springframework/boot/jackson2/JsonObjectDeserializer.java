@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.jackson2;
+package io.github.kotlinmania.spring.boot.jackson2;
 
 import java.io.IOException;
 import java.math.BigDecimal;
@@ -31,7 +31,7 @@ import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.node.NullNode;
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.jackson.ObjectValueDeserializer;
+import io.github.kotlinmania.spring.boot.jackson.ObjectValueDeserializer;
 import org.springframework.util.Assert;
 
 /**

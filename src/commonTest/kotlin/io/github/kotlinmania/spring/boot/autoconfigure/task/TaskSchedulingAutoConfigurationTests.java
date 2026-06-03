@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.autoconfigure.task;
+package io.github.kotlinmania.spring.boot.autoconfigure.task;
 
 import java.time.Duration;
 import java.util.ArrayList;
@@ -32,13 +32,13 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.condition.EnabledForJreRange;
 import org.junit.jupiter.api.condition.JRE;
 
-import org.springframework.boot.LazyInitializationBeanFactoryPostProcessor;
-import org.springframework.boot.autoconfigure.AutoConfigurations;
-import org.springframework.boot.task.SimpleAsyncTaskSchedulerBuilder;
-import org.springframework.boot.task.SimpleAsyncTaskSchedulerCustomizer;
-import org.springframework.boot.task.ThreadPoolTaskSchedulerBuilder;
-import org.springframework.boot.task.ThreadPoolTaskSchedulerCustomizer;
-import org.springframework.boot.test.context.runner.ApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.LazyInitializationBeanFactoryPostProcessor;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurations;
+import io.github.kotlinmania.spring.boot.task.SimpleAsyncTaskSchedulerBuilder;
+import io.github.kotlinmania.spring.boot.task.SimpleAsyncTaskSchedulerCustomizer;
+import io.github.kotlinmania.spring.boot.task.ThreadPoolTaskSchedulerBuilder;
+import io.github.kotlinmania.spring.boot.task.ThreadPoolTaskSchedulerCustomizer;
+import io.github.kotlinmania.spring.boot.test.context.runner.ApplicationContextRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.task.TaskDecorator;

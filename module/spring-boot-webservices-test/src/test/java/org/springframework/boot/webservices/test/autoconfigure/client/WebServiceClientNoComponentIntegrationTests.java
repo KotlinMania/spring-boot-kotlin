@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.webservices.test.autoconfigure.client;
+package io.github.kotlinmania.spring.boot.webservices.test.autoconfigure.client;
 
 import org.junit.jupiter.api.Test;
 
 import org.springframework.beans.factory.NoSuchBeanDefinitionException;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.webservices.client.WebServiceTemplateBuilder;
+import io.github.kotlinmania.spring.boot.webservices.client.WebServiceTemplateBuilder;
 import org.springframework.context.ApplicationContext;
 import org.springframework.ws.test.client.MockWebServiceServer;
 import org.springframework.xml.transform.StringSource;

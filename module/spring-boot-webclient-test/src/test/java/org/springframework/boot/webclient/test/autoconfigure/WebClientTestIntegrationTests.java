@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.webclient.test.autoconfigure;
+package io.github.kotlinmania.spring.boot.webclient.test.autoconfigure;
 
 import java.nio.charset.StandardCharsets;
 

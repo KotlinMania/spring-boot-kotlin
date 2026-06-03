@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.actuate.endpoint.invoke;
+package io.github.kotlinmania.spring.boot.actuate.endpoint.invoke;
 
 import org.jspecify.annotations.Nullable;
 

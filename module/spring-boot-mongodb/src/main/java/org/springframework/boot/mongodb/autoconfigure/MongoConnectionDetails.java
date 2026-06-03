@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.mongodb.autoconfigure;
+package io.github.kotlinmania.spring.boot.mongodb.autoconfigure;
 
 import com.mongodb.ConnectionString;
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.autoconfigure.service.connection.ConnectionDetails;
-import org.springframework.boot.ssl.SslBundle;
+import io.github.kotlinmania.spring.boot.autoconfigure.service.connection.ConnectionDetails;
+import io.github.kotlinmania.spring.boot.ssl.SslBundle;
 
 /**
  * Details required to establish a connection to a MongoDB service.

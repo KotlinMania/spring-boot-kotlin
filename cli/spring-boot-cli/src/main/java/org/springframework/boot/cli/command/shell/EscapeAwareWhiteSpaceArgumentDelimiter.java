@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.cli.command.shell;
+package io.github.kotlinmania.spring.boot.cli.command.shell;
 
 import jline.console.completer.ArgumentCompleter.ArgumentList;
 import jline.console.completer.ArgumentCompleter.WhitespaceArgumentDelimiter;

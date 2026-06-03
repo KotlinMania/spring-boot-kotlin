@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.configurationsample.recursive;
+package io.github.kotlinmania.spring.boot.configurationsample.recursive;
 
-import org.springframework.boot.configurationsample.TestConfigurationProperties;
+import io.github.kotlinmania.spring.boot.configurationsample.TestConfigurationProperties;
 
 @TestConfigurationProperties("prefix")
 public class RecursiveProperties {

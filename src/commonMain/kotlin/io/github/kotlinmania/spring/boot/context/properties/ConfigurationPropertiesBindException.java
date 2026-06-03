@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.context.properties;
+package io.github.kotlinmania.spring.boot.context.properties;
 
 import org.springframework.beans.factory.BeanCreationException;
 import org.springframework.util.ClassUtils;

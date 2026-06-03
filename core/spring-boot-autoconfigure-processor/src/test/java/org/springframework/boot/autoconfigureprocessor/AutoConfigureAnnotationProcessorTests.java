@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.autoconfigureprocessor;
+package io.github.kotlinmania.spring.boot.autoconfigureprocessor;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -43,19 +43,19 @@ class AutoConfigureAnnotationProcessorTests {
 		compile(TestClassConfiguration.class, (properties) -> {
 			assertThat(properties).hasSize(7);
 			assertThat(properties).containsEntry(
-					"org.springframework.boot.autoconfigureprocessor.TestClassConfiguration.ConditionalOnClass",
-					"java.io.InputStream,org.springframework.boot.autoconfigureprocessor."
+					"io.github.kotlinmania.spring.boot.autoconfigureprocessor.TestClassConfiguration.ConditionalOnClass",
+					"java.io.InputStream,io.github.kotlinmania.spring.boot.autoconfigureprocessor."
 							+ "TestClassConfiguration$Nested,org.springframework.foo");
 			assertThat(properties)
-				.containsKey("org.springframework.boot.autoconfigureprocessor.TestClassConfiguration");
+				.containsKey("io.github.kotlinmania.spring.boot.autoconfigureprocessor.TestClassConfiguration");
 			assertThat(properties)
-				.containsKey("org.springframework.boot.autoconfigureprocessor.TestClassConfiguration$Nested");
+				.containsKey("io.github.kotlinmania.spring.boot.autoconfigureprocessor.TestClassConfiguration$Nested");
 			assertThat(properties).containsEntry(
-					"org.springframework.boot.autoconfigureprocessor.TestClassConfiguration.ConditionalOnBean",
+					"io.github.kotlinmania.spring.boot.autoconfigureprocessor.TestClassConfiguration.ConditionalOnBean",
 					"java.io.OutputStream");
-			assertThat(properties).containsEntry("org.springframework.boot.autoconfigureprocessor."
+			assertThat(properties).containsEntry("io.github.kotlinmania.spring.boot.autoconfigureprocessor."
 					+ "TestClassConfiguration.ConditionalOnSingleCandidate", "java.io.OutputStream");
-			assertThat(properties).containsEntry("org.springframework.boot.autoconfigureprocessor."
+			assertThat(properties).containsEntry("io.github.kotlinmania.spring.boot.autoconfigureprocessor."
 					+ "TestClassConfiguration.ConditionalOnWebApplication", "SERVLET");
 		});
 	}
@@ -64,12 +64,12 @@ class AutoConfigureAnnotationProcessorTests {
 	void annotatedClassWithOnlyAutoConfiguration() {
 		compile(TestAutoConfigurationOnlyConfiguration.class, (properties) -> {
 			assertThat(properties).containsEntry(
-					"org.springframework.boot.autoconfigureprocessor.TestAutoConfigurationOnlyConfiguration", "");
+					"io.github.kotlinmania.spring.boot.autoconfigureprocessor.TestAutoConfigurationOnlyConfiguration", "");
 			assertThat(properties).doesNotContainEntry(
-					"org.springframework.boot.autoconfigureprocessor.TestAutoConfigurationOnlyConfiguration.AutoConfigureAfter",
+					"io.github.kotlinmania.spring.boot.autoconfigureprocessor.TestAutoConfigurationOnlyConfiguration.AutoConfigureAfter",
 					"");
 			assertThat(properties).doesNotContainEntry(
-					"org.springframework.boot.autoconfigureprocessor.TestAutoConfigurationOnlyConfiguration.AutoConfigureBefore",
+					"io.github.kotlinmania.spring.boot.autoconfigureprocessor.TestAutoConfigurationOnlyConfiguration.AutoConfigureBefore",
 					"");
 		});
 	}
@@ -79,7 +79,7 @@ class AutoConfigureAnnotationProcessorTests {
 		compile(TestOnBeanWithNameClassConfiguration.class, (properties) -> {
 			assertThat(properties).hasSize(2);
 			assertThat(properties).containsEntry(
-					"org.springframework.boot.autoconfigureprocessor.TestOnBeanWithNameClassConfiguration.ConditionalOnBean",
+					"io.github.kotlinmania.spring.boot.autoconfigureprocessor.TestOnBeanWithNameClassConfiguration.ConditionalOnBean",
 					"");
 		});
 	}
@@ -93,15 +93,15 @@ class AutoConfigureAnnotationProcessorTests {
 	void annotatedClassWithOrder() {
 		compile(TestOrderedClassConfiguration.class, (properties) -> {
 			assertThat(properties).containsEntry(
-					"org.springframework.boot.autoconfigureprocessor.TestOrderedClassConfiguration.ConditionalOnClass",
+					"io.github.kotlinmania.spring.boot.autoconfigureprocessor.TestOrderedClassConfiguration.ConditionalOnClass",
 					"java.io.InputStream,java.io.OutputStream");
-			assertThat(properties).containsEntry("org.springframework.boot.autoconfigureprocessor."
+			assertThat(properties).containsEntry("io.github.kotlinmania.spring.boot.autoconfigureprocessor."
 					+ "TestOrderedClassConfiguration.AutoConfigureBefore", "test.before1,test.before2");
 			assertThat(properties).containsEntry(
-					"org.springframework.boot.autoconfigureprocessor.TestOrderedClassConfiguration.AutoConfigureAfter",
+					"io.github.kotlinmania.spring.boot.autoconfigureprocessor.TestOrderedClassConfiguration.AutoConfigureAfter",
 					"java.io.ObjectInputStream");
 			assertThat(properties).containsEntry(
-					"org.springframework.boot.autoconfigureprocessor.TestOrderedClassConfiguration.AutoConfigureOrder",
+					"io.github.kotlinmania.spring.boot.autoconfigureprocessor.TestOrderedClassConfiguration.AutoConfigureOrder",
 					"123");
 		});
 
@@ -111,12 +111,12 @@ class AutoConfigureAnnotationProcessorTests {
 	void annotatedClassWithAutoConfiguration() {
 		compile(TestAutoConfigurationConfiguration.class, (properties) -> {
 			assertThat(properties).containsEntry(
-					"org.springframework.boot.autoconfigureprocessor.TestAutoConfigurationConfiguration", "");
+					"io.github.kotlinmania.spring.boot.autoconfigureprocessor.TestAutoConfigurationConfiguration", "");
 			assertThat(properties).containsEntry(
-					"org.springframework.boot.autoconfigureprocessor.TestAutoConfigurationConfiguration.AutoConfigureBefore",
+					"io.github.kotlinmania.spring.boot.autoconfigureprocessor.TestAutoConfigurationConfiguration.AutoConfigureBefore",
 					"java.io.InputStream,test.before1,test.before2");
 			assertThat(properties).containsEntry(
-					"org.springframework.boot.autoconfigureprocessor.TestAutoConfigurationConfiguration.AutoConfigureAfter",
+					"io.github.kotlinmania.spring.boot.autoconfigureprocessor.TestAutoConfigurationConfiguration.AutoConfigureAfter",
 					"java.io.OutputStream,test.after1,test.after2");
 		});
 	}
@@ -125,12 +125,12 @@ class AutoConfigureAnnotationProcessorTests {
 	void annotatedClassWithAutoConfigurationMerged() {
 		compile(TestMergedAutoConfigurationConfiguration.class, (properties) -> {
 			assertThat(properties).containsEntry(
-					"org.springframework.boot.autoconfigureprocessor.TestMergedAutoConfigurationConfiguration", "");
+					"io.github.kotlinmania.spring.boot.autoconfigureprocessor.TestMergedAutoConfigurationConfiguration", "");
 			assertThat(properties).containsEntry(
-					"org.springframework.boot.autoconfigureprocessor.TestMergedAutoConfigurationConfiguration.AutoConfigureBefore",
+					"io.github.kotlinmania.spring.boot.autoconfigureprocessor.TestMergedAutoConfigurationConfiguration.AutoConfigureBefore",
 					"java.io.InputStream,test.before1,test.before2,java.io.ObjectInputStream,test.before3,test.before4");
 			assertThat(properties).containsEntry(
-					"org.springframework.boot.autoconfigureprocessor.TestMergedAutoConfigurationConfiguration.AutoConfigureAfter",
+					"io.github.kotlinmania.spring.boot.autoconfigureprocessor.TestMergedAutoConfigurationConfiguration.AutoConfigureAfter",
 					"java.io.OutputStream,test.after1,test.after2,java.io.ObjectOutputStream,test.after3,test.after4");
 		});
 	}

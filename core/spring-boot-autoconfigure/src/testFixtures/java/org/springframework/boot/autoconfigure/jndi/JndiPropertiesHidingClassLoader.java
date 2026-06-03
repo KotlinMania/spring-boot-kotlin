@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.autoconfigure.jndi;
+package io.github.kotlinmania.spring.boot.autoconfigure.jndi;
 
 import java.io.IOException;
 import java.net.URL;

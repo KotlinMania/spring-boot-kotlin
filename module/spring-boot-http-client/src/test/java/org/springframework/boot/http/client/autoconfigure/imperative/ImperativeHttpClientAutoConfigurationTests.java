@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.http.client.autoconfigure.imperative;
+package io.github.kotlinmania.spring.boot.http.client.autoconfigure.imperative;
 
 import java.net.http.HttpClient;
 import java.time.Duration;
@@ -25,22 +25,22 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.condition.EnabledForJreRange;
 import org.junit.jupiter.api.condition.JRE;
 
-import org.springframework.boot.autoconfigure.AutoConfigurations;
-import org.springframework.boot.autoconfigure.ssl.SslAutoConfiguration;
-import org.springframework.boot.http.client.ClientHttpRequestFactoryBuilder;
-import org.springframework.boot.http.client.HttpClientSettings;
-import org.springframework.boot.http.client.HttpComponentsClientHttpRequestFactoryBuilder;
-import org.springframework.boot.http.client.HttpRedirects;
-import org.springframework.boot.http.client.JdkClientHttpRequestFactoryBuilder;
-import org.springframework.boot.http.client.JettyClientHttpRequestFactoryBuilder;
-import org.springframework.boot.http.client.ReactorClientHttpRequestFactoryBuilder;
-import org.springframework.boot.http.client.SimpleClientHttpRequestFactoryBuilder;
-import org.springframework.boot.http.client.autoconfigure.ClientHttpRequestFactoryBuilderCustomizer;
-import org.springframework.boot.http.client.autoconfigure.HttpClientAutoConfiguration;
-import org.springframework.boot.ssl.SslBundle;
-import org.springframework.boot.test.context.FilteredClassLoader;
-import org.springframework.boot.test.context.runner.ApplicationContextRunner;
-import org.springframework.boot.test.context.runner.ReactiveWebApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurations;
+import io.github.kotlinmania.spring.boot.autoconfigure.ssl.SslAutoConfiguration;
+import io.github.kotlinmania.spring.boot.http.client.ClientHttpRequestFactoryBuilder;
+import io.github.kotlinmania.spring.boot.http.client.HttpClientSettings;
+import io.github.kotlinmania.spring.boot.http.client.HttpComponentsClientHttpRequestFactoryBuilder;
+import io.github.kotlinmania.spring.boot.http.client.HttpRedirects;
+import io.github.kotlinmania.spring.boot.http.client.JdkClientHttpRequestFactoryBuilder;
+import io.github.kotlinmania.spring.boot.http.client.JettyClientHttpRequestFactoryBuilder;
+import io.github.kotlinmania.spring.boot.http.client.ReactorClientHttpRequestFactoryBuilder;
+import io.github.kotlinmania.spring.boot.http.client.SimpleClientHttpRequestFactoryBuilder;
+import io.github.kotlinmania.spring.boot.http.client.autoconfigure.ClientHttpRequestFactoryBuilderCustomizer;
+import io.github.kotlinmania.spring.boot.http.client.autoconfigure.HttpClientAutoConfiguration;
+import io.github.kotlinmania.spring.boot.ssl.SslBundle;
+import io.github.kotlinmania.spring.boot.test.context.FilteredClassLoader;
+import io.github.kotlinmania.spring.boot.test.context.runner.ApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.test.context.runner.ReactiveWebApplicationContextRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.task.VirtualThreadTaskExecutor;
@@ -92,7 +92,7 @@ class ImperativeHttpClientAutoConfigurationTests {
 
 	private List<String> sslPropertyValues() {
 		List<String> propertyValues = new ArrayList<>();
-		String location = "classpath:org/springframework/boot/autoconfigure/ssl/";
+		String location = "classpath:io.github.kotlinmania.spring.boot.autoconfigure/ssl/";
 		propertyValues.add("spring.ssl.bundle.pem.test.key.alias=alias1");
 		propertyValues.add("spring.ssl.bundle.pem.test.truststore.type=PKCS12");
 		propertyValues.add("spring.ssl.bundle.pem.test.truststore.certificate=" + location + "rsa-cert.pem");

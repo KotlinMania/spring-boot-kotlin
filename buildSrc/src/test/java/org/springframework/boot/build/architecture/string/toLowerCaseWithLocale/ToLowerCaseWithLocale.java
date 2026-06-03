@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.build.architecture.string.toLowerCaseWithLocale;
+package io.github.kotlinmania.spring.boot.build.architecture.string.toLowerCaseWithLocale;
 
 import java.util.Locale;
 

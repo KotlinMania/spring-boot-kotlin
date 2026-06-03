@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.logging.java;
+package io.github.kotlinmania.spring.boot.logging.java;
 
 import org.jspecify.annotations.Nullable;
 
@@ -30,8 +30,8 @@ class JavaLoggingSystemRuntimeHints implements RuntimeHintsRegistrar {
 
 	@Override
 	public void registerHints(RuntimeHints hints, @Nullable ClassLoader classLoader) {
-		hints.resources().registerPattern("org/springframework/boot/logging/java/logging.properties");
-		hints.resources().registerPattern("org/springframework/boot/logging/java/logging-file.properties");
+		hints.resources().registerPattern("io.github.kotlinmania.spring.boot.logging/java/logging.properties");
+		hints.resources().registerPattern("io.github.kotlinmania.spring.boot.logging/java/logging-file.properties");
 	}
 
 }

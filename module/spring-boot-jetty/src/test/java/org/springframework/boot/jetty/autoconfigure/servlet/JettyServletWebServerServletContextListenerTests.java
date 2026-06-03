@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.jetty.autoconfigure.servlet;
+package io.github.kotlinmania.spring.boot.jetty.autoconfigure.servlet;
 
 import jakarta.servlet.ServletContextListener;
 
-import org.springframework.boot.jetty.servlet.JettyServletWebServerFactory;
-import org.springframework.boot.web.server.servlet.AbstractServletWebServerServletContextListenerTests;
+import io.github.kotlinmania.spring.boot.jetty.servlet.JettyServletWebServerFactory;
+import io.github.kotlinmania.spring.boot.web.server.servlet.AbstractServletWebServerServletContextListenerTests;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 

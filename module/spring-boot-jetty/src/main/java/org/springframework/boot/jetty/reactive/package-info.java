@@ -18,6 +18,6 @@
  * Reactive web server implementation backed by Jetty.
  */
 @NullMarked
-package org.springframework.boot.jetty.reactive;
+package io.github.kotlinmania.spring.boot.jetty.reactive;
 
 import org.jspecify.annotations.NullMarked;

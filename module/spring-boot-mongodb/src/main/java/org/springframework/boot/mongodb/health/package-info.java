@@ -18,6 +18,6 @@
  * MongoDB health integration using Spring Data MongoDB.
  */
 @NullMarked
-package org.springframework.boot.mongodb.health;
+package io.github.kotlinmania.spring.boot.mongodb.health;
 
 import org.jspecify.annotations.NullMarked;

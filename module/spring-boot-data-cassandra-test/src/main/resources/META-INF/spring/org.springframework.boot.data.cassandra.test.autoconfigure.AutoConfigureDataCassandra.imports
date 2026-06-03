@@ -1,7 +1,7 @@
-org.springframework.boot.autoconfigure.ssl.SslAutoConfiguration
-org.springframework.boot.cassandra.autoconfigure.CassandraAutoConfiguration
-org.springframework.boot.data.cassandra.autoconfigure.DataCassandraAutoConfiguration
-org.springframework.boot.data.cassandra.autoconfigure.DataCassandraReactiveAutoConfiguration
-org.springframework.boot.data.cassandra.autoconfigure.DataCassandraReactiveRepositoriesAutoConfiguration
-org.springframework.boot.data.cassandra.autoconfigure.DataCassandraRepositoriesAutoConfiguration
-optional:org.springframework.boot.testcontainers.service.connection.ServiceConnectionAutoConfiguration
+io.github.kotlinmania.spring.boot.autoconfigure.ssl.SslAutoConfiguration
+io.github.kotlinmania.spring.boot.cassandra.autoconfigure.CassandraAutoConfiguration
+io.github.kotlinmania.spring.boot.data.cassandra.autoconfigure.DataCassandraAutoConfiguration
+io.github.kotlinmania.spring.boot.data.cassandra.autoconfigure.DataCassandraReactiveAutoConfiguration
+io.github.kotlinmania.spring.boot.data.cassandra.autoconfigure.DataCassandraReactiveRepositoriesAutoConfiguration
+io.github.kotlinmania.spring.boot.data.cassandra.autoconfigure.DataCassandraRepositoriesAutoConfiguration
+optional:io.github.kotlinmania.spring.boot.testcontainers.service.connection.ServiceConnectionAutoConfiguration

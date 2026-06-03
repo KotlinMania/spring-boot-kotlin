@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.gradle.tasks.bundling;
+package io.github.kotlinmania.spring.boot.gradle.tasks.bundling;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -33,15 +33,15 @@ import org.gradle.api.tasks.Input;
 import org.gradle.api.tasks.Optional;
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.loader.tools.Layer;
-import org.springframework.boot.loader.tools.Layers;
-import org.springframework.boot.loader.tools.Library;
-import org.springframework.boot.loader.tools.layer.ApplicationContentFilter;
-import org.springframework.boot.loader.tools.layer.ContentFilter;
-import org.springframework.boot.loader.tools.layer.ContentSelector;
-import org.springframework.boot.loader.tools.layer.CustomLayers;
-import org.springframework.boot.loader.tools.layer.IncludeExcludeContentSelector;
-import org.springframework.boot.loader.tools.layer.LibraryContentFilter;
+import io.github.kotlinmania.spring.boot.loader.tools.Layer;
+import io.github.kotlinmania.spring.boot.loader.tools.Layers;
+import io.github.kotlinmania.spring.boot.loader.tools.Library;
+import io.github.kotlinmania.spring.boot.loader.tools.layer.ApplicationContentFilter;
+import io.github.kotlinmania.spring.boot.loader.tools.layer.ContentFilter;
+import io.github.kotlinmania.spring.boot.loader.tools.layer.ContentSelector;
+import io.github.kotlinmania.spring.boot.loader.tools.layer.CustomLayers;
+import io.github.kotlinmania.spring.boot.loader.tools.layer.IncludeExcludeContentSelector;
+import io.github.kotlinmania.spring.boot.loader.tools.layer.LibraryContentFilter;
 import org.springframework.util.Assert;
 
 /**

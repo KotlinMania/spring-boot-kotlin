@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.micrometer.metrics.autoconfigure.export;
+package io.github.kotlinmania.spring.boot.micrometer.metrics.autoconfigure.export;
 
 import java.lang.annotation.Documented;
 import java.lang.annotation.ElementType;

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.loader.tools.sample;
+package io.github.kotlinmania.spring.boot.loader.tools.sample;
 
 /**
  * Sample class without a main method.

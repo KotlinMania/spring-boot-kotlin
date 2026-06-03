@@ -18,6 +18,6 @@
  * Core integration between Spring Boot and Spring Web MVC.
  */
 @NullMarked
-package org.springframework.boot.webmvc;
+package io.github.kotlinmania.spring.boot.webmvc;
 
 import org.jspecify.annotations.NullMarked;

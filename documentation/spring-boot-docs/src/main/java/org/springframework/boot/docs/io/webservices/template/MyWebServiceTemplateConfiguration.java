@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.io.webservices.template;
+package io.github.kotlinmania.spring.boot.docs.io.webservices.template;
 
 import java.time.Duration;
 
-import org.springframework.boot.http.client.HttpClientSettings;
-import org.springframework.boot.webservices.client.WebServiceMessageSenderFactory;
-import org.springframework.boot.webservices.client.WebServiceTemplateBuilder;
+import io.github.kotlinmania.spring.boot.http.client.HttpClientSettings;
+import io.github.kotlinmania.spring.boot.webservices.client.WebServiceMessageSenderFactory;
+import io.github.kotlinmania.spring.boot.webservices.client.WebServiceTemplateBuilder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.ws.client.core.WebServiceTemplate;

@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.webservices.autoconfigure;
+package io.github.kotlinmania.spring.boot.webservices.autoconfigure;
 
-import org.springframework.boot.autoconfigure.condition.ConditionMessage;
-import org.springframework.boot.autoconfigure.condition.OnPropertyListCondition;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionMessage;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.OnPropertyListCondition;
 
 /**
  * Condition to determine if {@code spring.webservices.wsdl-locations} is specified.

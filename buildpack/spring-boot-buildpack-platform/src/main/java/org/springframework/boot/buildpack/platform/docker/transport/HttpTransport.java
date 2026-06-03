@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.buildpack.platform.docker.transport;
+package io.github.kotlinmania.spring.boot.buildpack.platform.docker.transport;
 
 import java.io.Closeable;
 import java.io.IOException;
@@ -25,10 +25,10 @@ import java.net.URI;
 import org.apache.hc.core5.http.Header;
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.buildpack.platform.docker.configuration.DockerConnectionConfiguration;
-import org.springframework.boot.buildpack.platform.docker.configuration.DockerHost;
-import org.springframework.boot.buildpack.platform.docker.configuration.ResolvedDockerHost;
-import org.springframework.boot.buildpack.platform.io.IOConsumer;
+import io.github.kotlinmania.spring.boot.buildpack.platform.docker.configuration.DockerConnectionConfiguration;
+import io.github.kotlinmania.spring.boot.buildpack.platform.docker.configuration.DockerHost;
+import io.github.kotlinmania.spring.boot.buildpack.platform.docker.configuration.ResolvedDockerHost;
+import io.github.kotlinmania.spring.boot.buildpack.platform.io.IOConsumer;
 
 /**
  * HTTP transport used for docker access.

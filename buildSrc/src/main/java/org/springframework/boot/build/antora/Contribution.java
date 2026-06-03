@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.build.antora;
+package io.github.kotlinmania.spring.boot.build.antora;
 
 import java.util.Arrays;
 import java.util.Map;
@@ -28,7 +28,7 @@ import org.gradle.api.provider.Provider;
 import org.gradle.api.tasks.PathSensitivity;
 import org.gradle.api.tasks.TaskProvider;
 
-import org.springframework.boot.build.AntoraConventions;
+import io.github.kotlinmania.spring.boot.build.AntoraConventions;
 import org.springframework.util.StringUtils;
 
 /**

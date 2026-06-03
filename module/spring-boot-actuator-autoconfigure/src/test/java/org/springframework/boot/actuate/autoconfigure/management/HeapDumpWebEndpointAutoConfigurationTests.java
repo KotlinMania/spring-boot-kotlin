@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.actuate.autoconfigure.management;
+package io.github.kotlinmania.spring.boot.actuate.autoconfigure.management;
 
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.actuate.management.HeapDumpWebEndpoint;
-import org.springframework.boot.test.context.runner.WebApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.actuate.management.HeapDumpWebEndpoint;
+import io.github.kotlinmania.spring.boot.test.context.runner.WebApplicationContextRunner;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.info;
+package io.github.kotlinmania.spring.boot.info;
 
 /**
  * Information about the Operating System the application is running on.

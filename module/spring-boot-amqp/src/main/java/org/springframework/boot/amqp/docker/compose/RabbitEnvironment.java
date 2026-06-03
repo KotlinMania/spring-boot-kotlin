@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.amqp.docker.compose;
+package io.github.kotlinmania.spring.boot.amqp.docker.compose;
 
 import java.util.Map;
 

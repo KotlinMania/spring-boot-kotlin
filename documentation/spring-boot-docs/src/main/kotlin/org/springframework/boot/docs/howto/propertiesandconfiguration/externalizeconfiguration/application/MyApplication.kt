@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.howto.propertiesandconfiguration.externalizeconfiguration.application
+package io.github.kotlinmania.spring.boot.docs.howto.propertiesandconfiguration.externalizeconfiguration.application
 
-import org.springframework.boot.Banner
-import org.springframework.boot.SpringApplication
-import org.springframework.boot.autoconfigure.SpringBootApplication
+import io.github.kotlinmania.spring.boot.Banner
+import io.github.kotlinmania.spring.boot.SpringApplication
+import io.github.kotlinmania.spring.boot.autoconfigure.SpringBootApplication
 
 @SpringBootApplication
 object MyApplication {

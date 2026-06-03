@@ -14,17 +14,17 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.security.autoconfigure.web.servlet;
+package io.github.kotlinmania.spring.boot.security.autoconfigure.web.servlet;
 
-import org.springframework.boot.autoconfigure.AutoConfiguration;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnWebApplication;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnWebApplication.Type;
-import org.springframework.boot.security.autoconfigure.UserDetailsServiceAutoConfiguration;
-import org.springframework.boot.webmvc.autoconfigure.DispatcherServletPath;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.EnableAutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnBean;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnClass;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnMissingBean;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnWebApplication;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnWebApplication.Type;
+import io.github.kotlinmania.spring.boot.security.autoconfigure.UserDetailsServiceAutoConfiguration;
+import io.github.kotlinmania.spring.boot.webmvc.autoconfigure.DispatcherServletPath;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.annotation.Order;
@@ -45,8 +45,8 @@ import static org.springframework.security.config.Customizer.withDefaults;
  * @since 4.0.0
  */
 @AutoConfiguration(after = UserDetailsServiceAutoConfiguration.class,
-		afterName = { "org.springframework.boot.webmvc.autoconfigure.WebMvcAutoConfiguration",
-				"org.springframework.boot.webmvc.test.autoconfigure.MockMvcAutoConfiguration" })
+		afterName = { "io.github.kotlinmania.spring.boot.webmvc.autoconfigure.WebMvcAutoConfiguration",
+				"io.github.kotlinmania.spring.boot.webmvc.test.autoconfigure.MockMvcAutoConfiguration" })
 @ConditionalOnClass(EnableWebSecurity.class)
 @ConditionalOnWebApplication(type = Type.SERVLET)
 public final class ServletWebSecurityAutoConfiguration {

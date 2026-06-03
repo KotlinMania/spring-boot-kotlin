@@ -14,21 +14,21 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.context.properties;
+package io.github.kotlinmania.spring.boot.context.properties;
 
 import java.util.Collections;
 import java.util.Set;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.convert.ApplicationConversionService;
+import io.github.kotlinmania.spring.boot.convert.ApplicationConversionService;
 import org.springframework.core.convert.ConversionService;
 import org.springframework.core.convert.TypeDescriptor;
 import org.springframework.core.convert.converter.ConditionalGenericConverter;
 
 /**
  * Copy of package-private
- * {@code org.springframework.boot.convert.CharSequenceToObjectConverter}, renamed for
+ * {@code io.github.kotlinmania.spring.boot.convert.CharSequenceToObjectConverter}, renamed for
  * differentiation.
  *
  * @author Phillip Webb

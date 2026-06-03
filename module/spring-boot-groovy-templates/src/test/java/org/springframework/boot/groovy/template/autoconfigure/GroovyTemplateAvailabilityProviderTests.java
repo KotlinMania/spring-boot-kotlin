@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.groovy.template.autoconfigure;
+package io.github.kotlinmania.spring.boot.groovy.template.autoconfigure;
 
 import org.junit.jupiter.api.Test;
 
@@ -22,10 +22,10 @@ import org.springframework.aot.hint.RuntimeHints;
 import org.springframework.aot.hint.RuntimeHintsRegistrar;
 import org.springframework.aot.hint.TypeHint;
 import org.springframework.beans.factory.aot.AotServices;
-import org.springframework.boot.autoconfigure.template.TemplateAvailabilityProvider;
-import org.springframework.boot.groovy.template.autoconfigure.GroovyTemplateAvailabilityProvider.GroovyTemplateAvailabilityProperties;
-import org.springframework.boot.groovy.template.autoconfigure.GroovyTemplateAvailabilityProvider.GroovyTemplateAvailabilityRuntimeHints;
-import org.springframework.boot.testsupport.classpath.resources.WithResource;
+import io.github.kotlinmania.spring.boot.autoconfigure.template.TemplateAvailabilityProvider;
+import io.github.kotlinmania.spring.boot.groovy.template.autoconfigure.GroovyTemplateAvailabilityProvider.GroovyTemplateAvailabilityProperties;
+import io.github.kotlinmania.spring.boot.groovy.template.autoconfigure.GroovyTemplateAvailabilityProvider.GroovyTemplateAvailabilityRuntimeHints;
+import io.github.kotlinmania.spring.boot.testsupport.classpath.resources.WithResource;
 import org.springframework.core.io.DefaultResourceLoader;
 import org.springframework.core.io.ResourceLoader;
 import org.springframework.mock.env.MockEnvironment;

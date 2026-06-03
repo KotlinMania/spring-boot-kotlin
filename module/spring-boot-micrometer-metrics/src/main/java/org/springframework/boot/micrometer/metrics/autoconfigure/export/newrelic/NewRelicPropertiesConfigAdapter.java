@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.micrometer.metrics.autoconfigure.export.newrelic;
+package io.github.kotlinmania.spring.boot.micrometer.metrics.autoconfigure.export.newrelic;
 
 import io.micrometer.newrelic.ClientProviderType;
 import io.micrometer.newrelic.NewRelicConfig;
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.micrometer.metrics.autoconfigure.export.properties.StepRegistryPropertiesConfigAdapter;
+import io.github.kotlinmania.spring.boot.micrometer.metrics.autoconfigure.export.properties.StepRegistryPropertiesConfigAdapter;
 
 /**
  * Adapter to convert {@link NewRelicProperties} to a {@link NewRelicConfig}.

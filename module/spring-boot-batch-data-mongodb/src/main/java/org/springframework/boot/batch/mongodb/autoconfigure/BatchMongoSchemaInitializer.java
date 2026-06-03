@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.batch.mongodb.autoconfigure;
+package io.github.kotlinmania.spring.boot.batch.mongodb.autoconfigure;
 
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;

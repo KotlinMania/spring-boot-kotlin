@@ -18,6 +18,6 @@
  * Auto-configuration for JSON-B.
  */
 @NullMarked
-package org.springframework.boot.jsonb.autoconfigure;
+package io.github.kotlinmania.spring.boot.jsonb.autoconfigure;
 
 import org.jspecify.annotations.NullMarked;

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.web.server.context;
+package io.github.kotlinmania.spring.boot.web.server.context;
 
 import java.io.File;
 import java.util.Locale;
@@ -23,7 +23,7 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.system.SystemProperties;
+import io.github.kotlinmania.spring.boot.system.SystemProperties;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationListener;
 import org.springframework.core.log.LogMessage;

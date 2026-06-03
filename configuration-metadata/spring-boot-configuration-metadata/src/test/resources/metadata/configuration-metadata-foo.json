@@ -9,7 +9,7 @@
     },
     {
       "name": "spring.foo",
-      "type": "org.springframework.boot.FooProperties"
+      "type": "io.github.kotlinmania.spring.boot.FooProperties"
     }
   ],
   "properties": [
@@ -28,12 +28,12 @@
     {
       "name": "spring.foo.name",
       "type": "java.lang.String",
-      "sourceType": "org.springframework.boot.FooProperties"
+      "sourceType": "io.github.kotlinmania.spring.boot.FooProperties"
     },
     {
       "name": "spring.foo.counter",
       "type": "java.lang.Integer",
-      "sourceType": "org.springframework.boot.FooProperties",
+      "sourceType": "io.github.kotlinmania.spring.boot.FooProperties",
       "defaultValue": 0
     }
   ],

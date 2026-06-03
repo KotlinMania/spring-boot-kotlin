@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.jarmode.tools;
+package io.github.kotlinmania.spring.boot.jarmode.tools;
 
 import java.io.File;
 import java.io.FileWriter;
@@ -37,7 +37,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.loader.jarmode.JarModeErrorException;
+import io.github.kotlinmania.spring.boot.loader.jarmode.JarModeErrorException;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatExceptionOfType;
@@ -71,7 +71,7 @@ class ExtractCommandTests extends AbstractJarModeTests {
 				"BOOT-INF/classpath.idx", "/jar-contents/classpath.idx", "BOOT-INF/layers.idx",
 				"/jar-contents/layers.idx", "BOOT-INF/lib/dependency-1.jar", "/jar-contents/dependency-1",
 				"BOOT-INF/lib/dependency-2.jar", "/jar-contents/dependency-2", "BOOT-INF/lib/dependency-3-SNAPSHOT.jar",
-				"/jar-contents/dependency-3-SNAPSHOT", "org/springframework/boot/loader/launch/JarLauncher.class",
+				"/jar-contents/dependency-3-SNAPSHOT", "io.github.kotlinmania.spring.boot.loader/launch/JarLauncher.class",
 				"/jar-contents/JarLauncher", "BOOT-INF/classes/application.properties",
 				"/jar-contents/application.properties", "META-INF/build-info.properties",
 				"/jar-contents/build-info.properties");
@@ -96,7 +96,7 @@ class ExtractCommandTests extends AbstractJarModeTests {
 				.contains("test/lib/dependency-2.jar")
 				.contains("test/lib/dependency-3-SNAPSHOT.jar")
 				.contains("test/test.jar")
-				.doesNotContain("test/org/springframework/boot/loader/launch/JarLauncher.class");
+				.doesNotContain("test/io.github.kotlinmania.spring.boot.loader/launch/JarLauncher.class");
 		}
 
 		@Test
@@ -322,7 +322,7 @@ class ExtractCommandTests extends AbstractJarModeTests {
 				.contains("test/BOOT-INF/lib/dependency-2.jar")
 				.contains("test/BOOT-INF/lib/dependency-3-SNAPSHOT.jar")
 				.contains("test/BOOT-INF/classes/application.properties")
-				.contains("test/org/springframework/boot/loader/launch/JarLauncher.class");
+				.contains("test/io.github.kotlinmania.spring.boot.loader/launch/JarLauncher.class");
 		}
 
 		@Test
@@ -348,7 +348,7 @@ class ExtractCommandTests extends AbstractJarModeTests {
 				.contains("test/dependencies/BOOT-INF/lib/dependency-2.jar")
 				.contains("test/snapshot-dependencies/BOOT-INF/lib/dependency-3-SNAPSHOT.jar")
 				.contains("test/application/BOOT-INF/classes/application.properties")
-				.contains("test/spring-boot-loader/org/springframework/boot/loader/launch/JarLauncher.class");
+				.contains("test/spring-boot-loader/io.github.kotlinmania.spring.boot.loader/launch/JarLauncher.class");
 		}
 
 		@Test
@@ -370,7 +370,7 @@ class ExtractCommandTests extends AbstractJarModeTests {
 				.contains("test/dependencies/BOOT-INF/lib/dependency-2.jar")
 				.doesNotContain("test/snapshot-dependencies/BOOT-INF/lib/dependency-3-SNAPSHOT.jar")
 				.doesNotContain("test/application/BOOT-INF/classes/application.properties")
-				.doesNotContain("test/spring-boot-loader/org/springframework/boot/loader/launch/JarLauncher.class");
+				.doesNotContain("test/spring-boot-loader/io.github.kotlinmania.spring.boot.loader/launch/JarLauncher.class");
 		}
 
 		@Test

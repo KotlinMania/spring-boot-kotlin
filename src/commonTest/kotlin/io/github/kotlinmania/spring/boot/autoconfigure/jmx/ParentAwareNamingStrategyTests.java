@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.autoconfigure.jmx;
+package io.github.kotlinmania.spring.boot.autoconfigure.jmx;
 
 import javax.management.ObjectName;
 
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.test.context.runner.ApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.test.context.runner.ApplicationContextRunner;
 import org.springframework.jmx.export.annotation.AnnotationJmxAttributeSource;
 import org.springframework.jmx.export.annotation.ManagedResource;
 import org.springframework.util.ObjectUtils;

@@ -18,6 +18,6 @@
  * Core CLI commands.
  */
 @NullMarked
-package org.springframework.boot.cli.command.core;
+package io.github.kotlinmania.spring.boot.cli.command.core;
 
 import org.jspecify.annotations.NullMarked;

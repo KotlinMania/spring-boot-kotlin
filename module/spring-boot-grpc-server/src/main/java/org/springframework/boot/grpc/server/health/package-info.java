@@ -18,6 +18,6 @@
  * Support for gRPC server health checks.
  */
 @NullMarked
-package org.springframework.boot.grpc.server.health;
+package io.github.kotlinmania.spring.boot.grpc.server.health;
 
 import org.jspecify.annotations.NullMarked;

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.context.properties;
+package io.github.kotlinmania.spring.boot.context.properties;
 
 import java.lang.annotation.Documented;
 import java.lang.annotation.ElementType;
@@ -45,6 +45,6 @@ public @interface ConfigurationPropertiesBinding {
 	/**
 	 * Concrete value for the {@link Qualifier @Qualifier}.
 	 */
-	String VALUE = "org.springframework.boot.context.properties.ConfigurationPropertiesBinding";
+	String VALUE = "io.github.kotlinmania.spring.boot.context.properties.ConfigurationPropertiesBinding";
 
 }

@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.webservices.test.autoconfigure.client;
+package io.github.kotlinmania.spring.boot.webservices.test.autoconfigure.client;
 
 import java.util.concurrent.atomic.AtomicBoolean;
 
-import org.springframework.boot.webservices.client.WebServiceTemplateBuilder;
-import org.springframework.boot.webservices.client.WebServiceTemplateCustomizer;
+import io.github.kotlinmania.spring.boot.webservices.client.WebServiceTemplateBuilder;
+import io.github.kotlinmania.spring.boot.webservices.client.WebServiceTemplateCustomizer;
 import org.springframework.util.Assert;
 import org.springframework.ws.client.core.WebServiceTemplate;
 import org.springframework.ws.test.client.MockWebServiceServer;

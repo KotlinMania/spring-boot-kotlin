@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.hibernate.autoconfigure;
+package io.github.kotlinmania.spring.boot.hibernate.autoconfigure;
 
 import java.util.Collection;
 import java.util.HashMap;
@@ -27,9 +27,9 @@ import org.hibernate.cfg.PersistenceSettings;
 import org.hibernate.cfg.SchemaToolingSettings;
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.boot.hibernate.SpringImplicitNamingStrategy;
-import org.springframework.boot.jpa.autoconfigure.JpaProperties;
+import io.github.kotlinmania.spring.boot.context.properties.ConfigurationProperties;
+import io.github.kotlinmania.spring.boot.hibernate.SpringImplicitNamingStrategy;
+import io.github.kotlinmania.spring.boot.jpa.autoconfigure.JpaProperties;
 import org.springframework.util.Assert;
 import org.springframework.util.ClassUtils;
 import org.springframework.util.ObjectUtils;

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.gradle;
+package io.github.kotlinmania.spring.boot.gradle;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -40,7 +40,7 @@ import org.gradle.api.tasks.TaskContainer;
  *
  * @author Andy Wilkinson
  */
-@AnalyzeClasses(packages = "org.springframework.boot.gradle",
+@AnalyzeClasses(packages = "io.github.kotlinmania.spring.boot.gradle",
 		importOptions = TaskConfigurationAvoidanceTests.DoNotIncludeTests.class)
 class TaskConfigurationAvoidanceTests {
 

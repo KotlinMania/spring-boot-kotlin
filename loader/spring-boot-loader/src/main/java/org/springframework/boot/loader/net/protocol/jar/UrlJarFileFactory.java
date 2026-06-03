@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.loader.net.protocol.jar;
+package io.github.kotlinmania.spring.boot.loader.net.protocol.jar;
 
 import java.io.File;
 import java.io.IOException;
@@ -27,8 +27,8 @@ import java.nio.file.StandardCopyOption;
 import java.util.function.Consumer;
 import java.util.jar.JarFile;
 
-import org.springframework.boot.loader.net.protocol.nested.NestedLocation;
-import org.springframework.boot.loader.net.util.UrlDecoder;
+import io.github.kotlinmania.spring.boot.loader.net.protocol.nested.NestedLocation;
+import io.github.kotlinmania.spring.boot.loader.net.util.UrlDecoder;
 
 /**
  * Factory used by {@link UrlJarFiles} to create {@link JarFile} instances.

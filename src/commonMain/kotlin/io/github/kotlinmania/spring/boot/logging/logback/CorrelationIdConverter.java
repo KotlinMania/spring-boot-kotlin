@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.logging.logback;
+package io.github.kotlinmania.spring.boot.logging.logback;
 
 import java.util.Map;
 
@@ -23,7 +23,7 @@ import ch.qos.logback.classic.spi.ILoggingEvent;
 import ch.qos.logback.core.pattern.DynamicConverter;
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.logging.CorrelationIdFormatter;
+import io.github.kotlinmania.spring.boot.logging.CorrelationIdFormatter;
 import org.springframework.core.env.Environment;
 
 /**

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.devtools.restart;
+package io.github.kotlinmania.spring.boot.devtools.restart;
 
 import java.io.File;
 import java.io.IOException;
@@ -36,8 +36,8 @@ import java.util.stream.Stream;
 
 import org.apache.commons.logging.Log;
 
-import org.springframework.boot.devtools.logger.DevToolsLogFactory;
-import org.springframework.boot.devtools.settings.DevToolsSettings;
+import io.github.kotlinmania.spring.boot.devtools.logger.DevToolsLogFactory;
+import io.github.kotlinmania.spring.boot.devtools.settings.DevToolsSettings;
 import org.springframework.core.log.LogMessage;
 import org.springframework.util.StringUtils;
 

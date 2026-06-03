@@ -1,1 +1,1 @@
-org.springframework.boot.data.jpa.autoconfigure.DataJpaRepositoriesAutoConfiguration
+io.github.kotlinmania.spring.boot.data.jpa.autoconfigure.DataJpaRepositoriesAutoConfiguration

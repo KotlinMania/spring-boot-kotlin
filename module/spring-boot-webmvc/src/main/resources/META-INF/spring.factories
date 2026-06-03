@@ -1,7 +1,7 @@
 # Template Availability Providers
-org.springframework.boot.autoconfigure.template.TemplateAvailabilityProvider=\
-org.springframework.boot.webmvc.autoconfigure.JspTemplateAvailabilityProvider
+io.github.kotlinmania.spring.boot.autoconfigure.template.TemplateAvailabilityProvider=\
+io.github.kotlinmania.spring.boot.webmvc.autoconfigure.JspTemplateAvailabilityProvider
 
 # WebApplicationType Deducers
-org.springframework.boot.WebApplicationType$Deducer=\
-org.springframework.boot.webmvc.WebMvcWebApplicationTypeDeducer
+io.github.kotlinmania.spring.boot.WebApplicationType$Deducer=\
+io.github.kotlinmania.spring.boot.webmvc.WebMvcWebApplicationTypeDeducer

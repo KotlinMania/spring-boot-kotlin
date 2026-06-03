@@ -14,15 +14,15 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.kafka.autoconfigure;
+package io.github.kotlinmania.spring.boot.kafka.autoconfigure;
 
 import java.util.List;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.kafka.autoconfigure.KafkaProperties.Ssl;
-import org.springframework.boot.ssl.SslBundle;
-import org.springframework.boot.ssl.SslBundles;
+import io.github.kotlinmania.spring.boot.kafka.autoconfigure.KafkaProperties.Ssl;
+import io.github.kotlinmania.spring.boot.ssl.SslBundle;
+import io.github.kotlinmania.spring.boot.ssl.SslBundles;
 import org.springframework.util.Assert;
 import org.springframework.util.StringUtils;
 

@@ -14,22 +14,22 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.data.mongodb.autoconfigure;
+package io.github.kotlinmania.spring.boot.data.mongodb.autoconfigure;
 
 import com.mongodb.reactivestreams.client.MongoClient;
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.autoconfigure.AutoConfigurations;
-import org.springframework.boot.autoconfigure.TestAutoConfigurationPackage;
-import org.springframework.boot.autoconfigure.context.PropertyPlaceholderAutoConfiguration;
-import org.springframework.boot.data.mongodb.alt.CityMongoDbRepository;
-import org.springframework.boot.data.mongodb.alt.ReactiveCityMongoDbRepository;
-import org.springframework.boot.data.mongodb.autoconfigure.domain.city.City;
-import org.springframework.boot.data.mongodb.autoconfigure.domain.city.ReactiveCityRepository;
-import org.springframework.boot.data.mongodb.autoconfigure.empty.EmptyDataPackage;
-import org.springframework.boot.mongodb.autoconfigure.MongoAutoConfiguration;
-import org.springframework.boot.mongodb.autoconfigure.MongoReactiveAutoConfiguration;
-import org.springframework.boot.test.context.runner.ApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurations;
+import io.github.kotlinmania.spring.boot.autoconfigure.TestAutoConfigurationPackage;
+import io.github.kotlinmania.spring.boot.autoconfigure.context.PropertyPlaceholderAutoConfiguration;
+import io.github.kotlinmania.spring.boot.data.mongodb.alt.CityMongoDbRepository;
+import io.github.kotlinmania.spring.boot.data.mongodb.alt.ReactiveCityMongoDbRepository;
+import io.github.kotlinmania.spring.boot.data.mongodb.autoconfigure.domain.city.City;
+import io.github.kotlinmania.spring.boot.data.mongodb.autoconfigure.domain.city.ReactiveCityRepository;
+import io.github.kotlinmania.spring.boot.data.mongodb.autoconfigure.empty.EmptyDataPackage;
+import io.github.kotlinmania.spring.boot.mongodb.autoconfigure.MongoAutoConfiguration;
+import io.github.kotlinmania.spring.boot.mongodb.autoconfigure.MongoReactiveAutoConfiguration;
+import io.github.kotlinmania.spring.boot.test.context.runner.ApplicationContextRunner;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.domain.ManagedTypes;
 import org.springframework.data.mongodb.core.mapping.MongoMappingContext;

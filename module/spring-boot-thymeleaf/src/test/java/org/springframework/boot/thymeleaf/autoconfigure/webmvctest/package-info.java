@@ -15,6 +15,6 @@
  */
 
 @NullMarked
-package org.springframework.boot.thymeleaf.autoconfigure.webmvctest;
+package io.github.kotlinmania.spring.boot.thymeleaf.autoconfigure.webmvctest;
 
 import org.jspecify.annotations.NullMarked;

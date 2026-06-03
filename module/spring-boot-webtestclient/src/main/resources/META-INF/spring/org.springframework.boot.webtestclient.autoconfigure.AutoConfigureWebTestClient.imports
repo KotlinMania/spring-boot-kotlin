@@ -1,2 +1,2 @@
-org.springframework.boot.http.codec.autoconfigure.CodecsAutoConfiguration
-org.springframework.boot.webtestclient.autoconfigure.WebTestClientAutoConfiguration
+io.github.kotlinmania.spring.boot.http.codec.autoconfigure.CodecsAutoConfiguration
+io.github.kotlinmania.spring.boot.webtestclient.autoconfigure.WebTestClientAutoConfiguration

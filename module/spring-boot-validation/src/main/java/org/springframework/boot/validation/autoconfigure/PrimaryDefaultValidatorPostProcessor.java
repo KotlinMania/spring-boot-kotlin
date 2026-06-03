@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.validation.autoconfigure;
+package io.github.kotlinmania.spring.boot.validation.autoconfigure;
 
 import org.jspecify.annotations.Nullable;
 

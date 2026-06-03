@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.actuate.endpoint.invoke.reflect;
+package io.github.kotlinmania.spring.boot.actuate.endpoint.invoke.reflect;
 
 import java.lang.reflect.Method;
 import java.util.Iterator;
@@ -26,7 +26,7 @@ import java.util.stream.StreamSupport;
 
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.actuate.endpoint.invoke.OperationParameter;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.invoke.OperationParameter;
 import org.springframework.core.DefaultParameterNameDiscoverer;
 import org.springframework.core.ParameterNameDiscoverer;
 import org.springframework.util.ReflectionUtils;

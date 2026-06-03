@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.freemarker.autoconfigure;
+package io.github.kotlinmania.spring.boot.freemarker.autoconfigure;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -24,9 +24,9 @@ import org.jspecify.annotations.Nullable;
 
 import org.springframework.aot.hint.RuntimeHints;
 import org.springframework.aot.hint.RuntimeHintsRegistrar;
-import org.springframework.boot.autoconfigure.template.PathBasedTemplateAvailabilityProvider;
-import org.springframework.boot.autoconfigure.template.TemplateAvailabilityProvider;
-import org.springframework.boot.context.properties.bind.BindableRuntimeHintsRegistrar;
+import io.github.kotlinmania.spring.boot.autoconfigure.template.PathBasedTemplateAvailabilityProvider;
+import io.github.kotlinmania.spring.boot.autoconfigure.template.TemplateAvailabilityProvider;
+import io.github.kotlinmania.spring.boot.context.properties.bind.BindableRuntimeHintsRegistrar;
 import org.springframework.util.ClassUtils;
 
 /**

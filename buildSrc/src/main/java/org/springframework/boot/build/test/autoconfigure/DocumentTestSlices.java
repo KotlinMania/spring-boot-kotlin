@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.build.test.autoconfigure;
+package io.github.kotlinmania.spring.boot.build.test.autoconfigure;
 
 import java.io.File;
 import java.io.FileWriter;
@@ -37,7 +37,7 @@ import org.gradle.api.tasks.PathSensitivity;
 import org.gradle.api.tasks.TaskAction;
 import tools.jackson.databind.json.JsonMapper;
 
-import org.springframework.boot.build.test.autoconfigure.TestSliceMetadata.TestSlice;
+import io.github.kotlinmania.spring.boot.build.test.autoconfigure.TestSliceMetadata.TestSlice;
 
 /**
  * {@link Task} used to document test slices.

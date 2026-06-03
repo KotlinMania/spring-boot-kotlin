@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.actuate.autoconfigure.info;
+package io.github.kotlinmania.spring.boot.actuate.autoconfigure.info;
 
-import org.springframework.boot.actuate.info.GitInfoContributor;
-import org.springframework.boot.context.properties.ConfigurationProperties;
+import io.github.kotlinmania.spring.boot.actuate.info.GitInfoContributor;
+import io.github.kotlinmania.spring.boot.context.properties.ConfigurationProperties;
 
 /**
  * Configuration properties for core info contributors.

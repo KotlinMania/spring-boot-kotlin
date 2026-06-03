@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.webmvc.actuate.web.mappings;
+package io.github.kotlinmania.spring.boot.webmvc.actuate.web.mappings;
 
 import java.util.ArrayDeque;
 import java.util.ArrayList;
@@ -35,10 +35,10 @@ import org.jspecify.annotations.Nullable;
 import org.springframework.aot.hint.BindingReflectionHintsRegistrar;
 import org.springframework.aot.hint.RuntimeHints;
 import org.springframework.aot.hint.RuntimeHintsRegistrar;
-import org.springframework.boot.actuate.web.mappings.HandlerMethodDescription;
-import org.springframework.boot.actuate.web.mappings.MappingDescriptionProvider;
-import org.springframework.boot.web.servlet.ServletRegistrationBean;
-import org.springframework.boot.webmvc.actuate.web.mappings.DispatcherServletsMappingDescriptionProvider.DispatcherServletsMappingDescriptionProviderRuntimeHints;
+import io.github.kotlinmania.spring.boot.actuate.web.mappings.HandlerMethodDescription;
+import io.github.kotlinmania.spring.boot.actuate.web.mappings.MappingDescriptionProvider;
+import io.github.kotlinmania.spring.boot.web.servlet.ServletRegistrationBean;
+import io.github.kotlinmania.spring.boot.webmvc.actuate.web.mappings.DispatcherServletsMappingDescriptionProvider.DispatcherServletsMappingDescriptionProviderRuntimeHints;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.ImportRuntimeHints;
 import org.springframework.core.io.Resource;

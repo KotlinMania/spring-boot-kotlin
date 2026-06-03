@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.buildpack.platform.build;
+package io.github.kotlinmania.spring.boot.buildpack.platform.build;
 
 import java.io.IOException;
 import java.io.OutputStream;
@@ -29,8 +29,8 @@ import org.apache.commons.compress.archivers.tar.TarArchiveOutputStream;
 import org.apache.commons.compress.compressors.gzip.GzipCompressorInputStream;
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.buildpack.platform.docker.type.Layer;
-import org.springframework.boot.buildpack.platform.io.IOConsumer;
+import io.github.kotlinmania.spring.boot.buildpack.platform.docker.type.Layer;
+import io.github.kotlinmania.spring.boot.buildpack.platform.io.IOConsumer;
 import org.springframework.util.Assert;
 import org.springframework.util.StreamUtils;
 

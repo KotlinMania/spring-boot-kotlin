@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.maven;
+package io.github.kotlinmania.spring.boot.maven;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -32,7 +32,7 @@ import org.apache.maven.plugins.annotations.Parameter;
 import org.apache.maven.plugins.annotations.ResolutionScope;
 import org.apache.maven.toolchain.ToolchainManager;
 
-import org.springframework.boot.loader.tools.RunProcess;
+import io.github.kotlinmania.spring.boot.loader.tools.RunProcess;
 
 /**
  * Run an application in place using the test runtime classpath. The main class that will

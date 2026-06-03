@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.build.architecture.conditionalonclass;
+package io.github.kotlinmania.spring.boot.build.architecture.conditionalonclass;
 
-import org.springframework.boot.build.architecture.annotations.TestConditionalOnClass;
+import io.github.kotlinmania.spring.boot.build.architecture.annotations.TestConditionalOnClass;
 import org.springframework.context.annotation.Bean;
 
 class OnBeanMethod {

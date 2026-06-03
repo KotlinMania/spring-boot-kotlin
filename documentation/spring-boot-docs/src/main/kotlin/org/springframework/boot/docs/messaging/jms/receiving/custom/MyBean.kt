@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.messaging.jms.receiving.custom
+package io.github.kotlinmania.spring.boot.docs.messaging.jms.receiving.custom
 
 import org.springframework.jms.annotation.JmsListener
 import org.springframework.stereotype.Component

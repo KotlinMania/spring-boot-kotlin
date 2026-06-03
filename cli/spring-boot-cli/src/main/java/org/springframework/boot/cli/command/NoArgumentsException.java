@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.cli.command;
+package io.github.kotlinmania.spring.boot.cli.command;
 
 /**
  * Exception used to indicate that no arguments were specified.

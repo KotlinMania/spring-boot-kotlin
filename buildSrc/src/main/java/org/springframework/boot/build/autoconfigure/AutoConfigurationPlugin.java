@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.build.autoconfigure;
+package io.github.kotlinmania.spring.boot.build.autoconfigure;
 
 import java.util.Arrays;
 import java.util.Collections;
@@ -35,8 +35,8 @@ import org.gradle.api.tasks.SourceSet;
 import org.gradle.api.tasks.TaskContainer;
 import org.gradle.api.tasks.TaskProvider;
 
-import org.springframework.boot.build.DeployedPlugin;
-import org.springframework.boot.build.optional.OptionalDependenciesPlugin;
+import io.github.kotlinmania.spring.boot.build.DeployedPlugin;
+import io.github.kotlinmania.spring.boot.build.optional.OptionalDependenciesPlugin;
 
 /**
  * {@link Plugin} for projects that define auto-configuration. When applied, the plugin

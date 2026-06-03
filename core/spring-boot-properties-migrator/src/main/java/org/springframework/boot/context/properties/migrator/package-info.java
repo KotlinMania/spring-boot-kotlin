@@ -18,6 +18,6 @@
  * Support for migrating legacy Spring Boot properties.
  */
 @NullMarked
-package org.springframework.boot.context.properties.migrator;
+package io.github.kotlinmania.spring.boot.context.properties.migrator;
 
 import org.jspecify.annotations.NullMarked;

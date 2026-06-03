@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.configurationprocessor;
+package io.github.kotlinmania.spring.boot.configurationprocessor;
 
 import java.util.Arrays;
 import java.util.HashSet;
@@ -23,7 +23,7 @@ import java.util.function.Function;
 
 import javax.annotation.processing.ProcessingEnvironment;
 
-import org.springframework.boot.configurationprocessor.test.TestConfigurationMetadataAnnotationProcessor;
+import io.github.kotlinmania.spring.boot.configurationprocessor.test.TestConfigurationMetadataAnnotationProcessor;
 
 /**
  * A factory for {@link MetadataGenerationEnvironment} against test annotations.

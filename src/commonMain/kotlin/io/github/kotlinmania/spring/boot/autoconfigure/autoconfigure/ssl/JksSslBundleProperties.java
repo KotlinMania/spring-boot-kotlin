@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.autoconfigure.ssl;
+package io.github.kotlinmania.spring.boot.autoconfigure.ssl;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.ssl.jks.JksSslStoreBundle;
+import io.github.kotlinmania.spring.boot.ssl.jks.JksSslStoreBundle;
 
 /**
  * {@link SslBundleProperties} for Java keystores.

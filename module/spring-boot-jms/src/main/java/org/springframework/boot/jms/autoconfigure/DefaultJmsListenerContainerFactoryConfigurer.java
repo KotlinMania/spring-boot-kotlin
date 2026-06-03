@@ -14,15 +14,15 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.jms.autoconfigure;
+package io.github.kotlinmania.spring.boot.jms.autoconfigure;
 
 import java.time.Duration;
 
 import jakarta.jms.ConnectionFactory;
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.context.properties.PropertyMapper;
-import org.springframework.boot.jms.autoconfigure.JmsProperties.Listener.Session;
+import io.github.kotlinmania.spring.boot.context.properties.PropertyMapper;
+import io.github.kotlinmania.spring.boot.jms.autoconfigure.JmsProperties.Listener.Session;
 import org.springframework.jms.config.DefaultJmsListenerContainerFactory;
 import org.springframework.transaction.jta.JtaTransactionManager;
 

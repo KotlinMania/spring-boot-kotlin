@@ -18,6 +18,6 @@
  * Auto-configuration for HTTP converters.
  */
 @NullMarked
-package org.springframework.boot.http.converter.autoconfigure;
+package io.github.kotlinmania.spring.boot.http.converter.autoconfigure;
 
 import org.jspecify.annotations.NullMarked;

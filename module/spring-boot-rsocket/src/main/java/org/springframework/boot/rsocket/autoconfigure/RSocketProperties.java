@@ -14,16 +14,16 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.rsocket.autoconfigure;
+package io.github.kotlinmania.spring.boot.rsocket.autoconfigure;
 
 import java.net.InetAddress;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.boot.context.properties.NestedConfigurationProperty;
-import org.springframework.boot.rsocket.server.RSocketServer;
-import org.springframework.boot.web.server.Ssl;
+import io.github.kotlinmania.spring.boot.context.properties.ConfigurationProperties;
+import io.github.kotlinmania.spring.boot.context.properties.NestedConfigurationProperty;
+import io.github.kotlinmania.spring.boot.rsocket.server.RSocketServer;
+import io.github.kotlinmania.spring.boot.web.server.Ssl;
 import org.springframework.util.unit.DataSize;
 
 /**

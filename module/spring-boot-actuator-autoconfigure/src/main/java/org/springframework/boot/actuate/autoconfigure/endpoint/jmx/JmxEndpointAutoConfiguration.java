@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.actuate.autoconfigure.endpoint.jmx;
+package io.github.kotlinmania.spring.boot.actuate.autoconfigure.endpoint.jmx;
 
 import javax.management.MBeanServer;
 
@@ -22,35 +22,35 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import tools.jackson.databind.json.JsonMapper;
 
 import org.springframework.beans.factory.ObjectProvider;
-import org.springframework.boot.LazyInitializationExcludeFilter;
-import org.springframework.boot.actuate.autoconfigure.endpoint.EndpointAutoConfiguration;
-import org.springframework.boot.actuate.autoconfigure.endpoint.expose.EndpointExposure;
-import org.springframework.boot.actuate.autoconfigure.endpoint.expose.IncludeExcludeEndpointFilter;
-import org.springframework.boot.actuate.endpoint.EndpointAccessResolver;
-import org.springframework.boot.actuate.endpoint.EndpointFilter;
-import org.springframework.boot.actuate.endpoint.OperationFilter;
-import org.springframework.boot.actuate.endpoint.annotation.Endpoint;
-import org.springframework.boot.actuate.endpoint.invoke.OperationInvokerAdvisor;
-import org.springframework.boot.actuate.endpoint.invoke.ParameterValueMapper;
-import org.springframework.boot.actuate.endpoint.jmx.EndpointObjectNameFactory;
-import org.springframework.boot.actuate.endpoint.jmx.ExposableJmxEndpoint;
-import org.springframework.boot.actuate.endpoint.jmx.JacksonJmxOperationResponseMapper;
-import org.springframework.boot.actuate.endpoint.jmx.JmxEndpointExporter;
-import org.springframework.boot.actuate.endpoint.jmx.JmxEndpointsSupplier;
-import org.springframework.boot.actuate.endpoint.jmx.JmxOperation;
-import org.springframework.boot.actuate.endpoint.jmx.JmxOperationResponseMapper;
-import org.springframework.boot.actuate.endpoint.jmx.annotation.JmxEndpointDiscoverer;
-import org.springframework.boot.autoconfigure.AutoConfiguration;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnBooleanProperty;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingClass;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnSingleCandidate;
-import org.springframework.boot.autoconfigure.condition.SearchStrategy;
-import org.springframework.boot.autoconfigure.jmx.JmxAutoConfiguration;
-import org.springframework.boot.autoconfigure.jmx.JmxProperties;
-import org.springframework.boot.context.properties.EnableConfigurationProperties;
+import io.github.kotlinmania.spring.boot.LazyInitializationExcludeFilter;
+import io.github.kotlinmania.spring.boot.actuate.autoconfigure.endpoint.EndpointAutoConfiguration;
+import io.github.kotlinmania.spring.boot.actuate.autoconfigure.endpoint.expose.EndpointExposure;
+import io.github.kotlinmania.spring.boot.actuate.autoconfigure.endpoint.expose.IncludeExcludeEndpointFilter;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.EndpointAccessResolver;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.EndpointFilter;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.OperationFilter;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.annotation.Endpoint;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.invoke.OperationInvokerAdvisor;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.invoke.ParameterValueMapper;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.jmx.EndpointObjectNameFactory;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.jmx.ExposableJmxEndpoint;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.jmx.JacksonJmxOperationResponseMapper;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.jmx.JmxEndpointExporter;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.jmx.JmxEndpointsSupplier;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.jmx.JmxOperation;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.jmx.JmxOperationResponseMapper;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.jmx.annotation.JmxEndpointDiscoverer;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.EnableAutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnBooleanProperty;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnClass;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnMissingBean;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnMissingClass;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnSingleCandidate;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.SearchStrategy;
+import io.github.kotlinmania.spring.boot.autoconfigure.jmx.JmxAutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.jmx.JmxProperties;
+import io.github.kotlinmania.spring.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -147,7 +147,7 @@ public final class JmxEndpointAutoConfiguration {
 		JmxEndpointExporter jmxMBeanExporter(MBeanServer mBeanServer,
 				EndpointObjectNameFactory endpointObjectNameFactory, ObjectProvider<ObjectMapper> objectMapper,
 				JmxEndpointsSupplier jmxEndpointsSupplier) {
-			JmxOperationResponseMapper responseMapper = new org.springframework.boot.actuate.endpoint.jmx.Jackson2JmxOperationResponseMapper(
+			JmxOperationResponseMapper responseMapper = new io.github.kotlinmania.spring.boot.actuate.endpoint.jmx.Jackson2JmxOperationResponseMapper(
 					objectMapper.getIfAvailable());
 			return new JmxEndpointExporter(mBeanServer, endpointObjectNameFactory, responseMapper,
 					jmxEndpointsSupplier.getEndpoints());

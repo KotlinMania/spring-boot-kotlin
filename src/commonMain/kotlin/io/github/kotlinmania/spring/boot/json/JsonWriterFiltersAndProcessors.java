@@ -14,15 +14,15 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.json;
+package io.github.kotlinmania.spring.boot.json;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Predicate;
 
-import org.springframework.boot.json.JsonWriter.MemberPath;
-import org.springframework.boot.json.JsonWriter.NameProcessor;
-import org.springframework.boot.json.JsonWriter.ValueProcessor;
+import io.github.kotlinmania.spring.boot.json.JsonWriter.MemberPath;
+import io.github.kotlinmania.spring.boot.json.JsonWriter.NameProcessor;
+import io.github.kotlinmania.spring.boot.json.JsonWriter.ValueProcessor;
 
 /**
  * Internal record used to hold {@link NameProcessor} and {@link ValueProcessor}

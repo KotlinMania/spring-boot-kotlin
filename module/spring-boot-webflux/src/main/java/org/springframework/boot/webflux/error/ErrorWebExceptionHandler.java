@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.webflux.error;
+package io.github.kotlinmania.spring.boot.webflux.error;
 
 import org.springframework.web.server.WebExceptionHandler;
 

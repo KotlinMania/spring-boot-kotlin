@@ -1,4 +1,4 @@
-org.springframework.boot.data.cassandra.autoconfigure.DataCassandraAutoConfiguration
-org.springframework.boot.data.cassandra.autoconfigure.DataCassandraReactiveAutoConfiguration
-org.springframework.boot.data.cassandra.autoconfigure.DataCassandraReactiveRepositoriesAutoConfiguration
-org.springframework.boot.data.cassandra.autoconfigure.DataCassandraRepositoriesAutoConfiguration
+io.github.kotlinmania.spring.boot.data.cassandra.autoconfigure.DataCassandraAutoConfiguration
+io.github.kotlinmania.spring.boot.data.cassandra.autoconfigure.DataCassandraReactiveAutoConfiguration
+io.github.kotlinmania.spring.boot.data.cassandra.autoconfigure.DataCassandraReactiveRepositoriesAutoConfiguration
+io.github.kotlinmania.spring.boot.data.cassandra.autoconfigure.DataCassandraRepositoriesAutoConfiguration

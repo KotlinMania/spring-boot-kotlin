@@ -18,6 +18,6 @@
  * Reactive web server implementation backed by Netty.
  */
 @NullMarked
-package org.springframework.boot.reactor.netty;
+package io.github.kotlinmania.spring.boot.reactor.netty;
 
 import org.jspecify.annotations.NullMarked;

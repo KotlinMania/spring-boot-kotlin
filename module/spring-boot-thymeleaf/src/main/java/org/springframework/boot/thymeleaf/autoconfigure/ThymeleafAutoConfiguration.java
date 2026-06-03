@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.thymeleaf.autoconfigure;
+package io.github.kotlinmania.spring.boot.thymeleaf.autoconfigure;
 
 import java.util.LinkedHashMap;
 
@@ -31,19 +31,19 @@ import org.thymeleaf.spring6.view.ThymeleafViewResolver;
 import org.thymeleaf.spring6.view.reactive.ThymeleafReactiveViewResolver;
 import org.thymeleaf.templatemode.TemplateMode;
 
-import org.springframework.boot.autoconfigure.AutoConfiguration;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingFilterBean;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnWebApplication;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnWebApplication.Type;
-import org.springframework.boot.autoconfigure.template.TemplateLocation;
-import org.springframework.boot.autoconfigure.web.ConditionalOnEnabledResourceChain;
-import org.springframework.boot.context.properties.EnableConfigurationProperties;
-import org.springframework.boot.context.properties.PropertyMapper;
-import org.springframework.boot.thymeleaf.autoconfigure.ThymeleafProperties.Reactive;
-import org.springframework.boot.web.servlet.FilterRegistrationBean;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.EnableAutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnClass;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnMissingBean;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnMissingFilterBean;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnWebApplication;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnWebApplication.Type;
+import io.github.kotlinmania.spring.boot.autoconfigure.template.TemplateLocation;
+import io.github.kotlinmania.spring.boot.autoconfigure.web.ConditionalOnEnabledResourceChain;
+import io.github.kotlinmania.spring.boot.context.properties.EnableConfigurationProperties;
+import io.github.kotlinmania.spring.boot.context.properties.PropertyMapper;
+import io.github.kotlinmania.spring.boot.thymeleaf.autoconfigure.ThymeleafProperties.Reactive;
+import io.github.kotlinmania.spring.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -68,8 +68,8 @@ import org.springframework.web.servlet.view.AbstractCachingViewResolver;
  * @author Artsiom Yudovin
  * @since 4.0.0
  */
-@AutoConfiguration(afterName = { "org.springframework.boot.webflux.autoconfigure.WebFluxAutoConfiguration",
-		"org.springframework.boot.webmvc.autoconfigure.WebMvcAutoConfiguration" })
+@AutoConfiguration(afterName = { "io.github.kotlinmania.spring.boot.webflux.autoconfigure.WebFluxAutoConfiguration",
+		"io.github.kotlinmania.spring.boot.webmvc.autoconfigure.WebMvcAutoConfiguration" })
 @EnableConfigurationProperties(ThymeleafProperties.class)
 @ConditionalOnClass({ TemplateMode.class, SpringTemplateEngine.class })
 @Import({ TemplateEngineConfigurations.ReactiveTemplateEngineConfiguration.class,

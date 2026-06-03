@@ -18,6 +18,6 @@
  * Jackson support classes for actuator endpoints.
  */
 @NullMarked
-package org.springframework.boot.actuate.endpoint.jackson;
+package io.github.kotlinmania.spring.boot.actuate.endpoint.jackson;
 
 import org.jspecify.annotations.NullMarked;

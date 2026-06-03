@@ -14,16 +14,16 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.micrometer.tracing.autoconfigure.otlp;
+package io.github.kotlinmania.spring.boot.micrometer.tracing.autoconfigure.otlp;
 
 import io.micrometer.registry.otlp.ExemplarContextProvider;
 import io.micrometer.tracing.Tracer;
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.autoconfigure.AutoConfigurations;
-import org.springframework.boot.micrometer.tracing.autoconfigure.otlp.OtlpExemplarsAutoConfiguration.LazyTracingExemplarContextProvider;
-import org.springframework.boot.test.context.FilteredClassLoader;
-import org.springframework.boot.test.context.runner.ApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurations;
+import io.github.kotlinmania.spring.boot.micrometer.tracing.autoconfigure.otlp.OtlpExemplarsAutoConfiguration.LazyTracingExemplarContextProvider;
+import io.github.kotlinmania.spring.boot.test.context.FilteredClassLoader;
+import io.github.kotlinmania.spring.boot.test.context.runner.ApplicationContextRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 

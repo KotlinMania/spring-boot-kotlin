@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.grpc.client.autoconfigure;
+package io.github.kotlinmania.spring.boot.grpc.client.autoconfigure;
 
 import javax.net.ssl.KeyManager;
 import javax.net.ssl.KeyManagerFactory;
@@ -27,11 +27,11 @@ import io.grpc.InsecureChannelCredentials;
 import io.grpc.TlsChannelCredentials;
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.grpc.client.autoconfigure.GrpcClientProperties.Channel;
-import org.springframework.boot.ssl.DefaultSslBundleRegistry;
-import org.springframework.boot.ssl.SslBundle;
-import org.springframework.boot.ssl.SslBundles;
-import org.springframework.boot.ssl.SslManagerBundle;
+import io.github.kotlinmania.spring.boot.grpc.client.autoconfigure.GrpcClientProperties.Channel;
+import io.github.kotlinmania.spring.boot.ssl.DefaultSslBundleRegistry;
+import io.github.kotlinmania.spring.boot.ssl.SslBundle;
+import io.github.kotlinmania.spring.boot.ssl.SslBundles;
+import io.github.kotlinmania.spring.boot.ssl.SslManagerBundle;
 import org.springframework.grpc.client.ChannelCredentialsProvider;
 
 import static org.assertj.core.api.Assertions.assertThat;

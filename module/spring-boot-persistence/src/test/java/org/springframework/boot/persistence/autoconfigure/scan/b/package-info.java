@@ -15,6 +15,6 @@
  */
 
 @NullMarked
-package org.springframework.boot.persistence.autoconfigure.scan.b;
+package io.github.kotlinmania.spring.boot.persistence.autoconfigure.scan.b;
 
 import org.jspecify.annotations.NullMarked;

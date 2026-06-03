@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.http.client;
+package io.github.kotlinmania.spring.boot.http.client;
 
 import java.time.Duration;
 import java.util.function.Supplier;
@@ -30,10 +30,10 @@ import reactor.netty.http.client.HttpClientConfig;
 import reactor.netty.tcp.SslProvider.SslContextSpec;
 import reactor.netty.transport.ClientTransport.ResolvedAddressSelector;
 
-import org.springframework.boot.context.properties.PropertyMapper;
-import org.springframework.boot.ssl.SslBundle;
-import org.springframework.boot.ssl.SslManagerBundle;
-import org.springframework.boot.ssl.SslOptions;
+import io.github.kotlinmania.spring.boot.context.properties.PropertyMapper;
+import io.github.kotlinmania.spring.boot.ssl.SslBundle;
+import io.github.kotlinmania.spring.boot.ssl.SslManagerBundle;
+import io.github.kotlinmania.spring.boot.ssl.SslOptions;
 import org.springframework.http.client.ReactorResourceFactory;
 import org.springframework.util.Assert;
 import org.springframework.util.function.ThrowingConsumer;

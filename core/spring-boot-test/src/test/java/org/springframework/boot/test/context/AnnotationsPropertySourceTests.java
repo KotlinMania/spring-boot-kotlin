@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.test.context;
+package io.github.kotlinmania.spring.boot.test.context;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
@@ -22,11 +22,11 @@ import java.lang.annotation.RetentionPolicy;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.test.context.AnnotationsPropertySourceTests.DeeplyNestedAnnotations.Level1;
-import org.springframework.boot.test.context.AnnotationsPropertySourceTests.DeeplyNestedAnnotations.Level2;
-import org.springframework.boot.test.context.AnnotationsPropertySourceTests.EnclosingClass.PropertyMappedAnnotationOnEnclosingClass;
-import org.springframework.boot.test.context.AnnotationsPropertySourceTests.NestedAnnotations.Entry;
-import org.springframework.boot.test.context.PropertyMapping.Skip;
+import io.github.kotlinmania.spring.boot.test.context.AnnotationsPropertySourceTests.DeeplyNestedAnnotations.Level1;
+import io.github.kotlinmania.spring.boot.test.context.AnnotationsPropertySourceTests.DeeplyNestedAnnotations.Level2;
+import io.github.kotlinmania.spring.boot.test.context.AnnotationsPropertySourceTests.EnclosingClass.PropertyMappedAnnotationOnEnclosingClass;
+import io.github.kotlinmania.spring.boot.test.context.AnnotationsPropertySourceTests.NestedAnnotations.Entry;
+import io.github.kotlinmania.spring.boot.test.context.PropertyMapping.Skip;
 import org.springframework.core.annotation.AliasFor;
 
 import static org.assertj.core.api.Assertions.assertThat;

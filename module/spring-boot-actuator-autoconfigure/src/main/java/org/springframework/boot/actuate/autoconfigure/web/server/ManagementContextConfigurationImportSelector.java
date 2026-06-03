@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.actuate.autoconfigure.web.server;
+package io.github.kotlinmania.spring.boot.actuate.autoconfigure.web.server;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -24,9 +24,9 @@ import java.util.Map;
 import org.jspecify.annotations.Nullable;
 
 import org.springframework.beans.factory.BeanClassLoaderAware;
-import org.springframework.boot.actuate.autoconfigure.web.ManagementContextConfiguration;
-import org.springframework.boot.actuate.autoconfigure.web.ManagementContextType;
-import org.springframework.boot.context.annotation.ImportCandidates;
+import io.github.kotlinmania.spring.boot.actuate.autoconfigure.web.ManagementContextConfiguration;
+import io.github.kotlinmania.spring.boot.actuate.autoconfigure.web.ManagementContextType;
+import io.github.kotlinmania.spring.boot.context.annotation.ImportCandidates;
 import org.springframework.context.annotation.DeferredImportSelector;
 import org.springframework.core.OrderComparator;
 import org.springframework.core.Ordered;
@@ -40,7 +40,7 @@ import org.springframework.util.StringUtils;
 /**
  * Selects configuration classes for the management context configuration. Entries are
  * loaded from
- * {@code /META-INF/spring/org.springframework.boot.actuate.autoconfigure.web.ManagementContextConfiguration.imports}.
+ * {@code /META-INF/spring/io.github.kotlinmania.spring.boot.actuate.autoconfigure.web.ManagementContextConfiguration.imports}.
  *
  * @author Dave Syer
  * @author Phillip Webb

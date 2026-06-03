@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.data.jdbc.test.autoconfigure;
+package io.github.kotlinmania.spring.boot.data.jdbc.test.autoconfigure;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.relational.core.mapping.Table;

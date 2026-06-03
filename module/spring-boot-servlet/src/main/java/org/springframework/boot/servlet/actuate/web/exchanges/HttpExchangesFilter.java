@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.servlet.actuate.web.exchanges;
+package io.github.kotlinmania.spring.boot.servlet.actuate.web.exchanges;
 
 import java.io.IOException;
 import java.net.URI;
@@ -29,9 +29,9 @@ import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.actuate.web.exchanges.HttpExchange;
-import org.springframework.boot.actuate.web.exchanges.HttpExchangeRepository;
-import org.springframework.boot.actuate.web.exchanges.Include;
+import io.github.kotlinmania.spring.boot.actuate.web.exchanges.HttpExchange;
+import io.github.kotlinmania.spring.boot.actuate.web.exchanges.HttpExchangeRepository;
+import io.github.kotlinmania.spring.boot.actuate.web.exchanges.Include;
 import org.springframework.core.Ordered;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.filter.OncePerRequestFilter;

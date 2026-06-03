@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.availability;
+package io.github.kotlinmania.spring.boot.availability;
 
 /**
  * "Liveness" state of the application.

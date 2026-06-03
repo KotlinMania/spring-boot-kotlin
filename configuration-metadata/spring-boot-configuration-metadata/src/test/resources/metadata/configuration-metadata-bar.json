@@ -9,7 +9,7 @@
     },
     {
       "name": "spring.bar",
-      "type": "org.springframework.boot.BarProperties"
+      "type": "io.github.kotlinmania.spring.boot.BarProperties"
     }
   ],
   "properties": [
@@ -28,12 +28,12 @@
     {
       "name": "spring.bar.name",
       "type": "java.lang.String",
-      "sourceType": "org.springframework.boot.BarProperties"
+      "sourceType": "io.github.kotlinmania.spring.boot.BarProperties"
     },
     {
       "name": "spring.bar.counter",
       "type": "java.lang.Integer",
-      "sourceType": "org.springframework.boot.BarProperties",
+      "sourceType": "io.github.kotlinmania.spring.boot.BarProperties",
       "defaultValue": 0
     }
   ],

@@ -18,6 +18,6 @@
  * Health integration for R2DBC.
  */
 @NullMarked
-package org.springframework.boot.r2dbc.health;
+package io.github.kotlinmania.spring.boot.r2dbc.health;
 
 import org.jspecify.annotations.NullMarked;

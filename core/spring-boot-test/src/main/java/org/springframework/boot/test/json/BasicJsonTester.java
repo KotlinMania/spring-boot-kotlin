@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.test.json;
+package io.github.kotlinmania.spring.boot.test.json;
 
 import java.io.File;
 import java.io.InputStream;

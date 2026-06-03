@@ -16,9 +16,9 @@
 
 package com.example;
 
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.builder.SpringApplicationBuilder;
-import org.springframework.boot.web.server.context.WebServerPortFileWriter;
+import io.github.kotlinmania.spring.boot.autoconfigure.SpringBootApplication;
+import io.github.kotlinmania.spring.boot.builder.SpringApplicationBuilder;
+import io.github.kotlinmania.spring.boot.web.server.context.WebServerPortFileWriter;
 
 @SpringBootApplication
 class DevToolsTestApplication {

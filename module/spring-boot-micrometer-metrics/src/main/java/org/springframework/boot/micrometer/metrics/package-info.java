@@ -18,6 +18,6 @@
  * General metrics-related classes.
  */
 @NullMarked
-package org.springframework.boot.micrometer.metrics;
+package io.github.kotlinmania.spring.boot.micrometer.metrics;
 
 import org.jspecify.annotations.NullMarked;

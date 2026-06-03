@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.r2dbc.autoconfigure;
+package io.github.kotlinmania.spring.boot.r2dbc.autoconfigure;
 
 import java.net.URL;
 import java.net.URLClassLoader;
@@ -37,15 +37,15 @@ import org.assertj.core.api.ObjectAssert;
 import org.junit.jupiter.api.Test;
 
 import org.springframework.beans.factory.BeanCreationException;
-import org.springframework.boot.autoconfigure.AutoConfigurations;
-import org.springframework.boot.jdbc.autoconfigure.DataSourceAutoConfiguration;
-import org.springframework.boot.r2dbc.EmbeddedDatabaseConnection;
-import org.springframework.boot.r2dbc.OptionsCapableConnectionFactory;
-import org.springframework.boot.r2dbc.SimpleConnectionFactoryProvider.SimpleTestConnectionFactory;
-import org.springframework.boot.test.context.FilteredClassLoader;
-import org.springframework.boot.test.context.runner.ApplicationContextRunner;
-import org.springframework.boot.testsupport.classpath.ForkedClassPath;
-import org.springframework.boot.testsupport.classpath.resources.WithResource;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurations;
+import io.github.kotlinmania.spring.boot.jdbc.autoconfigure.DataSourceAutoConfiguration;
+import io.github.kotlinmania.spring.boot.r2dbc.EmbeddedDatabaseConnection;
+import io.github.kotlinmania.spring.boot.r2dbc.OptionsCapableConnectionFactory;
+import io.github.kotlinmania.spring.boot.r2dbc.SimpleConnectionFactoryProvider.SimpleTestConnectionFactory;
+import io.github.kotlinmania.spring.boot.test.context.FilteredClassLoader;
+import io.github.kotlinmania.spring.boot.test.context.runner.ApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.testsupport.classpath.ForkedClassPath;
+import io.github.kotlinmania.spring.boot.testsupport.classpath.resources.WithResource;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.r2dbc.core.DatabaseClient;
@@ -244,7 +244,7 @@ class R2dbcAutoConfigurationTests {
 
 	@Test
 	@WithResource(name = "META-INF/services/io.r2dbc.spi.ConnectionFactoryProvider",
-			content = "org.springframework.boot.autoconfigure.r2dbc.SimpleConnectionFactoryProvider")
+			content = "io.github.kotlinmania.spring.boot.autoconfigure.r2dbc.SimpleConnectionFactoryProvider")
 	@ForkedClassPath
 	void configureWithPoolShouldApplyAdditionalProperties() {
 		this.contextRunner

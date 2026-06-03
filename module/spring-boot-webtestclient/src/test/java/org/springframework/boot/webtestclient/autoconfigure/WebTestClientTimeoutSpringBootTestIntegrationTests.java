@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.webtestclient.autoconfigure;
+package io.github.kotlinmania.spring.boot.webtestclient.autoconfigure;
 
 import java.time.Duration;
 
@@ -22,7 +22,7 @@ import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
+import io.github.kotlinmania.spring.boot.test.context.SpringBootTest;
 import org.springframework.test.context.TestPropertySource;
 import org.springframework.test.web.reactive.server.WebTestClient;
 import org.springframework.web.reactive.config.EnableWebFlux;

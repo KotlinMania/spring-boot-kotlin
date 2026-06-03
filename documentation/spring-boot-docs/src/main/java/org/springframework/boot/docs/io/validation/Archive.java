@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.io.validation;
+package io.github.kotlinmania.spring.boot.docs.io.validation;
 
 class Archive {
 

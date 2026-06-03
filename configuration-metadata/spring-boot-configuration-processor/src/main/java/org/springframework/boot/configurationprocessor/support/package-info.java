@@ -17,4 +17,4 @@
 /**
  * Support classes for configuration metadata processing.
  */
-package org.springframework.boot.configurationprocessor.support;
+package io.github.kotlinmania.spring.boot.configurationprocessor.support;

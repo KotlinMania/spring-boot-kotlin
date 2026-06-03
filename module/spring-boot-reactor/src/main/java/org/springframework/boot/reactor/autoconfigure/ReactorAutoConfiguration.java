@@ -14,15 +14,15 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.reactor.autoconfigure;
+package io.github.kotlinmania.spring.boot.reactor.autoconfigure;
 
 import reactor.core.publisher.Hooks;
 
-import org.springframework.boot.LazyInitializationExcludeFilter;
-import org.springframework.boot.autoconfigure.AutoConfiguration;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
-import org.springframework.boot.context.properties.EnableConfigurationProperties;
+import io.github.kotlinmania.spring.boot.LazyInitializationExcludeFilter;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.EnableAutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnClass;
+import io.github.kotlinmania.spring.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 
 /**

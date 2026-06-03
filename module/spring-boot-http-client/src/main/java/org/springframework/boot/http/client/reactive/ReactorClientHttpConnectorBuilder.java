@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.http.client.reactive;
+package io.github.kotlinmania.spring.boot.http.client.reactive;
 
 import java.util.Collection;
 import java.util.List;
@@ -27,8 +27,8 @@ import reactor.netty.http.client.HttpClient;
 import reactor.netty.http.client.HttpClientConfig;
 import reactor.netty.transport.ClientTransport.ResolvedAddressSelector;
 
-import org.springframework.boot.http.client.HttpClientSettings;
-import org.springframework.boot.http.client.ReactorHttpClientBuilder;
+import io.github.kotlinmania.spring.boot.http.client.HttpClientSettings;
+import io.github.kotlinmania.spring.boot.http.client.ReactorHttpClientBuilder;
 import org.springframework.http.client.ReactorResourceFactory;
 import org.springframework.http.client.reactive.ReactorClientHttpConnector;
 import org.springframework.util.Assert;

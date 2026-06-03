@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.autoconfigure.ssl;
+package io.github.kotlinmania.spring.boot.autoconfigure.ssl;
 
 import java.security.PrivateKey;
 import java.security.cert.X509Certificate;
@@ -22,18 +22,18 @@ import java.util.List;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.autoconfigure.ssl.SslBundleProperties.Key;
-import org.springframework.boot.io.ApplicationResourceLoader;
-import org.springframework.boot.ssl.SslBundle;
-import org.springframework.boot.ssl.SslBundleKey;
-import org.springframework.boot.ssl.SslManagerBundle;
-import org.springframework.boot.ssl.SslOptions;
-import org.springframework.boot.ssl.SslStoreBundle;
-import org.springframework.boot.ssl.jks.JksSslStoreBundle;
-import org.springframework.boot.ssl.jks.JksSslStoreDetails;
-import org.springframework.boot.ssl.pem.PemSslStore;
-import org.springframework.boot.ssl.pem.PemSslStoreBundle;
-import org.springframework.boot.ssl.pem.PemSslStoreDetails;
+import io.github.kotlinmania.spring.boot.autoconfigure.ssl.SslBundleProperties.Key;
+import io.github.kotlinmania.spring.boot.io.ApplicationResourceLoader;
+import io.github.kotlinmania.spring.boot.ssl.SslBundle;
+import io.github.kotlinmania.spring.boot.ssl.SslBundleKey;
+import io.github.kotlinmania.spring.boot.ssl.SslManagerBundle;
+import io.github.kotlinmania.spring.boot.ssl.SslOptions;
+import io.github.kotlinmania.spring.boot.ssl.SslStoreBundle;
+import io.github.kotlinmania.spring.boot.ssl.jks.JksSslStoreBundle;
+import io.github.kotlinmania.spring.boot.ssl.jks.JksSslStoreDetails;
+import io.github.kotlinmania.spring.boot.ssl.pem.PemSslStore;
+import io.github.kotlinmania.spring.boot.ssl.pem.PemSslStoreBundle;
+import io.github.kotlinmania.spring.boot.ssl.pem.PemSslStoreDetails;
 import org.springframework.core.io.ResourceLoader;
 import org.springframework.core.style.ToStringCreator;
 import org.springframework.util.Assert;

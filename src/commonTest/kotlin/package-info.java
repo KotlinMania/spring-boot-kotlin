@@ -18,6 +18,6 @@
  * Administration support for Spring Boot applications.
  */
 @NullMarked
-package org.springframework.boot.admin;
+package io.github.kotlinmania.spring.boot.admin;
 
 import org.jspecify.annotations.NullMarked;

@@ -7,7 +7,7 @@
 == Nested Configuration Properties
 
 Reflection hints are automatically created for configuration properties by the Spring ahead-of-time engine.
-Nested configuration properties which are not inner classes, however, *must* be annotated with javadoc:org.springframework.boot.context.properties.NestedConfigurationProperty[format=annotation], otherwise they won't be detected and will not be bindable.
+Nested configuration properties which are not inner classes, however, *must* be annotated with javadoc:io.github.kotlinmania.spring.boot.context.properties.NestedConfigurationProperty[format=annotation], otherwise they won't be detected and will not be bindable.
 
 include-code::MyProperties[]
 
@@ -16,18 +16,18 @@ where `Nested` is:
 include-code::Nested[]
 
 The example above produces configuration properties for `my.properties.name` and `my.properties.nested.number`.
-Without the javadoc:org.springframework.boot.context.properties.NestedConfigurationProperty[format=annotation] annotation on the `nested` field, the `my.properties.nested.number` property would not be bindable in a native image.
+Without the javadoc:io.github.kotlinmania.spring.boot.context.properties.NestedConfigurationProperty[format=annotation] annotation on the `nested` field, the `my.properties.nested.number` property would not be bindable in a native image.
 You can also annotate the getter method.
 
-When using constructor binding, you have to annotate the field with javadoc:org.springframework.boot.context.properties.NestedConfigurationProperty[format=annotation]:
+When using constructor binding, you have to annotate the field with javadoc:io.github.kotlinmania.spring.boot.context.properties.NestedConfigurationProperty[format=annotation]:
 
 include-code::MyPropertiesCtor[]
 
-When using records, you have to annotate the parameter with javadoc:org.springframework.boot.context.properties.NestedConfigurationProperty[format=annotation]:
+When using records, you have to annotate the parameter with javadoc:io.github.kotlinmania.spring.boot.context.properties.NestedConfigurationProperty[format=annotation]:
 
 include-code::MyPropertiesRecord[]
 
-When using Kotlin, you need to annotate the parameter of a data class with javadoc:org.springframework.boot.context.properties.NestedConfigurationProperty[format=annotation]:
+When using Kotlin, you need to annotate the parameter of a data class with javadoc:io.github.kotlinmania.spring.boot.context.properties.NestedConfigurationProperty[format=annotation]:
 
 include-code::MyPropertiesKotlin[]
 
@@ -164,7 +164,7 @@ Create a class that implements the javadoc:org.springframework.aot.hint.RuntimeH
 
 include-code::MyRuntimeHints[]
 
-You can then use javadoc:org.springframework.context.annotation.ImportRuntimeHints[format=annotation] on any javadoc:org.springframework.context.annotation.Configuration[format=annotation] class (for example your javadoc:org.springframework.boot.autoconfigure.SpringBootApplication[format=annotation] annotated application class) to activate those hints.
+You can then use javadoc:org.springframework.context.annotation.ImportRuntimeHints[format=annotation] on any javadoc:org.springframework.context.annotation.Configuration[format=annotation] class (for example your javadoc:io.github.kotlinmania.spring.boot.autoconfigure.SpringBootApplication[format=annotation] annotated application class) to activate those hints.
 
 If you have classes which need binding (mostly needed when serializing or deserializing JSON), you can use {url-spring-framework-docs}/core/aot.html#aot.hints.register-reflection-for-binding[`@RegisterReflectionForBinding`] on any bean.
 Most of the hints are automatically inferred, for example when accepting or returning data from a javadoc:org.springframework.web.bind.annotation.RestController[format=annotation] method.

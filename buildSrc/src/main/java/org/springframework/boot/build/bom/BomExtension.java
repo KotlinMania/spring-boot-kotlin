@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.build.bom;
+package io.github.kotlinmania.spring.boot.build.bom;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -39,23 +39,23 @@ import org.gradle.api.artifacts.dsl.DependencyHandler;
 import org.gradle.api.model.ObjectFactory;
 import org.gradle.api.plugins.JavaPlatformPlugin;
 
-import org.springframework.boot.build.bom.BomExtension.LibraryHandler.AlignWithHandler.PropertyHandler;
-import org.springframework.boot.build.bom.BomExtension.LibraryHandler.AlignWithHandler.VersionHandler;
-import org.springframework.boot.build.bom.Library.BomAlignment;
-import org.springframework.boot.build.bom.Library.DependencyVersionAlignment;
-import org.springframework.boot.build.bom.Library.Exclusion;
-import org.springframework.boot.build.bom.Library.Group;
-import org.springframework.boot.build.bom.Library.ImportedBom;
-import org.springframework.boot.build.bom.Library.LibraryVersion;
-import org.springframework.boot.build.bom.Library.Link;
-import org.springframework.boot.build.bom.Library.Module;
-import org.springframework.boot.build.bom.Library.PermittedDependency;
-import org.springframework.boot.build.bom.Library.PomPropertyVersionAlignment;
-import org.springframework.boot.build.bom.Library.ProhibitedVersion;
-import org.springframework.boot.build.bom.Library.VersionAlignment;
-import org.springframework.boot.build.bom.ResolvedBom.Id;
-import org.springframework.boot.build.bom.bomr.version.DependencyVersion;
-import org.springframework.boot.build.properties.BuildProperties;
+import io.github.kotlinmania.spring.boot.build.bom.BomExtension.LibraryHandler.AlignWithHandler.PropertyHandler;
+import io.github.kotlinmania.spring.boot.build.bom.BomExtension.LibraryHandler.AlignWithHandler.VersionHandler;
+import io.github.kotlinmania.spring.boot.build.bom.Library.BomAlignment;
+import io.github.kotlinmania.spring.boot.build.bom.Library.DependencyVersionAlignment;
+import io.github.kotlinmania.spring.boot.build.bom.Library.Exclusion;
+import io.github.kotlinmania.spring.boot.build.bom.Library.Group;
+import io.github.kotlinmania.spring.boot.build.bom.Library.ImportedBom;
+import io.github.kotlinmania.spring.boot.build.bom.Library.LibraryVersion;
+import io.github.kotlinmania.spring.boot.build.bom.Library.Link;
+import io.github.kotlinmania.spring.boot.build.bom.Library.Module;
+import io.github.kotlinmania.spring.boot.build.bom.Library.PermittedDependency;
+import io.github.kotlinmania.spring.boot.build.bom.Library.PomPropertyVersionAlignment;
+import io.github.kotlinmania.spring.boot.build.bom.Library.ProhibitedVersion;
+import io.github.kotlinmania.spring.boot.build.bom.Library.VersionAlignment;
+import io.github.kotlinmania.spring.boot.build.bom.ResolvedBom.Id;
+import io.github.kotlinmania.spring.boot.build.bom.bomr.version.DependencyVersion;
+import io.github.kotlinmania.spring.boot.build.properties.BuildProperties;
 import org.springframework.util.PropertyPlaceholderHelper;
 import org.springframework.util.PropertyPlaceholderHelper.PlaceholderResolver;
 

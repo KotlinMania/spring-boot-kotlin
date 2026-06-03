@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.devtools.restart;
+package io.github.kotlinmania.spring.boot.devtools.restart;
 
 import java.io.IOException;
 import java.net.URL;
@@ -47,7 +47,7 @@ class DefaultRestartInitializerTests {
 
 	@Test
 	void springTestStackShouldReturnNull() {
-		testSkippedStacks("org.springframework.boot.test.Something");
+		testSkippedStacks("io.github.kotlinmania.spring.boot.test.Something");
 	}
 
 	@Test

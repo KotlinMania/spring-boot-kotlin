@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.io.restclient.httpservice.groups;
+package io.github.kotlinmania.spring.boot.docs.io.restclient.httpservice.groups;
 
 import java.util.Map;
 

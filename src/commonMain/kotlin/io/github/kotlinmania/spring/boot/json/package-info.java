@@ -17,9 +17,9 @@
 /**
  * Support for parsing JSON.
  *
- * @see org.springframework.boot.json.JsonParser
+ * @see io.github.kotlinmania.spring.boot.json.JsonParser
  */
 @NullMarked
-package org.springframework.boot.json;
+package io.github.kotlinmania.spring.boot.json;
 
 import org.jspecify.annotations.NullMarked;

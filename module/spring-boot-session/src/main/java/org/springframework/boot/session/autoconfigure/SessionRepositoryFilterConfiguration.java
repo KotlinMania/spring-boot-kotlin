@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.session.autoconfigure;
+package io.github.kotlinmania.spring.boot.session.autoconfigure;
 
 import java.util.EnumSet;
 import java.util.stream.Collectors;
@@ -23,9 +23,9 @@ import jakarta.servlet.DispatcherType;
 import org.jspecify.annotations.Nullable;
 
 import org.springframework.beans.factory.ListableBeanFactory;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
-import org.springframework.boot.context.properties.EnableConfigurationProperties;
-import org.springframework.boot.web.servlet.DelegatingFilterProxyRegistrationBean;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnBean;
+import io.github.kotlinmania.spring.boot.context.properties.EnableConfigurationProperties;
+import io.github.kotlinmania.spring.boot.web.servlet.DelegatingFilterProxyRegistrationBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.session.web.http.SessionRepositoryFilter;

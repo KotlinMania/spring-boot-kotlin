@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.artemis.docker.compose;
+package io.github.kotlinmania.spring.boot.artemis.docker.compose;
 
-import org.springframework.boot.artemis.autoconfigure.ArtemisConnectionDetails;
-import org.springframework.boot.artemis.autoconfigure.ArtemisMode;
-import org.springframework.boot.docker.compose.service.connection.test.DockerComposeTest;
-import org.springframework.boot.testsupport.container.TestImage;
+import io.github.kotlinmania.spring.boot.artemis.autoconfigure.ArtemisConnectionDetails;
+import io.github.kotlinmania.spring.boot.artemis.autoconfigure.ArtemisMode;
+import io.github.kotlinmania.spring.boot.docker.compose.service.connection.test.DockerComposeTest;
+import io.github.kotlinmania.spring.boot.testsupport.container.TestImage;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

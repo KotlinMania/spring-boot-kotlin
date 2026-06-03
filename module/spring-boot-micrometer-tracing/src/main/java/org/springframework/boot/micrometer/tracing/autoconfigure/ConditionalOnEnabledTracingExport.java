@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.micrometer.tracing.autoconfigure;
+package io.github.kotlinmania.spring.boot.micrometer.tracing.autoconfigure;
 
 import java.lang.annotation.Documented;
 import java.lang.annotation.ElementType;

@@ -14,39 +14,39 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.actuate.autoconfigure.endpoint.web;
+package io.github.kotlinmania.spring.boot.actuate.autoconfigure.endpoint.web;
 
 import java.util.Collection;
 import java.util.Collections;
 
 import org.springframework.beans.factory.ObjectProvider;
-import org.springframework.boot.actuate.autoconfigure.endpoint.EndpointAutoConfiguration;
-import org.springframework.boot.actuate.autoconfigure.endpoint.expose.EndpointExposure;
-import org.springframework.boot.actuate.autoconfigure.endpoint.expose.IncludeExcludeEndpointFilter;
-import org.springframework.boot.actuate.autoconfigure.web.server.ManagementPortType;
-import org.springframework.boot.actuate.endpoint.EndpointAccessResolver;
-import org.springframework.boot.actuate.endpoint.EndpointFilter;
-import org.springframework.boot.actuate.endpoint.EndpointsSupplier;
-import org.springframework.boot.actuate.endpoint.OperationFilter;
-import org.springframework.boot.actuate.endpoint.annotation.Endpoint;
-import org.springframework.boot.actuate.endpoint.invoke.OperationInvokerAdvisor;
-import org.springframework.boot.actuate.endpoint.invoke.ParameterValueMapper;
-import org.springframework.boot.actuate.endpoint.web.AdditionalPathsMapper;
-import org.springframework.boot.actuate.endpoint.web.EndpointMediaTypes;
-import org.springframework.boot.actuate.endpoint.web.ExposableWebEndpoint;
-import org.springframework.boot.actuate.endpoint.web.PathMappedEndpoint;
-import org.springframework.boot.actuate.endpoint.web.PathMappedEndpoints;
-import org.springframework.boot.actuate.endpoint.web.PathMapper;
-import org.springframework.boot.actuate.endpoint.web.WebEndpointsSupplier;
-import org.springframework.boot.actuate.endpoint.web.WebOperation;
-import org.springframework.boot.actuate.endpoint.web.WebServerNamespace;
-import org.springframework.boot.actuate.endpoint.web.annotation.WebEndpointDiscoverer;
-import org.springframework.boot.autoconfigure.AutoConfiguration;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnWebApplication;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnWebApplication.Type;
-import org.springframework.boot.context.properties.EnableConfigurationProperties;
+import io.github.kotlinmania.spring.boot.actuate.autoconfigure.endpoint.EndpointAutoConfiguration;
+import io.github.kotlinmania.spring.boot.actuate.autoconfigure.endpoint.expose.EndpointExposure;
+import io.github.kotlinmania.spring.boot.actuate.autoconfigure.endpoint.expose.IncludeExcludeEndpointFilter;
+import io.github.kotlinmania.spring.boot.actuate.autoconfigure.web.server.ManagementPortType;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.EndpointAccessResolver;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.EndpointFilter;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.EndpointsSupplier;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.OperationFilter;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.annotation.Endpoint;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.invoke.OperationInvokerAdvisor;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.invoke.ParameterValueMapper;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.web.AdditionalPathsMapper;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.web.EndpointMediaTypes;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.web.ExposableWebEndpoint;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.web.PathMappedEndpoint;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.web.PathMappedEndpoints;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.web.PathMapper;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.web.WebEndpointsSupplier;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.web.WebOperation;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.web.WebServerNamespace;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.web.annotation.WebEndpointDiscoverer;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.EnableAutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnMissingBean;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnWebApplication;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnWebApplication.Type;
+import io.github.kotlinmania.spring.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -102,12 +102,12 @@ public final class WebEndpointAutoConfiguration {
 	}
 
 	@Bean
-	@ConditionalOnMissingBean(org.springframework.boot.actuate.endpoint.web.annotation.ControllerEndpointsSupplier.class)
+	@ConditionalOnMissingBean(io.github.kotlinmania.spring.boot.actuate.endpoint.web.annotation.ControllerEndpointsSupplier.class)
 	@SuppressWarnings({ "deprecation", "removal" })
-	org.springframework.boot.actuate.endpoint.web.annotation.ControllerEndpointDiscoverer controllerEndpointDiscoverer(
+	io.github.kotlinmania.spring.boot.actuate.endpoint.web.annotation.ControllerEndpointDiscoverer controllerEndpointDiscoverer(
 			ObjectProvider<PathMapper> endpointPathMappers,
-			ObjectProvider<Collection<EndpointFilter<org.springframework.boot.actuate.endpoint.web.annotation.ExposableControllerEndpoint>>> filters) {
-		return new org.springframework.boot.actuate.endpoint.web.annotation.ControllerEndpointDiscoverer(
+			ObjectProvider<Collection<EndpointFilter<io.github.kotlinmania.spring.boot.actuate.endpoint.web.annotation.ExposableControllerEndpoint>>> filters) {
+		return new io.github.kotlinmania.spring.boot.actuate.endpoint.web.annotation.ControllerEndpointDiscoverer(
 				this.applicationContext, endpointPathMappers.orderedStream().toList(),
 				filters.getIfAvailable(Collections::emptyList));
 	}
@@ -152,10 +152,10 @@ public final class WebEndpointAutoConfiguration {
 
 	@Bean
 	@SuppressWarnings("removal")
-	IncludeExcludeEndpointFilter<org.springframework.boot.actuate.endpoint.web.annotation.ExposableControllerEndpoint> controllerExposeExcludePropertyEndpointFilter() {
+	IncludeExcludeEndpointFilter<io.github.kotlinmania.spring.boot.actuate.endpoint.web.annotation.ExposableControllerEndpoint> controllerExposeExcludePropertyEndpointFilter() {
 		WebEndpointProperties.Exposure exposure = this.properties.getExposure();
 		return new IncludeExcludeEndpointFilter<>(
-				org.springframework.boot.actuate.endpoint.web.annotation.ExposableControllerEndpoint.class,
+				io.github.kotlinmania.spring.boot.actuate.endpoint.web.annotation.ExposableControllerEndpoint.class,
 				exposure.getInclude(), exposure.getExclude());
 	}
 
@@ -170,11 +170,11 @@ public final class WebEndpointAutoConfiguration {
 
 		@Bean
 		@SuppressWarnings({ "deprecation", "removal" })
-		@ConditionalOnMissingBean(org.springframework.boot.actuate.endpoint.web.annotation.ServletEndpointsSupplier.class)
-		org.springframework.boot.actuate.endpoint.web.annotation.ServletEndpointDiscoverer servletEndpointDiscoverer(
+		@ConditionalOnMissingBean(io.github.kotlinmania.spring.boot.actuate.endpoint.web.annotation.ServletEndpointsSupplier.class)
+		io.github.kotlinmania.spring.boot.actuate.endpoint.web.annotation.ServletEndpointDiscoverer servletEndpointDiscoverer(
 				ApplicationContext applicationContext, ObjectProvider<PathMapper> endpointPathMappers,
-				ObjectProvider<EndpointFilter<org.springframework.boot.actuate.endpoint.web.ExposableServletEndpoint>> filters) {
-			return new org.springframework.boot.actuate.endpoint.web.annotation.ServletEndpointDiscoverer(
+				ObjectProvider<EndpointFilter<io.github.kotlinmania.spring.boot.actuate.endpoint.web.ExposableServletEndpoint>> filters) {
+			return new io.github.kotlinmania.spring.boot.actuate.endpoint.web.annotation.ServletEndpointDiscoverer(
 					applicationContext, endpointPathMappers.orderedStream().toList(), filters.orderedStream().toList());
 		}
 

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.tomcat.servlet;
+package io.github.kotlinmania.spring.boot.tomcat.servlet;
 
 import java.io.File;
 import java.io.InputStream;
@@ -65,24 +65,24 @@ import org.apache.tomcat.util.http.Rfc6265CookieProcessor;
 import org.apache.tomcat.util.scan.StandardJarScanFilter;
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.tomcat.ConfigurableTomcatWebServerFactory;
-import org.springframework.boot.tomcat.DisableReferenceClearingContextCustomizer;
-import org.springframework.boot.tomcat.TomcatContextCustomizer;
-import org.springframework.boot.tomcat.TomcatEmbeddedContext;
-import org.springframework.boot.tomcat.TomcatEmbeddedWebappClassLoader;
-import org.springframework.boot.tomcat.TomcatWebServer;
-import org.springframework.boot.tomcat.TomcatWebServerFactory;
-import org.springframework.boot.web.error.ErrorPage;
-import org.springframework.boot.web.server.Cookie.SameSite;
-import org.springframework.boot.web.server.MimeMappings;
-import org.springframework.boot.web.server.WebServer;
-import org.springframework.boot.web.server.servlet.ConfigurableServletWebServerFactory;
-import org.springframework.boot.web.server.servlet.ContextPath;
-import org.springframework.boot.web.server.servlet.CookieSameSiteSupplier;
-import org.springframework.boot.web.server.servlet.DocumentRoot;
-import org.springframework.boot.web.server.servlet.ServletContextInitializers;
-import org.springframework.boot.web.server.servlet.ServletWebServerSettings;
-import org.springframework.boot.web.servlet.ServletContextInitializer;
+import io.github.kotlinmania.spring.boot.tomcat.ConfigurableTomcatWebServerFactory;
+import io.github.kotlinmania.spring.boot.tomcat.DisableReferenceClearingContextCustomizer;
+import io.github.kotlinmania.spring.boot.tomcat.TomcatContextCustomizer;
+import io.github.kotlinmania.spring.boot.tomcat.TomcatEmbeddedContext;
+import io.github.kotlinmania.spring.boot.tomcat.TomcatEmbeddedWebappClassLoader;
+import io.github.kotlinmania.spring.boot.tomcat.TomcatWebServer;
+import io.github.kotlinmania.spring.boot.tomcat.TomcatWebServerFactory;
+import io.github.kotlinmania.spring.boot.web.error.ErrorPage;
+import io.github.kotlinmania.spring.boot.web.server.Cookie.SameSite;
+import io.github.kotlinmania.spring.boot.web.server.MimeMappings;
+import io.github.kotlinmania.spring.boot.web.server.WebServer;
+import io.github.kotlinmania.spring.boot.web.server.servlet.ConfigurableServletWebServerFactory;
+import io.github.kotlinmania.spring.boot.web.server.servlet.ContextPath;
+import io.github.kotlinmania.spring.boot.web.server.servlet.CookieSameSiteSupplier;
+import io.github.kotlinmania.spring.boot.web.server.servlet.DocumentRoot;
+import io.github.kotlinmania.spring.boot.web.server.servlet.ServletContextInitializers;
+import io.github.kotlinmania.spring.boot.web.server.servlet.ServletWebServerSettings;
+import io.github.kotlinmania.spring.boot.web.servlet.ServletContextInitializer;
 import org.springframework.context.ResourceLoaderAware;
 import org.springframework.core.io.ResourceLoader;
 import org.springframework.lang.Contract;
@@ -597,7 +597,7 @@ public class TomcatServletWebServerFactory extends TomcatWebServerFactory
 
 		@Override
 		public WebResource getResource(String path) {
-			if (path.startsWith("/org/springframework/boot")) {
+			if (path.startsWith("/io.github.kotlinmania.spring.boot.)) {
 				return new EmptyResource(getRoot(), path);
 			}
 			return this.delegate.getResource(path);
@@ -612,7 +612,7 @@ public class TomcatServletWebServerFactory extends TomcatWebServerFactory
 		public Set<String> listWebAppPaths(String path) {
 			return this.delegate.listWebAppPaths(path)
 				.stream()
-				.filter((webAppPath) -> !webAppPath.startsWith("/org/springframework/boot"))
+				.filter((webAppPath) -> !webAppPath.startsWith("/io.github.kotlinmania.spring.boot.))
 				.collect(Collectors.toSet());
 		}
 

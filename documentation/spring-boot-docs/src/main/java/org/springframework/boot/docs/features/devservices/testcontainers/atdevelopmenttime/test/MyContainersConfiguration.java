@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.features.devservices.testcontainers.atdevelopmenttime.test;
+package io.github.kotlinmania.spring.boot.docs.features.devservices.testcontainers.atdevelopmenttime.test;
 
 import org.testcontainers.neo4j.Neo4jContainer;
 
-import org.springframework.boot.test.context.TestConfiguration;
-import org.springframework.boot.testcontainers.service.connection.ServiceConnection;
+import io.github.kotlinmania.spring.boot.test.context.TestConfiguration;
+import io.github.kotlinmania.spring.boot.testcontainers.service.connection.ServiceConnection;
 import org.springframework.context.annotation.Bean;
 
 @TestConfiguration(proxyBeanMethods = false)

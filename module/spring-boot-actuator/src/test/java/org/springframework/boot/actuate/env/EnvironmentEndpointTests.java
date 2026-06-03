@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.actuate.env;
+package io.github.kotlinmania.spring.boot.actuate.env;
 
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
@@ -28,17 +28,17 @@ import org.jspecify.annotations.Nullable;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.actuate.endpoint.InvalidEndpointRequestException;
-import org.springframework.boot.actuate.endpoint.Show;
-import org.springframework.boot.actuate.env.EnvironmentEndpoint.EnvironmentDescriptor;
-import org.springframework.boot.actuate.env.EnvironmentEndpoint.EnvironmentEntryDescriptor;
-import org.springframework.boot.actuate.env.EnvironmentEndpoint.PropertySourceDescriptor;
-import org.springframework.boot.actuate.env.EnvironmentEndpoint.PropertySourceEntryDescriptor;
-import org.springframework.boot.actuate.env.EnvironmentEndpoint.PropertyValueDescriptor;
-import org.springframework.boot.context.properties.EnableConfigurationProperties;
-import org.springframework.boot.origin.Origin;
-import org.springframework.boot.origin.OriginLookup;
-import org.springframework.boot.test.util.TestPropertyValues;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.InvalidEndpointRequestException;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.Show;
+import io.github.kotlinmania.spring.boot.actuate.env.EnvironmentEndpoint.EnvironmentDescriptor;
+import io.github.kotlinmania.spring.boot.actuate.env.EnvironmentEndpoint.EnvironmentEntryDescriptor;
+import io.github.kotlinmania.spring.boot.actuate.env.EnvironmentEndpoint.PropertySourceDescriptor;
+import io.github.kotlinmania.spring.boot.actuate.env.EnvironmentEndpoint.PropertySourceEntryDescriptor;
+import io.github.kotlinmania.spring.boot.actuate.env.EnvironmentEndpoint.PropertyValueDescriptor;
+import io.github.kotlinmania.spring.boot.context.properties.EnableConfigurationProperties;
+import io.github.kotlinmania.spring.boot.origin.Origin;
+import io.github.kotlinmania.spring.boot.origin.OriginLookup;
+import io.github.kotlinmania.spring.boot.test.util.TestPropertyValues;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.env.CompositePropertySource;

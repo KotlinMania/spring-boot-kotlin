@@ -18,6 +18,6 @@
  * Classes for application info.
  */
 @NullMarked
-package org.springframework.boot.actuate.info;
+package io.github.kotlinmania.spring.boot.actuate.info;
 
 import org.jspecify.annotations.NullMarked;

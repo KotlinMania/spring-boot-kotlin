@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.jersey.autoconfigure.actuate.web;
+package io.github.kotlinmania.spring.boot.jersey.autoconfigure.actuate.web;
 
 import org.glassfish.jersey.server.ResourceConfig;
 

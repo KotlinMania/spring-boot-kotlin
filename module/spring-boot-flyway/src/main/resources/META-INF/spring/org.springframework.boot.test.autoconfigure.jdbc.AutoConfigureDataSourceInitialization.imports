@@ -1,1 +1,1 @@
-org.springframework.boot.flyway.autoconfigure.FlywayAutoConfiguration
+io.github.kotlinmania.spring.boot.flyway.autoconfigure.FlywayAutoConfiguration

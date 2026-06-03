@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.info;
+package io.github.kotlinmania.spring.boot.info;
 
 import java.security.KeyStore;
 import java.security.KeyStoreException;
@@ -32,10 +32,10 @@ import javax.security.auth.x500.X500Principal;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.info.SslInfo.CertificateValidityInfo.Status;
-import org.springframework.boot.ssl.NoSuchSslBundleException;
-import org.springframework.boot.ssl.SslBundle;
-import org.springframework.boot.ssl.SslBundles;
+import io.github.kotlinmania.spring.boot.info.SslInfo.CertificateValidityInfo.Status;
+import io.github.kotlinmania.spring.boot.ssl.NoSuchSslBundleException;
+import io.github.kotlinmania.spring.boot.ssl.SslBundle;
+import io.github.kotlinmania.spring.boot.ssl.SslBundles;
 import org.springframework.util.Assert;
 import org.springframework.util.ObjectUtils;
 

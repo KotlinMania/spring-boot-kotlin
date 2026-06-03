@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.configurationprocessor.json;
+package io.github.kotlinmania.spring.boot.configurationprocessor.json;
 
 import java.lang.reflect.Array;
 import java.util.ArrayList;

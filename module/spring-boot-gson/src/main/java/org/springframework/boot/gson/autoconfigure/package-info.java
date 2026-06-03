@@ -18,6 +18,6 @@
  * Auto-configuration for GSON.
  */
 @NullMarked
-package org.springframework.boot.gson.autoconfigure;
+package io.github.kotlinmania.spring.boot.gson.autoconfigure;
 
 import org.jspecify.annotations.NullMarked;

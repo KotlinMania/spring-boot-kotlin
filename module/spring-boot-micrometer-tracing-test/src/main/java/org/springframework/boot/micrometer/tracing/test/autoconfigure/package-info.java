@@ -18,6 +18,6 @@
  * Auto-configuration for handling metrics in tests.
  */
 @NullMarked
-package org.springframework.boot.micrometer.tracing.test.autoconfigure;
+package io.github.kotlinmania.spring.boot.micrometer.tracing.test.autoconfigure;
 
 import org.jspecify.annotations.NullMarked;

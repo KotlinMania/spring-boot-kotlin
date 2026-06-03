@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.neo4j.autoconfigure;
+package io.github.kotlinmania.spring.boot.neo4j.autoconfigure;
 
 import java.io.File;
 import java.net.URI;
@@ -34,15 +34,15 @@ import org.neo4j.driver.GraphDatabase;
 import org.neo4j.driver.internal.Scheme;
 
 import org.springframework.beans.factory.ObjectProvider;
-import org.springframework.boot.autoconfigure.AutoConfiguration;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
-import org.springframework.boot.context.properties.EnableConfigurationProperties;
-import org.springframework.boot.context.properties.source.InvalidConfigurationPropertyValueException;
-import org.springframework.boot.neo4j.autoconfigure.Neo4jProperties.Authentication;
-import org.springframework.boot.neo4j.autoconfigure.Neo4jProperties.Pool;
-import org.springframework.boot.neo4j.autoconfigure.Neo4jProperties.Security;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.EnableAutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnClass;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnMissingBean;
+import io.github.kotlinmania.spring.boot.context.properties.EnableConfigurationProperties;
+import io.github.kotlinmania.spring.boot.context.properties.source.InvalidConfigurationPropertyValueException;
+import io.github.kotlinmania.spring.boot.neo4j.autoconfigure.Neo4jProperties.Authentication;
+import io.github.kotlinmania.spring.boot.neo4j.autoconfigure.Neo4jProperties.Pool;
+import io.github.kotlinmania.spring.boot.neo4j.autoconfigure.Neo4jProperties.Security;
 import org.springframework.context.annotation.Bean;
 import org.springframework.util.Assert;
 import org.springframework.util.StringUtils;

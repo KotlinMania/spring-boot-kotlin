@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.diagnostics.analyzer;
+package io.github.kotlinmania.spring.boot.diagnostics.analyzer;
 
 import org.jspecify.annotations.Nullable;
 
@@ -23,7 +23,7 @@ import org.springframework.beans.factory.NoSuchBeanDefinitionException;
 import org.springframework.beans.factory.NoUniqueBeanDefinitionException;
 import org.springframework.beans.factory.config.BeanDefinition;
 import org.springframework.beans.factory.config.ConfigurableBeanFactory;
-import org.springframework.boot.diagnostics.FailureAnalysis;
+import io.github.kotlinmania.spring.boot.diagnostics.FailureAnalysis;
 import org.springframework.util.Assert;
 import org.springframework.util.StringUtils;
 

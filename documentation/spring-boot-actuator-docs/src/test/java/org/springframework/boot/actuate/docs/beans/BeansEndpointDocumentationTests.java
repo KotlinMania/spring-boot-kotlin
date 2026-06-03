@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.actuate.docs.beans;
+package io.github.kotlinmania.spring.boot.actuate.docs.beans;
 
 import java.util.Collection;
 import java.util.List;
@@ -23,8 +23,8 @@ import java.util.Map.Entry;
 
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.actuate.beans.BeansEndpoint;
-import org.springframework.boot.actuate.docs.MockMvcEndpointDocumentationTests;
+import io.github.kotlinmania.spring.boot.actuate.beans.BeansEndpoint;
+import io.github.kotlinmania.spring.boot.actuate.docs.MockMvcEndpointDocumentationTests;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

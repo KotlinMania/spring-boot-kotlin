@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.devtools.restart.server;
+package io.github.kotlinmania.spring.boot.devtools.restart.server;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -28,9 +28,9 @@ import org.jspecify.annotations.Nullable;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.io.TempDir;
 
-import org.springframework.boot.devtools.restart.classloader.ClassLoaderFile;
-import org.springframework.boot.devtools.restart.classloader.ClassLoaderFile.Kind;
-import org.springframework.boot.devtools.restart.classloader.ClassLoaderFiles;
+import io.github.kotlinmania.spring.boot.devtools.restart.classloader.ClassLoaderFile;
+import io.github.kotlinmania.spring.boot.devtools.restart.classloader.ClassLoaderFile.Kind;
+import io.github.kotlinmania.spring.boot.devtools.restart.classloader.ClassLoaderFiles;
 import org.springframework.util.FileCopyUtils;
 
 import static org.assertj.core.api.Assertions.assertThat;

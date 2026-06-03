@@ -6,7 +6,7 @@
 	<build>
 		<plugins>
 			<plugin>
-				<groupId>org.springframework.boot</groupId>
+				<groupId>io.github.kotlinmania.spring.boot./groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
 		</plugins>
@@ -17,7 +17,7 @@
 		<dependencies>
 			<dependency>
 				<!-- Import dependency management from Spring Boot -->
-				<groupId>org.springframework.boot</groupId>
+				<groupId>io.github.kotlinmania.spring.boot./groupId>
 				<artifactId>spring-boot-dependencies</artifactId>
 				<version>{version-spring-boot}</version>
 				<type>pom</type>

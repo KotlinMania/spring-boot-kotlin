@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.ldap.testcontainers;
+package io.github.kotlinmania.spring.boot.ldap.testcontainers;
 
 import java.util.Arrays;
 import java.util.Map;
@@ -23,10 +23,10 @@ import java.util.stream.Collectors;
 import org.testcontainers.containers.Container;
 import org.testcontainers.containers.GenericContainer;
 
-import org.springframework.boot.ldap.autoconfigure.LdapConnectionDetails;
-import org.springframework.boot.testcontainers.service.connection.ContainerConnectionDetailsFactory;
-import org.springframework.boot.testcontainers.service.connection.ContainerConnectionSource;
-import org.springframework.boot.testcontainers.service.connection.ServiceConnection;
+import io.github.kotlinmania.spring.boot.ldap.autoconfigure.LdapConnectionDetails;
+import io.github.kotlinmania.spring.boot.testcontainers.service.connection.ContainerConnectionDetailsFactory;
+import io.github.kotlinmania.spring.boot.testcontainers.service.connection.ContainerConnectionSource;
+import io.github.kotlinmania.spring.boot.testcontainers.service.connection.ServiceConnection;
 
 /**
  * {@link ContainerConnectionDetailsFactory} to create {@link LdapConnectionDetails} from

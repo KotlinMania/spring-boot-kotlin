@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.testcontainers.lifecycle;
+package io.github.kotlinmania.spring.boot.testcontainers.lifecycle;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -30,13 +30,13 @@ import org.junit.jupiter.api.extension.ExtensionContext;
 import org.testcontainers.utility.DockerImageName;
 
 import org.springframework.beans.factory.ObjectFactory;
-import org.springframework.boot.testcontainers.lifecycle.TestcontainersLifecycleOrderWithScopeIntegrationTests.AssertingSpringExtension;
-import org.springframework.boot.testcontainers.lifecycle.TestcontainersLifecycleOrderWithScopeIntegrationTests.ContainerConfig;
-import org.springframework.boot.testcontainers.lifecycle.TestcontainersLifecycleOrderWithScopeIntegrationTests.ScopedContextLoader;
-import org.springframework.boot.testcontainers.lifecycle.TestcontainersLifecycleOrderWithScopeIntegrationTests.TestConfig;
-import org.springframework.boot.testcontainers.service.connection.ServiceConnection;
-import org.springframework.boot.testsupport.container.DisabledIfDockerUnavailable;
-import org.springframework.boot.testsupport.container.TestImage;
+import io.github.kotlinmania.spring.boot.testcontainers.lifecycle.TestcontainersLifecycleOrderWithScopeIntegrationTests.AssertingSpringExtension;
+import io.github.kotlinmania.spring.boot.testcontainers.lifecycle.TestcontainersLifecycleOrderWithScopeIntegrationTests.ContainerConfig;
+import io.github.kotlinmania.spring.boot.testcontainers.lifecycle.TestcontainersLifecycleOrderWithScopeIntegrationTests.ScopedContextLoader;
+import io.github.kotlinmania.spring.boot.testcontainers.lifecycle.TestcontainersLifecycleOrderWithScopeIntegrationTests.TestConfig;
+import io.github.kotlinmania.spring.boot.testcontainers.service.connection.ServiceConnection;
+import io.github.kotlinmania.spring.boot.testsupport.container.DisabledIfDockerUnavailable;
+import io.github.kotlinmania.spring.boot.testsupport.container.TestImage;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

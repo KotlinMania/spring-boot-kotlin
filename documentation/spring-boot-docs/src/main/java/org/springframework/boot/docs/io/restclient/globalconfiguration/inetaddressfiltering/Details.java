@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.io.restclient.globalconfiguration.inetaddressfiltering;
+package io.github.kotlinmania.spring.boot.docs.io.restclient.globalconfiguration.inetaddressfiltering;
 
 public class Details {
 

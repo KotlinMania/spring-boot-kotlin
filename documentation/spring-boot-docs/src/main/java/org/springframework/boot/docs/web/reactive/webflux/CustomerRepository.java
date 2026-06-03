@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.web.reactive.webflux;
+package io.github.kotlinmania.spring.boot.docs.web.reactive.webflux;
 
 import reactor.core.publisher.Flux;
 

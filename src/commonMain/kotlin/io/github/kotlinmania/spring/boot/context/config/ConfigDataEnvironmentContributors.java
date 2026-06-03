@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.context.config;
+package io.github.kotlinmania.spring.boot.context.config;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -29,17 +29,17 @@ import java.util.function.Predicate;
 import org.apache.commons.logging.Log;
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.bootstrap.ConfigurableBootstrapContext;
-import org.springframework.boot.context.config.ConfigDataEnvironmentContributor.ImportPhase;
-import org.springframework.boot.context.config.ConfigDataEnvironmentContributor.Kind;
-import org.springframework.boot.context.properties.bind.BindContext;
-import org.springframework.boot.context.properties.bind.BindHandler;
-import org.springframework.boot.context.properties.bind.Bindable;
-import org.springframework.boot.context.properties.bind.Binder;
-import org.springframework.boot.context.properties.bind.PlaceholdersResolver;
-import org.springframework.boot.context.properties.source.ConfigurationPropertyName;
-import org.springframework.boot.context.properties.source.ConfigurationPropertySource;
-import org.springframework.boot.logging.DeferredLogFactory;
+import io.github.kotlinmania.spring.boot.bootstrap.ConfigurableBootstrapContext;
+import io.github.kotlinmania.spring.boot.context.config.ConfigDataEnvironmentContributor.ImportPhase;
+import io.github.kotlinmania.spring.boot.context.config.ConfigDataEnvironmentContributor.Kind;
+import io.github.kotlinmania.spring.boot.context.properties.bind.BindContext;
+import io.github.kotlinmania.spring.boot.context.properties.bind.BindHandler;
+import io.github.kotlinmania.spring.boot.context.properties.bind.Bindable;
+import io.github.kotlinmania.spring.boot.context.properties.bind.Binder;
+import io.github.kotlinmania.spring.boot.context.properties.bind.PlaceholdersResolver;
+import io.github.kotlinmania.spring.boot.context.properties.source.ConfigurationPropertyName;
+import io.github.kotlinmania.spring.boot.context.properties.source.ConfigurationPropertySource;
+import io.github.kotlinmania.spring.boot.logging.DeferredLogFactory;
 import org.springframework.core.convert.ConversionService;
 import org.springframework.core.log.LogMessage;
 import org.springframework.util.ObjectUtils;

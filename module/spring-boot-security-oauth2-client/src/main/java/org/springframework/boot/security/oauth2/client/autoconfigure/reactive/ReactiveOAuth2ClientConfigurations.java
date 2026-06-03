@@ -14,17 +14,17 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.security.oauth2.client.autoconfigure.reactive;
+package io.github.kotlinmania.spring.boot.security.oauth2.client.autoconfigure.reactive;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
-import org.springframework.boot.context.properties.EnableConfigurationProperties;
-import org.springframework.boot.security.oauth2.client.autoconfigure.ConditionalOnOAuth2ClientRegistrationProperties;
-import org.springframework.boot.security.oauth2.client.autoconfigure.OAuth2ClientProperties;
-import org.springframework.boot.security.oauth2.client.autoconfigure.OAuth2ClientPropertiesMapper;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnBean;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnMissingBean;
+import io.github.kotlinmania.spring.boot.context.properties.EnableConfigurationProperties;
+import io.github.kotlinmania.spring.boot.security.oauth2.client.autoconfigure.ConditionalOnOAuth2ClientRegistrationProperties;
+import io.github.kotlinmania.spring.boot.security.oauth2.client.autoconfigure.OAuth2ClientProperties;
+import io.github.kotlinmania.spring.boot.security.oauth2.client.autoconfigure.OAuth2ClientPropertiesMapper;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.oauth2.client.InMemoryReactiveOAuth2AuthorizedClientService;

@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.actuator.cloudfoundry.customcontextpath;
+package io.github.kotlinmania.spring.boot.docs.actuator.cloudfoundry.customcontextpath;
 
 import java.util.Map;
 
 import reactor.core.publisher.Mono;
 
-import org.springframework.boot.context.properties.EnableConfigurationProperties;
-import org.springframework.boot.webflux.autoconfigure.WebFluxProperties;
+import io.github.kotlinmania.spring.boot.context.properties.EnableConfigurationProperties;
+import io.github.kotlinmania.spring.boot.webflux.autoconfigure.WebFluxProperties;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

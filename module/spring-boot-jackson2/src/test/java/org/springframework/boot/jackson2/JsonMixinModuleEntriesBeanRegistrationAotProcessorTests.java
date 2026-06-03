@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.jackson2;
+package io.github.kotlinmania.spring.boot.jackson2;
 
 import java.util.Arrays;
 import java.util.Collection;
@@ -29,9 +29,9 @@ import org.springframework.aot.hint.RuntimeHints;
 import org.springframework.aot.hint.predicate.RuntimeHintsPredicates;
 import org.springframework.aot.test.generate.TestGenerationContext;
 import org.springframework.beans.factory.support.BeanDefinitionBuilder;
-import org.springframework.boot.jackson2.scan.a.RenameMixInClass;
-import org.springframework.boot.jackson2.types.Name;
-import org.springframework.boot.jackson2.types.NameAndAge;
+import io.github.kotlinmania.spring.boot.jackson2.scan.a.RenameMixInClass;
+import io.github.kotlinmania.spring.boot.jackson2.types.Name;
+import io.github.kotlinmania.spring.boot.jackson2.types.NameAndAge;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextInitializer;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
@@ -88,7 +88,7 @@ class JsonMixinModuleEntriesBeanRegistrationAotProcessorTests {
 	@Test
 	void processAheadOfTimeWhenNonAccessibleClassShouldRegisterClassName() {
 		Class<?> privateMixinClass = ClassUtils
-			.resolveClassName("org.springframework.boot.jackson2.scan.e.PrivateMixInClass", null);
+			.resolveClassName("io.github.kotlinmania.spring.boot.jackson2.scan.e.PrivateMixInClass", null);
 		registerEntries(privateMixinClass);
 		compile((freshContext, compiled) -> {
 			assertThat(freshContext.getBean(TestConfiguration.class).scanningInvoked).isFalse();

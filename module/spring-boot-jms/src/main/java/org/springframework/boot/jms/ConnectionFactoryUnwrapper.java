@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.jms;
+package io.github.kotlinmania.spring.boot.jms;
 
 import jakarta.jms.ConnectionFactory;
 import org.jspecify.annotations.Nullable;

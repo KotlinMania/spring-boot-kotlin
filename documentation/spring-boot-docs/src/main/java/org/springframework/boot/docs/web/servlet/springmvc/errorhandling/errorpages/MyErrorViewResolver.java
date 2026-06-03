@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.web.servlet.springmvc.errorhandling.errorpages;
+package io.github.kotlinmania.spring.boot.docs.web.servlet.springmvc.errorhandling.errorpages;
 
 import java.util.Map;
 
 import jakarta.servlet.http.HttpServletRequest;
 
-import org.springframework.boot.webmvc.autoconfigure.error.ErrorViewResolver;
+import io.github.kotlinmania.spring.boot.webmvc.autoconfigure.error.ErrorViewResolver;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.servlet.ModelAndView;
 

@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.build.bom.bomr;
+package io.github.kotlinmania.spring.boot.build.bom.bomr;
 
 import java.util.Collection;
 import java.util.List;
 import java.util.Map;
 
-import org.springframework.boot.build.bom.Library;
+import io.github.kotlinmania.spring.boot.build.bom.Library;
 
 /**
  * Resolves library updates.

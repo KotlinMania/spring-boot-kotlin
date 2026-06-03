@@ -14,16 +14,16 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.buildtoolplugins.otherbuildsystems.examplerepackageimplementation;
+package io.github.kotlinmania.spring.boot.docs.buildtoolplugins.otherbuildsystems.examplerepackageimplementation;
 
 import java.io.File;
 import java.io.IOException;
 import java.util.List;
 
-import org.springframework.boot.loader.tools.Library;
-import org.springframework.boot.loader.tools.LibraryCallback;
-import org.springframework.boot.loader.tools.LibraryScope;
-import org.springframework.boot.loader.tools.Repackager;
+import io.github.kotlinmania.spring.boot.loader.tools.Library;
+import io.github.kotlinmania.spring.boot.loader.tools.LibraryCallback;
+import io.github.kotlinmania.spring.boot.loader.tools.LibraryScope;
+import io.github.kotlinmania.spring.boot.loader.tools.Repackager;
 
 public class MyBuildTool {
 

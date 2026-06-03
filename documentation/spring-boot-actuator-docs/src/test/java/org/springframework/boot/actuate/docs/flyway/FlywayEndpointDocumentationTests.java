@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.actuate.docs.flyway;
+package io.github.kotlinmania.spring.boot.actuate.docs.flyway;
 
 import java.util.List;
 
@@ -23,11 +23,11 @@ import javax.sql.DataSource;
 import org.flywaydb.core.api.MigrationState;
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.actuate.docs.MockMvcEndpointDocumentationTests;
-import org.springframework.boot.autoconfigure.ImportAutoConfiguration;
-import org.springframework.boot.flyway.actuate.endpoint.FlywayEndpoint;
-import org.springframework.boot.flyway.autoconfigure.FlywayAutoConfiguration;
-import org.springframework.boot.jdbc.EmbeddedDatabaseConnection;
+import io.github.kotlinmania.spring.boot.actuate.docs.MockMvcEndpointDocumentationTests;
+import io.github.kotlinmania.spring.boot.autoconfigure.ImportAutoConfiguration;
+import io.github.kotlinmania.spring.boot.flyway.actuate.endpoint.FlywayEndpoint;
+import io.github.kotlinmania.spring.boot.flyway.autoconfigure.FlywayAutoConfiguration;
+import io.github.kotlinmania.spring.boot.jdbc.EmbeddedDatabaseConnection;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -45,7 +45,7 @@ import static org.springframework.restdocs.payload.PayloadDocumentation.response
  *
  * @author Andy Wilkinson
  */
-@TestPropertySource(properties = "spring.flyway.locations=classpath:org/springframework/boot/actuate/docs/flyway")
+@TestPropertySource(properties = "spring.flyway.locations=classpath:io.github.kotlinmania.spring.boot.actuate/docs/flyway")
 class FlywayEndpointDocumentationTests extends MockMvcEndpointDocumentationTests {
 
 	@Test

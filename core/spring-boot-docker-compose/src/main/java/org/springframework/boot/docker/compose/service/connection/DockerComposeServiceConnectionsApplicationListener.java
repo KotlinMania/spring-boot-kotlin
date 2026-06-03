@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docker.compose.service.connection;
+package io.github.kotlinmania.spring.boot.docker.compose.service.connection;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -24,11 +24,11 @@ import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.support.BeanDefinitionRegistry;
 import org.springframework.beans.factory.support.RootBeanDefinition;
-import org.springframework.boot.autoconfigure.container.ContainerImageMetadata;
-import org.springframework.boot.autoconfigure.service.connection.ConnectionDetails;
-import org.springframework.boot.autoconfigure.service.connection.ConnectionDetailsFactories;
-import org.springframework.boot.docker.compose.core.RunningService;
-import org.springframework.boot.docker.compose.lifecycle.DockerComposeServicesReadyEvent;
+import io.github.kotlinmania.spring.boot.autoconfigure.container.ContainerImageMetadata;
+import io.github.kotlinmania.spring.boot.autoconfigure.service.connection.ConnectionDetails;
+import io.github.kotlinmania.spring.boot.autoconfigure.service.connection.ConnectionDetailsFactories;
+import io.github.kotlinmania.spring.boot.docker.compose.core.RunningService;
+import io.github.kotlinmania.spring.boot.docker.compose.lifecycle.DockerComposeServicesReadyEvent;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationListener;
 import org.springframework.core.env.Environment;

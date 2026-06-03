@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.env;
+package io.github.kotlinmania.spring.boot.env;
 
 import java.io.IOException;
 import java.nio.charset.Charset;
@@ -25,7 +25,7 @@ import java.util.Map;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.env.OriginTrackedPropertiesLoader.Document;
+import io.github.kotlinmania.spring.boot.env.OriginTrackedPropertiesLoader.Document;
 import org.springframework.core.env.PropertySource;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.support.EncodedResource;

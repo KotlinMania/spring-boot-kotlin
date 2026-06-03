@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.build.toolchain;
+package io.github.kotlinmania.spring.boot.build.toolchain;
 
 import org.gradle.api.Project;
 import org.gradle.api.provider.ListProperty;
 import org.gradle.api.provider.Property;
 import org.gradle.jvm.toolchain.JavaLanguageVersion;
 
-import org.springframework.boot.build.SystemRequirementsExtension;
+import io.github.kotlinmania.spring.boot.build.SystemRequirementsExtension;
 
 /**
  * DSL extension for {@link ToolchainPlugin}.

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docker.compose.lifecycle;
+package io.github.kotlinmania.spring.boot.docker.compose.lifecycle;
 
 import java.time.Clock;
 import java.time.Duration;
@@ -27,7 +27,7 @@ import java.util.function.Consumer;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
-import org.springframework.boot.docker.compose.core.RunningService;
+import io.github.kotlinmania.spring.boot.docker.compose.core.RunningService;
 import org.springframework.core.log.LogMessage;
 
 /**
@@ -41,7 +41,7 @@ class ServiceReadinessChecks {
 
 	private static final Log logger = LogFactory.getLog(ServiceReadinessChecks.class);
 
-	private static final String DISABLE_LABEL = "org.springframework.boot.readiness-check.disable";
+	private static final String DISABLE_LABEL = "io.github.kotlinmania.spring.boot.readiness-check.disable";
 
 	private static final Duration SLEEP_BETWEEN_READINESS_TRIES = Duration.ofSeconds(1);
 

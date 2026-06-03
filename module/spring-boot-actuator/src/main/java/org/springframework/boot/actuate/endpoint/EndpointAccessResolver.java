@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.actuate.endpoint;
+package io.github.kotlinmania.spring.boot.actuate.endpoint;
 
 /**
  * Resolver for the permitted level of {@link Access access} to an endpoint.

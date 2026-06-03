@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.mongodb.health;
+package io.github.kotlinmania.spring.boot.mongodb.health;
 
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
@@ -24,9 +24,9 @@ import java.util.Map;
 import com.mongodb.client.MongoClient;
 import org.bson.Document;
 
-import org.springframework.boot.health.contributor.AbstractHealthIndicator;
-import org.springframework.boot.health.contributor.Health;
-import org.springframework.boot.health.contributor.HealthIndicator;
+import io.github.kotlinmania.spring.boot.health.contributor.AbstractHealthIndicator;
+import io.github.kotlinmania.spring.boot.health.contributor.Health;
+import io.github.kotlinmania.spring.boot.health.contributor.HealthIndicator;
 import org.springframework.util.Assert;
 
 /**

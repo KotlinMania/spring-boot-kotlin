@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.flyway.autoconfigure;
+package io.github.kotlinmania.spring.boot.flyway.autoconfigure;
 
 import java.util.Collection;
 
@@ -24,8 +24,8 @@ import org.flywaydb.core.api.resource.LoadableResource;
 import org.flywaydb.core.internal.resource.NoopResourceProvider;
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.testsupport.classpath.resources.WithResource;
-import org.springframework.boot.testsupport.classpath.resources.WithResources;
+import io.github.kotlinmania.spring.boot.testsupport.classpath.resources.WithResource;
+import io.github.kotlinmania.spring.boot.testsupport.classpath.resources.WithResources;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

@@ -14,16 +14,16 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.actuate.autoconfigure.context;
+package io.github.kotlinmania.spring.boot.actuate.autoconfigure.context;
 
 import java.util.Map;
 
 import org.junit.jupiter.api.Test;
 
 import org.springframework.beans.factory.config.ConfigurableListableBeanFactory;
-import org.springframework.boot.actuate.context.ShutdownEndpoint;
-import org.springframework.boot.autoconfigure.AutoConfigurations;
-import org.springframework.boot.test.context.runner.ApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.actuate.context.ShutdownEndpoint;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurations;
+import io.github.kotlinmania.spring.boot.test.context.runner.ApplicationContextRunner;
 import org.springframework.test.util.ReflectionTestUtils;
 
 import static org.assertj.core.api.Assertions.assertThat;

@@ -14,15 +14,15 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.data.ldap.autoconfigure;
+package io.github.kotlinmania.spring.boot.data.ldap.autoconfigure;
 
 import javax.naming.ldap.LdapContext;
 
-import org.springframework.boot.autoconfigure.AutoConfiguration;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnBooleanProperty;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.EnableAutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnBooleanProperty;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnClass;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.context.annotation.Import;
 import org.springframework.data.ldap.repository.LdapRepository;
 import org.springframework.data.ldap.repository.support.LdapRepositoryFactoryBean;

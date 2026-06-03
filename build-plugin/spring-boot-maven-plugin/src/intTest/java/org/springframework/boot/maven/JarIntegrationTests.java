@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.maven;
+package io.github.kotlinmania.spring.boot.maven;
 
 import java.io.File;
 import java.io.IOException;
@@ -28,9 +28,9 @@ import java.util.jar.JarFile;
 import org.junit.jupiter.api.TestTemplate;
 import org.junit.jupiter.api.extension.ExtendWith;
 
-import org.springframework.boot.loader.tools.JarModeLibrary;
-import org.springframework.boot.loader.tools.LibraryCoordinates;
-import org.springframework.boot.testsupport.FileUtils;
+import io.github.kotlinmania.spring.boot.loader.tools.JarModeLibrary;
+import io.github.kotlinmania.spring.boot.loader.tools.LibraryCoordinates;
+import io.github.kotlinmania.spring.boot.testsupport.FileUtils;
 import org.springframework.util.FileSystemUtils;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -58,7 +58,7 @@ class JarIntegrationTests extends AbstractArchiveIntegrationTests {
 			assertThat(original).isFile();
 			File repackaged = new File(project, "target/jar-0.0.1.BUILD-SNAPSHOT.jar");
 			assertThat(jar(repackaged)).manifest((manifest) -> {
-				manifest.hasMainClass("org.springframework.boot.loader.launch.JarLauncher");
+				manifest.hasMainClass("io.github.kotlinmania.spring.boot.loader.launch.JarLauncher");
 				manifest.hasStartClass("some.random.Main");
 				manifest.hasAttribute("Not-Used", "Foo");
 			})
@@ -67,7 +67,7 @@ class JarIntegrationTests extends AbstractArchiveIntegrationTests {
 				.hasEntryWithNameStartingWith("BOOT-INF/lib/commons-logging")
 				.hasEntryWithNameStartingWith("BOOT-INF/lib/jakarta.servlet-api-6")
 				.hasEntryWithName("BOOT-INF/classes/org/test/SampleApplication.class")
-				.hasEntryWithName("org/springframework/boot/loader/launch/JarLauncher.class");
+				.hasEntryWithName("io.github.kotlinmania.spring.boot.loader/launch/JarLauncher.class");
 			assertThat(buildLog(project))
 				.contains("Replacing main artifact " + repackaged + " with repackaged archive,")
 				.contains("The original artifact has been renamed to " + original)
@@ -262,9 +262,9 @@ class JarIntegrationTests extends AbstractArchiveIntegrationTests {
 		mavenBuild.project("jar-lib-name-conflict").execute((project) -> {
 			File repackaged = new File(project, "test-project/target/test-project-0.0.1.BUILD-SNAPSHOT.jar");
 			assertThat(jar(repackaged)).hasEntryWithNameStartingWith("BOOT-INF/classes/")
-				.hasEntryWithName("BOOT-INF/lib/org.springframework.boot.maven.it-acme-lib-0.0.1.BUILD-SNAPSHOT.jar")
+				.hasEntryWithName("BOOT-INF/lib/io.github.kotlinmania.spring.boot.maven.it-acme-lib-0.0.1.BUILD-SNAPSHOT.jar")
 				.hasEntryWithName(
-						"BOOT-INF/lib/org.springframework.boot.maven.it.another-acme-lib-0.0.1.BUILD-SNAPSHOT.jar");
+						"BOOT-INF/lib/io.github.kotlinmania.spring.boot.maven.it.another-acme-lib-0.0.1.BUILD-SNAPSHOT.jar");
 		});
 	}
 
@@ -280,7 +280,7 @@ class JarIntegrationTests extends AbstractArchiveIntegrationTests {
 	void whenRepackagingIsSkippedTheJarIsNotRepackaged(MavenBuild mavenBuild) {
 		mavenBuild.project("jar-skip").execute((project) -> {
 			File main = new File(project, "target/jar-skip-0.0.1.BUILD-SNAPSHOT.jar");
-			assertThat(jar(main)).doesNotHaveEntryWithNameStartingWith("org/springframework/boot");
+			assertThat(jar(main)).doesNotHaveEntryWithNameStartingWith("io.github.kotlinmania.spring.boot.);
 			assertThat(new File(project, "target/jar-skip-0.0.1.BUILD-SNAPSHOT.jar.original")).doesNotExist();
 
 		});
@@ -329,7 +329,7 @@ class JarIntegrationTests extends AbstractArchiveIntegrationTests {
 			.execute((project) -> {
 				File main = new File(project, "target/jar-with-layout-property-0.0.1.BUILD-SNAPSHOT.jar");
 				assertThat(jar(main)).manifest(
-						(manifest) -> manifest.hasMainClass("org.springframework.boot.loader.launch.PropertiesLauncher")
+						(manifest) -> manifest.hasMainClass("io.github.kotlinmania.spring.boot.loader.launch.PropertiesLauncher")
 							.hasStartClass("org.test.SampleApplication"));
 				assertThat(buildLog(project)).contains("Layout: ZIP");
 			});
@@ -340,7 +340,7 @@ class JarIntegrationTests extends AbstractArchiveIntegrationTests {
 		mavenBuild.project("jar-with-zip-layout").execute((project) -> {
 			File main = new File(project, "target/jar-with-zip-layout-0.0.1.BUILD-SNAPSHOT.jar");
 			assertThat(jar(main)).manifest(
-					(manifest) -> manifest.hasMainClass("org.springframework.boot.loader.launch.PropertiesLauncher")
+					(manifest) -> manifest.hasMainClass("io.github.kotlinmania.spring.boot.loader.launch.PropertiesLauncher")
 						.hasStartClass("org.test.SampleApplication"));
 			assertThat(buildLog(project)).contains("Layout: ZIP");
 		});

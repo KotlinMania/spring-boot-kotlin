@@ -14,20 +14,20 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.web.server.autoconfigure.servlet;
+package io.github.kotlinmania.spring.boot.web.server.autoconfigure.servlet;
 
 import java.util.Collections;
 import java.util.List;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.context.properties.PropertyMapper;
-import org.springframework.boot.ssl.SslBundles;
-import org.springframework.boot.web.server.WebServerFactoryCustomizer;
-import org.springframework.boot.web.server.autoconfigure.ServerProperties;
-import org.springframework.boot.web.server.servlet.ConfigurableServletWebServerFactory;
-import org.springframework.boot.web.server.servlet.CookieSameSiteSupplier;
-import org.springframework.boot.web.server.servlet.WebListenerRegistrar;
+import io.github.kotlinmania.spring.boot.context.properties.PropertyMapper;
+import io.github.kotlinmania.spring.boot.ssl.SslBundles;
+import io.github.kotlinmania.spring.boot.web.server.WebServerFactoryCustomizer;
+import io.github.kotlinmania.spring.boot.web.server.autoconfigure.ServerProperties;
+import io.github.kotlinmania.spring.boot.web.server.servlet.ConfigurableServletWebServerFactory;
+import io.github.kotlinmania.spring.boot.web.server.servlet.CookieSameSiteSupplier;
+import io.github.kotlinmania.spring.boot.web.server.servlet.WebListenerRegistrar;
 import org.springframework.core.Ordered;
 import org.springframework.util.CollectionUtils;
 

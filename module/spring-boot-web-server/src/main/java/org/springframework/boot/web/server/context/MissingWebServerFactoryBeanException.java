@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.web.server.context;
+package io.github.kotlinmania.spring.boot.web.server.context;
 
 import org.springframework.beans.factory.NoSuchBeanDefinitionException;
-import org.springframework.boot.WebApplicationType;
-import org.springframework.boot.web.server.WebServerFactory;
+import io.github.kotlinmania.spring.boot.WebApplicationType;
+import io.github.kotlinmania.spring.boot.web.server.WebServerFactory;
 
 /**
  * Exception thrown when there is no {@link WebServerFactory} bean of the required type

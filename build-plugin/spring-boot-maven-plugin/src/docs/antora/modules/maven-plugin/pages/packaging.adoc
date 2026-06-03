@@ -135,7 +135,7 @@ The next `<into>` will claim all SNAPSHOT dependencies for the `snapshot-depende
 The final `<into>` will claim anything left (in this case, any dependency that is not a SNAPSHOT) for the `dependencies` layer.
 
 The `<application>` block has similar rules.
-First claiming `org/springframework/boot/loader/**` content for the `spring-boot-loader` layer.
+First claiming `io.github.kotlinmania.spring.boot.loader/**` content for the `spring-boot-loader` layer.
 Then claiming any remaining classes and resources for the `application` layer.
 
 NOTE: The order that `<into>` blocks are defined is often different from the order that the layers are written.

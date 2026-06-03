@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.jdbc.init;
+package io.github.kotlinmania.spring.boot.jdbc.init;
 
 import java.util.Collections;
 import java.util.List;
@@ -22,8 +22,8 @@ import java.util.Map;
 
 import javax.sql.DataSource;
 
-import org.springframework.boot.jdbc.DatabaseDriver;
-import org.springframework.boot.sql.init.DatabaseInitializationSettings;
+import io.github.kotlinmania.spring.boot.jdbc.DatabaseDriver;
+import io.github.kotlinmania.spring.boot.sql.init.DatabaseInitializationSettings;
 import org.springframework.util.StringUtils;
 
 /**

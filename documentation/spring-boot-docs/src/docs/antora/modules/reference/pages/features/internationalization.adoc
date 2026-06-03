@@ -22,4 +22,4 @@ spring:
 TIP: The configprop:spring.messages.basename[] property supports a list of locations, either a package qualifier or a resource resolved from the classpath root.
 The configprop:spring.messages.common-messages[] property supports a list of property file resources.
 
-See javadoc:org.springframework.boot.autoconfigure.context.MessageSourceProperties[] for more supported options.
+See javadoc:io.github.kotlinmania.spring.boot.autoconfigure.context.MessageSourceProperties[] for more supported options.

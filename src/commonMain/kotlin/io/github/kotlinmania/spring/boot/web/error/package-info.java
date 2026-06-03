@@ -18,6 +18,6 @@
  * Spring Web error handling infrastructure.
  */
 @NullMarked
-package org.springframework.boot.web.error;
+package io.github.kotlinmania.spring.boot.web.error;
 
 import org.jspecify.annotations.NullMarked;

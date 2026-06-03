@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.logging.structured;
+package io.github.kotlinmania.spring.boot.logging.structured;
 
 import java.util.Collection;
 import java.util.Collections;
@@ -31,13 +31,13 @@ import org.jspecify.annotations.Nullable;
 
 import org.springframework.aot.hint.RuntimeHints;
 import org.springframework.aot.hint.RuntimeHintsRegistrar;
-import org.springframework.boot.context.properties.PropertyMapper;
-import org.springframework.boot.context.properties.bind.BindableRuntimeHintsRegistrar;
-import org.springframework.boot.context.properties.bind.Binder;
-import org.springframework.boot.context.properties.bind.DefaultValue;
-import org.springframework.boot.logging.StackTracePrinter;
-import org.springframework.boot.logging.StandardStackTracePrinter;
-import org.springframework.boot.util.Instantiator;
+import io.github.kotlinmania.spring.boot.context.properties.PropertyMapper;
+import io.github.kotlinmania.spring.boot.context.properties.bind.BindableRuntimeHintsRegistrar;
+import io.github.kotlinmania.spring.boot.context.properties.bind.Binder;
+import io.github.kotlinmania.spring.boot.context.properties.bind.DefaultValue;
+import io.github.kotlinmania.spring.boot.logging.StackTracePrinter;
+import io.github.kotlinmania.spring.boot.logging.StandardStackTracePrinter;
+import io.github.kotlinmania.spring.boot.util.Instantiator;
 import org.springframework.core.env.Environment;
 import org.springframework.util.Assert;
 

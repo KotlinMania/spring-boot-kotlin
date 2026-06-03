@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.logging.log4j2;
+package io.github.kotlinmania.spring.boot.logging.log4j2;
 
 import java.util.Objects;
 
@@ -34,7 +34,7 @@ import org.apache.logging.log4j.core.config.plugins.PluginConfiguration;
 import org.apache.logging.log4j.core.util.Builder;
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.convert.ApplicationConversionService;
+import io.github.kotlinmania.spring.boot.convert.ApplicationConversionService;
 import org.springframework.core.convert.ConversionException;
 import org.springframework.util.Assert;
 

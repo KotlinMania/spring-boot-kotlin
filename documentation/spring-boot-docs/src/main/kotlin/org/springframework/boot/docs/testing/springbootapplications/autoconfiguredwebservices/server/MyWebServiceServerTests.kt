@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.testing.springbootapplications.autoconfiguredwebservices.server
+package io.github.kotlinmania.spring.boot.docs.testing.springbootapplications.autoconfiguredwebservices.server
 
 import org.junit.jupiter.api.Test
 import org.springframework.beans.factory.annotation.Autowired
-import org.springframework.boot.webservices.test.autoconfigure.server.WebServiceServerTest
+import io.github.kotlinmania.spring.boot.webservices.test.autoconfigure.server.WebServiceServerTest
 import org.springframework.ws.test.server.MockWebServiceClient
 import org.springframework.ws.test.server.RequestCreators
 import org.springframework.ws.test.server.ResponseMatchers

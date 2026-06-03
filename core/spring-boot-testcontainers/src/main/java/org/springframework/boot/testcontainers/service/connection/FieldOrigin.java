@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.testcontainers.service.connection;
+package io.github.kotlinmania.spring.boot.testcontainers.service.connection;
 
 import java.lang.reflect.Field;
 
-import org.springframework.boot.origin.Origin;
+import io.github.kotlinmania.spring.boot.origin.Origin;
 import org.springframework.util.Assert;
 import org.springframework.util.ClassUtils;
 

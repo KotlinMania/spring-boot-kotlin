@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.webmvc.test.autoconfigure;
+package io.github.kotlinmania.spring.boot.webmvc.test.autoconfigure;
 
 import java.util.List;
 
-import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
-import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.boot.webmvc.autoconfigure.WebMvcProperties;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnMissingBean;
+import io.github.kotlinmania.spring.boot.context.properties.ConfigurationProperties;
+import io.github.kotlinmania.spring.boot.webmvc.autoconfigure.WebMvcProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.test.web.servlet.DispatcherServletCustomizer;

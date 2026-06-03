@@ -17,9 +17,9 @@
 /**
  * Core Spring Boot classes.
  *
- * @see org.springframework.boot.SpringApplication
+ * @see io.github.kotlinmania.spring.boot.SpringApplication
  */
 @NullMarked
-package org.springframework.boot;
+package io.github.kotlinmania.spring.boot.
 
 import org.jspecify.annotations.NullMarked;

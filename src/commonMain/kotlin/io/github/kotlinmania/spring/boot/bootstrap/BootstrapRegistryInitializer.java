@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.bootstrap;
+package io.github.kotlinmania.spring.boot.bootstrap;
 
 /**
  * Callback interface that can be used to initialize a {@link BootstrapRegistry} before it

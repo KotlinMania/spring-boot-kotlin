@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.autoconfigure.packagestest.two;
+package io.github.kotlinmania.spring.boot.autoconfigure.packagestest.two;
 
-import org.springframework.boot.autoconfigure.AutoConfigurationPackage;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurationPackage;
 import org.springframework.context.annotation.Configuration;
 
 /**

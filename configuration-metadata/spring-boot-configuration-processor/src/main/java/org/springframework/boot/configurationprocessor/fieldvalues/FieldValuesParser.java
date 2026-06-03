@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.configurationprocessor.fieldvalues;
+package io.github.kotlinmania.spring.boot.configurationprocessor.fieldvalues;
 
 import java.util.Collections;
 import java.util.Map;
 
 import javax.lang.model.element.TypeElement;
 
-import org.springframework.boot.configurationprocessor.fieldvalues.javac.JavaCompilerFieldValuesParser;
+import io.github.kotlinmania.spring.boot.configurationprocessor.fieldvalues.javac.JavaCompilerFieldValuesParser;
 
 /**
  * Parser which can be used to obtain the field values from an {@link TypeElement}.

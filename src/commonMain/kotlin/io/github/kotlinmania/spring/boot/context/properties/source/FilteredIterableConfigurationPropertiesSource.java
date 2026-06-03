@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.context.properties.source;
+package io.github.kotlinmania.spring.boot.context.properties.source;
 
 import java.util.Arrays;
 import java.util.function.Predicate;

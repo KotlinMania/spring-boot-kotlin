@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.health.autoconfigure.registry;
+package io.github.kotlinmania.spring.boot.health.autoconfigure.registry;
 
 import java.util.List;
 import java.util.Map;
@@ -22,17 +22,17 @@ import java.util.Map;
 import reactor.core.publisher.Flux;
 
 import org.springframework.beans.factory.ObjectProvider;
-import org.springframework.boot.autoconfigure.AutoConfiguration;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
-import org.springframework.boot.health.contributor.HealthContributor;
-import org.springframework.boot.health.contributor.ReactiveHealthContributor;
-import org.springframework.boot.health.registry.DefaultHealthContributorRegistry;
-import org.springframework.boot.health.registry.DefaultReactiveHealthContributorRegistry;
-import org.springframework.boot.health.registry.HealthContributorNameValidator;
-import org.springframework.boot.health.registry.HealthContributorRegistry;
-import org.springframework.boot.health.registry.ReactiveHealthContributorRegistry;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.EnableAutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnClass;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnMissingBean;
+import io.github.kotlinmania.spring.boot.health.contributor.HealthContributor;
+import io.github.kotlinmania.spring.boot.health.contributor.ReactiveHealthContributor;
+import io.github.kotlinmania.spring.boot.health.registry.DefaultHealthContributorRegistry;
+import io.github.kotlinmania.spring.boot.health.registry.DefaultReactiveHealthContributorRegistry;
+import io.github.kotlinmania.spring.boot.health.registry.HealthContributorNameValidator;
+import io.github.kotlinmania.spring.boot.health.registry.HealthContributorRegistry;
+import io.github.kotlinmania.spring.boot.health.registry.ReactiveHealthContributorRegistry;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 

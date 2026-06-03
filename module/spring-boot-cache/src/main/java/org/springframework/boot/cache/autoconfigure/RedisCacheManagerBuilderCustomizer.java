@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.cache.autoconfigure;
+package io.github.kotlinmania.spring.boot.cache.autoconfigure;
 
 import org.springframework.data.redis.cache.RedisCacheManager.RedisCacheManagerBuilder;
 

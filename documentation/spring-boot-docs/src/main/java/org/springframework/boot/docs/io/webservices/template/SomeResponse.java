@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.io.webservices.template;
+package io.github.kotlinmania.spring.boot.docs.io.webservices.template;
 
 class SomeResponse {
 

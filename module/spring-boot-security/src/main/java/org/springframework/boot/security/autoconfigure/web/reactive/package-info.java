@@ -18,6 +18,6 @@
  * Auto-configuration for reactive Spring Security.
  */
 @NullMarked
-package org.springframework.boot.security.autoconfigure.web.reactive;
+package io.github.kotlinmania.spring.boot.security.autoconfigure.web.reactive;
 
 import org.jspecify.annotations.NullMarked;

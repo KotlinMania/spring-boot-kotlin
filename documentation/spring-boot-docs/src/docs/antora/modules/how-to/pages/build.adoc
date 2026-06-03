@@ -11,7 +11,7 @@ This section answers common questions about these plugins.
 
 Both the Maven plugin and the Gradle plugin allow generating build information containing the coordinates, name, and version of the project.
 The plugins can also be configured to add additional properties through configuration.
-When such a file is present, Spring Boot auto-configures a javadoc:org.springframework.boot.info.BuildProperties[] bean.
+When such a file is present, Spring Boot auto-configures a javadoc:io.github.kotlinmania.spring.boot.info.BuildProperties[] bean.
 
 To generate build information with Maven, add an execution for the `build-info` goal, as shown in the following example:
 
@@ -20,7 +20,7 @@ To generate build information with Maven, add an execution for the `build-info` 
 <build>
 	<plugins>
 		<plugin>
-			<groupId>org.springframework.boot</groupId>
+			<groupId>io.github.kotlinmania.spring.boot./groupId>
 			<artifactId>spring-boot-maven-plugin</artifactId>
 			<version>{version-spring-boot}</version>
 			<executions>
@@ -144,7 +144,7 @@ If you use the `spring-boot-starter-parent` POM, you can declare the plugin and 
 <build>
 	<plugins>
 		<plugin>
-			<groupId>org.springframework.boot</groupId>
+			<groupId>io.github.kotlinmania.spring.boot./groupId>
 			<artifactId>spring-boot-maven-plugin</artifactId>
 		</plugin>
 	</plugins>
@@ -159,7 +159,7 @@ However, you must additionally add an `<executions>` section, as follows:
 <build>
 	<plugins>
 		<plugin>
-			<groupId>org.springframework.boot</groupId>
+			<groupId>io.github.kotlinmania.spring.boot./groupId>
 			<artifactId>spring-boot-maven-plugin</artifactId>
 			<version>{version-spring-boot}</version>
 			<executions>
@@ -199,7 +199,7 @@ To configure a classifier of `exec` in Maven, you can use the following configur
 <build>
 	<plugins>
 		<plugin>
-			<groupId>org.springframework.boot</groupId>
+			<groupId>io.github.kotlinmania.spring.boot./groupId>
 			<artifactId>spring-boot-maven-plugin</artifactId>
 			<configuration>
 				<classifier>exec</classifier>
@@ -230,7 +230,7 @@ For example, to indicate that JRuby should be flagged for unpacking by using the
 <build>
 	<plugins>
 		<plugin>
-			<groupId>org.springframework.boot</groupId>
+			<groupId>io.github.kotlinmania.spring.boot./groupId>
 			<artifactId>spring-boot-maven-plugin</artifactId>
 			<configuration>
 				<requiresUnpack>
@@ -260,7 +260,7 @@ In Maven, the executable jar must be the main artifact and you can add a classif
 <build>
 	<plugins>
 		<plugin>
-			<groupId>org.springframework.boot</groupId>
+			<groupId>io.github.kotlinmania.spring.boot./groupId>
 			<artifactId>spring-boot-maven-plugin</artifactId>
 		</plugin>
 		<plugin>
@@ -309,7 +309,7 @@ To make it executable, you can either use the `spring-boot-antlib` module or you
 . Add the `provided` (embedded container) dependencies in a nested `BOOT-INF/lib` directory for a jar or `WEB-INF/lib-provided` for a war.
   Remember *not* to compress the entries in the archive.
 . Add the `spring-boot-loader` classes at the root of the archive (so that the `Main-Class` is available).
-. Use the appropriate launcher (such as javadoc:org.springframework.boot.loader.launch.JarLauncher[] for a jar file) as a `Main-Class` attribute in the manifest and specify the other properties it needs as manifest entries -- principally, by setting a `Start-Class` property.
+. Use the appropriate launcher (such as javadoc:io.github.kotlinmania.spring.boot.loader.launch.JarLauncher[] for a jar file) as a `Main-Class` attribute in the manifest and specify the other properties it needs as manifest entries -- principally, by setting a `Start-Class` property.
 
 The following example shows how to build an executable archive with Ant:
 
@@ -331,7 +331,7 @@ The following example shows how to build an executable archive with Ant:
 		</mappedresources>
 		<zipfileset src="${lib.dir}/loader/spring-boot-loader-jar-${spring-boot.version}.jar" />
 		<manifest>
-			<attribute name="Main-Class" value="org.springframework.boot.loader.launch.JarLauncher" />
+			<attribute name="Main-Class" value="io.github.kotlinmania.spring.boot.loader.launch.JarLauncher" />
 			<attribute name="Start-Class" value="${start-class}" />
 		</manifest>
 	</jar>

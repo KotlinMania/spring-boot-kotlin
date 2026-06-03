@@ -14,18 +14,18 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.integration.autoconfigure.metrics;
+package io.github.kotlinmania.spring.boot.integration.autoconfigure.metrics;
 
 import io.micrometer.core.instrument.Gauge;
 import io.micrometer.core.instrument.MeterRegistry;
 import io.micrometer.core.instrument.simple.SimpleMeterRegistry;
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.autoconfigure.AutoConfigurations;
-import org.springframework.boot.integration.autoconfigure.IntegrationAutoConfiguration;
-import org.springframework.boot.integration.autoconfigure.IntegrationGraphEndpointAutoConfiguration;
-import org.springframework.boot.micrometer.metrics.autoconfigure.MetricsAutoConfiguration;
-import org.springframework.boot.test.context.runner.ApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurations;
+import io.github.kotlinmania.spring.boot.integration.autoconfigure.IntegrationAutoConfiguration;
+import io.github.kotlinmania.spring.boot.integration.autoconfigure.IntegrationGraphEndpointAutoConfiguration;
+import io.github.kotlinmania.spring.boot.micrometer.metrics.autoconfigure.MetricsAutoConfiguration;
+import io.github.kotlinmania.spring.boot.test.context.runner.ApplicationContextRunner;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

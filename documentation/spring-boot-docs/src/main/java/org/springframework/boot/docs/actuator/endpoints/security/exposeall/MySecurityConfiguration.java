@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.actuator.endpoints.security.exposeall;
+package io.github.kotlinmania.spring.boot.docs.actuator.endpoints.security.exposeall;
 
-import org.springframework.boot.security.autoconfigure.actuate.web.servlet.EndpointRequest;
+import io.github.kotlinmania.spring.boot.security.autoconfigure.actuate.web.servlet.EndpointRequest;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;

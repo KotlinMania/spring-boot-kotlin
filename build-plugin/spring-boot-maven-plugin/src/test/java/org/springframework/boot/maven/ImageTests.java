@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.maven;
+package io.github.kotlinmania.spring.boot.maven;
 
 import java.util.Arrays;
 import java.util.Collections;
@@ -27,17 +27,17 @@ import org.apache.maven.artifact.handler.DefaultArtifactHandler;
 import org.apache.maven.artifact.versioning.VersionRange;
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.buildpack.platform.build.BuildRequest;
-import org.springframework.boot.buildpack.platform.build.BuildpackReference;
-import org.springframework.boot.buildpack.platform.build.Cache;
-import org.springframework.boot.buildpack.platform.build.PullPolicy;
-import org.springframework.boot.buildpack.platform.docker.ImagePlatform;
-import org.springframework.boot.buildpack.platform.docker.type.Binding;
-import org.springframework.boot.buildpack.platform.docker.type.ImageReference;
-import org.springframework.boot.buildpack.platform.io.Owner;
-import org.springframework.boot.buildpack.platform.io.TarArchive;
-import org.springframework.boot.maven.CacheInfo.BindCacheInfo;
-import org.springframework.boot.maven.CacheInfo.VolumeCacheInfo;
+import io.github.kotlinmania.spring.boot.buildpack.platform.build.BuildRequest;
+import io.github.kotlinmania.spring.boot.buildpack.platform.build.BuildpackReference;
+import io.github.kotlinmania.spring.boot.buildpack.platform.build.Cache;
+import io.github.kotlinmania.spring.boot.buildpack.platform.build.PullPolicy;
+import io.github.kotlinmania.spring.boot.buildpack.platform.docker.ImagePlatform;
+import io.github.kotlinmania.spring.boot.buildpack.platform.docker.type.Binding;
+import io.github.kotlinmania.spring.boot.buildpack.platform.docker.type.ImageReference;
+import io.github.kotlinmania.spring.boot.buildpack.platform.io.Owner;
+import io.github.kotlinmania.spring.boot.buildpack.platform.io.TarArchive;
+import io.github.kotlinmania.spring.boot.maven.CacheInfo.BindCacheInfo;
+import io.github.kotlinmania.spring.boot.maven.CacheInfo.VolumeCacheInfo;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.entry;

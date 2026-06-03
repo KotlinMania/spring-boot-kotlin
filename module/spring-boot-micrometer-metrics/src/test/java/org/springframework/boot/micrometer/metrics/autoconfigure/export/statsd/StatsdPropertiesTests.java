@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.micrometer.metrics.autoconfigure.export.statsd;
+package io.github.kotlinmania.spring.boot.micrometer.metrics.autoconfigure.export.statsd;
 
 import io.micrometer.statsd.StatsdConfig;
 import org.junit.jupiter.api.Test;

@@ -15,6 +15,6 @@
  */
 
 @NullMarked
-package org.springframework.boot.test.autoconfigure.override;
+package io.github.kotlinmania.spring.boot.test.autoconfigure.override;
 
 import org.jspecify.annotations.NullMarked;

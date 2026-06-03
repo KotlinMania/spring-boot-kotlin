@@ -16,8 +16,8 @@
 
 package smoketest.actuator;
 
-import org.springframework.boot.health.contributor.Health;
-import org.springframework.boot.health.contributor.HealthIndicator;
+import io.github.kotlinmania.spring.boot.health.contributor.Health;
+import io.github.kotlinmania.spring.boot.health.contributor.HealthIndicator;
 import org.springframework.stereotype.Component;
 
 @Component

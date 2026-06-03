@@ -18,6 +18,6 @@
  * Auto-configuration classes for data integrations with GraphQL.
  */
 @NullMarked
-package org.springframework.boot.graphql.autoconfigure.data;
+package io.github.kotlinmania.spring.boot.graphql.autoconfigure.data;
 
 import org.jspecify.annotations.NullMarked;

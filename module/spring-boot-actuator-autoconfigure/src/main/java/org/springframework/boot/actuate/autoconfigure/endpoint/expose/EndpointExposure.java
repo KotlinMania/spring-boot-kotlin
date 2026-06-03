@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.actuate.autoconfigure.endpoint.expose;
+package io.github.kotlinmania.spring.boot.actuate.autoconfigure.endpoint.expose;
 
 /**
  * Technologies that can be used to expose an endpoint.

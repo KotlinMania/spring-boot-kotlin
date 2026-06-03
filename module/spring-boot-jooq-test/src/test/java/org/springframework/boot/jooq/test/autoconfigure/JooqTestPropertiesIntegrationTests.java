@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.jooq.test.autoconfigure;
+package io.github.kotlinmania.spring.boot.jooq.test.autoconfigure;
 
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;

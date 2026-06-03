@@ -14,15 +14,15 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.health.autoconfigure.contributor;
+package io.github.kotlinmania.spring.boot.health.autoconfigure.contributor;
 
 import java.util.stream.Stream;
 
-import org.springframework.boot.health.autoconfigure.contributor.CompositeHealthContributorConfigurationTests.TestHealthIndicator;
-import org.springframework.boot.health.contributor.AbstractHealthIndicator;
-import org.springframework.boot.health.contributor.Health;
-import org.springframework.boot.health.contributor.HealthContributor;
-import org.springframework.boot.health.contributor.HealthContributors;
+import io.github.kotlinmania.spring.boot.health.autoconfigure.contributor.CompositeHealthContributorConfigurationTests.TestHealthIndicator;
+import io.github.kotlinmania.spring.boot.health.contributor.AbstractHealthIndicator;
+import io.github.kotlinmania.spring.boot.health.contributor.Health;
+import io.github.kotlinmania.spring.boot.health.contributor.HealthContributor;
+import io.github.kotlinmania.spring.boot.health.contributor.HealthContributors;
 
 /**
  * Tests for {@link CompositeHealthContributorConfiguration}.

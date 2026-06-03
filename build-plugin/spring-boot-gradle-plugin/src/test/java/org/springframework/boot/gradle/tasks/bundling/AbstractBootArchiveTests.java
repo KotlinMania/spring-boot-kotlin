@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.gradle.tasks.bundling;
+package io.github.kotlinmania.spring.boot.gradle.tasks.bundling;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -59,8 +59,8 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.io.TempDir;
 
-import org.springframework.boot.gradle.junit.GradleProjectBuilder;
-import org.springframework.boot.loader.tools.JarModeLibrary;
+import io.github.kotlinmania.spring.boot.gradle.junit.GradleProjectBuilder;
+import io.github.kotlinmania.spring.boot.loader.tools.JarModeLibrary;
 import org.springframework.util.FileCopyUtils;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -253,9 +253,9 @@ abstract class AbstractBootArchiveTests<T extends Jar & BootArchive> {
 		this.task.getMainClass().set("com.example.Main");
 		executeTask();
 		try (JarFile jarFile = new JarFile(this.task.getArchiveFile().get().getAsFile())) {
-			assertThat(jarFile.getEntry("org/springframework/boot/loader/launch/LaunchedClassLoader.class"))
+			assertThat(jarFile.getEntry("io.github.kotlinmania.spring.boot.loader/launch/LaunchedClassLoader.class"))
 				.isNotNull();
-			assertThat(jarFile.getEntry("org/springframework/boot/loader/")).isNotNull();
+			assertThat(jarFile.getEntry("io.github.kotlinmania.spring.boot.loader/")).isNotNull();
 		}
 		// gh-16698
 		try (ZipInputStream zipInputStream = new ZipInputStream(
@@ -271,11 +271,11 @@ abstract class AbstractBootArchiveTests<T extends Jar & BootArchive> {
 		executeTask();
 		this.task.getManifest()
 			.getAttributes()
-			.put("Main-Class", "org.springframework.boot.loader.launch.PropertiesLauncher");
+			.put("Main-Class", "io.github.kotlinmania.spring.boot.loader.launch.PropertiesLauncher");
 		try (JarFile jarFile = new JarFile(this.task.getArchiveFile().get().getAsFile())) {
-			assertThat(jarFile.getEntry("org/springframework/boot/loader/launch/LaunchedClassLoader.class"))
+			assertThat(jarFile.getEntry("io.github.kotlinmania.spring.boot.loader/launch/LaunchedClassLoader.class"))
 				.isNotNull();
-			assertThat(jarFile.getEntry("org/springframework/boot/loader/")).isNotNull();
+			assertThat(jarFile.getEntry("io.github.kotlinmania.spring.boot.loader/")).isNotNull();
 		}
 	}
 
@@ -313,7 +313,7 @@ abstract class AbstractBootArchiveTests<T extends Jar & BootArchive> {
 			assertThat(jarFile.getManifest().getMainAttributes().getValue("Main-Class"))
 				.isEqualTo("com.example.CustomLauncher");
 			assertThat(jarFile.getManifest().getMainAttributes().getValue("Start-Class")).isEqualTo("com.example.Main");
-			assertThat(jarFile.getEntry("org/springframework/boot/loader/launch/LaunchedClassLoader.class")).isNull();
+			assertThat(jarFile.getEntry("io.github.kotlinmania.spring.boot.loader/launch/LaunchedClassLoader.class")).isNull();
 		}
 	}
 
@@ -439,7 +439,7 @@ abstract class AbstractBootArchiveTests<T extends Jar & BootArchive> {
 		this.task.requiresUnpack("second-library.jar");
 		executeTask();
 		assertThat(getEntryNames(this.task.getArchiveFile().get().getAsFile())).containsSubsequence(
-				"org/springframework/boot/loader/", this.classesPath + "com/example/Application.class",
+				"io.github.kotlinmania.spring.boot.loader/", this.classesPath + "com/example/Application.class",
 				this.libPath + "first-library.jar", this.libPath + "second-library.jar",
 				this.libPath + "third-library.jar");
 	}

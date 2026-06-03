@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot;
+package io.github.kotlinmania.spring.boot.
 
 import java.lang.StackWalker.StackFrame;
 import java.lang.management.ManagementFactory;
@@ -57,16 +57,16 @@ import org.springframework.beans.factory.support.BeanNameGenerator;
 import org.springframework.beans.factory.support.DefaultListableBeanFactory;
 import org.springframework.beans.factory.support.RootBeanDefinition;
 import org.springframework.beans.factory.xml.XmlBeanDefinitionReader;
-import org.springframework.boot.Banner.Mode;
-import org.springframework.boot.bootstrap.BootstrapRegistry;
-import org.springframework.boot.bootstrap.BootstrapRegistryInitializer;
-import org.springframework.boot.bootstrap.DefaultBootstrapContext;
-import org.springframework.boot.context.properties.bind.Bindable;
-import org.springframework.boot.context.properties.bind.Binder;
-import org.springframework.boot.context.properties.source.ConfigurationPropertySources;
-import org.springframework.boot.convert.ApplicationConversionService;
-import org.springframework.boot.env.DefaultPropertiesPropertySource;
-import org.springframework.boot.system.JavaVersion;
+import io.github.kotlinmania.spring.boot.Banner.Mode;
+import io.github.kotlinmania.spring.boot.bootstrap.BootstrapRegistry;
+import io.github.kotlinmania.spring.boot.bootstrap.BootstrapRegistryInitializer;
+import io.github.kotlinmania.spring.boot.bootstrap.DefaultBootstrapContext;
+import io.github.kotlinmania.spring.boot.context.properties.bind.Bindable;
+import io.github.kotlinmania.spring.boot.context.properties.bind.Binder;
+import io.github.kotlinmania.spring.boot.context.properties.source.ConfigurationPropertySources;
+import io.github.kotlinmania.spring.boot.convert.ApplicationConversionService;
+import io.github.kotlinmania.spring.boot.env.DefaultPropertiesPropertySource;
+import io.github.kotlinmania.spring.boot.system.JavaVersion;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextInitializer;
 import org.springframework.context.ApplicationListener;

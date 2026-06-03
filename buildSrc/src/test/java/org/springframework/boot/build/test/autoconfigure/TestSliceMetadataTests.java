@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.build.test.autoconfigure;
+package io.github.kotlinmania.spring.boot.build.test.autoconfigure;
 
 import java.io.File;
 import java.util.List;
@@ -22,7 +22,7 @@ import java.util.List;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.io.TempDir;
 
-import org.springframework.boot.build.test.autoconfigure.TestSliceMetadata.TestSlice;
+import io.github.kotlinmania.spring.boot.build.test.autoconfigure.TestSliceMetadata.TestSlice;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

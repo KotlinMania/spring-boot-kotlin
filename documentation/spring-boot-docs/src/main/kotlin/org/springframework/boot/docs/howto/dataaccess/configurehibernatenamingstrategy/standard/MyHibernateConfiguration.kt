@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.howto.dataaccess.configurehibernatenamingstrategy.standard
+package io.github.kotlinmania.spring.boot.docs.howto.dataaccess.configurehibernatenamingstrategy.standard
 
 import org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
 import org.springframework.context.annotation.Bean

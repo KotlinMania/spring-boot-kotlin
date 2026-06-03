@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.test.context.filter.annotation;
+package io.github.kotlinmania.spring.boot.test.context.filter.annotation;
 
 import java.io.IOException;
 import java.lang.annotation.Annotation;
@@ -25,7 +25,7 @@ import java.util.Set;
 import org.jspecify.annotations.Nullable;
 
 import org.springframework.beans.factory.BeanClassLoaderAware;
-import org.springframework.boot.context.TypeExcludeFilter;
+import io.github.kotlinmania.spring.boot.context.TypeExcludeFilter;
 import org.springframework.context.annotation.ComponentScan.Filter;
 import org.springframework.core.type.classreading.MetadataReader;
 import org.springframework.core.type.classreading.MetadataReaderFactory;

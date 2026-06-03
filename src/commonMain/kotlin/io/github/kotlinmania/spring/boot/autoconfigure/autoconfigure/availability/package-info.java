@@ -18,6 +18,6 @@
  * Auto-configuration for application availability features.
  */
 @NullMarked
-package org.springframework.boot.autoconfigure.availability;
+package io.github.kotlinmania.spring.boot.autoconfigure.availability;
 
 import org.jspecify.annotations.NullMarked;

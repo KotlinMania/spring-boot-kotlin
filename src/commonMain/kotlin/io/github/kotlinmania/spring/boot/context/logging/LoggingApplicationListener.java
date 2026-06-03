@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.context.logging;
+package io.github.kotlinmania.spring.boot.context.logging;
 
 import java.io.FileNotFoundException;
 import java.util.Collections;
@@ -28,21 +28,21 @@ import org.apache.commons.logging.LogFactory;
 import org.jspecify.annotations.Nullable;
 
 import org.springframework.beans.factory.config.ConfigurableListableBeanFactory;
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.context.event.ApplicationEnvironmentPreparedEvent;
-import org.springframework.boot.context.event.ApplicationFailedEvent;
-import org.springframework.boot.context.event.ApplicationPreparedEvent;
-import org.springframework.boot.context.event.ApplicationStartingEvent;
-import org.springframework.boot.context.properties.bind.Bindable;
-import org.springframework.boot.context.properties.bind.Binder;
-import org.springframework.boot.context.properties.source.ConfigurationPropertyName;
-import org.springframework.boot.logging.LogFile;
-import org.springframework.boot.logging.LogLevel;
-import org.springframework.boot.logging.LoggerGroup;
-import org.springframework.boot.logging.LoggerGroups;
-import org.springframework.boot.logging.LoggingInitializationContext;
-import org.springframework.boot.logging.LoggingSystem;
-import org.springframework.boot.logging.LoggingSystemProperties;
+import io.github.kotlinmania.spring.boot.SpringApplication;
+import io.github.kotlinmania.spring.boot.context.event.ApplicationEnvironmentPreparedEvent;
+import io.github.kotlinmania.spring.boot.context.event.ApplicationFailedEvent;
+import io.github.kotlinmania.spring.boot.context.event.ApplicationPreparedEvent;
+import io.github.kotlinmania.spring.boot.context.event.ApplicationStartingEvent;
+import io.github.kotlinmania.spring.boot.context.properties.bind.Bindable;
+import io.github.kotlinmania.spring.boot.context.properties.bind.Binder;
+import io.github.kotlinmania.spring.boot.context.properties.source.ConfigurationPropertyName;
+import io.github.kotlinmania.spring.boot.logging.LogFile;
+import io.github.kotlinmania.spring.boot.logging.LogLevel;
+import io.github.kotlinmania.spring.boot.logging.LoggerGroup;
+import io.github.kotlinmania.spring.boot.logging.LoggerGroups;
+import io.github.kotlinmania.spring.boot.logging.LoggingInitializationContext;
+import io.github.kotlinmania.spring.boot.logging.LoggingSystem;
+import io.github.kotlinmania.spring.boot.logging.LoggingSystemProperties;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationEvent;
 import org.springframework.context.ApplicationListener;
@@ -151,8 +151,8 @@ public class LoggingApplicationListener implements GenericApplicationListener {
 		loggers.add("web", "org.springframework.core.codec");
 		loggers.add("web", "org.springframework.http");
 		loggers.add("web", "org.springframework.web");
-		loggers.add("web", "org.springframework.boot.actuate.endpoint.web");
-		loggers.add("web", "org.springframework.boot.web.servlet.ServletContextInitializerBeans");
+		loggers.add("web", "io.github.kotlinmania.spring.boot.actuate.endpoint.web");
+		loggers.add("web", "io.github.kotlinmania.spring.boot.web.servlet.ServletContextInitializerBeans");
 		loggers.add("sql", "org.springframework.jdbc.core");
 		loggers.add("sql", "org.hibernate.SQL");
 		loggers.add("sql", "org.jooq.tools.LoggerListener");
@@ -164,7 +164,7 @@ public class LoggingApplicationListener implements GenericApplicationListener {
 		MultiValueMap<LogLevel, String> loggers = new LinkedMultiValueMap<>();
 		loggers.add(LogLevel.DEBUG, "sql");
 		loggers.add(LogLevel.DEBUG, "web");
-		loggers.add(LogLevel.DEBUG, "org.springframework.boot");
+		loggers.add(LogLevel.DEBUG, "io.github.kotlinmania.spring.boot.);
 		loggers.add(LogLevel.TRACE, "org.springframework");
 		loggers.add(LogLevel.TRACE, "org.apache.tomcat");
 		loggers.add(LogLevel.TRACE, "org.apache.catalina");

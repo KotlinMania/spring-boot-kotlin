@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.webservices.test.autoconfigure.server;
+package io.github.kotlinmania.spring.boot.webservices.test.autoconfigure.server;
 
-import org.springframework.boot.autoconfigure.SpringBootApplication;
+import io.github.kotlinmania.spring.boot.autoconfigure.SpringBootApplication;
 
 /**
  * Example {@link SpringBootApplication @SpringBootApplication} used with

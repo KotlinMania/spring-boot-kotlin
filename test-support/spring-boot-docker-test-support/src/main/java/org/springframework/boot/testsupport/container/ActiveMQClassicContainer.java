@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.testsupport.container;
+package io.github.kotlinmania.spring.boot.testsupport.container;
 
 import org.testcontainers.activemq.ActiveMQContainer;
 import org.testcontainers.utility.DockerImageName;

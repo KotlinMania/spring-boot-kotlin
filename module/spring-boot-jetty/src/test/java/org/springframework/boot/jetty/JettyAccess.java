@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.jetty;
+package io.github.kotlinmania.spring.boot.jetty;
 
 /**
  * Helper class to provide public access to package-private methods for testing purposes.

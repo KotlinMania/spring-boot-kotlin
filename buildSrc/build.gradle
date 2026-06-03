@@ -88,88 +88,88 @@ configurations.all {
 gradlePlugin {
 	plugins {
 		aggregatorPlugin {
-			id = "org.springframework.boot.aggregator"
-			implementationClass = "org.springframework.boot.build.aggregation.AggregatorPlugin"
+			id = "io.github.kotlinmania.spring.boot.aggregator"
+			implementationClass = "io.github.kotlinmania.spring.boot.build.aggregation.AggregatorPlugin"
 		}
 		annotationProcessorPlugin {
-			id = "org.springframework.boot.annotation-processor"
-			implementationClass = "org.springframework.boot.build.processors.AnnotationProcessorPlugin"
+			id = "io.github.kotlinmania.spring.boot.annotation-processor"
+			implementationClass = "io.github.kotlinmania.spring.boot.build.processors.AnnotationProcessorPlugin"
 		}
 		antoraAggregatedPlugin {
-			id = "org.springframework.boot.antora-contributor"
-			implementationClass = "org.springframework.boot.build.antora.AntoraContributorPlugin"
+			id = "io.github.kotlinmania.spring.boot.antora-contributor"
+			implementationClass = "io.github.kotlinmania.spring.boot.build.antora.AntoraContributorPlugin"
 		}
 		antoraAggregatorPlugin {
-			id = "org.springframework.boot.antora-dependencies"
-			implementationClass = "org.springframework.boot.build.antora.AntoraDependenciesPlugin"
+			id = "io.github.kotlinmania.spring.boot.antora-dependencies"
+			implementationClass = "io.github.kotlinmania.spring.boot.build.antora.AntoraDependenciesPlugin"
 		}
 		architecturePlugin {
-			id = "org.springframework.boot.architecture"
-			implementationClass = "org.springframework.boot.build.architecture.ArchitecturePlugin"
+			id = "io.github.kotlinmania.spring.boot.architecture"
+			implementationClass = "io.github.kotlinmania.spring.boot.build.architecture.ArchitecturePlugin"
 		}
 		autoConfigurationPlugin {
-			id = "org.springframework.boot.auto-configuration"
-			implementationClass = "org.springframework.boot.build.autoconfigure.AutoConfigurationPlugin"
+			id = "io.github.kotlinmania.spring.boot.auto-configuration"
+			implementationClass = "io.github.kotlinmania.spring.boot.build.autoconfigure.AutoConfigurationPlugin"
 		}
 		bomPlugin {
-			id = "org.springframework.boot.bom"
-			implementationClass = "org.springframework.boot.build.bom.BomPlugin"
+			id = "io.github.kotlinmania.spring.boot.bom"
+			implementationClass = "io.github.kotlinmania.spring.boot.build.bom.BomPlugin"
 		}
 		configurationMetadataPlugin {
-			id = "org.springframework.boot.configuration-metadata"
-			implementationClass = "org.springframework.boot.build.context.properties.ConfigurationMetadataPlugin"
+			id = "io.github.kotlinmania.spring.boot.configuration-metadata"
+			implementationClass = "io.github.kotlinmania.spring.boot.build.context.properties.ConfigurationMetadataPlugin"
 		}
 		configurationPropertiesPlugin {
-			id = "org.springframework.boot.configuration-properties"
-			implementationClass = "org.springframework.boot.build.context.properties.ConfigurationPropertiesPlugin"
+			id = "io.github.kotlinmania.spring.boot.configuration-properties"
+			implementationClass = "io.github.kotlinmania.spring.boot.build.context.properties.ConfigurationPropertiesPlugin"
 		}
 		conventionsPlugin {
-			id = "org.springframework.boot.conventions"
-			implementationClass = "org.springframework.boot.build.ConventionsPlugin"
+			id = "io.github.kotlinmania.spring.boot.conventions"
+			implementationClass = "io.github.kotlinmania.spring.boot.build.ConventionsPlugin"
 		}
 		deployedPlugin {
-			id = "org.springframework.boot.deployed"
-			implementationClass = "org.springframework.boot.build.DeployedPlugin"
+			id = "io.github.kotlinmania.spring.boot.deployed"
+			implementationClass = "io.github.kotlinmania.spring.boot.build.DeployedPlugin"
 		}
 		dockerTestPlugin {
-			id = "org.springframework.boot.docker-test"
-			implementationClass = "org.springframework.boot.build.test.DockerTestPlugin"
+			id = "io.github.kotlinmania.spring.boot.docker-test"
+			implementationClass = "io.github.kotlinmania.spring.boot.build.test.DockerTestPlugin"
 		}
 		integrationTestPlugin {
-			id = "org.springframework.boot.integration-test"
-			implementationClass = "org.springframework.boot.build.test.IntegrationTestPlugin"
+			id = "io.github.kotlinmania.spring.boot.integration-test"
+			implementationClass = "io.github.kotlinmania.spring.boot.build.test.IntegrationTestPlugin"
 		}
 		mavenPluginPlugin {
-			id = "org.springframework.boot.maven-plugin"
-			implementationClass = "org.springframework.boot.build.mavenplugin.MavenPluginPlugin"
+			id = "io.github.kotlinmania.spring.boot.maven-plugin"
+			implementationClass = "io.github.kotlinmania.spring.boot.build.mavenplugin.MavenPluginPlugin"
 		}
 		mavenRepositoryPlugin {
-			id = "org.springframework.boot.maven-repository"
-			implementationClass = "org.springframework.boot.build.MavenRepositoryPlugin"
+			id = "io.github.kotlinmania.spring.boot.maven-repository"
+			implementationClass = "io.github.kotlinmania.spring.boot.build.MavenRepositoryPlugin"
 		}
 		optionalDependenciesPlugin {
-			id = "org.springframework.boot.optional-dependencies"
-			implementationClass = "org.springframework.boot.build.optional.OptionalDependenciesPlugin"
+			id = "io.github.kotlinmania.spring.boot.optional-dependencies"
+			implementationClass = "io.github.kotlinmania.spring.boot.build.optional.OptionalDependenciesPlugin"
 		}
 		starterPlugin {
-			id = "org.springframework.boot.starter"
-			implementationClass = "org.springframework.boot.build.starters.StarterPlugin"
+			id = "io.github.kotlinmania.spring.boot.starter"
+			implementationClass = "io.github.kotlinmania.spring.boot.build.starters.StarterPlugin"
 		}
 		systemTestPlugin {
-			id = "org.springframework.boot.system-test"
-			implementationClass = "org.springframework.boot.build.test.SystemTestPlugin"
+			id = "io.github.kotlinmania.spring.boot.system-test"
+			implementationClass = "io.github.kotlinmania.spring.boot.build.test.SystemTestPlugin"
 		}
 		testAutoConfigurationPlugin {
-			id = "org.springframework.boot.test-auto-configuration"
-			implementationClass = "org.springframework.boot.build.test.autoconfigure.TestAutoConfigurationPlugin"
+			id = "io.github.kotlinmania.spring.boot.test-auto-configuration"
+			implementationClass = "io.github.kotlinmania.spring.boot.build.test.autoconfigure.TestAutoConfigurationPlugin"
 		}
 		testFailuresPlugin {
-			id = "org.springframework.boot.test-failures"
-			implementationClass = "org.springframework.boot.build.testing.TestFailuresPlugin"
+			id = "io.github.kotlinmania.spring.boot.test-failures"
+			implementationClass = "io.github.kotlinmania.spring.boot.build.testing.TestFailuresPlugin"
 		}
 		testSlicePlugin {
-			id = "org.springframework.boot.test-slice"
-			implementationClass = "org.springframework.boot.build.test.autoconfigure.TestSlicePlugin"
+			id = "io.github.kotlinmania.spring.boot.test-slice"
+			implementationClass = "io.github.kotlinmania.spring.boot.build.test.autoconfigure.TestSlicePlugin"
 		}
 	}
 }

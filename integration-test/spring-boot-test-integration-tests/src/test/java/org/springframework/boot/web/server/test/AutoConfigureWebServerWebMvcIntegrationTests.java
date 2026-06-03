@@ -14,16 +14,16 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.web.server.test;
+package io.github.kotlinmania.spring.boot.web.server.test;
 
 import org.junit.jupiter.api.Test;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.resttestclient.autoconfigure.AutoConfigureRestTestClient;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.boot.test.context.SpringBootTest.WebEnvironment;
-import org.springframework.boot.web.server.test.AutoConfigureWebServerWebMvcIntegrationTests.TestController;
-import org.springframework.boot.webmvc.test.autoconfigure.AutoConfigureWebMvc;
+import io.github.kotlinmania.spring.boot.resttestclient.autoconfigure.AutoConfigureRestTestClient;
+import io.github.kotlinmania.spring.boot.test.context.SpringBootTest;
+import io.github.kotlinmania.spring.boot.test.context.SpringBootTest.WebEnvironment;
+import io.github.kotlinmania.spring.boot.web.server.test.AutoConfigureWebServerWebMvcIntegrationTests.TestController;
+import io.github.kotlinmania.spring.boot.webmvc.test.autoconfigure.AutoConfigureWebMvc;
 import org.springframework.test.web.servlet.client.RestTestClient;
 import org.springframework.test.web.servlet.client.assertj.RestTestClientResponse;
 import org.springframework.web.bind.annotation.RequestMapping;

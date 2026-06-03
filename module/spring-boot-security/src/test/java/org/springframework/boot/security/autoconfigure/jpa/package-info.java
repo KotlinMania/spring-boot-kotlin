@@ -15,6 +15,6 @@
  */
 
 @NullMarked
-package org.springframework.boot.security.autoconfigure.jpa;
+package io.github.kotlinmania.spring.boot.security.autoconfigure.jpa;
 
 import org.jspecify.annotations.NullMarked;

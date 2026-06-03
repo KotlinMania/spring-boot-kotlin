@@ -14,15 +14,15 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.test.context;
+package io.github.kotlinmania.spring.boot.test.context;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 
-import org.springframework.boot.test.context.SpringBootTestContextHierarchyTests.ChildConfiguration;
-import org.springframework.boot.test.context.SpringBootTestContextHierarchyTests.ParentConfiguration;
-import org.springframework.boot.test.system.CapturedOutput;
-import org.springframework.boot.test.system.OutputCaptureExtension;
+import io.github.kotlinmania.spring.boot.test.context.SpringBootTestContextHierarchyTests.ChildConfiguration;
+import io.github.kotlinmania.spring.boot.test.context.SpringBootTestContextHierarchyTests.ParentConfiguration;
+import io.github.kotlinmania.spring.boot.test.system.CapturedOutput;
+import io.github.kotlinmania.spring.boot.test.system.OutputCaptureExtension;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.test.context.ContextConfiguration;

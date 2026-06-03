@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.web.server;
+package io.github.kotlinmania.spring.boot.web.server;
 
 import java.time.Duration;
 import java.time.temporal.ChronoUnit;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.convert.DurationUnit;
+import io.github.kotlinmania.spring.boot.convert.DurationUnit;
 
 /**
  * Cookie properties.

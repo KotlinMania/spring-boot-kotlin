@@ -18,6 +18,6 @@
  * Client-side reactive HTTP support classes.
  */
 @NullMarked
-package org.springframework.boot.http.client.reactive;
+package io.github.kotlinmania.spring.boot.http.client.reactive;
 
 import org.jspecify.annotations.NullMarked;

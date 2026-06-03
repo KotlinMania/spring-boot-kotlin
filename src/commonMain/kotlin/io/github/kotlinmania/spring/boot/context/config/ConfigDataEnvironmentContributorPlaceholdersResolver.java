@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.context.config;
+package io.github.kotlinmania.spring.boot.context.config;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.context.config.ConfigDataEnvironmentContributor.Kind;
-import org.springframework.boot.context.properties.bind.PlaceholdersResolver;
-import org.springframework.boot.origin.Origin;
-import org.springframework.boot.origin.OriginLookup;
+import io.github.kotlinmania.spring.boot.context.config.ConfigDataEnvironmentContributor.Kind;
+import io.github.kotlinmania.spring.boot.context.properties.bind.PlaceholdersResolver;
+import io.github.kotlinmania.spring.boot.origin.Origin;
+import io.github.kotlinmania.spring.boot.origin.OriginLookup;
 import org.springframework.core.convert.ConversionService;
 import org.springframework.core.env.PropertySource;
 import org.springframework.util.Assert;

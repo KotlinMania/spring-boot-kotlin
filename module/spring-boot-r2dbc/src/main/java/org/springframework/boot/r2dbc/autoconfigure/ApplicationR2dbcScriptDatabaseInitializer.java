@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.r2dbc.autoconfigure;
+package io.github.kotlinmania.spring.boot.r2dbc.autoconfigure;
 
 import io.r2dbc.spi.ConnectionFactory;
 
-import org.springframework.boot.r2dbc.init.R2dbcScriptDatabaseInitializer;
-import org.springframework.boot.sql.autoconfigure.init.ApplicationScriptDatabaseInitializer;
-import org.springframework.boot.sql.autoconfigure.init.SqlInitializationProperties;
-import org.springframework.boot.sql.init.DatabaseInitializationSettings;
+import io.github.kotlinmania.spring.boot.r2dbc.init.R2dbcScriptDatabaseInitializer;
+import io.github.kotlinmania.spring.boot.sql.autoconfigure.init.ApplicationScriptDatabaseInitializer;
+import io.github.kotlinmania.spring.boot.sql.autoconfigure.init.SqlInitializationProperties;
+import io.github.kotlinmania.spring.boot.sql.init.DatabaseInitializationSettings;
 
 /**
  * {@link R2dbcScriptDatabaseInitializer} for the primary SQL database. May be registered

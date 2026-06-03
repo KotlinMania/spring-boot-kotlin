@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.web.servlet;
+package io.github.kotlinmania.spring.boot.web.servlet;
 
 import java.util.Arrays;
 import java.util.Collection;
@@ -48,7 +48,7 @@ import org.springframework.util.StringUtils;
  * @since 1.4.0
  * @see ServletContextInitializer
  * @see ServletContext#addServlet(String, Servlet)
- * @see org.springframework.boot.web.servlet.ServletRegistration
+ * @see io.github.kotlinmania.spring.boot.web.servlet.ServletRegistration
  */
 public class ServletRegistrationBean<T extends Servlet> extends DynamicRegistrationBean<ServletRegistration.Dynamic> {
 

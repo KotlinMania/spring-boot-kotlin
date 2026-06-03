@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.context.properties.source;
+package io.github.kotlinmania.spring.boot.context.properties.source;
 
 import java.util.function.Predicate;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.origin.OriginTrackedValue;
+import io.github.kotlinmania.spring.boot.origin.OriginTrackedValue;
 import org.springframework.core.env.PropertySource;
 import org.springframework.util.StringUtils;
 

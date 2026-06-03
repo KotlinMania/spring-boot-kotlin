@@ -14,17 +14,17 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.diagnostics.analyzer;
+package io.github.kotlinmania.spring.boot.diagnostics.analyzer;
 
 import java.util.List;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.context.properties.bind.BindException;
-import org.springframework.boot.context.properties.bind.validation.BindValidationException;
-import org.springframework.boot.diagnostics.AbstractFailureAnalyzer;
-import org.springframework.boot.diagnostics.FailureAnalysis;
-import org.springframework.boot.origin.Origin;
+import io.github.kotlinmania.spring.boot.context.properties.bind.BindException;
+import io.github.kotlinmania.spring.boot.context.properties.bind.validation.BindValidationException;
+import io.github.kotlinmania.spring.boot.diagnostics.AbstractFailureAnalyzer;
+import io.github.kotlinmania.spring.boot.diagnostics.FailureAnalysis;
+import io.github.kotlinmania.spring.boot.origin.Origin;
 import org.springframework.util.Assert;
 import org.springframework.validation.FieldError;
 import org.springframework.validation.ObjectError;

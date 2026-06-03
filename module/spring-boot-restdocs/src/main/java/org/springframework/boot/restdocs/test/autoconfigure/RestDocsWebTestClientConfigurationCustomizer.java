@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.restdocs.test.autoconfigure;
+package io.github.kotlinmania.spring.boot.restdocs.test.autoconfigure;
 
 import org.springframework.restdocs.webtestclient.WebTestClientRestDocumentationConfigurer;
 

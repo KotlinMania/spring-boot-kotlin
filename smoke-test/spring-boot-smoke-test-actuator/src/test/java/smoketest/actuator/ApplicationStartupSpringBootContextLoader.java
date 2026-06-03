@@ -16,9 +16,9 @@
 
 package smoketest.actuator;
 
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.context.metrics.buffering.BufferingApplicationStartup;
-import org.springframework.boot.test.context.SpringBootContextLoader;
+import io.github.kotlinmania.spring.boot.SpringApplication;
+import io.github.kotlinmania.spring.boot.context.metrics.buffering.BufferingApplicationStartup;
+import io.github.kotlinmania.spring.boot.test.context.SpringBootContextLoader;
 
 class ApplicationStartupSpringBootContextLoader extends SpringBootContextLoader {
 

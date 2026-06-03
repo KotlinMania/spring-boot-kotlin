@@ -1,1 +1,1 @@
-org.springframework.boot.liquibase.autoconfigure.LiquibaseAutoConfiguration
+io.github.kotlinmania.spring.boot.liquibase.autoconfigure.LiquibaseAutoConfiguration

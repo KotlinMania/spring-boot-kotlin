@@ -18,6 +18,6 @@
  * Auto-configuration for Spring Data Elasticsearch health.
  */
 @NullMarked
-package org.springframework.boot.data.elasticsearch.autoconfigure.health;
+package io.github.kotlinmania.spring.boot.data.elasticsearch.autoconfigure.health;
 
 import org.jspecify.annotations.NullMarked;

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.loader.jar;
+package io.github.kotlinmania.spring.boot.loader.jar;
 
 import java.io.IOException;
 import java.io.UncheckedIOException;
@@ -23,7 +23,7 @@ import java.security.cert.Certificate;
 import java.util.jar.JarEntry;
 import java.util.jar.JarInputStream;
 
-import org.springframework.boot.loader.zip.ZipContent;
+import io.github.kotlinmania.spring.boot.loader.zip.ZipContent;
 
 /**
  * Security information ({@link Certificate} and {@link CodeSigner} details) for entries

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.build.architecture.assertj.noCheckReturnValue;
+package io.github.kotlinmania.spring.boot.build.architecture.assertj.noCheckReturnValue;
 
 import org.assertj.core.api.AbstractAssert;
 

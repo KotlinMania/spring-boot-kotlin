@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.data.mongodb.autoconfigure.domain.city;
+package io.github.kotlinmania.spring.boot.data.mongodb.autoconfigure.domain.city;
 
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;

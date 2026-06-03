@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.configurationsample.endpoint;
+package io.github.kotlinmania.spring.boot.configurationsample.endpoint;
 
-import org.springframework.boot.configurationsample.TestConfigurationProperties;
-import org.springframework.boot.configurationsample.TestEndpoint;
-import org.springframework.boot.configurationsample.TestReadOperation;
+import io.github.kotlinmania.spring.boot.configurationsample.TestConfigurationProperties;
+import io.github.kotlinmania.spring.boot.configurationsample.TestEndpoint;
+import io.github.kotlinmania.spring.boot.configurationsample.TestReadOperation;
 
 /**
  * An endpoint with additional custom properties.

@@ -16,7 +16,7 @@
 
 plugins {
 	id "java-library"
-	id "org.springframework.boot.deployed"
+	id "io.github.kotlinmania.spring.boot.deployed"
 }
 
 description = "Spring Boot Loader"

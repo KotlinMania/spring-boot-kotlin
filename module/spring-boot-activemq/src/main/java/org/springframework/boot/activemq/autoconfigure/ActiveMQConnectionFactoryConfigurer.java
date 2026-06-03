@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.activemq.autoconfigure;
+package io.github.kotlinmania.spring.boot.activemq.autoconfigure;
 
 import java.util.Collections;
 import java.util.List;
@@ -22,7 +22,7 @@ import java.util.List;
 import org.apache.activemq.ActiveMQConnectionFactory;
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.activemq.autoconfigure.ActiveMQProperties.Packages;
+import io.github.kotlinmania.spring.boot.activemq.autoconfigure.ActiveMQProperties.Packages;
 import org.springframework.util.Assert;
 
 /**

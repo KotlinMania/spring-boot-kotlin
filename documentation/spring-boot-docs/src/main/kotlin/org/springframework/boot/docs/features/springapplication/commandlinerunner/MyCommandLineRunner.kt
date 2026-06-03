@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.features.springapplication.commandlinerunner
+package io.github.kotlinmania.spring.boot.docs.features.springapplication.commandlinerunner
 
-import org.springframework.boot.CommandLineRunner
+import io.github.kotlinmania.spring.boot.CommandLineRunner
 import org.springframework.stereotype.Component
 
 @Component

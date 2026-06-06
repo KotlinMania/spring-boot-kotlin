@@ -26,7 +26,7 @@ jobs:
         uses: gradle/actions/setup-gradle@v6.1.0
 
       - name: Build and test iOS targets + XCFramework
-        # build.gradle.bak.kts registers the XCFramework as XCFramework(frameworkName),
+        # build.gradle.kts registers the XCFramework as XCFramework(frameworkName),
         # where frameworkName = project.frameworkName from gradle.properties. That
         # property is the single source of truth for the assemble<Name>XCFramework
         # task name — read it directly; there is no XCFramework("<literal>") to grep.
@@ -48,7 +48,7 @@ jobs:
       # Native upload-artifact (GitHub-published) makes the test reports
       # downloadable from the run summary page. `if: success() || failure()`
       # ensures uploads even when tests fail. Combined with the per-test
-      # testLogging events in build.gradle.bak.kts, the audit trail covers both
+      # testLogging events in build.gradle.kts, the audit trail covers both
       # raw-log streaming and post-run inspection.
       - name: Upload test reports (iOS)
         if: success() || failure()

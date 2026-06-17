@@ -15,6 +15,8 @@
  */
 package org.springframework.boot.build
 
+import org.gradle.kotlin.dsl.*
+
 import com.gradle.develocity.agent.gradle.test.DevelocityTestConfiguration
 import com.gradle.develocity.agent.gradle.test.PredictiveTestSelectionConfiguration
 import com.gradle.develocity.agent.gradle.test.TestRetryConfiguration
@@ -154,21 +156,20 @@ class JavaConventions(private val systemRequirements: SystemRequirementsExtensio
         val javadocJarTaskNames = sourceSets.stream()
             .map<String> { obj: SourceSet? -> obj!!.getJavadocJarTaskName() }
             .collect(Collectors.toSet())
-        project.getTasks().withType<Jar>(Jar::class.java) { jar: Jar ->
-            project.afterEvaluate { evaluated: Project ->
-                jar!!.metaInf { metaInf: CopySpec -> metaInf!!.from(extractLegalResources) }
-                jar.manifest { manifest: Manifest ->
-                    val attributes: MutableMap<String?, Any?> = java.util.TreeMap<String?, Any?>()
-                    attributes.put("Automatic-Module-Name", project.name.replace("-", "."))
+        project.tasks.withType<Jar>().configureEach {
+            val jar = this
+            project.afterEvaluate {
+                jar.metaInf { from(extractLegalResources) }
+                jar.manifest {
+                    val attributes = sortedMapOf<String, Any?>()
+                    attributes["Automatic-Module-Name"] = project.name.replace("-", ".")
                     // Build-Jdk-Spec is used by buildpacks to pick the JRE to install
-                    attributes.put("Build-Jdk-Spec", this.systemRequirements.java.version)
-                    attributes.put("Built-By", "Spring")
-                    attributes.put(
-                        "Implementation-Title",
+                    attributes["Build-Jdk-Spec"] = systemRequirements.java.version
+                    attributes["Built-By"] = "Spring"
+                    attributes["Implementation-Title"] =
                         determineImplementationTitle(project, sourceJarTaskNames, javadocJarTaskNames, jar)
-                    )
-                    attributes.put("Implementation-Version", project.version)
-                    manifest!!.attributes(attributes)
+                    attributes["Implementation-Version"] = project.version
+                    attributes(attributes)
                 }
             }
         }

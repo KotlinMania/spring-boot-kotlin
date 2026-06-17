@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/spring-boot-kotlin.iml" filepath="$PROJECT_DIR$/.idea/modules/spring-boot-kotlin.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/configuration-metadata/spring-boot-configuration-processor/spring-boot-kotlin.configuration-metadata.spring-boot-configuration-processor.main.iml" filepath="$PROJECT_DIR$/.idea/modules/configuration-metadata/spring-boot-configuration-processor/spring-boot-kotlin.configuration-metadata.spring-boot-configuration-processor.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/core/spring-boot-autoconfigure-processor/spring-boot-kotlin.core.spring-boot-autoconfigure-processor.main.iml" filepath="$PROJECT_DIR$/.idea/modules/core/spring-boot-autoconfigure-processor/spring-boot-kotlin.core.spring-boot-autoconfigure-processor.main.iml" />
     </modules>

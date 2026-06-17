@@ -58,6 +58,7 @@ dependencies {
     implementation("org.springframework:spring-web")
     implementation("org.yaml:snakeyaml:2.6")
     implementation("io.spring.gradle.nullability:nullability-plugin:0.0.11")
+    implementation("io.spring.nohttp:nohttp-gradle:0.0.11")
     implementation("tools.jackson.core:jackson-databind")
 
     // Folded in from the former gradle/plugins included build (cycle-detection

@@ -100,10 +100,6 @@ gradlePlugin {
             id = "io.github.kotlinmania.spring.boot.auto-configuration"
             implementationClass = "org.springframework.boot.build.autoconfigure.AutoConfigurationPlugin"
         }
-        register("bomPlugin") {
-            id = "io.github.kotlinmania.spring.boot.bom"
-            implementationClass = "org.springframework.boot.build.bom.BomPlugin"
-        }
         register("configurationMetadataPlugin") {
             id = "io.github.kotlinmania.spring.boot.configuration-metadata"
             implementationClass = "org.springframework.boot.build.context.properties.ConfigurationMetadataPlugin"
@@ -135,10 +131,6 @@ gradlePlugin {
         register("optionalDependenciesPlugin") {
             id = "io.github.kotlinmania.spring.boot.optional-dependencies"
             implementationClass = "org.springframework.boot.build.optional.OptionalDependenciesPlugin"
-        }
-        register("starterPlugin") {
-            id = "io.github.kotlinmania.spring.boot.starter"
-            implementationClass = "org.springframework.boot.build.starters.StarterPlugin"
         }
         register("systemTestPlugin") {
             id = "io.github.kotlinmania.spring.boot.system-test"

@@ -66,8 +66,8 @@ rootProject.name = "spring-boot-kotlin"
 // ---------------------------------------------------------------------------
 
 // === ACTIVE working set (module-by-module conversion). Grow deliberately. ===
-include(":platform:spring-boot-dependencies")
-include(":platform:spring-boot-internal-dependencies")
+// include(":platform:spring-boot-dependencies")   // dropped: KMP port uses version catalog, not a Maven BOM
+// include(":platform:spring-boot-internal-dependencies")   // dropped: KMP port uses version catalog, not a Maven BOM
 include(":configuration-metadata:spring-boot-configuration-metadata")
 include(":configuration-metadata:spring-boot-configuration-processor")
 include(":core:spring-boot")

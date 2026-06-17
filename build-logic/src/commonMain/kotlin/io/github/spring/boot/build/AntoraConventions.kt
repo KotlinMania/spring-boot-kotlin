@@ -60,7 +60,7 @@ import java.util.concurrent.Callable
  */
 class AntoraConventions {
     fun apply(project: Project) {
-        project.getPlugins().withType<AntoraPlugin>(
+        project.plugins.withType<AntoraPlugin>(
             AntoraPlugin::class.java) { antoraPlugin: AntoraPlugin -> apply(project, antoraPlugin) }
     }
 
@@ -71,7 +71,7 @@ class AntoraConventions {
                 resolvedBom.name, project.getDependencies()
                     .project(Map.of<String?, String?>("path", DEPENDENCIES_PATH, "configuration", "resolvedBom"))
             )
-        project.getPlugins().apply<GenerateAntoraYmlPlugin>(GenerateAntoraYmlPlugin::class.java)
+        project.plugins.apply<GenerateAntoraYmlPlugin>(GenerateAntoraYmlPlugin::class.java)
         val tasks = project.getTasks()
         val generateAntoraPlaybookTask = tasks.register<GenerateAntoraPlaybook>(
             GENERATE_ANTORA_PLAYBOOK_TASK_NAME, GenerateAntoraPlaybook::class.java) { task: GenerateAntoraPlaybook -> configureGenerateAntoraPlaybookTask(project, task!!) }
@@ -105,7 +105,7 @@ class AntoraConventions {
                 task!!.setSource(project.files(ANTORA_SOURCE_DIR))
                 task.outputDirectory.set(project.getLayout().getBuildDirectory().dir(task.name))
             }
-        project.getPlugins().withType<JavaPlugin>(JavaPlugin::class.java) { java: JavaPlugin ->
+        project.plugins.withType<JavaPlugin>(JavaPlugin::class.java) { java: JavaPlugin ->
             val runtimeClasspathConfigurationName: String = project.getExtensions()
                 .getByType<JavaPluginExtension>(JavaPluginExtension::class.java)
                 .sourceSets
@@ -127,7 +127,7 @@ class AntoraConventions {
                 )
             })
         }
-        project.getPlugins()
+        project.plugins
             .withType<NodePlugin>(
                 NodePlugin::class.java) { node: NodePlugin ->
                     project.getExtensions().getByType<NodeExtension>(NodeExtension::class.java).version.set("24.14.1")
@@ -215,7 +215,7 @@ class AntoraConventions {
         antoraTask.setPlaybook("antora-playbook.yml")
         antoraTask.setUiBundleUrl(getUiBundleUrl(project))
         antoraTask.args.set(project.provider<MutableList<String?>>(Callable { getAntoraNpxArs(project, antoraTask) }))
-        project.getPlugins()
+        project.plugins
             .withType<JavaBasePlugin>(
                 JavaBasePlugin::class.java) { javaBasePlugin: JavaBasePlugin ->
                     project.getTasks()

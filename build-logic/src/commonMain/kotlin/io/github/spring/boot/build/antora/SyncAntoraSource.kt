@@ -40,7 +40,7 @@ abstract class SyncAntoraSource @Inject constructor(
     abstract val outputDirectory: DirectoryProperty
 
     @InputFiles
-    fun getSource(): FileCollection {
+    fun source: FileCollection {
         return this.source!!
     }
 

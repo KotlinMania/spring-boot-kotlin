@@ -35,13 +35,13 @@ import org.gradle.api.tasks.bundling.Jar
 class DeployedPlugin : Plugin<Project> {
     @Suppress("deprecation")
     override fun apply(project: Project) {
-        project.getPlugins().apply<MavenPublishPlugin>(MavenPublishPlugin::class.java)
-        project.getPlugins().apply<MavenRepositoryPlugin>(MavenRepositoryPlugin::class.java)
+        project.plugins.apply<MavenPublishPlugin>(MavenPublishPlugin::class.java)
+        project.plugins.apply<MavenRepositoryPlugin>(MavenRepositoryPlugin::class.java)
         val publishing = project.getExtensions().getByType<PublishingExtension>(PublishingExtension::class.java)
         val mavenPublication =
             publishing.publications.create<MavenPublication>("maven", MavenPublication::class.java)
         project.afterEvaluate(Action { evaluated: Project ->
-            project.getPlugins().withType<JavaPlugin>(JavaPlugin::class.java).all(
+            project.plugins.withType<JavaPlugin>(JavaPlugin::class.java).all(
                 Action { javaPlugin: JavaPlugin ->
                     if ((project.getTasks().getByName(JavaPlugin.JAR_TASK_NAME) as Jar).isEnabled()) {
                         project.getComponents()
@@ -50,7 +50,7 @@ class DeployedPlugin : Plugin<Project> {
                     }
                 })
         })
-        project.getPlugins()
+        project.plugins
             .withType<JavaPlatformPlugin>(JavaPlatformPlugin::class.java)
             .all(Action { javaPlugin: JavaPlatformPlugin ->
                 project.getComponents()

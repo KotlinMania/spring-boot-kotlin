@@ -42,7 +42,7 @@ import org.gradle.plugins.ide.eclipse.model.EclipseModel
  */
 class DockerTestPlugin : Plugin<Project> {
     override fun apply(project: Project) {
-        project.getPlugins().withType<JavaPlugin>(
+        project.plugins.withType<JavaPlugin>(
             JavaPlugin::class.java) { javaPlugin: JavaPlugin -> configureDockerTesting(project) }
     }
 
@@ -51,7 +51,7 @@ class DockerTestPlugin : Plugin<Project> {
         val dockerTestSourceSet = createSourceSet(project)
         val dockerTest: Provider<Test> = createTestTask(project, dockerTestSourceSet, buildService)
         project.getTasks().getByName(LifecycleBasePlugin.CHECK_TASK_NAME).dependsOn(dockerTest)
-        project.getPlugins()
+        project.plugins
             .withType<EclipsePlugin>(EclipsePlugin::class.java) { eclipsePlugin: EclipsePlugin ->
                 val eclipse = project.getExtensions().getByType<EclipseModel>(EclipseModel::class.java)
                 eclipse.classpath(Action { classpath: EclipseClasspath ->
@@ -86,7 +86,7 @@ class DockerTestPlugin : Plugin<Project> {
                 .plus(main.getRuntimeClasspath())
                 .plus(test.getOutput())
         )
-        project.getPlugins().withType<IntegrationTestPlugin>(
+        project.plugins.withType<IntegrationTestPlugin>(
             IntegrationTestPlugin::class.java) { integrationTestPlugin: IntegrationTestPlugin ->
                 val intTest = sourceSets.getByName(IntegrationTestPlugin.Companion.INT_TEST_SOURCE_SET_NAME)
                 dockerTestSourceSet

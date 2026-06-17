@@ -34,7 +34,7 @@ import org.gradle.api.file.FileTree
  * @author Andy Wilkinson
  */
 abstract class AutoConfigurationImportsTask : DefaultTask() {
-    private var sourceFiles: FileCollection = getProject().getObjects().fileCollection()
+    private var sourceFiles: FileCollection = project.getObjects().fileCollection()
 
     @get:PathSensitive(PathSensitivity.RELATIVE)
     @get:SkipWhenEmpty
@@ -45,7 +45,7 @@ abstract class AutoConfigurationImportsTask : DefaultTask() {
                 filter!!.include(IMPORTS_FILE)
             })
         set(source) {
-            this.sourceFiles = getProject().getObjects().fileCollection().from(source)
+            this.sourceFiles = project.getObjects().fileCollection().from(source)
         }
 
     protected fun loadImports(): MutableList<String?> {

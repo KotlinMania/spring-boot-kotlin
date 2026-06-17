@@ -39,7 +39,7 @@ abstract class SyncAppSource @Inject constructor(fileSystemOperations: FileSyste
     private val fileSystemOperations: FileSystemOperations
 
     init {
-        this.pluginVersion.convention(getProject().provider<String>(Callable { getProject().version.toString() }))
+        this.pluginVersion.convention(project.provider<String>(Callable { project.version.toString() }))
         this.fileSystemOperations = fileSystemOperations
     }
 

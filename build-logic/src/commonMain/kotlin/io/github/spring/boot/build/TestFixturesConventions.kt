@@ -33,7 +33,7 @@ import org.gradle.api.plugins.JavaTestFixturesPlugin
  */
 class TestFixturesConventions {
     fun apply(project: Project) {
-        project.getPlugins().withType<JavaTestFixturesPlugin>(
+        project.plugins.withType<JavaTestFixturesPlugin>(
             JavaTestFixturesPlugin::class.java) { testFixtures: JavaTestFixturesPlugin -> disablePublishing(project) }
     }
 

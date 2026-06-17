@@ -80,11 +80,11 @@ abstract class CheckJavadocMacros : DefaultTask() {
     var classpath: FileCollection = null
 
     init {
-        this.projectRoot = getProject().getRootDir().toPath()
+        this.projectRoot = project.getRootDir().toPath()
     }
 
     @InputFiles
-    fun getSource(): FileCollection {
+    fun source: FileCollection {
         return this.source!!
     }
 

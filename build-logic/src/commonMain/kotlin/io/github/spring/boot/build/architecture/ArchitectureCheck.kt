@@ -57,7 +57,7 @@ abstract class ArchitectureCheck : DefaultTask() {
     private var classes: FileCollection = null
 
     init {
-        this.outputDirectory.convention(getProject().getLayout().getBuildDirectory().dir(getName()))
+        this.outputDirectory.convention(project.getLayout().getBuildDirectory().dir(name))
         this.annotationClasses.convention(ArchitectureCheckAnnotation.Companion.asMap())
         this.rules.addAll(
             this.prohibitObjectsRequireNonNull.convention(true)

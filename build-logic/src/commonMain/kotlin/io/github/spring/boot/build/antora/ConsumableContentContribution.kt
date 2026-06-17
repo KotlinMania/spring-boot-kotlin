@@ -51,25 +51,25 @@ open class ConsumableContentContribution protected constructor(
             publish(producer)
         }
         val configuration = createConfiguration(
-            getName(),
+            name,
             "Configuration for %s Antora %s content artifacts."
         )
         configuration.setCanBeConsumed(true)
         configuration.setCanBeResolved(false)
-        getProject().getArtifacts().add(configuration.name, producer)
+        project.getArtifacts().add(configuration.name, producer)
     }
 
     fun consumeFrom(path: String?) {
-        val configuration = createConfiguration(getName(), "Configuration for %s Antora %s content.")
+        val configuration = createConfiguration(name, "Configuration for %s Antora %s content.")
         configuration.setCanBeConsumed(false)
         configuration.setCanBeResolved(true)
-        val dependencies = getProject().getDependencies()
+        val dependencies = project.getDependencies()
         dependencies.add(
             configuration.name,
-            getProject().provider<Dependency>(Callable { projectDependency(path, configuration.name) })
+            project.provider<Dependency>(Callable { projectDependency(path, configuration.name) })
         )
-        val outputDirectory: Provider<Directory> = outputDirectory("content", getName())
-        val tasks = getProject().getTasks()
+        val outputDirectory: Provider<Directory> = outputDirectory("content", name)
+        val tasks = project.getTasks()
         val copyAntoraContent: TaskProvider<*> = tasks.register<CopyAntoraContent>(
             taskName("copy", "%s", configuration.name),
             CopyAntoraContent::class.java) { task: CopyAntoraContent -> configureCopyContent(task!!, path, configuration, outputDirectory) }
@@ -83,7 +83,7 @@ open class ConsumableContentContribution protected constructor(
     }
 
     fun publish(producer: TaskProvider<out Task?>) {
-        getProject().getExtensions()
+        project.getExtensions()
             .getByType<PublishingExtension>(PublishingExtension::class.java)
             .publications
             .withType<MavenPublication>(MavenPublication::class.java)
@@ -100,7 +100,7 @@ open class ConsumableContentContribution protected constructor(
         outputDirectory: Provider<Directory>
     ) {
         task.setDescription(
-            "Syncs the %s Antora %s content from %s.".format(getName(), toDescription(getType()), path)
+            "Syncs the %s Antora %s content from %s.".format(name, toDescription(type), path)
         )
         task.setSource(configuration)
         task.outputFile
@@ -108,30 +108,30 @@ open class ConsumableContentContribution protected constructor(
     }
 
     private fun addToZipContentsCollectorDependencies(task: GenerateAntoraPlaybook) {
-        task.antoraExtensions.getZipContentsCollector().getDependencies().add(getName())
+        task.antoraExtensions.zipContentsCollector.getDependencies().add(name)
     }
 
     private fun addPublishedMavenArtifact(mavenPublication: MavenPublication, producer: TaskProvider<*>) {
         if ("maven" == mavenPublication.name) {
-            val classifier: String = "%s-%s-content".format(getName(), getType())
+            val classifier: String = "%s-%s-content".format(name, type)
             mavenPublication.artifact(
                 producer) { mavenArtifact: MavenArtifact -> mavenArtifact!!.setClassifier(classifier) }
         }
     }
 
     private fun getContentZipFile(dir: Directory): RegularFile {
-        val version = getProject().version
-        return dir.file("spring-boot-docs-%s-%s-%s-content.zip".format(version, getName(), getType()))
+        val version = project.version
+        return dir.file("spring-boot-docs-%s-%s-%s-content.zip".format(version, name, type))
     }
 
     private fun createConfiguration(name: String?, description: String): Configuration {
-        return getProject().getConfigurations()
+        return project.getConfigurations()
             .create(
-                configurationName(name, "Antora%sContent", getType())) { configuration: Configuration ->
+                configurationName(name, "Antora%sContent", type)) { configuration: Configuration ->
                     configuration.setDescription(
                         description.format(
-                            getName(),
-                            getType()
+                            name,
+                            type
                         )
                     )
                 }

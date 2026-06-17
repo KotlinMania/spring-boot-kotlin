@@ -42,8 +42,8 @@ class CompoundRow(snippet: Snippet?, prefix: String?, private val description: S
 
     override fun write(asciidoc: Asciidoc) {
         asciidoc.append("|")
-        asciidoc.append("[[" + getAnchor() + "]]")
-        asciidoc.append("xref:#" + getAnchor() + "[")
+        asciidoc.append("[[" + anchor + "]]")
+        asciidoc.append("xref:#" + anchor + "[")
         this.propertyNames.forEach(Consumer { items: String? -> asciidoc.appendWithHardLineBreaks(items) })
         asciidoc.appendln("]")
         asciidoc.appendln("|+++", this.description, "+++")

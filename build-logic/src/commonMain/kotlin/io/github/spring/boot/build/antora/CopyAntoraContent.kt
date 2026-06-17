@@ -35,7 +35,7 @@ abstract class CopyAntoraContent @Inject constructor() : DefaultTask() {
     private var source: FileCollection = null
 
     @InputFiles
-    fun getSource(): FileCollection {
+    fun source: FileCollection {
         return this.source!!
     }
 

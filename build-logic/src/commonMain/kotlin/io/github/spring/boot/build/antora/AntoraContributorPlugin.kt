@@ -31,7 +31,7 @@ import javax.inject.Inject
  */
 class AntoraContributorPlugin : Plugin<Project> {
     override fun apply(project: Project) {
-        project.getPlugins().apply<AntoraPlugin>(AntoraPlugin::class.java)
+        project.plugins.apply<AntoraPlugin>(AntoraPlugin::class.java)
         val antoraContributions = project.getObjects()
             .domainObjectContainer<Contribution>(
                 Contribution::class.java,

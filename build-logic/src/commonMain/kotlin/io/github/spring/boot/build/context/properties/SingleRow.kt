@@ -52,8 +52,8 @@ class SingleRow(private val snippets: Snippets?, snippet: Snippet?, property: Co
 
     override fun write(asciidoc: Asciidoc) {
         asciidoc.append("|")
-        asciidoc.append("[[" + getAnchor() + "]]")
-        asciidoc.appendln("xref:#" + getAnchor() + "[`+", this.property.displayName, "+`]")
+        asciidoc.append("[[" + anchor + "]]")
+        asciidoc.appendln("xref:#" + anchor + "[`+", this.property.displayName, "+`]")
         writeDescription(asciidoc)
         writeDefaultValue(asciidoc)
     }

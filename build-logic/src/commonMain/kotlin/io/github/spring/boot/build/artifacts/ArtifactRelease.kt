@@ -24,7 +24,7 @@ import org.gradle.api.Project
  * @author Scott Frederick
  */
 class ArtifactRelease private constructor(private val type: Type) {
-    fun getType(): String {
+    fun type: String {
         return this.type.toString().lowercase()
     }
 

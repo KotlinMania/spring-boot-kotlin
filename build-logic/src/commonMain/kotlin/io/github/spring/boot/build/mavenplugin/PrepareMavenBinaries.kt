@@ -46,8 +46,8 @@ abstract class PrepareMavenBinaries @Inject constructor(
     private val binaries: Provider<MutableSet<FileTree>>
 
     init {
-        val configurations = getProject().getConfigurations()
-        val dependencies = getProject().getDependencies()
+        val configurations = project.getConfigurations()
+        val dependencies = project.getDependencies()
         this.binaries = this.versions.map<MutableSet<FileTree>?>(Transformer { versions: MutableSet<String?>? ->
             versions!!.stream()
                 .map<Configuration> { version: String? ->

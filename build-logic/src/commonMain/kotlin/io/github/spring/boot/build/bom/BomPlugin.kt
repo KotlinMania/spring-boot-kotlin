@@ -43,7 +43,7 @@ import java.util.stream.Collectors
  */
 class BomPlugin : Plugin<Project> {
     override fun apply(project: Project) {
-        val plugins = project.getPlugins()
+        val plugins = project.plugins
         plugins.apply<MavenRepositoryPlugin>(MavenRepositoryPlugin::class.java)
         plugins.apply<JavaPlatformPlugin>(JavaPlatformPlugin::class.java)
         val javaPlatform = project.getExtensions().getByType<JavaPlatformExtension>(JavaPlatformExtension::class.java)
@@ -228,7 +228,7 @@ class BomPlugin : Plugin<Project> {
             for (library in this.bom.libraries) {
                 for (group in library.groups) {
                     val plugins = findOrCreateNode(projectNode, "build", "pluginManagement", "plugins")
-                    for (pluginName in group.getPlugins()) {
+                    for (pluginName in group.plugins) {
                         val plugin = Node(plugins, "plugin")
                         plugin.appendNode("groupId", group.id)
                         plugin.appendNode("artifactId", pluginName)

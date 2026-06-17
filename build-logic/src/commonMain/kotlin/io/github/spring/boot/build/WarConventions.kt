@@ -37,7 +37,7 @@ import java.util.concurrent.Callable
  */
 class WarConventions {
     fun apply(project: Project) {
-        project.getPlugins()
+        project.plugins
             .withType<EclipseWtpPlugin>(EclipseWtpPlugin::class.java) { wtp: EclipseWtpPlugin ->
                 project.getTasks().getByName(EclipseWtpPlugin.ECLIPSE_WTP_FACET_TASK_NAME).doFirst(
                     Action { task: Task ->

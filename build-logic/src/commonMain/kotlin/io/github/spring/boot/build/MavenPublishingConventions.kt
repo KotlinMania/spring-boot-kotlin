@@ -56,7 +56,7 @@ import java.util.concurrent.Callable
  */
 class MavenPublishingConventions {
     fun apply(project: Project) {
-        project.getPlugins().withType<MavenPublishPlugin>(MavenPublishPlugin::class.java)
+        project.plugins.withType<MavenPublishPlugin>(MavenPublishPlugin::class.java)
             .all(Action { mavenPublish: MavenPublishPlugin ->
                 val publishing = project.getExtensions().getByType<PublishingExtension>(PublishingExtension::class.java)
                 if (project.hasProperty("deploymentRepository")) {
@@ -73,7 +73,7 @@ class MavenPublishingConventions {
                             project
                         )
                     })
-                project.getPlugins().withType<JavaPlugin>(JavaPlugin::class.java)
+                project.plugins.withType<JavaPlugin>(JavaPlugin::class.java)
                     .all(Action { javaPlugin: JavaPlugin ->
                         val extension =
                             project.getExtensions().getByType<JavaPluginExtension>(JavaPluginExtension::class.java)
@@ -85,7 +85,7 @@ class MavenPublishingConventions {
 
     private fun customizeMavenPublication(publication: MavenPublication, project: Project) {
         customizePom(publication.getPom(), project)
-        project.getPlugins()
+        project.plugins
             .withType<JavaPlugin>(JavaPlugin::class.java)
             .all(Action { javaPlugin: JavaPlugin -> customizeJavaMavenPublication(publication, project) })
     }

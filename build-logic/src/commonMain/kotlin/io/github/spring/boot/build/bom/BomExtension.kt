@@ -165,7 +165,7 @@ class BomExtension(val project: Project) {
             for (module in group.modules) {
                 addModule(library, dependencies, versionProperty, group, module)
             }
-            for (bomImport in group.getBoms()) {
+            for (bomImport in group.boms) {
                 addBomImport(library, dependencies, versionProperty, group, bomImport.name)
             }
         }

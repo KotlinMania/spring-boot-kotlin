@@ -69,31 +69,31 @@ abstract class GenerateAntoraPlaybook : DefaultTask() {
     abstract val outputFile: RegularFileProperty
 
     init {
-        this.root = toRealPath(getProject().getRootDir().toPath())
+        this.root = toRealPath(project.getRootDir().toPath())
         this.antoraExtensions =
-            getProject().getObjects().newInstance<AntoraExtensions>(AntoraExtensions::class.java, this.root)
+            project.getObjects().newInstance<AntoraExtensions>(AntoraExtensions::class.java, this.root)
         this.asciidocExtensions =
-            getProject().getObjects().newInstance<AsciidocExtensions>(AsciidocExtensions::class.java)
-        this.version = getProject().version.toString()
-        this.playbookOutputDir = configurePlaybookOutputDir(getProject())
-        this.contentSource = getProject().getObjects().newInstance<ContentSource>(ContentSource::class.java, this.root)
+            project.getObjects().newInstance<AsciidocExtensions>(AsciidocExtensions::class.java)
+        this.version = project.version.toString()
+        this.playbookOutputDir = configurePlaybookOutputDir(project)
+        this.contentSource = project.getObjects().newInstance<ContentSource>(ContentSource::class.java, this.root)
         setGroup("Documentation")
         setDescription("Generates an Antora playbook.yml file for local use")
         this.outputFile.convention(
-            getProject().getLayout()
+            project.getLayout()
                 .getBuildDirectory()
                 .file("generated/docs/antora-playbook/antora-playbook.yml")
         )
         this.contentSource.addStartPath(
-            getProject()
+            project
                 .provider<Directory>(Callable {
-                    getProject().getLayout().getProjectDirectory().dir(AntoraConventions.ANTORA_SOURCE_DIR)
+                    project.getLayout().getProjectDirectory().dir(AntoraConventions.ANTORA_SOURCE_DIR)
                 })
         )
     }
 
     private fun configurePlaybookOutputDir(project: Project): Provider<String> {
-        val siteDirectory = getProject().getLayout().getBuildDirectory().dir("site").get().asFile.toPath()
+        val siteDirectory = project.getLayout().getBuildDirectory().dir("site").get().asFile.toPath()
         return project.provider<String>(Callable {
             val playbookDir: Path = toRealPath(this.outputFile.get().asFile.toPath()).getParent()
             val outputDir: Path = toRealPath(siteDirectory)

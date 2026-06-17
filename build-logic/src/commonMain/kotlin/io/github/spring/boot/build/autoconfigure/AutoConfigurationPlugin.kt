@@ -49,8 +49,8 @@ import java.util.stream.Collectors
  */
 class AutoConfigurationPlugin : Plugin<Project> {
     override fun apply(project: Project) {
-        project.getPlugins().apply<DeployedPlugin>(DeployedPlugin::class.java)
-        project.getPlugins().withType<JavaPlugin>(
+        project.plugins.apply<DeployedPlugin>(DeployedPlugin::class.java)
+        project.plugins.withType<JavaPlugin>(
             JavaPlugin::class.java) { javaPlugin: JavaPlugin -> Configurer(project).configure() }
     }
 
@@ -100,7 +100,7 @@ class AutoConfigurationPlugin : Plugin<Project> {
                         task!!
                     )
                 }
-            this.project.getPlugins()
+            this.project.plugins
                 .withType<OptionalDependenciesPlugin>(
                     OptionalDependenciesPlugin::class.java) { plugin: OptionalDependenciesPlugin ->
                         configureCheckAutoConfigurationClassesForOptionalDependencies(

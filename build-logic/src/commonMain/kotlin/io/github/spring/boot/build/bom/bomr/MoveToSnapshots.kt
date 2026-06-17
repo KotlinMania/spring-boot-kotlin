@@ -37,14 +37,14 @@ import javax.inject.Inject
  * @author Andy Wilkinson
  */
 abstract class MoveToSnapshots @Inject constructor(bom: BomExtension?) : UpgradeDependencies(bom, true) {
-    private val buildType: BuildType? = BuildProperties.get(getProject()).buildType
+    private val buildType: BuildType? = BuildProperties.get(project).buildType
 
     init {
-        getProject().getRepositories().withType<MavenArtifactRepository>(
+        project.getRepositories().withType<MavenArtifactRepository>(
             MavenArtifactRepository::class.java) { repository: MavenArtifactRepository ->
                 val name = repository!!.name
                 if (name.startsWith("spring-") && name.endsWith("-snapshot")) {
-                    getRepositoryNames().add(name)
+                    repositoryNames.add(name)
                 }
             }
     }

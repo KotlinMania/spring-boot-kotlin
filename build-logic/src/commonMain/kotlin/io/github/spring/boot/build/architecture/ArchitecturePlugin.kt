@@ -33,7 +33,7 @@ import org.springframework.util.StringUtils
  */
 class ArchitecturePlugin : Plugin<Project> {
     override fun apply(project: Project) {
-        project.getPlugins()
+        project.plugins
             .withType<JavaPlugin>(JavaPlugin::class.java) { javaPlugin: JavaPlugin -> registerTasks(project) }
     }
 
@@ -51,7 +51,7 @@ class ArchitecturePlugin : Plugin<Project> {
                         )
                     )
                 })
-            project.getPlugins()
+            project.plugins
                 .withId(
                     "org.jetbrains.kotlin.jvm") { kotlinPlugin: Plugin<*> ->
                         registerArchitectureCheck(sourceSet, "kotlin", project)

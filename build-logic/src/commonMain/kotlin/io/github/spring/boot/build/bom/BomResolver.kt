@@ -58,7 +58,7 @@ class BomResolver(
                         ResolvedBom.Id(group.id, module.name, library.version.version.toString())
                     managedDependencies.add(id)
                 }
-                for (imported in group.getBoms()) {
+                for (imported in group.boms) {
                     val bom = bomFrom(
                         resolveBom(
                             "%s:%s:%s".format(group.id, imported.name, library.version.version)

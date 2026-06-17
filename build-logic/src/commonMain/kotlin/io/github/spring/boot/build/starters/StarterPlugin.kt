@@ -43,7 +43,7 @@ import org.springframework.util.StringUtils
  */
 class StarterPlugin : Plugin<Project> {
     override fun apply(project: Project) {
-        val plugins = project.getPlugins()
+        val plugins = project.plugins
         plugins.apply<DeployedPlugin>(DeployedPlugin::class.java)
         plugins.apply<JavaLibraryPlugin>(JavaLibraryPlugin::class.java)
         plugins.apply<ConventionsPlugin>(ConventionsPlugin::class.java)

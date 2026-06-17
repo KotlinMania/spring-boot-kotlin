@@ -44,7 +44,7 @@ import org.gradle.api.tasks.TaskProvider
  */
 class TestSlicePlugin : Plugin<Project> {
     override fun apply(target: Project) {
-        val plugins = target.getPlugins()
+        val plugins = target.plugins
         plugins.apply<TestAutoConfigurationPlugin>(TestAutoConfigurationPlugin::class.java)
         plugins.withType<JavaPlugin>(JavaPlugin::class.java) { plugin: JavaPlugin ->
             val generateTestSliceMetadata = target.getTasks()

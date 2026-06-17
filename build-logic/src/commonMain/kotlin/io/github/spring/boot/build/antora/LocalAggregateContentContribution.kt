@@ -34,8 +34,8 @@ class LocalAggregateContentContribution(project: Project?, name: String?) :
 
     private fun addToAlwaysInclude(task: GenerateAntoraPlaybook) {
         task.antoraExtensions
-            .getZipContentsCollector()
+            .zipContentsCollector
             .getAlwaysInclude()
-            .add(AlwaysInclude(getName(), "local-aggregate-content"))
+            .add(AlwaysInclude(name, "local-aggregate-content"))
     }
 }

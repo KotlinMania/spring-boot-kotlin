@@ -35,17 +35,17 @@ abstract class ContentContribution protected constructor(
     abstract fun produceFrom(copySpec: CopySpec?)
 
     protected fun configureProduction(copySpec: CopySpec): TaskProvider<out Task?> {
-        val tasks = getProject().getTasks()
+        val tasks = project.getTasks()
         val zipContent = tasks.register<Zip>(
-            taskName("zip", "%sAntora%sContent", getName(), this.type),
+            taskName("zip", "%sAntora%sContent", name, this.type),
             Zip::class.java) { zip: Zip ->
                 zip!!.destinationDirectory
-                    .set(getProject().getLayout().getBuildDirectory().dir("generated/docs/antora-content"))
-                zip.getArchiveClassifier().set("%s-%s-content".format(getName(), this.type))
+                    .set(project.getLayout().getBuildDirectory().dir("generated/docs/antora-content"))
+                zip.getArchiveClassifier().set("%s-%s-content".format(name, this.type))
                 zip.with(copySpec)
                 zip.setDescription(
                     "Creates a zip archive of the %s Antora %s content.".format(
-                        getName(),
+                        name,
                         toDescription(this.type)
                     )
                 )

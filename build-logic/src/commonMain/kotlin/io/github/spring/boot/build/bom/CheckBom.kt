@@ -78,8 +78,8 @@ abstract class CheckBom @Inject constructor(bom: BomExtension) : DefaultTask() {
     private val checks: MutableList<LibraryCheck?>
 
     init {
-        val configurations = getProject().getConfigurations()
-        val dependencies = getProject().getDependencies()
+        val configurations = project.getConfigurations()
+        val dependencies = project.getDependencies()
         val resolvedBom: Provider<ResolvedBom> =
             this.resolvedBomFile.map<File>(Transformer { obj: RegularFile? -> obj!!.asFile }).map<ResolvedBom>(
                 Transformer { file: File? -> ResolvedBom.Companion.readFrom(file) })
@@ -190,7 +190,7 @@ abstract class CheckBom @Inject constructor(bom: BomExtension) : DefaultTask() {
                 if (prohibited.isProhibited(library.version.version.toString())) {
                     errors.add("Current version " + currentVersion + " is prohibited")
                 } else {
-                    val versionRange = prohibited.getRange()
+                    val versionRange = prohibited.range
                     if (versionRange != null) {
                         check(currentVersion, versionRange, errors)
                     }
@@ -407,7 +407,7 @@ abstract class CheckBom @Inject constructor(bom: BomExtension) : DefaultTask() {
 
         fun findPermittedDependencies(library: Library, bom: Bom): MutableList<PermittedDependency>? {
             for (group in library.groups) {
-                for (importedBom in group.getBoms()) {
+                for (importedBom in group.boms) {
                     if (importedBom.name == bom.id.artifactId && group.id == bom.id.groupId) {
                         return importedBom.permittedDependencies
                     }

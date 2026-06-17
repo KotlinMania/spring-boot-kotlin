@@ -39,14 +39,14 @@ import org.gradle.plugins.ide.eclipse.model.EclipseModel
  */
 class SystemTestPlugin : Plugin<Project> {
     override fun apply(project: Project) {
-        project.getPlugins().withType<JavaPlugin>(
+        project.plugins.withType<JavaPlugin>(
             JavaPlugin::class.java) { javaPlugin: JavaPlugin -> configureSystemTesting(project) }
     }
 
     private fun configureSystemTesting(project: Project) {
         val systemTestSourceSet = createSourceSet(project)
         createTestTask(project, systemTestSourceSet)
-        project.getPlugins()
+        project.plugins
             .withType<EclipsePlugin>(EclipsePlugin::class.java) { eclipsePlugin: EclipsePlugin ->
                 val eclipse = project.getExtensions().getByType<EclipseModel>(EclipseModel::class.java)
                 eclipse.classpath(Action { classpath: EclipseClasspath ->

@@ -32,27 +32,27 @@ import java.util.concurrent.Callable
  */
 class SourceContribution(project: Project?, name: String?) : Contribution(project, name) {
     fun produce() {
-        val antoraSource = getProject().getConfigurations().create(CONFIGURATION_NAME)
+        val antoraSource = project.getConfigurations().create(CONFIGURATION_NAME)
         val antoraSourceZip =
-            getProject().getTasks().register<Zip>("antoraSourceZip", Zip::class.java) { zip: Zip ->
-                zip!!.destinationDirectory.set(getProject().getLayout().getBuildDirectory().dir("antora-source"))
+            project.getTasks().register<Zip>("antoraSourceZip", Zip::class.java) { zip: Zip ->
+                zip!!.destinationDirectory.set(project.getLayout().getBuildDirectory().dir("antora-source"))
                 zip.from(AntoraConventions.ANTORA_SOURCE_DIR)
                 zip.setDescription(
                     "Creates a zip archive of the Antora source in %s.".format(AntoraConventions.ANTORA_SOURCE_DIR)
                 )
             }
-        getProject().getArtifacts().add(antoraSource.name, antoraSourceZip)
+        project.getArtifacts().add(antoraSource.name, antoraSourceZip)
     }
 
     fun consumeFrom(path: String?) {
-        val configuration = createConfiguration(getName())
-        val dependencies = getProject().getDependencies()
+        val configuration = createConfiguration(name)
+        val dependencies = project.getDependencies()
         dependencies.add(
             configuration.name,
-            getProject().provider<Dependency>(Callable { projectDependency(path, CONFIGURATION_NAME) })
+            project.provider<Dependency>(Callable { projectDependency(path, CONFIGURATION_NAME) })
         )
-        val outputDirectory: Provider<Directory> = outputDirectory("source", getName())
-        val tasks = getProject().getTasks()
+        val outputDirectory: Provider<Directory> = outputDirectory("source", name)
+        val tasks = project.getTasks()
         val syncSource = tasks.register<SyncAntoraSource>(
             taskName("sync", "%s", configuration.name),
             SyncAntoraSource::class.java) { task: SyncAntoraSource -> configureSyncSource(task!!, path, configuration, outputDirectory) }
@@ -67,13 +67,13 @@ class SourceContribution(project: Project?, name: String?) : Contribution(projec
         task: SyncAntoraSource, path: String?, configuration: Configuration?,
         outputDirectory: Provider<Directory>
     ) {
-        task.setDescription("Syncs the %s Antora source from %s.".format(getName(), path))
+        task.setDescription("Syncs the %s Antora source from %s.".format(name, path))
         task.setSource(configuration)
         task.outputDirectory.set(outputDirectory)
     }
 
     private fun createConfiguration(name: String?): Configuration {
-        return getProject().getConfigurations().create(configurationName(name, "AntoraSource"))
+        return project.getConfigurations().create(configurationName(name, "AntoraSource"))
     }
 
     companion object {

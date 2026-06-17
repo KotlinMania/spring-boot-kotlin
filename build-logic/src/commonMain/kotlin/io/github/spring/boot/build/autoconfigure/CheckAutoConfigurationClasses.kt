@@ -38,21 +38,21 @@ import org.gradle.api.file.DirectoryProperty
  * @author Andy Wilkinson
  */
 abstract class CheckAutoConfigurationClasses : AutoConfigurationImportsTask() {
-    private var classpath: FileCollection = getProject().getObjects().fileCollection()
+    private var classpath: FileCollection = project.getObjects().fileCollection()
 
-    private var optionalDependencies: FileCollection = getProject().getObjects().fileCollection()
+    private var optionalDependencies: FileCollection = project.getObjects().fileCollection()
 
-    private var requiredDependencies: FileCollection = getProject().getObjects().fileCollection()
+    private var requiredDependencies: FileCollection = project.getObjects().fileCollection()
 
-    private val optionalDependencyClassNames = getProject().getObjects().setProperty<String>(String::class.java)
+    private val optionalDependencyClassNames = project.getObjects().setProperty<String>(String::class.java)
 
-    private val requiredDependencyClassNames = getProject().getObjects().setProperty<String>(String::class.java)
+    private val requiredDependencyClassNames = project.getObjects().setProperty<String>(String::class.java)
 
     init {
-        this.outputDirectory.convention(getProject().getLayout().getBuildDirectory().dir(getName()))
+        this.outputDirectory.convention(project.getLayout().getBuildDirectory().dir(name))
         setGroup(LifecycleBasePlugin.VERIFICATION_GROUP)
-        this.optionalDependencyClassNames.set(getProject().provider<MutableList<String?>>(Callable { classNamesOf(this.optionalDependencies) }))
-        this.requiredDependencyClassNames.set(getProject().provider<MutableList<String?>>(Callable { classNamesOf(this.requiredDependencies) }))
+        this.optionalDependencyClassNames.set(project.provider<MutableList<String?>>(Callable { classNamesOf(this.optionalDependencies) }))
+        this.requiredDependencyClassNames.set(project.provider<MutableList<String?>>(Callable { classNamesOf(this.requiredDependencies) }))
     }
 
     @Classpath
@@ -61,7 +61,7 @@ abstract class CheckAutoConfigurationClasses : AutoConfigurationImportsTask() {
     }
 
     fun setClasspath(classpath: Any) {
-        this.classpath = getProject().getObjects().fileCollection().from(classpath)
+        this.classpath = project.getObjects().fileCollection().from(classpath)
     }
 
     @Classpath
@@ -70,7 +70,7 @@ abstract class CheckAutoConfigurationClasses : AutoConfigurationImportsTask() {
     }
 
     fun setOptionalDependencies(classpath: Any) {
-        this.optionalDependencies = getProject().getObjects().fileCollection().from(classpath)
+        this.optionalDependencies = project.getObjects().fileCollection().from(classpath)
     }
 
     @Classpath
@@ -79,7 +79,7 @@ abstract class CheckAutoConfigurationClasses : AutoConfigurationImportsTask() {
     }
 
     fun setRequiredDependencies(classpath: Any) {
-        this.requiredDependencies = getProject().getObjects().fileCollection().from(classpath)
+        this.requiredDependencies = project.getObjects().fileCollection().from(classpath)
     }
 
     @get:OutputDirectory

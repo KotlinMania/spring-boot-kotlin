@@ -33,7 +33,7 @@ import org.gradle.plugins.ide.eclipse.model.*
  */
 class EclipseConventions(private val systemRequirements: SystemRequirementsExtension) {
     fun apply(project: Project) {
-        project.getPlugins().withType<EclipsePlugin>(
+        project.plugins.withType<EclipsePlugin>(
             EclipsePlugin::class.java) { eclipse: EclipsePlugin -> configure(project, eclipse) }
         project.afterEvaluate(Action { project: Project -> this.setJavaRuntimeName(project) })
     }
@@ -41,7 +41,7 @@ class EclipseConventions(private val systemRequirements: SystemRequirementsExten
     private fun configure(project: Project, eclipsePlugin: EclipsePlugin?): DomainObjectCollection<JavaBasePlugin> {
         val synchronizeResourceSettings = registerEclipseSynchronizeResourceSettings(project)
         val synchronizeJdtSettings: TaskProvider<*> = registerEclipseSynchronizeJdtSettings(project)
-        return project.getPlugins()
+        return project.plugins
             .withType<JavaBasePlugin>(JavaBasePlugin::class.java) { javaBase: JavaBasePlugin ->
                 val model = project.getExtensions().getByType<EclipseModel>(EclipseModel::class.java)
                 model.synchronizationTasks(synchronizeResourceSettings, synchronizeJdtSettings)

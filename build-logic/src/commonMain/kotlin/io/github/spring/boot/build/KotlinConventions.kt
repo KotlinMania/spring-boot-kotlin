@@ -55,10 +55,10 @@ import java.nio.file.Path
  */
 class KotlinConventions {
     fun apply(project: Project) {
-        project.getPlugins().withId("org.jetbrains.kotlin.jvm") { plugin: Plugin<*> ->
+        project.plugins.withId("org.jetbrains.kotlin.jvm") { plugin: Plugin<*> ->
             project.getTasks().withType<KotlinCompile>(
                 KotlinCompile::class.java) { compile: KotlinCompile -> this.configure(compile) }
-            project.getPlugins().withType<DokkaHtmlPlugin>(
+            project.plugins.withType<DokkaHtmlPlugin>(
                 DokkaHtmlPlugin::class.java) { dokkaPlugin: DokkaHtmlPlugin -> configureDokka(project) }
             configureDetekt(project)
         }
@@ -106,7 +106,7 @@ class KotlinConventions {
     }
 
     private fun configureDetekt(project: Project) {
-        project.getPlugins().apply<DetektPlugin>(DetektPlugin::class.java)
+        project.plugins.apply<DetektPlugin>(DetektPlugin::class.java)
         val detekt = project.getExtensions().getByType<DetektExtension>(DetektExtension::class.java)
         detekt.config.setFrom(project.getRootProject().file("config/detekt/config.yml"))
         project.getTasks().withType<Detekt>(Detekt::class.java).configureEach(Action { task: Detekt ->

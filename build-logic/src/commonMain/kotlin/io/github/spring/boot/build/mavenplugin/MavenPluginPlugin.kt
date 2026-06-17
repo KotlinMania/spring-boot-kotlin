@@ -67,11 +67,11 @@ import javax.inject.Inject
  */
 class MavenPluginPlugin : Plugin<Project> {
     override fun apply(project: Project) {
-        project.getPlugins().apply<JavaLibraryPlugin>(JavaLibraryPlugin::class.java)
-        project.getPlugins().apply<MavenPublishPlugin>(MavenPublishPlugin::class.java)
-        project.getPlugins().apply<DeployedPlugin>(DeployedPlugin::class.java)
-        project.getPlugins().apply<MavenRepositoryPlugin>(MavenRepositoryPlugin::class.java)
-        project.getPlugins().apply<IntegrationTestPlugin>(IntegrationTestPlugin::class.java)
+        project.plugins.apply<JavaLibraryPlugin>(JavaLibraryPlugin::class.java)
+        project.plugins.apply<MavenPublishPlugin>(MavenPublishPlugin::class.java)
+        project.plugins.apply<DeployedPlugin>(DeployedPlugin::class.java)
+        project.plugins.apply<MavenRepositoryPlugin>(MavenRepositoryPlugin::class.java)
+        project.plugins.apply<IntegrationTestPlugin>(IntegrationTestPlugin::class.java)
         val jarTask = project.getTasks().getByName(JavaPlugin.JAR_TASK_NAME) as Jar
         configurePomPackaging(project)
         addPopulateIntTestMavenRepositoryTask(project)
@@ -98,7 +98,7 @@ class MavenPluginPlugin : Plugin<Project> {
     }
 
     private fun publishOptionalDependenciesInPom(project: Project) {
-        project.getPlugins().withType<OptionalDependenciesPlugin>(
+        project.plugins.withType<OptionalDependenciesPlugin>(
             OptionalDependenciesPlugin::class.java) { optionalDependencies: OptionalDependenciesPlugin ->
                 val component = project.getComponents().findByName("java")
                 if (component is AdhocComponentWithVariants) {
@@ -169,7 +169,7 @@ class MavenPluginPlugin : Plugin<Project> {
                 )
             }
         project.getTasks().getByName(IntegrationTestPlugin.INT_TEST_TASK_NAME).dependsOn(populateRepository)
-        project.getPlugins()
+        project.plugins
             .withType<DockerTestPlugin>(DockerTestPlugin::class.java)
             .all(Action { dockerTestPlugin: DockerTestPlugin ->
                 project.getTasks()

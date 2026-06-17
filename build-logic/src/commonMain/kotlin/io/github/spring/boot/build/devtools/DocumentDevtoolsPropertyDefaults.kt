@@ -36,7 +36,7 @@ abstract class DocumentDevtoolsPropertyDefaults : DefaultTask() {
 
     init {
         this.outputFile.convention(
-            getProject().getLayout()
+            project.getLayout()
                 .getBuildDirectory()
                 .file("generated/docs/using/devtools-property-defaults.adoc")
         )

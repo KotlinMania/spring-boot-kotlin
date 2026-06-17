@@ -38,7 +38,7 @@ abstract class CheckSpringConfigurationMetadata : DefaultTask() {
     private val projectRoot: File
 
     init {
-        this.projectRoot = getProject().projectDir
+        this.projectRoot = project.projectDir
     }
 
     @get:OutputFile

@@ -38,8 +38,8 @@ abstract class CreateResolvedBom @Inject constructor(bomExtension: BomExtension)
     init {
         getOutputs().upToDateWhen(Spec { spec: Task? -> false })
         this.bomExtension = bomExtension
-        this.bomResolver = BomResolver(getProject().getConfigurations(), getProject().getDependencies())
-        this.outputFile.convention(getProject().getLayout().getBuildDirectory().file(getName() + "/resolved-bom.json"))
+        this.bomResolver = BomResolver(project.getConfigurations(), project.getDependencies())
+        this.outputFile.convention(project.getLayout().getBuildDirectory().file(name + "/resolved-bom.json"))
     }
 
     @get:OutputFile

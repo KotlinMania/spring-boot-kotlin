@@ -70,10 +70,10 @@ abstract class UpgradeDependencies protected constructor(private val bom: BomExt
         this.threads.convention(2)
         this.movingToSnapshots = movingToSnapshots
         this.upgradeApplicator = UpgradeApplicator(
-            getProject().getBuildFile().toPath(),
-            File(getProject().getRootProject().projectDir, "gradle.properties").toPath()
+            project.getBuildFile().toPath(),
+            File(project.getRootProject().projectDir, "gradle.properties").toPath()
         )
-        this.repositories = getProject().getRepositories()
+        this.repositories = project.getRepositories()
     }
 
     @get:Option(

@@ -40,7 +40,7 @@ abstract class StarterMetadata : DefaultTask() {
     private var dependencies: Configuration? = null
 
     init {
-        val project = getProject()
+        val project = project
         this.starterName.convention(project.provider<String>(Callable { project.name }))
         this.starterDescription.convention(project.provider<String>(Callable { project.description }))
     }

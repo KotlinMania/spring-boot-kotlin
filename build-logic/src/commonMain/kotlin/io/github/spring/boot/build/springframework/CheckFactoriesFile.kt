@@ -39,12 +39,12 @@ import org.gradle.api.file.DirectoryProperty
  * @author Andy Wilkinson
  */
 abstract class CheckFactoriesFile protected constructor(private val path: String) : DefaultTask() {
-    private var sourceFiles: FileCollection = getProject().getObjects().fileCollection()
+    private var sourceFiles: FileCollection = project.getObjects().fileCollection()
 
-    private var classpath: FileCollection = getProject().getObjects().fileCollection()
+    private var classpath: FileCollection = project.getObjects().fileCollection()
 
     init {
-        this.outputDirectory.convention(getProject().getLayout().getBuildDirectory().dir(getName()))
+        this.outputDirectory.convention(project.getLayout().getBuildDirectory().dir(name))
         setGroup(LifecycleBasePlugin.VERIFICATION_GROUP)
     }
 
@@ -57,7 +57,7 @@ abstract class CheckFactoriesFile protected constructor(private val path: String
                 filter.include(this.path)
             })
         set(source) {
-            this.sourceFiles = getProject().getObjects().fileCollection().from(source)
+            this.sourceFiles = project.getObjects().fileCollection().from(source)
         }
 
     @Classpath
@@ -66,7 +66,7 @@ abstract class CheckFactoriesFile protected constructor(private val path: String
     }
 
     fun setClasspath(classpath: Any) {
-        this.classpath = getProject().getObjects().fileCollection().from(classpath)
+        this.classpath = project.getObjects().fileCollection().from(classpath)
     }
 
     @get:OutputDirectory

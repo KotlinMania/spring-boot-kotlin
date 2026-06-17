@@ -39,7 +39,7 @@ import java.io.File
  */
 class ConfigurationMetadataPlugin : Plugin<Project> {
     override fun apply(project: Project) {
-        project.getPlugins().withType<JavaPlugin>(
+        project.plugins.withType<JavaPlugin>(
             JavaPlugin::class.java) { javaPlugin: JavaPlugin -> registerCheckAdditionalMetadataTask(project) }
     }
 

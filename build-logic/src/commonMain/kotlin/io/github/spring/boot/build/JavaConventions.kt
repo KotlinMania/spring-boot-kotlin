@@ -122,9 +122,9 @@ import java.util.stream.Collectors
  */
 class JavaConventions(private val systemRequirements: SystemRequirementsExtension) {
     fun apply(project: Project) {
-        project.getPlugins().withType<JavaBasePlugin>(JavaBasePlugin::class.java) { java: JavaBasePlugin ->
-            project.getPlugins().apply<TestFailuresPlugin>(TestFailuresPlugin::class.java)
-            project.getPlugins().apply<ArchitecturePlugin>(ArchitecturePlugin::class.java)
+        project.plugins.withType<JavaBasePlugin>(JavaBasePlugin::class.java) { java: JavaBasePlugin ->
+            project.plugins.apply<TestFailuresPlugin>(TestFailuresPlugin::class.java)
+            project.plugins.apply<ArchitecturePlugin>(ArchitecturePlugin::class.java)
             configureSpringJavaFormat(project)
             configureJavaConventions(project)
             configureJavadocConventions(project)
@@ -200,7 +200,7 @@ class JavaConventions(private val systemRequirements: SystemRequirementsExtensio
             configureTestRetries(test)
             configurePredictiveTestSelection(test)
         }
-        project.getPlugins()
+        project.plugins
             .withType<JavaPlugin>(JavaPlugin::class.java) { javaPlugin: JavaPlugin ->
                 project.getDependencies()
                     .add(JavaPlugin.TEST_RUNTIME_ONLY_CONFIGURATION_NAME, "org.junit.platform:junit-platform-launcher")
@@ -278,10 +278,10 @@ class JavaConventions(private val systemRequirements: SystemRequirementsExtensio
     }
 
     private fun configureSpringJavaFormat(project: Project) {
-        project.getPlugins().apply<SpringJavaFormatPlugin>(SpringJavaFormatPlugin::class.java)
+        project.plugins.apply<SpringJavaFormatPlugin>(SpringJavaFormatPlugin::class.java)
         project.getTasks()
             .withType<Format>(Format::class.java) { Format: Format -> Format!!.setEncoding("UTF-8") }
-        project.getPlugins().apply<CheckstylePlugin>(CheckstylePlugin::class.java)
+        project.plugins.apply<CheckstylePlugin>(CheckstylePlugin::class.java)
         val checkstyle = project.getExtensions().getByType<CheckstyleExtension>(CheckstyleExtension::class.java)
         val checkstyleToolVersion = project.findProperty("checkstyleToolVersion") as String?
         checkstyle.setToolVersion(checkstyleToolVersion!!)
@@ -333,7 +333,7 @@ class JavaConventions(private val systemRequirements: SystemRequirementsExtensio
                     )
             )
         dependencyManagement.getDependencies().add(springBootParent)
-        project.getPlugins()
+        project.plugins
             .withType<OptionalDependenciesPlugin>(
                 OptionalDependenciesPlugin::class.java) { optionalDependencies: OptionalDependenciesPlugin ->
                     configurations
@@ -343,7 +343,7 @@ class JavaConventions(private val systemRequirements: SystemRequirementsExtensio
     }
 
     private fun configureToolchain(project: Project) {
-        project.getPlugins().apply<ToolchainPlugin>(ToolchainPlugin::class.java)
+        project.plugins.apply<ToolchainPlugin>(ToolchainPlugin::class.java)
     }
 
     private fun configureProhibitedDependencyChecks(project: Project) {
@@ -401,7 +401,7 @@ class JavaConventions(private val systemRequirements: SystemRequirementsExtensio
     }
 
     private fun configureNullability(project: Project) {
-        project.getPlugins().apply<NullabilityPlugin>(NullabilityPlugin::class.java)
+        project.plugins.apply<NullabilityPlugin>(NullabilityPlugin::class.java)
         val extension =
             project.getExtensions().getByType<NullabilityPluginExtension>(NullabilityPluginExtension::class.java)
         val nullAwayVersion = project.findProperty("nullAwayVersion") as String?

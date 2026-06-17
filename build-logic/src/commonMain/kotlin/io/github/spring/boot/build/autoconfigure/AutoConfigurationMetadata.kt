@@ -42,7 +42,7 @@ abstract class AutoConfigurationMetadata : DefaultTask() {
     private var classesDirectories: FileCollection = null
 
     init {
-        this.moduleName = getProject().name
+        this.moduleName = project.name
     }
 
     fun setSourceSet(sourceSet: SourceSet) {

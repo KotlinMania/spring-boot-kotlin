@@ -39,10 +39,10 @@ abstract class DocumentStarters : DefaultTask() {
     val starters: Configuration
 
     init {
-        this.starters = getProject().getConfigurations().create("starters")
-        getProject().getGradle().projectsEvaluated(Action { gradle: Gradle ->
+        this.starters = project.getConfigurations().create("starters")
+        project.getGradle().projectsEvaluated(Action { gradle: Gradle ->
             gradle!!.allprojects(Action { project: Project ->
-                if (project!!.getPlugins().hasPlugin(StarterPlugin::class.java)) {
+                if (project!!.plugins.hasPlugin(StarterPlugin::class.java)) {
                     val dependency: MutableMap<String?, String?> = HashMap<String?, String?>()
                     dependency.put("path", project.getPath())
                     dependency.put("configuration", "starterMetadata")

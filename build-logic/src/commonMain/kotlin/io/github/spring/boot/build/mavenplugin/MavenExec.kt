@@ -37,7 +37,7 @@ abstract class MavenExec : JavaExec() {
     private val logger: Logger = LoggerFactory.getLogger(MavenExec::class.java)
 
     init {
-        setClasspath(mavenConfiguration(getProject()))
+        setClasspath(mavenConfiguration(project))
         args("--batch-mode")
         getMainClass().set("org.apache.maven.cli.MavenCli")
         this.pom.set(this.projectDir.file("pom.xml"))
@@ -55,7 +55,7 @@ abstract class MavenExec : JavaExec() {
         workingDir(workingDir)
         systemProperty("maven.multiModuleProjectDirectory", workingDir.absolutePath)
         try {
-            val logFile = Files.createTempFile(getName(), ".log")
+            val logFile = Files.createTempFile(name, ".log")
             try {
                 args("--log-file", logFile.toFile().absolutePath)
                 super.exec()

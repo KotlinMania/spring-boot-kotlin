@@ -56,7 +56,7 @@ abstract class GenerateTestSliceMetadata @Inject constructor(private val objectF
     private var classesDirs: FileCollection = null
 
     init {
-        this.moduleName.convention(getProject().name)
+        this.moduleName.convention(project.name)
     }
 
     fun setSourceSet(sourceSet: SourceSet) {

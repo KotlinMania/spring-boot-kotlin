@@ -40,7 +40,7 @@ abstract class CheckManualSpringConfigurationMetadata : DefaultTask() {
     private val projectDir: File
 
     init {
-        this.projectDir = getProject().projectDir
+        this.projectDir = project.projectDir
     }
 
     @get:OutputFile

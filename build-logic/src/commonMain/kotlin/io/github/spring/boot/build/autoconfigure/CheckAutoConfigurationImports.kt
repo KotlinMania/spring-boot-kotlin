@@ -38,10 +38,10 @@ import org.gradle.api.file.DirectoryProperty
  * @author Andy Wilkinson
  */
 abstract class CheckAutoConfigurationImports : AutoConfigurationImportsTask() {
-    private var classpath: FileCollection = getProject().getObjects().fileCollection()
+    private var classpath: FileCollection = project.getObjects().fileCollection()
 
     init {
-        this.outputDirectory.convention(getProject().getLayout().getBuildDirectory().dir(getName()))
+        this.outputDirectory.convention(project.getLayout().getBuildDirectory().dir(name))
         setGroup(LifecycleBasePlugin.VERIFICATION_GROUP)
     }
 
@@ -51,7 +51,7 @@ abstract class CheckAutoConfigurationImports : AutoConfigurationImportsTask() {
     }
 
     fun setClasspath(classpath: Any) {
-        this.classpath = getProject().getObjects().fileCollection().from(classpath)
+        this.classpath = project.getObjects().fileCollection().from(classpath)
     }
 
     @get:OutputDirectory
@@ -59,7 +59,7 @@ abstract class CheckAutoConfigurationImports : AutoConfigurationImportsTask() {
 
     @TaskAction
     fun execute() {
-        val importsFile = getSource().singleFile
+        val importsFile = source.singleFile
         check(importsFile)
     }
 

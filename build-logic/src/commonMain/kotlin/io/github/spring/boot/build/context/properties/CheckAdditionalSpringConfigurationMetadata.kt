@@ -30,7 +30,7 @@ abstract class CheckAdditionalSpringConfigurationMetadata : SourceTask() {
     private val projectDir: File
 
     init {
-        this.projectDir = getProject().projectDir
+        this.projectDir = project.projectDir
     }
 
     @get:OutputFile
@@ -38,14 +38,14 @@ abstract class CheckAdditionalSpringConfigurationMetadata : SourceTask() {
 
     @InputFiles
     @PathSensitive(PathSensitivity.RELATIVE)
-    override fun getSource(): FileTree {
+    override fun source: FileTree {
         return super.source
     }
 
     @TaskAction
     @Throws(IOException::class)
     fun check() {
-        val analyzer = ConfigurationPropertiesAnalyzer(getSource().files)
+        val analyzer = ConfigurationPropertiesAnalyzer(source.files)
         val report = ConfigurationPropertiesAnalyzer.Report(this.projectDir)
         analyzer.analyzeOrder(report)
         analyzer.analyzeDuplicates(report)

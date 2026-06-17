@@ -43,7 +43,7 @@ import java.io.File
  */
 class MavenRepositoryPlugin : Plugin<Project> {
     override fun apply(project: Project) {
-        project.getPlugins().apply<MavenPublishPlugin>(MavenPublishPlugin::class.java)
+        project.plugins.apply<MavenPublishPlugin>(MavenPublishPlugin::class.java)
         val publishing = project.getExtensions().getByType<PublishingExtension>(PublishingExtension::class.java)
         val repositoryLocation = project.getLayout().getBuildDirectory().dir("maven-repository").get().asFile
         publishing.getRepositories().maven(Action { mavenRepository: MavenArtifactRepository ->
@@ -66,7 +66,7 @@ class MavenRepositoryPlugin : Plugin<Project> {
                 projectRepository.name,
                 repositoryLocation) { artifact: ConfigurablePublishArtifact -> artifact!!.builtBy(publishTask) }
         val target = projectRepository.getDependencies()
-        project.getPlugins()
+        project.plugins
             .withType<JavaPlugin>(JavaPlugin::class.java)
             .all(Action { javaPlugin: JavaPlugin ->
                 addMavenRepositoryProjectDependencies(
@@ -74,7 +74,7 @@ class MavenRepositoryPlugin : Plugin<Project> {
                     JavaPlugin.IMPLEMENTATION_CONFIGURATION_NAME, target
                 )
             })
-        project.getPlugins()
+        project.plugins
             .withType<JavaLibraryPlugin>(JavaLibraryPlugin::class.java)
             .all(Action { javaLibraryPlugin: JavaLibraryPlugin ->
                 addMavenRepositoryProjectDependencies(
@@ -82,7 +82,7 @@ class MavenRepositoryPlugin : Plugin<Project> {
                     JavaPlugin.API_CONFIGURATION_NAME, target
                 )
             })
-        project.getPlugins().withType<JavaPlatformPlugin>(JavaPlatformPlugin::class.java)
+        project.plugins.withType<JavaPlatformPlugin>(JavaPlatformPlugin::class.java)
             .all(Action { javaPlugin: JavaPlatformPlugin ->
                 addMavenRepositoryProjectDependencies(project, JavaPlatformPlugin.API_CONFIGURATION_NAME, target)
                 addMavenRepositoryPlatformDependencies(project, JavaPlatformPlugin.API_CONFIGURATION_NAME, target)

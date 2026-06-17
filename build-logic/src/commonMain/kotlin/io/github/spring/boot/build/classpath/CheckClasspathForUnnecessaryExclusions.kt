@@ -56,8 +56,8 @@ abstract class CheckClasspathForUnnecessaryExclusions @Inject constructor(
     private var classpath: Configuration? = null
 
     init {
-        this.dependencies = getProject().getDependencies()
-        this.configurations = getProject().getConfigurations()
+        this.dependencies = project.getDependencies()
+        this.configurations = project.getConfigurations()
         this.platform = this.dependencies
             .create(this.dependencies.platform(this.dependencies.project(SPRING_BOOT_DEPENDENCIES_PROJECT)))
         getOutputs().upToDateWhen(Spec { task: Task? -> true })

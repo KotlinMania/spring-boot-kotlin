@@ -45,7 +45,7 @@ abstract class HomebrewFormula @Inject constructor(private val fileSystemOperati
     private val buildType: BuildType?
 
     init {
-        val project = getProject()
+        val project = project
         val properties: MapProperty<String, Any> = this.properties
         properties.put(
             "hash",
@@ -53,7 +53,7 @@ abstract class HomebrewFormula @Inject constructor(private val fileSystemOperati
         )
         this.properties.put("repo", forProject(project).downloadRepo)
         this.properties.put("version", project.version.toString())
-        this.buildType = BuildProperties.get(getProject()).buildType
+        this.buildType = BuildProperties.get(project).buildType
     }
 
     private fun sha256(file: File?): String? {

@@ -189,29 +189,27 @@ class JavaConventions(private val systemRequirements: SystemRequirementsExtensio
     }
 
     private fun configureTestConventions(project: Project) {
-        project.getTasks().withType<Test>(Test::class.java) { test: Test ->
-            test!!.useJUnitPlatform()
-            test.setMaxHeapSize("1536M")
-            project.getTasks().withType<Checkstyle>(
-                Checkstyle::class.java) { paths: Checkstyle -> test.mustRunAfter(paths!!) }
-            project.getTasks().withType<CheckFormat>(
-                CheckFormat::class.java) { paths: CheckFormat -> test.mustRunAfter(paths!!) }
+        project.tasks.withType<Test>().configureEach {
+            val test = this
+            useJUnitPlatform()
+            maxHeapSize = "1536M"
+            project.tasks.withType<Checkstyle>().configureEach { test.mustRunAfter(this) }
+            project.tasks.withType<CheckFormat>().configureEach { test.mustRunAfter(this) }
             configureTestRetries(test)
             configurePredictiveTestSelection(test)
         }
-        project.plugins
-            .withType<JavaPlugin>(JavaPlugin::class.java) { javaPlugin: JavaPlugin ->
-                project.getDependencies()
-                    .add(JavaPlugin.TEST_RUNTIME_ONLY_CONFIGURATION_NAME, "org.junit.platform:junit-platform-launcher")
-            }
+        project.plugins.withType<JavaPlugin>().configureEach {
+            project.dependencies
+                .add(JavaPlugin.TEST_RUNTIME_ONLY_CONFIGURATION_NAME, "org.junit.platform:junit-platform-launcher")
+        }
     }
 
     private fun configureTestRetries(test: Test) {
-        val testRetry: TestRetryConfiguration = test.getExtensions()
-            .getByType<DevelocityTestConfiguration>(DevelocityTestConfiguration::class.java)
+        val testRetry = test.extensions
+            .getByType<DevelocityTestConfiguration>()
             .testRetry
-        testRetry.getFailOnPassedAfterRetry().set(false)
-        testRetry.getMaxRetries().set(if (this.isCi) 3 else 0)
+        testRetry.failOnPassedAfterRetry.set(false)
+        testRetry.maxRetries.set(if (isCi) 3 else 0)
     }
 
     private val isCi: Boolean
@@ -219,10 +217,10 @@ class JavaConventions(private val systemRequirements: SystemRequirementsExtensio
 
     private fun configurePredictiveTestSelection(test: Test) {
         if (this.isPredictiveTestSelectionEnabled) {
-            val predictiveTestSelection: PredictiveTestSelectionConfiguration = test.getExtensions()
-                .getByType<DevelocityTestConfiguration>(DevelocityTestConfiguration::class.java)
+            val predictiveTestSelection = test.extensions
+                .getByType<DevelocityTestConfiguration>()
                 .predictiveTestSelection
-            predictiveTestSelection.getEnabled().convention(true)
+            predictiveTestSelection.enabled.convention(true)
         }
     }
 

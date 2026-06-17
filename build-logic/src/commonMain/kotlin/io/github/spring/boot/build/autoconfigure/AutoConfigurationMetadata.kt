@@ -24,11 +24,7 @@ import org.springframework.asm.ClassReader
 import org.springframework.asm.Opcodes
 import org.springframework.core.CollectionFactory
 import java.io.*
-import java.lang.String
-import java.util.*
-import kotlin.Int
-import kotlin.Throws
-import kotlin.checkNotNull
+import java.util.Properties
 import org.gradle.api.file.RegularFileProperty
 
 /**
@@ -85,7 +81,7 @@ abstract class AutoConfigurationMetadata : DefaultTask() {
     private fun readAutoConfiguration(): Properties {
         val autoConfiguration = CollectionFactory.createSortedProperties(true)
         val classNames = readAutoConfigurationsFile()
-        val publicClassNames: MutableSet<String?> = LinkedHashSet<String?>()
+        val publicClassNames = linkedSetOf<String>()
         for (className in classNames) {
             val classFile = findClassFile(className)
             checkNotNull(classFile) { "Auto-configuration class '" + className + "' not found." }
@@ -96,7 +92,7 @@ abstract class AutoConfigurationMetadata : DefaultTask() {
                 }
             }
         }
-        autoConfiguration.setProperty("autoConfigurationClassNames", String.join(",", publicClassNames))
+        autoConfiguration.setProperty("autoConfigurationClassNames", publicClassNames.joinToString(","))
         autoConfiguration.setProperty("module", this.moduleName)
         return autoConfiguration
     }
@@ -107,18 +103,17 @@ abstract class AutoConfigurationMetadata : DefaultTask() {
      * @return auto-configurations
      */
     @Throws(IOException::class)
-    private fun readAutoConfigurationsFile(): MutableList<kotlin.String> {
+    private fun readAutoConfigurationsFile(): List<String> {
         val file = this.autoConfigurationImports.asFile.get()
         if (!file.exists()) {
-            return mutableListOf<kotlin.String?>()
+            return emptyList()
         }
         BufferedReader(FileReader(file)).use { reader ->
-            return reader.lines().map<kotlin.String> { line: kotlin.String? -> this.stripComment(line!!) }
-                .filter { line: kotlin.String? -> !line!!.isEmpty() }.toList()
+            return reader.readLines().map { stripComment(it) }.filter { it.isNotEmpty() }
         }
     }
 
-    private fun stripComment(line: kotlin.String): kotlin.String {
+    private fun stripComment(line: String): String {
         val commentStart: Int = line.indexOf(COMMENT_START)
         if (commentStart == -1) {
             return line.trim { it <= ' ' }

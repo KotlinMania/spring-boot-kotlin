@@ -41,22 +41,21 @@ class DeployedPlugin : Plugin<Project> {
         project.plugins.apply<MavenRepositoryPlugin>(MavenRepositoryPlugin::class.java)
         val publishing = project.getExtensions().getByType<PublishingExtension>(PublishingExtension::class.java)
         val mavenPublication =
-            publishing.publications.create<MavenPublication>("maven", MavenPublication::class.java)
-        project.afterEvaluate { evaluated: Project ->
-            project.plugins.withType<JavaPlugin>(JavaPlugin::class.java).all { javaPlugin: JavaPlugin ->
-                    if ((project.getTasks().getByName(JavaPlugin.JAR_TASK_NAME) as Jar).isEnabled()) {
-                        project.getComponents()
-                            .matching(Spec { component: SoftwareComponent? -> component!!.name == "java" })
-                            .all { component: SoftwareComponent -> mavenPublication.from(component) }
-                    }
+            publishing.publications.create<MavenPublication>("maven")
+        project.afterEvaluate {
+            project.plugins.withType<JavaPlugin>().configureEach {
+                if ((project.getTasks().getByName(JavaPlugin.JAR_TASK_NAME) as Jar).isEnabled()) {
+                    project.getComponents()
+                        .matching { component -> component.name == "java" }
+                        .configureEach { mavenPublication.from(this) }
                 }
+            }
         }
         project.plugins
-            .withType<JavaPlatformPlugin>(JavaPlatformPlugin::class.java)
-            .all { javaPlugin: JavaPlatformPlugin ->
+            .withType<JavaPlatformPlugin>().configureEach {
                 project.getComponents()
-                    .matching(Spec { component: SoftwareComponent? -> component!!.name == "javaPlatform" })
-                    .all { component: SoftwareComponent -> mavenPublication.from(component) }
+                    .matching { component -> component.name == "javaPlatform" }
+                    .configureEach { mavenPublication.from(this) }
             }
     }
 

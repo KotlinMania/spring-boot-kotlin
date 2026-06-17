@@ -56,13 +56,13 @@ abstract class SyncAppSource @Inject constructor(fileSystemOperations: FileSyste
 
     @TaskAction
     fun syncAppSources() {
-        this.fileSystemOperations.sync { copySpec: SyncSpec ->
-            copySpec!!.from(this.sourceDirectory)
-            copySpec.into(this.destinationDirectory)
-            copySpec.filter(Transformer { line: String? ->
-                line!!.replace(
+        this.fileSystemOperations.sync {
+            from(this@SyncAppSource.sourceDirectory)
+            into(this@SyncAppSource.destinationDirectory)
+            filter(Transformer { line: String ->
+                line.replace(
                     "id \"org.springframework.boot\"",
-                    "id \"org.springframework.boot\" version \"" + this.pluginVersion.get() + "\""
+                    "id \"org.springframework.boot\" version \"" + this@SyncAppSource.pluginVersion.get() + "\""
                 )
             })
         }

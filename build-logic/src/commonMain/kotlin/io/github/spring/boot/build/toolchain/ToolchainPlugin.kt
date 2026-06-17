@@ -41,15 +41,16 @@ class ToolchainPlugin : Plugin<Project> {
             project.getExtensions().create<ToolchainExtension>("toolchain", ToolchainExtension::class.java, project)
         val toolchainVersion = toolchain.javaVersion
         if (toolchainVersion != null) {
-            project.afterEvaluate { evaluated: Project -> configure(evaluated!!, toolchain) }
+            project.afterEvaluate { configure(this, toolchain) }
         }
     }
 
     private fun configure(project: Project, toolchain: ToolchainExtension) {
-        if (!isJavaVersionSupported(toolchain, toolchain.javaVersion)) {
+        val version = toolchain.javaVersion ?: return
+        if (!isJavaVersionSupported(toolchain, version)) {
             disableToolchainTasks(project)
         } else {
-            configureTestToolchain(project, toolchain.javaVersion)
+            configureTestToolchain(project, version)
         }
     }
 
@@ -57,12 +58,8 @@ class ToolchainPlugin : Plugin<Project> {
         val minimumVersion = toolchain.minimumCompatibleJavaVersion.getOrNull()
         if (minimumVersion == null || toolchainVersion.canCompileOrRun(minimumVersion)) {
             return toolchain.maximumCompatibleJavaVersion
-                .map<kotlin.Boolean>(org.gradle.api.Transformer { version: JavaLanguageVersion? ->
-                    version.canCompileOrRun(
-                        toolchainVersion
-                    )
-                })
-                .getOrElse(true)!!
+                .map { version -> version.canCompileOrRun(toolchainVersion) }
+                .getOrElse(true)
         }
         return false
     }
@@ -74,10 +71,10 @@ class ToolchainPlugin : Plugin<Project> {
     private fun configureTestToolchain(project: Project, toolchainVersion: JavaLanguageVersion?) {
         val javaToolchains = project.getExtensions().getByType<JavaToolchainService>(JavaToolchainService::class.java)
         project.getTasks()
-            .withType<Test>().configureEach { val test = this;
-                test!!.getJavaLauncher()
-                    .set(javaToolchains.launcherFor { spec: JavaToolchainSpec ->
-                        spec!!.getLanguageVersion().set(toolchainVersion)
+            .withType<Test>().configureEach {
+                getJavaLauncher()
+                    .set(javaToolchains.launcherFor {
+                        getLanguageVersion().set(toolchainVersion)
                     })
             }
     }

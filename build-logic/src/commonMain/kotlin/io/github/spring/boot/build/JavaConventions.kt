@@ -47,7 +47,6 @@ import org.gradle.external.javadoc.CoreJavadocOptions
 import org.gradle.jvm.toolchain.JavaCompiler
 import org.gradle.jvm.toolchain.JavaInstallationMetadata
 import org.gradle.jvm.toolchain.JavaLanguageVersion
-import org.springframework.boot.build.architecture.ArchitecturePlugin
 import org.springframework.boot.build.classpath.CheckClasspathForProhibitedDependencies
 import org.springframework.boot.build.optional.OptionalDependenciesPlugin
 import org.springframework.boot.build.springframework.CheckAotFactories
@@ -124,7 +123,6 @@ class JavaConventions(private val systemRequirements: SystemRequirementsExtensio
     fun apply(project: Project) {
         project.plugins.withType<JavaBasePlugin>(JavaBasePlugin::class.java) { java: JavaBasePlugin ->
             project.plugins.apply<TestFailuresPlugin>(TestFailuresPlugin::class.java)
-            project.plugins.apply<ArchitecturePlugin>(ArchitecturePlugin::class.java)
             configureSpringJavaFormat(project)
             configureJavaConventions(project)
             configureJavadocConventions(project)

@@ -15,7 +15,6 @@
  */
 package org.springframework.boot.build
 
-import org.antora.gradle.AntoraPlugin
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.api.plugins.JavaBasePlugin
@@ -44,7 +43,6 @@ class ConventionsPlugin : Plugin<Project> {
         NoHttpConventions().apply(project)
         JavaConventions(systemRequirements).apply(project)
         MavenPublishingConventions().apply(project)
-        AntoraConventions().apply(project)
         KotlinConventions().apply(project)
         WarConventions().apply(project)
         EclipseConventions(systemRequirements).apply(project)

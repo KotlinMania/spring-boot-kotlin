@@ -20,7 +20,6 @@ import org.gradle.api.GradleException
 import org.gradle.api.tasks.Input
 import org.gradle.api.tasks.OutputDirectory
 import org.gradle.api.tasks.TaskAction
-import org.springframework.boot.build.antora.AntoraAsciidocAttributes.get
 import org.springframework.boot.build.properties.BuildProperties.Companion.get
 import org.springframework.util.FileCopyUtils
 import org.springframework.util.PropertyPlaceholderHelper

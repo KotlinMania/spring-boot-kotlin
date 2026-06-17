@@ -46,16 +46,12 @@ dependencies {
     implementation("com.github.node-gradle:gradle-node-plugin:7.1.0")
     implementation("com.google.protobuf:protobuf-gradle-plugin:0.9.6")
     implementation("com.gradle:develocity-gradle-plugin:4.2.2")
-    implementation("com.tngtech.archunit:archunit:1.4.1")
     implementation("commons-codec:commons-codec:1.21.0")
     implementation("de.undercouch.download:de.undercouch.download.gradle.plugin:5.5.0")
     implementation("org.jetbrains.dokka:dokka-gradle-plugin:2.1.0")
     implementation("dev.detekt:detekt-gradle-plugin:2.0.0-alpha.0")
-    implementation("io.spring.gradle.antora:spring-antora-plugin:0.0.1")
     implementation("io.spring.javaformat:spring-javaformat-gradle-plugin:0.0.47")
     implementation("org.apache.httpcomponents.client5:httpclient5:5.3.1")
-    implementation("org.apache.maven:maven-artifact:3.9.13")
-    implementation("org.antora:gradle-antora-plugin:1.0.0")
     implementation("org.jetbrains.kotlin:kotlin-gradle-plugin:2.4.0")
     implementation("org.springframework:spring-context")
     implementation("org.springframework:spring-core")
@@ -100,18 +96,6 @@ gradlePlugin {
             id = "io.github.kotlinmania.spring.boot.cycle-detection"
             implementationClass = "org.springframework.boot.build.cycledetection.CycleDetectionPlugin"
         }
-        register("antoraAggregatedPlugin") {
-            id = "io.github.kotlinmania.spring.boot.antora-contributor"
-            implementationClass = "org.springframework.boot.build.antora.AntoraContributorPlugin"
-        }
-        register("antoraAggregatorPlugin") {
-            id = "io.github.kotlinmania.spring.boot.antora-dependencies"
-            implementationClass = "org.springframework.boot.build.antora.AntoraDependenciesPlugin"
-        }
-        register("architecturePlugin") {
-            id = "io.github.kotlinmania.spring.boot.architecture"
-            implementationClass = "org.springframework.boot.build.architecture.ArchitecturePlugin"
-        }
         register("autoConfigurationPlugin") {
             id = "io.github.kotlinmania.spring.boot.auto-configuration"
             implementationClass = "org.springframework.boot.build.autoconfigure.AutoConfigurationPlugin"
@@ -143,10 +127,6 @@ gradlePlugin {
         register("integrationTestPlugin") {
             id = "io.github.kotlinmania.spring.boot.integration-test"
             implementationClass = "org.springframework.boot.build.test.IntegrationTestPlugin"
-        }
-        register("mavenPluginPlugin") {
-            id = "io.github.kotlinmania.spring.boot.maven-plugin"
-            implementationClass = "org.springframework.boot.build.mavenplugin.MavenPluginPlugin"
         }
         register("mavenRepositoryPlugin") {
             id = "io.github.kotlinmania.spring.boot.maven-repository"

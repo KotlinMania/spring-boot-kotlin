@@ -48,47 +48,40 @@ class MavenRepositoryPlugin : Plugin<Project> {
         project.plugins.apply<MavenPublishPlugin>(MavenPublishPlugin::class.java)
         val publishing = project.getExtensions().getByType<PublishingExtension>(PublishingExtension::class.java)
         val repositoryLocation = project.getLayout().getBuildDirectory().dir("maven-repository").get().asFile
-        publishing.getRepositories().maven { mavenRepository: MavenArtifactRepository ->
-            mavenRepository!!.setName("project")
-            mavenRepository.setUrl(repositoryLocation.toURI())
+        publishing.getRepositories().maven {
+            setName("project")
+            setUrl(repositoryLocation.toURI())
         }
         project.getTasks()
-            .matching(Spec { task: Task? -> task!!.name == PUBLISH_TO_PROJECT_REPOSITORY_TASK_NAME })
-            .all { task: Task -> setUpProjectRepository(project, task!!, repositoryLocation) }
+            .matching { task -> task.name == PUBLISH_TO_PROJECT_REPOSITORY_TASK_NAME }
+            .configureEach { setUpProjectRepository(project, this, repositoryLocation) }
         project.getTasks()
-            .matching(Spec { task: Task? -> task!!.name == "publishPluginMavenPublicationToProjectRepository" })
-            .all { task: Task -> setUpProjectRepository(project, task!!, repositoryLocation) }
+            .matching { task -> task.name == "publishPluginMavenPublicationToProjectRepository" }
+            .configureEach { setUpProjectRepository(project, this, repositoryLocation) }
     }
 
     private fun setUpProjectRepository(project: Project, publishTask: Task, repositoryLocation: File) {
         publishTask.doFirst(CleanAction(repositoryLocation))
         val projectRepository = project.getConfigurations().create(MAVEN_REPOSITORY_CONFIGURATION_NAME)
         project.getArtifacts()
-            .add(
-                projectRepository.name,
-                repositoryLocation) { artifact: ConfigurablePublishArtifact -> artifact!!.builtBy(publishTask) }
+            .add(projectRepository.name, repositoryLocation) { builtBy(publishTask) }
         val target = projectRepository.getDependencies()
-        project.plugins
-            .withType<JavaPlugin>(JavaPlugin::class.java)
-            .all { javaPlugin: JavaPlugin ->
-                addMavenRepositoryProjectDependencies(
-                    project,
-                    JavaPlugin.IMPLEMENTATION_CONFIGURATION_NAME, target
-                )
-            }
-        project.plugins
-            .withType<JavaLibraryPlugin>(JavaLibraryPlugin::class.java)
-            .all { javaLibraryPlugin: JavaLibraryPlugin ->
-                addMavenRepositoryProjectDependencies(
-                    project,
-                    JavaPlugin.API_CONFIGURATION_NAME, target
-                )
-            }
-        project.plugins.withType<JavaPlatformPlugin>(JavaPlatformPlugin::class.java)
-            .all { javaPlugin: JavaPlatformPlugin ->
-                addMavenRepositoryProjectDependencies(project, JavaPlatformPlugin.API_CONFIGURATION_NAME, target)
-                addMavenRepositoryPlatformDependencies(project, JavaPlatformPlugin.API_CONFIGURATION_NAME, target)
-            }
+        project.plugins.withType<JavaPlugin>().configureEach {
+            addMavenRepositoryProjectDependencies(
+                project,
+                JavaPlugin.IMPLEMENTATION_CONFIGURATION_NAME, target
+            )
+        }
+        project.plugins.withType<JavaLibraryPlugin>().configureEach {
+            addMavenRepositoryProjectDependencies(
+                project,
+                JavaPlugin.API_CONFIGURATION_NAME, target
+            )
+        }
+        project.plugins.withType<JavaPlatformPlugin>().configureEach {
+            addMavenRepositoryProjectDependencies(project, JavaPlatformPlugin.API_CONFIGURATION_NAME, target)
+            addMavenRepositoryPlatformDependencies(project, JavaPlatformPlugin.API_CONFIGURATION_NAME, target)
+        }
     }
 
     private fun addMavenRepositoryProjectDependencies(
@@ -98,9 +91,9 @@ class MavenRepositoryPlugin : Plugin<Project> {
         project.getConfigurations()
             .getByName(sourceConfigurationName)
             .getDependencies()
-            .withType<ProjectDependency>(ProjectDependency::class.java)
-            .all { dependency: ProjectDependency ->
-                val copy = dependency!!.copy()
+            .withType<ProjectDependency>()
+            .configureEach {
+                val copy = copy()
                 if (copy.getAttributes().isEmpty()) {
                     copy.setTargetConfiguration(MAVEN_REPOSITORY_CONFIGURATION_NAME)
                 }
@@ -115,20 +108,20 @@ class MavenRepositoryPlugin : Plugin<Project> {
         project.getConfigurations()
             .getByName(sourceConfigurationName)
             .getDependencies()
-            .withType<ModuleDependency>(ModuleDependency::class.java)
-            .matching(Spec { dependency: ModuleDependency? ->
-                val category = dependency!!.getAttributes().getAttribute<Category>(Category.CATEGORY_ATTRIBUTE)
+            .withType<ModuleDependency>()
+            .matching { dependency ->
+                val category = dependency.getAttributes().getAttribute(Category.CATEGORY_ATTRIBUTE)
                 Category.REGULAR_PLATFORM == category!!.name
-            })
-            .all { dependency: ModuleDependency ->
+            }
+            .configureEach {
                 val pom = project.getDependencies()
-                    .create(dependency!!.getGroup() + ":" + dependency.name + ":" + dependency.version)
+                    .create(getGroup() + ":" + name + ":" + version)
                 target.add(pom)
             }
     }
 
     private class CleanAction(private val location: File?) : Action<Task> {
-        override fun execute(task: Task?) {
+        override fun execute(task: Task) {
             FileSystemUtils.deleteRecursively(this.location)
         }
     }

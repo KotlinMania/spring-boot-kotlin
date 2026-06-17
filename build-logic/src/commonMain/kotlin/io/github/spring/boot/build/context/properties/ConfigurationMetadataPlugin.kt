@@ -41,8 +41,7 @@ import java.io.File
  */
 class ConfigurationMetadataPlugin : Plugin<Project> {
     override fun apply(project: Project) {
-        project.plugins.withType<JavaPlugin>(
-            JavaPlugin::class.java) { javaPlugin: JavaPlugin -> registerCheckAdditionalMetadataTask(project) }
+        project.plugins.withType<JavaPlugin>().configureEach { registerCheckAdditionalMetadataTask(project) }
     }
 
     private fun registerCheckAdditionalMetadataTask(project: Project) {
@@ -63,9 +62,9 @@ class ConfigurationMetadataPlugin : Plugin<Project> {
                     "META-INF/spring-configuration-metadata.json"
                 )
             })
-        checkConfigurationMetadata.configure { check: CheckManualSpringConfigurationMetadata ->
-            check!!.metadataLocation.set(manualMetadataLocation)
-            check.reportLocation
+        checkConfigurationMetadata.configure {
+            metadataLocation.set(manualMetadataLocation)
+            reportLocation
                 .set(
                     project.getLayout()
                         .getBuildDirectory()
@@ -75,25 +74,23 @@ class ConfigurationMetadataPlugin : Plugin<Project> {
         addMetadataArtifact(project, manualMetadataLocation)
         project.getTasks()
             .named(LifecycleBasePlugin.CHECK_TASK_NAME)
-            .configure { check: Task -> check!!.dependsOn(checkConfigurationMetadata) }
+            .configure { dependsOn(checkConfigurationMetadata) }
     }
 
     private fun addMetadataArtifact(project: Project, metadataLocation: Provider<File>) {
         project.getConfigurations()
-            .consumable(
-                CONFIGURATION_PROPERTIES_METADATA_CONFIGURATION_NAME) { configuration: ConsumableConfiguration ->
-                    configuration!!.attributes { attributes: AttributeContainer ->
-                            attributes!!.attribute<Category>(
-                                Category.CATEGORY_ATTRIBUTE,
-                                project.getObjects().named<Category>(Category::class.java, Category.DOCUMENTATION)
-                            )
-                            attributes.attribute<Usage>(
-                                Usage.USAGE_ATTRIBUTE,
-                                project.getObjects()
-                                    .named<Usage>(Usage::class.java, "configuration-properties-metadata")
-                            )
-                        }
+            .consumable(CONFIGURATION_PROPERTIES_METADATA_CONFIGURATION_NAME) {
+                attributes {
+                    attribute(
+                        Category.CATEGORY_ATTRIBUTE,
+                        project.getObjects().named<Category>(Category.DOCUMENTATION)
+                    )
+                    attribute(
+                        Usage.USAGE_ATTRIBUTE,
+                        project.getObjects().named<Usage>("configuration-properties-metadata")
+                    )
                 }
+            }
         project.getArtifacts().add(CONFIGURATION_PROPERTIES_METADATA_CONFIGURATION_NAME, metadataLocation)
     }
 

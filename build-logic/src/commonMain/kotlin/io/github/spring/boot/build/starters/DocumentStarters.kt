@@ -36,7 +36,7 @@ import org.gradle.api.file.DirectoryProperty
  * @author Andy Wilkinson
  */
 abstract class DocumentStarters : DefaultTask() {
-    private val starters: Configuration
+    val starters: Configuration
 
     init {
         this.starters = getProject().getConfigurations().create("starters")
@@ -72,7 +72,7 @@ abstract class DocumentStarters : DefaultTask() {
         writeTable("technical-starters", starters.stream().filter { obj: Starter? -> obj!!.isTechnical })
     }
 
-    private fun loadStarter(metadata: File): Starter {
+    fun loadStarter(metadata: File): Starter {
         val properties = Properties()
         try {
             FileReader(metadata).use { reader ->
@@ -87,7 +87,7 @@ abstract class DocumentStarters : DefaultTask() {
         }
     }
 
-    private fun writeTable(name: String?, starters: Stream<Starter?>) {
+    fun writeTable(name: String?, starters: Stream<Starter?>) {
         val output = File(this.outputDir.asFile.get(), name + ".adoc")
         output.parentFile.mkdirs()
         try {
@@ -106,18 +106,18 @@ abstract class DocumentStarters : DefaultTask() {
         }
     }
 
-    private fun postProcessDescription(description: String): String {
+    fun postProcessDescription(description: String): String {
         return addStarterCrossLinks(description)
     }
 
-    private fun addStarterCrossLinks(input: String): String {
+    fun addStarterCrossLinks(input: String): String {
         return input.replace("(spring-boot-starter[A-Za-z0-9-]*)".toRegex(), "xref:#$1[`$1`]")
     }
 
-    private class Starter(
-        private val name: String,
-        private val description: String,
-        private val dependencies: MutableSet<String?>
+    class Starter(
+        val name: String,
+        val description: String,
+        val dependencies: MutableSet<String?>
     ) : Comparable<Starter?> {
         val isProduction: Boolean
             get() = this.name == "spring-boot-starter-actuator"

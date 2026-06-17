@@ -37,17 +37,17 @@ data class AutoConfigurationClass(
     val after: MutableList<String?>?,
     val afterName: MutableList<String?>?
 ) {
-    private constructor(name: String?, attributes: MutableMap<String?, MutableList<String?>?>) : this(
+    constructor(name: String?, attributes: MutableMap<String?, MutableList<String?>?>) : this(
         name, attributes.getOrDefault("before", mutableListOf<String?>()),
         attributes.getOrDefault("beforeName", mutableListOf<String?>()),
         attributes.getOrDefault("after", mutableListOf<String?>()),
         attributes.getOrDefault("afterName", mutableListOf<String?>())
     )
 
-    private class AutoConfigurationClassVisitor : ClassVisitor(SpringAsmInfo.ASM_VERSION) {
-        private var autoConfigurationClass: AutoConfigurationClass? = null
+    class AutoConfigurationClassVisitor : ClassVisitor(SpringAsmInfo.ASM_VERSION) {
+        var autoConfigurationClass: AutoConfigurationClass? = null
 
-        private var name: String? = null
+        var name: String? = null
 
         override fun visit(
             version: Int, access: Int, name: String, signature: String?, superName: String?,
@@ -65,7 +65,7 @@ data class AutoConfigurationClass(
         }
 
         private inner class AutoConfigurationAnnotationVisitor : AnnotationVisitor(SpringAsmInfo.ASM_VERSION) {
-            private val attributes: MutableMap<String?, MutableList<String?>?> =
+            val attributes: MutableMap<String?, MutableList<String?>?> =
                 HashMap<String?, MutableList<String?>?>()
 
             override fun visitEnd() {
@@ -92,7 +92,7 @@ data class AutoConfigurationClass(
             }
 
             companion object {
-                private val INTERESTING_ATTRIBUTES = mutableSetOf<String?>(
+                val INTERESTING_ATTRIBUTES = mutableSetOf<String?>(
                     "before", "beforeName", "after",
                     "afterName"
                 )

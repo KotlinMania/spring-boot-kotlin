@@ -38,10 +38,10 @@ import javax.xml.xpath.XPathFactory
  * @author Andy Wilkinson
  */
 class BomResolver(
-    private val configurations: ConfigurationContainer,
-    private val dependencies: DependencyHandler
+    val configurations: ConfigurationContainer,
+    val dependencies: DependencyHandler
 ) {
-    private val documentBuilder: DocumentBuilder
+    val documentBuilder: DocumentBuilder
 
     init {
         this.documentBuilder = XmlDocument.builder()
@@ -87,7 +87,7 @@ class BomResolver(
         return ResolvedBom(ResolvedBom.Id(idComponents[0], idComponents[1], idComponents[2]), libraries)
     }
 
-    private fun javadocLinksOf(library: Library): MutableList<Library.Link?> {
+    fun javadocLinksOf(library: Library): MutableList<Library.Link?> {
         val javadocLinks = library.getLinks("javadoc")
         return if (javadocLinks != null) javadocLinks else mutableListOf<Library.Link?>()
     }
@@ -96,7 +96,7 @@ class BomResolver(
         return bomFrom(resolveBom(coordinates))
     }
 
-    private fun resolveBom(coordinates: String?): File {
+    fun resolveBom(coordinates: String?): File {
         val artifacts: MutableSet<ResolvedArtifact?> = this.configurations
             .detachedConfiguration(this.dependencies.create(coordinates + "@pom"))
             .getResolvedConfiguration()
@@ -108,7 +108,7 @@ class BomResolver(
         return artifacts.iterator().next()!!.getFile()
     }
 
-    private fun bomFrom(bomFile: File?): Bom {
+    fun bomFrom(bomFile: File?): Bom {
         try {
             val bom = nodeFrom(bomFile)
             val parentBomFile = parentBomFile(bom)
@@ -155,11 +155,11 @@ class BomResolver(
         }
     }
 
-    private fun nodeFrom(coordinates: String?): Node {
+    fun nodeFrom(coordinates: String?): Node {
         return nodeFrom(resolveBom(coordinates))
     }
 
-    private fun nodeFrom(bomFile: File?): Node {
+    fun nodeFrom(bomFile: File?): Node {
         try {
             val document = this.documentBuilder.parse(bomFile)
             return Node(document)
@@ -168,7 +168,7 @@ class BomResolver(
         }
     }
 
-    private fun parentBomFile(bom: Node): File? {
+    fun parentBomFile(bom: Node): File? {
         val parent = bom.nodeAt("/project/parent")
         if (parent != null) {
             val parentGroupId = parent.textAt("groupId")
@@ -179,9 +179,9 @@ class BomResolver(
         return null
     }
 
-    private class Node(
-        private val delegate: org.w3c.dom.Node,
-        private val xpath: XPath = XPathFactory.newInstance().newXPath()
+    class Node(
+        val delegate: org.w3c.dom.Node,
+        val xpath: XPath = XPathFactory.newInstance().newXPath()
     ) {
         fun textAt(expression: String?): String? {
             val text = evaluate(expression + "/text()", XPathConstants.STRING) as String?
@@ -219,7 +219,7 @@ class BomResolver(
         }
     }
 
-    private class Properties(private val properties: MutableMap<String?, String?>) {
+    class Properties(val properties: MutableMap<String?, String?>) {
         fun replace(input: String?): String? {
             if (input != null && input.startsWith("\${") && input.endsWith("}")) {
                 val value = this.properties.get(input)
@@ -232,7 +232,7 @@ class BomResolver(
         }
 
         companion object {
-            private fun from(bom: Node?, resolver: Function<String?, Node?>): Properties {
+            fun from(bom: Node?, resolver: Function<String?, Node?>): Properties {
                 try {
                     val properties: MutableMap<String?, String?> = HashMap<String?, String?>()
                     var current = bom
@@ -257,7 +257,7 @@ class BomResolver(
                 }
             }
 
-            private fun parent(current: Node, resolver: Function<String?, Node?>): Node? {
+            fun parent(current: Node, resolver: Function<String?, Node?>): Node? {
                 val parent = current.nodeAt("/project/parent")
                 if (parent != null) {
                     val parentGroupId = parent.textAt("groupId")

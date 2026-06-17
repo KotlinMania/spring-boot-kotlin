@@ -31,7 +31,7 @@ import javax.xml.xpath.XPathFactory
  * @author Mike Smithson
  */
 class PluginXmlParser {
-    private val xpath: XPath
+    val xpath: XPath
 
     init {
         this.xpath = XPathFactory.newInstance().newXPath()
@@ -51,13 +51,13 @@ class PluginXmlParser {
     }
 
     @Throws(XPathExpressionException::class)
-    private fun textAt(path: String?, source: Node?): String? {
+    fun textAt(path: String?, source: Node?): String? {
         val text = this.xpath.evaluate(path + "/text()", source)
         return if (text.isEmpty()) null else text
     }
 
     @Throws(XPathExpressionException::class)
-    private fun parseMojos(plugin: Node?): MutableList<Mojo?> {
+    fun parseMojos(plugin: Node?): MutableList<Mojo?> {
         val mojos: MutableList<Mojo?> = ArrayList<Mojo?>()
         for (mojoNode in nodesAt("//plugin/mojos/mojo", plugin)) {
             mojos.add(
@@ -71,12 +71,12 @@ class PluginXmlParser {
     }
 
     @Throws(XPathExpressionException::class)
-    private fun nodesAt(path: String?, source: Node?): Iterable<Node> {
+    fun nodesAt(path: String?, source: Node?): Iterable<Node> {
         return IterableNodeList.Companion.of(this.xpath.evaluate(path, source, XPathConstants.NODESET) as NodeList?)
     }
 
     @Throws(XPathExpressionException::class)
-    private fun parseParameters(mojoNode: Node?): MutableList<Parameter?> {
+    fun parseParameters(mojoNode: Node?): MutableList<Parameter?> {
         val defaultValues: MutableMap<String?, String?> = HashMap<String?, String?>()
         val userProperties: MutableMap<String?, String?> = HashMap<String?, String?>()
         for (parameterConfigurationNode in nodesAt("configuration/*", mojoNode)) {
@@ -100,7 +100,7 @@ class PluginXmlParser {
     }
 
     @Throws(XPathExpressionException::class)
-    private fun parseParameter(
+    fun parseParameter(
         parameterNode: Node?, defaultValues: MutableMap<String?, String?>,
         userProperties: MutableMap<String?, String?>
     ): Parameter {
@@ -114,11 +114,11 @@ class PluginXmlParser {
     }
 
     @Throws(XPathExpressionException::class)
-    private fun booleanAt(path: String?, node: Node?): Boolean {
+    fun booleanAt(path: String?, node: Node?): Boolean {
         return textAt(path, node).toBoolean()
     }
 
-    private fun format(input: String): String {
+    fun format(input: String): String {
         return input.replace("<code>", "`")
             .replace("</code>", "`")
             .replace("&lt;", "<")
@@ -133,10 +133,10 @@ class PluginXmlParser {
             .replace("<a href=.\"(.*?)\".>(.*?)</a>".toRegex(), "$1[$2]")
     }
 
-    private class IterableNodeList(private val nodeList: NodeList) : Iterable<Node?> {
+    class IterableNodeList(val nodeList: NodeList) : Iterable<Node?> {
         override fun iterator(): MutableIterator<Node?> {
             return object : MutableIterator<Node?> {
-                private var index = 0
+                var index = 0
 
                 override fun hasNext(): Boolean {
                     return this.index < this@IterableNodeList.nodeList.getLength()
@@ -149,13 +149,13 @@ class PluginXmlParser {
         }
 
         companion object {
-            private fun of(nodeList: NodeList): Iterable<Node> {
+            fun of(nodeList: NodeList): Iterable<Node> {
                 return IterableNodeList(nodeList)
             }
         }
     }
 
-    class Plugin private constructor(
+    class Plugin constructor(
         val groupId: String?,
         val artifactId: String?,
         val version: String?,
@@ -163,13 +163,13 @@ class PluginXmlParser {
         val mojos: MutableList<Mojo?>?
     )
 
-    class Mojo private constructor(
+    class Mojo constructor(
         val goal: String?,
         val description: String?,
         val parameters: MutableList<Parameter?>?
     )
 
-    class Parameter private constructor(
+    class Parameter constructor(
         val name: String?,
         val type: String?,
         val isRequired: Boolean,

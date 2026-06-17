@@ -33,7 +33,7 @@ import org.gradle.api.file.DirectoryProperty
  * @author Andy Wilkinson
  */
 abstract class DocumentAutoConfigurationClasses : DefaultTask() {
-    private var autoConfiguration: FileCollection = null
+    var autoConfiguration: FileCollection = null
 
     @InputFiles
     @PathSensitive(PathSensitivity.RELATIVE)
@@ -73,7 +73,7 @@ abstract class DocumentAutoConfigurationClasses : DefaultTask() {
         writeNavAdoc(autoConfigurations)
     }
 
-    private fun load(): MutableList<AutoConfiguration?> {
+    fun load(): MutableList<AutoConfiguration?> {
         return this.autoConfiguration!!.files
             .stream()
             .map<AutoConfiguration> { metadataFile: File? -> AutoConfiguration.Companion.of(metadataFile) }
@@ -81,7 +81,7 @@ abstract class DocumentAutoConfigurationClasses : DefaultTask() {
             .toList()
     }
 
-    private fun writeModuleAdoc(autoConfigurationClasses: AutoConfiguration) {
+    fun writeModuleAdoc(autoConfigurationClasses: AutoConfiguration) {
         val outputDir = this.outputDir.asFile.get()
         outputDir.mkdirs()
         try {
@@ -114,7 +114,7 @@ abstract class DocumentAutoConfigurationClasses : DefaultTask() {
         }
     }
 
-    private fun writeNavAdoc(autoConfigurations: MutableList<AutoConfiguration?>) {
+    fun writeNavAdoc(autoConfigurations: MutableList<AutoConfiguration?>) {
         val outputDir = this.outputDir.asFile.get()
         outputDir.mkdirs()
         try {
@@ -132,8 +132,8 @@ abstract class DocumentAutoConfigurationClasses : DefaultTask() {
         }
     }
 
-    private class AutoConfiguration(private val module: String, classNames: MutableSet<String?>) {
-        private val classes: SortedSet<AutoConfigurationClass>
+    class AutoConfiguration(val module: String, classNames: MutableSet<String?>) {
+        val classes: SortedSet<AutoConfigurationClass>
 
         init {
             this.classes = classNames.stream().map<AutoConfigurationClass> { className: String? ->
@@ -144,7 +144,7 @@ abstract class DocumentAutoConfigurationClasses : DefaultTask() {
         }
 
         companion object {
-            private fun of(metadataFile: File): AutoConfiguration {
+            fun of(metadataFile: File): AutoConfiguration {
                 val metadata = Properties()
                 try {
                     FileReader(metadataFile).use { reader ->
@@ -162,7 +162,7 @@ abstract class DocumentAutoConfigurationClasses : DefaultTask() {
         }
     }
 
-    private class AutoConfigurationClass(private val name: String, private val path: String?) :
+    class AutoConfigurationClass(val name: String, val path: String?) :
         Comparable<AutoConfigurationClass?> {
         override fun compareTo(other: AutoConfigurationClass): Int {
             return this.name.compareTo(other.name)

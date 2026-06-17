@@ -34,12 +34,12 @@ import java.util.function.Function
 abstract class TestResultsOverview
 
     : BuildService<BuildServiceParameters.None?>, OperationCompletionListener, AutoCloseable {
-    private val testFailures: MutableMap<Test?, MutableList<TestFailure?>?> =
+    val testFailures: MutableMap<Test?, MutableList<TestFailure?>?> =
         TreeMap<Test?, MutableList<TestFailure?>?>(
             Comparator.comparing<Test?, String?>(Function { obj: Test? -> obj!!.getPath() })
         )
 
-    private val monitor = Any()
+    val monitor = Any()
 
     fun addFailures(test: Test?, failureDescriptors: MutableList<TestDescriptor?>) {
         val testFailures =
@@ -75,7 +75,7 @@ abstract class TestResultsOverview
         }
     }
 
-    private class TestFailure(private val descriptor: TestDescriptor) : Comparable<TestFailure?> {
+    class TestFailure(val descriptor: TestDescriptor) : Comparable<TestFailure?> {
         override fun compareTo(other: TestFailure): Int {
             var comparison = this.descriptor.getClassName()!!.compareTo(other.descriptor.getClassName()!!)
             if (comparison == 0) {

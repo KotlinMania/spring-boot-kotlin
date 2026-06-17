@@ -52,13 +52,13 @@ class BomResolver(
         for (library in bomExtension.libraries) {
             val managedDependencies: MutableList<ResolvedBom.Id?> = ArrayList<ResolvedBom.Id?>()
             val imports: MutableList<Bom?> = ArrayList<Bom?>()
-            for (group in library.groups) {
-                for (module in group.modules) {
+            for (group in library.groups!!) {
+                for (module in group.modules!!) {
                     val id =
                         ResolvedBom.Id(group.id, module.name, library.version.version.toString())
                     managedDependencies.add(id)
                 }
-                for (imported in group.boms) {
+                for (imported in group.boms!!) {
                     val bom = bomFrom(
                         resolveBom(
                             "%s:%s:%s".format(group.id, imported.name, library.version.version)

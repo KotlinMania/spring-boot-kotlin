@@ -51,7 +51,7 @@ abstract class DocumentPluginGoals : DefaultTask() {
     fun documentPluginGoals() {
         val plugin = this.parser.parse(this.pluginXml.asFile.get())
         writeOverview(plugin)
-        for (mojo in plugin.mojos) {
+        for (mojo in plugin.mojos!!) {
             documentMojo(plugin, mojo)
         }
     }
@@ -65,7 +65,7 @@ abstract class DocumentPluginGoals : DefaultTask() {
             writer.println("|===")
             writer.println("| Goal | Description")
             writer.println()
-            for (mojo in plugin.mojos) {
+            for (mojo in plugin.mojos!!) {
                 writer.printf("| xref:%s[%s:%s]%n", goalSectionId(mojo, false), plugin.goalPrefix, mojo.goal)
                 writer.printf("| %s%n", mojo.description)
                 writer.println()

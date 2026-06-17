@@ -134,8 +134,8 @@ abstract class CheckBom @Inject constructor(bom: BomExtension) : DefaultTask() {
     ) : LibraryCheck {
         override fun check(library: Library): MutableList<String?> {
             val errors: MutableList<String?> = ArrayList<String?>()
-            for (group in library.groups) {
-                for (module in group.modules) {
+            for (group in library.groups!!) {
+                for (module in group.modules!!) {
                     if (!module.exclusions.isEmpty()) {
                         checkExclusions(group.id, module, library.version.version, errors)
                     }
@@ -186,7 +186,7 @@ abstract class CheckBom @Inject constructor(bom: BomExtension) : DefaultTask() {
         override fun check(library: Library): MutableList<String?> {
             val errors: MutableList<String?> = ArrayList<String?>()
             val currentVersion: ArtifactVersion = DefaultArtifactVersion(library.version.version.toString())
-            for (prohibited in library.prohibitedVersions) {
+            for (prohibited in library.prohibitedVersions!!) {
                 if (prohibited.isProhibited(library.version.version.toString())) {
                     errors.add("Current version " + currentVersion + " is prohibited")
                 } else {
@@ -344,7 +344,7 @@ abstract class CheckBom @Inject constructor(bom: BomExtension) : DefaultTask() {
             if (mavenBom.parent != null) {
                 managedDependencies.addAll(managedDependenciesOf(mavenBom.parent))
             }
-            for (importedBom in mavenBom.importedBoms) {
+            for (importedBom in mavenBom.importedBoms!!) {
                 managedDependencies.addAll(managedDependenciesOf(importedBom))
             }
             return managedDependencies
@@ -385,7 +385,7 @@ abstract class CheckBom @Inject constructor(bom: BomExtension) : DefaultTask() {
         ): MutableMap<kotlin.String?, MutableSet<kotlin.String?>?> {
             val unwanted: MutableMap<kotlin.String?, MutableSet<kotlin.String?>?> =
                 LinkedHashMap<kotlin.String?, MutableSet<kotlin.String?>?>()
-            for (bom in resolvedLibrary.importedBoms) {
+            for (bom in resolvedLibrary.importedBoms!!) {
                 val notPermitted: MutableSet<kotlin.String?> = TreeSet<kotlin.String?>()
                 val managedDependencies = managedDependenciesOf(bom)
                 managedDependencies.stream()
@@ -406,8 +406,8 @@ abstract class CheckBom @Inject constructor(bom: BomExtension) : DefaultTask() {
         }
 
         fun findPermittedDependencies(library: Library, bom: Bom): MutableList<PermittedDependency>? {
-            for (group in library.groups) {
-                for (importedBom in group.boms) {
+            for (group in library.groups!!) {
+                for (importedBom in group.boms!!) {
                     if (importedBom.name == bom.id.artifactId && group.id == bom.id.groupId) {
                         return importedBom.permittedDependencies
                     }
@@ -421,7 +421,7 @@ abstract class CheckBom @Inject constructor(bom: BomExtension) : DefaultTask() {
             if (bom != null) {
                 managedDependencies.addAll(bom.managedDependencies)
                 managedDependencies.addAll(managedDependenciesOf(bom.parent))
-                for (importedBom in bom.importedBoms) {
+                for (importedBom in bom.importedBoms!!) {
                     managedDependencies.addAll(managedDependenciesOf(importedBom))
                 }
             }
@@ -454,7 +454,7 @@ abstract class CheckBom @Inject constructor(bom: BomExtension) : DefaultTask() {
         ): MutableMap<kotlin.String?, MutableSet<kotlin.String?>?> {
             val unnecessary: MutableMap<kotlin.String?, MutableSet<kotlin.String?>?> =
                 HashMap<kotlin.String?, MutableSet<kotlin.String?>?>()
-            for (bom in resolvedLibrary.importedBoms) {
+            for (bom in resolvedLibrary.importedBoms!!) {
                 val permittedDependencies: MutableSet<kotlin.String?> =
                     findPermittedDependencies(library, bom)!!.stream()
                         .map<kotlin.String> { dependency: PermittedDependency? -> dependency!!.groupId + ":" + dependency.artifactId }

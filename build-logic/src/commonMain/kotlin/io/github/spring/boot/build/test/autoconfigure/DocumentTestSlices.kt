@@ -82,7 +82,7 @@ abstract class DocumentTestSlices : DefaultTask() {
                         writer.printf("| `%s`%n", module)
                         writer.printf("| javadoc:%s[format=annotation]%n", testSlice!!.annotation)
                         writer.println("| ")
-                        for (importedAutoConfiguration in testSlice.importedAutoConfigurations) {
+                        for (importedAutoConfiguration in testSlice.importedAutoConfigurations!!) {
                             writer.printf("`%s`%n", importedAutoConfiguration)
                         }
                     })

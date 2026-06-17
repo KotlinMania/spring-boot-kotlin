@@ -263,9 +263,9 @@ class AntoraAsciidocAttributes {
 
         fun dependencyVersionsOf(resolvedBom: ResolvedBom): MutableMap<String?, String> {
             val dependencyVersions: MutableMap<String?, String> = HashMap<String?, String>()
-            for (library in resolvedBom.libraries) {
+            for (library in resolvedBom.libraries!!) {
                 dependencyVersions.putAll(dependencyVersionsOf(library.managedDependencies))
-                for (importedBom in library.importedBoms) {
+                for (importedBom in library.importedBoms!!) {
                     dependencyVersions.putAll(dependencyVersionsOf(importedBom))
                 }
             }
@@ -277,7 +277,7 @@ class AntoraAsciidocAttributes {
             if (bom != null) {
                 dependencyVersions.putAll(dependencyVersionsOf(bom.managedDependencies))
                 dependencyVersions.putAll(dependencyVersionsOf(bom.parent))
-                for (importedBom in bom.importedBoms) {
+                for (importedBom in bom.importedBoms!!) {
                     dependencyVersions.putAll(dependencyVersionsOf(importedBom))
                 }
             }

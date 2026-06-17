@@ -226,9 +226,9 @@ class BomPlugin : Plugin<Project> {
 
         fun addPluginManagement(projectNode: Node) {
             for (library in this.bom.libraries) {
-                for (group in library.groups) {
+                for (group in library.groups!!) {
                     val plugins = findOrCreateNode(projectNode, "build", "pluginManagement", "plugins")
-                    for (pluginName in group.plugins) {
+                    for (pluginName in group.plugins!!) {
                         val plugin = Node(plugins, "plugin")
                         plugin.appendNode("groupId", group.id)
                         plugin.appendNode("artifactId", pluginName)

@@ -15,6 +15,8 @@
  */
 package org.springframework.boot.build.properties
 
+import org.gradle.kotlin.dsl.*
+
 /**
  * The type of build being performed.
  * 

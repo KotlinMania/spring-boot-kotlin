@@ -15,6 +15,8 @@
  */
 package org.springframework.boot.build.autoconfigure
 
+import org.gradle.kotlin.dsl.*
+
 import org.springframework.asm.*
 import java.io.*
 import java.util.*

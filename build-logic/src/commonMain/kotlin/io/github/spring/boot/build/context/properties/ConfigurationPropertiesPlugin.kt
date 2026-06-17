@@ -15,6 +15,8 @@
  */
 package org.springframework.boot.build.context.properties
 
+import org.gradle.kotlin.dsl.*
+
 import org.gradle.api.*
 import org.gradle.api.artifacts.ConfigurablePublishArtifact
 import org.gradle.api.artifacts.ConsumableConfiguration

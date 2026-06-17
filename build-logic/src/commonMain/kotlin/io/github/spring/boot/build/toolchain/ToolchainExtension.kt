@@ -15,6 +15,8 @@
  */
 package org.springframework.boot.build.toolchain
 
+import org.gradle.kotlin.dsl.*
+
 import org.gradle.api.Project
 import org.gradle.jvm.toolchain.JavaLanguageVersion
 import org.springframework.boot.build.SystemRequirementsExtension

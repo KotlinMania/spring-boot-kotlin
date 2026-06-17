@@ -15,6 +15,8 @@
  */
 package org.springframework.boot.build.cycledetection
 
+import org.gradle.kotlin.dsl.*
+
 import org.gradle.api.*
 import org.gradle.api.execution.TaskExecutionGraph
 import org.gradle.api.initialization.Settings

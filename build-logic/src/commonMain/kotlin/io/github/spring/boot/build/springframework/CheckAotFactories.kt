@@ -15,6 +15,8 @@
  */
 package org.springframework.boot.build.springframework
 
+import org.gradle.kotlin.dsl.*
+
 /**
  * [Task] that checks `META-INF/spring/aot.factories`.
  * 

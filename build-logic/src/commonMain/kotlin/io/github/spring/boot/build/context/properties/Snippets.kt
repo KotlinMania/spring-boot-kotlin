@@ -15,6 +15,8 @@
  */
 package org.springframework.boot.build.context.properties
 
+import org.gradle.kotlin.dsl.*
+
 import org.gradle.api.file.FileCollection
 import java.io.IOException
 import java.lang.String

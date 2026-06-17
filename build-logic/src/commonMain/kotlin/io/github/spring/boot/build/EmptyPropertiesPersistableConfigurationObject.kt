@@ -15,6 +15,8 @@
  */
 package org.springframework.boot.build
 
+import org.gradle.kotlin.dsl.*
+
 import org.gradle.api.internal.PropertiesTransformer
 import org.gradle.internal.UncheckedException
 import org.gradle.plugins.ide.internal.generator.PropertiesPersistableConfigurationObject

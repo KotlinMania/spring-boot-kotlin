@@ -15,6 +15,8 @@
  */
 package org.springframework.boot.build.context.properties
 
+import org.gradle.kotlin.dsl.*
+
 /**
  * Abstract class for rows in [Table].
  * 

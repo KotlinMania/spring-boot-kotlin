@@ -15,6 +15,8 @@
  */
 package org.springframework.boot.build.optional
 
+import org.gradle.kotlin.dsl.*
+
 import org.gradle.api.Action
 import org.gradle.api.Plugin
 import org.gradle.api.Project

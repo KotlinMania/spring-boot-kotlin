@@ -15,6 +15,8 @@
  */
 package org.springframework.boot.build.aggregation
 
+import org.gradle.kotlin.dsl.*
+
 import org.gradle.api.*
 import org.gradle.api.artifacts.ArtifactView
 import org.gradle.api.artifacts.Configuration

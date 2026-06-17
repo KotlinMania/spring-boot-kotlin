@@ -15,6 +15,8 @@
  */
 package org.springframework.boot.build
 
+import org.gradle.kotlin.dsl.*
+
 import io.spring.nohttp.gradle.NoHttpCheckstylePlugin
 import io.spring.nohttp.gradle.NoHttpExtension
 import org.gradle.api.Action

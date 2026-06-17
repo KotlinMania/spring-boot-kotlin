@@ -15,6 +15,8 @@
  */
 package org.springframework.boot.build.artifacts
 
+import org.gradle.kotlin.dsl.*
+
 import org.gradle.api.Project
 
 /**

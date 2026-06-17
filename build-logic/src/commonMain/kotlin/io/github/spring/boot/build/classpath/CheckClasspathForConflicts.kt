@@ -15,6 +15,8 @@
  */
 package org.springframework.boot.build.classpath
 
+import org.gradle.kotlin.dsl.*
+
 import org.gradle.api.DefaultTask
 import org.gradle.api.GradleException
 import org.gradle.api.file.FileCollection

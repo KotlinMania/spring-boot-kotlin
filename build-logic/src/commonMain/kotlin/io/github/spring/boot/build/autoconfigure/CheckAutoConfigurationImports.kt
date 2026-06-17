@@ -15,6 +15,8 @@
  */
 package org.springframework.boot.build.autoconfigure
 
+import org.gradle.kotlin.dsl.*
+
 import org.gradle.api.file.FileCollection
 import org.gradle.api.tasks.Classpath
 import org.gradle.api.tasks.OutputDirectory

@@ -15,6 +15,8 @@
  */
 package org.springframework.boot.build.aggregation
 
+import org.gradle.kotlin.dsl.*
+
 import org.gradle.api.Named
 import org.gradle.api.file.ConfigurableFileCollection
 import org.gradle.api.provider.Property

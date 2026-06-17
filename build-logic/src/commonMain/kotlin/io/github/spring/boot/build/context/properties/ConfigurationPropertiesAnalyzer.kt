@@ -15,6 +15,8 @@
  */
 package org.springframework.boot.build.context.properties
 
+import org.gradle.kotlin.dsl.*
+
 import org.springframework.util.LinkedMultiValueMap
 import org.springframework.util.MultiValueMap
 import org.springframework.util.function.SingletonSupplier

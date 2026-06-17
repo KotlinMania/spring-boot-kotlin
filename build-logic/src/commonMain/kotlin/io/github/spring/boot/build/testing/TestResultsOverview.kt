@@ -15,6 +15,8 @@
  */
 package org.springframework.boot.build.testing
 
+import org.gradle.kotlin.dsl.*
+
 import org.gradle.api.services.BuildService
 import org.gradle.api.services.BuildServiceParameters
 import org.gradle.api.tasks.testing.Test

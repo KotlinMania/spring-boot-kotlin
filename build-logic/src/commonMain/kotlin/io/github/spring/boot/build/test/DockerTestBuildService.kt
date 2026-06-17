@@ -15,6 +15,8 @@
  */
 package org.springframework.boot.build.test
 
+import org.gradle.kotlin.dsl.*
+
 import org.gradle.api.Action
 import org.gradle.api.Project
 import org.gradle.api.provider.Provider

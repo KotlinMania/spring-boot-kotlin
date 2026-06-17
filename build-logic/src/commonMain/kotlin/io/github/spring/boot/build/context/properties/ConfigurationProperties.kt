@@ -15,6 +15,8 @@
  */
 package org.springframework.boot.build.context.properties
 
+import org.gradle.kotlin.dsl.*
+
 import tools.jackson.databind.json.JsonMapper
 import java.io.File
 import java.util.*

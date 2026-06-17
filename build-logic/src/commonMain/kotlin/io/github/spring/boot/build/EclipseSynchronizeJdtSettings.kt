@@ -15,6 +15,8 @@
  */
 package org.springframework.boot.build
 
+import org.gradle.kotlin.dsl.*
+
 import org.gradle.api.internal.PropertiesTransformer
 import org.gradle.plugins.ide.api.PropertiesGeneratorTask
 import java.util.*

@@ -15,6 +15,8 @@
  */
 package org.springframework.boot.build
 
+import org.gradle.kotlin.dsl.*
+
 import dev.detekt.gradle.Detekt
 import dev.detekt.gradle.extensions.DetektExtension
 import dev.detekt.gradle.plugin.DetektPlugin

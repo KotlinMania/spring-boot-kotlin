@@ -15,6 +15,8 @@
  */
 package org.springframework.boot.build
 
+import org.gradle.kotlin.dsl.*
+
 import com.google.protobuf.gradle.ProtobufExtension
 import org.gradle.api.Action
 import org.gradle.api.Plugin

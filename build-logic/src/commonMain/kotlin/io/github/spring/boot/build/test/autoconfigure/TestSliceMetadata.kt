@@ -15,6 +15,8 @@
  */
 package org.springframework.boot.build.test.autoconfigure
 
+import org.gradle.kotlin.dsl.*
+
 import tools.jackson.databind.SerializationFeature
 import tools.jackson.databind.json.JsonMapper
 import java.io.File

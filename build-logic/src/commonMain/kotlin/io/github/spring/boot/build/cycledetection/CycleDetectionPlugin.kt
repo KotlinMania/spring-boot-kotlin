@@ -24,9 +24,6 @@ import org.jgrapht.Graph
 import org.jgrapht.alg.cycle.TarjanSimpleCycles
 import org.jgrapht.graph.DefaultDirectedGraph
 import org.jgrapht.graph.DefaultEdge
-import java.lang.String
-import java.util.*
-import java.util.function.Function
 import java.util.regex.Matcher
 import java.util.regex.Pattern
 
@@ -39,17 +36,17 @@ import java.util.regex.Pattern
 class CycleDetectionPlugin : Plugin<Settings> {
     override fun apply(settings: Settings) {
         settings.getGradle().getTaskGraph()
-            .whenReady { taskGraph: TaskExecutionGraph -> this.detectCycles(taskGraph) }
+            .whenReady { detectCycles(this) }
     }
 
     private fun detectCycles(taskGraph: TaskExecutionGraph) {
         val dependenciesByProject = getProjectsAndDependencies(taskGraph)
         assertNoCycles(
-            createGraph(dependenciesByProject, Function { obj: Project? -> obj!!.getPath() }),
+            createGraph(dependenciesByProject) { it.getPath() },
             "Project cycles detected:\n"
         )
         assertNoCycles(
-            createGraph(dependenciesByProject, Function { project1: Project? -> this.getLayer(project1!!) }),
+            createGraph(dependenciesByProject) { getLayer(it) },
             "Layer cycles detected:\n"
         )
     }
@@ -71,16 +68,15 @@ class CycleDetectionPlugin : Plugin<Settings> {
     }
 
     private fun createGraph(
-        dependenciesByProject: MutableMap<Project?, MutableSet<Project?>>,
-        vertexExtractor: Function<Project?, String?>?
+        dependenciesByProject: Map<Project?, Set<Project?>>,
+        vertexExtractor: (Project) -> String?
     ): Graph<String?, DefaultEdge?> {
         val graph: Graph<String?, DefaultEdge?> = DefaultDirectedGraph<String?, DefaultEdge?>(DefaultEdge::class.java)
-        dependenciesByProject.keys.stream().map<String>(vertexExtractor)
-            .filter { obj: String? -> Objects.nonNull(obj) }.forEach { v: String? -> graph.addVertex(v) }
-        dependenciesByProject.forEach { (project: Project?, dependencies: MutableSet<Project?>?) ->
-            val source = vertexExtractor!!.apply(project)
-            dependencies!!.stream().map<String>(vertexExtractor).filter { obj: String? -> Objects.nonNull(obj) }
-                .forEach { target: String? ->
+        dependenciesByProject.keys.filterNotNull().mapNotNull(vertexExtractor).forEach { graph.addVertex(it) }
+        dependenciesByProject.forEach { (project, dependencies) ->
+            val source = if (project != null) vertexExtractor(project) else null
+            dependencies.filterNotNull().mapNotNull(vertexExtractor)
+                .forEach { target ->
                     if (source != null && source != target) {
                         graph.addEdge(source, target)
                     }
@@ -100,7 +96,7 @@ class CycleDetectionPlugin : Plugin<Settings> {
             val message = StringBuilder(str)
             for (cycle in cycles) {
                 cycle.add(cycle.get(0))
-                message.append("  " + String.join(" -> ", cycle) + "\n")
+                message.append("  " + cycle.joinToString(" -> ") + "\n")
             }
             throw GradleException(message.toString())
         }

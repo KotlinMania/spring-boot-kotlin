@@ -33,7 +33,7 @@ import org.gradle.api.file.RegularFileProperty
  * @author Andy Wilkinson
  */
 abstract class DocumentTestSlices : DefaultTask() {
-    private var testSliceMetadata: FileCollection = null
+    private var testSliceMetadata: FileCollection? = null
 
     @get:PathSensitive(PathSensitivity.RELATIVE)
     @get:InputFiles

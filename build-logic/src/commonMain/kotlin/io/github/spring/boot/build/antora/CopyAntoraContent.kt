@@ -32,7 +32,7 @@ import org.gradle.api.file.RegularFileProperty
  * @author Andy Wilkinson
  */
 abstract class CopyAntoraContent @Inject constructor() : DefaultTask() {
-    private var source: FileCollection = null
+    private var source: FileCollection? = null
 
     @InputFiles
     fun source: FileCollection {

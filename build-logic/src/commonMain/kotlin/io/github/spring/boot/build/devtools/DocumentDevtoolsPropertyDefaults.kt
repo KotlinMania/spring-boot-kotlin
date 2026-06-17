@@ -32,7 +32,7 @@ import org.gradle.api.file.RegularFileProperty
  * @author Andy Wilkinson
  */
 abstract class DocumentDevtoolsPropertyDefaults : DefaultTask() {
-    private var defaults: FileCollection = null
+    private var defaults: FileCollection? = null
 
     init {
         this.outputFile.convention(

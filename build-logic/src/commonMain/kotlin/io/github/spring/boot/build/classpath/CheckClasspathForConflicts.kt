@@ -38,7 +38,7 @@ import java.util.stream.Collectors
 abstract class CheckClasspathForConflicts : DefaultTask() {
     private val ignores: MutableList<Predicate<String?>> = ArrayList<Predicate<String?>>()
 
-    private var classpath: FileCollection = null
+    private var classpath: FileCollection? = null
 
     fun setClasspath(classpath: FileCollection) {
         this.classpath = classpath

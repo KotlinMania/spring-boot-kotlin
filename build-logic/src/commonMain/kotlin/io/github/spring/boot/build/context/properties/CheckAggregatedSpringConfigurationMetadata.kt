@@ -30,7 +30,7 @@ import org.gradle.api.file.RegularFileProperty
  * @author Andy Wilkinson
  */
 abstract class CheckAggregatedSpringConfigurationMetadata : DefaultTask() {
-    private var configurationPropertyMetadata: FileCollection = null
+    private var configurationPropertyMetadata: FileCollection? = null
 
     @get:OutputFile
     abstract val reportLocation: RegularFileProperty

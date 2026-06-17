@@ -377,7 +377,7 @@ class MavenPluginPlugin : Plugin<Project> {
     }
 
     abstract class FormatHelpMojoSource @Inject constructor(private val objectFactory: ObjectFactory) : DefaultTask() {
-        private var generator: TaskProvider<*> = null
+        private var generator: TaskProvider<*>? = null
 
         fun setGenerator(generator: TaskProvider<*>) {
             this.generator = generator
@@ -499,7 +499,7 @@ class MavenPluginPlugin : Plugin<Project> {
     }
 
     abstract class ExtractVersionProperties : DefaultTask() {
-        private var resolvedBoms: FileCollection = null
+        private var resolvedBoms: FileCollection? = null
 
         @InputFiles
         @PathSensitive(PathSensitivity.RELATIVE)

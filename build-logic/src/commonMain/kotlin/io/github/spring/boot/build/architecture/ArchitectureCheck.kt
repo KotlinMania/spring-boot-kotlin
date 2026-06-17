@@ -54,7 +54,7 @@ import org.gradle.api.file.ConfigurableFileCollection
  * @author Stefano Cordio
  */
 abstract class ArchitectureCheck : DefaultTask() {
-    private var classes: FileCollection = null
+    private var classes: FileCollection? = null
 
     init {
         this.outputDirectory.convention(project.getLayout().getBuildDirectory().dir(name))

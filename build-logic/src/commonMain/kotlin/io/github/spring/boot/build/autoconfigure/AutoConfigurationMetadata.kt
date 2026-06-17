@@ -39,7 +39,7 @@ import org.gradle.api.file.RegularFileProperty
 abstract class AutoConfigurationMetadata : DefaultTask() {
     private val moduleName: String
 
-    private var classesDirectories: FileCollection = null
+    private var classesDirectories: FileCollection? = null
 
     init {
         this.moduleName = project.name

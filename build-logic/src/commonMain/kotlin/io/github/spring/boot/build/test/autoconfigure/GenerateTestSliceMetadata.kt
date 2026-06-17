@@ -49,11 +49,11 @@ import org.gradle.api.file.RegularFileProperty
  * @author Andy Wilkinson
  */
 abstract class GenerateTestSliceMetadata @Inject constructor(private val objectFactory: ObjectFactory) : DefaultTask() {
-    private var classpath: FileCollection = null
+    private var classpath: FileCollection? = null
 
-    private var importsFiles: FileCollection = null
+    private var importsFiles: FileCollection? = null
 
-    private var classesDirs: FileCollection = null
+    private var classesDirs: FileCollection? = null
 
     init {
         this.moduleName.convention(project.name)

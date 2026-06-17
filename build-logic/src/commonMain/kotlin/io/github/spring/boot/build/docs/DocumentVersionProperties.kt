@@ -32,7 +32,7 @@ import org.gradle.api.file.RegularFileProperty
  * @author Andy Wilkinson
  */
 abstract class DocumentVersionProperties : DefaultTask() {
-    private var resolvedBoms: FileCollection = null
+    private var resolvedBoms: FileCollection? = null
 
     @InputFiles
     @PathSensitive(PathSensitivity.RELATIVE)

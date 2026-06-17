@@ -32,7 +32,7 @@ import org.gradle.api.file.DirectoryProperty
 abstract class DocumentConfigurationProperties : DefaultTask() {
     @get:PathSensitive(PathSensitivity.RELATIVE)
     @get:InputFiles
-    var configurationPropertyMetadata: FileCollection = null
+    var configurationPropertyMetadata: FileCollection? = null
 
     @get:Input
     abstract val deprecated: Property<Boolean>

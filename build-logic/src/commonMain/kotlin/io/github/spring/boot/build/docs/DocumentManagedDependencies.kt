@@ -35,7 +35,7 @@ import org.gradle.api.file.RegularFileProperty
 abstract class DocumentManagedDependencies : DefaultTask() {
     @get:PathSensitive(PathSensitivity.RELATIVE)
     @get:InputFiles
-    var resolvedBoms: FileCollection = null
+    var resolvedBoms: FileCollection? = null
 
     @get:OutputFile
     abstract val outputFile: RegularFileProperty

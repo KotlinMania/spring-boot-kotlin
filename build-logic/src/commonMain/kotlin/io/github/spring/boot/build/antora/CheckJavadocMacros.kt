@@ -75,9 +75,9 @@ import org.gradle.api.file.DirectoryProperty
 abstract class CheckJavadocMacros : DefaultTask() {
     val projectRoot: Path
 
-    var source: FileCollection = null
+    var source: FileCollection? = null
 
-    var classpath: FileCollection = null
+    var classpath: FileCollection? = null
 
     init {
         this.projectRoot = project.getRootDir().toPath()

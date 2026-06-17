@@ -7,7 +7,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bb73644d-7bf2-4f52-98fd-add6ee9c856b" name="Changes" comment="Progress made" />
+    <list default="true" id="bb73644d-7bf2-4f52-98fd-add6ee9c856b" name="Changes" comment="Progress made">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-logic/src/commonMain/kotlin/io/github/spring/boot/build/antora/CheckJavadocMacros.kt" beforeDir="false" afterPath="$PROJECT_DIR$/build-logic/src/commonMain/kotlin/io/github/spring/boot/build/antora/CheckJavadocMacros.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-logic/src/commonMain/kotlin/io/github/spring/boot/build/antora/CopyAntoraContent.kt" beforeDir="false" afterPath="$PROJECT_DIR$/build-logic/src/commonMain/kotlin/io/github/spring/boot/build/antora/CopyAntoraContent.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-logic/src/commonMain/kotlin/io/github/spring/boot/build/antora/SyncAntoraSource.kt" beforeDir="false" afterPath="$PROJECT_DIR$/build-logic/src/commonMain/kotlin/io/github/spring/boot/build/antora/SyncAntoraSource.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-logic/src/commonMain/kotlin/io/github/spring/boot/build/architecture/ArchitectureCheck.kt" beforeDir="false" afterPath="$PROJECT_DIR$/build-logic/src/commonMain/kotlin/io/github/spring/boot/build/architecture/ArchitectureCheck.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-logic/src/commonMain/kotlin/io/github/spring/boot/build/autoconfigure/AutoConfigurationMetadata.kt" beforeDir="false" afterPath="$PROJECT_DIR$/build-logic/src/commonMain/kotlin/io/github/spring/boot/build/autoconfigure/AutoConfigurationMetadata.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-logic/src/commonMain/kotlin/io/github/spring/boot/build/autoconfigure/DocumentAutoConfigurationClasses.kt" beforeDir="false" afterPath="$PROJECT_DIR$/build-logic/src/commonMain/kotlin/io/github/spring/boot/build/autoconfigure/DocumentAutoConfigurationClasses.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-logic/src/commonMain/kotlin/io/github/spring/boot/build/classpath/CheckClasspathForConflicts.kt" beforeDir="false" afterPath="$PROJECT_DIR$/build-logic/src/commonMain/kotlin/io/github/spring/boot/build/classpath/CheckClasspathForConflicts.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-logic/src/commonMain/kotlin/io/github/spring/boot/build/context/properties/CheckAggregatedSpringConfigurationMetadata.kt" beforeDir="false" afterPath="$PROJECT_DIR$/build-logic/src/commonMain/kotlin/io/github/spring/boot/build/context/properties/CheckAggregatedSpringConfigurationMetadata.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-logic/src/commonMain/kotlin/io/github/spring/boot/build/context/properties/DocumentConfigurationProperties.kt" beforeDir="false" afterPath="$PROJECT_DIR$/build-logic/src/commonMain/kotlin/io/github/spring/boot/build/context/properties/DocumentConfigurationProperties.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-logic/src/commonMain/kotlin/io/github/spring/boot/build/devtools/DocumentDevtoolsPropertyDefaults.kt" beforeDir="false" afterPath="$PROJECT_DIR$/build-logic/src/commonMain/kotlin/io/github/spring/boot/build/devtools/DocumentDevtoolsPropertyDefaults.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-logic/src/commonMain/kotlin/io/github/spring/boot/build/docs/ApplicationRunner.kt" beforeDir="false" afterPath="$PROJECT_DIR$/build-logic/src/commonMain/kotlin/io/github/spring/boot/build/docs/ApplicationRunner.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-logic/src/commonMain/kotlin/io/github/spring/boot/build/docs/DocumentManagedDependencies.kt" beforeDir="false" afterPath="$PROJECT_DIR$/build-logic/src/commonMain/kotlin/io/github/spring/boot/build/docs/DocumentManagedDependencies.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-logic/src/commonMain/kotlin/io/github/spring/boot/build/docs/DocumentVersionProperties.kt" beforeDir="false" afterPath="$PROJECT_DIR$/build-logic/src/commonMain/kotlin/io/github/spring/boot/build/docs/DocumentVersionProperties.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-logic/src/commonMain/kotlin/io/github/spring/boot/build/mavenplugin/MavenPluginPlugin.kt" beforeDir="false" afterPath="$PROJECT_DIR$/build-logic/src/commonMain/kotlin/io/github/spring/boot/build/mavenplugin/MavenPluginPlugin.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-logic/src/commonMain/kotlin/io/github/spring/boot/build/test/autoconfigure/DocumentTestSlices.kt" beforeDir="false" afterPath="$PROJECT_DIR$/build-logic/src/commonMain/kotlin/io/github/spring/boot/build/test/autoconfigure/DocumentTestSlices.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-logic/src/commonMain/kotlin/io/github/spring/boot/build/test/autoconfigure/GenerateTestSliceMetadata.kt" beforeDir="false" afterPath="$PROJECT_DIR$/build-logic/src/commonMain/kotlin/io/github/spring/boot/build/test/autoconfigure/GenerateTestSliceMetadata.kt" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -191,7 +209,7 @@
       <workItem from="1781661079266" duration="595000" />
       <workItem from="1781661687278" duration="1278000" />
       <workItem from="1781663692580" duration="2173000" />
-      <workItem from="1781668113890" duration="4446000" />
+      <workItem from="1781668113890" duration="4723000" />
     </task>
     <task id="LOCAL-00001" summary="Progress made">
       <option name="closed" value="true" />

@@ -34,7 +34,7 @@ abstract class SyncAntoraSource @Inject constructor(
     private val fileSystemOperations: FileSystemOperations,
     private val archiveOperations: ArchiveOperations
 ) : DefaultTask() {
-    private var source: FileCollection = null
+    private var source: FileCollection? = null
 
     @get:OutputDirectory
     abstract val outputDirectory: DirectoryProperty

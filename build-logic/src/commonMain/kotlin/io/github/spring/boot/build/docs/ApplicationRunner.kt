@@ -39,7 +39,7 @@ import org.gradle.api.file.RegularFileProperty
  * @author Andy Wilkinson
  */
 abstract class ApplicationRunner : DefaultTask() {
-    private var classpath: FileCollection = null
+    private var classpath: FileCollection? = null
 
     init {
         this.applicationJar.convention("/opt/apps/myapp.jar")

@@ -183,26 +183,26 @@ class ConfigurationPropertiesAnalyzer(sources: MutableCollection<File>) {
     }
 
     private fun readJsonContent(source: File?): MutableMap<String?, Any?> {
-        return this.jsonMapperSupplier.obtain()!!.readValue<MutableMap<*, *>>(source, MutableMap::class.java)
+        @Suppress("UNCHECKED_CAST")
+        return this.jsonMapperSupplier.obtain()!!
+            .readValue(source, MutableMap::class.java) as MutableMap<String?, Any?>
     }
 
     class Report(private val baseDirectory: File) {
-        private val analyses: MultiValueMap<File?, Analysis?> = LinkedMultiValueMap<File?, Analysis?>()
+        private val analyses: MultiValueMap<File, Analysis> = LinkedMultiValueMap<File, Analysis>()
 
         fun registerAnalysis(path: File, analysis: Analysis?) {
             this.analyses.add(path, analysis)
         }
 
         fun hasProblems(): Boolean {
-            return this.analyses.values
-                .stream()
-                .anyMatch { candidates: MutableList<Analysis?>? ->
-                    candidates!!.stream().anyMatch { obj: Analysis? -> obj!!.hasProblems() }
-                }
+            return this.analyses.values.any { candidates ->
+                candidates.any { it.hasProblems() }
+            }
         }
 
-        fun getAnalyses(source: File?): MutableList<Analysis?> {
-            return this.analyses.getOrDefault(source, mutableListOf<Analysis?>())
+        fun getAnalyses(source: File?): MutableList<Analysis> {
+            return this.analyses.getOrDefault(source, mutableListOf())
         }
 
         /**
@@ -223,17 +223,17 @@ class ConfigurationPropertiesAnalyzer(sources: MutableCollection<File>) {
             }
             val out = StringWriter()
             PrintWriter(out).use { writer ->
-                Companion.writeAll<MutableMap.MutableEntry<File?, MutableList<Analysis?>?>?>(
+                Companion.writeAll(
                     writer,
                     this.analyses.entries,
-                    Consumer { entry: MutableMap.MutableEntry<File?, MutableList<Analysis?>?>? ->
-                        writer.println(this.baseDirectory.toPath().relativize(entry!!.key!!.toPath()))
-                        val hasProblems = entry.value!!.stream().anyMatch { obj: Analysis? -> obj!!.hasProblems() }
+                    Consumer { entry ->
+                        writer.println(this.baseDirectory.toPath().relativize(entry.key.toPath()))
+                        val hasProblems = entry.value.any { it.hasProblems() }
                         if (hasProblems) {
-                            Companion.writeAll<Analysis?>(
+                            Companion.writeAll(
                                 writer,
-                                entry.value!!,
-                                Consumer { analysis: Analysis? -> analysis!!.createDetails(writer) })
+                                entry.value,
+                                Consumer { analysis -> analysis.createDetails(writer) })
                         } else {
                             writer.println("No problems found.")
                         }
@@ -280,8 +280,8 @@ class ConfigurationPropertiesAnalyzer(sources: MutableCollection<File>) {
     companion object {
         private val ELEMENT_TYPES = mutableListOf<String?>("groups", "properties", "hints")
 
-        private fun <T> writeAll(writer: PrintWriter, elements: Iterable, itemWriter: Consumer) {
-            val it: MutableIterator = elements.iterator()
+        private fun <T> writeAll(writer: PrintWriter, elements: Iterable<T>, itemWriter: Consumer<T>) {
+            val it = elements.iterator()
             while (it.hasNext()) {
                 itemWriter.accept(it.next())
                 if (it.hasNext()) {

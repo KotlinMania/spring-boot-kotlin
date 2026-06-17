@@ -44,8 +44,7 @@ import org.gradle.plugins.ide.eclipse.model.EclipseModel
  */
 class DockerTestPlugin : Plugin<Project> {
     override fun apply(project: Project) {
-        project.plugins.withType<JavaPlugin>(
-            JavaPlugin::class.java) { javaPlugin: JavaPlugin -> configureDockerTesting(project) }
+        project.plugins.withType<JavaPlugin>().configureEach { configureDockerTesting(project) }
     }
 
     private fun configureDockerTesting(project: Project) {
@@ -54,10 +53,10 @@ class DockerTestPlugin : Plugin<Project> {
         val dockerTest: Provider<Test> = createTestTask(project, dockerTestSourceSet, buildService)
         project.getTasks().getByName(LifecycleBasePlugin.CHECK_TASK_NAME).dependsOn(dockerTest)
         project.plugins
-            .withType<EclipsePlugin>().configureEach { val eclipsePlugin = this;
-                val eclipse = project.getExtensions().getByType<EclipseModel>(EclipseModel::class.java)
-                eclipse.classpath { classpath: EclipseClasspath ->
-                    classpath!!.getPlusConfigurations()
+            .withType<EclipsePlugin>().configureEach {
+                val eclipse = project.getExtensions().getByType<EclipseModel>()
+                eclipse.classpath {
+                    getPlusConfigurations()
                         .add(
                             project.getConfigurations()
                                 .getByName(dockerTestSourceSet.getRuntimeClasspathConfigurationName())
@@ -88,14 +87,13 @@ class DockerTestPlugin : Plugin<Project> {
                 .plus(main.getRuntimeClasspath())
                 .plus(test.getOutput())
         )
-        project.plugins.withType<IntegrationTestPlugin>(
-            IntegrationTestPlugin::class.java) { integrationTestPlugin: IntegrationTestPlugin ->
-                val intTest = sourceSets.getByName(IntegrationTestPlugin.Companion.INT_TEST_SOURCE_SET_NAME)
-                dockerTestSourceSet
-                    .setCompileClasspath(dockerTestSourceSet.compileClasspath.plus(intTest.getOutput()))
-                dockerTestSourceSet
-                    .setRuntimeClasspath(dockerTestSourceSet.getRuntimeClasspath().plus(intTest.getOutput()))
-            }
+        project.plugins.withType<IntegrationTestPlugin>().configureEach {
+            val intTest = sourceSets.getByName(IntegrationTestPlugin.Companion.INT_TEST_SOURCE_SET_NAME)
+            dockerTestSourceSet
+                .setCompileClasspath(dockerTestSourceSet.compileClasspath.plus(intTest.getOutput()))
+            dockerTestSourceSet
+                .setRuntimeClasspath(dockerTestSourceSet.getRuntimeClasspath().plus(intTest.getOutput()))
+        }
         return dockerTestSourceSet
     }
 
@@ -123,7 +121,7 @@ class DockerTestPlugin : Plugin<Project> {
                 task.setGroup(LifecycleBasePlugin.VERIFICATION_GROUP)
                 task.setDescription("Reclaims Docker space on CI.")
                 task.shouldRunAfter(DOCKER_TEST_TASK_NAME)
-                task.onlyIf(Spec { task: Task? -> this.shouldReclaimDockerSpace(task) })
+                task.onlyIf { this@DockerTestPlugin.shouldReclaimDockerSpace(it) }
                 task.executable("bash")
                 task.args(
                     "-c",

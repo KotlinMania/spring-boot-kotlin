@@ -32,23 +32,20 @@ import org.gradle.api.services.BuildServiceSpec
  * 
  * @author Andy Wilkinson
  */
-object DockerTestBuildService : BuildService<BuildServiceParameters.None?> {
-    fun registerIfNecessary(project: Project): Provider<DockerTestBuildService> {
-        return project.getGradle()
-            .getSharedServices()
-            .registerIfAbsent<DockerTestBuildService?, BuildServiceParameters.None?>(
-                "dockerTest", DockerTestBuildService::class.java) { spec: BuildServiceSpec<BuildServiceParameters.None?> ->
-                    spec!!.getMaxParallelUsages().set(
-                        maxParallelTasks(project)
-                    )
+abstract class DockerTestBuildService : BuildService<BuildServiceParameters.None> {
+    companion object {
+        fun registerIfNecessary(project: Project): Provider<DockerTestBuildService> {
+            return project.getGradle()
+                .getSharedServices()
+                .registerIfAbsent("dockerTest", DockerTestBuildService::class.java) {
+                    getMaxParallelUsages().set(maxParallelTasks(project))
                 }
-    }
-
-    private fun maxParallelTasks(project: Project): Int {
-        val property = project.findProperty("org.springframework.boot.dockertest.max-parallel-tasks")
-        if (property == null) {
-            return 1
         }
-        return property.toString().toInt()
+
+        private fun maxParallelTasks(project: Project): Int {
+            val property = project.findProperty("org.springframework.boot.dockertest.max-parallel-tasks")
+                ?: return 1
+            return property.toString().toInt()
+        }
     }
 }

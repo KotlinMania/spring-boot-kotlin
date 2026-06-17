@@ -69,12 +69,12 @@ abstract class CheckClasspathForUnnecessaryExclusions @Inject constructor(
         this.classpath = classpath
         this.exclusionsByDependencyId.clear()
         this.dependencyById.clear()
-        classpath.getAllDependencies().all { dependency: Dependency -> this.processDependency(dependency) }
+        classpath.getAllDependencies().configureEach { processDependency(this) }
     }
 
     @Classpath
     fun getClasspath(): FileCollection {
-        return this.classpath
+        return this.classpath!!
     }
 
     private fun processDependency(dependency: Dependency?) {
@@ -153,10 +153,7 @@ abstract class CheckClasspathForUnnecessaryExclusions @Inject constructor(
     }
 
     companion object {
-        private val SPRING_BOOT_DEPENDENCIES_PROJECT: MutableMap<String?, String?> =
-            Collections.singletonMap<String?, String?>(
-                "path",
-                ":platform:spring-boot-dependencies"
-            )
+        private val SPRING_BOOT_DEPENDENCIES_PROJECT: Map<String, String> =
+            mapOf("path" to ":platform:spring-boot-dependencies")
     }
 }

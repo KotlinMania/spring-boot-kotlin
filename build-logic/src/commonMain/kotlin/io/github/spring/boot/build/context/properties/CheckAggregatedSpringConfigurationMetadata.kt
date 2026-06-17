@@ -62,24 +62,24 @@ abstract class CheckAggregatedSpringConfigurationMetadata : DefaultTask() {
 
     private fun createReport(): Report {
         val configurationProperties: ConfigurationProperties =
-            ConfigurationProperties.Companion.fromFiles(this.configurationPropertyMetadata)
+            ConfigurationProperties.Companion.fromFiles(this.configurationPropertyMetadata!!)
         val propertyNames = configurationProperties.stream()
-            .map<String> { obj: ConfigurationProperty? -> obj!!.name }
+            .map { it!!.name }
             .collect(Collectors.toSet())
         val missingReplacement = configurationProperties.stream()
-            .filter { obj: ConfigurationProperty? -> obj!!.isDeprecated() }
-            .filter { deprecated: ConfigurationProperty? ->
-                val replacement = deprecated!!.deprecation.replacement
+            .filter { it!!.isDeprecated }
+            .filter { deprecated ->
+                val replacement = deprecated!!.deprecation?.replacement
                 replacement != null && !propertyNames.contains(replacement)
             }
             .toList()
         return Report(missingReplacement)
     }
 
-    private class Report(private val propertiesWithMissingReplacement: MutableList<ConfigurationProperty?>) :
+    private class Report(private val propertiesWithMissingReplacement: List<ConfigurationProperty?>) :
         Iterable<String?> {
         fun hasProblems(): Boolean {
-            return !this.propertiesWithMissingReplacement.isEmpty()
+            return this.propertiesWithMissingReplacement.isNotEmpty()
         }
 
         override fun iterator(): MutableIterator<String?> {
@@ -89,13 +89,9 @@ abstract class CheckAggregatedSpringConfigurationMetadata : DefaultTask() {
             } else {
                 lines.add("The following properties have a replacement that does not exist:")
                 lines.add("")
-                lines.addAll(
-                    this.propertiesWithMissingReplacement.stream()
-                        .map<String> { property: ConfigurationProperty? ->
-                            ("\t" + property!!.name + " (replacement "
-                                    + property.deprecation.replacement + ")")
-                        }
-                        .toList())
+                this.propertiesWithMissingReplacement.forEach { property ->
+                    lines.add("\t" + property!!.name + " (replacement " + property.deprecation?.replacement + ")")
+                }
             }
             lines.add("")
             return lines.iterator()

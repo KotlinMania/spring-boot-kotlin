@@ -55,9 +55,7 @@ abstract class CheckFactoriesFile protected constructor(private val path: String
     @get:InputFiles
     var source: FileTree
         get() = this.sourceFiles.getAsFileTree()
-            .matching { filter: PatternFilterable ->
-                filter.include(this.path)
-            }
+            .matching { include(this@CheckFactoriesFile.path) }
         set(source) {
             this.sourceFiles = project.getObjects().fileCollection().from(source)
         }
@@ -84,10 +82,9 @@ abstract class CheckFactoriesFile protected constructor(private val path: String
         val problems: MutableMap<String?, MutableList<String?>> = LinkedHashMap<String?, MutableList<String?>>()
         for (name in properties.stringPropertyNames()) {
             val value = properties.getProperty(name)
-            val classNames = Arrays.asList<String?>(*StringUtils.commaDelimitedListToStringArray(value))
+            val classNames = StringUtils.commaDelimitedListToStringArray(value).toList()
             collectProblems(problems, name, classNames)
-            val sortedValues: MutableList<String?> = ArrayList<String?>(classNames)
-            Collections.sort<String?>(sortedValues)
+            val sortedValues = classNames.sorted()
             if (sortedValues != classNames) {
                 val problemsForClassName = problems.computeIfAbsent(name) { k: String? -> ArrayList<String?>() }
                 problemsForClassName.add("Entries should be sorted alphabetically")
@@ -103,7 +100,7 @@ abstract class CheckFactoriesFile protected constructor(private val path: String
     private fun collectProblems(
         problems: MutableMap<String?, MutableList<String?>>,
         key: String?,
-        classNames: MutableList<String>
+        classNames: List<String>
     ) {
         for (className in classNames) {
             if (!find(className)) {

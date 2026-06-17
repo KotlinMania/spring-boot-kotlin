@@ -35,7 +35,7 @@ import org.gradle.api.file.DirectoryProperty
  * @author Andy Wilkinson
  */
 abstract class DocumentAutoConfigurationClasses : DefaultTask() {
-    var autoConfiguration: FileCollection? = null
+    private var autoConfiguration: FileCollection? = null
 
     @InputFiles
     @PathSensitive(PathSensitivity.RELATIVE)

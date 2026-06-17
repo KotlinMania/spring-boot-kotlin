@@ -42,8 +42,7 @@ class TestAutoConfigurationPlugin : Plugin<Project> {
         target.plugins.withType<JavaPlugin>().configureEach { val plugin = this;
             val checkAutoConfigureImports = target.getTasks()
                 .register<CheckAutoConfigureImports>(
-                    "checkAutoConfigureImports",
-                    CheckAutoConfigureImports::class.java) { task: CheckAutoConfigureImports ->
+                    "checkAutoConfigureImports") { val task = this;
                         val mainSourceSet: SourceSet = target.getExtensions()
                             .getByType<JavaPluginExtension>(JavaPluginExtension::class.java)
                             .sourceSets

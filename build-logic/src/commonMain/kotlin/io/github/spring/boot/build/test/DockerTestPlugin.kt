@@ -103,7 +103,7 @@ class DockerTestPlugin : Plugin<Project> {
         project: Project, dockerTestSourceSet: SourceSet,
         buildService: Provider<DockerTestBuildService>
     ): Provider<Test> {
-        return project.getTasks().register<Test>(DOCKER_TEST_TASK_NAME, Test::class.java) { task: Test ->
+        return project.getTasks().register<Test>(DOCKER_TEST_TASK_NAME) { val task = this;
             task!!.usesService(buildService)
             task.setGroup(LifecycleBasePlugin.VERIFICATION_GROUP)
             task.setDescription("Runs Docker-based tests.")
@@ -118,7 +118,7 @@ class DockerTestPlugin : Plugin<Project> {
         buildService: Provider<DockerTestBuildService>
     ): Provider<Exec> {
         return project.getTasks()
-            .register<Exec>(RECLAIM_DOCKER_SPACE_TASK_NAME, Exec::class.java) { task: Exec ->
+            .register<Exec>(RECLAIM_DOCKER_SPACE_TASK_NAME) { val task = this;
                 task!!.usesService(buildService)
                 task.setGroup(LifecycleBasePlugin.VERIFICATION_GROUP)
                 task.setDescription("Reclaims Docker space on CI.")

@@ -85,9 +85,9 @@ class AutoConfigurationPlugin : Plugin<Project> {
                         }
                 }
             tasks.register<AutoConfigurationMetadata>(
-                "autoConfigurationMetadata", AutoConfigurationMetadata::class.java) { task: AutoConfigurationMetadata -> this.configureAutoConfigurationMetadata(task) }
+                "autoConfigurationMetadata") { val task = this; this.configureAutoConfigurationMetadata(task) }
             val checkAutoConfigurationImports = tasks.register<CheckAutoConfigurationImports>(
-                "checkAutoConfigurationImports", CheckAutoConfigurationImports::class.java) { task: CheckAutoConfigurationImports -> this.configureCheckAutoConfigurationImports(task) }
+                "checkAutoConfigurationImports") { val task = this; this.configureCheckAutoConfigurationImports(task) }
             val requiredClasspath = configurations.create("autoConfigurationRequiredClasspath")
                 .extendsFrom(
                     configurations.getByName(this.main.getImplementationConfigurationName()),
@@ -95,7 +95,7 @@ class AutoConfigurationPlugin : Plugin<Project> {
                 )
             requiredClasspath.getDependencies().add(projectDependency(":core:spring-boot-autoconfigure"))
             val checkAutoConfigurationClasses = tasks.register<CheckAutoConfigurationClasses>(
-                "checkAutoConfigurationClasses", CheckAutoConfigurationClasses::class.java) { task: CheckAutoConfigurationClasses ->
+                "checkAutoConfigurationClasses") { val task = this;
                     configureCheckAutoConfigurationClasses(
                         requiredClasspath,
                         task!!

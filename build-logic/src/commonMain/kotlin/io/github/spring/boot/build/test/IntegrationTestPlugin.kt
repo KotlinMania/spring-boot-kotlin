@@ -72,7 +72,7 @@ class IntegrationTestPlugin : Plugin<Project> {
     }
 
     private fun createTestTask(project: Project, intTestSourceSet: SourceSet): TaskProvider<Test> {
-        return project.getTasks().register<Test>(INT_TEST_TASK_NAME, Test::class.java) { task: Test ->
+        return project.getTasks().register<Test>(INT_TEST_TASK_NAME) { val task = this;
             task!!.setGroup(LifecycleBasePlugin.VERIFICATION_GROUP)
             task.setDescription("Runs integration tests.")
             task.setTestClassesDirs(intTestSourceSet.getOutput().getClassesDirs())

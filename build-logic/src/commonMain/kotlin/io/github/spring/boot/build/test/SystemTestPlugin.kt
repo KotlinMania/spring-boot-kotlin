@@ -76,7 +76,7 @@ class SystemTestPlugin : Plugin<Project> {
     }
 
     private fun createTestTask(project: Project, systemTestSourceSet: SourceSet): TaskProvider<Test> {
-        return project.getTasks().register<Test>(SYSTEM_TEST_TASK_NAME, Test::class.java) { task: Test ->
+        return project.getTasks().register<Test>(SYSTEM_TEST_TASK_NAME) { val task = this;
             task!!.setGroup(LifecycleBasePlugin.VERIFICATION_GROUP)
             task.setDescription("Runs system tests.")
             task.setTestClassesDirs(systemTestSourceSet.getOutput().getClassesDirs())

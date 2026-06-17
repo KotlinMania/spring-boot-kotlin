@@ -141,8 +141,7 @@ class JavaConventions(private val systemRequirements: SystemRequirementsExtensio
     private fun configureJarManifestConventions(project: Project) {
         val extractLegalResources = project.getTasks()
             .register<ExtractResources>(
-                "extractLegalResources",
-                ExtractResources::class.java) { task: ExtractResources ->
+                "extractLegalResources") { val task = this;
                     task!!.packageName.set("org.springframework.boot.build.legal")
                     task.destinationDirectory.set(project.getLayout().getBuildDirectory().dir("legal"))
                     task.resourceNames
@@ -378,8 +377,7 @@ class JavaConventions(private val systemRequirements: SystemRequirementsExtensio
                 val check: TaskProvider<Task> = project.getTasks().named(JavaBasePlugin.CHECK_TASK_NAME)
                 val checkAotFactories = project.getTasks()
                     .register<CheckAotFactories>(
-                        "checkAotFactories",
-                        CheckAotFactories::class.java) { task: CheckAotFactories ->
+                        "checkAotFactories") { val task = this;
                             task!!.source = main!!.getResources()
                             task.setClasspath(main.getOutput().getClassesDirs())
                             task.setDescription("Checks the META-INF/spring/aot.factories file of the main source set.")
@@ -387,8 +385,7 @@ class JavaConventions(private val systemRequirements: SystemRequirementsExtensio
                 check.configure { task: Task -> task!!.dependsOn(checkAotFactories) }
                 val checkSpringFactories = project.getTasks()
                     .register<CheckSpringFactories>(
-                        "checkSpringFactories",
-                        CheckSpringFactories::class.java) { task: CheckSpringFactories ->
+                        "checkSpringFactories") { val task = this;
                             task!!.source = main!!.getResources()
                             task.setClasspath(main.getOutput().getClassesDirs())
                             task.setDescription("Checks the META-INF/spring.factories file of the main source set.")

@@ -51,8 +51,7 @@ class TestSlicePlugin : Plugin<Project> {
         plugins.withType<JavaPlugin>().configureEach { val plugin = this;
             val generateTestSliceMetadata = target.getTasks()
                 .register<GenerateTestSliceMetadata>(
-                    "generateTestSliceMetadata",
-                    GenerateTestSliceMetadata::class.java) { task: GenerateTestSliceMetadata ->
+                    "generateTestSliceMetadata") { val task = this;
                         val mainSourceSet: SourceSet = target.getExtensions()
                             .getByType<JavaPluginExtension>(JavaPluginExtension::class.java)
                             .sourceSets

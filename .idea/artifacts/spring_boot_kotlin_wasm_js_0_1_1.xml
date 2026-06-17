@@ -1,0 +1,6 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="spring-boot-kotlin-wasm-js-0.1.1">
+    <output-path>$PROJECT_DIR$/build/libs</output-path>
+    <root id="archive" name="spring-boot-kotlin-wasm-js-0.1.1.jar" />
+  </artifact>
+</component>

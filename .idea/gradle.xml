@@ -1,10 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="GradleMigrationSettings" migrationVersion="1" />
   <component name="GradleSettings">
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
+        <compositeConfiguration>
+          <compositeBuild compositeDefinitionSource="SCRIPT">
+            <builds>
+              <build path="$PROJECT_DIR$/build-logic" name="build-logic">
+                <projects>
+                  <project path="$PROJECT_DIR$/build-logic" />
+                </projects>
+              </build>
+            </builds>
+          </compositeBuild>
+        </compositeConfiguration>
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="gradleJvm" value="#JAVA_HOME" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/build-logic" />
+            <option value="$PROJECT_DIR$/configuration-metadata" />
+            <option value="$PROJECT_DIR$/configuration-metadata/spring-boot-configuration-metadata" />
+            <option value="$PROJECT_DIR$/configuration-metadata/spring-boot-configuration-processor" />
+            <option value="$PROJECT_DIR$/core" />
+            <option value="$PROJECT_DIR$/core/spring-boot" />
+            <option value="$PROJECT_DIR$/core/spring-boot-autoconfigure" />
+            <option value="$PROJECT_DIR$/core/spring-boot-autoconfigure-processor" />
+            <option value="$PROJECT_DIR$/core/spring-boot-test" />
+            <option value="$PROJECT_DIR$/core/spring-boot-test-autoconfigure" />
+            <option value="$PROJECT_DIR$/module" />
+            <option value="$PROJECT_DIR$/module/spring-boot-sendgrid" />
+            <option value="$PROJECT_DIR$/platform" />
+            <option value="$PROJECT_DIR$/platform/spring-boot-dependencies" />
+            <option value="$PROJECT_DIR$/platform/spring-boot-internal-dependencies" />
+            <option value="$PROJECT_DIR$/test-support" />
+            <option value="$PROJECT_DIR$/test-support/spring-boot-test-support" />
+          </set>
+        </option>
       </GradleProjectSettings>
     </option>
   </component>

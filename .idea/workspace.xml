@@ -7,7 +7,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bb73644d-7bf2-4f52-98fd-add6ee9c856b" name="Changes" comment="Progress made" />
+    <list default="true" id="bb73644d-7bf2-4f52-98fd-add6ee9c856b" name="Changes" comment="Progress made">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -191,7 +193,7 @@
       <workItem from="1781661079266" duration="595000" />
       <workItem from="1781661687278" duration="1278000" />
       <workItem from="1781663692580" duration="2173000" />
-      <workItem from="1781668113890" duration="4802000" />
+      <workItem from="1781668113890" duration="5438000" />
     </task>
     <task id="LOCAL-00001" summary="Progress made">
       <option name="closed" value="true" />

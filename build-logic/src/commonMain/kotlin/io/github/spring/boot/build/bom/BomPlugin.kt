@@ -28,8 +28,6 @@ import org.gradle.api.publish.PublishingExtension
 import org.gradle.api.publish.maven.MavenPom
 import org.gradle.api.publish.maven.MavenPublication
 import org.springframework.boot.build.MavenRepositoryPlugin
-import org.springframework.boot.build.bom.bomr.MoveToSnapshots
-import org.springframework.boot.build.bom.bomr.UpgradeBom
 import org.springframework.boot.build.bom.bomr.version.DependencyVersion
 import java.util.*
 import java.util.stream.Collectors
@@ -59,8 +57,6 @@ class BomPlugin : Plugin<Project> {
                     .set(createResolvedBom.flatMap<RegularFile>(Transformer { obj: CreateResolvedBom? -> obj!!.outputFile }))
             })
         project.getTasks().named("check").configure(Action { check: Task -> check!!.dependsOn(checkBom) })
-        project.getTasks().register<UpgradeBom>("bomrUpgrade", UpgradeBom::class.java, bom)
-        project.getTasks().register<MoveToSnapshots>("moveToSnapshots", MoveToSnapshots::class.java, bom)
         project.getTasks().register<CheckLinks>("checkLinks", CheckLinks::class.java, bom)
         val resolvedBomConfiguration = project.getConfigurations().create("resolvedBom")
         project.getArtifacts()

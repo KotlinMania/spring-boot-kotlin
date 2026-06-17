@@ -19,27 +19,11 @@ import org.gradle.kotlin.dsl.*
 
 import org.gradle.api.file.FileCollection
 import java.io.IOException
-import java.lang.String
 import java.nio.charset.StandardCharsets
 import java.nio.file.Files
 import java.nio.file.Path
-import java.util.function.BiConsumer
 import java.util.function.Consumer
 import java.util.stream.Collectors
-import kotlin.Array
-import kotlin.Boolean
-import kotlin.Throws
-import kotlin.check
-import kotlin.collections.ArrayList
-import kotlin.collections.HashSet
-import kotlin.collections.MutableList
-import kotlin.collections.MutableSet
-import kotlin.collections.dropLastWhile
-import kotlin.collections.removeAll
-import kotlin.collections.toTypedArray
-import kotlin.plus
-import kotlin.require
-import kotlin.requireNotNull
 
 /**
  * Configuration properties snippets.
@@ -50,7 +34,7 @@ import kotlin.requireNotNull
 class Snippets(configurationPropertyMetadata: FileCollection, private val deprecated: Boolean) {
     private val properties: ConfigurationProperties
 
-    private val snippets: MutableList<Snippet> = ArrayList<Snippet>()
+    private val snippets: MutableList<Snippet> = mutableListOf()
 
     init {
         this.properties = ConfigurationProperties.Companion.fromFiles(configurationPropertyMetadata)
@@ -64,18 +48,15 @@ class Snippets(configurationPropertyMetadata: FileCollection, private val deprec
     fun writeTo(outputDirectory: Path) {
         createDirectory(outputDirectory)
         val remaining = this.properties.stream()
-            .filter { property: ConfigurationProperty? -> this.shouldAdd(property) }
-            .map<String> { obj: ConfigurationProperty? -> obj!!.name }
+            .filter { shouldAdd(it) }
+            .map { it!!.name }
             .collect(Collectors.toSet())
         for (snippet in this.snippets) {
             val written = writeSnippet(outputDirectory, snippet, remaining)
             remaining.removeAll(written)
         }
-        check(!(!this.deprecated && !remaining.isEmpty())) {
-            "The following keys were not written to the documentation: " + String.join(
-                ", ",
-                remaining
-            )
+        check(this.deprecated || remaining.isEmpty()) {
+            "The following keys were not written to the documentation: " + remaining.joinToString(", ")
         }
     }
 
@@ -83,50 +64,48 @@ class Snippets(configurationPropertyMetadata: FileCollection, private val deprec
     private fun writeSnippet(
         outputDirectory: Path,
         snippet: Snippet,
-        remaining: MutableSet<kotlin.String?>
-    ): MutableSet<kotlin.String?> {
+        remaining: Set<String>
+    ): MutableSet<String> {
         val table = Table()
-        val added: MutableSet<kotlin.String?> = HashSet<kotlin.String?>()
-        snippet.forEachOverride(BiConsumer { prefix: kotlin.String?, description: kotlin.String? ->
+        val added = mutableSetOf<String>()
+        snippet.forEachOverride { prefix, description ->
             val row = CompoundRow(snippet, prefix, if (!this.deprecated) description else "")
-            remaining.stream().filter { candidate: kotlin.String? -> candidate!!.startsWith(prefix!!) }
-                .forEach { name: kotlin.String? ->
-                    val property = this.properties.get(name)
-                    if (shouldAdd(property) && added.add(name)) {
-                        row.addProperty(property)
-                    }
+            remaining.filter { it.startsWith(prefix!!) }.forEach { name ->
+                val property = this.properties.get(name)
+                if (shouldAdd(property) && added.add(name)) {
+                    row.addProperty(property!!)
                 }
-            if (!row.isEmpty()) {
+            }
+            if (!row.isEmpty) {
                 table.addRow(row)
             }
-        })
-        snippet.forEachPrefix(Consumer { prefix: kotlin.String? ->
-            remaining.stream().filter { candidate: kotlin.String? -> candidate!!.startsWith(prefix!!) }
-                .forEach { name: kotlin.String? ->
-                    val property = this.properties.get(name)
-                    if (shouldAdd(property) && added.add(name)) {
-                        table.addRow(SingleRow(this, snippet, property))
-                    }
+        }
+        snippet.forEachPrefix { prefix ->
+            remaining.filter { it.startsWith(prefix!!) }.forEach { name ->
+                val property = this.properties.get(name)
+                if (shouldAdd(property) && added.add(name)) {
+                    table.addRow(SingleRow(this, snippet, property!!))
                 }
-        })
+            }
+        }
         val asciidoc = getAsciidoc(snippet, table)
         writeAsciidoc(outputDirectory, snippet, asciidoc)
         return added
     }
 
-    fun findXref(name: kotlin.String): kotlin.String? {
+    fun findXref(name: String): String? {
         val property = this.properties.get(name)
-        if (property == null || property.isDeprecated()) {
+        if (property == null || property.isDeprecated) {
             return null
         }
         for (snippet in this.snippets) {
             for (prefix in snippet.overrides.keys) {
-                if (name.startsWith(prefix)) {
+                if (name.startsWith(prefix!!)) {
                     return null
                 }
             }
             for (prefix in snippet.prefixes) {
-                if (name.startsWith(prefix)) {
+                if (name.startsWith(prefix!!)) {
                     return "appendix:application-properties/index.adoc#%s.%s".format(snippet.anchor, name)
                 }
             }
@@ -135,7 +114,7 @@ class Snippets(configurationPropertyMetadata: FileCollection, private val deprec
     }
 
     private fun shouldAdd(property: ConfigurationProperty?): Boolean {
-        return (property == null || (property.isDeprecated() == this.deprecated && !deprecatedAtErrorLevel(property)))
+        return (property == null || (property.isDeprecated == this.deprecated && !deprecatedAtErrorLevel(property)))
     }
 
     private fun deprecatedAtErrorLevel(property: ConfigurationProperty): Boolean {
@@ -145,7 +124,7 @@ class Snippets(configurationPropertyMetadata: FileCollection, private val deprec
 
     private fun getAsciidoc(snippet: Snippet, table: Table): Asciidoc {
         val asciidoc = Asciidoc()
-        if (!table.isEmpty()) {
+        if (!table.isEmpty) {
             // We have to prepend 'appendix.' as a section id here, otherwise the
             // spring-asciidoctor-extensions:section-id asciidoctor extension complains
             asciidoc.appendln("[[appendix." + (if (this.deprecated) "deprecated-" else "") + snippet.anchor + "]]")
@@ -157,8 +136,7 @@ class Snippets(configurationPropertyMetadata: FileCollection, private val deprec
 
     @Throws(IOException::class)
     private fun writeAsciidoc(outputDirectory: Path, snippet: Snippet, asciidoc: Asciidoc) {
-        val parts: Array<kotlin.String?> =
-            (snippet.anchor).split("\\.".toRegex()).dropLastWhile { it.isEmpty() }.toTypedArray()
+        val parts = (snippet.anchor ?: "").split("\\.".toRegex()).dropLastWhile { it.isEmpty() }.toTypedArray()
         val path = outputDirectory.resolve(parts[parts.size - 1] + ".adoc")
         createDirectory(path.getParent())
         Files.deleteIfExists(path)

@@ -159,7 +159,7 @@ class ConfigurationPropertiesPlugin : Plugin<Project> {
                 .getByType<JavaPluginExtension>(JavaPluginExtension::class.java)
                 .sourceSets
                 .getByName(SourceSet.MAIN_SOURCE_SET_NAME)
-            check!!.setSource(mainSourceSet.getResources())
+            check!!.source = mainSourceSet.getResources()
             check.include("META-INF/additional-spring-configuration-metadata.json")
             check.reportLocation
                 .set(

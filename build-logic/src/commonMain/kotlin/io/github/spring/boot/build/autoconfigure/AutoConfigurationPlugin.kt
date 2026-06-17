@@ -135,7 +135,7 @@ class AutoConfigurationPlugin : Plugin<Project> {
         }
 
         fun configureCheckAutoConfigurationImports(task: CheckAutoConfigurationImports) {
-            task.setSource(this.main.getResources())
+            task.source = this.main.getResources()
             task.setClasspath(this.main.getOutput().getClassesDirs())
             task.setDescription(
                 "Checks the %s file of the main source set.".format(AutoConfigurationImportsTask.Companion.IMPORTS_FILE)
@@ -146,7 +146,7 @@ class AutoConfigurationPlugin : Plugin<Project> {
             requiredClasspath: Configuration?,
             task: CheckAutoConfigurationClasses
         ) {
-            task.setSource(this.main.getResources())
+            task.source = this.main.getResources()
             task.setClasspath(this.main.getOutput().getClassesDirs())
             task.setRequiredDependencies(requiredClasspath)
             task.setDescription("Checks the auto-configuration classes of the main source set.")

@@ -46,7 +46,7 @@ class TestAutoConfigurationPlugin : Plugin<Project> {
                             .getByType<JavaPluginExtension>(JavaPluginExtension::class.java)
                             .sourceSets
                             .getByName(SourceSet.MAIN_SOURCE_SET_NAME)
-                        task!!.setSource(mainSourceSet.getResources())
+                        task!!.source = mainSourceSet.getResources()
                         val classpath = target.files(
                             mainSourceSet.getRuntimeClasspath(),
                             target.getConfigurations().getByName(mainSourceSet.getRuntimeClasspathConfigurationName())

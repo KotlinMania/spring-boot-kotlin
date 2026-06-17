@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+Automatic-Module-Name: spring.boot.smoke.test.web.jsp
+Build-Jdk-Spec: 17
+Built-By: Spring
+Implementation-Title: Spring Boot web JSP smoke test
+Implementation-Version: 4.1.0-SNAPSHOT
+

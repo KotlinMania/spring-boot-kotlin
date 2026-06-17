@@ -16,6 +16,7 @@
 
 plugins {
 	id "java-library"
+	id "org.jetbrains.kotlin.jvm"
 	id "org.springframework.boot.auto-configuration"
 	id "org.springframework.boot.configuration-properties"
 	id "org.springframework.boot.deployed"
@@ -34,6 +35,7 @@ dependencies {
 	testImplementation(project(":test-support:spring-boot-test-support"))
 
 	testRuntimeOnly("ch.qos.logback:logback-classic")
+	testRuntimeOnly("org.jetbrains.kotlin:kotlin-reflect")
 }
 
 tasks.named("compileTestJava") {

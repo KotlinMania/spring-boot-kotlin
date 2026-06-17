@@ -36,19 +36,20 @@ class AggregatorPlugin : Plugin<Project> {
     override fun apply(target: Project) {
         val aggregates = target.objects.domainObjectContainer(Aggregate::class.java)
         target.extensions.add("aggregates", aggregates)
-        aggregates.all { aggregate ->
+        aggregates.configureEach {
+            val aggregate = this
             val dependencies = target.configurations.dependencyScope(aggregate.name + "Dependencies")
-            val aggregated = target.configurations.resolvable(aggregate.name) { configuration ->
-                configuration.extendsFrom(dependencies.get())
-                configureAttributes(configuration, aggregate, target.objects)
+            val aggregated = target.configurations.resolvable(aggregate.name) {
+                extendsFrom(dependencies.get())
+                configureAttributes(this, aggregate, target.objects)
             }
-            target.rootProject.allprojects { project ->
-                target.dependencies.add(dependencies.name, project)
+            target.rootProject.allprojects {
+                target.dependencies.add(dependencies.name, this)
             }
             aggregate.files.convention(
                 aggregated.map { configuration ->
                     configuration.incoming
-                        .artifactView { view -> view.isLenient = true }
+                        .artifactView { isLenient = true }
                         .files
                 }
             )
@@ -56,12 +57,12 @@ class AggregatorPlugin : Plugin<Project> {
     }
 
     private fun configureAttributes(configuration: Configuration, aggregate: Aggregate, objects: ObjectFactory) {
-        configuration.attributes { attributes ->
-            attributes.attributeProvider(
+        configuration.attributes {
+            attributeProvider(
                 Category.CATEGORY_ATTRIBUTE,
                 aggregate.category.map { category -> objects.named(Category::class.java, category) }
             )
-            attributes.attributeProvider(
+            attributeProvider(
                 Usage.USAGE_ATTRIBUTE,
                 aggregate.usage.map { usage -> objects.named(Usage::class.java, usage) }
             )

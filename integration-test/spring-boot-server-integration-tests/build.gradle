@@ -16,7 +16,7 @@
 
 plugins {
 	id "java"
-	id "org.springframework.boot.integration-test"
+	id "io.github.kotlinmania.spring.boot.integration-test"
 }
 
 description = "Spring Boot Server Integration Tests"

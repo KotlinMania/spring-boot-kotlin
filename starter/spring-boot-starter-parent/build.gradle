@@ -15,8 +15,8 @@
  */
 
 plugins {
-	id "org.springframework.boot.deployed"
-	id "org.springframework.boot.maven-repository"
+	id "io.github.kotlinmania.spring.boot.deployed"
+	id "io.github.kotlinmania.spring.boot.maven-repository"
 }
 
 description = "Parent pom providing dependency and plugin management for applications built with Maven"

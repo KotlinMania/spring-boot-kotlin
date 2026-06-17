@@ -15,7 +15,7 @@
  */
 
 plugins {
-	id "org.springframework.boot.starter"
+	id "io.github.kotlinmania.spring.boot.starter"
 }
 
 description = "Starter for using Redis key-value data store with Spring Data Redis and the Lettuce client"

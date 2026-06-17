@@ -15,7 +15,7 @@
  */
 
 plugins {
-	id "org.springframework.boot.starter"
+	id "io.github.kotlinmania.spring.boot.starter"
 }
 
 description = "Core starter, including auto-configuration support, logging and YAML"

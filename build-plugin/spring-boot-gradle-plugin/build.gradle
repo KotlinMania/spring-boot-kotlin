@@ -20,10 +20,10 @@ import org.gradle.plugins.ide.eclipse.model.Library
 plugins {
 	id "java-gradle-plugin"
 	id "maven-publish"
-	id "org.springframework.boot.antora-contributor"
-	id "org.springframework.boot.docker-test"
-	id "org.springframework.boot.maven-repository"
-	id "org.springframework.boot.optional-dependencies"
+	id "io.github.kotlinmania.spring.boot.antora-contributor"
+	id "io.github.kotlinmania.spring.boot.docker-test"
+	id "io.github.kotlinmania.spring.boot.maven-repository"
+	id "io.github.kotlinmania.spring.boot.optional-dependencies"
 }
 
 description = "Spring Boot Gradle Plugins"

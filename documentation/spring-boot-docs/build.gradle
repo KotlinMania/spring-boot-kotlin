@@ -25,10 +25,10 @@ plugins {
 	id "org.jetbrains.dokka"
 	id "java"
 	id "org.antora"
-	id "org.springframework.boot.aggregator"
-	id "org.springframework.boot.antora-contributor"
-	id "org.springframework.boot.antora-dependencies"
-	id "org.springframework.boot.deployed"
+	id "io.github.kotlinmania.spring.boot.aggregator"
+	id "io.github.kotlinmania.spring.boot.antora-contributor"
+	id "io.github.kotlinmania.spring.boot.antora-dependencies"
+	id "io.github.kotlinmania.spring.boot.deployed"
 }
 
 description = "Spring Boot Docs"

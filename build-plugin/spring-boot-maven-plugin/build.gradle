@@ -15,10 +15,10 @@
  */
 
 plugins {
-	id "org.springframework.boot.antora-contributor"
-	id "org.springframework.boot.maven-plugin"
-	id "org.springframework.boot.optional-dependencies"
-	id "org.springframework.boot.docker-test"
+	id "io.github.kotlinmania.spring.boot.antora-contributor"
+	id "io.github.kotlinmania.spring.boot.maven-plugin"
+	id "io.github.kotlinmania.spring.boot.optional-dependencies"
+	id "io.github.kotlinmania.spring.boot.docker-test"
 }
 
 description = "Spring Boot Maven Plugin"

@@ -16,7 +16,7 @@
 
 plugins {
 	id "java"
-	id "org.springframework.boot.antora-contributor"
+	id "io.github.kotlinmania.spring.boot.antora-contributor"
 }
 
 description = "Spring Boot Actuator Docs"

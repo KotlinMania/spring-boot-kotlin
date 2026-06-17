@@ -15,7 +15,7 @@
  */
 
 plugins {
-	id "org.springframework.boot.bom"
+	id "io.github.kotlinmania.spring.boot.bom"
 }
 
 description = "Spring Boot Internal Dependencies"

@@ -20,7 +20,6 @@ dependencyResolutionManagement {
         mavenCentral()
         google()
         gradlePluginPortal()
-        maven { url = uri("https://repo.spring.io/snapshot") }
     }
 }
 

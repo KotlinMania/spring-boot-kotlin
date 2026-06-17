@@ -16,7 +16,7 @@
 
 plugins {
 	id "war"
-	id "org.springframework.boot.system-test"
+	id "io.github.kotlinmania.spring.boot.system-test"
 }
 
 description = "Spring Boot Deployment Tests"

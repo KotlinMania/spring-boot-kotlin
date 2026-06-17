@@ -17,7 +17,7 @@
 plugins {
 	id "java"
 	id "com.google.protobuf"
-	id "org.springframework.boot.docker-test"
+	id "io.github.kotlinmania.spring.boot.docker-test"
 }
 
 description = "Spring Boot gRPC client smoke test"

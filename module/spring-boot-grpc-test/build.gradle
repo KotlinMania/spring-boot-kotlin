@@ -16,8 +16,8 @@
 
 plugins {
 	id "java-library"
-	id "org.springframework.boot.deployed"
-	id "org.springframework.boot.optional-dependencies"
+	id "io.github.kotlinmania.spring.boot.deployed"
+	id "io.github.kotlinmania.spring.boot.optional-dependencies"
 }
 
 description = "Spring Boot gRPC Test"

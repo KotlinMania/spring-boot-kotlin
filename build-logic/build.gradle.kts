@@ -6,8 +6,6 @@
  * (git history) and inlined here; migrate to gradle/libs.versions.toml later.
  */
 
-import java.util.concurrent.TimeUnit
-
 plugins {
     `kotlin-dsl`
     id("io.spring.javaformat") version "0.0.47"
@@ -19,17 +17,18 @@ plugins {
 repositories {
     mavenCentral()
     gradlePluginPortal()
+    // Required: spring-framework-bom:7.0.8-SNAPSHOT (and spring-context/core/web)
+    // are snapshots, published only here.
     maven { url = uri("https://repo.spring.io/snapshot") }
 }
 
 kotlin {
-    // AGP 9.x / Android KMP plugin require the Gradle build to run on JDK 17.
-    jvmToolchain(17)
-    sourceSets {
-        named("main") {
-            kotlin.setSrcDirs(listOf("src/commonMain/kotlin"))
-            resources.srcDir("src/commonMain/resources")
-        }
+    jvmToolchain(21)
+    // build-logic is a JVM `kotlin-dsl` build (no KMP source sets). Point the
+    // standard `main` source set at the commonMain-named dirs the repo uses.
+    sourceSets.named("main") {
+        kotlin.srcDir("src/commonMain/kotlin")
+        resources.srcDir("src/commonMain/resources")
     }
 }
 
@@ -54,7 +53,6 @@ dependencies {
     implementation("dev.detekt:detekt-gradle-plugin:2.0.0-alpha.0")
     implementation("io.spring.gradle.antora:spring-antora-plugin:0.0.1")
     implementation("io.spring.javaformat:spring-javaformat-gradle-plugin:0.0.47")
-    implementation("io.spring.nohttp:nohttp-gradle:0.0.11")
     implementation("org.apache.httpcomponents.client5:httpclient5:5.3.1")
     implementation("org.apache.maven:maven-artifact:3.9.13")
     implementation("org.antora:gradle-antora-plugin:1.0.0")
@@ -91,91 +89,91 @@ configurations.all {
 gradlePlugin {
     plugins {
         register("aggregatorPlugin") {
-            id = "org.springframework.boot.aggregator"
+            id = "io.github.kotlinmania.spring.boot.aggregator"
             implementationClass = "org.springframework.boot.build.aggregation.AggregatorPlugin"
         }
         register("annotationProcessorPlugin") {
-            id = "org.springframework.boot.annotation-processor"
+            id = "io.github.kotlinmania.spring.boot.annotation-processor"
             implementationClass = "org.springframework.boot.build.processors.AnnotationProcessorPlugin"
         }
         register("cycleDetectionPlugin") {
-            id = "org.springframework.boot.cycle-detection"
+            id = "io.github.kotlinmania.spring.boot.cycle-detection"
             implementationClass = "org.springframework.boot.build.cycledetection.CycleDetectionPlugin"
         }
         register("antoraAggregatedPlugin") {
-            id = "org.springframework.boot.antora-contributor"
+            id = "io.github.kotlinmania.spring.boot.antora-contributor"
             implementationClass = "org.springframework.boot.build.antora.AntoraContributorPlugin"
         }
         register("antoraAggregatorPlugin") {
-            id = "org.springframework.boot.antora-dependencies"
+            id = "io.github.kotlinmania.spring.boot.antora-dependencies"
             implementationClass = "org.springframework.boot.build.antora.AntoraDependenciesPlugin"
         }
         register("architecturePlugin") {
-            id = "org.springframework.boot.architecture"
+            id = "io.github.kotlinmania.spring.boot.architecture"
             implementationClass = "org.springframework.boot.build.architecture.ArchitecturePlugin"
         }
         register("autoConfigurationPlugin") {
-            id = "org.springframework.boot.auto-configuration"
+            id = "io.github.kotlinmania.spring.boot.auto-configuration"
             implementationClass = "org.springframework.boot.build.autoconfigure.AutoConfigurationPlugin"
         }
         register("bomPlugin") {
-            id = "org.springframework.boot.bom"
+            id = "io.github.kotlinmania.spring.boot.bom"
             implementationClass = "org.springframework.boot.build.bom.BomPlugin"
         }
         register("configurationMetadataPlugin") {
-            id = "org.springframework.boot.configuration-metadata"
+            id = "io.github.kotlinmania.spring.boot.configuration-metadata"
             implementationClass = "org.springframework.boot.build.context.properties.ConfigurationMetadataPlugin"
         }
         register("configurationPropertiesPlugin") {
-            id = "org.springframework.boot.configuration-properties"
+            id = "io.github.kotlinmania.spring.boot.configuration-properties"
             implementationClass = "org.springframework.boot.build.context.properties.ConfigurationPropertiesPlugin"
         }
         register("conventionsPlugin") {
-            id = "org.springframework.boot.conventions"
-            implementationClass = "org.springframework.boot.build.ConventionsPlugin"
+            id = "io.github.kotlinmania.spring.boot.conventions"
+            implementationClass = "io.github.kotlinmania.spring.boot.build.ConventionsPlugin"
         }
         register("deployedPlugin") {
-            id = "org.springframework.boot.deployed"
+            id = "io.github.kotlinmania.spring.boot.deployed"
             implementationClass = "org.springframework.boot.build.DeployedPlugin"
         }
         register("dockerTestPlugin") {
-            id = "org.springframework.boot.docker-test"
+            id = "io.github.kotlinmania.spring.boot.docker-test"
             implementationClass = "org.springframework.boot.build.test.DockerTestPlugin"
         }
         register("integrationTestPlugin") {
-            id = "org.springframework.boot.integration-test"
+            id = "io.github.kotlinmania.spring.boot.integration-test"
             implementationClass = "org.springframework.boot.build.test.IntegrationTestPlugin"
         }
         register("mavenPluginPlugin") {
-            id = "org.springframework.boot.maven-plugin"
+            id = "io.github.kotlinmania.spring.boot.maven-plugin"
             implementationClass = "org.springframework.boot.build.mavenplugin.MavenPluginPlugin"
         }
         register("mavenRepositoryPlugin") {
-            id = "org.springframework.boot.maven-repository"
+            id = "io.github.kotlinmania.spring.boot.maven-repository"
             implementationClass = "org.springframework.boot.build.MavenRepositoryPlugin"
         }
         register("optionalDependenciesPlugin") {
-            id = "org.springframework.boot.optional-dependencies"
+            id = "io.github.kotlinmania.spring.boot.optional-dependencies"
             implementationClass = "org.springframework.boot.build.optional.OptionalDependenciesPlugin"
         }
         register("starterPlugin") {
-            id = "org.springframework.boot.starter"
+            id = "io.github.kotlinmania.spring.boot.starter"
             implementationClass = "org.springframework.boot.build.starters.StarterPlugin"
         }
         register("systemTestPlugin") {
-            id = "org.springframework.boot.system-test"
+            id = "io.github.kotlinmania.spring.boot.system-test"
             implementationClass = "org.springframework.boot.build.test.SystemTestPlugin"
         }
         register("testAutoConfigurationPlugin") {
-            id = "org.springframework.boot.test-auto-configuration"
+            id = "io.github.kotlinmania.spring.boot.test-auto-configuration"
             implementationClass = "org.springframework.boot.build.test.autoconfigure.TestAutoConfigurationPlugin"
         }
         register("testFailuresPlugin") {
-            id = "org.springframework.boot.test-failures"
+            id = "io.github.kotlinmania.spring.boot.test-failures"
             implementationClass = "org.springframework.boot.build.testing.TestFailuresPlugin"
         }
         register("testSlicePlugin") {
-            id = "org.springframework.boot.test-slice"
+            id = "io.github.kotlinmania.spring.boot.test-slice"
             implementationClass = "org.springframework.boot.build.test.autoconfigure.TestSlicePlugin"
         }
     }

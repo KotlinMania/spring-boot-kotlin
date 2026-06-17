@@ -20,8 +20,8 @@ import org.springframework.boot.build.properties.BuildType
 plugins {
 	id "java"
 	id "eclipse"
-	id "org.springframework.boot.deployed"
-	id "org.springframework.boot.integration-test"
+	id "io.github.kotlinmania.spring.boot.deployed"
+	id "io.github.kotlinmania.spring.boot.integration-test"
 }
 
 description = "Spring Boot CLI"

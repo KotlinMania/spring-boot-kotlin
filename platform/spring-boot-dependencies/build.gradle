@@ -15,8 +15,8 @@
  */
 
 plugins {
-	id "org.springframework.boot.bom"
-	id "org.springframework.boot.deployed"
+	id "io.github.kotlinmania.spring.boot.bom"
+	id "io.github.kotlinmania.spring.boot.deployed"
 }
 
 description = "Spring Boot Dependencies"

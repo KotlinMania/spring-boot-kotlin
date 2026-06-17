@@ -16,12 +16,12 @@
 
 plugins {
     `java-library`
-    id("org.springframework.boot.conventions")
+    id("io.github.kotlinmania.spring.boot.conventions")
     id("org.jetbrains.kotlin.jvm")
-    id("org.springframework.boot.auto-configuration")
-    id("org.springframework.boot.configuration-properties")
-    id("org.springframework.boot.deployed")
-    id("org.springframework.boot.optional-dependencies")
+    id("io.github.kotlinmania.spring.boot.auto-configuration")
+    id("io.github.kotlinmania.spring.boot.configuration-properties")
+    id("io.github.kotlinmania.spring.boot.deployed")
+    id("io.github.kotlinmania.spring.boot.optional-dependencies")
 }
 
 description = "Spring Boot SendGrid"

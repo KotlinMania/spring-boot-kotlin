@@ -145,7 +145,7 @@ class JavaConventions(private val systemRequirements: SystemRequirementsExtensio
                     task!!.packageName.set("org.springframework.boot.build.legal")
                     task.destinationDirectory.set(project.getLayout().getBuildDirectory().dir("legal"))
                     task.resourceNames
-                        .set(kotlin.collections.mutableListOf<String?>("LICENSE.txt", "NOTICE.txt"))
+                        .set(mutableListOf("LICENSE.txt", "NOTICE.txt"))
                     task.properties.put("version", project.version.toString())
                 }
         val sourceSets = project.getExtensions().getByType<SourceSetContainer>(SourceSetContainer::class.java)
@@ -245,7 +245,7 @@ class JavaConventions(private val systemRequirements: SystemRequirementsExtensio
 
     private fun configureJavaConventions(project: Project) {
         project.getTasks().withType<JavaCompile>().configureEach { val compile = this;
-            compile!!.doFirst { task: Task -> assertCompatible(compile) }
+            compile.doFirst { assertCompatible(compile) }
             compile.getOptions().setEncoding("UTF-8")
             compile.getOptions().getRelease().set(RUNTIME_JAVA_VERSION)
             val args: MutableSet<String?> = java.util.LinkedHashSet<String?>(compile.getOptions().getCompilerArgs())
@@ -288,10 +288,8 @@ class JavaConventions(private val systemRequirements: SystemRequirementsExtensio
             .add(project.getDependencies().create("com.puppycrawl.tools:checkstyle:" + checkstyle.getToolVersion()))
         checkstyleDependencies
             .add(project.getDependencies().create("io.spring.javaformat:spring-javaformat-checkstyle:" + version))
-        project.getTasks().withType<CheckFormat>(
-            CheckFormat::class.java) { task: CheckFormat -> this.excludeGeneratedSources(task) }
-        project.getTasks().withType<Checkstyle>(
-            Checkstyle::class.java) { task: Checkstyle -> this.excludeGeneratedSources(task) }
+        project.getTasks().withType<CheckFormat>().configureEach { excludeGeneratedSources(this) }
+        project.getTasks().withType<Checkstyle>().configureEach { excludeGeneratedSources(this) }
     }
 
     private fun excludeGeneratedSources(task: SourceTask): SourceTask {
@@ -306,18 +304,18 @@ class JavaConventions(private val systemRequirements: SystemRequirementsExtensio
     private fun configureDependencyManagement(project: Project) {
         val configurations = project.getConfigurations()
         val dependencyManagement =
-            configurations.create("dependencyManagement") { configuration: Configuration ->
-                configuration.setVisible(false)
-                configuration.setCanBeConsumed(false)
-                configuration.setCanBeResolved(false)
+            configurations.create("dependencyManagement") {
+                setVisible(false)
+                setCanBeConsumed(false)
+                setCanBeResolved(false)
             }
         configurations
-            .matching(Spec { configuration: Configuration ->
+            .matching { configuration ->
                 (configuration.name.endsWith("Classpath")
                         || JavaPlugin.ANNOTATION_PROCESSOR_CONFIGURATION_NAME == configuration.name)
                         && (!configuration.name.contains("dokka"))
-            })
-            .all { configuration: Configuration -> configuration.extendsFrom(dependencyManagement) }
+            }
+            .configureEach { extendsFrom(dependencyManagement) }
         val springBootParent = project.getDependencies()
             .enforcedPlatform(
                 project.getDependencies()
@@ -329,13 +327,11 @@ class JavaConventions(private val systemRequirements: SystemRequirementsExtensio
                     )
             )
         dependencyManagement.getDependencies().add(springBootParent)
-        project.plugins
-            .withType<OptionalDependenciesPlugin>(
-                OptionalDependenciesPlugin::class.java) { optionalDependencies: OptionalDependenciesPlugin ->
-                    configurations
-                        .getByName(OptionalDependenciesPlugin.OPTIONAL_CONFIGURATION_NAME)
-                        .extendsFrom(dependencyManagement)
-                }
+        project.plugins.withType<OptionalDependenciesPlugin>().configureEach {
+            configurations
+                .getByName(OptionalDependenciesPlugin.OPTIONAL_CONFIGURATION_NAME)
+                .extendsFrom(dependencyManagement)
+        }
     }
 
     private fun configureToolchain(project: Project) {
@@ -344,10 +340,10 @@ class JavaConventions(private val systemRequirements: SystemRequirementsExtensio
 
     private fun configureProhibitedDependencyChecks(project: Project) {
         val sourceSets = project.getExtensions().getByType<SourceSetContainer>(SourceSetContainer::class.java)
-        sourceSets.all { sourceSet: SourceSet ->
+        sourceSets.configureEach {
             createProhibitedDependenciesChecks(
                 project,
-                sourceSet!!.getCompileClasspathConfigurationName(), sourceSet.getRuntimeClasspathConfigurationName()
+                getCompileClasspathConfigurationName(), getRuntimeClasspathConfigurationName()
             )
         }
     }
@@ -364,33 +360,31 @@ class JavaConventions(private val systemRequirements: SystemRequirementsExtensio
         val checkClasspathForProhibitedDependencies = project
             .getTasks()
             .register<CheckClasspathForProhibitedDependencies>(
-                "check" + StringUtils.capitalize(classpath.name + "ForProhibitedDependencies"),
-                CheckClasspathForProhibitedDependencies::class.java) { task: CheckClasspathForProhibitedDependencies -> task!!.setClasspath(classpath) }
+                "check" + StringUtils.capitalize(classpath.name + "ForProhibitedDependencies")) { setClasspath(classpath) }
         project.getTasks().getByName(JavaBasePlugin.CHECK_TASK_NAME).dependsOn(checkClasspathForProhibitedDependencies)
     }
 
     private fun configureFactoriesFilesChecks(project: Project) {
         val sourceSets: SourceSetContainer =
             project.getExtensions().getByType<JavaPluginExtension>(JavaPluginExtension::class.java).sourceSets
-        sourceSets.matching(Spec { sourceSet: SourceSet? -> SourceSet.MAIN_SOURCE_SET_NAME == sourceSet!!.name })
-            .configureEach { main: SourceSet ->
+        sourceSets.matching { sourceSet -> SourceSet.MAIN_SOURCE_SET_NAME == sourceSet.name }
+            .configureEach {
+                val main = this
                 val check: TaskProvider<Task> = project.getTasks().named(JavaBasePlugin.CHECK_TASK_NAME)
                 val checkAotFactories = project.getTasks()
-                    .register<CheckAotFactories>(
-                        "checkAotFactories") { val task = this;
-                            task!!.source = main!!.getResources()
-                            task.setClasspath(main.getOutput().getClassesDirs())
-                            task.setDescription("Checks the META-INF/spring/aot.factories file of the main source set.")
-                        }
-                check.configure { task: Task -> task!!.dependsOn(checkAotFactories) }
+                    .register<CheckAotFactories>("checkAotFactories") {
+                        source = main.getResources()
+                        setClasspath(main.getOutput().getClassesDirs())
+                        setDescription("Checks the META-INF/spring/aot.factories file of the main source set.")
+                    }
+                check.configure { dependsOn(checkAotFactories) }
                 val checkSpringFactories = project.getTasks()
-                    .register<CheckSpringFactories>(
-                        "checkSpringFactories") { val task = this;
-                            task!!.source = main!!.getResources()
-                            task.setClasspath(main.getOutput().getClassesDirs())
-                            task.setDescription("Checks the META-INF/spring.factories file of the main source set.")
-                        }
-                check.configure { task: Task -> task!!.dependsOn(checkSpringFactories) }
+                    .register<CheckSpringFactories>("checkSpringFactories") {
+                        source = main.getResources()
+                        setClasspath(main.getOutput().getClassesDirs())
+                        setDescription("Checks the META-INF/spring.factories file of the main source set.")
+                    }
+                check.configure { dependsOn(checkSpringFactories) }
             }
     }
 

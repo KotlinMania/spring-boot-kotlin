@@ -46,16 +46,16 @@ class MavenRepositoryPlugin : Plugin<Project> {
         project.plugins.apply<MavenPublishPlugin>(MavenPublishPlugin::class.java)
         val publishing = project.getExtensions().getByType<PublishingExtension>(PublishingExtension::class.java)
         val repositoryLocation = project.getLayout().getBuildDirectory().dir("maven-repository").get().asFile
-        publishing.getRepositories().maven(Action { mavenRepository: MavenArtifactRepository ->
+        publishing.getRepositories().maven { mavenRepository: MavenArtifactRepository ->
             mavenRepository!!.setName("project")
             mavenRepository.setUrl(repositoryLocation.toURI())
-        })
+        }
         project.getTasks()
             .matching(Spec { task: Task? -> task!!.name == PUBLISH_TO_PROJECT_REPOSITORY_TASK_NAME })
-            .all(Action { task: Task -> setUpProjectRepository(project, task!!, repositoryLocation) })
+            .all { task: Task -> setUpProjectRepository(project, task!!, repositoryLocation) }
         project.getTasks()
             .matching(Spec { task: Task? -> task!!.name == "publishPluginMavenPublicationToProjectRepository" })
-            .all(Action { task: Task -> setUpProjectRepository(project, task!!, repositoryLocation) })
+            .all { task: Task -> setUpProjectRepository(project, task!!, repositoryLocation) }
     }
 
     private fun setUpProjectRepository(project: Project, publishTask: Task, repositoryLocation: File) {
@@ -68,25 +68,25 @@ class MavenRepositoryPlugin : Plugin<Project> {
         val target = projectRepository.getDependencies()
         project.plugins
             .withType<JavaPlugin>(JavaPlugin::class.java)
-            .all(Action { javaPlugin: JavaPlugin ->
+            .all { javaPlugin: JavaPlugin ->
                 addMavenRepositoryProjectDependencies(
                     project,
                     JavaPlugin.IMPLEMENTATION_CONFIGURATION_NAME, target
                 )
-            })
+            }
         project.plugins
             .withType<JavaLibraryPlugin>(JavaLibraryPlugin::class.java)
-            .all(Action { javaLibraryPlugin: JavaLibraryPlugin ->
+            .all { javaLibraryPlugin: JavaLibraryPlugin ->
                 addMavenRepositoryProjectDependencies(
                     project,
                     JavaPlugin.API_CONFIGURATION_NAME, target
                 )
-            })
+            }
         project.plugins.withType<JavaPlatformPlugin>(JavaPlatformPlugin::class.java)
-            .all(Action { javaPlugin: JavaPlatformPlugin ->
+            .all { javaPlugin: JavaPlatformPlugin ->
                 addMavenRepositoryProjectDependencies(project, JavaPlatformPlugin.API_CONFIGURATION_NAME, target)
                 addMavenRepositoryPlatformDependencies(project, JavaPlatformPlugin.API_CONFIGURATION_NAME, target)
-            })
+            }
     }
 
     private fun addMavenRepositoryProjectDependencies(
@@ -97,13 +97,13 @@ class MavenRepositoryPlugin : Plugin<Project> {
             .getByName(sourceConfigurationName)
             .getDependencies()
             .withType<ProjectDependency>(ProjectDependency::class.java)
-            .all(Action { dependency: ProjectDependency ->
+            .all { dependency: ProjectDependency ->
                 val copy = dependency!!.copy()
                 if (copy.getAttributes().isEmpty()) {
                     copy.setTargetConfiguration(MAVEN_REPOSITORY_CONFIGURATION_NAME)
                 }
                 target.add(copy)
-            })
+            }
     }
 
     private fun addMavenRepositoryPlatformDependencies(
@@ -118,11 +118,11 @@ class MavenRepositoryPlugin : Plugin<Project> {
                 val category = dependency!!.getAttributes().getAttribute<Category>(Category.CATEGORY_ATTRIBUTE)
                 Category.REGULAR_PLATFORM == category!!.name
             })
-            .all(Action { dependency: ModuleDependency ->
+            .all { dependency: ModuleDependency ->
                 val pom = project.getDependencies()
                     .create(dependency!!.getGroup() + ":" + dependency.name + ":" + dependency.version)
                 target.add(pom)
-            })
+            }
     }
 
     private class CleanAction(private val location: File?) : Action<Task> {

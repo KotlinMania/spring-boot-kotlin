@@ -87,7 +87,7 @@ class ConfigurationPropertiesPlugin : Plugin<Project> {
             .getByName(SourceSet.MAIN_SOURCE_SET_NAME)
         project.getTasks()
             .named<JavaCompile>(mainSourceSet.getCompileJavaTaskName(), JavaCompile::class.java)
-            .configure(Action { compileJava: JavaCompile -> compileJava!!.getOptions().setIncremental(false) })
+            .configure { compileJava: JavaCompile -> compileJava!!.getOptions().setIncremental(false) }
     }
 
     private fun addMetadataArtifact(project: Project) {
@@ -98,8 +98,7 @@ class ConfigurationPropertiesPlugin : Plugin<Project> {
         project.getConfigurations()
             .consumable(
                 CONFIGURATION_PROPERTIES_METADATA_CONFIGURATION_NAME) { configuration: ConsumableConfiguration ->
-                    configuration!!.attributes(
-                        Action { attributes: AttributeContainer ->
+                    configuration!!.attributes { attributes: AttributeContainer ->
                             attributes!!.attribute<Category>(
                                 Category.CATEGORY_ATTRIBUTE,
                                 project.getObjects().named<Category>(Category::class.java, Category.DOCUMENTATION)
@@ -109,9 +108,9 @@ class ConfigurationPropertiesPlugin : Plugin<Project> {
                                 project.getObjects()
                                     .named<Usage>(Usage::class.java, "configuration-properties-metadata")
                             )
-                        })
+                        }
                 }
-        project.afterEvaluate(Action { evaluatedProject: Project ->
+        project.afterEvaluate { evaluatedProject: Project ->
             evaluatedProject!!.getArtifacts()
                 .add(
                     CONFIGURATION_PROPERTIES_METADATA_CONFIGURATION_NAME,
@@ -121,7 +120,7 @@ class ConfigurationPropertiesPlugin : Plugin<Project> {
                         artifact!!
                             .builtBy(evaluatedProject.getTasks().getByName(mainSourceSet.getClassesTaskName()))
                     }
-        })
+        }
     }
 
     private fun configureAdditionalMetadataLocationsCompilerArgument(project: Project) {
@@ -155,7 +154,7 @@ class ConfigurationPropertiesPlugin : Plugin<Project> {
                 CHECK_ADDITIONAL_SPRING_CONFIGURATION_METADATA_TASK_NAME,
                 CheckAdditionalSpringConfigurationMetadata::class.java
             )
-        checkConfigurationMetadata.configure(Action { check: CheckAdditionalSpringConfigurationMetadata ->
+        checkConfigurationMetadata.configure { check: CheckAdditionalSpringConfigurationMetadata ->
             val mainSourceSet: SourceSet = project.getExtensions()
                 .getByType<JavaPluginExtension>(JavaPluginExtension::class.java)
                 .sourceSets
@@ -168,10 +167,10 @@ class ConfigurationPropertiesPlugin : Plugin<Project> {
                         .getBuildDirectory()
                         .file("reports/additional-spring-configuration-metadata/check.txt")
                 )
-        })
+        }
         project.getTasks()
             .named(LifecycleBasePlugin.CHECK_TASK_NAME)
-            .configure(Action { check: Task -> check!!.dependsOn(checkConfigurationMetadata) })
+            .configure { check: Task -> check!!.dependsOn(checkConfigurationMetadata) }
     }
 
     private fun registerCheckMetadataTask(project: Project) {
@@ -180,7 +179,7 @@ class ConfigurationPropertiesPlugin : Plugin<Project> {
                 CHECK_SPRING_CONFIGURATION_METADATA_TASK_NAME,
                 CheckSpringConfigurationMetadata::class.java
             )
-        checkConfigurationMetadata.configure(Action { check: CheckSpringConfigurationMetadata ->
+        checkConfigurationMetadata.configure { check: CheckSpringConfigurationMetadata ->
             val mainSourceSet: SourceSet = project.getExtensions()
                 .getByType<JavaPluginExtension>(JavaPluginExtension::class.java)
                 .sourceSets
@@ -194,10 +193,10 @@ class ConfigurationPropertiesPlugin : Plugin<Project> {
             check!!.metadataLocation.set(metadataLocation)
             check.reportLocation
                 .set(project.getLayout().getBuildDirectory().file("reports/spring-configuration-metadata/check.txt"))
-        })
+        }
         project.getTasks()
             .named(LifecycleBasePlugin.CHECK_TASK_NAME)
-            .configure(Action { check: Task -> check!!.dependsOn(checkConfigurationMetadata) })
+            .configure { check: Task -> check!!.dependsOn(checkConfigurationMetadata) }
     }
 
     companion object {

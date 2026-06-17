@@ -76,7 +76,7 @@ class KotlinConventions {
 
     private fun configureDokka(project: Project) {
         val dokka = project.getExtensions().getByType<DokkaExtension>(DokkaExtension::class.java)
-        dokka.dokkaSourceSets.configureEach(Action { sourceSet: DokkaSourceSetSpec ->
+        dokka.dokkaSourceSets.configureEach { sourceSet: DokkaSourceSetSpec ->
             if (SourceSet.MAIN_SOURCE_SET_NAME == sourceSet!!.name) {
                 sourceSet.sourceRoots.setFrom(project.file("src/commonMain/kotlin"))
                 sourceSet.classpath
@@ -102,17 +102,17 @@ class KotlinConventions {
             } else {
                 sourceSet.suppress.set(true)
             }
-        })
+        }
     }
 
     private fun configureDetekt(project: Project) {
         project.plugins.apply<DetektPlugin>(DetektPlugin::class.java)
         val detekt = project.getExtensions().getByType<DetektExtension>(DetektExtension::class.java)
         detekt.config.setFrom(project.getRootProject().file("config/detekt/config.yml"))
-        project.getTasks().withType<Detekt>(Detekt::class.java).configureEach(Action { task: Detekt ->
+        project.getTasks().withType<Detekt>(Detekt::class.java).configureEach { task: Detekt ->
             task!!.jvmTarget.set(JVM_TARGET.target)
             normalizeMachineSpecificDefaults(project, task)
-        })
+        }
     }
 
     private fun normalizeMachineSpecificDefaults(project: Project?, task: Detekt) {

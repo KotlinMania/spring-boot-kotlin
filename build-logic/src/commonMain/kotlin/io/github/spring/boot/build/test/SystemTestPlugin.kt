@@ -49,13 +49,13 @@ class SystemTestPlugin : Plugin<Project> {
         project.plugins
             .withType<EclipsePlugin>(EclipsePlugin::class.java) { eclipsePlugin: EclipsePlugin ->
                 val eclipse = project.getExtensions().getByType<EclipseModel>(EclipseModel::class.java)
-                eclipse.classpath(Action { classpath: EclipseClasspath ->
+                eclipse.classpath { classpath: EclipseClasspath ->
                     classpath!!.getPlusConfigurations()
                         .add(
                             project.getConfigurations()
                                 .getByName(systemTestSourceSet.getRuntimeClasspathConfigurationName())
                         )
-                })
+                }
             }
         project.getDependencies()
             .add(systemTestSourceSet.getRuntimeOnlyConfigurationName(), "org.junit.platform:junit-platform-launcher")

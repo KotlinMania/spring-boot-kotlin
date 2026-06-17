@@ -35,7 +35,7 @@ class EclipseConventions(private val systemRequirements: SystemRequirementsExten
     fun apply(project: Project) {
         project.plugins.withType<EclipsePlugin>(
             EclipsePlugin::class.java) { eclipse: EclipsePlugin -> configure(project, eclipse) }
-        project.afterEvaluate(Action { project: Project -> this.setJavaRuntimeName(project) })
+        project.afterEvaluate { project: Project -> this.setJavaRuntimeName(project) }
     }
 
     private fun configure(project: Project, eclipsePlugin: EclipsePlugin?): DomainObjectCollection<JavaBasePlugin> {
@@ -45,8 +45,8 @@ class EclipseConventions(private val systemRequirements: SystemRequirementsExten
             .withType<JavaBasePlugin>(JavaBasePlugin::class.java) { javaBase: JavaBasePlugin ->
                 val model = project.getExtensions().getByType<EclipseModel>(EclipseModel::class.java)
                 model.synchronizationTasks(synchronizeResourceSettings, synchronizeJdtSettings)
-                model.jdt(Action { jdt: EclipseJdt -> this.configureJdt(jdt) })
-                model.classpath(Action { classpath: EclipseClasspath -> this.configureClasspath(classpath) })
+                model.jdt { jdt: EclipseJdt -> this.configureJdt(jdt) }
+                model.classpath { classpath: EclipseClasspath -> this.configureClasspath(classpath) }
             }
     }
 
@@ -56,11 +56,11 @@ class EclipseConventions(private val systemRequirements: SystemRequirementsExten
                 "eclipseSynchronizateResourceSettings",
                 EclipseSynchronizeResourceSettings::class.java
             )
-        eclipseSynchronizateResource.configure(Action { task: EclipseSynchronizeResourceSettings ->
+        eclipseSynchronizateResource.configure { task: EclipseSynchronizeResourceSettings ->
             task!!.setDescription("Synchronizate the Eclipse resource settings file from Buildship.")
             task.setOutputFile(project.file(".settings/org.eclipse.core.resources.prefs"))
             task.setInputFile(project.file(".settings/org.eclipse.core.resources.prefs"))
-        })
+        }
         return eclipseSynchronizateResource
     }
 
@@ -70,11 +70,11 @@ class EclipseConventions(private val systemRequirements: SystemRequirementsExten
                 "eclipseSynchronizeJdtSettings",
                 EclipseSynchronizeJdtSettings::class.java
             )
-        taskProvider.configure(Action { task: EclipseSynchronizeJdtSettings ->
+        taskProvider.configure { task: EclipseSynchronizeJdtSettings ->
             task!!.setDescription("Synchronizate the Eclipse JDT settings file from Buildship.")
             task.setOutputFile(project.file(".settings/org.eclipse.jdt.core.prefs"))
             task.setInputFile(project.file(".settings/org.eclipse.jdt.core.prefs"))
-        })
+        }
         return taskProvider
     }
 
@@ -84,16 +84,16 @@ class EclipseConventions(private val systemRequirements: SystemRequirementsExten
     }
 
     private fun configureClasspath(classpath: EclipseClasspath) {
-        classpath.file(Action { merger: XmlFileContentMerger -> this.configureClasspathFile(merger) })
+        classpath.file { merger: XmlFileContentMerger -> this.configureClasspathFile(merger) }
     }
 
     private fun configureClasspathFile(merger: XmlFileContentMerger) {
-        merger.whenMerged(Action { content: Any ->
+        merger.whenMerged { content: Any ->
             if (content is Classpath) {
                 content.getEntries()
                     .removeIf { entry: ClasspathEntry? -> this.isKotlinPluginContributedBuildDirectory(entry) }
             }
-        })
+        }
     }
 
     private fun setJavaRuntimeName(project: Project) {

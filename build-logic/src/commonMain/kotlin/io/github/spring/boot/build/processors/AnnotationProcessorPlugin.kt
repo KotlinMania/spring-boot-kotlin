@@ -29,14 +29,13 @@ import org.gradle.api.tasks.bundling.Jar
 class AnnotationProcessorPlugin : Plugin<Project> {
     override fun apply(project: Project) {
         project.getTasks().withType<Jar>(Jar::class.java) { jar: Jar ->
-            project.afterEvaluate(Action { evaluated: Project ->
-                jar!!.manifest(
-                    Action { manifest: Manifest ->
+            project.afterEvaluate { evaluated: Project ->
+                jar!!.manifest { manifest: Manifest ->
                         val attributes: MutableMap<String?, Any?> = java.util.TreeMap<String?, Any?>()
                         attributes.put("Spring-Boot-Jar-Type", JAR_TYPE)
                         manifest!!.attributes(attributes)
-                    })
-            })
+                    }
+            }
         }
     }
 

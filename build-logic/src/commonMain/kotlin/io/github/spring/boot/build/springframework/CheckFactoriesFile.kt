@@ -53,9 +53,9 @@ abstract class CheckFactoriesFile protected constructor(private val path: String
     @get:InputFiles
     var source: FileTree
         get() = this.sourceFiles.getAsFileTree()
-            .matching(Action { filter: PatternFilterable ->
+            .matching { filter: PatternFilterable ->
                 filter.include(this.path)
-            })
+            }
         set(source) {
             this.sourceFiles = project.getObjects().fileCollection().from(source)
         }

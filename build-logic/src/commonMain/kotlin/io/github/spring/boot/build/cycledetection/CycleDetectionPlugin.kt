@@ -37,7 +37,7 @@ import java.util.regex.Pattern
 class CycleDetectionPlugin : Plugin<Settings> {
     override fun apply(settings: Settings) {
         settings.getGradle().getTaskGraph()
-            .whenReady(Action { taskGraph: TaskExecutionGraph -> this.detectCycles(taskGraph) })
+            .whenReady { taskGraph: TaskExecutionGraph -> this.detectCycles(taskGraph) }
     }
 
     private fun detectCycles(taskGraph: TaskExecutionGraph) {

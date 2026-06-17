@@ -41,9 +41,9 @@ abstract class AutoConfigurationImportsTask : DefaultTask() {
     @get:InputFiles
     var source: FileTree
         get() = this.sourceFiles.getAsFileTree()
-            .matching(Action { filter: PatternFilterable ->
+            .matching { filter: PatternFilterable ->
                 filter!!.include(IMPORTS_FILE)
-            })
+            }
         set(source) {
             this.sourceFiles = project.getObjects().fileCollection().from(source)
         }

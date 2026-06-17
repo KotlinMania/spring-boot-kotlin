@@ -155,9 +155,9 @@ class JavaConventions(private val systemRequirements: SystemRequirementsExtensio
             .map<String> { obj: SourceSet? -> obj!!.getJavadocJarTaskName() }
             .collect(Collectors.toSet())
         project.getTasks().withType<Jar>(Jar::class.java) { jar: Jar ->
-            project.afterEvaluate(Action { evaluated: Project ->
-                jar!!.metaInf(Action { metaInf: CopySpec -> metaInf!!.from(extractLegalResources) })
-                jar.manifest(Action { manifest: Manifest ->
+            project.afterEvaluate { evaluated: Project ->
+                jar!!.metaInf { metaInf: CopySpec -> metaInf!!.from(extractLegalResources) }
+                jar.manifest { manifest: Manifest ->
                     val attributes: MutableMap<String?, Any?> = java.util.TreeMap<String?, Any?>()
                     attributes.put("Automatic-Module-Name", project.name.replace("-", "."))
                     // Build-Jdk-Spec is used by buildpacks to pick the JRE to install
@@ -169,8 +169,8 @@ class JavaConventions(private val systemRequirements: SystemRequirementsExtensio
                     )
                     attributes.put("Implementation-Version", project.version)
                     manifest!!.attributes(attributes)
-                })
-            })
+                }
+            }
         }
     }
 
@@ -247,7 +247,7 @@ class JavaConventions(private val systemRequirements: SystemRequirementsExtensio
 
     private fun configureJavaConventions(project: Project) {
         project.getTasks().withType<JavaCompile>(JavaCompile::class.java) { compile: JavaCompile ->
-            compile!!.doFirst(Action { task: Task -> assertCompatible(compile) })
+            compile!!.doFirst { task: Task -> assertCompatible(compile) }
             compile.getOptions().setEncoding("UTF-8")
             compile.getOptions().getRelease().set(RUNTIME_JAVA_VERSION)
             val args: MutableSet<String?> = java.util.LinkedHashSet<String?>(compile.getOptions().getCompilerArgs())
@@ -319,7 +319,7 @@ class JavaConventions(private val systemRequirements: SystemRequirementsExtensio
                         || JavaPlugin.ANNOTATION_PROCESSOR_CONFIGURATION_NAME == configuration.name)
                         && (!configuration.name.contains("dokka"))
             })
-            .all(Action { configuration: Configuration -> configuration.extendsFrom(dependencyManagement) })
+            .all { configuration: Configuration -> configuration.extendsFrom(dependencyManagement) }
         val springBootParent = project.getDependencies()
             .enforcedPlatform(
                 project.getDependencies()
@@ -346,12 +346,12 @@ class JavaConventions(private val systemRequirements: SystemRequirementsExtensio
 
     private fun configureProhibitedDependencyChecks(project: Project) {
         val sourceSets = project.getExtensions().getByType<SourceSetContainer>(SourceSetContainer::class.java)
-        sourceSets.all(Action { sourceSet: SourceSet ->
+        sourceSets.all { sourceSet: SourceSet ->
             createProhibitedDependenciesChecks(
                 project,
                 sourceSet!!.getCompileClasspathConfigurationName(), sourceSet.getRuntimeClasspathConfigurationName()
             )
-        })
+        }
     }
 
     private fun createProhibitedDependenciesChecks(project: Project, vararg configurationNames: String) {
@@ -375,7 +375,7 @@ class JavaConventions(private val systemRequirements: SystemRequirementsExtensio
         val sourceSets: SourceSetContainer =
             project.getExtensions().getByType<JavaPluginExtension>(JavaPluginExtension::class.java).sourceSets
         sourceSets.matching(Spec { sourceSet: SourceSet? -> SourceSet.MAIN_SOURCE_SET_NAME == sourceSet!!.name })
-            .configureEach(Action { main: SourceSet ->
+            .configureEach { main: SourceSet ->
                 val check: TaskProvider<Task> = project.getTasks().named(JavaBasePlugin.CHECK_TASK_NAME)
                 val checkAotFactories = project.getTasks()
                     .register<CheckAotFactories>(
@@ -385,7 +385,7 @@ class JavaConventions(private val systemRequirements: SystemRequirementsExtensio
                             task.setClasspath(main.getOutput().getClassesDirs())
                             task.setDescription("Checks the META-INF/spring/aot.factories file of the main source set.")
                         }
-                check.configure(Action { task: Task -> task!!.dependsOn(checkAotFactories) })
+                check.configure { task: Task -> task!!.dependsOn(checkAotFactories) }
                 val checkSpringFactories = project.getTasks()
                     .register<CheckSpringFactories>(
                         "checkSpringFactories",
@@ -394,8 +394,8 @@ class JavaConventions(private val systemRequirements: SystemRequirementsExtensio
                             task.setClasspath(main.getOutput().getClassesDirs())
                             task.setDescription("Checks the META-INF/spring.factories file of the main source set.")
                         }
-                check.configure(Action { task: Task -> task!!.dependsOn(checkSpringFactories) })
-            })
+                check.configure { task: Task -> task!!.dependsOn(checkSpringFactories) }
+            }
     }
 
     private fun configureNullability(project: Project) {

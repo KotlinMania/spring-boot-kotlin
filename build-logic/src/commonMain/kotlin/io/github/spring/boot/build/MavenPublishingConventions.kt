@@ -57,37 +57,37 @@ import java.util.concurrent.Callable
 class MavenPublishingConventions {
     fun apply(project: Project) {
         project.plugins.withType<MavenPublishPlugin>(MavenPublishPlugin::class.java)
-            .all(Action { mavenPublish: MavenPublishPlugin ->
+            .all { mavenPublish: MavenPublishPlugin ->
                 val publishing = project.getExtensions().getByType<PublishingExtension>(PublishingExtension::class.java)
                 if (project.hasProperty("deploymentRepository")) {
-                    publishing.getRepositories().maven(Action { mavenRepository: MavenArtifactRepository ->
+                    publishing.getRepositories().maven { mavenRepository: MavenArtifactRepository ->
                         mavenRepository!!.setUrl(project.property("deploymentRepository")!!)
                         mavenRepository.setName("deployment")
-                    })
+                    }
                 }
                 publishing.publications
                     .withType<MavenPublication>(MavenPublication::class.java)
-                    .all(Action { mavenPublication: MavenPublication ->
+                    .all { mavenPublication: MavenPublication ->
                         customizeMavenPublication(
                             mavenPublication!!,
                             project
                         )
-                    })
+                    }
                 project.plugins.withType<JavaPlugin>(JavaPlugin::class.java)
-                    .all(Action { javaPlugin: JavaPlugin ->
+                    .all { javaPlugin: JavaPlugin ->
                         val extension =
                             project.getExtensions().getByType<JavaPluginExtension>(JavaPluginExtension::class.java)
                         extension.withJavadocJar()
                         extension.withSourcesJar()
-                    })
-            })
+                    }
+            }
     }
 
     private fun customizeMavenPublication(publication: MavenPublication, project: Project) {
         customizePom(publication.getPom(), project)
         project.plugins
             .withType<JavaPlugin>(JavaPlugin::class.java)
-            .all(Action { javaPlugin: JavaPlugin -> customizeJavaMavenPublication(publication, project) })
+            .all { javaPlugin: JavaPlugin -> customizeJavaMavenPublication(publication, project) }
     }
 
     private fun customizePom(pom: MavenPom, project: Project) {
@@ -95,31 +95,30 @@ class MavenPublishingConventions {
         pom.name.set(project.provider<String>(Callable { project.name }))
         pom.description.set(project.provider<String>(Callable { project.description }))
         if (!isUserInherited(project)) {
-            pom.organization(Action { organization: MavenPomOrganization -> this.customizeOrganization(organization) })
+            pom.organization { organization: MavenPomOrganization -> this.customizeOrganization(organization) }
         }
-        pom.licenses(Action { licences: MavenPomLicenseSpec -> this.customizeLicences(licences) })
-        pom.developers(Action { developers: MavenPomDeveloperSpec -> this.customizeDevelopers(developers) })
-        pom.scm(Action { scm: MavenPomScm -> customizeScm(scm!!, project) })
-        pom.issueManagement(Action { issueManagement: MavenPomIssueManagement ->
+        pom.licenses { licences: MavenPomLicenseSpec -> this.customizeLicences(licences) }
+        pom.developers { developers: MavenPomDeveloperSpec -> this.customizeDevelopers(developers) }
+        pom.scm { scm: MavenPomScm -> customizeScm(scm!!, project) }
+        pom.issueManagement { issueManagement: MavenPomIssueManagement ->
             customizeIssueManagement(
                 issueManagement!!,
                 project
             )
-        })
+        }
     }
 
     private fun customizeJavaMavenPublication(publication: MavenPublication, project: Project?) {
-        publication.versionMapping(Action { strategy: VersionMappingStrategy ->
+        publication.versionMapping { strategy: VersionMappingStrategy ->
             strategy!!.usage(Usage.JAVA_API) { mappingStrategy: VariantVersionMappingStrategy ->
                 mappingStrategy!!
                     .fromResolutionOf(JavaPlugin.RUNTIME_CLASSPATH_CONFIGURATION_NAME)
             }
-        })
-        publication.versionMapping(
-            Action { strategy: VersionMappingStrategy ->
+        }
+        publication.versionMapping { strategy: VersionMappingStrategy ->
                 strategy!!.usage(
                     Usage.JAVA_RUNTIME) { obj: VariantVersionMappingStrategy -> obj!!.fromResolutionResult() }
-            })
+            }
     }
 
     private fun customizeOrganization(organization: MavenPomOrganization) {
@@ -128,19 +127,19 @@ class MavenPublishingConventions {
     }
 
     private fun customizeLicences(licences: MavenPomLicenseSpec) {
-        licences.license(Action { licence: MavenPomLicense ->
+        licences.license { licence: MavenPomLicense ->
             licence!!.name.set("Apache License, Version 2.0")
             licence.getUrl().set("https://www.apache.org/licenses/LICENSE-2.0")
-        })
+        }
     }
 
     private fun customizeDevelopers(developers: MavenPomDeveloperSpec) {
-        developers.developer(Action { developer: MavenPomDeveloper ->
+        developers.developer { developer: MavenPomDeveloper ->
             developer!!.name.set("Spring")
             developer.getEmail().set("ask@spring.io")
             developer.getOrganization().set("VMware, Inc.")
             developer.getOrganizationUrl().set("https://www.spring.io")
-        })
+        }
     }
 
     private fun customizeScm(scm: MavenPomScm, project: Project) {

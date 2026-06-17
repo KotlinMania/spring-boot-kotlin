@@ -39,12 +39,11 @@ class WarConventions {
     fun apply(project: Project) {
         project.plugins
             .withType<EclipseWtpPlugin>(EclipseWtpPlugin::class.java) { wtp: EclipseWtpPlugin ->
-                project.getTasks().getByName(EclipseWtpPlugin.ECLIPSE_WTP_FACET_TASK_NAME).doFirst(
-                    Action { task: Task ->
+                project.getTasks().getByName(EclipseWtpPlugin.ECLIPSE_WTP_FACET_TASK_NAME).doFirst { task: Task ->
                         val eclipseModel = project.getExtensions().getByType<EclipseModel>(EclipseModel::class.java)
                         (eclipseModel.getWtp().getFacet() as IConventionAware).getConventionMapping()
                             .map("facets", Callable { getFacets(project) })
-                    })
+                    }
             }
     }
 

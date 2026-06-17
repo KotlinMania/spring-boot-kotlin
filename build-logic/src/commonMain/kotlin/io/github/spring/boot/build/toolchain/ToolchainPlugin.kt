@@ -39,7 +39,7 @@ class ToolchainPlugin : Plugin<Project> {
             project.getExtensions().create<ToolchainExtension>("toolchain", ToolchainExtension::class.java, project)
         val toolchainVersion = toolchain.javaVersion
         if (toolchainVersion != null) {
-            project.afterEvaluate(Action { evaluated: Project -> configure(evaluated!!, toolchain) })
+            project.afterEvaluate { evaluated: Project -> configure(evaluated!!, toolchain) }
         }
     }
 
@@ -74,9 +74,9 @@ class ToolchainPlugin : Plugin<Project> {
         project.getTasks()
             .withType<Test>(Test::class.java) { test: Test ->
                 test!!.getJavaLauncher()
-                    .set(javaToolchains.launcherFor(Action { spec: JavaToolchainSpec ->
+                    .set(javaToolchains.launcherFor { spec: JavaToolchainSpec ->
                         spec!!.getLanguageVersion().set(toolchainVersion)
-                    }))
+                    })
             }
     }
 }

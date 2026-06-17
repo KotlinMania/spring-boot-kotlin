@@ -40,23 +40,22 @@ class DeployedPlugin : Plugin<Project> {
         val publishing = project.getExtensions().getByType<PublishingExtension>(PublishingExtension::class.java)
         val mavenPublication =
             publishing.publications.create<MavenPublication>("maven", MavenPublication::class.java)
-        project.afterEvaluate(Action { evaluated: Project ->
-            project.plugins.withType<JavaPlugin>(JavaPlugin::class.java).all(
-                Action { javaPlugin: JavaPlugin ->
+        project.afterEvaluate { evaluated: Project ->
+            project.plugins.withType<JavaPlugin>(JavaPlugin::class.java).all { javaPlugin: JavaPlugin ->
                     if ((project.getTasks().getByName(JavaPlugin.JAR_TASK_NAME) as Jar).isEnabled()) {
                         project.getComponents()
                             .matching(Spec { component: SoftwareComponent? -> component!!.name == "java" })
-                            .all(Action { component: SoftwareComponent -> mavenPublication.from(component) })
+                            .all { component: SoftwareComponent -> mavenPublication.from(component) }
                     }
-                })
-        })
+                }
+        }
         project.plugins
             .withType<JavaPlatformPlugin>(JavaPlatformPlugin::class.java)
-            .all(Action { javaPlugin: JavaPlatformPlugin ->
+            .all { javaPlugin: JavaPlatformPlugin ->
                 project.getComponents()
                     .matching(Spec { component: SoftwareComponent? -> component!!.name == "javaPlatform" })
-                    .all(Action { component: SoftwareComponent -> mavenPublication.from(component) })
-            })
+                    .all { component: SoftwareComponent -> mavenPublication.from(component) }
+            }
     }
 
     companion object {

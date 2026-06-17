@@ -75,7 +75,7 @@ abstract class CheckAutoConfigureImports : DefaultTask() {
     @get:InputFiles
     var source: FileTree
         get() = this.sourceFiles.getAsFileTree()
-            .matching(Action { filter: PatternFilterable -> filter!!.include("META-INF/spring/*.AutoConfigure*.imports") })
+            .matching { filter: PatternFilterable -> filter!!.include("META-INF/spring/*.AutoConfigure*.imports") }
         set(source) {
             this.sourceFiles = project.getObjects().fileCollection().from(source)
         }

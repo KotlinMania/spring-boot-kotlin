@@ -67,7 +67,7 @@ abstract class CheckClasspathForUnnecessaryExclusions @Inject constructor(
         this.classpath = classpath
         this.exclusionsByDependencyId.clear()
         this.dependencyById.clear()
-        classpath.getAllDependencies().all(Action { dependency: Dependency -> this.processDependency(dependency) })
+        classpath.getAllDependencies().all { dependency: Dependency -> this.processDependency(dependency) }
     }
 
     @Classpath

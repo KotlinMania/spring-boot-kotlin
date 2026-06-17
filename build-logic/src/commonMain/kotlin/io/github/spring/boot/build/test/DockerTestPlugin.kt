@@ -54,13 +54,13 @@ class DockerTestPlugin : Plugin<Project> {
         project.plugins
             .withType<EclipsePlugin>(EclipsePlugin::class.java) { eclipsePlugin: EclipsePlugin ->
                 val eclipse = project.getExtensions().getByType<EclipseModel>(EclipseModel::class.java)
-                eclipse.classpath(Action { classpath: EclipseClasspath ->
+                eclipse.classpath { classpath: EclipseClasspath ->
                     classpath!!.getPlusConfigurations()
                         .add(
                             project.getConfigurations()
                                 .getByName(dockerTestSourceSet.getRuntimeClasspathConfigurationName())
                         )
-                })
+                }
             }
         project.getDependencies()
             .add(dockerTestSourceSet.getRuntimeOnlyConfigurationName(), "org.junit.platform:junit-platform-launcher")

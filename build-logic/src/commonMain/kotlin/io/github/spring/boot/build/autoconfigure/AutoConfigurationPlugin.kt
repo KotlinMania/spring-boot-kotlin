@@ -70,8 +70,7 @@ class AutoConfigurationPlugin : Plugin<Project> {
             val configurations = this.project.getConfigurations()
             configurations.consumable(
                 AUTO_CONFIGURATION_METADATA_CONFIGURATION_NAME) { configuration: ConsumableConfiguration ->
-                    configuration!!.attributes(
-                        Action { attributes: AttributeContainer ->
+                    configuration!!.attributes { attributes: AttributeContainer ->
                             attributes!!.attribute<Category>(
                                 Category.CATEGORY_ATTRIBUTE,
                                 this.project.getObjects().named<Category>(Category::class.java, Category.DOCUMENTATION)
@@ -81,7 +80,7 @@ class AutoConfigurationPlugin : Plugin<Project> {
                                 this.project.getObjects()
                                     .named<Usage>(Usage::class.java, "auto-configuration-metadata")
                             )
-                        })
+                        }
                 }
             tasks.register<AutoConfigurationMetadata>(
                 "autoConfigurationMetadata", AutoConfigurationMetadata::class.java) { task: AutoConfigurationMetadata -> this.configureAutoConfigurationMetadata(task) }
@@ -157,11 +156,11 @@ class AutoConfigurationPlugin : Plugin<Project> {
             configurations: ConfigurationContainer,
             checkAutoConfigurationClasses: TaskProvider<CheckAutoConfigurationClasses>
         ) {
-            checkAutoConfigurationClasses.configure(Action { check: CheckAutoConfigurationClasses ->
+            checkAutoConfigurationClasses.configure { check: CheckAutoConfigurationClasses ->
                 val optionalClasspath = configurations.create("autoConfigurationOptionalClassPath")
                     .extendsFrom(configurations.getByName(OptionalDependenciesPlugin.OPTIONAL_CONFIGURATION_NAME))
                 check!!.setOptionalDependencies(optionalClasspath)
-            })
+            }
         }
 
         fun projectDependencies(vararg paths: String?): MutableSet<Dependency?> {

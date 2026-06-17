@@ -61,7 +61,7 @@ class ConfigurationMetadataPlugin : Plugin<Project> {
                     "META-INF/spring-configuration-metadata.json"
                 )
             })
-        checkConfigurationMetadata.configure(Action { check: CheckManualSpringConfigurationMetadata ->
+        checkConfigurationMetadata.configure { check: CheckManualSpringConfigurationMetadata ->
             check!!.metadataLocation.set(manualMetadataLocation)
             check.reportLocation
                 .set(
@@ -69,19 +69,18 @@ class ConfigurationMetadataPlugin : Plugin<Project> {
                         .getBuildDirectory()
                         .file("reports/manual-spring-configuration-metadata/check.txt")
                 )
-        })
+        }
         addMetadataArtifact(project, manualMetadataLocation)
         project.getTasks()
             .named(LifecycleBasePlugin.CHECK_TASK_NAME)
-            .configure(Action { check: Task -> check!!.dependsOn(checkConfigurationMetadata) })
+            .configure { check: Task -> check!!.dependsOn(checkConfigurationMetadata) }
     }
 
     private fun addMetadataArtifact(project: Project, metadataLocation: Provider<File>) {
         project.getConfigurations()
             .consumable(
                 CONFIGURATION_PROPERTIES_METADATA_CONFIGURATION_NAME) { configuration: ConsumableConfiguration ->
-                    configuration!!.attributes(
-                        Action { attributes: AttributeContainer ->
+                    configuration!!.attributes { attributes: AttributeContainer ->
                             attributes!!.attribute<Category>(
                                 Category.CATEGORY_ATTRIBUTE,
                                 project.getObjects().named<Category>(Category::class.java, Category.DOCUMENTATION)
@@ -91,7 +90,7 @@ class ConfigurationMetadataPlugin : Plugin<Project> {
                                 project.getObjects()
                                     .named<Usage>(Usage::class.java, "configuration-properties-metadata")
                             )
-                        })
+                        }
                 }
         project.getArtifacts().add(CONFIGURATION_PROPERTIES_METADATA_CONFIGURATION_NAME, metadataLocation)
     }

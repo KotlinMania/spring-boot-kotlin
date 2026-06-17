@@ -54,7 +54,7 @@ abstract class SyncAppSource @Inject constructor(fileSystemOperations: FileSyste
 
     @TaskAction
     fun syncAppSources() {
-        this.fileSystemOperations.sync(Action { copySpec: SyncSpec ->
+        this.fileSystemOperations.sync { copySpec: SyncSpec ->
             copySpec!!.from(this.sourceDirectory)
             copySpec.into(this.destinationDirectory)
             copySpec.filter(Transformer { line: String? ->
@@ -63,6 +63,6 @@ abstract class SyncAppSource @Inject constructor(fileSystemOperations: FileSyste
                     "id \"org.springframework.boot\" version \"" + this.pluginVersion.get() + "\""
                 )
             })
-        })
+        }
     }
 }

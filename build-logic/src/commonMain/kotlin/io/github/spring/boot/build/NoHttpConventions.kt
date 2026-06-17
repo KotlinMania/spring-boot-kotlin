@@ -35,9 +35,9 @@ class NoHttpConventions {
         )
         project.getTasks()
             .named<Checkstyle>(NoHttpCheckstylePlugin.CHECKSTYLE_NOHTTP_TASK_NAME, Checkstyle::class.java)
-            .configure(Action { task: Checkstyle ->
+            .configure { task: Checkstyle ->
                 task!!.getConfigDirectory().set(project.getRootProject().file("config/nohttp"))
-            })
+            }
     }
 
     private fun configureNoHttpExtension(project: Project, extension: NoHttpExtension) {

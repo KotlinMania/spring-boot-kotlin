@@ -56,19 +56,19 @@ class AntoraContributorPlugin : Plugin<Project> {
             SourceContribution(this.project, this.name).produce()
         }
 
-        fun catalogContent(action: Action<CopySpec?>) {
+        fun catalogContent(action: Action<CopySpec>) {
             val copySpec = this.project.copySpec()
             action.execute(copySpec)
             CatalogContentContribution(this.project, this.name).produceFrom(copySpec, this.publish)
         }
 
-        fun aggregateContent(action: Action<CopySpec?>) {
+        fun aggregateContent(action: Action<CopySpec>) {
             val copySpec = this.project.copySpec()
             action.execute(copySpec)
             AggregateContentContribution(this.project, this.name).produceFrom(copySpec, this.publish)
         }
 
-        fun localAggregateContent(action: Action<CopySpec?>) {
+        fun localAggregateContent(action: Action<CopySpec>) {
             val copySpec = this.project.copySpec()
             action.execute(copySpec)
             LocalAggregateContentContribution(this.project, this.name).produceFrom(copySpec)

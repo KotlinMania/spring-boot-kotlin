@@ -31,7 +31,7 @@ class SystemRequirementsExtension @Inject constructor(objects: ObjectFactory) {
         this.java = objects.newInstance<JavaSpec>(JavaSpec::class.java)
     }
 
-    fun java(action: Action<JavaSpec?>) {
+    fun java(action: Action<JavaSpec>) {
         action.execute(this.java)
     }
 

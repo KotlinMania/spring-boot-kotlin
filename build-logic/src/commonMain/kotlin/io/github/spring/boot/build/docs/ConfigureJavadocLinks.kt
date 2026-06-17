@@ -32,7 +32,7 @@ import org.springframework.boot.build.bom.ResolvedBom.JavadocLink
 class ConfigureJavadocLinks(
     private val resolvedBoms: FileCollection,
     private val includedLibraries: MutableCollection<String?>
-) : Action<Javadoc?> {
+) : Action<Javadoc> {
     override fun execute(javadoc: Javadoc) {
         javadoc.options(Action { options: MinimalJavadocOptions ->
             if (options is StandardJavadocDocletOptions) {

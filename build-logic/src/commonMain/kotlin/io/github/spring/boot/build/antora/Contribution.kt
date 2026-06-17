@@ -56,7 +56,7 @@ abstract class Contribution protected constructor(
         return name(toCamelCase(name), type, *args)
     }
 
-    protected fun configurePlaybookGeneration(action: Action<GenerateAntoraPlaybook?>) {
+    protected fun configurePlaybookGeneration(action: Action<GenerateAntoraPlaybook>) {
         this.project.getTasks()
             .named<GenerateAntoraPlaybook>(
                 AntoraConventions.GENERATE_ANTORA_PLAYBOOK_TASK_NAME,
@@ -65,11 +65,11 @@ abstract class Contribution protected constructor(
             )
     }
 
-    protected fun configureAntora(action: Action<AntoraTask?>) {
+    protected fun configureAntora(action: Action<AntoraTask>) {
         this.project.getTasks().named<AntoraTask>("antora", AntoraTask::class.java, action)
     }
 
-    protected fun addInputFrom(task: TaskProvider<*>, propertyName: String): Action<AntoraTask?> {
+    protected fun addInputFrom(task: TaskProvider<*>, propertyName: String): Action<AntoraTask> {
         return Action { antora: AntoraTask ->
             antora!!.getInputs()
                 .files(task)

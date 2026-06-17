@@ -70,7 +70,7 @@ class BomExtension(val project: Project) {
             })
     }
 
-    fun upgrade(action: Action<UpgradeHandler?>) {
+    fun upgrade(action: Action<UpgradeHandler>) {
         action.execute(this.upgradeHandler)
     }
 
@@ -87,11 +87,11 @@ class BomExtension(val project: Project) {
             )
         }
 
-    fun library(name: String?, action: Action<LibraryHandler?>) {
+    fun library(name: String?, action: Action<LibraryHandler>) {
         library(name, null, action)
     }
 
-    fun library(name: String?, version: String?, action: Action<LibraryHandler?>) {
+    fun library(name: String?, version: String?, action: Action<LibraryHandler>) {
         val objects = this.project.getObjects()
         val libraryHandler = objects.newInstance<LibraryHandler>(
             LibraryHandler::class.java, this.project,
@@ -230,7 +230,7 @@ class BomExtension(val project: Project) {
             this.calendarName = calendarName
         }
 
-        fun group(id: String, action: Action<GroupHandler?>) {
+        fun group(id: String, action: Action<GroupHandler>) {
             val groupHandler = this.project.getObjects().newInstance<GroupHandler>(GroupHandler::class.java, id)
             action.execute(groupHandler)
             this.groups
@@ -241,7 +241,7 @@ class BomExtension(val project: Project) {
             this.upgradePolicy = upgradePolicy
         }
 
-        fun prohibit(action: Action<ProhibitedHandler?>) {
+        fun prohibit(action: Action<ProhibitedHandler>) {
             val handler = ProhibitedHandler()
             action.execute(handler)
             this.prohibitedVersions.add(
@@ -252,15 +252,15 @@ class BomExtension(val project: Project) {
             )
         }
 
-        fun alignWith(action: Action<AlignWithHandler?>) {
+        fun alignWith(action: Action<AlignWithHandler>) {
             action.execute(this.alignWith)
         }
 
-        fun links(action: Action<LinksHandler?>) {
+        fun links(action: Action<LinksHandler>) {
             links(null, action)
         }
 
-        fun links(linkRootName: String?, action: Action<LinksHandler?>) {
+        fun links(linkRootName: String?, action: Action<LinksHandler>) {
             val handler = LinksHandler()
             action.execute(handler)
             this.linkRootName = linkRootName
@@ -332,7 +332,7 @@ class BomExtension(val project: Project) {
                 this.imports.add(ImportedBom(bom))
             }
 
-            fun bom(bom: String?, action: Action<ImportBomHandler?>) {
+            fun bom(bom: String?, action: Action<ImportBomHandler>) {
                 val handler = ImportBomHandler()
                 action.execute(handler)
                 this.imports.add(ImportedBom(bom, handler.permittedDependencies))
@@ -398,12 +398,12 @@ class BomExtension(val project: Project) {
 
             var bomAlignment: BomAlignment? = null
 
-            fun version(action: Action<VersionHandler?>) {
+            fun version(action: Action<VersionHandler>) {
                 this.version = VersionHandler()
                 action.execute(this.version)
             }
 
-            fun property(action: Action<PropertyHandler?>) {
+            fun property(action: Action<PropertyHandler>) {
                 this.property = PropertyHandler()
                 action.execute(this.property)
             }
@@ -414,7 +414,7 @@ class BomExtension(val project: Project) {
 
             fun dependencyManagementDeclaredIn(
                 bomCoordinates: String?,
-                action: Action<DependencyManagementDeclaredInHandler?>
+                action: Action<DependencyManagementDeclaredInHandler>
             ) {
                 val handler = DependencyManagementDeclaredInHandler()
                 action.execute(handler)
@@ -567,7 +567,7 @@ class BomExtension(val project: Project) {
             this.upgradePolicy = upgradePolicy
         }
 
-        fun gitHub(action: Action<GitHubHandler?>) {
+        fun gitHub(action: Action<GitHubHandler>) {
             action.execute(this.gitHub)
         }
     }

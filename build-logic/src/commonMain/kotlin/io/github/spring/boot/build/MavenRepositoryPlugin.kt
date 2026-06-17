@@ -125,7 +125,7 @@ class MavenRepositoryPlugin : Plugin<Project> {
             })
     }
 
-    private class CleanAction(private val location: File?) : Action<Task?> {
+    private class CleanAction(private val location: File?) : Action<Task> {
         override fun execute(task: Task?) {
             FileSystemUtils.deleteRecursively(this.location)
         }

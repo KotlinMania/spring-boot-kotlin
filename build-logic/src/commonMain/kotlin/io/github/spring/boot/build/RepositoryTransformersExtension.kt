@@ -30,7 +30,7 @@ import javax.inject.Inject
  * @author Phillip Webb
  */
 class RepositoryTransformersExtension @Inject constructor(private val project: Project) {
-    fun ant(): Transformer<String?, String?> {
+    fun ant(): Transformer<String, String?> {
         return Transformer { line: String? -> this.transformAnt(line!!) }
     }
 

@@ -32,8 +32,8 @@ import javax.inject.Inject
  * @author Phillip Webb
  */
 class RepositoryTransformersExtension @Inject constructor(private val project: Project) {
-    fun ant(): Transformer<String, String?> {
-        return Transformer { line: String? -> this.transformAnt(line!!) }
+    fun ant(): Transformer<String, String> {
+        return Transformer { line -> this.transformAnt(line) }
     }
 
     private fun transformAnt(line: String): String {
@@ -108,49 +108,27 @@ class RepositoryTransformersExtension @Inject constructor(private val project: P
 
     private fun <T> transform(
         line: String,
-        iterable: Iterable,
+        iterable: Iterable<T>,
         generator: BiFunction<T?, String?, String?>
     ): String {
         val result = StringBuilder()
         val indent = getIndent(line)
-        iterable.forEach(Consumer { item: T? ->
+        iterable.forEach { item ->
             val fragment = generator.apply(item, indent)
             if (fragment != null) {
-                result.append(if (!result.isEmpty()) "\n" else "")
+                result.append(if (result.isNotEmpty()) "\n" else "")
                 result.append(fragment)
             }
-        })
+        }
         return result.toString()
     }
 
-    private val springRepositories: MutableList<MavenArtifactRepository?>
-        get() {
-            val springRepositories: MutableList<MavenArtifactRepository?> =
-                ArrayList<MavenArtifactRepository?>(
-                    this.project.getRepositories()
-                        .withType<MavenArtifactRepository>(MavenArtifactRepository::class.java)
-                        .stream()
-                        .filter { repository: MavenArtifactRepository? ->
-                            this.isSpringRepository(
-                                repository!!
-                            )
-                        }
-                        .toList())
-            val bySnapshots: Function<MavenArtifactRepository?, Boolean?> =
-                Function { repository: MavenArtifactRepository? ->
-                    repository!!.name
-                        .contains("snapshot")
-                }
-            val byName: Function<MavenArtifactRepository?, String?> =
-                Function { obj: MavenArtifactRepository? -> obj!!.name }
-            Collections.sort<MavenArtifactRepository?>(
-                springRepositories,
-                Comparator.comparing<MavenArtifactRepository?, Boolean?>(
-                    bySnapshots
-                ).thenComparing<String?>(byName)
-            )
-            return springRepositories
-        }
+    private val springRepositories: MutableList<MavenArtifactRepository>
+        get() = this.project.getRepositories()
+            .withType<MavenArtifactRepository>()
+            .filter { isSpringRepository(it) }
+            .sortedWith(compareBy({ it.name.contains("snapshot") }, { it.name }))
+            .toMutableList()
 
     private fun isSpringRepository(repository: MavenArtifactRepository): Boolean {
         return (repository.name.startsWith("spring-"))

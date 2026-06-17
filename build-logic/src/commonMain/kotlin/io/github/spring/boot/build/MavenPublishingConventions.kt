@@ -32,7 +32,6 @@ import org.slf4j.Logger
 import org.slf4j.LoggerFactory
 import org.springframework.boot.build.properties.BuildProperties.Companion.get
 import org.springframework.boot.build.properties.BuildType
-import java.util.concurrent.Callable
 
 /**
  * Conventions that are applied in the presence of the [MavenPublishPlugin]. When
@@ -58,69 +57,54 @@ import java.util.concurrent.Callable
  */
 class MavenPublishingConventions {
     fun apply(project: Project) {
-        project.plugins.withType<MavenPublishPlugin>(MavenPublishPlugin::class.java)
-            .all { mavenPublish: MavenPublishPlugin ->
-                val publishing = project.getExtensions().getByType<PublishingExtension>(PublishingExtension::class.java)
-                if (project.hasProperty("deploymentRepository")) {
-                    publishing.getRepositories().maven { mavenRepository: MavenArtifactRepository ->
-                        mavenRepository!!.setUrl(project.property("deploymentRepository")!!)
-                        mavenRepository.setName("deployment")
-                    }
+        project.plugins.withType<MavenPublishPlugin>().configureEach {
+            val publishing = project.getExtensions().getByType<PublishingExtension>()
+            if (project.hasProperty("deploymentRepository")) {
+                publishing.getRepositories().maven {
+                    setUrl(project.property("deploymentRepository")!!)
+                    setName("deployment")
                 }
-                publishing.publications
-                    .withType<MavenPublication>(MavenPublication::class.java)
-                    .all { mavenPublication: MavenPublication ->
-                        customizeMavenPublication(
-                            mavenPublication!!,
-                            project
-                        )
-                    }
-                project.plugins.withType<JavaPlugin>(JavaPlugin::class.java)
-                    .all { javaPlugin: JavaPlugin ->
-                        val extension =
-                            project.getExtensions().getByType<JavaPluginExtension>(JavaPluginExtension::class.java)
-                        extension.withJavadocJar()
-                        extension.withSourcesJar()
-                    }
             }
+            publishing.publications.withType<MavenPublication>().configureEach {
+                customizeMavenPublication(this, project)
+            }
+            project.plugins.withType<JavaPlugin>().configureEach {
+                val extension = project.getExtensions().getByType<JavaPluginExtension>()
+                extension.withJavadocJar()
+                extension.withSourcesJar()
+            }
+        }
     }
 
     private fun customizeMavenPublication(publication: MavenPublication, project: Project) {
         customizePom(publication.getPom(), project)
-        project.plugins
-            .withType<JavaPlugin>(JavaPlugin::class.java)
-            .all { javaPlugin: JavaPlugin -> customizeJavaMavenPublication(publication, project) }
+        project.plugins.withType<JavaPlugin>().configureEach {
+            customizeJavaMavenPublication(publication, project)
+        }
     }
 
     private fun customizePom(pom: MavenPom, project: Project) {
         pom.getUrl().set("https://spring.io/projects/spring-boot")
-        pom.name.set(project.provider<String>(Callable { project.name }))
-        pom.description.set(project.provider<String>(Callable { project.description }))
+        pom.name.set(project.provider { project.name })
+        pom.description.set(project.provider { project.description })
         if (!isUserInherited(project)) {
-            pom.organization { organization: MavenPomOrganization -> this.customizeOrganization(organization) }
+            pom.organization { this@MavenPublishingConventions.customizeOrganization(this) }
         }
-        pom.licenses { licences: MavenPomLicenseSpec -> this.customizeLicences(licences) }
-        pom.developers { developers: MavenPomDeveloperSpec -> this.customizeDevelopers(developers) }
-        pom.scm { scm: MavenPomScm -> customizeScm(scm!!, project) }
-        pom.issueManagement { issueManagement: MavenPomIssueManagement ->
-            customizeIssueManagement(
-                issueManagement!!,
-                project
-            )
-        }
+        pom.licenses { this@MavenPublishingConventions.customizeLicences(this) }
+        pom.developers { this@MavenPublishingConventions.customizeDevelopers(this) }
+        pom.scm { customizeScm(this, project) }
+        pom.issueManagement { customizeIssueManagement(this, project) }
     }
 
-    private fun customizeJavaMavenPublication(publication: MavenPublication, project: Project?) {
-        publication.versionMapping { strategy: VersionMappingStrategy ->
-            strategy!!.usage(Usage.JAVA_API) { mappingStrategy: VariantVersionMappingStrategy ->
-                mappingStrategy!!
-                    .fromResolutionOf(JavaPlugin.RUNTIME_CLASSPATH_CONFIGURATION_NAME)
+    private fun customizeJavaMavenPublication(publication: MavenPublication, project: Project) {
+        publication.versionMapping {
+            usage(Usage.JAVA_API) {
+                fromResolutionOf(JavaPlugin.RUNTIME_CLASSPATH_CONFIGURATION_NAME)
             }
         }
-        publication.versionMapping { strategy: VersionMappingStrategy ->
-                strategy!!.usage(
-                    Usage.JAVA_RUNTIME) { obj: VariantVersionMappingStrategy -> obj!!.fromResolutionResult() }
-            }
+        publication.versionMapping {
+            usage(Usage.JAVA_RUNTIME) { fromResolutionResult() }
+        }
     }
 
     private fun customizeOrganization(organization: MavenPomOrganization) {
@@ -129,18 +113,18 @@ class MavenPublishingConventions {
     }
 
     private fun customizeLicences(licences: MavenPomLicenseSpec) {
-        licences.license { licence: MavenPomLicense ->
-            licence!!.name.set("Apache License, Version 2.0")
-            licence.getUrl().set("https://www.apache.org/licenses/LICENSE-2.0")
+        licences.license {
+            name.set("Apache License, Version 2.0")
+            getUrl().set("https://www.apache.org/licenses/LICENSE-2.0")
         }
     }
 
     private fun customizeDevelopers(developers: MavenPomDeveloperSpec) {
-        developers.developer { developer: MavenPomDeveloper ->
-            developer!!.name.set("Spring")
-            developer.getEmail().set("ask@spring.io")
-            developer.getOrganization().set("VMware, Inc.")
-            developer.getOrganizationUrl().set("https://www.spring.io")
+        developers.developer {
+            name.set("Spring")
+            getEmail().set("ask@spring.io")
+            getOrganization().set("VMware, Inc.")
+            getOrganizationUrl().set("https://www.spring.io")
         }
     }
 

@@ -35,12 +35,11 @@ object DockerTestBuildService : BuildService<BuildServiceParameters.None?> {
         return project.getGradle()
             .getSharedServices()
             .registerIfAbsent<DockerTestBuildService?, BuildServiceParameters.None?>(
-                "dockerTest", DockerTestBuildService::class.java,
-                Action { spec: BuildServiceSpec<BuildServiceParameters.None?> ->
+                "dockerTest", DockerTestBuildService::class.java) { spec: BuildServiceSpec<BuildServiceParameters.None?> ->
                     spec!!.getMaxParallelUsages().set(
                         maxParallelTasks(project)
                     )
-                })
+                }
     }
 
     private fun maxParallelTasks(project: Project): Int {

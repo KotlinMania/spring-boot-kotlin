@@ -40,15 +40,14 @@ import org.gradle.plugins.ide.eclipse.model.EclipseModel
 class SystemTestPlugin : Plugin<Project> {
     override fun apply(project: Project) {
         project.getPlugins().withType<JavaPlugin>(
-            JavaPlugin::class.java,
-            Action { javaPlugin: JavaPlugin -> configureSystemTesting(project) })
+            JavaPlugin::class.java) { javaPlugin: JavaPlugin -> configureSystemTesting(project) }
     }
 
     private fun configureSystemTesting(project: Project) {
         val systemTestSourceSet = createSourceSet(project)
         createTestTask(project, systemTestSourceSet)
         project.getPlugins()
-            .withType<EclipsePlugin>(EclipsePlugin::class.java, Action { eclipsePlugin: EclipsePlugin ->
+            .withType<EclipsePlugin>(EclipsePlugin::class.java) { eclipsePlugin: EclipsePlugin ->
                 val eclipse = project.getExtensions().getByType<EclipseModel>(EclipseModel::class.java)
                 eclipse.classpath(Action { classpath: EclipseClasspath ->
                     classpath!!.getPlusConfigurations()
@@ -57,7 +56,7 @@ class SystemTestPlugin : Plugin<Project> {
                                 .getByName(systemTestSourceSet.getRuntimeClasspathConfigurationName())
                         )
                 })
-            })
+            }
         project.getDependencies()
             .add(systemTestSourceSet.getRuntimeOnlyConfigurationName(), "org.junit.platform:junit-platform-launcher")
     }
@@ -75,7 +74,7 @@ class SystemTestPlugin : Plugin<Project> {
     }
 
     private fun createTestTask(project: Project, systemTestSourceSet: SourceSet): TaskProvider<Test> {
-        return project.getTasks().register<Test>(SYSTEM_TEST_TASK_NAME, Test::class.java, Action { task: Test ->
+        return project.getTasks().register<Test>(SYSTEM_TEST_TASK_NAME, Test::class.java) { task: Test ->
             task!!.setGroup(LifecycleBasePlugin.VERIFICATION_GROUP)
             task.setDescription("Runs system tests.")
             task.setTestClassesDirs(systemTestSourceSet.getOutput().getClassesDirs())
@@ -85,7 +84,7 @@ class SystemTestPlugin : Plugin<Project> {
                 task.getOutputs().upToDateWhen(NEVER)
                 task.getOutputs().doNotCacheIf("System tests are always rerun on CI", Spec { spec: Task? -> true })
             }
-        })
+        }
     }
 
     private val isCi: Boolean

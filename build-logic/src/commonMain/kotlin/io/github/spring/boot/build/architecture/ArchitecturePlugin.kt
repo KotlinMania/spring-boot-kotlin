@@ -34,7 +34,7 @@ import org.springframework.util.StringUtils
 class ArchitecturePlugin : Plugin<Project> {
     override fun apply(project: Project) {
         project.getPlugins()
-            .withType<JavaPlugin>(JavaPlugin::class.java, Action { javaPlugin: JavaPlugin -> registerTasks(project) })
+            .withType<JavaPlugin>(JavaPlugin::class.java) { javaPlugin: JavaPlugin -> registerTasks(project) }
     }
 
     private fun registerTasks(project: Project) {
@@ -53,8 +53,7 @@ class ArchitecturePlugin : Plugin<Project> {
                 })
             project.getPlugins()
                 .withId(
-                    "org.jetbrains.kotlin.jvm",
-                    Action { kotlinPlugin: Plugin<*> ->
+                    "org.jetbrains.kotlin.jvm") { kotlinPlugin: Plugin<*> ->
                         registerArchitectureCheck(sourceSet, "kotlin", project)
                             .configure(Action { task: ArchitectureCheck ->
                                 task!!.setClasses(
@@ -68,7 +67,7 @@ class ArchitecturePlugin : Plugin<Project> {
                                     )
                                 )
                             })
-                    })
+                    }
         }
     }
 
@@ -80,7 +79,7 @@ class ArchitecturePlugin : Plugin<Project> {
             .register<ArchitectureCheck>(
                 "checkArchitecture"
                         + StringUtils.capitalize(sourceSet.name + StringUtils.capitalize(language)),
-                ArchitectureCheck::class.java, Action { task: ArchitectureCheck ->
+                ArchitectureCheck::class.java) { task: ArchitectureCheck ->
                     task!!.sourceSet.set(sourceSet.name)
                     task.compileClasspath.from(sourceSet.compileClasspath)
                     task.resourcesDirectory.set(sourceSet.getOutput().getResourcesDir())
@@ -90,7 +89,7 @@ class ArchitecturePlugin : Plugin<Project> {
                                 + sourceSet.name + " source set.")
                     )
                     task.setGroup(LifecycleBasePlugin.VERIFICATION_GROUP)
-                })
+                }
         project.getTasks()
             .named(LifecycleBasePlugin.CHECK_TASK_NAME)
             .configure(Action { check: Task -> check!!.dependsOn(checkArchitecture) })

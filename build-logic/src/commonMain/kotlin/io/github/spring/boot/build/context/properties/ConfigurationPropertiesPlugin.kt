@@ -55,14 +55,14 @@ import java.util.stream.Collectors
  */
 class ConfigurationPropertiesPlugin : Plugin<Project> {
     override fun apply(project: Project) {
-        project.getPlugins().withType<JavaPlugin>(JavaPlugin::class.java, Action { javaPlugin: JavaPlugin ->
+        project.getPlugins().withType<JavaPlugin>(JavaPlugin::class.java) { javaPlugin: JavaPlugin ->
             configureConfigurationPropertiesAnnotationProcessor(project)
             disableIncrementalCompilation(project)
             configureAdditionalMetadataLocationsCompilerArgument(project)
             registerCheckAdditionalMetadataTask(project)
             registerCheckMetadataTask(project)
             addMetadataArtifact(project)
-        })
+        }
     }
 
     private fun configureConfigurationPropertiesAnnotationProcessor(project: Project) {
@@ -97,8 +97,7 @@ class ConfigurationPropertiesPlugin : Plugin<Project> {
             .getByName(SourceSet.MAIN_SOURCE_SET_NAME)
         project.getConfigurations()
             .consumable(
-                CONFIGURATION_PROPERTIES_METADATA_CONFIGURATION_NAME,
-                Action { configuration: ConsumableConfiguration ->
+                CONFIGURATION_PROPERTIES_METADATA_CONFIGURATION_NAME) { configuration: ConsumableConfiguration ->
                     configuration!!.attributes(
                         Action { attributes: AttributeContainer ->
                             attributes!!.attribute<Category>(
@@ -111,18 +110,17 @@ class ConfigurationPropertiesPlugin : Plugin<Project> {
                                     .named<Usage>(Usage::class.java, "configuration-properties-metadata")
                             )
                         })
-                })
+                }
         project.afterEvaluate(Action { evaluatedProject: Project ->
             evaluatedProject!!.getArtifacts()
                 .add(
                     CONFIGURATION_PROPERTIES_METADATA_CONFIGURATION_NAME,
                     mainSourceSet.java
                         .destinationDirectory
-                        .dir("META-INF/spring-configuration-metadata.json"),
-                    Action { artifact: ConfigurablePublishArtifact ->
+                        .dir("META-INF/spring-configuration-metadata.json")) { artifact: ConfigurablePublishArtifact ->
                         artifact!!
                             .builtBy(evaluatedProject.getTasks().getByName(mainSourceSet.getClassesTaskName()))
-                    })
+                    }
         })
     }
 

@@ -37,12 +37,11 @@ class TestFailuresPlugin : Plugin<Project> {
             .getSharedServices()
             .registerIfAbsent<TestResultsOverview?, BuildServiceParameters.None?>(
                 "testResultsOverview",
-                TestResultsOverview::class.java,
-                Action { spec: BuildServiceSpec<BuildServiceParameters.None?> -> })
-        project.getTasks().withType<Test>(Test::class.java, Action { test: Test ->
+                TestResultsOverview::class.java) { spec: BuildServiceSpec<BuildServiceParameters.None?> -> }
+        project.getTasks().withType<Test>(Test::class.java) { test: Test ->
             test!!.usesService(testResultsOverview)
             test.addTestListener(FailureRecordingTestListener(testResultsOverview, test))
-        })
+        }
     }
 
     private inner class FailureRecordingTestListener(

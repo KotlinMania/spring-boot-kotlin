@@ -46,12 +46,11 @@ class TestSlicePlugin : Plugin<Project> {
     override fun apply(target: Project) {
         val plugins = target.getPlugins()
         plugins.apply<TestAutoConfigurationPlugin>(TestAutoConfigurationPlugin::class.java)
-        plugins.withType<JavaPlugin>(JavaPlugin::class.java, Action { plugin: JavaPlugin ->
+        plugins.withType<JavaPlugin>(JavaPlugin::class.java) { plugin: JavaPlugin ->
             val generateTestSliceMetadata = target.getTasks()
                 .register<GenerateTestSliceMetadata>(
                     "generateTestSliceMetadata",
-                    GenerateTestSliceMetadata::class.java,
-                    Action { task: GenerateTestSliceMetadata ->
+                    GenerateTestSliceMetadata::class.java) { task: GenerateTestSliceMetadata ->
                         val mainSourceSet: SourceSet = target.getExtensions()
                             .getByType<JavaPluginExtension>(JavaPluginExtension::class.java)
                             .sourceSets
@@ -59,14 +58,14 @@ class TestSlicePlugin : Plugin<Project> {
                         task!!.setSourceSet(mainSourceSet)
                         task.outputFile
                             .set(target.getLayout().getBuildDirectory().file("test-slice-metadata.json"))
-                    })
+                    }
             addMetadataArtifact(target, generateTestSliceMetadata)
-        })
+        }
     }
 
     private fun addMetadataArtifact(project: Project, task: TaskProvider<GenerateTestSliceMetadata>) {
         project.getConfigurations()
-            .consumable(TEST_SLICE_METADATA_CONFIGURATION_NAME, Action { configuration: ConsumableConfiguration ->
+            .consumable(TEST_SLICE_METADATA_CONFIGURATION_NAME) { configuration: ConsumableConfiguration ->
                 configuration!!.attributes(
                     Action { attributes: AttributeContainer ->
                         attributes!!.attribute<Category>(
@@ -78,7 +77,7 @@ class TestSlicePlugin : Plugin<Project> {
                             project.getObjects().named<Usage>(Usage::class.java, "test-slice-metadata")
                         )
                     })
-            })
+            }
         project.getArtifacts().add(TEST_SLICE_METADATA_CONFIGURATION_NAME, task)
     }
 

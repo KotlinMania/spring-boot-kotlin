@@ -36,7 +36,7 @@ class OptionalDependenciesPlugin : Plugin<Project> {
         val optional = project.getConfigurations().create("optional")
         optional.setCanBeConsumed(true)
         optional.setCanBeResolved(false)
-        project.getPlugins().withType<JavaPlugin>(JavaPlugin::class.java, Action { javaPlugin: JavaPlugin ->
+        project.getPlugins().withType<JavaPlugin>(JavaPlugin::class.java) { javaPlugin: JavaPlugin ->
             val sourceSets: SourceSetContainer = project.getExtensions()
                 .getByType<JavaPluginExtension>(JavaPluginExtension::class.java)
                 .sourceSets
@@ -48,7 +48,7 @@ class OptionalDependenciesPlugin : Plugin<Project> {
                     .getByName(sourceSet.getRuntimeClasspathConfigurationName())
                     .extendsFrom(optional)
             })
-        })
+        }
     }
 
     companion object {

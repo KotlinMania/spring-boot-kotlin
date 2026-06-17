@@ -52,20 +52,18 @@ class StarterPlugin : Plugin<Project> {
         val starterMetadata = project.getTasks()
             .register<StarterMetadata>(
                 "starterMetadata",
-                StarterMetadata::class.java,
-                Action { task: StarterMetadata ->
+                StarterMetadata::class.java) { task: StarterMetadata ->
                     task!!.setDependencies(runtimeClasspath)
                     val destination: Provider<RegularFile> = project.getLayout()
                         .getBuildDirectory()
                         .file("starter-metadata.properties")
                     task.destination.set(destination)
-                })
+                }
         configurations.create("starterMetadata")
         project.getArtifacts()
             .add(
                 "starterMetadata",
-                starterMetadata.map<RegularFileProperty>(Transformer { obj: StarterMetadata? -> obj!!.destination }),
-                Action { artifact: ConfigurablePublishArtifact -> artifact!!.builtBy(starterMetadata) })
+                starterMetadata.map<RegularFileProperty>(Transformer { obj: StarterMetadata? -> obj!!.destination })) { artifact: ConfigurablePublishArtifact -> artifact!!.builtBy(starterMetadata) }
         createClasspathConflictsCheck(runtimeClasspath, project)
         createUnnecessaryExclusionsCheck(runtimeClasspath, project)
         createUnconstrainedDirectDependenciesCheck(runtimeClasspath, project)
@@ -76,8 +74,7 @@ class StarterPlugin : Plugin<Project> {
         val checkClasspathForConflicts = project.getTasks()
             .register<CheckClasspathForConflicts>(
                 "check" + StringUtils.capitalize(classpath.name + "ForConflicts"),
-                CheckClasspathForConflicts::class.java,
-                Action { task: CheckClasspathForConflicts -> task!!.setClasspath(classpath) })
+                CheckClasspathForConflicts::class.java) { task: CheckClasspathForConflicts -> task!!.setClasspath(classpath) }
         project.getTasks().getByName(JavaBasePlugin.CHECK_TASK_NAME).dependsOn(checkClasspathForConflicts)
     }
 
@@ -85,8 +82,7 @@ class StarterPlugin : Plugin<Project> {
         val checkClasspathForUnnecessaryExclusions = project.getTasks()
             .register<CheckClasspathForUnnecessaryExclusions>(
                 "check" + StringUtils.capitalize(classpath.name + "ForUnnecessaryExclusions"),
-                CheckClasspathForUnnecessaryExclusions::class.java,
-                Action { task: CheckClasspathForUnnecessaryExclusions -> task!!.setClasspath(classpath) })
+                CheckClasspathForUnnecessaryExclusions::class.java) { task: CheckClasspathForUnnecessaryExclusions -> task!!.setClasspath(classpath) }
         project.getTasks().getByName(JavaBasePlugin.CHECK_TASK_NAME).dependsOn(checkClasspathForUnnecessaryExclusions)
     }
 
@@ -95,15 +91,14 @@ class StarterPlugin : Plugin<Project> {
             .getTasks()
             .register<CheckClasspathForUnconstrainedDirectDependencies>(
                 "check" + StringUtils.capitalize(classpath.name + "ForUnconstrainedDirectDependencies"),
-                CheckClasspathForUnconstrainedDirectDependencies::class.java,
-                Action { task: CheckClasspathForUnconstrainedDirectDependencies -> task!!.setClasspath(classpath) })
+                CheckClasspathForUnconstrainedDirectDependencies::class.java) { task: CheckClasspathForUnconstrainedDirectDependencies -> task!!.setClasspath(classpath) }
         project.getTasks()
             .getByName(JavaBasePlugin.CHECK_TASK_NAME)
             .dependsOn(checkClasspathForUnconstrainedDirectDependencies)
     }
 
     private fun configureJarManifest(project: Project) {
-        project.getTasks().withType<Jar>(Jar::class.java, Action { jar: Jar ->
+        project.getTasks().withType<Jar>(Jar::class.java) { jar: Jar ->
             project.afterEvaluate(Action { evaluated: Project ->
                 jar!!.manifest(
                     Action { manifest: Manifest ->
@@ -112,7 +107,7 @@ class StarterPlugin : Plugin<Project> {
                         manifest!!.attributes(attributes)
                     })
             })
-        })
+        }
     }
 
     companion object {

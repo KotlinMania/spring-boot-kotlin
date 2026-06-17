@@ -28,7 +28,7 @@ import org.gradle.api.tasks.bundling.Jar
  */
 class AnnotationProcessorPlugin : Plugin<Project> {
     override fun apply(project: Project) {
-        project.getTasks().withType<Jar>(Jar::class.java, Action { jar: Jar ->
+        project.getTasks().withType<Jar>(Jar::class.java) { jar: Jar ->
             project.afterEvaluate(Action { evaluated: Project ->
                 jar!!.manifest(
                     Action { manifest: Manifest ->
@@ -37,7 +37,7 @@ class AnnotationProcessorPlugin : Plugin<Project> {
                         manifest!!.attributes(attributes)
                     })
             })
-        })
+        }
     }
 
     companion object {

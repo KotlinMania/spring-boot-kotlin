@@ -43,8 +43,7 @@ import org.gradle.plugins.ide.eclipse.model.EclipseModel
 class DockerTestPlugin : Plugin<Project> {
     override fun apply(project: Project) {
         project.getPlugins().withType<JavaPlugin>(
-            JavaPlugin::class.java,
-            Action { javaPlugin: JavaPlugin -> configureDockerTesting(project) })
+            JavaPlugin::class.java) { javaPlugin: JavaPlugin -> configureDockerTesting(project) }
     }
 
     private fun configureDockerTesting(project: Project) {
@@ -53,7 +52,7 @@ class DockerTestPlugin : Plugin<Project> {
         val dockerTest: Provider<Test> = createTestTask(project, dockerTestSourceSet, buildService)
         project.getTasks().getByName(LifecycleBasePlugin.CHECK_TASK_NAME).dependsOn(dockerTest)
         project.getPlugins()
-            .withType<EclipsePlugin>(EclipsePlugin::class.java, Action { eclipsePlugin: EclipsePlugin ->
+            .withType<EclipsePlugin>(EclipsePlugin::class.java) { eclipsePlugin: EclipsePlugin ->
                 val eclipse = project.getExtensions().getByType<EclipseModel>(EclipseModel::class.java)
                 eclipse.classpath(Action { classpath: EclipseClasspath ->
                     classpath!!.getPlusConfigurations()
@@ -62,7 +61,7 @@ class DockerTestPlugin : Plugin<Project> {
                                 .getByName(dockerTestSourceSet.getRuntimeClasspathConfigurationName())
                         )
                 })
-            })
+            }
         project.getDependencies()
             .add(dockerTestSourceSet.getRuntimeOnlyConfigurationName(), "org.junit.platform:junit-platform-launcher")
         val reclaimDockerSpace: Provider<Exec> = createReclaimDockerSpaceTask(project, buildService)
@@ -88,14 +87,13 @@ class DockerTestPlugin : Plugin<Project> {
                 .plus(test.getOutput())
         )
         project.getPlugins().withType<IntegrationTestPlugin>(
-            IntegrationTestPlugin::class.java,
-            Action { integrationTestPlugin: IntegrationTestPlugin ->
+            IntegrationTestPlugin::class.java) { integrationTestPlugin: IntegrationTestPlugin ->
                 val intTest = sourceSets.getByName(IntegrationTestPlugin.Companion.INT_TEST_SOURCE_SET_NAME)
                 dockerTestSourceSet
                     .setCompileClasspath(dockerTestSourceSet.compileClasspath.plus(intTest.getOutput()))
                 dockerTestSourceSet
                     .setRuntimeClasspath(dockerTestSourceSet.getRuntimeClasspath().plus(intTest.getOutput()))
-            })
+            }
         return dockerTestSourceSet
     }
 
@@ -103,14 +101,14 @@ class DockerTestPlugin : Plugin<Project> {
         project: Project, dockerTestSourceSet: SourceSet,
         buildService: Provider<DockerTestBuildService>
     ): Provider<Test> {
-        return project.getTasks().register<Test>(DOCKER_TEST_TASK_NAME, Test::class.java, Action { task: Test ->
+        return project.getTasks().register<Test>(DOCKER_TEST_TASK_NAME, Test::class.java) { task: Test ->
             task!!.usesService(buildService)
             task.setGroup(LifecycleBasePlugin.VERIFICATION_GROUP)
             task.setDescription("Runs Docker-based tests.")
             task.setTestClassesDirs(dockerTestSourceSet.getOutput().getClassesDirs())
             task.setClasspath(dockerTestSourceSet.getRuntimeClasspath())
             task.shouldRunAfter(JavaPlugin.TEST_TASK_NAME)
-        })
+        }
     }
 
     private fun createReclaimDockerSpaceTask(
@@ -118,7 +116,7 @@ class DockerTestPlugin : Plugin<Project> {
         buildService: Provider<DockerTestBuildService>
     ): Provider<Exec> {
         return project.getTasks()
-            .register<Exec>(RECLAIM_DOCKER_SPACE_TASK_NAME, Exec::class.java, Action { task: Exec ->
+            .register<Exec>(RECLAIM_DOCKER_SPACE_TASK_NAME, Exec::class.java) { task: Exec ->
                 task!!.usesService(buildService)
                 task.setGroup(LifecycleBasePlugin.VERIFICATION_GROUP)
                 task.setDescription("Reclaims Docker space on CI.")
@@ -132,7 +130,7 @@ class DockerTestPlugin : Plugin<Project> {
                         .resolve(".github/scripts/reclaim-docker-diskspace.sh")
                         .toAbsolutePath()
                 )
-            })
+            }
     }
 
     private fun shouldReclaimDockerSpace(task: Task?): Boolean {

@@ -66,17 +66,17 @@ class ToolchainPlugin : Plugin<Project> {
     }
 
     private fun disableToolchainTasks(project: Project) {
-        project.getTasks().withType<Test>(Test::class.java, Action { task: Test -> task!!.setEnabled(false) })
+        project.getTasks().withType<Test>(Test::class.java) { task: Test -> task!!.setEnabled(false) }
     }
 
     private fun configureTestToolchain(project: Project, toolchainVersion: JavaLanguageVersion?) {
         val javaToolchains = project.getExtensions().getByType<JavaToolchainService>(JavaToolchainService::class.java)
         project.getTasks()
-            .withType<Test>(Test::class.java, Action { test: Test ->
+            .withType<Test>(Test::class.java) { test: Test ->
                 test!!.getJavaLauncher()
                     .set(javaToolchains.launcherFor(Action { spec: JavaToolchainSpec ->
                         spec!!.getLanguageVersion().set(toolchainVersion)
                     }))
-            })
+            }
     }
 }

@@ -64,8 +64,7 @@ class MavenRepositoryPlugin : Plugin<Project> {
         project.getArtifacts()
             .add(
                 projectRepository.name,
-                repositoryLocation,
-                Action { artifact: ConfigurablePublishArtifact -> artifact!!.builtBy(publishTask) })
+                repositoryLocation) { artifact: ConfigurablePublishArtifact -> artifact!!.builtBy(publishTask) }
         val target = projectRepository.getDependencies()
         project.getPlugins()
             .withType<JavaPlugin>(JavaPlugin::class.java)

@@ -122,7 +122,7 @@ import java.util.stream.Collectors
  */
 class JavaConventions(private val systemRequirements: SystemRequirementsExtension) {
     fun apply(project: Project) {
-        project.getPlugins().withType<JavaBasePlugin>(JavaBasePlugin::class.java, Action { java: JavaBasePlugin ->
+        project.getPlugins().withType<JavaBasePlugin>(JavaBasePlugin::class.java) { java: JavaBasePlugin ->
             project.getPlugins().apply<TestFailuresPlugin>(TestFailuresPlugin::class.java)
             project.getPlugins().apply<ArchitecturePlugin>(ArchitecturePlugin::class.java)
             configureSpringJavaFormat(project)
@@ -135,21 +135,20 @@ class JavaConventions(private val systemRequirements: SystemRequirementsExtensio
             configureProhibitedDependencyChecks(project)
             configureFactoriesFilesChecks(project)
             configureNullability(project)
-        })
+        }
     }
 
     private fun configureJarManifestConventions(project: Project) {
         val extractLegalResources = project.getTasks()
             .register<ExtractResources>(
                 "extractLegalResources",
-                ExtractResources::class.java,
-                Action { task: ExtractResources ->
+                ExtractResources::class.java) { task: ExtractResources ->
                     task!!.packageName.set("org.springframework.boot.build.legal")
                     task.destinationDirectory.set(project.getLayout().getBuildDirectory().dir("legal"))
                     task.resourceNames
                         .set(kotlin.collections.mutableListOf<String?>("LICENSE.txt", "NOTICE.txt"))
                     task.properties.put("version", project.version.toString())
-                })
+                }
         val sourceSets = project.getExtensions().getByType<SourceSetContainer>(SourceSetContainer::class.java)
         val sourceJarTaskNames = sourceSets.stream()
             .map<String> { obj: SourceSet? -> obj!!.getSourcesJarTaskName() }
@@ -157,7 +156,7 @@ class JavaConventions(private val systemRequirements: SystemRequirementsExtensio
         val javadocJarTaskNames = sourceSets.stream()
             .map<String> { obj: SourceSet? -> obj!!.getJavadocJarTaskName() }
             .collect(Collectors.toSet())
-        project.getTasks().withType<Jar>(Jar::class.java, Action { jar: Jar ->
+        project.getTasks().withType<Jar>(Jar::class.java) { jar: Jar ->
             project.afterEvaluate(Action { evaluated: Project ->
                 jar!!.metaInf(Action { metaInf: CopySpec -> metaInf!!.from(extractLegalResources) })
                 jar.manifest(Action { manifest: Manifest ->
@@ -174,7 +173,7 @@ class JavaConventions(private val systemRequirements: SystemRequirementsExtensio
                     manifest!!.attributes(attributes)
                 })
             })
-        })
+        }
     }
 
     private fun determineImplementationTitle(
@@ -191,23 +190,21 @@ class JavaConventions(private val systemRequirements: SystemRequirementsExtensio
     }
 
     private fun configureTestConventions(project: Project) {
-        project.getTasks().withType<Test>(Test::class.java, Action { test: Test ->
+        project.getTasks().withType<Test>(Test::class.java) { test: Test ->
             test!!.useJUnitPlatform()
             test.setMaxHeapSize("1536M")
             project.getTasks().withType<Checkstyle>(
-                Checkstyle::class.java,
-                Action { paths: Checkstyle -> test.mustRunAfter(paths!!) })
+                Checkstyle::class.java) { paths: Checkstyle -> test.mustRunAfter(paths!!) }
             project.getTasks().withType<CheckFormat>(
-                CheckFormat::class.java,
-                Action { paths: CheckFormat -> test.mustRunAfter(paths!!) })
+                CheckFormat::class.java) { paths: CheckFormat -> test.mustRunAfter(paths!!) }
             configureTestRetries(test)
             configurePredictiveTestSelection(test)
-        })
+        }
         project.getPlugins()
-            .withType<JavaPlugin>(JavaPlugin::class.java, Action { javaPlugin: JavaPlugin ->
+            .withType<JavaPlugin>(JavaPlugin::class.java) { javaPlugin: JavaPlugin ->
                 project.getDependencies()
                     .add(JavaPlugin.TEST_RUNTIME_ONLY_CONFIGURATION_NAME, "org.junit.platform:junit-platform-launcher")
-            })
+            }
     }
 
     private fun configureTestRetries(test: Test) {
@@ -234,7 +231,7 @@ class JavaConventions(private val systemRequirements: SystemRequirementsExtensio
         get() = System.getenv("ENABLE_PREDICTIVE_TEST_SELECTION").toBoolean()
 
     private fun configureJavadocConventions(project: Project) {
-        project.getTasks().withType<Javadoc>(Javadoc::class.java, Action { javadoc: Javadoc ->
+        project.getTasks().withType<Javadoc>(Javadoc::class.java) { javadoc: Javadoc ->
             val options = javadoc!!.getOptions() as CoreJavadocOptions
             options.source("17")
             options.encoding("UTF-8")
@@ -243,7 +240,7 @@ class JavaConventions(private val systemRequirements: SystemRequirementsExtensio
             if (!javadoc.name.contains("aggregated")) {
                 addValuelessOption(options, "-no-fonts")
             }
-        })
+        }
     }
 
     private fun addValuelessOption(options: CoreJavadocOptions, option: String?) {
@@ -251,7 +248,7 @@ class JavaConventions(private val systemRequirements: SystemRequirementsExtensio
     }
 
     private fun configureJavaConventions(project: Project) {
-        project.getTasks().withType<JavaCompile>(JavaCompile::class.java, Action { compile: JavaCompile ->
+        project.getTasks().withType<JavaCompile>(JavaCompile::class.java) { compile: JavaCompile ->
             compile!!.doFirst(Action { task: Task -> assertCompatible(compile) })
             compile.getOptions().setEncoding("UTF-8")
             compile.getOptions().getRelease().set(RUNTIME_JAVA_VERSION)
@@ -263,7 +260,7 @@ class JavaConventions(private val systemRequirements: SystemRequirementsExtensio
                 )
             )
             compile.getOptions().setCompilerArgs(java.util.ArrayList<String?>(args))
-        })
+        }
     }
 
     private fun assertCompatible(compile: JavaCompile) {
@@ -283,7 +280,7 @@ class JavaConventions(private val systemRequirements: SystemRequirementsExtensio
     private fun configureSpringJavaFormat(project: Project) {
         project.getPlugins().apply<SpringJavaFormatPlugin>(SpringJavaFormatPlugin::class.java)
         project.getTasks()
-            .withType<Format>(Format::class.java, Action { Format: Format -> Format!!.setEncoding("UTF-8") })
+            .withType<Format>(Format::class.java) { Format: Format -> Format!!.setEncoding("UTF-8") }
         project.getPlugins().apply<CheckstylePlugin>(CheckstylePlugin::class.java)
         val checkstyle = project.getExtensions().getByType<CheckstyleExtension>(CheckstyleExtension::class.java)
         val checkstyleToolVersion = project.findProperty("checkstyleToolVersion") as String?
@@ -296,11 +293,9 @@ class JavaConventions(private val systemRequirements: SystemRequirementsExtensio
         checkstyleDependencies
             .add(project.getDependencies().create("io.spring.javaformat:spring-javaformat-checkstyle:" + version))
         project.getTasks().withType<CheckFormat>(
-            CheckFormat::class.java,
-            Action { task: CheckFormat -> this.excludeGeneratedSources(task) })
+            CheckFormat::class.java) { task: CheckFormat -> this.excludeGeneratedSources(task) }
         project.getTasks().withType<Checkstyle>(
-            Checkstyle::class.java,
-            Action { task: Checkstyle -> this.excludeGeneratedSources(task) })
+            Checkstyle::class.java) { task: Checkstyle -> this.excludeGeneratedSources(task) }
     }
 
     private fun excludeGeneratedSources(task: SourceTask): SourceTask {
@@ -315,11 +310,11 @@ class JavaConventions(private val systemRequirements: SystemRequirementsExtensio
     private fun configureDependencyManagement(project: Project) {
         val configurations = project.getConfigurations()
         val dependencyManagement =
-            configurations.create("dependencyManagement", Action { configuration: Configuration ->
+            configurations.create("dependencyManagement") { configuration: Configuration ->
                 configuration.setVisible(false)
                 configuration.setCanBeConsumed(false)
                 configuration.setCanBeResolved(false)
-            })
+            }
         configurations
             .matching(Spec { configuration: Configuration ->
                 (configuration.name.endsWith("Classpath")
@@ -340,12 +335,11 @@ class JavaConventions(private val systemRequirements: SystemRequirementsExtensio
         dependencyManagement.getDependencies().add(springBootParent)
         project.getPlugins()
             .withType<OptionalDependenciesPlugin>(
-                OptionalDependenciesPlugin::class.java,
-                Action { optionalDependencies: OptionalDependenciesPlugin ->
+                OptionalDependenciesPlugin::class.java) { optionalDependencies: OptionalDependenciesPlugin ->
                     configurations
                         .getByName(OptionalDependenciesPlugin.OPTIONAL_CONFIGURATION_NAME)
                         .extendsFrom(dependencyManagement)
-                })
+                }
     }
 
     private fun configureToolchain(project: Project) {
@@ -375,8 +369,7 @@ class JavaConventions(private val systemRequirements: SystemRequirementsExtensio
             .getTasks()
             .register<CheckClasspathForProhibitedDependencies>(
                 "check" + StringUtils.capitalize(classpath.name + "ForProhibitedDependencies"),
-                CheckClasspathForProhibitedDependencies::class.java,
-                Action { task: CheckClasspathForProhibitedDependencies -> task!!.setClasspath(classpath) })
+                CheckClasspathForProhibitedDependencies::class.java) { task: CheckClasspathForProhibitedDependencies -> task!!.setClasspath(classpath) }
         project.getTasks().getByName(JavaBasePlugin.CHECK_TASK_NAME).dependsOn(checkClasspathForProhibitedDependencies)
     }
 
@@ -389,22 +382,20 @@ class JavaConventions(private val systemRequirements: SystemRequirementsExtensio
                 val checkAotFactories = project.getTasks()
                     .register<CheckAotFactories>(
                         "checkAotFactories",
-                        CheckAotFactories::class.java,
-                        Action { task: CheckAotFactories ->
+                        CheckAotFactories::class.java) { task: CheckAotFactories ->
                             task!!.source = main!!.getResources()
                             task.setClasspath(main.getOutput().getClassesDirs())
                             task.setDescription("Checks the META-INF/spring/aot.factories file of the main source set.")
-                        })
+                        }
                 check.configure(Action { task: Task -> task!!.dependsOn(checkAotFactories) })
                 val checkSpringFactories = project.getTasks()
                     .register<CheckSpringFactories>(
                         "checkSpringFactories",
-                        CheckSpringFactories::class.java,
-                        Action { task: CheckSpringFactories ->
+                        CheckSpringFactories::class.java) { task: CheckSpringFactories ->
                             task!!.source = main!!.getResources()
                             task.setClasspath(main.getOutput().getClassesDirs())
                             task.setDescription("Checks the META-INF/spring.factories file of the main source set.")
-                        })
+                        }
                 check.configure(Action { task: Task -> task!!.dependsOn(checkSpringFactories) })
             })
     }

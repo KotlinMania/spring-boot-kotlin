@@ -34,8 +34,7 @@ import org.gradle.api.plugins.JavaTestFixturesPlugin
 class TestFixturesConventions {
     fun apply(project: Project) {
         project.getPlugins().withType<JavaTestFixturesPlugin>(
-            JavaTestFixturesPlugin::class.java,
-            Action { testFixtures: JavaTestFixturesPlugin -> disablePublishing(project) })
+            JavaTestFixturesPlugin::class.java) { testFixtures: JavaTestFixturesPlugin -> disablePublishing(project) }
     }
 
     private fun disablePublishing(project: Project) {
@@ -43,10 +42,8 @@ class TestFixturesConventions {
         val javaComponent = project.getComponents()
             .getByName("java") as AdhocComponentWithVariants
         javaComponent.withVariantsFromConfiguration(
-            configurations.getByName("testFixturesApiElements"),
-            Action { variant: ConfigurationVariantDetails -> variant!!.skip() })
+            configurations.getByName("testFixturesApiElements")) { variant: ConfigurationVariantDetails -> variant!!.skip() }
         javaComponent.withVariantsFromConfiguration(
-            configurations.getByName("testFixturesRuntimeElements"),
-            Action { variant: ConfigurationVariantDetails -> variant!!.skip() })
+            configurations.getByName("testFixturesRuntimeElements")) { variant: ConfigurationVariantDetails -> variant!!.skip() }
     }
 }

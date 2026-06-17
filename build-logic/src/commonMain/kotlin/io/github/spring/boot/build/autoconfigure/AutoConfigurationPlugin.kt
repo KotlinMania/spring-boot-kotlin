@@ -51,8 +51,7 @@ class AutoConfigurationPlugin : Plugin<Project> {
     override fun apply(project: Project) {
         project.getPlugins().apply<DeployedPlugin>(DeployedPlugin::class.java)
         project.getPlugins().withType<JavaPlugin>(
-            JavaPlugin::class.java,
-            Action { javaPlugin: JavaPlugin -> Configurer(project).configure() })
+            JavaPlugin::class.java) { javaPlugin: JavaPlugin -> Configurer(project).configure() }
     }
 
     private class Configurer(private val project: Project) {
@@ -70,8 +69,7 @@ class AutoConfigurationPlugin : Plugin<Project> {
             val tasks = this.project.getTasks()
             val configurations = this.project.getConfigurations()
             configurations.consumable(
-                AUTO_CONFIGURATION_METADATA_CONFIGURATION_NAME,
-                Action { configuration: ConsumableConfiguration ->
+                AUTO_CONFIGURATION_METADATA_CONFIGURATION_NAME) { configuration: ConsumableConfiguration ->
                     configuration!!.attributes(
                         Action { attributes: AttributeContainer ->
                             attributes!!.attribute<Category>(
@@ -84,13 +82,11 @@ class AutoConfigurationPlugin : Plugin<Project> {
                                     .named<Usage>(Usage::class.java, "auto-configuration-metadata")
                             )
                         })
-                })
+                }
             tasks.register<AutoConfigurationMetadata>(
-                "autoConfigurationMetadata", AutoConfigurationMetadata::class.java,
-                Action { task: AutoConfigurationMetadata -> this.configureAutoConfigurationMetadata(task) })
+                "autoConfigurationMetadata", AutoConfigurationMetadata::class.java) { task: AutoConfigurationMetadata -> this.configureAutoConfigurationMetadata(task) }
             val checkAutoConfigurationImports = tasks.register<CheckAutoConfigurationImports>(
-                "checkAutoConfigurationImports", CheckAutoConfigurationImports::class.java,
-                Action { task: CheckAutoConfigurationImports -> this.configureCheckAutoConfigurationImports(task) })
+                "checkAutoConfigurationImports", CheckAutoConfigurationImports::class.java) { task: CheckAutoConfigurationImports -> this.configureCheckAutoConfigurationImports(task) }
             val requiredClasspath = configurations.create("autoConfigurationRequiredClasspath")
                 .extendsFrom(
                     configurations.getByName(this.main.getImplementationConfigurationName()),
@@ -98,22 +94,20 @@ class AutoConfigurationPlugin : Plugin<Project> {
                 )
             requiredClasspath.getDependencies().add(projectDependency(":core:spring-boot-autoconfigure"))
             val checkAutoConfigurationClasses = tasks.register<CheckAutoConfigurationClasses>(
-                "checkAutoConfigurationClasses", CheckAutoConfigurationClasses::class.java,
-                Action { task: CheckAutoConfigurationClasses ->
+                "checkAutoConfigurationClasses", CheckAutoConfigurationClasses::class.java) { task: CheckAutoConfigurationClasses ->
                     configureCheckAutoConfigurationClasses(
                         requiredClasspath,
                         task!!
                     )
-                })
+                }
             this.project.getPlugins()
                 .withType<OptionalDependenciesPlugin>(
-                    OptionalDependenciesPlugin::class.java,
-                    Action { plugin: OptionalDependenciesPlugin ->
+                    OptionalDependenciesPlugin::class.java) { plugin: OptionalDependenciesPlugin ->
                         configureCheckAutoConfigurationClassesForOptionalDependencies(
                             configurations,
                             checkAutoConfigurationClasses
                         )
-                    })
+                    }
             this.project.getTasks()
                 .getByName(JavaBasePlugin.CHECK_TASK_NAME)
                 .dependsOn(checkAutoConfigurationImports, checkAutoConfigurationClasses)
@@ -138,8 +132,7 @@ class AutoConfigurationPlugin : Plugin<Project> {
                 .set(this.project.getLayout().getBuildDirectory().file("auto-configuration-metadata.properties"))
             this.project.getArtifacts()
                 .add(
-                    AUTO_CONFIGURATION_METADATA_CONFIGURATION_NAME, task.outputFile,
-                    Action { artifact: ConfigurablePublishArtifact -> artifact!!.builtBy(task) })
+                    AUTO_CONFIGURATION_METADATA_CONFIGURATION_NAME, task.outputFile) { artifact: ConfigurablePublishArtifact -> artifact!!.builtBy(task) }
         }
 
         fun configureCheckAutoConfigurationImports(task: CheckAutoConfigurationImports) {

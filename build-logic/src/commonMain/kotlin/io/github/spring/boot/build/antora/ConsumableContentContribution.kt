@@ -72,8 +72,7 @@ open class ConsumableContentContribution protected constructor(
         val tasks = getProject().getTasks()
         val copyAntoraContent: TaskProvider<*> = tasks.register<CopyAntoraContent>(
             taskName("copy", "%s", configuration.name),
-            CopyAntoraContent::class.java,
-            Action { task: CopyAntoraContent -> configureCopyContent(task!!, path, configuration, outputDirectory) })
+            CopyAntoraContent::class.java) { task: CopyAntoraContent -> configureCopyContent(task!!, path, configuration, outputDirectory) }
         configureAntora(addInputFrom(copyAntoraContent, configuration.name))
         configurePlaybookGeneration(Action { task: GenerateAntoraPlaybook ->
             this.addToZipContentsCollectorDependencies(
@@ -116,8 +115,7 @@ open class ConsumableContentContribution protected constructor(
         if ("maven" == mavenPublication.name) {
             val classifier: String = "%s-%s-content".format(getName(), getType())
             mavenPublication.artifact(
-                producer,
-                Action { mavenArtifact: MavenArtifact -> mavenArtifact!!.setClassifier(classifier) })
+                producer) { mavenArtifact: MavenArtifact -> mavenArtifact!!.setClassifier(classifier) }
         }
     }
 
@@ -129,15 +127,14 @@ open class ConsumableContentContribution protected constructor(
     private fun createConfiguration(name: String?, description: String): Configuration {
         return getProject().getConfigurations()
             .create(
-                configurationName(name, "Antora%sContent", getType()),
-                Action { configuration: Configuration ->
+                configurationName(name, "Antora%sContent", getType())) { configuration: Configuration ->
                     configuration.setDescription(
                         description.format(
                             getName(),
                             getType()
                         )
                     )
-                })
+                }
     }
 
     companion object {

@@ -41,13 +41,12 @@ abstract class MoveToSnapshots @Inject constructor(bom: BomExtension?) : Upgrade
 
     init {
         getProject().getRepositories().withType<MavenArtifactRepository>(
-            MavenArtifactRepository::class.java,
-            Action { repository: MavenArtifactRepository ->
+            MavenArtifactRepository::class.java) { repository: MavenArtifactRepository ->
                 val name = repository!!.name
                 if (name.startsWith("spring-") && name.endsWith("-snapshot")) {
                     getRepositoryNames().add(name)
                 }
-            })
+            }
     }
 
     @TaskAction

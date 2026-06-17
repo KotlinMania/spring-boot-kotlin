@@ -37,8 +37,7 @@ import org.gradle.plugins.ide.eclipse.model.EclipseModel
 class IntegrationTestPlugin : Plugin<Project> {
     override fun apply(project: Project) {
         project.getPlugins().withType<JavaPlugin>(
-            JavaPlugin::class.java,
-            Action { javaPlugin: JavaPlugin -> configureIntegrationTesting(project) })
+            JavaPlugin::class.java) { javaPlugin: JavaPlugin -> configureIntegrationTesting(project) }
     }
 
     private fun configureIntegrationTesting(project: Project) {
@@ -46,7 +45,7 @@ class IntegrationTestPlugin : Plugin<Project> {
         val intTest: TaskProvider<Test> = createTestTask(project, intTestSourceSet)
         project.getTasks().getByName(LifecycleBasePlugin.CHECK_TASK_NAME).dependsOn(intTest)
         project.getPlugins()
-            .withType<EclipsePlugin>(EclipsePlugin::class.java, Action { eclipsePlugin: EclipsePlugin ->
+            .withType<EclipsePlugin>(EclipsePlugin::class.java) { eclipsePlugin: EclipsePlugin ->
                 val eclipse = project.getExtensions().getByType<EclipseModel>(EclipseModel::class.java)
                 eclipse.classpath(Action { classpath: EclipseClasspath ->
                     classpath!!.getPlusConfigurations()
@@ -55,7 +54,7 @@ class IntegrationTestPlugin : Plugin<Project> {
                                 .getByName(intTestSourceSet.getRuntimeClasspathConfigurationName())
                         )
                 })
-            })
+            }
         project.getDependencies()
             .add(intTestSourceSet.getRuntimeOnlyConfigurationName(), "org.junit.platform:junit-platform-launcher")
     }
@@ -71,13 +70,13 @@ class IntegrationTestPlugin : Plugin<Project> {
     }
 
     private fun createTestTask(project: Project, intTestSourceSet: SourceSet): TaskProvider<Test> {
-        return project.getTasks().register<Test>(INT_TEST_TASK_NAME, Test::class.java, Action { task: Test ->
+        return project.getTasks().register<Test>(INT_TEST_TASK_NAME, Test::class.java) { task: Test ->
             task!!.setGroup(LifecycleBasePlugin.VERIFICATION_GROUP)
             task.setDescription("Runs integration tests.")
             task.setTestClassesDirs(intTestSourceSet.getOutput().getClassesDirs())
             task.setClasspath(intTestSourceSet.getRuntimeClasspath())
             task.shouldRunAfter(JavaPlugin.TEST_TASK_NAME)
-        })
+        }
     }
 
     companion object {

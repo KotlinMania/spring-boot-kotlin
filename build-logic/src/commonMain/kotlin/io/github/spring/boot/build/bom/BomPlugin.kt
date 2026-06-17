@@ -66,18 +66,17 @@ class BomPlugin : Plugin<Project> {
         project.getArtifacts()
             .add(
                 resolvedBomConfiguration.name,
-                createResolvedBom.map<RegularFileProperty>(Transformer { obj: CreateResolvedBom? -> obj!!.outputFile }),
-                Action { artifact: ConfigurablePublishArtifact -> artifact!!.builtBy(createResolvedBom) })
+                createResolvedBom.map<RegularFileProperty>(Transformer { obj: CreateResolvedBom? -> obj!!.outputFile })) { artifact: ConfigurablePublishArtifact -> artifact!!.builtBy(createResolvedBom) }
         PublishingCustomizer(project, bom).customize()
     }
 
     private fun createApiEnforcedConfiguration(project: Project) {
         val apiEnforced = project.getConfigurations()
-            .create(API_ENFORCED_CONFIGURATION_NAME, Action { configuration: Configuration ->
+            .create(API_ENFORCED_CONFIGURATION_NAME) { configuration: Configuration ->
                 configuration.setCanBeConsumed(false)
                 configuration.setCanBeResolved(false)
                 configuration.setVisible(false)
-            })
+            }
         project.getConfigurations()
             .getByName(JavaPlatformPlugin.ENFORCED_API_ELEMENTS_CONFIGURATION_NAME)
             .extendsFrom(apiEnforced)

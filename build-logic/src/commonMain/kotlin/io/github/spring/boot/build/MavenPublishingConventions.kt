@@ -110,16 +110,15 @@ class MavenPublishingConventions {
 
     private fun customizeJavaMavenPublication(publication: MavenPublication, project: Project?) {
         publication.versionMapping(Action { strategy: VersionMappingStrategy ->
-            strategy!!.usage(Usage.JAVA_API, Action { mappingStrategy: VariantVersionMappingStrategy ->
+            strategy!!.usage(Usage.JAVA_API) { mappingStrategy: VariantVersionMappingStrategy ->
                 mappingStrategy!!
                     .fromResolutionOf(JavaPlugin.RUNTIME_CLASSPATH_CONFIGURATION_NAME)
-            })
+            }
         })
         publication.versionMapping(
             Action { strategy: VersionMappingStrategy ->
                 strategy!!.usage(
-                    Usage.JAVA_RUNTIME,
-                    Action { obj: VariantVersionMappingStrategy -> obj!!.fromResolutionResult() })
+                    Usage.JAVA_RUNTIME) { obj: VariantVersionMappingStrategy -> obj!!.fromResolutionResult() }
             })
     }
 

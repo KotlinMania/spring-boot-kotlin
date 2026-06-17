@@ -40,8 +40,7 @@ import java.io.File
 class ConfigurationMetadataPlugin : Plugin<Project> {
     override fun apply(project: Project) {
         project.getPlugins().withType<JavaPlugin>(
-            JavaPlugin::class.java,
-            Action { javaPlugin: JavaPlugin -> registerCheckAdditionalMetadataTask(project) })
+            JavaPlugin::class.java) { javaPlugin: JavaPlugin -> registerCheckAdditionalMetadataTask(project) }
     }
 
     private fun registerCheckAdditionalMetadataTask(project: Project) {
@@ -80,8 +79,7 @@ class ConfigurationMetadataPlugin : Plugin<Project> {
     private fun addMetadataArtifact(project: Project, metadataLocation: Provider<File>) {
         project.getConfigurations()
             .consumable(
-                CONFIGURATION_PROPERTIES_METADATA_CONFIGURATION_NAME,
-                Action { configuration: ConsumableConfiguration ->
+                CONFIGURATION_PROPERTIES_METADATA_CONFIGURATION_NAME) { configuration: ConsumableConfiguration ->
                     configuration!!.attributes(
                         Action { attributes: AttributeContainer ->
                             attributes!!.attribute<Category>(
@@ -94,7 +92,7 @@ class ConfigurationMetadataPlugin : Plugin<Project> {
                                     .named<Usage>(Usage::class.java, "configuration-properties-metadata")
                             )
                         })
-                })
+                }
         project.getArtifacts().add(CONFIGURATION_PROPERTIES_METADATA_CONFIGURATION_NAME, metadataLocation)
     }
 

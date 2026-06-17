@@ -41,13 +41,12 @@ abstract class UpgradeBom @Inject constructor(bom: BomExtension?) : UpgradeDepen
     private fun addOpenSourceRepositories(repositories: RepositoryHandler) {
         getRepositoryNames().add(ArtifactRepositoryContainer.DEFAULT_MAVEN_CENTRAL_REPO_NAME)
         repositories.withType<MavenArtifactRepository>(
-            MavenArtifactRepository::class.java,
-            Action { repository: MavenArtifactRepository ->
+            MavenArtifactRepository::class.java) { repository: MavenArtifactRepository ->
                 val name = repository!!.name
                 if (name.startsWith("spring-") && !name.endsWith("-snapshot")) {
                     getRepositoryNames().add(name)
                 }
-            })
+            }
     }
 
     private fun addCommercialRepositories() {

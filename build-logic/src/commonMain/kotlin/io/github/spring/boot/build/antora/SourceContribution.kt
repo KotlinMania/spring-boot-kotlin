@@ -34,13 +34,13 @@ class SourceContribution(project: Project?, name: String?) : Contribution(projec
     fun produce() {
         val antoraSource = getProject().getConfigurations().create(CONFIGURATION_NAME)
         val antoraSourceZip =
-            getProject().getTasks().register<Zip>("antoraSourceZip", Zip::class.java, Action { zip: Zip ->
+            getProject().getTasks().register<Zip>("antoraSourceZip", Zip::class.java) { zip: Zip ->
                 zip!!.destinationDirectory.set(getProject().getLayout().getBuildDirectory().dir("antora-source"))
                 zip.from(AntoraConventions.ANTORA_SOURCE_DIR)
                 zip.setDescription(
                     "Creates a zip archive of the Antora source in %s.".format(AntoraConventions.ANTORA_SOURCE_DIR)
                 )
-            })
+            }
         getProject().getArtifacts().add(antoraSource.name, antoraSourceZip)
     }
 
@@ -55,8 +55,7 @@ class SourceContribution(project: Project?, name: String?) : Contribution(projec
         val tasks = getProject().getTasks()
         val syncSource = tasks.register<SyncAntoraSource>(
             taskName("sync", "%s", configuration.name),
-            SyncAntoraSource::class.java,
-            Action { task: SyncAntoraSource -> configureSyncSource(task!!, path, configuration, outputDirectory) })
+            SyncAntoraSource::class.java) { task: SyncAntoraSource -> configureSyncSource(task!!, path, configuration, outputDirectory) }
         configureAntora(addInputFrom(syncSource, configuration.name))
         configurePlaybookGeneration(
             Action { generatePlaybook: GenerateAntoraPlaybook ->

@@ -37,12 +37,11 @@ import org.gradle.language.base.plugins.LifecycleBasePlugin
  */
 class TestAutoConfigurationPlugin : Plugin<Project> {
     override fun apply(target: Project) {
-        target.getPlugins().withType<JavaPlugin>(JavaPlugin::class.java, Action { plugin: JavaPlugin ->
+        target.getPlugins().withType<JavaPlugin>(JavaPlugin::class.java) { plugin: JavaPlugin ->
             val checkAutoConfigureImports = target.getTasks()
                 .register<CheckAutoConfigureImports>(
                     "checkAutoConfigureImports",
-                    CheckAutoConfigureImports::class.java,
-                    Action { task: CheckAutoConfigureImports ->
+                    CheckAutoConfigureImports::class.java) { task: CheckAutoConfigureImports ->
                         val mainSourceSet: SourceSet = target.getExtensions()
                             .getByType<JavaPluginExtension>(JavaPluginExtension::class.java)
                             .sourceSets
@@ -53,10 +52,10 @@ class TestAutoConfigurationPlugin : Plugin<Project> {
                             target.getConfigurations().getByName(mainSourceSet.getRuntimeClasspathConfigurationName())
                         )
                         task.setClasspath(classpath)
-                    })
+                    }
             target.getTasks()
                 .named(LifecycleBasePlugin.CHECK_TASK_NAME)
                 .configure(Action { check: Task -> check!!.dependsOn(checkAutoConfigureImports) })
-        })
+        }
     }
 }

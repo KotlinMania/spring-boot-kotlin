@@ -99,15 +99,13 @@ class MavenPluginPlugin : Plugin<Project> {
 
     private fun publishOptionalDependenciesInPom(project: Project) {
         project.getPlugins().withType<OptionalDependenciesPlugin>(
-            OptionalDependenciesPlugin::class.java,
-            Action { optionalDependencies: OptionalDependenciesPlugin ->
+            OptionalDependenciesPlugin::class.java) { optionalDependencies: OptionalDependenciesPlugin ->
                 val component = project.getComponents().findByName("java")
                 if (component is AdhocComponentWithVariants) {
                     component.addVariantsFromConfiguration(
-                        project.getConfigurations().getByName(OptionalDependenciesPlugin.OPTIONAL_CONFIGURATION_NAME),
-                        Action { obj: ConfigurationVariantDetails -> obj!!.mapToOptional() })
+                        project.getConfigurations().getByName(OptionalDependenciesPlugin.OPTIONAL_CONFIGURATION_NAME)) { obj: ConfigurationVariantDetails -> obj!!.mapToOptional() }
                 }
-            })
+            }
         val publication = project.getExtensions()
             .getByType<PublishingExtension>(PublishingExtension::class.java)
             .publications
@@ -127,8 +125,7 @@ class MavenPluginPlugin : Plugin<Project> {
     private fun configurePomPackaging(project: Project) {
         val publishing = project.getExtensions().getByType<PublishingExtension>(PublishingExtension::class.java)
         publishing.publications.withType<MavenPublication>(
-            MavenPublication::class.java,
-            Action { mavenPublication: MavenPublication -> this.setPackaging(mavenPublication) })
+            MavenPublication::class.java) { mavenPublication: MavenPublication -> this.setPackaging(mavenPublication) }
     }
 
     private fun setPackaging(mavenPublication: MavenPublication) {
@@ -150,12 +147,11 @@ class MavenPluginPlugin : Plugin<Project> {
         repositoryContents.setCanBeConsumed(false)
         val populateMavenRepository = project.getTasks()
             .register<ResolvedConfigurationMavenRepository>(
-                "populateResolvedDependenciesMavenRepository", ResolvedConfigurationMavenRepository::class.java,
-                Action { task: ResolvedConfigurationMavenRepository ->
+                "populateResolvedDependenciesMavenRepository", ResolvedConfigurationMavenRepository::class.java) { task: ResolvedConfigurationMavenRepository ->
                     task!!.setConfiguration(repositoryContents)
                     task.outputDir
                         .set(project.getLayout().getBuildDirectory().dir("resolved-dependencies-maven-repository"))
-                })
+                }
         project.getDependencies()
             .components(Action { components: ComponentMetadataHandler ->
                 components!!.all(
@@ -163,7 +159,7 @@ class MavenPluginPlugin : Plugin<Project> {
                 )
             })
         val populateRepository = project.getTasks()
-            .register<Sync>("populateTestMavenRepository", Sync::class.java, Action { task: Sync ->
+            .register<Sync>("populateTestMavenRepository", Sync::class.java) { task: Sync ->
                 task!!.setDestinationDir(
                     project.getLayout().getBuildDirectory().dir("test-maven-repository").get().asFile
                 )
@@ -171,15 +167,14 @@ class MavenPluginPlugin : Plugin<Project> {
                 task.dependsOn(
                     project.getTasks().getByName(MavenRepositoryPlugin.PUBLISH_TO_PROJECT_REPOSITORY_TASK_NAME)
                 )
-            })
+            }
         project.getTasks().getByName(IntegrationTestPlugin.INT_TEST_TASK_NAME).dependsOn(populateRepository)
         project.getPlugins()
             .withType<DockerTestPlugin>(DockerTestPlugin::class.java)
             .all(Action { dockerTestPlugin: DockerTestPlugin ->
                 project.getTasks()
                     .named(
-                        DockerTestPlugin.DOCKER_TEST_TASK_NAME,
-                        Action { dockerTest: Task -> dockerTest!!.dependsOn(populateRepository) })
+                        DockerTestPlugin.DOCKER_TEST_TASK_NAME) { dockerTest: Task -> dockerTest!!.dependsOn(populateRepository) }
             })
     }
 
@@ -197,8 +192,7 @@ class MavenPluginPlugin : Plugin<Project> {
     private fun addDocumentPluginGoalsTask(project: Project, generatePluginDescriptorTask: TaskProvider<MavenExec>) {
         project.getTasks().register<DocumentPluginGoals>(
             "documentPluginGoals",
-            DocumentPluginGoals::class.java,
-            Action { task: DocumentPluginGoals ->
+            DocumentPluginGoals::class.java) { task: DocumentPluginGoals ->
                 val layout = project.getLayout()
                 val pluginXml: Provider<RegularFile> = layout.file(
                     generatePluginDescriptorTask
@@ -212,7 +206,7 @@ class MavenPluginPlugin : Plugin<Project> {
                 task!!.pluginXml.set(pluginXml)
                 task.outputDir.set(layout.getBuildDirectory().dir("docs/generated/goals/"))
                 task.dependsOn(generatePluginDescriptorTask)
-            })
+            }
     }
 
     private fun addGenerateHelpMojoTask(project: Project, jarTask: Jar): TaskProvider<MavenExec> {
@@ -228,21 +222,21 @@ class MavenPluginPlugin : Plugin<Project> {
         syncHelpMojoInputs: TaskProvider<Sync>
     ): TaskProvider<MavenExec> {
         return project.getTasks()
-            .register<MavenExec>("generateHelpMojo", MavenExec::class.java, Action { task: MavenExec ->
+            .register<MavenExec>("generateHelpMojo", MavenExec::class.java) { task: MavenExec ->
                 task!!.projectDir.set(helpMojoDir)
                 task.args("org.apache.maven.plugins:maven-plugin-plugin:3.6.1:helpmojo")
                 task.getOutputs()
                     .dir(helpMojoDir.map<Directory>(Transformer { directory: Directory? -> directory!!.dir("target/generated-sources/plugin") }))
                 task.dependsOn(syncHelpMojoInputs)
-            })
+            }
     }
 
     private fun createSyncHelpMojoInputsTask(project: Project, helpMojoDir: Provider<Directory>): TaskProvider<Sync> {
-        return project.getTasks().register<Sync>("syncHelpMojoInputs", Sync::class.java, Action { task: Sync ->
+        return project.getTasks().register<Sync>("syncHelpMojoInputs", Sync::class.java) { task: Sync ->
             task!!.setDestinationDir(helpMojoDir.get()!!.asFile)
             val pomFile: File = java.io.File(project.projectDir, "src/maven/resources/pom.xml")
-            task.from(pomFile, Action { copy: CopySpec -> replaceVersionPlaceholder(copy!!, project) })
-        })
+            task.from(pomFile) { copy: CopySpec -> replaceVersionPlaceholder(copy!!, project) }
+        }
     }
 
     private fun includeHelpMojoInJar(jarTask: Jar, generateHelpMojoTask: TaskProvider<MavenExec>) {
@@ -260,7 +254,7 @@ class MavenPluginPlugin : Plugin<Project> {
             .dir("generated/sources/helpMojo")
         val mainSourceSet = getMainSourceSet(project)
         project.getTasks()
-            .withType<Javadoc>(Javadoc::class.java, Action { javadoc: Javadoc -> this.setJavadocOptions(javadoc) })
+            .withType<Javadoc>(Javadoc::class.java) { javadoc: Javadoc -> this.setJavadocOptions(javadoc) }
         val formattedHelpMojoSource: TaskProvider<FormatHelpMojoSource> = createFormatHelpMojoSource(
             project,
             generateHelpMojoTask, generatedHelpMojoDir
@@ -297,11 +291,10 @@ class MavenPluginPlugin : Plugin<Project> {
     ): TaskProvider<FormatHelpMojoSource> {
         return project.getTasks().register<FormatHelpMojoSource>(
             "formatHelpMojoSource",
-            FormatHelpMojoSource::class.java,
-            Action { task: FormatHelpMojoSource ->
+            FormatHelpMojoSource::class.java) { task: FormatHelpMojoSource ->
                 task!!.setGenerator(generateHelpMojoTask)
                 task.outputDir.set(generatedHelpMojoDir)
-            })
+            }
     }
 
     private fun createSyncPluginDescriptorInputs(
@@ -309,19 +302,17 @@ class MavenPluginPlugin : Plugin<Project> {
         sourceSet: SourceSet
     ): TaskProvider<Sync> {
         return project.getTasks()
-            .register<Sync>("syncPluginDescriptorInputs", Sync::class.java, Action { task: Sync ->
+            .register<Sync>("syncPluginDescriptorInputs", Sync::class.java) { task: Sync ->
                 task!!.setDestinationDir(destination.get()!!.asFile)
                 val pomFile: File = java.io.File(project.projectDir, "src/maven/resources/pom.xml")
-                task.from(pomFile, Action { copy: CopySpec -> replaceVersionPlaceholder(copy!!, project) })
+                task.from(pomFile) { copy: CopySpec -> replaceVersionPlaceholder(copy!!, project) }
                 task.from(
-                    sourceSet.getOutput().getClassesDirs(),
-                    Action { sync: CopySpec -> sync!!.into("target/classes") })
+                    sourceSet.getOutput().getClassesDirs()) { sync: CopySpec -> sync!!.into("target/classes") }
                 task.from(
-                    sourceSet.getAllJava().getSrcDirs(),
-                    Action { sync: CopySpec -> sync!!.into("src/main/java") })
+                    sourceSet.getAllJava().getSrcDirs()) { sync: CopySpec -> sync!!.into("src/main/java") }
                 task.getInputs().property("version", project.version)
                 task.dependsOn(sourceSet.getClassesTaskName())
-            })
+            }
     }
 
     private fun createGeneratePluginDescriptorTask(
@@ -329,7 +320,7 @@ class MavenPluginPlugin : Plugin<Project> {
         pluginDescriptorInputs: TaskProvider<Sync>
     ): TaskProvider<MavenExec> {
         return project.getTasks()
-            .register<MavenExec>("generatePluginDescriptor", MavenExec::class.java, Action { task: MavenExec ->
+            .register<MavenExec>("generatePluginDescriptor", MavenExec::class.java) { task: MavenExec ->
                 task!!.args("org.apache.maven.plugins:maven-plugin-plugin:3.6.1:descriptor")
                 task.getOutputs()
                     .dir(mavenDir.map<Directory>(Transformer { directory: Directory? -> directory!!.dir("target/classes/META-INF/maven") }))
@@ -339,22 +330,21 @@ class MavenPluginPlugin : Plugin<Project> {
                     .withPropertyName("plugin classes")
                 task.projectDir.set(mavenDir)
                 task.dependsOn(pluginDescriptorInputs)
-            })
+            }
     }
 
     private fun includeDescriptorInJar(jar: Jar, generatePluginDescriptorTask: TaskProvider<MavenExec>) {
-        jar.from(generatePluginDescriptorTask, Action { copy: CopySpec -> copy!!.into("META-INF/maven/") })
+        jar.from(generatePluginDescriptorTask) { copy: CopySpec -> copy!!.into("META-INF/maven/") }
         jar.dependsOn(generatePluginDescriptorTask)
     }
 
     private fun addPrepareMavenBinariesTask(project: Project) {
         val task = project.getTasks()
             .register<PrepareMavenBinaries>(
-                "prepareMavenBinaries", PrepareMavenBinaries::class.java,
-                Action { prepareMavenBinaries: PrepareMavenBinaries ->
+                "prepareMavenBinaries", PrepareMavenBinaries::class.java) { prepareMavenBinaries: PrepareMavenBinaries ->
                     prepareMavenBinaries!!.outputDir
                         .set(project.getLayout().getBuildDirectory().dir("maven-binaries"))
-                })
+                }
         project.getTasks()
             .getByName(IntegrationTestPlugin.INT_TEST_TASK_NAME)
             .getInputs()
@@ -374,8 +364,7 @@ class MavenPluginPlugin : Plugin<Project> {
     private fun addExtractVersionPropertiesTask(project: Project): TaskProvider<ExtractVersionProperties> {
         return project.getTasks().register<ExtractVersionProperties>(
             "extractVersionProperties",
-            ExtractVersionProperties::class.java,
-            Action { task: ExtractVersionProperties ->
+            ExtractVersionProperties::class.java) { task: ExtractVersionProperties ->
                 task!!.setResolvedBoms(project.getConfigurations().create("versionProperties"))
                 task.destination
                     .set(
@@ -384,7 +373,7 @@ class MavenPluginPlugin : Plugin<Project> {
                             .dir("generated-resources")
                             .map<RegularFile>(Transformer { dir: Directory? -> dir!!.file("extracted-versions.properties") })
                     )
-            })
+            }
     }
 
     abstract class FormatHelpMojoSource @Inject constructor(private val objectFactory: ObjectFactory) : DefaultTask() {
@@ -442,12 +431,10 @@ class MavenPluginPlugin : Plugin<Project> {
             context.getDetails()
                 .maybeAddVariant(
                     "compileWithMetadata",
-                    "compile",
-                    Action { variant: VariantMetadata -> configureVariant(context, variant!!) })
+                    "compile") { variant: VariantMetadata -> configureVariant(context, variant!!) }
             context.getDetails()
                 .maybeAddVariant(
-                    "apiElementsWithMetadata", "apiElements",
-                    Action { variant: VariantMetadata -> configureVariant(context, variant!!) })
+                    "apiElementsWithMetadata", "apiElements") { variant: VariantMetadata -> configureVariant(context, variant!!) }
         }
 
         private fun configureVariant(context: ComponentMetadataContext, variant: VariantMetadata) {

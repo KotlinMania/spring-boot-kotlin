@@ -61,8 +61,7 @@ import java.util.concurrent.Callable
 class AntoraConventions {
     fun apply(project: Project) {
         project.getPlugins().withType<AntoraPlugin>(
-            AntoraPlugin::class.java,
-            Action { antoraPlugin: AntoraPlugin -> apply(project, antoraPlugin) })
+            AntoraPlugin::class.java) { antoraPlugin: AntoraPlugin -> apply(project, antoraPlugin) }
     }
 
     private fun apply(project: Project, antoraPlugin: AntoraPlugin?) {
@@ -75,51 +74,45 @@ class AntoraConventions {
         project.getPlugins().apply<GenerateAntoraYmlPlugin>(GenerateAntoraYmlPlugin::class.java)
         val tasks = project.getTasks()
         val generateAntoraPlaybookTask = tasks.register<GenerateAntoraPlaybook>(
-            GENERATE_ANTORA_PLAYBOOK_TASK_NAME, GenerateAntoraPlaybook::class.java,
-            Action { task: GenerateAntoraPlaybook -> configureGenerateAntoraPlaybookTask(project, task!!) })
+            GENERATE_ANTORA_PLAYBOOK_TASK_NAME, GenerateAntoraPlaybook::class.java) { task: GenerateAntoraPlaybook -> configureGenerateAntoraPlaybookTask(project, task!!) }
         val copyAntoraPackageJsonTask = tasks.register<Copy>(
-            "copyAntoraPackageJson", Copy::class.java,
-            Action { task: Copy -> configureCopyAntoraPackageJsonTask(project, task!!) })
+            "copyAntoraPackageJson", Copy::class.java) { task: Copy -> configureCopyAntoraPackageJsonTask(project, task!!) }
         val npmInstallTask = tasks.register<NpmInstallTask>(
-            "antoraNpmInstall", NpmInstallTask::class.java,
-            Action { task: NpmInstallTask -> configureNpmInstallTask(project, task!!, copyAntoraPackageJsonTask) })
+            "antoraNpmInstall", NpmInstallTask::class.java) { task: NpmInstallTask -> configureNpmInstallTask(project, task!!, copyAntoraPackageJsonTask) }
         tasks.withType<GenerateAntoraYmlTask>(
-            GenerateAntoraYmlTask::class.java,
-            Action { generateAntoraYmlTask: GenerateAntoraYmlTask ->
+            GenerateAntoraYmlTask::class.java) { generateAntoraYmlTask: GenerateAntoraYmlTask ->
                 configureGenerateAntoraYmlTask(
                     project,
                     generateAntoraYmlTask!!,
                     resolvedBom
                 )
-            })
+            }
         tasks.withType<AntoraTask>(
-            AntoraTask::class.java,
-            Action { antoraTask: AntoraTask ->
+            AntoraTask::class.java) { antoraTask: AntoraTask ->
                 configureAntoraTask(
                     project,
                     antoraTask!!,
                     npmInstallTask,
                     generateAntoraPlaybookTask
                 )
-            })
+            }
         project.getExtensions()
             .configure<NodeExtension?>(
-                NodeExtension::class.java,
-                Action { nodeExtension: NodeExtension -> configureNodeExtension(project, nodeExtension!!) })
+                NodeExtension::class.java) { nodeExtension: NodeExtension -> configureNodeExtension(project, nodeExtension!!) }
         val checkAntoraJavadocMacros = tasks.register<CheckJavadocMacros>(
             "checkAntoraJavadocMacros",
-            CheckJavadocMacros::class.java, Action { task: CheckJavadocMacros ->
+            CheckJavadocMacros::class.java) { task: CheckJavadocMacros ->
                 task!!.setSource(project.files(ANTORA_SOURCE_DIR))
                 task.outputDirectory.set(project.getLayout().getBuildDirectory().dir(task.name))
-            })
-        project.getPlugins().withType<JavaPlugin>(JavaPlugin::class.java, Action { java: JavaPlugin ->
+            }
+        project.getPlugins().withType<JavaPlugin>(JavaPlugin::class.java) { java: JavaPlugin ->
             val runtimeClasspathConfigurationName: String = project.getExtensions()
                 .getByType<JavaPluginExtension>(JavaPluginExtension::class.java)
                 .sourceSets
                 .getByName(SourceSet.MAIN_SOURCE_SET_NAME)
                 .getRuntimeClasspathConfigurationName()
             val javadocMacros =
-                project.getConfigurations().create("javadocMacros", Action { configuration: Configuration ->
+                project.getConfigurations().create("javadocMacros") { configuration: Configuration ->
                     configuration.extendsFrom(project.getConfigurations().getByName(runtimeClasspathConfigurationName))
                     configuration.setDescription(
                         "Dependencies referenced in javadoc macros. Extends from " + runtimeClasspathConfigurationName
@@ -127,19 +120,18 @@ class AntoraConventions {
                     configuration.setCanBeResolved(true)
                     configuration.setCanBeDeclared(true)
                     configuration.setCanBeConsumed(false)
-                })
+                }
             checkAntoraJavadocMacros.configure(Action { macrosTask: CheckJavadocMacros ->
                 macrosTask!!.setClasspath(
                     javadocMacros
                 )
             })
-        })
+        }
         project.getPlugins()
             .withType<NodePlugin>(
-                NodePlugin::class.java,
-                Action { node: NodePlugin ->
+                NodePlugin::class.java) { node: NodePlugin ->
                     project.getExtensions().getByType<NodeExtension>(NodeExtension::class.java).version.set("24.14.1")
-                })
+                }
     }
 
     private fun configureGenerateAntoraPlaybookTask(
@@ -154,8 +146,7 @@ class AntoraConventions {
     private fun configureCopyAntoraPackageJsonTask(project: Project, copyAntoraPackageJsonTask: Copy) {
         copyAntoraPackageJsonTask
             .from(
-                project.getRootProject().file("antora"),
-                Action { spec: CopySpec -> spec!!.include("package.json", "package-lock.json", "patches/**") })
+                project.getRootProject().file("antora")) { spec: CopySpec -> spec!!.include("package.json", "package-lock.json", "patches/**") }
             .into(getNodeProjectDir(project))
     }
 
@@ -226,12 +217,11 @@ class AntoraConventions {
         antoraTask.args.set(project.provider<MutableList<String?>>(Callable { getAntoraNpxArs(project, antoraTask) }))
         project.getPlugins()
             .withType<JavaBasePlugin>(
-                JavaBasePlugin::class.java,
-                Action { javaBasePlugin: JavaBasePlugin ->
+                JavaBasePlugin::class.java) { javaBasePlugin: JavaBasePlugin ->
                     project.getTasks()
                         .getByName(JavaBasePlugin.CHECK_TASK_NAME)
                         .dependsOn(antoraTask)
-                })
+                }
     }
 
     private fun getAntoraNpxArs(project: Project, antoraTask: AntoraTask): MutableList<String?> {

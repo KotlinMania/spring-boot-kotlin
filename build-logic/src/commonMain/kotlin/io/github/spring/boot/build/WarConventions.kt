@@ -38,14 +38,14 @@ import java.util.concurrent.Callable
 class WarConventions {
     fun apply(project: Project) {
         project.getPlugins()
-            .withType<EclipseWtpPlugin>(EclipseWtpPlugin::class.java, Action { wtp: EclipseWtpPlugin ->
+            .withType<EclipseWtpPlugin>(EclipseWtpPlugin::class.java) { wtp: EclipseWtpPlugin ->
                 project.getTasks().getByName(EclipseWtpPlugin.ECLIPSE_WTP_FACET_TASK_NAME).doFirst(
                     Action { task: Task ->
                         val eclipseModel = project.getExtensions().getByType<EclipseModel>(EclipseModel::class.java)
                         (eclipseModel.getWtp().getFacet() as IConventionAware).getConventionMapping()
                             .map("facets", Callable { getFacets(project) })
                     })
-            })
+            }
     }
 
     private fun getFacets(project: Project): MutableList<Facet?> {

@@ -55,15 +55,13 @@ import java.nio.file.Path
  */
 class KotlinConventions {
     fun apply(project: Project) {
-        project.getPlugins().withId("org.jetbrains.kotlin.jvm", Action { plugin: Plugin<*> ->
+        project.getPlugins().withId("org.jetbrains.kotlin.jvm") { plugin: Plugin<*> ->
             project.getTasks().withType<KotlinCompile>(
-                KotlinCompile::class.java,
-                Action { compile: KotlinCompile -> this.configure(compile) })
+                KotlinCompile::class.java) { compile: KotlinCompile -> this.configure(compile) }
             project.getPlugins().withType<DokkaHtmlPlugin>(
-                DokkaHtmlPlugin::class.java,
-                Action { dokkaPlugin: DokkaHtmlPlugin -> configureDokka(project) })
+                DokkaHtmlPlugin::class.java) { dokkaPlugin: DokkaHtmlPlugin -> configureDokka(project) }
             configureDetekt(project)
-        })
+        }
     }
 
     private fun configure(compile: KotlinCompile) {
@@ -89,20 +87,18 @@ class KotlinConventions {
                             .getOutput()
                     )
                 sourceSet.externalDocumentationLinks.create(
-                    "spring-boot-javadoc",
-                    Action { link: DokkaExternalDocumentationLinkSpec ->
+                    "spring-boot-javadoc") { link: DokkaExternalDocumentationLinkSpec ->
                         link!!.url.set(URI.create("https://docs.spring.io/spring-boot/api/java/"))
                         link.packageListUrl
                             .set(URI.create("https://docs.spring.io/spring-boot/api/java/element-list"))
-                    })
+                    }
                 sourceSet.externalDocumentationLinks.create(
-                    "spring-framework-javadoc",
-                    Action { link: DokkaExternalDocumentationLinkSpec ->
+                    "spring-framework-javadoc") { link: DokkaExternalDocumentationLinkSpec ->
                         val url: String = "https://docs.spring.io/spring-framework/docs/%s/javadoc-api/"
                             .format(project.property("springFrameworkVersion"))
                         link!!.url.set(URI.create(url))
                         link.packageListUrl.set(URI.create(url + "/element-list"))
-                    })
+                    }
             } else {
                 sourceSet.suppress.set(true)
             }

@@ -38,7 +38,7 @@ abstract class ContentContribution protected constructor(
         val tasks = getProject().getTasks()
         val zipContent = tasks.register<Zip>(
             taskName("zip", "%sAntora%sContent", getName(), this.type),
-            Zip::class.java, Action { zip: Zip ->
+            Zip::class.java) { zip: Zip ->
                 zip!!.destinationDirectory
                     .set(getProject().getLayout().getBuildDirectory().dir("generated/docs/antora-content"))
                 zip.getArchiveClassifier().set("%s-%s-content".format(getName(), this.type))
@@ -49,7 +49,7 @@ abstract class ContentContribution protected constructor(
                         toDescription(this.type)
                     )
                 )
-            })
+            }
         configureAntora(addInputFrom(zipContent, zipContent.name))
         return zipContent
     }

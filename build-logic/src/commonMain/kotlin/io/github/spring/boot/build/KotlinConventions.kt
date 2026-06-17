@@ -57,11 +57,9 @@ import java.nio.file.Path
  */
 class KotlinConventions {
     fun apply(project: Project) {
-        project.plugins.withId("org.jetbrains.kotlin.jvm") { plugin: Plugin<*> ->
-            project.getTasks().withType<KotlinCompile>(
-                KotlinCompile::class.java) { compile: KotlinCompile -> this.configure(compile) }
-            project.plugins.withType<DokkaHtmlPlugin>(
-                DokkaHtmlPlugin::class.java) { dokkaPlugin: DokkaHtmlPlugin -> configureDokka(project) }
+        project.plugins.withId("org.jetbrains.kotlin.jvm") {
+            project.getTasks().withType<KotlinCompile>().configureEach { configure(this) }
+            project.plugins.withType<DokkaHtmlPlugin>().configureEach { configureDokka(project) }
             configureDetekt(project)
         }
     }
@@ -78,29 +76,28 @@ class KotlinConventions {
 
     private fun configureDokka(project: Project) {
         val dokka = project.getExtensions().getByType<DokkaExtension>(DokkaExtension::class.java)
-        dokka.dokkaSourceSets.configureEach { sourceSet: DokkaSourceSetSpec ->
-            if (SourceSet.MAIN_SOURCE_SET_NAME == sourceSet!!.name) {
+        dokka.dokkaSourceSets.configureEach {
+            val sourceSet = this
+            if (SourceSet.MAIN_SOURCE_SET_NAME == sourceSet.name) {
                 sourceSet.sourceRoots.setFrom(project.file("src/commonMain/kotlin"))
                 sourceSet.classpath
                     .from(
                         project.getExtensions()
-                            .getByType<SourceSetContainer>(SourceSetContainer::class.java)
+                            .getByType<SourceSetContainer>()
                             .getByName(SourceSet.MAIN_SOURCE_SET_NAME)
                             .getOutput()
                     )
-                sourceSet.externalDocumentationLinks.create(
-                    "spring-boot-javadoc") { link: DokkaExternalDocumentationLinkSpec ->
-                        link!!.url.set(URI.create("https://docs.spring.io/spring-boot/api/java/"))
-                        link.packageListUrl
-                            .set(URI.create("https://docs.spring.io/spring-boot/api/java/element-list"))
-                    }
-                sourceSet.externalDocumentationLinks.create(
-                    "spring-framework-javadoc") { link: DokkaExternalDocumentationLinkSpec ->
-                        val url: String = "https://docs.spring.io/spring-framework/docs/%s/javadoc-api/"
-                            .format(project.property("springFrameworkVersion"))
-                        link!!.url.set(URI.create(url))
-                        link.packageListUrl.set(URI.create(url + "/element-list"))
-                    }
+                sourceSet.externalDocumentationLinks.create("spring-boot-javadoc") {
+                    url.set(URI.create("https://docs.spring.io/spring-boot/api/java/"))
+                    packageListUrl
+                        .set(URI.create("https://docs.spring.io/spring-boot/api/java/element-list"))
+                }
+                sourceSet.externalDocumentationLinks.create("spring-framework-javadoc") {
+                    val docUrl = "https://docs.spring.io/spring-framework/docs/%s/javadoc-api/"
+                        .format(project.property("springFrameworkVersion"))
+                    url.set(URI.create(docUrl))
+                    packageListUrl.set(URI.create(docUrl + "/element-list"))
+                }
             } else {
                 sourceSet.suppress.set(true)
             }
@@ -111,9 +108,9 @@ class KotlinConventions {
         project.plugins.apply<DetektPlugin>(DetektPlugin::class.java)
         val detekt = project.getExtensions().getByType<DetektExtension>(DetektExtension::class.java)
         detekt.config.setFrom(project.getRootProject().file("config/detekt/config.yml"))
-        project.getTasks().withType<Detekt>(Detekt::class.java).configureEach { task: Detekt ->
-            task!!.jvmTarget.set(JVM_TARGET.target)
-            normalizeMachineSpecificDefaults(project, task)
+        project.getTasks().withType<Detekt>().configureEach {
+            jvmTarget.set(JVM_TARGET.target)
+            normalizeMachineSpecificDefaults(project, this)
         }
     }
 

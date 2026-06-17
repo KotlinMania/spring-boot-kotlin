@@ -80,7 +80,7 @@ internal class KotlinConventions {
         val dokka = project.getExtensions().getByType<DokkaExtension>(DokkaExtension::class.java)
         dokka.dokkaSourceSets.configureEach(Action { sourceSet: DokkaSourceSetSpec? ->
             if (SourceSet.MAIN_SOURCE_SET_NAME == sourceSet!!.name) {
-                sourceSet.sourceRoots.setFrom(project.file("src/main/kotlin"))
+                sourceSet.sourceRoots.setFrom(project.file("src/commonMain/kotlin"))
                 sourceSet.classpath
                     .from(
                         project.getExtensions()

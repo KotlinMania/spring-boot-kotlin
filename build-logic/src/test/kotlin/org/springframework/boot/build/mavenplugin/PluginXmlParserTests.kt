@@ -34,11 +34,11 @@ internal class PluginXmlParserTests {
     @Test
     fun parseExistingDescriptorReturnPluginDescriptor() {
         val plugin: Plugin = this.parser.parse(File("src/test/resources/plugin.xml"))
-        assertThat(plugin.getGroupId()).isEqualTo("org.springframework.boot")
-        assertThat(plugin.getArtifactId()).isEqualTo("spring-boot-maven-plugin")
-        assertThat(plugin.getVersion()).isEqualTo("2.2.0.GRADLE-SNAPSHOT")
-        assertThat(plugin.getGoalPrefix()).isEqualTo("spring-boot")
-        assertThat(plugin.getMojos().stream().map(PluginXmlParser.Mojo::getGoal)).containsExactly(
+        assertThat(plugin.groupId).isEqualTo("org.springframework.boot")
+        assertThat(plugin.artifactId).isEqualTo("spring-boot-maven-plugin")
+        assertThat(plugin.version).isEqualTo("2.2.0.GRADLE-SNAPSHOT")
+        assertThat(plugin.goalPrefix).isEqualTo("spring-boot")
+        assertThat(plugin.mojos.stream().map(PluginXmlParser.Mojo::getGoal)).containsExactly(
             "build-info", "help",
             "repackage", "run", "start", "stop"
         )

@@ -49,7 +49,7 @@ internal class LibraryTests {
                 name, calendarName, version, groups, null, prohibitedVersion, considerSnapshots,
                 versionAlignment, alignsWithBom, linkRootName, links
             )
-            assertThat(library.getLinkRootName()).isEqualTo("spring-framework")
+            assertThat(library.linkRootName).isEqualTo("spring-framework")
         }
 
     @get:Test
@@ -69,7 +69,7 @@ internal class LibraryTests {
                 name, calendarName, version, groups, null, prohibitedVersion, considerSnapshots,
                 versionAlignment, alignsWithBom, linkRootName, links
             )
-            assertThat(library.getLinkRootName()).isEqualTo("spring-data")
+            assertThat(library.linkRootName).isEqualTo("spring-data")
         }
 
     @Test

@@ -189,7 +189,7 @@ internal class SpringRepositoriesExtensionTests {
         environment: UnaryOperator<String?>?
     ): SpringRepositoriesExtension {
         val repositoryHandler: RepositoryHandler = mock(RepositoryHandler::class.java)
-        given(repositoryHandler.maven(any(Closure::class.java))).willAnswer({ invocation: InvocationOnMock ->
+        given(repositoryHandler.maven(any(Closure::class.java))).willAnswer({ invocation: InvocationOnMock? ->
             this.mavenClosure(
                 invocation
             )
@@ -205,11 +205,11 @@ internal class SpringRepositoriesExtensionTests {
     @SuppressWarnings(["unchecked", "unchecked"])
     private fun mavenClosure(invocation: InvocationOnMock): Object? {
         val repository: MavenArtifactRepository? = mock(MavenArtifactRepository::class.java)
-        willAnswer({ invocation: InvocationOnMock -> this.contentAction(invocation) }).given(repository)
+        willAnswer({ invocation: InvocationOnMock? -> this.contentAction(invocation) }).given(repository)
             .content(any(Action::class.java))
-        willAnswer({ invocation: InvocationOnMock -> this.credentialsAction(invocation) }).given(repository)
+        willAnswer({ invocation: InvocationOnMock? -> this.credentialsAction(invocation) }).given(repository)
             .credentials(any(Action::class.java))
-        willAnswer({ invocation: InvocationOnMock -> this.mavenContentAction(invocation) }).given(repository)
+        willAnswer({ invocation: InvocationOnMock? -> this.mavenContentAction(invocation) }).given(repository)
             .mavenContent(any(Action::class.java))
         val closure: Closure<MavenArtifactRepository?> = invocation.getArgument(0)
         closure.call(repository)
@@ -271,7 +271,7 @@ internal class SpringRepositoriesExtensionTests {
                         { instance, method, args ->
                             val params: Array<Class<*>?> = arrayOfNulls<Class<*>>(if (args != null) args.length else 0)
                             Arrays.fill(params, Object::class.java)
-                            val groovyMethod: Method = extension.getClass().getDeclaredMethod(method.getName(), params)
+                            val groovyMethod: Method = extension.getClass().getDeclaredMethod(method.name, params)
                             groovyMethod.invoke(extension, args)
                         }) as SpringRepositoriesExtension
                 } catch (ex: Exception) {

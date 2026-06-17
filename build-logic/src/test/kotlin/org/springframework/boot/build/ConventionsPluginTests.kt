@@ -60,7 +60,7 @@ internal class ConventionsPluginTests {
             this.projectDir,
             "platform/spring-boot-internal-dependencies/build.gradle"
         )
-        internalDependencies.getParentFile().mkdirs()
+        internalDependencies.parentFile.mkdirs()
         PrintWriter(FileWriter(internalDependencies)).use { out ->
             out.println("plugins {")
             out.println("    id 'java-platform'")
@@ -93,7 +93,7 @@ internal class ConventionsPluginTests {
             assertThat(mainAttributes.getValue("Implementation-Title"))
                 .isEqualTo("Test project for manifest customization")
             assertThat(mainAttributes.getValue("Automatic-Module-Name"))
-                .isEqualTo(this.projectDir.getName().replace("-", "."))
+                .isEqualTo(this.projectDir.name.replace("-", "."))
             assertThat(mainAttributes.getValue("Implementation-Version")).isEqualTo("1.2.3")
             assertThat(mainAttributes.getValue("Built-By")).isEqualTo("Spring")
             assertThat(mainAttributes.getValue("Build-Jdk-Spec")).isEqualTo("17")
@@ -116,16 +116,16 @@ internal class ConventionsPluginTests {
             out.println("description 'Test'")
         }
         runGradle("assemble")
-        val file: File = File(this.projectDir, "/build/libs/" + this.projectDir.getName() + "-1.2.3-sources.jar")
+        val file: File = File(this.projectDir, "/build/libs/" + this.projectDir.name + "-1.2.3-sources.jar")
         assertThat(file).exists()
         JarFile(file).use { jar ->
             assertThatLicenseIsPresent(jar)
             assertThatNoticeIsPresent(jar)
             val mainAttributes: Attributes = jar.getManifest().getMainAttributes()
             assertThat(mainAttributes.getValue("Implementation-Title"))
-                .isEqualTo("Source for " + this.projectDir.getName())
+                .isEqualTo("Source for " + this.projectDir.name)
             assertThat(mainAttributes.getValue("Automatic-Module-Name"))
-                .isEqualTo(this.projectDir.getName().replace("-", "."))
+                .isEqualTo(this.projectDir.name.replace("-", "."))
             assertThat(mainAttributes.getValue("Implementation-Version")).isEqualTo("1.2.3")
             assertThat(mainAttributes.getValue("Built-By")).isEqualTo("Spring")
             assertThat(mainAttributes.getValue("Build-Jdk-Spec")).isEqualTo("17")
@@ -148,16 +148,16 @@ internal class ConventionsPluginTests {
             out.println("description 'Test'")
         }
         runGradle("assemble")
-        val file: File = File(this.projectDir, "/build/libs/" + this.projectDir.getName() + "-1.2.3-javadoc.jar")
+        val file: File = File(this.projectDir, "/build/libs/" + this.projectDir.name + "-1.2.3-javadoc.jar")
         assertThat(file).exists()
         JarFile(file).use { jar ->
             assertThatLicenseIsPresent(jar)
             assertThatNoticeIsPresent(jar)
             val mainAttributes: Attributes = jar.getManifest().getMainAttributes()
             assertThat(mainAttributes.getValue("Implementation-Title"))
-                .isEqualTo("Javadoc for " + this.projectDir.getName())
+                .isEqualTo("Javadoc for " + this.projectDir.name)
             assertThat(mainAttributes.getValue("Automatic-Module-Name"))
-                .isEqualTo(this.projectDir.getName().replace("-", "."))
+                .isEqualTo(this.projectDir.name.replace("-", "."))
             assertThat(mainAttributes.getValue("Implementation-Version")).isEqualTo("1.2.3")
             assertThat(mainAttributes.getValue("Built-By")).isEqualTo("Spring")
             assertThat(mainAttributes.getValue("Build-Jdk-Spec")).isEqualTo("17")
@@ -172,7 +172,7 @@ internal class ConventionsPluginTests {
         assertThat(licenseContent).isEqualTo(
             Files.readString(
                 Path.of(
-                    "src", "main", "resources", "org",
+                    "src", "commonMain", "resources", "org",
                     "springframework", "boot", "build", "legal", "LICENSE.txt"
                 )
             )

@@ -386,7 +386,7 @@ internal class ArchitectureCheckTests {
 					}
 				}
 				
-				""".trimIndent().formatted(ClassUtils.getPackageName(javaClass))
+				""".trimIndent().format(ClassUtils.getPackageName(javaClass))
         )
         buildAndFail(
             this.gradleBuild!!.withDependencies(SPRING_INTEGRATION_JMX), task,
@@ -561,11 +561,11 @@ internal class ArchitectureCheckTests {
         }
 
         fun getFailureReportFile(projectDir: Path): Path {
-            return projectDir.resolve("build/%s/failure-report.txt".formatted(toString()))
+            return projectDir.resolve("build/%s/failure-report.txt".format(toString()))
         }
 
         fun getSourceDirectory(projectDir: Path): Path {
-            return projectDir.resolve("src/%s/java".formatted(this.sourceSetName))
+            return projectDir.resolve("src/%s/java".format(this.sourceSetName))
         }
 
         override fun toString(): String {
@@ -592,7 +592,7 @@ internal class ArchitectureCheckTests {
         fun withConditionalOnClassAnnotation(): GradleBuild {
             configureTasks(
                 ArchitectureCheckAnnotation.CONDITIONAL_ON_CLASS.name,
-                TestConditionalOnClass::class.java.getName()
+                TestConditionalOnClass::class.java.name
             )
             return this
         }
@@ -600,7 +600,7 @@ internal class ArchitectureCheckTests {
         fun withConditionalOnMissingBeanAnnotation(): GradleBuild {
             configureTasks(
                 ArchitectureCheckAnnotation.CONDITIONAL_ON_MISSING_BEAN.name,
-                TestConditionalOnMissingBean::class.java.getName()
+                TestConditionalOnMissingBean::class.java.name
             )
             return this
         }
@@ -608,7 +608,7 @@ internal class ArchitectureCheckTests {
         fun withConfigurationPropertiesAnnotation(): GradleBuild {
             configureTasks(
                 ArchitectureCheckAnnotation.CONFIGURATION_PROPERTIES.name,
-                TestConfigurationProperties::class.java.getName()
+                TestConfigurationProperties::class.java.name
             )
             return this
         }
@@ -616,7 +616,7 @@ internal class ArchitectureCheckTests {
         fun withConfigurationPropertiesBindingAnnotation(): GradleBuild {
             configureTasks(
                 ArchitectureCheckAnnotation.CONFIGURATION_PROPERTIES_BINDING.name,
-                TestConfigurationPropertiesBinding::class.java.getName()
+                TestConfigurationPropertiesBinding::class.java.name
             )
             return this
         }
@@ -624,7 +624,7 @@ internal class ArchitectureCheckTests {
         fun withDeprecatedConfigurationPropertyAnnotation(): GradleBuild {
             configureTasks(
                 ArchitectureCheckAnnotation.DEPRECATED_CONFIGURATION_PROPERTY.name,
-                TestDeprecatedConfigurationProperty::class.java.getName()
+                TestDeprecatedConfigurationProperty::class.java.name
             )
             return this
         }

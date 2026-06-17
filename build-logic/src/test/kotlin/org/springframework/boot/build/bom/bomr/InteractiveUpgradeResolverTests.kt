@@ -56,11 +56,11 @@ internal class InteractiveUpgradeResolverTests {
         val providerOfVersionOption: Provider<Object?> = providerOf<Any?>(versionOption)
         given(userInputHandler.askUser(any())).willReturn(providerOfVersionOption)
         val upgrades: List<Upgrade?> = upgradeResolver.resolveUpgrades(librariesToUpgrade, libraries)
-        assertThat(upgrades.get(0).to().getVersion().getVersion()).isEqualTo(updateVersion)
+        assertThat(upgrades.get(0).to().version.version).isEqualTo(updateVersion)
     }
 
     @SuppressWarnings(["unchecked", "rawtypes"])
-    private fun <T> providerOf(versionOption: VersionOption?): Provider<T?> {
+    private fun <T> providerOf(versionOption: VersionOption?): Provider {
         val provider: Provider = mock(Provider::class.java)
         given(provider.get()).willReturn(versionOption)
         return provider

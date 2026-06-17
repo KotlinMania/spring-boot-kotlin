@@ -16,5 +16,5 @@
 package org.springframework.boot.build.architecture.untangled
 
 object UntangledOne {
-    val ID: String = UntangledTwo::class.java.getName() + "One"
+    val ID: String = UntangledTwo::class.java.name + "One"
 }

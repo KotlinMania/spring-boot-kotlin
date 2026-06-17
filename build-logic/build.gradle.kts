@@ -6,6 +6,8 @@
  * (git history) and inlined here; migrate to gradle/libs.versions.toml later.
  */
 
+import java.util.concurrent.TimeUnit
+
 plugins {
     `kotlin-dsl`
     id("io.spring.javaformat") version "0.0.47"
@@ -23,6 +25,12 @@ repositories {
 kotlin {
     // AGP 9.x / Android KMP plugin require the Gradle build to run on JDK 17.
     jvmToolchain(17)
+    sourceSets {
+        named("main") {
+            kotlin.setSrcDirs(listOf("src/commonMain/kotlin"))
+            resources.srcDir("src/commonMain/resources")
+        }
+    }
 }
 
 checkstyle {
@@ -77,7 +85,7 @@ configurations.all {
     exclude(group = "ch.qos.logback", module = "logback-classic")
     exclude(group = "ch.qos.logback", module = "logback-core")
 
-    resolutionStrategy.cacheChangingModulesFor(0, "minutes")
+    resolutionStrategy.cacheChangingModulesFor(0, TimeUnit.MINUTES)
 }
 
 gradlePlugin {

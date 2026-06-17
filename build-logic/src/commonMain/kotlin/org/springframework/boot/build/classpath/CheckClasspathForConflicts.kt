@@ -98,31 +98,18 @@ abstract class CheckClasspathForConflicts : DefaultTask() {
     }
 
     private class ClasspathContents {
-        private val classpathContents: MutableMap<String?, MutableList<String?>?> =
-            HashMap<String?, MutableList<String?>?>()
+        private val classpathContents = mutableMapOf<String?, MutableList<String?>>()
 
         fun add(name: String?, source: String?) {
-            this.classpathContents.computeIfAbsent(name) { key: kotlin.String? -> java.util.ArrayList<kotlin.String?>() }!!
-                .add(source)
+            classpathContents.getOrPut(name) { mutableListOf() }.add(source)
         }
 
-        fun getConflicts(ignores: MutableList<Predicate<String?>>): MutableMap<String?, MutableList<String?>?> {
-            return this.classpathContents.entries
-                .stream()
-                .filter { entry: MutableMap.MutableEntry<String?, MutableList<String?>?>? -> entry!!.value!!.size > 1 }
-                .filter { entry: MutableMap.MutableEntry<String?, MutableList<String?>?>? ->
-                    canConflict(
-                        entry!!.key!!,
-                        ignores
-                    )
-                }
-                .collect(
-                    Collectors.toMap(
-                        Function { obj: MutableMap.MutableEntry<String?, MutableList<String?>?>? -> obj!!.key },
-                        Function { obj: MutableMap.MutableEntry<String?, MutableList<String?>?>? -> obj!!.value },
-                        BinaryOperator { v1: MutableList<String?>?, v2: MutableList<String?>? -> v1 },
-                        Supplier { TreeMap() })
-                )
+        fun getConflicts(ignores: MutableList<Predicate<String?>>): Map<String?, MutableList<String?>> {
+            return classpathContents.entries
+                .filter { it.value.size > 1 }
+                .filter { canConflict(it.key!!, ignores) }
+                .sortedBy { it.key }
+                .associate { it.key to it.value }
         }
 
         fun canConflict(name: String, ignores: MutableList<Predicate<String?>>): Boolean {

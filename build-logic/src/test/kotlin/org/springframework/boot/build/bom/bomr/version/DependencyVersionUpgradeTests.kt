@@ -266,24 +266,24 @@ internal class DependencyVersionUpgradeTests {
             if (artifactVersions != null) {
                 return Stream.of(artifactVersions.value)
             }
-            return versions<T?>(testMethod, ArtifactVersion::class.java)
+            return versions(testMethod, ArtifactVersion::class.java)
         }
 
         private fun releaseTrains(testMethod: Method): Stream<ReleaseTrain?> {
-            return versions<T?>(
+            return versions(
                 testMethod,
                 org.springframework.boot.build.bom.bomr.version.DependencyVersionUpgradeTests.ReleaseTrain::class.java
             )
         }
 
         private fun calendarVersions(testMethod: Method): Stream<CalendarVersion?> {
-            return versions<T?>(
+            return versions(
                 testMethod,
                 org.springframework.boot.build.bom.bomr.version.DependencyVersionUpgradeTests.CalendarVersion::class.java
             )
         }
 
-        private fun <T : Annotation?> versions(testMethod: Method, type: Class<T?>?): Stream<T?> {
+        private fun <T : Annotation?> versions(testMethod: Method, type: Class?): Stream {
             val annotation: T? = testMethod.getAnnotation(type)
             return if (annotation != null) Stream.of(annotation) else Stream.empty()
         }

@@ -16,5 +16,5 @@
 package org.springframework.boot.build.architecture.tangled
 
 object TangledOne {
-    val ID: String = TangledTwo::class.java.getName() + "One"
+    val ID: String = TangledTwo::class.java.name + "One"
 }

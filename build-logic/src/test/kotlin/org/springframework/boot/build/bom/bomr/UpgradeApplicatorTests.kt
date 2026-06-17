@@ -42,8 +42,8 @@ internal class UpgradeApplicatorTests {
     @Test
     @kotlin.Throws(IOException::class)
     fun whenUpgradeIsAppliedToLibraryWithVersionThenBomIsUpdated() {
-        val bom: File = File(this.temp, "bom.gradle")
-        FileCopyUtils.copy(File("src/test/resources/bom.gradle"), bom)
+        val bom: File = File(this.temp, "bom.gradle.kts")
+        FileCopyUtils.copy(File("src/test/resources/bom.gradle.kts"), bom)
         val originalContents: String = Files.readString(bom.toPath())
         val gradleProperties: File = File(this.temp, "gradle.properties")
         FileCopyUtils.copy(File("src/test/resources/gradle.properties"), gradleProperties)
@@ -60,8 +60,8 @@ internal class UpgradeApplicatorTests {
     @Test
     @kotlin.Throws(IOException::class)
     fun whenUpgradeIsAppliedToLibraryWithVersionPropertyThenGradlePropertiesIsUpdated() {
-        val bom: File = File(this.temp, "bom.gradle")
-        FileCopyUtils.copy(File("src/test/resources/bom.gradle"), bom)
+        val bom: File = File(this.temp, "bom.gradle.kts")
+        FileCopyUtils.copy(File("src/test/resources/bom.gradle.kts"), bom)
         val gradleProperties: File = File(this.temp, "gradle.properties")
         FileCopyUtils.copy(File("src/test/resources/gradle.properties"), gradleProperties)
         val kotlin: Library = Library(

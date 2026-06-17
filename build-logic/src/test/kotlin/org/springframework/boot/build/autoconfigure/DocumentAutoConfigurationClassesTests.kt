@@ -95,7 +95,7 @@ internal class DocumentAutoConfigurationClassesTests {
         metadataDir.accept(input)
         val autoConfiguration: ConfigurableFileCollection = project.files()
         Stream.of(input.listFiles()).forEach(autoConfiguration::from)
-        task.getOutputDir().set(output)
+        task.outputDir.set(output)
         task.setAutoConfiguration(autoConfiguration)
         task.documentAutoConfigurationClasses()
         return output

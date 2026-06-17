@@ -31,28 +31,28 @@ internal class ArtifactReleaseTests {
     fun whenProjectVersionIsSnapshotThenTypeIsSnapshot() {
         val project = ProjectBuilder.builder().build()
         project.setVersion("1.2.3-SNAPSHOT")
-        Assertions.assertThat(forProject(project).getType()).isEqualTo("snapshot")
+        Assertions.assertThat(forProject(project).type).isEqualTo("snapshot")
     }
 
     @Test
     fun whenProjectVersionIsMilestoneThenTypeIsMilestone() {
         val project = ProjectBuilder.builder().build()
         project.setVersion("1.2.3-M1")
-        Assertions.assertThat(forProject(project).getType()).isEqualTo("milestone")
+        Assertions.assertThat(forProject(project).type).isEqualTo("milestone")
     }
 
     @Test
     fun whenProjectVersionIsReleaseCandidateThenTypeIsMilestone() {
         val project = ProjectBuilder.builder().build()
         project.setVersion("1.2.3-RC1")
-        Assertions.assertThat(forProject(project).getType()).isEqualTo("milestone")
+        Assertions.assertThat(forProject(project).type).isEqualTo("milestone")
     }
 
     @Test
     fun whenProjectVersionIsReleaseThenTypeIsRelease() {
         val project = ProjectBuilder.builder().build()
         project.setVersion("1.2.3")
-        Assertions.assertThat(forProject(project).getType()).isEqualTo("release")
+        Assertions.assertThat(forProject(project).type).isEqualTo("release")
     }
 
     @Test

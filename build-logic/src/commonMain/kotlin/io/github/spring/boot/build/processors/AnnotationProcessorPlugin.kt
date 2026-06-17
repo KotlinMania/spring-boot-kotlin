@@ -30,7 +30,7 @@ import org.gradle.api.tasks.bundling.Jar
  */
 class AnnotationProcessorPlugin : Plugin<Project> {
     override fun apply(project: Project) {
-        project.getTasks().withType<Jar>(Jar::class.java) { jar: Jar ->
+        project.getTasks().withType<Jar>().configureEach { val jar = this;
             project.afterEvaluate { evaluated: Project ->
                 jar!!.manifest { manifest: Manifest ->
                         val attributes: MutableMap<String?, Any?> = java.util.TreeMap<String?, Any?>()

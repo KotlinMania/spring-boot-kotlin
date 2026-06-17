@@ -54,7 +54,7 @@ class DockerTestPlugin : Plugin<Project> {
         val dockerTest: Provider<Test> = createTestTask(project, dockerTestSourceSet, buildService)
         project.getTasks().getByName(LifecycleBasePlugin.CHECK_TASK_NAME).dependsOn(dockerTest)
         project.plugins
-            .withType<EclipsePlugin>(EclipsePlugin::class.java) { eclipsePlugin: EclipsePlugin ->
+            .withType<EclipsePlugin>().configureEach { val eclipsePlugin = this;
                 val eclipse = project.getExtensions().getByType<EclipseModel>(EclipseModel::class.java)
                 eclipse.classpath { classpath: EclipseClasspath ->
                     classpath!!.getPlusConfigurations()

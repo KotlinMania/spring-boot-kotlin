@@ -49,7 +49,7 @@ class SystemTestPlugin : Plugin<Project> {
         val systemTestSourceSet = createSourceSet(project)
         createTestTask(project, systemTestSourceSet)
         project.plugins
-            .withType<EclipsePlugin>(EclipsePlugin::class.java) { eclipsePlugin: EclipsePlugin ->
+            .withType<EclipsePlugin>().configureEach { val eclipsePlugin = this;
                 val eclipse = project.getExtensions().getByType<EclipseModel>(EclipseModel::class.java)
                 eclipse.classpath { classpath: EclipseClasspath ->
                     classpath!!.getPlusConfigurations()

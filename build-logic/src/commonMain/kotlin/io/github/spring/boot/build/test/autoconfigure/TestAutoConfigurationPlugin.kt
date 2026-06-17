@@ -39,7 +39,7 @@ import org.gradle.language.base.plugins.LifecycleBasePlugin
  */
 class TestAutoConfigurationPlugin : Plugin<Project> {
     override fun apply(target: Project) {
-        target.plugins.withType<JavaPlugin>(JavaPlugin::class.java) { plugin: JavaPlugin ->
+        target.plugins.withType<JavaPlugin>().configureEach { val plugin = this;
             val checkAutoConfigureImports = target.getTasks()
                 .register<CheckAutoConfigureImports>(
                     "checkAutoConfigureImports",

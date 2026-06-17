@@ -68,13 +68,13 @@ class ToolchainPlugin : Plugin<Project> {
     }
 
     private fun disableToolchainTasks(project: Project) {
-        project.getTasks().withType<Test>(Test::class.java) { task: Test -> task!!.setEnabled(false) }
+        project.getTasks().withType<Test>().configureEach { val task = this; task!!.setEnabled(false) }
     }
 
     private fun configureTestToolchain(project: Project, toolchainVersion: JavaLanguageVersion?) {
         val javaToolchains = project.getExtensions().getByType<JavaToolchainService>(JavaToolchainService::class.java)
         project.getTasks()
-            .withType<Test>(Test::class.java) { test: Test ->
+            .withType<Test>().configureEach { val test = this;
                 test!!.getJavaLauncher()
                     .set(javaToolchains.launcherFor { spec: JavaToolchainSpec ->
                         spec!!.getLanguageVersion().set(toolchainVersion)

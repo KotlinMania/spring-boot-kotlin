@@ -48,7 +48,7 @@ class TestSlicePlugin : Plugin<Project> {
     override fun apply(target: Project) {
         val plugins = target.plugins
         plugins.apply<TestAutoConfigurationPlugin>(TestAutoConfigurationPlugin::class.java)
-        plugins.withType<JavaPlugin>(JavaPlugin::class.java) { plugin: JavaPlugin ->
+        plugins.withType<JavaPlugin>().configureEach { val plugin = this;
             val generateTestSliceMetadata = target.getTasks()
                 .register<GenerateTestSliceMetadata>(
                     "generateTestSliceMetadata",

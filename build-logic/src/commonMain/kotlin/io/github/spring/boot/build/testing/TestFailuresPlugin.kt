@@ -40,7 +40,7 @@ class TestFailuresPlugin : Plugin<Project> {
             .registerIfAbsent<TestResultsOverview?, BuildServiceParameters.None?>(
                 "testResultsOverview",
                 TestResultsOverview::class.java) { spec: BuildServiceSpec<BuildServiceParameters.None?> -> }
-        project.getTasks().withType<Test>(Test::class.java) { test: Test ->
+        project.getTasks().withType<Test>().configureEach { val test = this;
             test!!.usesService(testResultsOverview)
             test.addTestListener(FailureRecordingTestListener(testResultsOverview, test))
         }

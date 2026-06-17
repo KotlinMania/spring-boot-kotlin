@@ -44,7 +44,7 @@ class EclipseConventions(private val systemRequirements: SystemRequirementsExten
         val synchronizeResourceSettings = registerEclipseSynchronizeResourceSettings(project)
         val synchronizeJdtSettings: TaskProvider<*> = registerEclipseSynchronizeJdtSettings(project)
         return project.plugins
-            .withType<JavaBasePlugin>(JavaBasePlugin::class.java) { javaBase: JavaBasePlugin ->
+            .withType<JavaBasePlugin>().configureEach { val javaBase = this;
                 val model = project.getExtensions().getByType<EclipseModel>(EclipseModel::class.java)
                 model.synchronizationTasks(synchronizeResourceSettings, synchronizeJdtSettings)
                 model.jdt { jdt: EclipseJdt -> this.configureJdt(jdt) }

@@ -123,7 +123,7 @@ import java.util.stream.Collectors
  */
 class JavaConventions(private val systemRequirements: SystemRequirementsExtension) {
     fun apply(project: Project) {
-        project.plugins.withType<JavaBasePlugin>(JavaBasePlugin::class.java) { java: JavaBasePlugin ->
+        project.plugins.withType<JavaBasePlugin>().configureEach { val java = this;
             project.plugins.apply<TestFailuresPlugin>(TestFailuresPlugin::class.java)
             configureSpringJavaFormat(project)
             configureJavaConventions(project)
@@ -228,7 +228,7 @@ class JavaConventions(private val systemRequirements: SystemRequirementsExtensio
         get() = System.getenv("ENABLE_PREDICTIVE_TEST_SELECTION").toBoolean()
 
     private fun configureJavadocConventions(project: Project) {
-        project.getTasks().withType<Javadoc>(Javadoc::class.java) { javadoc: Javadoc ->
+        project.getTasks().withType<Javadoc>().configureEach { val javadoc = this;
             val options = javadoc!!.getOptions() as CoreJavadocOptions
             options.source("17")
             options.encoding("UTF-8")
@@ -245,7 +245,7 @@ class JavaConventions(private val systemRequirements: SystemRequirementsExtensio
     }
 
     private fun configureJavaConventions(project: Project) {
-        project.getTasks().withType<JavaCompile>(JavaCompile::class.java) { compile: JavaCompile ->
+        project.getTasks().withType<JavaCompile>().configureEach { val compile = this;
             compile!!.doFirst { task: Task -> assertCompatible(compile) }
             compile.getOptions().setEncoding("UTF-8")
             compile.getOptions().getRelease().set(RUNTIME_JAVA_VERSION)
@@ -277,7 +277,7 @@ class JavaConventions(private val systemRequirements: SystemRequirementsExtensio
     private fun configureSpringJavaFormat(project: Project) {
         project.plugins.apply<SpringJavaFormatPlugin>(SpringJavaFormatPlugin::class.java)
         project.getTasks()
-            .withType<Format>(Format::class.java) { Format: Format -> Format!!.setEncoding("UTF-8") }
+            .withType<Format>().configureEach { val Format = this; Format!!.setEncoding("UTF-8") }
         project.plugins.apply<CheckstylePlugin>(CheckstylePlugin::class.java)
         val checkstyle = project.getExtensions().getByType<CheckstyleExtension>(CheckstyleExtension::class.java)
         val checkstyleToolVersion = project.findProperty("checkstyleToolVersion") as String?

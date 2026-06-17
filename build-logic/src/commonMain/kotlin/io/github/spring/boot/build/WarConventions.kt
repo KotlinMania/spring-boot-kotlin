@@ -40,7 +40,7 @@ import java.util.concurrent.Callable
 class WarConventions {
     fun apply(project: Project) {
         project.plugins
-            .withType<EclipseWtpPlugin>(EclipseWtpPlugin::class.java) { wtp: EclipseWtpPlugin ->
+            .withType<EclipseWtpPlugin>().configureEach { val wtp = this;
                 project.getTasks().getByName(EclipseWtpPlugin.ECLIPSE_WTP_FACET_TASK_NAME).doFirst { task: Task ->
                         val eclipseModel = project.getExtensions().getByType<EclipseModel>(EclipseModel::class.java)
                         (eclipseModel.getWtp().getFacet() as IConventionAware).getConventionMapping()

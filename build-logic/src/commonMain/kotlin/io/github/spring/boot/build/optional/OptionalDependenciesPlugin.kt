@@ -38,7 +38,7 @@ class OptionalDependenciesPlugin : Plugin<Project> {
         val optional = project.getConfigurations().create("optional")
         optional.setCanBeConsumed(true)
         optional.setCanBeResolved(false)
-        project.plugins.withType<JavaPlugin>(JavaPlugin::class.java) { javaPlugin: JavaPlugin ->
+        project.plugins.withType<JavaPlugin>().configureEach { val javaPlugin = this;
             val sourceSets: SourceSetContainer = project.getExtensions()
                 .getByType<JavaPluginExtension>(JavaPluginExtension::class.java)
                 .sourceSets

@@ -57,7 +57,7 @@ import java.util.stream.Collectors
  */
 class ConfigurationPropertiesPlugin : Plugin<Project> {
     override fun apply(project: Project) {
-        project.plugins.withType<JavaPlugin>(JavaPlugin::class.java) { javaPlugin: JavaPlugin ->
+        project.plugins.withType<JavaPlugin>().configureEach { val javaPlugin = this;
             configureConfigurationPropertiesAnnotationProcessor(project)
             disableIncrementalCompilation(project)
             configureAdditionalMetadataLocationsCompilerArgument(project)

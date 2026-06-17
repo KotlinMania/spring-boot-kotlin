@@ -47,7 +47,7 @@ class IntegrationTestPlugin : Plugin<Project> {
         val intTest: TaskProvider<Test> = createTestTask(project, intTestSourceSet)
         project.getTasks().getByName(LifecycleBasePlugin.CHECK_TASK_NAME).dependsOn(intTest)
         project.plugins
-            .withType<EclipsePlugin>(EclipsePlugin::class.java) { eclipsePlugin: EclipsePlugin ->
+            .withType<EclipsePlugin>().configureEach { val eclipsePlugin = this;
                 val eclipse = project.getExtensions().getByType<EclipseModel>(EclipseModel::class.java)
                 eclipse.classpath { classpath: EclipseClasspath ->
                     classpath!!.getPlusConfigurations()

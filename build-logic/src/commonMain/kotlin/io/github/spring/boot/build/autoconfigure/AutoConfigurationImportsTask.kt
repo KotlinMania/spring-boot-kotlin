@@ -43,14 +43,12 @@ abstract class AutoConfigurationImportsTask : DefaultTask() {
     @get:InputFiles
     var source: FileTree
         get() = this.sourceFiles.getAsFileTree()
-            .matching { filter: PatternFilterable ->
-                filter!!.include(IMPORTS_FILE)
-            }
+            .matching { include(IMPORTS_FILE) }
         set(source) {
             this.sourceFiles = project.getObjects().fileCollection().from(source)
         }
 
-    protected fun loadImports(): MutableList<String?> {
+    protected fun loadImports(): List<String> {
         val importsFile = this.source.singleFile
         try {
             return Files.readAllLines(importsFile.toPath())

@@ -27,9 +27,6 @@ import java.io.File
 import java.io.IOException
 import java.io.UncheckedIOException
 import java.nio.file.Files
-import java.util.*
-import java.util.function.Consumer
-import java.util.stream.Collectors
 import org.gradle.api.file.DirectoryProperty
 
 /**
@@ -67,7 +64,7 @@ abstract class CheckAutoConfigurationImports : AutoConfigurationImportsTask() {
 
     private fun check(importsFile: File) {
         val imports = loadImports()
-        val problems: MutableList<String?> = ArrayList<String?>()
+        val problems = mutableListOf<String>()
         for (imported in imports) {
             val classFile = find(imported)
             if (classFile == null) {
@@ -76,13 +73,12 @@ abstract class CheckAutoConfigurationImports : AutoConfigurationImportsTask() {
                 problems.add("'%s' is not annotated with @AutoConfiguration".format(imported))
             }
         }
-        val sortedValues: MutableList<String?> = ArrayList<String?>(imports)
-        Collections.sort<String?>(sortedValues)
+        val sortedValues = imports.sorted()
         if (sortedValues != imports) {
             val sortedOutputFile = this.outputDirectory.file("sorted-" + importsFile.name).get().asFile
             writeString(
                 sortedOutputFile,
-                sortedValues.stream().collect(Collectors.joining(System.lineSeparator())) + System.lineSeparator()
+                sortedValues.joinToString(System.lineSeparator()) + System.lineSeparator()
             )
             problems.add(
                 ("Entries should be sorted alphabetically (expect content written to "
@@ -110,16 +106,16 @@ abstract class CheckAutoConfigurationImports : AutoConfigurationImportsTask() {
         return null
     }
 
-    private fun correctlyAnnotated(classFile: File?): Boolean {
+    private fun correctlyAnnotated(classFile: File): Boolean {
         return AutoConfigurationClass.Companion.of(classFile) != null
     }
 
-    private fun writeReport(importsFile: File?, problems: MutableList<String?>, outputFile: File) {
+    private fun writeReport(importsFile: File, problems: List<String>, outputFile: File) {
         outputFile.parentFile.mkdirs()
         val report = StringBuilder()
-        if (!problems.isEmpty()) {
+        if (problems.isNotEmpty()) {
             report.append("Found problems in '%s':%n".format(importsFile))
-            problems.forEach(Consumer { problem: String? -> report.append("  - %s%n".format(problem)) })
+            problems.forEach { problem -> report.append("  - %s%n".format(problem)) }
         }
         writeString(outputFile, report.toString())
     }

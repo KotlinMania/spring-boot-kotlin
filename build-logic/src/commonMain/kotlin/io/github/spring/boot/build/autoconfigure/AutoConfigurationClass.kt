@@ -19,7 +19,6 @@ import org.gradle.kotlin.dsl.*
 
 import org.springframework.asm.*
 import java.io.*
-import java.util.*
 
 /**
  * An `@AutoConfiguration` class.
@@ -33,17 +32,17 @@ import java.util.*
  */
 @JvmRecord
 data class AutoConfigurationClass(
-    val name: String?,
-    val before: MutableList<String?>?,
-    val beforeName: MutableList<String?>?,
-    val after: MutableList<String?>?,
-    val afterName: MutableList<String?>?
+    val name: String,
+    val before: List<String>,
+    val beforeName: List<String>,
+    val after: List<String>,
+    val afterName: List<String>
 ) {
-    constructor(name: String?, attributes: MutableMap<String?, MutableList<String?>?>) : this(
-        name, attributes.getOrDefault("before", mutableListOf<String?>()),
-        attributes.getOrDefault("beforeName", mutableListOf<String?>()),
-        attributes.getOrDefault("after", mutableListOf<String?>()),
-        attributes.getOrDefault("afterName", mutableListOf<String?>())
+    constructor(name: String, attributes: Map<String, List<String>>) : this(
+        name, attributes.getOrDefault("before", emptyList()),
+        attributes.getOrDefault("beforeName", emptyList()),
+        attributes.getOrDefault("after", emptyList()),
+        attributes.getOrDefault("afterName", emptyList())
     )
 
     class AutoConfigurationClassVisitor : ClassVisitor(SpringAsmInfo.ASM_VERSION) {
@@ -67,37 +66,28 @@ data class AutoConfigurationClass(
         }
 
         private inner class AutoConfigurationAnnotationVisitor : AnnotationVisitor(SpringAsmInfo.ASM_VERSION) {
-            val attributes: MutableMap<String?, MutableList<String?>?> =
-                HashMap<String?, MutableList<String?>?>()
+            val attributes = mutableMapOf<String, MutableList<String>>()
+
+            private val INTERESTING_ATTRIBUTES = setOf("before", "beforeName", "after", "afterName")
 
             override fun visitEnd() {
                 this@AutoConfigurationClassVisitor.autoConfigurationClass = AutoConfigurationClass(
-                    this@AutoConfigurationClassVisitor.name, this.attributes
+                    this@AutoConfigurationClassVisitor.name ?: "", this.attributes
                 )
             }
 
             override fun visitArray(attributeName: String?): AnnotationVisitor? {
-                if (INTERESTING_ATTRIBUTES.contains(attributeName)) {
+                if (attributeName != null && INTERESTING_ATTRIBUTES.contains(attributeName)) {
                     return object : AnnotationVisitor(SpringAsmInfo.ASM_VERSION) {
                         override fun visit(name: String?, value: Any?) {
-                            var value = value
-                            if (value is Type) {
-                                value = value.getClassName()
-                            }
+                            val resolved = if (value is Type) value.getClassName() else value
                             this@AutoConfigurationAnnotationVisitor.attributes
-                                .computeIfAbsent(attributeName) { n: kotlin.String? -> java.util.ArrayList<kotlin.String?>() }!!
-                                .add(Objects.toString(value))
+                                .getOrPut(attributeName) { mutableListOf() }
+                                .add(resolved.toString())
                         }
                     }
                 }
                 return null
-            }
-
-            companion object {
-                val INTERESTING_ATTRIBUTES = mutableSetOf<String?>(
-                    "before", "beforeName", "after",
-                    "afterName"
-                )
             }
         }
     }

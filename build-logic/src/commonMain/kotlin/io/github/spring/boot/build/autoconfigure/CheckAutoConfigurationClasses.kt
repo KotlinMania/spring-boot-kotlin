@@ -25,12 +25,7 @@ import java.io.File
 import java.io.IOException
 import java.io.UncheckedIOException
 import java.nio.file.Files
-import java.nio.file.Path
 import java.nio.file.StandardOpenOption
-import java.util.*
-import java.util.concurrent.Callable
-import java.util.function.Consumer
-import java.util.jar.JarEntry
 import java.util.jar.JarFile
 import org.gradle.api.file.DirectoryProperty
 
@@ -46,15 +41,15 @@ abstract class CheckAutoConfigurationClasses : AutoConfigurationImportsTask() {
 
     private var requiredDependencies: FileCollection = project.getObjects().fileCollection()
 
-    private val optionalDependencyClassNames = project.getObjects().setProperty<String>(String::class.java)
+    private val optionalDependencyClassNames = project.getObjects().setProperty<String>()
 
-    private val requiredDependencyClassNames = project.getObjects().setProperty<String>(String::class.java)
+    private val requiredDependencyClassNames = project.getObjects().setProperty<String>()
 
     init {
         this.outputDirectory.convention(project.getLayout().getBuildDirectory().dir(name))
         setGroup(LifecycleBasePlugin.VERIFICATION_GROUP)
-        this.optionalDependencyClassNames.set(project.provider<MutableList<String?>>(Callable { classNamesOf(this.optionalDependencies) }))
-        this.requiredDependencyClassNames.set(project.provider<MutableList<String?>>(Callable { classNamesOf(this.requiredDependencies) }))
+        this.optionalDependencyClassNames.set(project.provider { classNamesOf(this.optionalDependencies) })
+        this.requiredDependencyClassNames.set(project.provider { classNamesOf(this.requiredDependencies) })
     }
 
     @Classpath
@@ -92,34 +87,34 @@ abstract class CheckAutoConfigurationClasses : AutoConfigurationImportsTask() {
 
     @TaskAction
     fun execute() {
-        val problems: MutableMap<String?, MutableList<String?>?> = TreeMap<String?, MutableList<String?>?>()
-        val optionalOnlyClassNames: MutableSet<String?> = HashSet<String?>(this.optionalDependencyClassNames.get())
-        val requiredClassNames: MutableSet<String?> = this.requiredDependencyClassNames.get()
+        val problems = sortedMapOf<String, MutableList<String>>()
+        val optionalOnlyClassNames = this.optionalDependencyClassNames.get().toMutableSet()
+        val requiredClassNames = this.requiredDependencyClassNames.get()
         optionalOnlyClassNames.removeAll(requiredClassNames)
         val imports = loadImports()
-        classFiles().forEach(Consumer { classFile: File? ->
-            val autoConfigurationClass: AutoConfigurationClass? = AutoConfigurationClass.Companion.of(classFile)
+        for (classFile in classFiles()) {
+            val autoConfigurationClass = AutoConfigurationClass.Companion.of(classFile)
             if (autoConfigurationClass != null) {
                 check(autoConfigurationClass, optionalOnlyClassNames, requiredClassNames, imports, problems)
             }
-        })
+        }
         val outputFile = this.outputDirectory.file("failure-report.txt").get().asFile
         writeReport(problems, outputFile)
-        if (!problems.isEmpty()) {
+        if (problems.isNotEmpty()) {
             throw VerificationException(
                 "Auto-configuration class check failed. See '%s' for details".format(outputFile)
             )
         }
     }
 
-    private fun classFiles(): MutableList<File?> {
-        val classFiles: MutableList<File?> = ArrayList<File?>()
+    private fun classFiles(): List<File> {
+        val classFiles = mutableListOf<File>()
         for (root in this.classpath.files) {
             if (root.exists()) {
                 try {
                     Files.walk(root.toPath()).use { files ->
-                        files.forEach { file: Path? ->
-                            if (Files.isRegularFile(file) && file!!.getFileName().toString().endsWith(".class")) {
+                        files.forEach { file ->
+                            if (Files.isRegularFile(file) && file.fileName.toString().endsWith(".class")) {
                                 classFiles.add(file.toFile())
                             }
                         }
@@ -134,78 +129,74 @@ abstract class CheckAutoConfigurationClasses : AutoConfigurationImportsTask() {
 
     private fun check(
         autoConfigurationClass: AutoConfigurationClass,
-        optionalOnlyClassNames: MutableSet<String?>,
-        requiredClassNames: MutableSet<String?>,
-        imports: MutableList<String?>,
-        problems: MutableMap<String?, MutableList<String?>?>
+        optionalOnlyClassNames: Set<String>,
+        requiredClassNames: Set<String>,
+        imports: List<String>,
+        problems: MutableMap<String, MutableList<String>>
     ) {
-        if (!autoConfigurationClass.name.endsWith("AutoConfiguration")) {
-            problems.computeIfAbsent(autoConfigurationClass.name) { name: kotlin.String? -> java.util.ArrayList<kotlin.String?>() }!!
+        val name = autoConfigurationClass.name
+        if (!name.endsWith("AutoConfiguration")) {
+            problems.getOrPut(name) { mutableListOf() }
                 .add("Name of a class annotated with @AutoConfiguration should end with AutoConfiguration")
         }
-        val testAutoConfiguration = autoConfigurationClass.name.endsWith("TestAutoConfiguration")
-        if (!this.omittedFromImports.getOrElse(mutableSetOf<String?>())
-                .contains(autoConfigurationClass.name) && !imports.contains(autoConfigurationClass.name) && !testAutoConfiguration
-        ) {
-            problems.computeIfAbsent(autoConfigurationClass.name) { name: kotlin.String? -> java.util.ArrayList<kotlin.String?>() }!!
+        val testAutoConfiguration = name.endsWith("TestAutoConfiguration")
+        val omitted = this.omittedFromImports.getOrElse(emptySet())
+        if (!omitted.contains(name) && !imports.contains(name) && !testAutoConfiguration) {
+            problems.getOrPut(name) { mutableListOf() }
                 .add("Class is not registered in AutoConfiguration.imports")
         }
-        if ((this.omittedFromImports.getOrElse(mutableSetOf<String?>()).contains(autoConfigurationClass.name)
-                    || testAutoConfiguration) && imports.contains(autoConfigurationClass.name)
-        ) {
-            problems.computeIfAbsent(autoConfigurationClass.name) { name: kotlin.String? -> java.util.ArrayList<kotlin.String?>() }!!
+        if ((omitted.contains(name) || testAutoConfiguration) && imports.contains(name)) {
+            problems.getOrPut(name) { mutableListOf() }
                 .add("Class should not be registered in AutoConfiguration.imports")
         }
-        autoConfigurationClass.before.forEach(Consumer { before: String? ->
+        for (before in autoConfigurationClass.before) {
             if (optionalOnlyClassNames.contains(before)) {
-                problems.computeIfAbsent(autoConfigurationClass.name) { name: kotlin.String? -> java.util.ArrayList<kotlin.String?>() }!!
+                problems.getOrPut(name) { mutableListOf() }
                     .add(
                         "before '%s' is from an optional dependency and should be declared in beforeName"
                             .format(before)
                     )
             }
-        })
-        autoConfigurationClass.beforeName.forEach(Consumer { beforeName: String? ->
+        }
+        for (beforeName in autoConfigurationClass.beforeName) {
             if (!optionalOnlyClassNames.contains(beforeName)) {
-                val problem: String = if (requiredClassNames.contains(beforeName))
+                val problem = if (requiredClassNames.contains(beforeName))
                     "beforeName '%s' is from a required dependency and should be declared in before"
                         .format(beforeName)
                 else
                     "beforeName '%s' not found".format(beforeName)
-                problems.computeIfAbsent(autoConfigurationClass.name) { name: kotlin.String? -> java.util.ArrayList<kotlin.String?>() }!!
-                    .add(problem)
+                problems.getOrPut(name) { mutableListOf() }.add(problem)
             }
-        })
-        autoConfigurationClass.after.forEach(Consumer { after: String? ->
+        }
+        for (after in autoConfigurationClass.after) {
             if (optionalOnlyClassNames.contains(after)) {
-                problems.computeIfAbsent(autoConfigurationClass.name) { name: kotlin.String? -> java.util.ArrayList<kotlin.String?>() }!!
+                problems.getOrPut(name) { mutableListOf() }
                     .add(
                         "after '%s' is from an optional dependency and should be declared in afterName"
                             .format(after)
                     )
             }
-        })
-        autoConfigurationClass.afterName.forEach(Consumer { afterName: String? ->
+        }
+        for (afterName in autoConfigurationClass.afterName) {
             if (!optionalOnlyClassNames.contains(afterName)) {
-                val problem: String = if (requiredClassNames.contains(afterName))
+                val problem = if (requiredClassNames.contains(afterName))
                     "afterName '%s' is from a required dependency and should be declared in after"
                         .format(afterName)
                 else
                     "afterName '%s' not found".format(afterName)
-                problems.computeIfAbsent(autoConfigurationClass.name) { name: kotlin.String? -> java.util.ArrayList<kotlin.String?>() }!!
-                    .add(problem)
+                problems.getOrPut(name) { mutableListOf() }.add(problem)
             }
-        })
+        }
     }
 
-    private fun writeReport(problems: MutableMap<String?, MutableList<String?>?>, outputFile: File) {
+    private fun writeReport(problems: Map<String, List<String>>, outputFile: File) {
         outputFile.parentFile.mkdirs()
         val report = StringBuilder()
-        if (!problems.isEmpty()) {
+        if (problems.isNotEmpty()) {
             report.append("Found auto-configuration class problems:%n".format())
-            problems.forEach { (className: String?, classProblems: MutableList<String?>?) ->
+            problems.forEach { (className, classProblems) ->
                 report.append("  - %s:%n".format(className))
-                classProblems!!.forEach(Consumer { problem: String? -> report.append("    - %s%n".format(problem)) })
+                classProblems.forEach { problem -> report.append("    - %s%n".format(problem)) }
             }
         }
         try {
@@ -219,27 +210,22 @@ abstract class CheckAutoConfigurationClasses : AutoConfigurationImportsTask() {
     }
 
     companion object {
-        private fun classNamesOf(classpath: FileCollection): MutableList<String?> {
-            return classpath.files.stream().flatMap<String> { file: File? ->
+        private fun classNamesOf(classpath: FileCollection): List<String> {
+            return classpath.files.flatMap { file ->
                 try {
                     JarFile(file).use { jarFile ->
-                        return@flatMap Collections.list<JarEntry?>(jarFile.entries())
-                            .stream()
-                            .filter { entry: JarEntry? -> !entry!!.isDirectory() }
-                            .map<String> { obj: JarEntry? -> obj!!.name }
-                            .filter { entryName: String? -> entryName!!.endsWith(".class") }
-                            .map<String> { entryName: String? ->
-                                entryName!!.substring(
-                                    0,
-                                    entryName.length - ".class".length
-                                )
-                            }
-                            .map<String> { entryName: String? -> entryName!!.replace("/", ".") }
+                        jarFile.entries().asSequence()
+                            .filter { !it.isDirectory }
+                            .map { it.name }
+                            .filter { it.endsWith(".class") }
+                            .map { it.substring(0, it.length - ".class".length) }
+                            .map { it.replace("/", ".") }
+                            .toList()
                     }
                 } catch (ex: IOException) {
                     throw UncheckedIOException(ex)
                 }
-            }.toList()
+            }
         }
     }
 }

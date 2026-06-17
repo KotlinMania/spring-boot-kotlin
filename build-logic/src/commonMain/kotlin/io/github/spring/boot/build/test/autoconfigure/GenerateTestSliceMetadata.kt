@@ -88,7 +88,7 @@ abstract class GenerateTestSliceMetadata @Inject constructor(private val objectF
     @get:PathSensitive(PathSensitivity.RELATIVE)
     @get:InputFiles
     val importFiles: FileCollection
-        get() = this.importsFiles
+        get() = this.importsFiles!!
 
     @Classpath
     fun getClassesDirs(): FileCollection {
@@ -108,11 +108,9 @@ abstract class GenerateTestSliceMetadata @Inject constructor(private val objectF
     private fun readTestSlices(): TestSliceMetadata {
         val testSlices: MutableList<TestSlice?> = ArrayList<TestSlice?>()
         URLClassLoader(
-            StreamSupport.stream<File?>(this.classpath!!.spliterator(), false)
-                .map<URL> { file: File? -> this.toURL(file!!) }
-                .toArray<URL?> { _Dummy_.__Array__() }).use { classLoader ->
+            this.classpath!!.map { toURL(it) }.toTypedArray()).use { classLoader ->
             val metadataReaderFactory: MetadataReaderFactory = SimpleMetadataReaderFactory(classLoader)
-            val springFactories = readSpringFactories(this.springFactories.asFile.getOrNull())
+            val springFactories = readSpringFactories(this.springFactories.asFile.get())
             readImportsFiles(springFactories, this.importsFiles!!)
             for (classesDir in this.classesDirs!!) {
                 testSlices.addAll(readTestSlices(classesDir, metadataReaderFactory, springFactories))

@@ -42,12 +42,12 @@ class OptionalDependenciesPlugin : Plugin<Project> {
             val sourceSets: SourceSetContainer = project.getExtensions()
                 .getByType<JavaPluginExtension>(JavaPluginExtension::class.java)
                 .sourceSets
-            sourceSets.all { sourceSet: SourceSet ->
+            sourceSets.configureEach {
                 project.getConfigurations()
-                    .getByName(sourceSet!!.getCompileClasspathConfigurationName())
+                    .getByName(getCompileClasspathConfigurationName())
                     .extendsFrom(optional)
                 project.getConfigurations()
-                    .getByName(sourceSet.getRuntimeClasspathConfigurationName())
+                    .getByName(getRuntimeClasspathConfigurationName())
                     .extendsFrom(optional)
             }
         }

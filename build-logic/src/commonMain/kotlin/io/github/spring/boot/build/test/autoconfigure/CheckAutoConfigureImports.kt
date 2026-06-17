@@ -77,7 +77,7 @@ abstract class CheckAutoConfigureImports : DefaultTask() {
     @get:InputFiles
     var source: FileTree
         get() = this.sourceFiles.getAsFileTree()
-            .matching { filter: PatternFilterable -> filter!!.include("META-INF/spring/*.AutoConfigure*.imports") }
+            .matching { include("META-INF/spring/*.AutoConfigure*.imports") }
         set(source) {
             this.sourceFiles = project.getObjects().fileCollection().from(source)
         }
@@ -120,15 +120,7 @@ abstract class CheckAutoConfigureImports : DefaultTask() {
                 }
             }
             val sortedValues: MutableList<String?> = ArrayList<String?>(autoConfigureImports.imports)
-            Collections.sort<String?>(sortedValues, Comparator { i1: String?, i2: String? ->
-                val imported1 = i1!!.startsWith("optional:")
-                val imported2 = i2!!.startsWith("optional:")
-                val comparison = Boolean.compare(imported1, imported2)
-                if (comparison != 0) {
-                    return@sort comparison
-                }
-                i1.compareTo(i2)
-            })
+            sortedValues.sortWith(compareBy({ it!!.startsWith("optional:") }, { it!! }))
             if (sortedValues != autoConfigureImports.imports) {
                 val sortedOutputFile = this.outputDirectory.file("sorted-" + autoConfigureImports.fileName)
                     .get()

@@ -40,12 +40,12 @@ import java.util.concurrent.Callable
 class WarConventions {
     fun apply(project: Project) {
         project.plugins
-            .withType<EclipseWtpPlugin>().configureEach { val wtp = this;
-                project.getTasks().getByName(EclipseWtpPlugin.ECLIPSE_WTP_FACET_TASK_NAME).doFirst { task: Task ->
-                        val eclipseModel = project.getExtensions().getByType<EclipseModel>(EclipseModel::class.java)
-                        (eclipseModel.getWtp().getFacet() as IConventionAware).getConventionMapping()
-                            .map("facets", Callable { getFacets(project) })
-                    }
+            .withType<EclipseWtpPlugin>().configureEach {
+                project.getTasks().getByName(EclipseWtpPlugin.ECLIPSE_WTP_FACET_TASK_NAME).doFirst {
+                    val eclipseModel = project.getExtensions().getByType<EclipseModel>()
+                    (eclipseModel.getWtp().getFacet() as IConventionAware).getConventionMapping()
+                        .map("facets", Callable { getFacets(project) })
+                }
             }
     }
 

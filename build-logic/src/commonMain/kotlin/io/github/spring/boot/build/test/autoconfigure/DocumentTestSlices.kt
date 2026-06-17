@@ -40,7 +40,7 @@ abstract class DocumentTestSlices : DefaultTask() {
     @get:PathSensitive(PathSensitivity.RELATIVE)
     @get:InputFiles
     var testSlices: FileCollection
-        get() = this.testSliceMetadata
+        get() = this.testSliceMetadata!!
         set(testSlices) {
             this.testSliceMetadata = testSlices
         }
@@ -61,9 +61,7 @@ abstract class DocumentTestSlices : DefaultTask() {
             val mapper = JsonMapper.builder().build()
             val metadata = mapper.readValue<TestSliceMetadata>(metadataFile, TestSliceMetadata::class.java)
             val slices: MutableList<TestSlice?> = ArrayList<TestSlice?>(metadata.testSlices)
-            Collections.sort<TestSlice?>(
-                slices,
-                Comparator { s1: TestSlice?, s2: TestSlice? -> s1!!.annotation.compareTo(s2!!.annotation) })
+            slices.sortBy { it?.annotation }
             testSlices.put(metadata.module, slices)
         }
         return testSlices

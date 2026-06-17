@@ -53,8 +53,8 @@ class ConfigurationProperties private constructor(properties: MutableList<Config
             val jsonMapper = JsonMapper()
             val properties: MutableList<ConfigurationProperty> = ArrayList<ConfigurationProperty>()
             for (file in files) {
-                val json: MutableMap<String?, Any?> =
-                    jsonMapper.readValue<MutableMap<*, *>>(file, MutableMap::class.java)
+                @Suppress("UNCHECKED_CAST")
+                val json = jsonMapper.readValue(file, MutableMap::class.java) as MutableMap<String?, Any?>
                 for (property in (json.get("properties") as kotlin.collections.MutableList<kotlin.collections.MutableMap<kotlin.String?, kotlin.Any?>>?)!!) {
                     properties.add(ConfigurationProperty.Companion.fromJsonProperties(property))
                 }

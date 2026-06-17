@@ -23,30 +23,23 @@ import org.gradle.api.tasks.testing.Test
 import org.gradle.api.tasks.testing.TestDescriptor
 import org.gradle.tooling.events.FinishEvent
 import org.gradle.tooling.events.OperationCompletionListener
-import java.lang.AutoCloseable
-import java.util.*
-import java.util.function.Consumer
-import java.util.function.Function
+import java.util.TreeMap
 
 /**
  * [BuildService] that provides an overview of all the test failures in the build.
- * 
+ *
  * @author Andy Wilkinson
  */
 abstract class TestResultsOverview
 
-    : BuildService<BuildServiceParameters.None?>, OperationCompletionListener, AutoCloseable {
-    val testFailures: MutableMap<Test?, MutableList<TestFailure?>?> =
-        TreeMap<Test?, MutableList<TestFailure?>?>(
-            Comparator.comparing<Test?, String?>(Function { obj: Test? -> obj!!.getPath() })
-        )
+    : BuildService<BuildServiceParameters.None>, OperationCompletionListener, AutoCloseable {
+    val testFailures: MutableMap<Test, MutableList<TestFailure>> =
+        TreeMap(compareBy { test: Test -> test.getPath() })
 
     val monitor = Any()
 
-    fun addFailures(test: Test?, failureDescriptors: MutableList<TestDescriptor?>) {
-        val testFailures =
-            failureDescriptors.stream().map<TestFailure> { descriptor: TestDescriptor? -> TestFailure(descriptor!!) }
-                .sorted().toList()
+    fun addFailures(test: Test, failureDescriptors: List<TestDescriptor>) {
+        val testFailures = failureDescriptors.map { TestFailure(it) }.sorted().toMutableList()
         synchronized(this.monitor) {
             this.testFailures.put(test, testFailures)
         }
@@ -66,18 +59,18 @@ abstract class TestResultsOverview
                 ("Found test failures in " + this.testFailures.size + " test task"
                         + (if (this.testFailures.size == 1) ":" else "s:"))
             )
-            this.testFailures.forEach { (task: Test?, failures: MutableList<TestFailure?>?) ->
+            this.testFailures.forEach { (task, failures) ->
                 System.err.println()
-                System.err.println(task!!.getPath())
-                failures!!.forEach(Consumer { failure: TestFailure? ->
+                System.err.println(task.getPath())
+                failures.forEach { failure ->
                     System.err
                         .println("    " + failure.descriptor.getClassName() + " > " + failure.descriptor.name)
-                })
+                }
             }
         }
     }
 
-    class TestFailure(val descriptor: TestDescriptor) : Comparable<TestFailure?> {
+    class TestFailure(val descriptor: TestDescriptor) : Comparable<TestFailure> {
         override fun compareTo(other: TestFailure): Int {
             var comparison = this.descriptor.getClassName()!!.compareTo(other.descriptor.getClassName()!!)
             if (comparison == 0) {

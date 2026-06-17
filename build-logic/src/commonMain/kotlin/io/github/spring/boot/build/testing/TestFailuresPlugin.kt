@@ -35,31 +35,30 @@ import org.gradle.api.tasks.testing.TestResult
  */
 class TestFailuresPlugin : Plugin<Project> {
     override fun apply(project: Project) {
-        val testResultsOverview = project.getGradle()
+        val testResultsOverview: Provider<TestResultsOverview> = project.getGradle()
             .getSharedServices()
-            .registerIfAbsent<TestResultsOverview?, BuildServiceParameters.None?>(
-                "testResultsOverview",
-                TestResultsOverview::class.java) { spec: BuildServiceSpec<BuildServiceParameters.None?> -> }
-        project.getTasks().withType<Test>().configureEach { val test = this;
-            test!!.usesService(testResultsOverview)
+            .registerIfAbsent("testResultsOverview", TestResultsOverview::class.java) { }
+        project.getTasks().withType<Test>().configureEach {
+            val test = this
+            test.usesService(testResultsOverview)
             test.addTestListener(FailureRecordingTestListener(testResultsOverview, test))
         }
     }
 
     private inner class FailureRecordingTestListener(
         private val testResultsOverview: Provider<TestResultsOverview>,
-        private val test: Test?
+        private val test: Test
     ) : TestListener {
-        private val failures: MutableList<TestDescriptor?> = ArrayList<TestDescriptor?>()
+        private val failures: MutableList<TestDescriptor> = mutableListOf()
 
         override fun afterSuite(descriptor: TestDescriptor?, result: TestResult?) {
-            if (!this.failures.isEmpty()) {
-                this.testResultsOverview.get()!!.addFailures(this.test, this.failures)
+            if (this.failures.isNotEmpty()) {
+                this.testResultsOverview.get().addFailures(this.test, this.failures)
             }
         }
 
         override fun afterTest(descriptor: TestDescriptor?, result: TestResult) {
-            if (result.getFailedTestCount() > 0) {
+            if (result.getFailedTestCount() > 0 && descriptor != null) {
                 this.failures.add(descriptor)
             }
         }

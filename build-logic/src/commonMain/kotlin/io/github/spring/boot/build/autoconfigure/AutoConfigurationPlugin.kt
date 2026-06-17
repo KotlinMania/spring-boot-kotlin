@@ -31,8 +31,6 @@ import org.gradle.api.tasks.SourceSet
 import org.gradle.api.tasks.TaskProvider
 import org.springframework.boot.build.DeployedPlugin
 import org.springframework.boot.build.optional.OptionalDependenciesPlugin
-import java.util.*
-import java.util.stream.Collectors
 
 /**
  * [Plugin] for projects that define auto-configuration. When applied, the plugin
@@ -52,8 +50,7 @@ import java.util.stream.Collectors
 class AutoConfigurationPlugin : Plugin<Project> {
     override fun apply(project: Project) {
         project.plugins.apply<DeployedPlugin>(DeployedPlugin::class.java)
-        project.plugins.withType<JavaPlugin>(
-            JavaPlugin::class.java) { javaPlugin: JavaPlugin -> Configurer(project).configure() }
+        project.plugins.withType<JavaPlugin>().configureEach { Configurer(project).configure() }
     }
 
     private class Configurer(private val project: Project) {
@@ -70,24 +67,25 @@ class AutoConfigurationPlugin : Plugin<Project> {
             addAnnotationProcessorsDependencies()
             val tasks = this.project.getTasks()
             val configurations = this.project.getConfigurations()
-            configurations.consumable(
-                AUTO_CONFIGURATION_METADATA_CONFIGURATION_NAME) { configuration: ConsumableConfiguration ->
-                    configuration!!.attributes { attributes: AttributeContainer ->
-                            attributes!!.attribute<Category>(
-                                Category.CATEGORY_ATTRIBUTE,
-                                this.project.getObjects().named<Category>(Category::class.java, Category.DOCUMENTATION)
-                            )
-                            attributes.attribute<Usage>(
-                                Usage.USAGE_ATTRIBUTE,
-                                this.project.getObjects()
-                                    .named<Usage>(Usage::class.java, "auto-configuration-metadata")
-                            )
-                        }
+            configurations.consumable(AUTO_CONFIGURATION_METADATA_CONFIGURATION_NAME) {
+                attributes {
+                    attribute(
+                        Category.CATEGORY_ATTRIBUTE,
+                        this@Configurer.project.getObjects().named<Category>(Category.DOCUMENTATION)
+                    )
+                    attribute(
+                        Usage.USAGE_ATTRIBUTE,
+                        this@Configurer.project.getObjects().named<Usage>("auto-configuration-metadata")
+                    )
                 }
-            tasks.register<AutoConfigurationMetadata>(
-                "autoConfigurationMetadata") { val task = this; this.configureAutoConfigurationMetadata(task) }
+            }
+            tasks.register<AutoConfigurationMetadata>("autoConfigurationMetadata") {
+                this@Configurer.configureAutoConfigurationMetadata(this)
+            }
             val checkAutoConfigurationImports = tasks.register<CheckAutoConfigurationImports>(
-                "checkAutoConfigurationImports") { val task = this; this.configureCheckAutoConfigurationImports(task) }
+                "checkAutoConfigurationImports") {
+                this@Configurer.configureCheckAutoConfigurationImports(this)
+            }
             val requiredClasspath = configurations.create("autoConfigurationRequiredClasspath")
                 .extendsFrom(
                     configurations.getByName(this.main.getImplementationConfigurationName()),
@@ -95,20 +93,15 @@ class AutoConfigurationPlugin : Plugin<Project> {
                 )
             requiredClasspath.getDependencies().add(projectDependency(":core:spring-boot-autoconfigure"))
             val checkAutoConfigurationClasses = tasks.register<CheckAutoConfigurationClasses>(
-                "checkAutoConfigurationClasses") { val task = this;
-                    configureCheckAutoConfigurationClasses(
-                        requiredClasspath,
-                        task!!
-                    )
-                }
-            this.project.plugins
-                .withType<OptionalDependenciesPlugin>(
-                    OptionalDependenciesPlugin::class.java) { plugin: OptionalDependenciesPlugin ->
-                        configureCheckAutoConfigurationClassesForOptionalDependencies(
-                            configurations,
-                            checkAutoConfigurationClasses
-                        )
-                    }
+                "checkAutoConfigurationClasses") {
+                this@Configurer.configureCheckAutoConfigurationClasses(requiredClasspath, this)
+            }
+            this.project.plugins.withType<OptionalDependenciesPlugin>().configureEach {
+                configureCheckAutoConfigurationClassesForOptionalDependencies(
+                    configurations,
+                    checkAutoConfigurationClasses
+                )
+            }
             this.project.getTasks()
                 .getByName(JavaBasePlugin.CHECK_TASK_NAME)
                 .dependsOn(checkAutoConfigurationImports, checkAutoConfigurationClasses)
@@ -132,8 +125,7 @@ class AutoConfigurationPlugin : Plugin<Project> {
             task.outputFile
                 .set(this.project.getLayout().getBuildDirectory().file("auto-configuration-metadata.properties"))
             this.project.getArtifacts()
-                .add(
-                    AUTO_CONFIGURATION_METADATA_CONFIGURATION_NAME, task.outputFile) { artifact: ConfigurablePublishArtifact -> artifact!!.builtBy(task) }
+                .add(AUTO_CONFIGURATION_METADATA_CONFIGURATION_NAME, task.outputFile) { builtBy(task) }
         }
 
         fun configureCheckAutoConfigurationImports(task: CheckAutoConfigurationImports) {
@@ -145,7 +137,7 @@ class AutoConfigurationPlugin : Plugin<Project> {
         }
 
         fun configureCheckAutoConfigurationClasses(
-            requiredClasspath: Configuration?,
+            requiredClasspath: Configuration,
             task: CheckAutoConfigurationClasses
         ) {
             task.source = this.main.getResources()
@@ -158,21 +150,19 @@ class AutoConfigurationPlugin : Plugin<Project> {
             configurations: ConfigurationContainer,
             checkAutoConfigurationClasses: TaskProvider<CheckAutoConfigurationClasses>
         ) {
-            checkAutoConfigurationClasses.configure { check: CheckAutoConfigurationClasses ->
+            checkAutoConfigurationClasses.configure {
                 val optionalClasspath = configurations.create("autoConfigurationOptionalClassPath")
                     .extendsFrom(configurations.getByName(OptionalDependenciesPlugin.OPTIONAL_CONFIGURATION_NAME))
-                check!!.setOptionalDependencies(optionalClasspath)
+                setOptionalDependencies(optionalClasspath)
             }
         }
 
-        fun projectDependencies(vararg paths: String?): MutableSet<Dependency?> {
-            return Arrays.stream<String?>(paths).map<Dependency> { path: String? -> projectDependency(path) }.collect(
-                Collectors.toSet()
-            )
+        fun projectDependencies(vararg paths: String): Set<Dependency> {
+            return paths.map { projectDependency(it) }.toSet()
         }
 
-        fun projectDependency(path: String?): Dependency {
-            return this.project.getDependencies().project(Collections.singletonMap<String?, String?>("path", path))
+        fun projectDependency(path: String): Dependency {
+            return this.project.getDependencies().project(mapOf("path" to path))
         }
     }
 

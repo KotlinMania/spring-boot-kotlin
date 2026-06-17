@@ -66,17 +66,17 @@ class TestSlicePlugin : Plugin<Project> {
 
     private fun addMetadataArtifact(project: Project, task: TaskProvider<GenerateTestSliceMetadata>) {
         project.getConfigurations()
-            .consumable(TEST_SLICE_METADATA_CONFIGURATION_NAME) { configuration: ConsumableConfiguration ->
-                configuration!!.attributes { attributes: AttributeContainer ->
-                        attributes!!.attribute<Category>(
-                            Category.CATEGORY_ATTRIBUTE,
-                            project.getObjects().named<Category>(Category::class.java, Category.DOCUMENTATION)
-                        )
-                        attributes.attribute<Usage>(
-                            Usage.USAGE_ATTRIBUTE,
-                            project.getObjects().named<Usage>(Usage::class.java, "test-slice-metadata")
-                        )
-                    }
+            .consumable(TEST_SLICE_METADATA_CONFIGURATION_NAME) {
+                attributes {
+                    attribute(
+                        Category.CATEGORY_ATTRIBUTE,
+                        project.getObjects().named<Category>(Category.DOCUMENTATION)
+                    )
+                    attribute(
+                        Usage.USAGE_ATTRIBUTE,
+                        project.getObjects().named<Usage>("test-slice-metadata")
+                    )
+                }
             }
         project.getArtifacts().add(TEST_SLICE_METADATA_CONFIGURATION_NAME, task)
     }

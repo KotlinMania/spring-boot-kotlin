@@ -56,7 +56,7 @@ class TestAutoConfigurationPlugin : Plugin<Project> {
                     }
             target.getTasks()
                 .named(LifecycleBasePlugin.CHECK_TASK_NAME)
-                .configure { check: Task -> check!!.dependsOn(checkAutoConfigureImports) }
+                .configure { dependsOn(checkAutoConfigureImports) }
         }
     }
 }

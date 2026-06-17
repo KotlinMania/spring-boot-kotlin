@@ -38,8 +38,7 @@ import org.gradle.plugins.ide.eclipse.model.EclipseModel
  */
 class IntegrationTestPlugin : Plugin<Project> {
     override fun apply(project: Project) {
-        project.plugins.withType<JavaPlugin>(
-            JavaPlugin::class.java) { javaPlugin: JavaPlugin -> configureIntegrationTesting(project) }
+        project.plugins.withType<JavaPlugin>().configureEach { configureIntegrationTesting(project) }
     }
 
     private fun configureIntegrationTesting(project: Project) {
@@ -47,10 +46,10 @@ class IntegrationTestPlugin : Plugin<Project> {
         val intTest: TaskProvider<Test> = createTestTask(project, intTestSourceSet)
         project.getTasks().getByName(LifecycleBasePlugin.CHECK_TASK_NAME).dependsOn(intTest)
         project.plugins
-            .withType<EclipsePlugin>().configureEach { val eclipsePlugin = this;
-                val eclipse = project.getExtensions().getByType<EclipseModel>(EclipseModel::class.java)
-                eclipse.classpath { classpath: EclipseClasspath ->
-                    classpath!!.getPlusConfigurations()
+            .withType<EclipsePlugin>().configureEach {
+                val eclipse = project.getExtensions().getByType<EclipseModel>()
+                eclipse.classpath {
+                    getPlusConfigurations()
                         .add(
                             project.getConfigurations()
                                 .getByName(intTestSourceSet.getRuntimeClasspathConfigurationName())

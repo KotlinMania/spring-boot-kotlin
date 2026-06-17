@@ -25,16 +25,15 @@ import org.gradle.api.Project
  * @author Andy Wilkinson
  * @author Scott Frederick
  */
-class ArtifactRelease private constructor(private val type: Type) {
-    fun type: String {
-        return this.type.toString().lowercase()
-    }
+class ArtifactRelease private constructor(private val releaseType: Type) {
+    val type: String
+        get() = this.releaseType.toString().lowercase()
 
     val downloadRepo: String
-        get() = if (this.type == Type.SNAPSHOT) SPRING_SNAPSHOT_REPO else MAVEN_REPO
+        get() = if (this.releaseType == Type.SNAPSHOT) SPRING_SNAPSHOT_REPO else MAVEN_REPO
 
     val isRelease: Boolean
-        get() = this.type == Type.RELEASE
+        get() = this.releaseType == Type.RELEASE
 
     enum class Type {
         SNAPSHOT, MILESTONE, RELEASE;

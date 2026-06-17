@@ -41,18 +41,17 @@ import org.gradle.plugins.ide.eclipse.model.EclipseModel
  */
 class SystemTestPlugin : Plugin<Project> {
     override fun apply(project: Project) {
-        project.plugins.withType<JavaPlugin>(
-            JavaPlugin::class.java) { javaPlugin: JavaPlugin -> configureSystemTesting(project) }
+        project.plugins.withType<JavaPlugin>().configureEach { configureSystemTesting(project) }
     }
 
     private fun configureSystemTesting(project: Project) {
         val systemTestSourceSet = createSourceSet(project)
         createTestTask(project, systemTestSourceSet)
         project.plugins
-            .withType<EclipsePlugin>().configureEach { val eclipsePlugin = this;
-                val eclipse = project.getExtensions().getByType<EclipseModel>(EclipseModel::class.java)
-                eclipse.classpath { classpath: EclipseClasspath ->
-                    classpath!!.getPlusConfigurations()
+            .withType<EclipsePlugin>().configureEach {
+                val eclipse = project.getExtensions().getByType<EclipseModel>()
+                eclipse.classpath {
+                    getPlusConfigurations()
                         .add(
                             project.getConfigurations()
                                 .getByName(systemTestSourceSet.getRuntimeClasspathConfigurationName())
@@ -82,7 +81,7 @@ class SystemTestPlugin : Plugin<Project> {
             task.setTestClassesDirs(systemTestSourceSet.getOutput().getClassesDirs())
             task.setClasspath(systemTestSourceSet.getRuntimeClasspath())
             task.shouldRunAfter(JavaPlugin.TEST_TASK_NAME)
-            if (this.isCi) {
+            if (this@SystemTestPlugin.isCi) {
                 task.getOutputs().upToDateWhen(NEVER)
                 task.getOutputs().doNotCacheIf("System tests are always rerun on CI", Spec { spec: Task? -> true })
             }

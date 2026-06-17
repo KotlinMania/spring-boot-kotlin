@@ -40,8 +40,8 @@ abstract class CheckAdditionalSpringConfigurationMetadata : SourceTask() {
 
     @InputFiles
     @PathSensitive(PathSensitivity.RELATIVE)
-    override fun source: FileTree {
-        return super.source
+    override fun getSource(): FileTree {
+        return super.getSource()
     }
 
     @TaskAction

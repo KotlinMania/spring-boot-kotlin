@@ -29,8 +29,8 @@ import org.gradle.api.Project
  */
 class ProtobufConventions {
     fun apply(project: Project) {
-        project.plugins.withId("com.google.protobuf") { plugin: Plugin<*> ->
-            val protobuf = project.getExtensions().getByType<ProtobufExtension>(ProtobufExtension::class.java)
+        project.plugins.withId("com.google.protobuf") {
+            val protobuf = project.getExtensions().getByType<ProtobufExtension>()
             removeUnusedMachineSpecificConfiguration(protobuf)
         }
     }

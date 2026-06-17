@@ -55,32 +55,25 @@ abstract class DocumentAutoConfigurationClasses : DefaultTask() {
     fun documentAutoConfigurationClasses() {
         FileSystemUtils.deleteRecursively(this.outputDir.asFile.get())
         val autoConfigurations = load()
-        autoConfigurations.forEach(Consumer { autoConfigurationClasses: AutoConfiguration? ->
-            this.writeModuleAdoc(
-                autoConfigurationClasses!!
-            )
-        })
+        autoConfigurations.forEach { writeModuleAdoc(it) }
         for (metadataFile in this.autoConfiguration!!) {
             val metadata = Properties()
             FileReader(metadataFile).use { reader ->
                 metadata.load(reader)
             }
             val autoConfiguration = AutoConfiguration(
-                metadata.getProperty("module"), TreeSet<String?>(
-                    StringUtils.commaDelimitedListToSet(metadata.getProperty("autoConfigurationClassNames"))
-                )
+                metadata.getProperty("module"),
+                StringUtils.commaDelimitedListToSet(metadata.getProperty("autoConfigurationClassNames"))
             )
             writeModuleAdoc(autoConfiguration)
         }
         writeNavAdoc(autoConfigurations)
     }
 
-    fun load(): MutableList<AutoConfiguration?> {
+    fun load(): List<AutoConfiguration> {
         return this.autoConfiguration!!.files
-            .stream()
-            .map<AutoConfiguration> { metadataFile: File? -> AutoConfiguration.Companion.of(metadataFile) }
-            .sorted { a1: AutoConfiguration?, a2: AutoConfiguration? -> a1.module.compareTo(a2.module) }
-            .toList()
+            .map { AutoConfiguration.Companion.of(it) }
+            .sortedBy { it.module }
     }
 
     fun writeModuleAdoc(autoConfigurationClasses: AutoConfiguration) {
@@ -116,34 +109,30 @@ abstract class DocumentAutoConfigurationClasses : DefaultTask() {
         }
     }
 
-    fun writeNavAdoc(autoConfigurations: MutableList<AutoConfiguration?>) {
+    fun writeNavAdoc(autoConfigurations: List<AutoConfiguration>) {
         val outputDir = this.outputDir.asFile.get()
         outputDir.mkdirs()
         try {
             PrintWriter(FileWriter(File(outputDir, "nav.adoc"))).use { writer ->
-                autoConfigurations.forEach(Consumer { autoConfigurationClasses: AutoConfiguration? ->
+                autoConfigurations.forEach { autoConfigurationClasses ->
                     writer
                         .println(
                             "*** xref:appendix:auto-configuration-classes/%s.adoc[]"
                                 .format(autoConfigurationClasses.module)
                         )
-                })
+                }
             }
         } catch (ex: IOException) {
             throw UncheckedIOException(ex)
         }
     }
 
-    class AutoConfiguration(val module: String, classNames: MutableSet<String?>) {
-        val classes: SortedSet<AutoConfigurationClass>
-
-        init {
-            this.classes = classNames.stream().map<AutoConfigurationClass> { className: String? ->
-                val path = className!!.replace('.', '/')
-                val name = className.substring(className.lastIndexOf('.') + 1)
-                AutoConfigurationClass(name, path)
-            }.collect(Collectors.toCollection(Supplier { TreeSet() }))
-        }
+    class AutoConfiguration(val module: String, classNames: Set<String>) {
+        val classes: SortedSet<AutoConfigurationClass> = classNames.map { className ->
+            val path = className.replace('.', '/')
+            val name = className.substring(className.lastIndexOf('.') + 1)
+            AutoConfigurationClass(name, path)
+        }.toSortedSet()
 
         companion object {
             fun of(metadataFile: File): AutoConfiguration {
@@ -156,16 +145,15 @@ abstract class DocumentAutoConfigurationClasses : DefaultTask() {
                     throw UncheckedIOException(ex)
                 }
                 return AutoConfiguration(
-                    metadata.getProperty("module"), TreeSet<String?>(
-                        StringUtils.commaDelimitedListToSet(metadata.getProperty("autoConfigurationClassNames"))
-                    )
+                    metadata.getProperty("module"),
+                    StringUtils.commaDelimitedListToSet(metadata.getProperty("autoConfigurationClassNames"))
                 )
             }
         }
     }
 
     class AutoConfigurationClass(val name: String, val path: String?) :
-        Comparable<AutoConfigurationClass?> {
+        Comparable<AutoConfigurationClass> {
         override fun compareTo(other: AutoConfigurationClass): Int {
             return this.name.compareTo(other.name)
         }

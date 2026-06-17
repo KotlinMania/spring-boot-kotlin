@@ -17,26 +17,19 @@ package org.springframework.boot.build.context.properties
 
 import org.gradle.kotlin.dsl.*
 
-import java.util.*
-import java.util.function.Consumer
-
 /**
  * Table row regrouping a list of configuration properties sharing the same description.
- * 
+ *
  * @author Brian Clozel
  * @author Phillip Webb
  * @author Moritz Halbritter
  */
-class CompoundRow(snippet: Snippet?, prefix: String?, private val description: String?) :
+class CompoundRow(snippet: Snippet, prefix: String, private val description: String?) :
     Row(snippet, prefix) {
-    private val propertyNames: MutableSet<String?>
-
-    init {
-        this.propertyNames = TreeSet<String?>()
-    }
+    private val propertyNames: MutableSet<String> = sortedSetOf()
 
     fun addProperty(property: ConfigurationProperty) {
-        this.propertyNames.add(property.displayName)
+        property.displayName?.let { this.propertyNames.add(it) }
     }
 
     val isEmpty: Boolean
@@ -46,7 +39,7 @@ class CompoundRow(snippet: Snippet?, prefix: String?, private val description: S
         asciidoc.append("|")
         asciidoc.append("[[" + anchor + "]]")
         asciidoc.append("xref:#" + anchor + "[")
-        this.propertyNames.forEach(Consumer { items: String? -> asciidoc.appendWithHardLineBreaks(items) })
+        this.propertyNames.forEach { items -> asciidoc.appendWithHardLineBreaks(items) }
         asciidoc.appendln("]")
         asciidoc.appendln("|+++", this.description, "+++")
         asciidoc.appendln("|")

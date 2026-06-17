@@ -24,7 +24,7 @@ import org.gradle.kotlin.dsl.*
  * @author Phillip Webb
  */
 abstract class Row protected constructor(private val snippet: Snippet, private val id: String) :
-    Comparable<Row?> {
+    Comparable<Row> {
     override fun equals(obj: Any?): Boolean {
         if (this === obj) {
             return true
@@ -47,5 +47,5 @@ abstract class Row protected constructor(private val snippet: Snippet, private v
     val anchor: String
         get() = this.snippet.anchor + "." + this.id
 
-    abstract fun write(asciidoc: Asciidoc?)
+    abstract fun write(asciidoc: Asciidoc)
 }

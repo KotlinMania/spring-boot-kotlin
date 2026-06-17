@@ -17,23 +17,20 @@ package org.springframework.boot.build.context.properties
 
 import org.gradle.kotlin.dsl.*
 
-import java.util.*
-import java.util.stream.Collectors
-
 /**
  * Table row containing a single configuration property.
- * 
+ *
  * @author Brian Clozel
  * @author Phillip Webb
  * @author Moritz Halbritter
  */
-class SingleRow(private val snippets: Snippets?, snippet: Snippet?, property: ConfigurationProperty) :
+class SingleRow(private val snippets: Snippets?, snippet: Snippet, property: ConfigurationProperty) :
     Row(snippet, property.name) {
     private val defaultValue: String?
 
     private val property: ConfigurationProperty
 
-    constructor(snippet: Snippet?, property: ConfigurationProperty) : this(null, snippet, property)
+    constructor(snippet: Snippet, property: ConfigurationProperty) : this(null, snippet, property)
 
     init {
         this.defaultValue = getDefaultValue(property.defaultValue)
@@ -45,9 +42,9 @@ class SingleRow(private val snippets: Snippets?, snippet: Snippet?, property: Co
             return null
         }
         if (defaultValue.javaClass.isArray()) {
-            return Arrays.stream<Any?>(defaultValue as Array<Any?>)
-                .map<String> { obj: Any? -> obj.toString() }
-                .collect(Collectors.joining("," + System.lineSeparator()))
+            @Suppress("UNCHECKED_CAST")
+            return (defaultValue as Array<Any?>)
+                .joinToString("," + System.lineSeparator()) { it.toString() }
         }
         return defaultValue.toString()
     }
@@ -62,18 +59,18 @@ class SingleRow(private val snippets: Snippets?, snippet: Snippet?, property: Co
 
     private fun writeDescription(builder: Asciidoc) {
         builder.append("|")
-        if (this.property.isDeprecated()) {
+        if (this.property.isDeprecated) {
             val deprecation = this.property.deprecation
             val replacement = if (deprecation != null) deprecation.replacement else null
             val reason = if (deprecation != null) deprecation.reason else null
-            if (replacement != null && !replacement.isEmpty()) {
-                val xref = if (this.snippets != null) this.snippets.findXref(deprecation!!.replacement) else null
+            if (replacement != null && replacement.isNotEmpty()) {
+                val xref = if (this.snippets != null) this.snippets.findXref(replacement) else null
                 if (xref != null) {
-                    builder.append("Replaced by xref:" + xref + "[`+" + deprecation!!.replacement + "+`]")
+                    builder.append("Replaced by xref:" + xref + "[`+" + replacement + "+`]")
                 } else {
-                    builder.append("Replaced by `+" + deprecation!!.replacement + "+`")
+                    builder.append("Replaced by `+" + replacement + "+`")
                 }
-            } else if (reason != null && !reason.isEmpty()) {
+            } else if (reason != null && reason.isNotEmpty()) {
                 builder.append("+++", clean(reason), "+++")
             }
         } else {

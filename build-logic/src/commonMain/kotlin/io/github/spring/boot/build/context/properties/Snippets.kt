@@ -69,7 +69,7 @@ class Snippets(configurationPropertyMetadata: FileCollection, private val deprec
         val table = Table()
         val added = mutableSetOf<String>()
         snippet.forEachOverride { prefix, description ->
-            val row = CompoundRow(snippet, prefix, if (!this.deprecated) description else "")
+            val row = CompoundRow(snippet, prefix!!, if (!this.deprecated) description else "")
             remaining.filter { it.startsWith(prefix!!) }.forEach { name ->
                 val property = this.properties.get(name)
                 if (shouldAdd(property) && added.add(name)) {

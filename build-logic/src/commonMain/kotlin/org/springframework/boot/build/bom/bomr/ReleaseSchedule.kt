@@ -32,18 +32,18 @@ import java.util.regex.Pattern
  * 
  * @author Andy Wilkinson
  */
-internal class ReleaseSchedule @JvmOverloads constructor(private val rest: RestOperations = RestTemplate()) {
+class ReleaseSchedule @JvmOverloads constructor(private val rest: RestOperations = RestTemplate()) {
     fun releasesBetween(start: OffsetDateTime?, end: OffsetDateTime?): MutableMap<String?, MutableList<Release?>?> {
         val response: ResponseEntity<MutableList<*>?> = this.rest
             .getForEntity<MutableList<*>?>(
                 "https://calendar.spring.io/releases?start=" + start + "&end=" + end,
                 MutableList::class.java
             )
-        val body: MutableList<MutableMap<String?, String?>?>? = response.getBody()
+        val body: MutableList<MutableMap<String?, String?>?>? = response.body
         val releasesByLibrary: MutableMap<String?, MutableList<Release?>?> =
             LinkedCaseInsensitiveMap<MutableList<Release?>?>()
         body!!.stream()
-            .map<Release?> { entry: MutableMap<String?, String?>? -> this.asRelease(entry) }
+            .map<Release> { entry: MutableMap<String?, String?>? -> this.asRelease(entry) }
             .filter { obj: Release? -> Objects.nonNull(obj) }
             .forEach { release: Release? ->
                 releasesByLibrary.computeIfAbsent(
@@ -66,7 +66,7 @@ internal class ReleaseSchedule @JvmOverloads constructor(private val rest: RestO
         return Release(library, DependencyVersion.parse(version), due)
     }
 
-    internal class Release(val libraryName: String?, val version: DependencyVersion?, val dueOn: LocalDate?)
+    class Release(val libraryName: String?, val version: DependencyVersion?, val dueOn: LocalDate?)
 
     companion object {
         private val LIBRARY_AND_VERSION: Pattern = Pattern.compile("([A-Za-z0-9 ]+) ([0-9A-Za-z.-]+)")

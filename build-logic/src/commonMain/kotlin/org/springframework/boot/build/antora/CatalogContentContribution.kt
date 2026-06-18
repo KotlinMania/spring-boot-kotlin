@@ -22,5 +22,5 @@ import org.gradle.api.Project
  * 
  * @author Andy Wilkinson
  */
-internal class CatalogContentContribution(project: Project?, name: String?) :
+class CatalogContentContribution(project: Project?, name: String?) :
     ConsumableContentContribution(project, "catalog", name)

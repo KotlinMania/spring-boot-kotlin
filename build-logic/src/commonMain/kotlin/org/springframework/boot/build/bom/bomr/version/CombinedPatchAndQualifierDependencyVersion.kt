@@ -25,10 +25,10 @@ import java.util.regex.Pattern
  * 
  * @author Andy Wilkinson
  */
-internal class CombinedPatchAndQualifierDependencyVersion private constructor(
+class CombinedPatchAndQualifierDependencyVersion private constructor(
     artifactVersion: ArtifactVersion?,
     private val original: String?
-) : ArtifactVersionDependencyVersion(artifactVersion) {
+) : ArtifactVersionDependencyVersion(artifactVersion!!) {
     public override fun toString(): String {
         return this.original!!
     }

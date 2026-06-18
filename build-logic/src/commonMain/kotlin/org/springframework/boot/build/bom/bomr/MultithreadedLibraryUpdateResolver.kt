@@ -28,7 +28,7 @@ import java.util.stream.Stream
  * @author Moritz Halbritter
  * @author Andy Wilkinson
  */
-internal class MultithreadedLibraryUpdateResolver(
+class MultithreadedLibraryUpdateResolver(
     private val threads: Int,
     private val delegate: LibraryUpdateResolver
 ) : LibraryUpdateResolver {
@@ -51,7 +51,7 @@ internal class MultithreadedLibraryUpdateResolver(
                             this.delegate.findLibraryUpdates(mutableListOf<Library?>(library), librariesByName)
                         )
                     }
-                }.flatMap<LibraryWithVersionOptions?> { job: Future<MutableList<LibraryWithVersionOptions?>?>? ->
+                }.flatMap<LibraryWithVersionOptions> { job: Future<MutableList<LibraryWithVersionOptions?>?>? ->
                     this.getResult(job!!)
                 }.toList()
         } finally {

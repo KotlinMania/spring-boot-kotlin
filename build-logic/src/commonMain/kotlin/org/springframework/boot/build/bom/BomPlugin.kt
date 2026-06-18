@@ -41,43 +41,42 @@ import java.util.stream.Collectors
  * 
  * @author Andy Wilkinson
  */
-class BomPlugin : Plugin<Project?> {
+class BomPlugin : Plugin<Project> {
     override fun apply(project: Project) {
-        val plugins = project.getPlugins()
-        plugins.apply<MavenRepositoryPlugin?>(MavenRepositoryPlugin::class.java)
-        plugins.apply<JavaPlatformPlugin?>(JavaPlatformPlugin::class.java)
+        val plugins = project.plugins
+        plugins.apply<MavenRepositoryPlugin>(MavenRepositoryPlugin::class.java)
+        plugins.apply<JavaPlatformPlugin>(JavaPlatformPlugin::class.java)
         val javaPlatform = project.getExtensions().getByType<JavaPlatformExtension>(JavaPlatformExtension::class.java)
         javaPlatform.allowDependencies()
         createApiEnforcedConfiguration(project)
         val bom = project.getExtensions().create<BomExtension>("bom", BomExtension::class.java, project)
         val createResolvedBom = project.getTasks()
-            .register<CreateResolvedBom?>("createResolvedBom", CreateResolvedBom::class.java, bom)
-        val checkBom = project.getTasks().register<CheckBom?>("bomrCheck", CheckBom::class.java, bom)
+            .register<CreateResolvedBom>("createResolvedBom", CreateResolvedBom::class.java, bom)
+        val checkBom = project.getTasks().register<CheckBom>("bomrCheck", CheckBom::class.java, bom)
         checkBom.configure(
-            Action { task: CheckBom? ->
-                task!!.getResolvedBomFile()
-                    .set(createResolvedBom.flatMap<RegularFile?>(Transformer { obj: CreateResolvedBom? -> obj!!.getOutputFile() }))
+            Action { task: CheckBom ->
+                task!!.resolvedBomFile
+                    .set(createResolvedBom.flatMap<RegularFile>(Transformer { obj: CreateResolvedBom? -> obj!!.outputFile }))
             })
-        project.getTasks().named("check").configure(Action { check: Task? -> check!!.dependsOn(checkBom) })
-        project.getTasks().register<UpgradeBom?>("bomrUpgrade", UpgradeBom::class.java, bom)
-        project.getTasks().register<MoveToSnapshots?>("moveToSnapshots", MoveToSnapshots::class.java, bom)
-        project.getTasks().register<CheckLinks?>("checkLinks", CheckLinks::class.java, bom)
+        project.getTasks().named("check").configure(Action { check: Task -> check!!.dependsOn(checkBom) })
+        project.getTasks().register<UpgradeBom>("bomrUpgrade", UpgradeBom::class.java, bom)
+        project.getTasks().register<MoveToSnapshots>("moveToSnapshots", MoveToSnapshots::class.java, bom)
+        project.getTasks().register<CheckLinks>("checkLinks", CheckLinks::class.java, bom)
         val resolvedBomConfiguration = project.getConfigurations().create("resolvedBom")
         project.getArtifacts()
             .add(
-                resolvedBomConfiguration.getName(),
-                createResolvedBom.map<RegularFileProperty?>(Transformer { obj: CreateResolvedBom? -> obj!!.getOutputFile() }),
-                Action { artifact: ConfigurablePublishArtifact? -> artifact!!.builtBy(createResolvedBom) })
+                resolvedBomConfiguration.name,
+                createResolvedBom.map<RegularFileProperty>(Transformer { obj: CreateResolvedBom? -> obj!!.outputFile })) { artifact: ConfigurablePublishArtifact -> artifact!!.builtBy(createResolvedBom) }
         PublishingCustomizer(project, bom).customize()
     }
 
     private fun createApiEnforcedConfiguration(project: Project) {
         val apiEnforced = project.getConfigurations()
-            .create(API_ENFORCED_CONFIGURATION_NAME, Action { configuration: Configuration ->
+            .create(API_ENFORCED_CONFIGURATION_NAME) { configuration: Configuration ->
                 configuration.setCanBeConsumed(false)
                 configuration.setCanBeResolved(false)
                 configuration.setVisible(false)
-            })
+            }
         project.getConfigurations()
             .getByName(JavaPlatformPlugin.ENFORCED_API_ELEMENTS_CONFIGURATION_NAME)
             .extendsFrom(apiEnforced)
@@ -90,19 +89,19 @@ class BomPlugin : Plugin<Project?> {
         fun customize() {
             val publishing =
                 this.project.getExtensions().getByType<PublishingExtension>(PublishingExtension::class.java)
-            publishing.getPublications().withType<MavenPublication?>(MavenPublication::class.java)
-                .all(Action { publication: MavenPublication? -> this.configurePublication(publication) })
+            publishing.publications.withType<MavenPublication>(MavenPublication::class.java)
+                .all(Action { publication: MavenPublication -> this.configurePublication(publication) })
         }
 
         fun configurePublication(publication: MavenPublication) {
-            publication.pom(Action { pom: MavenPom? -> this.customizePom(pom) })
+            publication.pom(Action { pom: MavenPom -> this.customizePom(pom) })
         }
 
         fun customizePom(pom: MavenPom) {
-            pom.withXml(Action { xml: XmlProvider? ->
+            pom.withXml(Action { xml: XmlProvider ->
                 val projectNode = xml!!.asNode()
                 val properties = Node(null, "properties")
-                this.bom.getProperties()
+                this.bom.properties
                     .forEach { (name: String?, value: DependencyVersion?) -> properties.appendNode(name, value) }
                 val dependencyManagement = findChild(projectNode, "dependencyManagement")
                 if (dependencyManagement != null) {
@@ -149,18 +148,18 @@ class BomPlugin : Plugin<Project?> {
                 for (dependency in findChildren(dependencies, "dependency")) {
                     val groupId = findChild(dependency, "groupId")!!.text()
                     val artifactId = findChild(dependency, "artifactId")!!.text()
-                    this.bom.getLibraries()
+                    this.bom.libraries
                         .stream()
-                        .flatMap<Library.Group?> { library: Library? -> library!!.getGroups().stream() }
-                        .filter { group: Library.Group? -> group!!.getId() == groupId }
-                        .flatMap<Library.Module?> { group: Library.Group? -> group!!.getModules().stream() }
-                        .filter { module: Library.Module? -> module!!.getName() == artifactId }
-                        .flatMap<Library.Exclusion?> { module: Library.Module? -> module!!.getExclusions().stream() }
+                        .flatMap<Library.Group> { library: Library? -> library!!.groups.stream() }
+                        .filter { group: Library.Group? -> group!!.id == groupId }
+                        .flatMap<Library.Module> { group: Library.Group? -> group!!.modules.stream() }
+                        .filter { module: Library.Module? -> module!!.name == artifactId }
+                        .flatMap<Library.Exclusion> { module: Library.Module? -> module!!.exclusions.stream() }
                         .forEach { exclusion: Library.Exclusion? ->
                             val exclusions = findOrCreateNode(dependency, "exclusions")
                             val node = Node(exclusions, "exclusion")
-                            node.appendNode("groupId", exclusion!!.getGroupId())
-                            node.appendNode("artifactId", exclusion.getArtifactId())
+                            node.appendNode("groupId", exclusion!!.groupId)
+                            node.appendNode("artifactId", exclusion.artifactId)
                         }
                 }
             }
@@ -172,13 +171,13 @@ class BomPlugin : Plugin<Project?> {
                 for (dependency in findChildren(dependencies, "dependency")) {
                     val groupId = findChild(dependency, "groupId")!!.text()
                     val artifactId = findChild(dependency, "artifactId")!!.text()
-                    val types = this.bom.getLibraries()
+                    val types = this.bom.libraries
                         .stream()
-                        .flatMap<Library.Group?> { library: Library? -> library!!.getGroups().stream() }
-                        .filter { group: Library.Group? -> group!!.getId() == groupId }
-                        .flatMap<Library.Module?> { group: Library.Group? -> group!!.getModules().stream() }
-                        .filter { module: Library.Module? -> module!!.getName() == artifactId }
-                        .map<String?> { obj: Library.Module? -> obj!!.getType() }
+                        .flatMap<Library.Group> { library: Library? -> library!!.groups.stream() }
+                        .filter { group: Library.Group? -> group!!.id == groupId }
+                        .flatMap<Library.Module> { group: Library.Group? -> group!!.modules.stream() }
+                        .filter { module: Library.Module? -> module!!.name == artifactId }
+                        .map<String> { obj: Library.Module? -> obj!!.type }
                         .filter { obj: String? -> Objects.nonNull(obj) }
                         .collect(Collectors.toSet())
                     check(types.size <= 1) { "Multiple types for " + groupId + ":" + artifactId + ": " + types }
@@ -197,13 +196,13 @@ class BomPlugin : Plugin<Project?> {
                     val groupId = findChild(dependency, "groupId")!!.text()
                     val artifactId = findChild(dependency, "artifactId")!!.text()
                     val version = findChild(dependency, "version")!!.text()
-                    val classifiers = this.bom.getLibraries()
+                    val classifiers = this.bom.libraries
                         .stream()
-                        .flatMap<Library.Group?> { library: Library? -> library!!.getGroups().stream() }
-                        .filter { group: Library.Group? -> group!!.getId() == groupId }
-                        .flatMap<Library.Module?> { group: Library.Group? -> group!!.getModules().stream() }
-                        .filter { module: Library.Module? -> module!!.getName() == artifactId }
-                        .map<String?> { obj: Library.Module? -> obj!!.getClassifier() }
+                        .flatMap<Library.Group> { library: Library? -> library!!.groups.stream() }
+                        .filter { group: Library.Group? -> group!!.id == groupId }
+                        .flatMap<Library.Module> { group: Library.Group? -> group!!.modules.stream() }
+                        .filter { module: Library.Module? -> module!!.name == artifactId }
+                        .map<String> { obj: Library.Module? -> obj!!.classifier }
                         .filter { obj: String? -> Objects.nonNull(obj) }
                         .collect(Collectors.toSet())
                     var target: Node? = dependency
@@ -226,18 +225,18 @@ class BomPlugin : Plugin<Project?> {
         }
 
         fun addPluginManagement(projectNode: Node) {
-            for (library in this.bom.getLibraries()) {
-                for (group in library.getGroups()) {
+            for (library in this.bom.libraries) {
+                for (group in library.groups!!) {
                     val plugins = findOrCreateNode(projectNode, "build", "pluginManagement", "plugins")
-                    for (pluginName in group.getPlugins()) {
+                    for (pluginName in group.plugins!!) {
                         val plugin = Node(plugins, "plugin")
-                        plugin.appendNode("groupId", group.getId())
+                        plugin.appendNode("groupId", group.id)
                         plugin.appendNode("artifactId", pluginName)
-                        val versionProperty = library.getVersionProperty()
+                        val versionProperty = library.versionProperty
                         val value: String? = if (versionProperty != null)
                             "\${" + versionProperty + "}"
                         else
-                            library.getVersion().getVersion().toString()
+                            library.version.version.toString()
                         plugin.appendNode("version", value)
                     }
                 }

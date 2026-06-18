@@ -23,6 +23,7 @@ import org.gradle.api.tasks.TaskAction
 import java.io.FileWriter
 import java.io.IOException
 import javax.inject.Inject
+import org.gradle.api.file.RegularFileProperty
 
 /**
  * [Task] to create a [resolved bom][ResolvedBom].
@@ -37,18 +38,18 @@ abstract class CreateResolvedBom @Inject constructor(bomExtension: BomExtension)
     init {
         getOutputs().upToDateWhen(Spec { spec: Task? -> false })
         this.bomExtension = bomExtension
-        this.bomResolver = BomResolver(getProject().getConfigurations(), getProject().getDependencies())
-        this.outputFile.convention(getProject().getLayout().getBuildDirectory().file(getName() + "/resolved-bom.json"))
+        this.bomResolver = BomResolver(project.getConfigurations(), project.getDependencies())
+        this.outputFile.convention(project.getLayout().getBuildDirectory().file(name + "/resolved-bom.json"))
     }
 
     @get:OutputFile
-    abstract val outputFile: RegularFileProperty?
+    abstract val outputFile: RegularFileProperty
 
     @TaskAction
     @Throws(IOException::class)
     fun createResolvedBom() {
         val resolvedBom = this.bomResolver.resolve(this.bomExtension)
-        FileWriter(this.outputFile.get().getAsFile()).use { writer ->
+        FileWriter(this.outputFile.get().asFile).use { writer ->
             resolvedBom.writeTo(writer)
         }
     }

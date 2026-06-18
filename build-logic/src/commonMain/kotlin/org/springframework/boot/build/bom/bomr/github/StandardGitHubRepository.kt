@@ -37,12 +37,12 @@ import kotlin.collections.get
  * 
  * @author Andy Wilkinson
  */
-internal class StandardGitHubRepository(private val rest: RestTemplate) : GitHubRepository {
+class StandardGitHubRepository(private val rest: RestTemplate) : GitHubRepository {
     override fun openIssue(title: String?, body: String?, labels: MutableList<String?>, milestone: Milestone?): Int {
         val requestBody: MutableMap<String?, Any?> = HashMap<String?, Any?>()
         requestBody.put("title", title)
         if (milestone != null) {
-            requestBody.put("milestone", milestone.getNumber())
+            requestBody.put("milestone", milestone.number)
         }
         if (!labels.isEmpty()) {
             requestBody.put("labels", labels)
@@ -53,7 +53,7 @@ internal class StandardGitHubRepository(private val rest: RestTemplate) : GitHub
                 this.rest.postForEntity<MutableMap<*, *>?>("issues", requestBody, MutableMap::class.java)
             // See gh-30304
             sleep(Duration.ofSeconds(3))
-            return (response.getBody().get("number") as kotlin.Int?)!!
+            return (response.body.get("number") as kotlin.Int?)!!
         } catch (ex: RestClientException) {
             if (ex is HttpClientErrorException.Forbidden) {
                 println("Received 403 response with headers " + ex.getResponseHeaders())
@@ -83,7 +83,7 @@ internal class StandardGitHubRepository(private val rest: RestTemplate) : GitHub
     override fun findIssues(labels: MutableList<String?>, milestone: Milestone): MutableList<Issue?> {
         return get<Issue?>(
             ("issues?per_page=100&state=all&labels=" + String.join(",", labels) + "&milestone="
-                    + milestone.getNumber()),
+                    + milestone.number),
             Function { issue: MutableMap<kotlin.String?, Any?>? ->
                 Issue(
                     this.rest, (issue!!.get("number") as kotlin.Int?)!!, issue.get("title") as kotlin.String?,
@@ -95,10 +95,10 @@ internal class StandardGitHubRepository(private val rest: RestTemplate) : GitHub
     private fun <T> get(
         name: kotlin.String,
         mapper: Function<MutableMap<kotlin.String?, Any?>?, T?>?
-    ): MutableList<T?> {
+    ): MutableList {
         val response: ResponseEntity<MutableList<*>?> =
             this.rest.getForEntity<MutableList<*>?>(name, MutableList::class.java)
-        return (response.getBody() as MutableList<MutableMap<kotlin.String?, Any?>?>).stream().map<T?>(mapper).toList()
+        return (response.body as MutableList<MutableMap<kotlin.String?, Any?>?>).stream().map(mapper).toList()
     }
 
     companion object {

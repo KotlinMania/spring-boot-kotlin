@@ -32,26 +32,25 @@ import javax.inject.Inject
  */
 abstract class UpgradeBom @Inject constructor(bom: BomExtension?) : UpgradeDependencies(bom) {
     init {
-        when (BuildProperties.get(getProject()).buildType) {
-            BuildType.OPEN_SOURCE -> addOpenSourceRepositories(getProject().getRepositories())
+        when (BuildProperties.get(project).buildType) {
+            BuildType.OPEN_SOURCE -> addOpenSourceRepositories(project.getRepositories())
             BuildType.COMMERCIAL -> addCommercialRepositories()
         }
     }
 
     private fun addOpenSourceRepositories(repositories: RepositoryHandler) {
-        getRepositoryNames().add(ArtifactRepositoryContainer.DEFAULT_MAVEN_CENTRAL_REPO_NAME)
-        repositories.withType<MavenArtifactRepository?>(
-            MavenArtifactRepository::class.java,
-            Action { repository: MavenArtifactRepository? ->
-                val name = repository!!.getName()
+        repositoryNames.add(ArtifactRepositoryContainer.DEFAULT_MAVEN_CENTRAL_REPO_NAME)
+        repositories.withType<MavenArtifactRepository>(
+            MavenArtifactRepository::class.java) { repository: MavenArtifactRepository ->
+                val name = repository!!.name
                 if (name.startsWith("spring-") && !name.endsWith("-snapshot")) {
-                    getRepositoryNames().add(name)
+                    repositoryNames.add(name)
                 }
-            })
+            }
     }
 
     private fun addCommercialRepositories() {
-        getRepositoryNames().addAll(
+        repositoryNames.addAll(
             ArtifactRepositoryContainer.DEFAULT_MAVEN_CENTRAL_REPO_NAME,
             "spring-commercial-release"
         )

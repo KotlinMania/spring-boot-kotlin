@@ -24,6 +24,7 @@ import java.io.IOException
 import java.nio.file.Files
 import java.nio.file.StandardCopyOption
 import javax.inject.Inject
+import org.gradle.api.file.RegularFileProperty
 
 /**
  * Tasks to copy Antora content.
@@ -34,7 +35,7 @@ abstract class CopyAntoraContent @Inject constructor() : DefaultTask() {
     private var source: FileCollection? = null
 
     @InputFiles
-    fun getSource(): FileCollection {
+    fun source: FileCollection {
         return this.source!!
     }
 
@@ -43,13 +44,13 @@ abstract class CopyAntoraContent @Inject constructor() : DefaultTask() {
     }
 
     @get:OutputFile
-    abstract val outputFile: RegularFileProperty?
+    abstract val outputFile: RegularFileProperty
 
     @TaskAction
     @Throws(IllegalStateException::class, IOException::class)
     fun copyAntoraContent() {
-        val source = this.source!!.getSingleFile().toPath()
-        val target = this.outputFile.getAsFile().get().toPath()
+        val source = this.source!!.singleFile.toPath()
+        val target = this.outputFile.asFile.get().toPath()
         Files.copy(source, target, StandardCopyOption.REPLACE_EXISTING)
     }
 }

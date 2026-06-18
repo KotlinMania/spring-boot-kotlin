@@ -37,31 +37,31 @@ import java.util.stream.Collectors
  * @author Phillip Webb
  */
 class AntoraAsciidocAttributes {
-    private val version: String
+    val version: String
 
-    private val latestVersion: Boolean
+    val latestVersion: Boolean
 
-    private val buildType: BuildType
+    val buildType: BuildType
 
-    private val artifactRelease: ArtifactRelease
+    val artifactRelease: ArtifactRelease
 
-    private val libraries: MutableList<Library?>
+    val libraries: MutableList<Library?>
 
-    private val dependencyVersions: MutableMap<String?, String>
+    val dependencyVersions: MutableMap<String?, String>
 
-    private val projectProperties: MutableMap<String?, *>
+    val projectProperties: MutableMap<String?, *>
 
     constructor(project: Project, dependencyBom: BomExtension, resolvedBom: ResolvedBom) {
-        this.version = project.getVersion().toString()
+        this.version = project.version.toString()
         this.latestVersion = project.findProperty("latestVersion").toString().toBoolean()
         this.buildType = BuildProperties.get(project).buildType
         this.artifactRelease = ArtifactRelease.forProject(project)
-        this.libraries = dependencyBom.getLibraries()
+        this.libraries = dependencyBom.libraries
         this.dependencyVersions = dependencyVersionsOf(resolvedBom)
-        this.projectProperties = project.getProperties()
+        this.projectProperties = project.properties
     }
 
-    internal constructor(
+    constructor(
         version: String, latestVersion: Boolean, buildType: BuildType, libraries: MutableList<Library?>?,
         dependencyVersions: MutableMap<String?, String>?, projectProperties: MutableMap<String?, *>?
     ) {
@@ -88,16 +88,16 @@ class AntoraAsciidocAttributes {
         return attributes
     }
 
-    private fun addBuildTypeAttribute(attributes: MutableMap<String?, String?>) {
+    fun addBuildTypeAttribute(attributes: MutableMap<String?, String?>) {
         attributes.put("build-type", this.buildType.toIdentifier())
     }
 
-    private fun addGitHubAttributes(attributes: MutableMap<String?, String?>) {
+    fun addGitHubAttributes(attributes: MutableMap<String?, String?>) {
         attributes.put("github-repo", "spring-projects/spring-boot")
         attributes.put("github-ref", determineGitHubRef())
     }
 
-    private fun determineGitHubRef(): String {
+    fun determineGitHubRef(): String {
         val snapshotIndex: Int = this.version.lastIndexOf(DASH_SNAPSHOT)
         if (snapshotIndex == -1) {
             return "v" + this.version
@@ -110,10 +110,10 @@ class AntoraAsciidocAttributes {
         return versionRoot.substring(0, lastDot) + ".x"
     }
 
-    private fun addVersionAttributes(attributes: MutableMap<String?, String?>, internal: MutableMap<String?, String?>) {
+    fun addVersionAttributes(attributes: MutableMap<String?, String?>, internal: MutableMap<String?, String?>) {
         this.libraries.forEach(Consumer { library: Library? ->
-            val name = "version-" + library!!.getLinkRootName()
-            val value: String? = library.getVersion().toString()
+            val name = "version-" + library!!.linkRootName
+            val value: String? = library.version.toString()
             attributes.put(name, value)
         })
         attributes.put("version-native-build-tools", this.projectProperties.get("nativeBuildToolsVersion") as String?)
@@ -143,14 +143,14 @@ class AntoraAsciidocAttributes {
         addDependencyVersion(attributes, "pulsar-client-api", "org.apache.pulsar:pulsar-client-api")
     }
 
-    private fun addSpringDataDependencyVersion(
+    fun addSpringDataDependencyVersion(
         attributes: MutableMap<String?, String?>, internal: MutableMap<String?, String?>,
         artifactId: String
     ) {
         addSpringDataDependencyVersion(attributes, internal, artifactId, artifactId)
     }
 
-    private fun addSpringDataDependencyVersion(
+    fun addSpringDataDependencyVersion(
         attributes: MutableMap<String?, String?>, internal: MutableMap<String?, String?>,
         name: String?, artifactId: String
     ) {
@@ -167,7 +167,7 @@ class AntoraAsciidocAttributes {
         internal.put("dotxversion-" + name, majorMinor + ".x")
     }
 
-    private fun addDependencyVersion(
+    fun addDependencyVersion(
         attributes: MutableMap<String?, String?>,
         name: String?,
         groupAndArtifactId: String?
@@ -175,22 +175,22 @@ class AntoraAsciidocAttributes {
         attributes.put("version-" + name, getVersion(groupAndArtifactId))
     }
 
-    private fun getVersion(groupAndArtifactId: String?): String {
+    fun getVersion(groupAndArtifactId: String?): String {
         val version: String = this.dependencyVersions.get(groupAndArtifactId)!!
         Assert.notNull(version, Supplier { "No version found for " + groupAndArtifactId })
         return version
     }
 
-    private fun addArtifactAttributes(attributes: MutableMap<String?, String?>) {
-        attributes.put("url-artifact-repository", this.artifactRelease.getDownloadRepo())
-        attributes.put("artifact-release-type", this.artifactRelease.getType())
+    fun addArtifactAttributes(attributes: MutableMap<String?, String?>) {
+        attributes.put("url-artifact-repository", this.artifactRelease.downloadRepo)
+        attributes.put("artifact-release-type", this.artifactRelease.type)
         attributes.put(
             "build-and-artifact-release-type",
-            this.buildType.toIdentifier() + "-" + this.artifactRelease.getType()
+            this.buildType.toIdentifier() + "-" + this.artifactRelease.type
         )
     }
 
-    private fun addUrlJava(attributes: MutableMap<String?, String?>) {
+    fun addUrlJava(attributes: MutableMap<String?, String?>) {
         attributes.put("url-javase-javadoc", "https://docs.oracle.com/en/java/javase/17/docs/api")
         attributes.put("javadoc-location-java", "{url-javase-javadoc}/java.base")
         attributes.put("javadoc-location-java-beans", "{url-javase-javadoc}/java.desktop")
@@ -202,18 +202,18 @@ class AntoraAsciidocAttributes {
         attributes.put("javadoc-location-javax-xml", "{url-javase-javadoc}/java.xml")
     }
 
-    private fun addUrlLibraryLinkAttributes(attributes: MutableMap<String?, String?>) {
+    fun addUrlLibraryLinkAttributes(attributes: MutableMap<String?, String?>) {
         val packageAttributes: MutableMap<String?, String?> = LinkedHashMap<String?, String?>()
         this.libraries.forEach(Consumer { library: Library? ->
             library!!.getLinks().forEach { (name: String?, links: MutableList<Library.Link?>?) ->
                 links!!.forEach(
                     Consumer { link: Library.Link? ->
-                        val linkRootName = if (link!!.rootName != null) link.rootName else library.getLinkRootName()
+                        val linkRootName = if (link!!.rootName != null) link.rootName else library.linkRootName
                         val linkName = "url-" + linkRootName + "-" + name
                         attributes.put(linkName, link.url(library))
                         link.packages
                             .stream()
-                            .map<String?> { packageName: String? -> this.packageAttributeName(packageName!!) }
+                            .map<String> { packageName: String? -> this.packageAttributeName(packageName!!) }
                             .forEach { packageAttributeName: String? ->
                                 packageAttributes.put(
                                     packageAttributeName,
@@ -226,11 +226,11 @@ class AntoraAsciidocAttributes {
         attributes.putAll(packageAttributes)
     }
 
-    private fun packageAttributeName(packageName: String): String {
+    fun packageAttributeName(packageName: String): String {
         return "javadoc-location-" + packageName.replace('.', '-')
     }
 
-    private fun addPropertyAttributes(
+    fun addPropertyAttributes(
         attributes: MutableMap<String?, String?>,
         internal: MutableMap<String?, String?>
     ) {
@@ -250,7 +250,7 @@ class AntoraAsciidocAttributes {
         }
     }
 
-    private fun resolve(value: String, internal: MutableMap<String?, String?>): String {
+    fun resolve(value: String, internal: MutableMap<String?, String?>): String {
         var value = value
         for (entry in internal.entries) {
             value = value.replace("{" + entry.key + "}", entry.value!!)
@@ -261,30 +261,30 @@ class AntoraAsciidocAttributes {
     companion object {
         private const val DASH_SNAPSHOT = "-SNAPSHOT"
 
-        private fun dependencyVersionsOf(resolvedBom: ResolvedBom): MutableMap<String?, String> {
+        fun dependencyVersionsOf(resolvedBom: ResolvedBom): MutableMap<String?, String> {
             val dependencyVersions: MutableMap<String?, String> = HashMap<String?, String>()
-            for (library in resolvedBom.libraries) {
+            for (library in resolvedBom.libraries!!) {
                 dependencyVersions.putAll(dependencyVersionsOf(library.managedDependencies))
-                for (importedBom in library.importedBoms) {
+                for (importedBom in library.importedBoms!!) {
                     dependencyVersions.putAll(dependencyVersionsOf(importedBom))
                 }
             }
             return dependencyVersions
         }
 
-        private fun dependencyVersionsOf(bom: Bom?): MutableMap<String?, String?> {
+        fun dependencyVersionsOf(bom: Bom?): MutableMap<String?, String?> {
             val dependencyVersions: MutableMap<String?, String?> = HashMap<String?, String?>()
             if (bom != null) {
                 dependencyVersions.putAll(dependencyVersionsOf(bom.managedDependencies))
                 dependencyVersions.putAll(dependencyVersionsOf(bom.parent))
-                for (importedBom in bom.importedBoms) {
+                for (importedBom in bom.importedBoms!!) {
                     dependencyVersions.putAll(dependencyVersionsOf(importedBom))
                 }
             }
             return dependencyVersions
         }
 
-        private fun dependencyVersionsOf(managedDependencies: MutableCollection<ResolvedBom.Id>): MutableMap<String?, String?> {
+        fun dependencyVersionsOf(managedDependencies: MutableCollection<ResolvedBom.Id>): MutableMap<String?, String?> {
             val dependencyVersions: MutableMap<String?, String?> = HashMap<String?, String?>()
             for (managedDependency in managedDependencies) {
                 dependencyVersions.put(

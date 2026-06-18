@@ -22,5 +22,5 @@ import org.gradle.api.Project
  * 
  * @author Andy Wilkinson
  */
-internal class AggregateContentContribution(project: Project?, name: String?) :
+class AggregateContentContribution(project: Project?, name: String?) :
     ConsumableContentContribution(project, "aggregate", name)

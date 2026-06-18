@@ -40,6 +40,9 @@ import java.util.Map
 import java.util.concurrent.Callable
 import java.util.function.Consumer
 import javax.inject.Inject
+import org.gradle.api.provider.SetProperty
+import org.gradle.api.provider.Property
+import org.gradle.api.file.RegularFileProperty
 
 /**
  * Task to generate a local Antora playbook.
@@ -49,7 +52,7 @@ import javax.inject.Inject
 abstract class GenerateAntoraPlaybook : DefaultTask() {
     private val root: Path
 
-    private val playbookOutputDir: Provider<String?>
+    private val playbookOutputDir: Provider<String>
 
     private val version: String?
 
@@ -63,36 +66,36 @@ abstract class GenerateAntoraPlaybook : DefaultTask() {
     val contentSource: ContentSource
 
     @get:OutputFile
-    abstract val outputFile: RegularFileProperty?
+    abstract val outputFile: RegularFileProperty
 
     init {
-        this.root = toRealPath(getProject().getRootDir().toPath())
+        this.root = toRealPath(project.getRootDir().toPath())
         this.antoraExtensions =
-            getProject().getObjects().newInstance<AntoraExtensions>(AntoraExtensions::class.java, this.root)
+            project.getObjects().newInstance<AntoraExtensions>(AntoraExtensions::class.java, this.root)
         this.asciidocExtensions =
-            getProject().getObjects().newInstance<AsciidocExtensions>(AsciidocExtensions::class.java)
-        this.version = getProject().getVersion().toString()
-        this.playbookOutputDir = configurePlaybookOutputDir(getProject())
-        this.contentSource = getProject().getObjects().newInstance<ContentSource>(ContentSource::class.java, this.root)
+            project.getObjects().newInstance<AsciidocExtensions>(AsciidocExtensions::class.java)
+        this.version = project.version.toString()
+        this.playbookOutputDir = configurePlaybookOutputDir(project)
+        this.contentSource = project.getObjects().newInstance<ContentSource>(ContentSource::class.java, this.root)
         setGroup("Documentation")
         setDescription("Generates an Antora playbook.yml file for local use")
         this.outputFile.convention(
-            getProject().getLayout()
+            project.getLayout()
                 .getBuildDirectory()
                 .file("generated/docs/antora-playbook/antora-playbook.yml")
         )
         this.contentSource.addStartPath(
-            getProject()
-                .provider<Directory?>(Callable {
-                    getProject().getLayout().getProjectDirectory().dir(AntoraConventions.ANTORA_SOURCE_DIR)
+            project
+                .provider<Directory>(Callable {
+                    project.getLayout().getProjectDirectory().dir(AntoraConventions.ANTORA_SOURCE_DIR)
                 })
         )
     }
 
-    private fun configurePlaybookOutputDir(project: Project): Provider<String?> {
-        val siteDirectory = getProject().getLayout().getBuildDirectory().dir("site").get().getAsFile().toPath()
-        return project.provider<String?>(Callable {
-            val playbookDir: Path = toRealPath(this.outputFile.get().getAsFile().toPath()).getParent()
+    private fun configurePlaybookOutputDir(project: Project): Provider<String> {
+        val siteDirectory = project.getLayout().getBuildDirectory().dir("site").get().asFile.toPath()
+        return project.provider<String>(Callable {
+            val playbookDir: Path = toRealPath(this.outputFile.get().asFile.toPath()).getParent()
             val outputDir: Path = toRealPath(siteDirectory)
             "." + File.separator + playbookDir.relativize(outputDir)
         })
@@ -101,8 +104,8 @@ abstract class GenerateAntoraPlaybook : DefaultTask() {
     @TaskAction
     @Throws(IOException::class)
     fun writePlaybookYml() {
-        val file = this.outputFile.get().getAsFile()
-        file.getParentFile().mkdirs()
+        val file = this.outputFile.get().asFile
+        file.parentFile.mkdirs()
         FileWriter(file).use { out ->
             createYaml().dump(this.data, out)
         }
@@ -161,7 +164,7 @@ abstract class GenerateAntoraPlaybook : DefaultTask() {
 
     private fun createContentSource(): MutableMap<String?, Any?> {
         val source: MutableMap<String?, Any?> = LinkedHashMap<String?, Any?>()
-        val playbookPath = this.outputFile.get().getAsFile().toPath().getParent()
+        val playbookPath = this.outputFile.get().asFile.toPath().getParent()
         val url = StringBuilder(".")
         this.root.relativize(playbookPath).normalize()
             .forEach(Consumer { path: Path? -> url.append(File.separator).append("..") })
@@ -176,8 +179,8 @@ abstract class GenerateAntoraPlaybook : DefaultTask() {
         data.put("output", Map.of<String?, String?>("dir", this.playbookOutputDir.get()))
     }
 
-    private fun <T> getList(data: MutableMap<String?, Any?>, location: String): MutableList<T?> {
-        return get(data, location) as MutableList<T?>
+    private fun <T> getList(data: MutableMap<String?, Any?>, location: String): MutableList {
+        return get(data, location) as MutableList
     }
 
     private fun get(data: MutableMap<String?, Any?>, location: String): Any {
@@ -212,13 +215,13 @@ abstract class GenerateAntoraPlaybook : DefaultTask() {
         abstract class Xref {
             @get:Optional
             @get:Input
-            abstract val stubs: ListProperty<String?>?
+            abstract val stubs: ListProperty<String>
         }
 
         abstract class ZipContentsCollector @Inject constructor(project: Project, root: Path) {
             @get:Optional
             @get:Input
-            val locations: Provider<MutableList<String?>?>
+            val locations: Provider<MutableList<String?>>
 
             init {
                 this.locations = configureZipContentCollectorLocations(project, root)
@@ -227,24 +230,24 @@ abstract class GenerateAntoraPlaybook : DefaultTask() {
             private fun configureZipContentCollectorLocations(
                 project: Project,
                 root: Path
-            ): Provider<MutableList<String?>?> {
-                val locations = project.getObjects().listProperty<String?>(String::class.java)
-                val relativeProjectPath: Path = relativize(root, project.getProjectDir().toPath())
-                val locationName = project.getName() + "-\${version}-\${name}-\${classifier}.zip"
+            ): Provider<MutableList<String?>> {
+                val locations = project.getObjects().listProperty<String>(String::class.java)
+                val relativeProjectPath: Path = relativize(root, project.projectDir.toPath())
+                val locationName = project.name + "-\${version}-\${name}-\${classifier}.zip"
                 locations.add(
                     project
-                        .provider<String?>(Callable {
+                        .provider<String>(Callable {
                             relativeProjectPath.resolve(GENERATED_DOCS + "antora-content/" + locationName)
                                 .toString()
                         })
                 )
                 locations.addAll(this.dependencies.map<MutableList<String?>?>(Transformer { dependencies: MutableSet<String?>? ->
                     dependencies!!.stream()
-                        .map<Path?> { dependency: String? ->
+                        .map<Path> { dependency: String? ->
                             relativeProjectPath
                                 .resolve(GENERATED_DOCS + "antora-dependencies-content/" + dependency + "/" + locationName)
                         }
-                        .map<String?> { obj: Path? -> obj.toString() }
+                        .map<String> { obj: Path? -> obj.toString() }
                         .toList()
                 }))
                 return locations
@@ -252,11 +255,11 @@ abstract class GenerateAntoraPlaybook : DefaultTask() {
 
             @get:Optional
             @get:Input
-            abstract val alwaysInclude: ListProperty<AlwaysInclude?>?
+            abstract val alwaysInclude: ListProperty<AlwaysInclude>
 
             @get:Optional
             @get:Input
-            abstract val dependencies: SetProperty<String?>?
+            abstract val dependencies: SetProperty<String>
 
             companion object {
                 private fun relativize(root: Path, subPath: Path): Path {
@@ -269,19 +272,19 @@ abstract class GenerateAntoraPlaybook : DefaultTask() {
     abstract class AsciidocExtensions @Inject constructor() {
         @get:Optional
         @get:Input
-        abstract val excludeJavadocExtension: Property<Boolean?>?
+        abstract val excludeJavadocExtension: Property<Boolean>
     }
 
     abstract class ContentSource @Inject constructor(private val root: Path) {
         @get:Input
-        abstract val startPaths: ListProperty<String?>?
+        abstract val startPaths: ListProperty<String>
 
-        fun addStartPath(startPath: Provider<Directory?>) {
+        fun addStartPath(startPath: Provider<Directory>) {
             this.startPaths
-                .add(startPath.map<String?>(Transformer { dir: Directory? ->
+                .add(startPath.map<String>(Transformer { dir: Directory? ->
                     this.root.relativize(
                         toRealPath(
-                            dir!!.getAsFile().toPath()
+                            dir!!.asFile.toPath()
                         )
                     ).toString()
                 }))

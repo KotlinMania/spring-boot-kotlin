@@ -29,14 +29,14 @@ import javax.inject.Inject
  * 
  * @author Andy Wilkinson
  */
-class AntoraContributorPlugin : Plugin<Project?> {
+class AntoraContributorPlugin : Plugin<Project> {
     override fun apply(project: Project) {
-        project.getPlugins().apply<AntoraPlugin?>(AntoraPlugin::class.java)
+        project.plugins.apply<AntoraPlugin>(AntoraPlugin::class.java)
         val antoraContributions = project.getObjects()
-            .domainObjectContainer<Contribution?>(
+            .domainObjectContainer<Contribution>(
                 Contribution::class.java,
                 NamedDomainObjectFactory { name: String? ->
-                    project.getObjects().newInstance<Contribution?>(
+                    project.getObjects().newInstance<Contribution>(
                         org.springframework.boot.build.antora.AntoraContributorPlugin.Contribution::class.java,
                         name,
                         project
@@ -56,19 +56,19 @@ class AntoraContributorPlugin : Plugin<Project?> {
             SourceContribution(this.project, this.name).produce()
         }
 
-        fun catalogContent(action: Action<CopySpec?>) {
+        fun catalogContent(action: Action<CopySpec>) {
             val copySpec = this.project.copySpec()
             action.execute(copySpec)
             CatalogContentContribution(this.project, this.name).produceFrom(copySpec, this.publish)
         }
 
-        fun aggregateContent(action: Action<CopySpec?>) {
+        fun aggregateContent(action: Action<CopySpec>) {
             val copySpec = this.project.copySpec()
             action.execute(copySpec)
             AggregateContentContribution(this.project, this.name).produceFrom(copySpec, this.publish)
         }
 
-        fun localAggregateContent(action: Action<CopySpec?>) {
+        fun localAggregateContent(action: Action<CopySpec>) {
             val copySpec = this.project.copySpec()
             action.execute(copySpec)
             LocalAggregateContentContribution(this.project, this.name).produceFrom(copySpec)

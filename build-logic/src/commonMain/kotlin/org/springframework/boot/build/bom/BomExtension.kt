@@ -41,36 +41,36 @@ import javax.inject.Inject
  * @author Andy Wilkinson
  * @author Phillip Webb
  */
-class BomExtension(private val project: Project) {
+class BomExtension(val project: Project) {
     val id: String
 
-    private val upgradeHandler: UpgradeHandler
+    val upgradeHandler: UpgradeHandler
 
     val properties: MutableMap<String?, DependencyVersion?> = LinkedHashMap<String?, DependencyVersion?>()
 
-    private val artifactVersionProperties: MutableMap<String?, String?> = HashMap<String?, String?>()
+    val artifactVersionProperties: MutableMap<String?, String?> = HashMap<String?, String?>()
 
     val libraries: MutableList<Library> = ArrayList<Library>()
 
     init {
         this.upgradeHandler = project.getObjects().newInstance<UpgradeHandler>(UpgradeHandler::class.java, project)
-        this.id = "%s:%s:%s".formatted(project.getGroup(), project.getName(), project.getVersion())
+        this.id = "%s:%s:%s".format(project.getGroup(), project.name, project.version)
     }
 
     fun getLibrary(name: String?): Library {
         return this.libraries.stream()
-            .filter { library: Library? -> library!!.getName() == name }
+            .filter { library: Library? -> library!!.name == name }
             .findFirst()
             .orElseThrow<IllegalStateException?>(Supplier {
                 IllegalStateException(
-                    "No library found named '%s'".formatted(
+                    "No library found named '%s'".format(
                         name
                     )
                 )
             })
     }
 
-    fun upgrade(action: Action<UpgradeHandler?>) {
+    fun upgrade(action: Action<UpgradeHandler>) {
         action.execute(this.upgradeHandler)
     }
 
@@ -87,11 +87,11 @@ class BomExtension(private val project: Project) {
             )
         }
 
-    fun library(name: String?, action: Action<LibraryHandler?>) {
+    fun library(name: String?, action: Action<LibraryHandler>) {
         library(name, null, action)
     }
 
-    fun library(name: String?, version: String?, action: Action<LibraryHandler?>) {
+    fun library(name: String?, version: String?, action: Action<LibraryHandler>) {
         val objects = this.project.getObjects()
         val libraryHandler = objects.newInstance<LibraryHandler>(
             LibraryHandler::class.java, this.project,
@@ -109,7 +109,7 @@ class BomExtension(private val project: Project) {
         )
     }
 
-    private fun versionAlignment(libraryHandler: LibraryHandler): VersionAlignment? {
+    fun versionAlignment(libraryHandler: LibraryHandler): VersionAlignment? {
         val version = libraryHandler.alignWith.version
         if (version != null) {
             return DependencyVersionAlignment(
@@ -127,7 +127,7 @@ class BomExtension(private val project: Project) {
         return null
     }
 
-    private fun createDependencyNotation(groupId: String?, artifactId: String?, version: DependencyVersion?): String {
+    fun createDependencyNotation(groupId: String?, artifactId: String?, version: DependencyVersion?): String {
         return groupId + ":" + artifactId + ":" + version
     }
 
@@ -136,11 +136,11 @@ class BomExtension(private val project: Project) {
         return this.artifactVersionProperties.get(coordinates)
     }
 
-    private fun putArtifactVersionProperty(groupId: String?, artifactId: String?, versionProperty: String?) {
+    fun putArtifactVersionProperty(groupId: String?, artifactId: String?, versionProperty: String?) {
         putArtifactVersionProperty(groupId, artifactId, null, versionProperty)
     }
 
-    private fun putArtifactVersionProperty(
+    fun putArtifactVersionProperty(
         groupId: String?, artifactId: String?, classifier: String?,
         versionProperty: String?
     ) {
@@ -154,41 +154,41 @@ class BomExtension(private val project: Project) {
         }
     }
 
-    private fun addLibrary(library: Library) {
+    fun addLibrary(library: Library) {
         val dependencies = this.project.getDependencies()
         this.libraries.add(library)
-        val versionProperty = library.getVersionProperty()
+        val versionProperty = library.versionProperty
         if (versionProperty != null) {
-            this.properties.put(versionProperty, library.getVersion().getVersion())
+            this.properties.put(versionProperty, library.version.version)
         }
-        for (group in library.getGroups()) {
-            for (module in group.getModules()) {
+        for (group in library.groups!!) {
+            for (module in group.modules!!) {
                 addModule(library, dependencies, versionProperty, group, module)
             }
-            for (bomImport in group.getBoms()) {
+            for (bomImport in group.boms!!) {
                 addBomImport(library, dependencies, versionProperty, group, bomImport.name)
             }
         }
     }
 
-    private fun addModule(
+    fun addModule(
         library: Library, dependencies: DependencyHandler, versionProperty: String?, group: Library.Group,
         module: Library.Module
     ) {
-        putArtifactVersionProperty(group.getId(), module.getName(), module.getClassifier(), versionProperty)
+        putArtifactVersionProperty(group.id, module.name, module.classifier, versionProperty)
         val constraint = createDependencyNotation(
-            group.getId(), module.getName(),
-            library.getVersion().getVersion()
+            group.id, module.name,
+            library.version.version
         )
         dependencies.getConstraints().add(JavaPlatformPlugin.API_CONFIGURATION_NAME, constraint)
     }
 
-    private fun addBomImport(
+    fun addBomImport(
         library: Library, dependencies: DependencyHandler, versionProperty: String?, group: Library.Group,
         bomImport: String?
     ) {
-        putArtifactVersionProperty(group.getId(), bomImport, versionProperty)
-        val bomDependency = createDependencyNotation(group.getId(), bomImport, library.getVersion().getVersion())
+        putArtifactVersionProperty(group.id, bomImport, versionProperty)
+        val bomDependency = createDependencyNotation(group.id, bomImport, library.version.version)
         dependencies.add(JavaPlatformPlugin.API_CONFIGURATION_NAME, dependencies.platform(bomDependency))
         dependencies.add(
             BomPlugin.Companion.API_ENFORCED_CONFIGURATION_NAME,
@@ -196,22 +196,22 @@ class BomExtension(private val project: Project) {
         )
     }
 
-    class LibraryHandler @Inject constructor(private val project: Project, private var version: String?) {
-        private val groups: MutableList<Library.Group?> = ArrayList<Library.Group?>()
+    class LibraryHandler @Inject constructor(val project: Project, var version: String?) {
+        val groups: MutableList<Library.Group?> = ArrayList<Library.Group?>()
 
-        private var upgradePolicy: UpgradePolicy? = null
+        var upgradePolicy: UpgradePolicy? = null
 
-        private val prohibitedVersions: MutableList<ProhibitedVersion?> = ArrayList<ProhibitedVersion?>()
+        val prohibitedVersions: MutableList<ProhibitedVersion?> = ArrayList<ProhibitedVersion?>()
 
-        private val alignWith: AlignWithHandler
+        val alignWith: AlignWithHandler
 
-        private var considerSnapshots = false
+        var considerSnapshots = false
 
-        private var calendarName: String? = null
+        var calendarName: String? = null
 
-        private var linkRootName: String? = null
+        var linkRootName: String? = null
 
-        private val links: MutableMap<String?, MutableList<Library.Link?>?> =
+        val links: MutableMap<String?, MutableList<Library.Link?>?> =
             HashMap<String?, MutableList<Library.Link?>?>()
 
         init {
@@ -230,7 +230,7 @@ class BomExtension(private val project: Project) {
             this.calendarName = calendarName
         }
 
-        fun group(id: String, action: Action<GroupHandler?>) {
+        fun group(id: String, action: Action<GroupHandler>) {
             val groupHandler = this.project.getObjects().newInstance<GroupHandler>(GroupHandler::class.java, id)
             action.execute(groupHandler)
             this.groups
@@ -241,7 +241,7 @@ class BomExtension(private val project: Project) {
             this.upgradePolicy = upgradePolicy
         }
 
-        fun prohibit(action: Action<ProhibitedHandler?>) {
+        fun prohibit(action: Action<ProhibitedHandler>) {
             val handler = ProhibitedHandler()
             action.execute(handler)
             this.prohibitedVersions.add(
@@ -252,15 +252,15 @@ class BomExtension(private val project: Project) {
             )
         }
 
-        fun alignWith(action: Action<AlignWithHandler?>) {
+        fun alignWith(action: Action<AlignWithHandler>) {
             action.execute(this.alignWith)
         }
 
-        fun links(action: Action<LinksHandler?>) {
+        fun links(action: Action<LinksHandler>) {
             links(null, action)
         }
 
-        fun links(linkRootName: String?, action: Action<LinksHandler?>) {
+        fun links(linkRootName: String?, action: Action<LinksHandler>) {
             val handler = LinksHandler()
             action.execute(handler)
             this.linkRootName = linkRootName
@@ -268,15 +268,15 @@ class BomExtension(private val project: Project) {
         }
 
         class ProhibitedHandler {
-            private var reason: String? = null
+            var reason: String? = null
 
-            private val startsWith: MutableList<String?> = ArrayList<String?>()
+            val startsWith: MutableList<String?> = ArrayList<String?>()
 
-            private val endsWith: MutableList<String?> = ArrayList<String?>()
+            val endsWith: MutableList<String?> = ArrayList<String?>()
 
-            private val contains: MutableList<String?> = ArrayList<String?>()
+            val contains: MutableList<String?> = ArrayList<String?>()
 
-            private var versionRange: VersionRange? = null
+            var versionRange: VersionRange? = null
 
             fun versionRange(versionRange: String?) {
                 try {
@@ -315,16 +315,16 @@ class BomExtension(private val project: Project) {
             }
         }
 
-        class GroupHandler @Inject constructor(private val id: String?) : GroovyObjectSupport() {
-            private var modules: MutableList<Library.Module?> = ArrayList<Library.Module?>()
+        class GroupHandler @Inject constructor(val id: String?) : GroovyObjectSupport() {
+            var modules: MutableList<Library.Module?> = ArrayList<Library.Module?>()
 
-            private val imports: MutableList<ImportedBom?> = ArrayList<ImportedBom?>()
+            val imports: MutableList<ImportedBom?> = ArrayList<ImportedBom?>()
 
-            private var plugins: MutableList<String?>? = ArrayList<String?>()
+            var plugins: MutableList<String?>? = ArrayList<String?>()
 
             fun setModules(modules: MutableList<Any?>) {
                 this.modules = modules.stream()
-                    .map<Library.Module?> { input: Any? -> if (input is Library.Module) input else Library.Module(input as String?) }
+                    .map<Library.Module> { input: Any? -> if (input is Library.Module) input else Library.Module(input as String?) }
                     .toList()
             }
 
@@ -332,7 +332,7 @@ class BomExtension(private val project: Project) {
                 this.imports.add(ImportedBom(bom))
             }
 
-            fun bom(bom: String?, action: Action<ImportBomHandler?>) {
+            fun bom(bom: String?, action: Action<ImportBomHandler>) {
                 val handler = ImportBomHandler()
                 action.execute(handler)
                 this.imports.add(ImportedBom(bom, handler.permittedDependencies))
@@ -361,11 +361,11 @@ class BomExtension(private val project: Project) {
             }
 
             inner class ModuleHandler {
-                private val exclusions: MutableList<Library.Exclusion?> = ArrayList<Library.Exclusion?>()
+                val exclusions: MutableList<Library.Exclusion?> = ArrayList<Library.Exclusion?>()
 
-                private var type: String? = null
+                var type: String? = null
 
-                private var classifier: String? = null
+                var classifier: String? = null
 
                 fun exclude(exclusion: MutableMap<String?, String?>) {
                     this.exclusions.add(Library.Exclusion(exclusion.get("group"), exclusion.get("module")))
@@ -381,7 +381,7 @@ class BomExtension(private val project: Project) {
             }
 
             inner class ImportBomHandler {
-                private val permittedDependencies: MutableList<PermittedDependency?> = ArrayList<PermittedDependency?>()
+                val permittedDependencies: MutableList<PermittedDependency?> = ArrayList<PermittedDependency?>()
 
                 fun permit(allowed: String) {
                     val components: Array<String?> =
@@ -392,18 +392,18 @@ class BomExtension(private val project: Project) {
         }
 
         class AlignWithHandler {
-            private var version: VersionHandler? = null
+            var version: VersionHandler? = null
 
-            private var property: PropertyHandler? = null
+            var property: PropertyHandler? = null
 
-            private var bomAlignment: BomAlignment? = null
+            var bomAlignment: BomAlignment? = null
 
-            fun version(action: Action<VersionHandler?>) {
+            fun version(action: Action<VersionHandler>) {
                 this.version = VersionHandler()
                 action.execute(this.version)
             }
 
-            fun property(action: Action<PropertyHandler?>) {
+            fun property(action: Action<PropertyHandler>) {
                 this.property = PropertyHandler()
                 action.execute(this.property)
             }
@@ -414,7 +414,7 @@ class BomExtension(private val project: Project) {
 
             fun dependencyManagementDeclaredIn(
                 bomCoordinates: String?,
-                action: Action<DependencyManagementDeclaredInHandler?>
+                action: Action<DependencyManagementDeclaredInHandler>
             ) {
                 val handler = DependencyManagementDeclaredInHandler()
                 action.execute(handler)
@@ -422,11 +422,11 @@ class BomExtension(private val project: Project) {
             }
 
             class VersionHandler {
-                private var of: String? = null
+                var of: String? = null
 
-                private var from: String? = null
+                var from: String? = null
 
-                private var managedBy: String? = null
+                var managedBy: String? = null
 
                 fun of(of: String?) {
                     this.of = of
@@ -442,11 +442,11 @@ class BomExtension(private val project: Project) {
             }
 
             class PropertyHandler {
-                private var name: String? = null
+                var name: String? = null
 
-                private var of: String? = null
+                var of: String? = null
 
-                private var managedBy: String? = null
+                var managedBy: String? = null
 
                 fun name(name: String?) {
                     this.name = name
@@ -462,7 +462,7 @@ class BomExtension(private val project: Project) {
             }
 
             class DependencyManagementDeclaredInHandler {
-                private var exclusions = Predicate { id: ResolvedBom.Id? -> false }
+                var exclusions = Predicate { id: ResolvedBom.Id? -> false }
 
                 fun excluding(exclusion: Predicate<ResolvedBom.Id?>) {
                     this.exclusions = this.exclusions.or(exclusion)
@@ -472,7 +472,7 @@ class BomExtension(private val project: Project) {
     }
 
     class LinksHandler {
-        private val links: MutableMap<String?, MutableList<Library.Link?>?> =
+        val links: MutableMap<String?, MutableList<Library.Link?>?> =
             HashMap<String?, MutableList<Library.Link?>?>()
 
         fun site(linkTemplate: String) {
@@ -536,7 +536,7 @@ class BomExtension(private val project: Project) {
             add(null, name, linkFactory, packages)
         }
 
-        private fun add(
+        fun add(
             rootName: String?, name: String?, linkFactory: Function<LibraryVersion?, String?>?,
             packages: Array<String?>?
         ) {
@@ -545,7 +545,7 @@ class BomExtension(private val project: Project) {
                 .add(link)
         }
 
-        private fun asFactory(linkTemplate: String): Function<LibraryVersion?, String?> {
+        fun asFactory(linkTemplate: String): Function<LibraryVersion?, String?> {
             return Function { version: LibraryVersion? ->
                 val resolver =
                     PropertyPlaceholderHelper.PlaceholderResolver { name: String? -> if ("version" == name) version.toString() else null }
@@ -555,9 +555,9 @@ class BomExtension(private val project: Project) {
     }
 
     class UpgradeHandler @Inject constructor(project: Project) {
-        private var upgradePolicy: UpgradePolicy? = null
+        var upgradePolicy: UpgradePolicy? = null
 
-        private val gitHub: GitHubHandler
+        val gitHub: GitHubHandler
 
         init {
             this.gitHub = GitHubHandler(project)
@@ -567,19 +567,19 @@ class BomExtension(private val project: Project) {
             this.upgradePolicy = upgradePolicy
         }
 
-        fun gitHub(action: Action<GitHubHandler?>) {
+        fun gitHub(action: Action<GitHubHandler>) {
             action.execute(this.gitHub)
         }
     }
 
-    class Upgrade private constructor(val policy: UpgradePolicy?, val gitHub: GitHub?)
+    class Upgrade constructor(val policy: UpgradePolicy?, val gitHub: GitHub?)
 
     class GitHubHandler(project: Project) {
-        private var organization: String?
+        var organization: String?
 
-        private var repository: String?
+        var repository: String?
 
-        private var issueLabels: MutableList<String?>? = null
+        var issueLabels: MutableList<String?>? = null
 
         init {
             val buildProperties = BuildProperties.get(project)
@@ -600,7 +600,7 @@ class BomExtension(private val project: Project) {
         }
     }
 
-    class GitHub private constructor(
+    class GitHub constructor(
         val organization: String?,
         val repository: String?,
         val issueLabels: MutableList<String?>?

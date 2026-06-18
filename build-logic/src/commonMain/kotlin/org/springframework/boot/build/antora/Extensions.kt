@@ -30,7 +30,7 @@ import java.util.stream.Stream
 object Extensions {
     private const val ROOT_COMPONENT_EXTENSION = "@springio/antora-extensions/root-component-extension"
 
-    private val antora: MutableList<Extension?>? = null
+    val antora: MutableList<Extension?>? = null
 
     init {
         val extensions: MutableList<Extension?> = ArrayList<Extension?>()
@@ -46,7 +46,7 @@ object Extensions {
         antora = List.copyOf<Extension?>(extensions)
     }
 
-    private val asciidoc: MutableList<Extension?>? = null
+    val asciidoc: MutableList<Extension?>? = null
 
     init {
         val extensions: MutableList<Extension?> = ArrayList<Extension?>()
@@ -62,21 +62,21 @@ object Extensions {
         asciidoc = List.copyOf<Extension?>(extensions)
     }
 
-    private val localOverrides = mutableMapOf<String?, String?>()
+    val localOverrides = mutableMapOf<String?, String?>()
 
     fun antora(extensions: Consumer<AntoraExtensionsConfiguration?>): MutableList<MutableMap<String?, Any?>?> {
         val result = AntoraExtensionsConfiguration(
-            antora!!.stream().flatMap<String?> { obj: Extension? -> obj!!.names() }.sorted().toList()
+            antora!!.stream().flatMap<String> { obj: Extension? -> obj!!.names() }.sorted().toList()
         )
         extensions.accept(result)
         return result.config()
     }
 
     fun asciidoc(): MutableList<String?> {
-        return asciidoc!!.stream().flatMap<String?> { obj: Extension? -> obj!!.names() }.sorted().toList()
+        return asciidoc!!.stream().flatMap<String> { obj: Extension? -> obj!!.names() }.sorted().toList()
     }
 
-    private class Extension(val name: String?, vararg val includeNames: Array<String?>?) {
+    class Extension(val name: String?, vararg val includeNames: Array<String?>?) {
         fun names(): Stream<String?> {
             return if (this.includeNames.size != 0) Arrays.stream<String?>(this.includeNames) else Stream.of<String?>(
                 this.name
@@ -84,8 +84,8 @@ object Extensions {
         }
     }
 
-    internal class AntoraExtensionsConfiguration private constructor(names: MutableList<String?>) {
-        private val extensions: MutableMap<String?, MutableMap<String?, Any?>?> =
+    class AntoraExtensionsConfiguration constructor(names: MutableList<String?>) {
+        val extensions: MutableMap<String?, MutableMap<String?, Any?>?> =
             TreeMap<String?, MutableMap<String?, Any?>?>()
 
         init {
@@ -122,14 +122,14 @@ object Extensions {
             return List.copyOf<MutableMap<String?, Any?>?>(config)
         }
 
-        internal abstract inner class Customizer(private val name: String?) {
+        abstract inner class Customizer(val name: String?) {
             protected fun customize(key: String?, value: Any?) {
                 this@AntoraExtensionsConfiguration.extensions.computeIfAbsent(this.name) { name: kotlin.String? -> java.util.TreeMap<kotlin.String?, kotlin.Any?>() }!!
                     .put(key, value)
             }
         }
 
-        internal inner class Xref : Customizer("@springio/antora-xref-extension") {
+        inner class Xref : Customizer("@springio/antora-xref-extension") {
             fun stub(stub: MutableList<String?>?) {
                 if (stub != null && !stub.isEmpty()) {
                     customize("stub", stub)
@@ -137,7 +137,7 @@ object Extensions {
             }
         }
 
-        internal inner class ZipContentsCollector : Customizer("@springio/antora-zip-contents-collector-extension") {
+        inner class ZipContentsCollector : Customizer("@springio/antora-zip-contents-collector-extension") {
             fun versionFile(versionFile: String?) {
                 customize("version_file", versionFile)
             }
@@ -156,8 +156,8 @@ object Extensions {
             }
 
             @JvmRecord
-            internal data class AlwaysInclude(val name: String?, val classifier: String?) : Serializable {
-                private fun asMap(): MutableMap<String?, String?> {
+            data class AlwaysInclude(val name: String?, val classifier: String?) : Serializable {
+                fun asMap(): MutableMap<String?, String?> {
                     return TreeMap<String?, String?>(
                         Map.of<String?, String?>(
                             "name",
@@ -170,7 +170,7 @@ object Extensions {
             }
         }
 
-        internal inner class RootComponent : Customizer(ROOT_COMPONENT_EXTENSION) {
+        inner class RootComponent : Customizer(ROOT_COMPONENT_EXTENSION) {
             fun name(name: String?) {
                 customize("root_component_name", name)
             }

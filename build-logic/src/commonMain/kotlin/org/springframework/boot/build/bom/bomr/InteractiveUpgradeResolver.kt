@@ -29,7 +29,7 @@ import java.util.function.Function
  * 
  * @author Andy Wilkinson
  */
-class InteractiveUpgradeResolver internal constructor(
+class InteractiveUpgradeResolver constructor(
     private val userInputHandler: UserInputHandler,
     private val libraryUpdateResolver: LibraryUpdateResolver
 ) : UpgradeResolver {
@@ -44,7 +44,7 @@ class InteractiveUpgradeResolver internal constructor(
         try {
             return this.libraryUpdateResolver.findLibraryUpdates(librariesToUpgrade, librariesByName)
                 .stream()
-                .map<Upgrade?> { libraryWithVersionOptions: LibraryWithVersionOptions? ->
+                .map<Upgrade> { libraryWithVersionOptions: LibraryWithVersionOptions? ->
                     this.resolveUpgrade(
                         libraryWithVersionOptions!!
                     )
@@ -57,8 +57,8 @@ class InteractiveUpgradeResolver internal constructor(
     }
 
     private fun resolveUpgrade(libraryWithVersionOptions: LibraryWithVersionOptions): Upgrade? {
-        val library = libraryWithVersionOptions.getLibrary()
-        val versionOptions = libraryWithVersionOptions.getVersionOptions()
+        val library = libraryWithVersionOptions.library
+        val versionOptions = libraryWithVersionOptions.versionOptions
         if (versionOptions.isEmpty()) {
             return null
         }
@@ -96,5 +96,5 @@ class InteractiveUpgradeResolver internal constructor(
         return selected
     }
 
-    internal class UpgradesInterruptedException : RuntimeException()
+    class UpgradesInterruptedException : RuntimeException()
 }

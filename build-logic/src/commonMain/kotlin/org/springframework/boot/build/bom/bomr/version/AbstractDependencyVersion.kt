@@ -22,7 +22,7 @@ import org.apache.maven.artifact.versioning.ComparableVersion
  * 
  * @author Andy Wilkinson
  */
-internal abstract class AbstractDependencyVersion protected constructor(private val comparableVersion: ComparableVersion) :
+abstract class AbstractDependencyVersion protected constructor(private val comparableVersion: ComparableVersion) :
     DependencyVersion {
     override fun compareTo(other: DependencyVersion): Int {
         val otherComparable =

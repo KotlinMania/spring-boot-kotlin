@@ -27,7 +27,7 @@ import java.util.function.Function
  * 
  * @author Andy Wilkinson
  */
-internal open class ArtifactVersionDependencyVersion : AbstractDependencyVersion {
+open class ArtifactVersionDependencyVersion : AbstractDependencyVersion {
     private val artifactVersion: ArtifactVersion
 
     protected constructor(artifactVersion: ArtifactVersion) : super(ComparableVersion(toNormalizedString(artifactVersion))) {
@@ -44,7 +44,7 @@ internal open class ArtifactVersionDependencyVersion : AbstractDependencyVersion
         if (other is ReleaseTrainDependencyVersion) {
             return false
         }
-        return extractArtifactVersionDependencyVersion(other).map<Boolean?>(Function { other: ArtifactVersionDependencyVersion? ->
+        return extractArtifactVersionDependencyVersion(other).map<Boolean>(Function { other: ArtifactVersionDependencyVersion? ->
             this.isSameMajor(
                 other
             )
@@ -59,7 +59,7 @@ internal open class ArtifactVersionDependencyVersion : AbstractDependencyVersion
         if (other is ReleaseTrainDependencyVersion) {
             return false
         }
-        return extractArtifactVersionDependencyVersion(other).map<Boolean?>(Function { other: ArtifactVersionDependencyVersion? ->
+        return extractArtifactVersionDependencyVersion(other).map<Boolean>(Function { other: ArtifactVersionDependencyVersion? ->
             this.isSameMinor(
                 other
             )
@@ -155,7 +155,7 @@ internal open class ArtifactVersionDependencyVersion : AbstractDependencyVersion
             if (artifactVersion.getQualifier() != null && artifactVersion.getQualifier() == version) {
                 return null
             }
-            return ArtifactVersionDependencyVersion(artifactVersion)
+            return ArtifactVersionDependencyVersion(artifactVersion!!)
         }
     }
 }

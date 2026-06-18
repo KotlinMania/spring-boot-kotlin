@@ -27,7 +27,7 @@ import java.util.regex.Pattern
  * 
  * @author Andy Wilkinson
  */
-internal class CalendarVersionDependencyVersion : ArtifactVersionDependencyVersion {
+class CalendarVersionDependencyVersion : ArtifactVersionDependencyVersion {
     protected constructor(artifactVersion: ArtifactVersion?) : super(artifactVersion)
 
     protected constructor(artifactVersion: ArtifactVersion?, comparableVersion: ComparableVersion?) : super(

@@ -27,6 +27,6 @@ import org.springframework.boot.build.bom.Library
  * @param toRelease the release version of the library we're ultimately upgrading to
  */
 @JvmRecord
-internal data class Upgrade(val from: Library?, val to: Library?, val toRelease: Library?) {
+data class Upgrade(val from: Library?, val to: Library?, val toRelease: Library?) {
     constructor(from: Library?, to: Library?) : this(from, to, to)
 }

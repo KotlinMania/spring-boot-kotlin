@@ -64,6 +64,7 @@ import kotlin.text.map
 import kotlin.text.plus
 import kotlin.text.startsWith
 import kotlin.toString
+import org.gradle.api.file.RegularFileProperty
 
 /**
  * Checks the validity of a bom.
@@ -77,10 +78,10 @@ abstract class CheckBom @Inject constructor(bom: BomExtension) : DefaultTask() {
     private val checks: MutableList<LibraryCheck?>
 
     init {
-        val configurations = getProject().getConfigurations()
-        val dependencies = getProject().getDependencies()
+        val configurations = project.getConfigurations()
+        val dependencies = project.getDependencies()
         val resolvedBom: Provider<ResolvedBom> =
-            this.resolvedBomFile.map<File?>(Transformer { obj: RegularFile? -> obj!!.getAsFile() }).map<ResolvedBom?>(
+            this.resolvedBomFile.map<File>(Transformer { obj: RegularFile? -> obj!!.asFile }).map<ResolvedBom>(
                 Transformer { file: File? -> ResolvedBom.Companion.readFrom(file) })
         this.checks = List.of<LibraryCheck?>(
             CheckExclusions(configurations, dependencies), CheckProhibitedVersions(),
@@ -93,12 +94,12 @@ abstract class CheckBom @Inject constructor(bom: BomExtension) : DefaultTask() {
 
     @get:PathSensitive(PathSensitivity.RELATIVE)
     @get:InputFile
-    abstract val resolvedBomFile: RegularFileProperty?
+    abstract val resolvedBomFile: RegularFileProperty
 
     @TaskAction
     fun checkBom() {
         val errors: MutableList<String?> = ArrayList<String?>()
-        for (library in this.bom.getLibraries()) {
+        for (library in this.bom.libraries) {
             errors.addAll(checkLibrary(library))
         }
         if (!errors.isEmpty()) {
@@ -111,11 +112,11 @@ abstract class CheckBom @Inject constructor(bom: BomExtension) : DefaultTask() {
 
     private fun checkLibrary(library: Library): MutableList<String?> {
         val libraryErrors: MutableList<String?> = ArrayList<String?>()
-        this.checks.stream().flatMap<String?> { check: LibraryCheck? -> check!!.check(library)!!.stream() }
+        this.checks.stream().flatMap<String> { check: LibraryCheck? -> check!!.check(library)!!.stream() }
             .forEach { e: String? -> libraryErrors.add(e) }
         val errors: MutableList<String?> = ArrayList<String?>()
         if (!libraryErrors.isEmpty()) {
-            errors.add(library.getName())
+            errors.add(library.name)
             for (libraryError in libraryErrors) {
                 errors.add("    - " + libraryError)
             }
@@ -133,10 +134,10 @@ abstract class CheckBom @Inject constructor(bom: BomExtension) : DefaultTask() {
     ) : LibraryCheck {
         override fun check(library: Library): MutableList<String?> {
             val errors: MutableList<String?> = ArrayList<String?>()
-            for (group in library.getGroups()) {
-                for (module in group.getModules()) {
-                    if (!module.getExclusions().isEmpty()) {
-                        checkExclusions(group.getId(), module, library.getVersion().getVersion(), errors)
+            for (group in library.groups!!) {
+                for (module in group.modules!!) {
+                    if (!module.exclusions.isEmpty()) {
+                        checkExclusions(group.id, module, library.version.version, errors)
                     }
                 }
             }
@@ -150,16 +151,16 @@ abstract class CheckBom @Inject constructor(bom: BomExtension) : DefaultTask() {
             errors: MutableList<String?>
         ) {
             val resolved = this.configurations
-                .detachedConfiguration(this.dependencies.create(groupId + ":" + module.getName() + ":" + version))
+                .detachedConfiguration(this.dependencies.create(groupId + ":" + module.name + ":" + version))
                 .getResolvedConfiguration()
                 .getResolvedArtifacts()
                 .stream()
-                .map<ModuleVersionIdentifier?> { artifact: ResolvedArtifact? -> artifact!!.getModuleVersion().getId() }
-                .map<String?> { id: ModuleVersionIdentifier? -> id!!.getGroup() + ":" + id.getModule().getName() }
+                .map<ModuleVersionIdentifier> { artifact: ResolvedArtifact? -> artifact!!.getModuleVersion().id }
+                .map<String> { id: ModuleVersionIdentifier? -> id!!.getGroup() + ":" + id.getModule().name }
                 .collect(Collectors.toSet())
-            val exclusions = module.getExclusions()
+            val exclusions = module.exclusions
                 .stream()
-                .map<String?> { exclusion: Library.Exclusion? -> exclusion!!.getGroupId() + ":" + exclusion.getArtifactId() }
+                .map<String> { exclusion: Library.Exclusion? -> exclusion!!.groupId + ":" + exclusion.artifactId }
                 .collect(Collectors.toSet())
             val unused: MutableSet<String?> = TreeSet<String?>()
             for (exclusion in exclusions) {
@@ -176,7 +177,7 @@ abstract class CheckBom @Inject constructor(bom: BomExtension) : DefaultTask() {
             }
             exclusions.removeAll(resolved)
             if (!unused.isEmpty()) {
-                errors.add("Unnecessary exclusions on " + groupId + ":" + module.getName() + ": " + exclusions)
+                errors.add("Unnecessary exclusions on " + groupId + ":" + module.name + ": " + exclusions)
             }
         }
     }
@@ -184,12 +185,12 @@ abstract class CheckBom @Inject constructor(bom: BomExtension) : DefaultTask() {
     private class CheckProhibitedVersions : LibraryCheck {
         override fun check(library: Library): MutableList<String?> {
             val errors: MutableList<String?> = ArrayList<String?>()
-            val currentVersion: ArtifactVersion = DefaultArtifactVersion(library.getVersion().getVersion().toString())
-            for (prohibited in library.getProhibitedVersions()) {
-                if (prohibited.isProhibited(library.getVersion().getVersion().toString())) {
+            val currentVersion: ArtifactVersion = DefaultArtifactVersion(library.version.version.toString())
+            for (prohibited in library.prohibitedVersions!!) {
+                if (prohibited.isProhibited(library.version.version.toString())) {
                     errors.add("Current version " + currentVersion + " is prohibited")
                 } else {
-                    val versionRange = prohibited.getRange()
+                    val versionRange = prohibited.range
                     if (versionRange != null) {
                         check(currentVersion, versionRange, errors)
                     }
@@ -221,7 +222,7 @@ abstract class CheckBom @Inject constructor(bom: BomExtension) : DefaultTask() {
     private class CheckVersionAlignment : LibraryCheck {
         override fun check(library: Library): MutableList<String?> {
             val errors: MutableList<String?> = ArrayList<String?>()
-            val versionAlignment = library.getVersionAlignment()
+            val versionAlignment = library.versionAlignment
             if (versionAlignment != null) {
                 check(versionAlignment, library, errors)
             }
@@ -232,9 +233,9 @@ abstract class CheckBom @Inject constructor(bom: BomExtension) : DefaultTask() {
             val alignedVersions = versionAlignment.resolve()
             if (alignedVersions.size == 1) {
                 val alignedVersion = alignedVersions.iterator().next()
-                if (alignedVersion != library.getVersion().getVersion().toString()) {
+                if (alignedVersion != library.version.version.toString()) {
                     errors.add(
-                        ("Version " + library.getVersion().getVersion() + " is misaligned. It should be "
+                        ("Version " + library.version.version + " is misaligned. It should be "
                                 + alignedVersion + ".")
                     )
                 }
@@ -266,10 +267,10 @@ abstract class CheckBom @Inject constructor(bom: BomExtension) : DefaultTask() {
             val resolvedBom = this.resolvedBom.get()
             val resolvedLibrary = resolvedBom.libraries
                 .stream()
-                .filter { candidate: ResolvedBom.ResolvedLibrary? -> candidate!!.name == library.getName() }
+                .filter { candidate: ResolvedBom.ResolvedLibrary? -> candidate!!.name == library.name }
                 .findFirst()
             if (!resolvedLibrary.isPresent()) {
-                throw RuntimeException("Library '%s' not found in resolved bom".formatted(library.getName()))
+                throw RuntimeException("Library '%s' not found in resolved bom".format(library.name))
             }
             return resolvedLibrary.get()
         }
@@ -290,10 +291,10 @@ abstract class CheckBom @Inject constructor(bom: BomExtension) : DefaultTask() {
             resolvedLibrary: ResolvedBom.ResolvedLibrary
         ): MutableList<String?> {
             val errors: MutableList<String?> = ArrayList<String?>()
-            val alignsWithBom = library.getAlignsWithBom()
+            val alignsWithBom = library.alignsWithBom
             if (alignsWithBom != null) {
                 val mavenBom = this.bomResolver
-                    .resolveMavenBom(alignsWithBom.getCoordinates() + ":" + library.getVersion().getVersion())
+                    .resolveMavenBom(alignsWithBom.coordinates + ":" + library.version.version)
                 checkDependencyManagementAlignment(
                     resolvedLibrary,
                     mavenBom,
@@ -321,17 +322,17 @@ abstract class CheckBom @Inject constructor(bom: BomExtension) : DefaultTask() {
             }
             var error = "Dependency management does not align with " + mavenBom.id + ":"
             if (!missing.isEmpty()) {
-                error = error + "%n        - Missing:%n            %s".formatted(
+                error = error + "%n        - Missing:%n            %s".format(
                     String.join(
                         "\n            ",
-                        missing.stream().map<kotlin.String?> { dependency: ResolvedBom.Id? -> dependency.toString() }
+                        missing.stream().map<kotlin.String> { dependency: ResolvedBom.Id? -> dependency.toString() }
                             .toList()))
             }
             if (!unexpected.isEmpty()) {
-                error = error + "%n        - Unexpected:%n            %s".formatted(
+                error = error + "%n        - Unexpected:%n            %s".format(
                     String.join(
                         "\n            ",
-                        unexpected.stream().map<kotlin.String?> { dependency: ResolvedBom.Id? -> dependency.toString() }
+                        unexpected.stream().map<kotlin.String> { dependency: ResolvedBom.Id? -> dependency.toString() }
                             .toList()))
             }
             errors.add(error)
@@ -343,7 +344,7 @@ abstract class CheckBom @Inject constructor(bom: BomExtension) : DefaultTask() {
             if (mavenBom.parent != null) {
                 managedDependencies.addAll(managedDependenciesOf(mavenBom.parent))
             }
-            for (importedBom in mavenBom.importedBoms) {
+            for (importedBom in mavenBom.importedBoms!!) {
                 managedDependencies.addAll(managedDependenciesOf(importedBom))
             }
             return managedDependencies
@@ -361,8 +362,8 @@ abstract class CheckBom @Inject constructor(bom: BomExtension) : DefaultTask() {
             if (!unwanted.isEmpty()) {
                 val error = StringBuilder("Unwanted dependency management:")
                 unwanted.forEach { (bom: kotlin.String?, dependencies: MutableSet<kotlin.String?>?) ->
-                    error.append("%n        - %s:".formatted(bom))
-                    error.append("%n            - %s".formatted(String.join("\n            - ", dependencies)))
+                    error.append("%n        - %s:".format(bom))
+                    error.append("%n            - %s".format(String.join("\n            - ", dependencies)))
                 }
                 errors.add(error.toString())
             }
@@ -370,8 +371,8 @@ abstract class CheckBom @Inject constructor(bom: BomExtension) : DefaultTask() {
             if (!unnecessary.isEmpty()) {
                 val error = StringBuilder("Dependencies permitted unnecessarily:")
                 unnecessary.forEach { (bom: kotlin.String?, dependencies: MutableSet<kotlin.String?>?) ->
-                    error.append("%n        - %s:".formatted(bom))
-                    error.append("%n            - %s".formatted(String.join("\n            - ", dependencies)))
+                    error.append("%n        - %s:".format(bom))
+                    error.append("%n            - %s".format(String.join("\n            - ", dependencies)))
                 }
                 errors.add(error.toString())
             }
@@ -384,7 +385,7 @@ abstract class CheckBom @Inject constructor(bom: BomExtension) : DefaultTask() {
         ): MutableMap<kotlin.String?, MutableSet<kotlin.String?>?> {
             val unwanted: MutableMap<kotlin.String?, MutableSet<kotlin.String?>?> =
                 LinkedHashMap<kotlin.String?, MutableSet<kotlin.String?>?>()
-            for (bom in resolvedLibrary.importedBoms) {
+            for (bom in resolvedLibrary.importedBoms!!) {
                 val notPermitted: MutableSet<kotlin.String?> = TreeSet<kotlin.String?>()
                 val managedDependencies = managedDependenciesOf(bom)
                 managedDependencies.stream()
@@ -395,7 +396,7 @@ abstract class CheckBom @Inject constructor(bom: BomExtension) : DefaultTask() {
                             findPermittedDependencies(library, bom)!!
                         )
                     }
-                    .map<kotlin.String?> { obj: ResolvedBom.Id? -> obj.toString() }
+                    .map<kotlin.String> { obj: ResolvedBom.Id? -> obj.toString() }
                     .forEach { e: kotlin.String? -> notPermitted.add(e) }
                 if (!notPermitted.isEmpty()) {
                     unwanted.put(bom.id.artifactId, notPermitted)
@@ -405,9 +406,9 @@ abstract class CheckBom @Inject constructor(bom: BomExtension) : DefaultTask() {
         }
 
         fun findPermittedDependencies(library: Library, bom: Bom): MutableList<PermittedDependency>? {
-            for (group in library.getGroups()) {
-                for (importedBom in group.getBoms()) {
-                    if (importedBom.name == bom.id.artifactId && group.getId() == bom.id.groupId) {
+            for (group in library.groups!!) {
+                for (importedBom in group.boms!!) {
+                    if (importedBom.name == bom.id.artifactId && group.id == bom.id.groupId) {
                         return importedBom.permittedDependencies
                     }
                 }
@@ -420,7 +421,7 @@ abstract class CheckBom @Inject constructor(bom: BomExtension) : DefaultTask() {
             if (bom != null) {
                 managedDependencies.addAll(bom.managedDependencies)
                 managedDependencies.addAll(managedDependenciesOf(bom.parent))
-                for (importedBom in bom.importedBoms) {
+                for (importedBom in bom.importedBoms!!) {
                     managedDependencies.addAll(managedDependenciesOf(importedBom))
                 }
             }
@@ -453,13 +454,13 @@ abstract class CheckBom @Inject constructor(bom: BomExtension) : DefaultTask() {
         ): MutableMap<kotlin.String?, MutableSet<kotlin.String?>?> {
             val unnecessary: MutableMap<kotlin.String?, MutableSet<kotlin.String?>?> =
                 HashMap<kotlin.String?, MutableSet<kotlin.String?>?>()
-            for (bom in resolvedLibrary.importedBoms) {
+            for (bom in resolvedLibrary.importedBoms!!) {
                 val permittedDependencies: MutableSet<kotlin.String?> =
                     findPermittedDependencies(library, bom)!!.stream()
-                        .map<kotlin.String?> { dependency: PermittedDependency? -> dependency!!.groupId + ":" + dependency.artifactId }
+                        .map<kotlin.String> { dependency: PermittedDependency? -> dependency!!.groupId + ":" + dependency.artifactId }
                         .collect(Collectors.toCollection(Supplier { TreeSet() }))
                 val dependencies: MutableSet<kotlin.String?> = managedDependenciesOf(bom).stream()
-                    .map<kotlin.String?> { dependency: ResolvedBom.Id? -> dependency!!.groupId + ":" + dependency.artifactId }
+                    .map<kotlin.String> { dependency: ResolvedBom.Id? -> dependency!!.groupId + ":" + dependency.artifactId }
                     .collect(Collectors.toCollection(Supplier { TreeSet() }))
                 permittedDependencies.removeAll(dependencies)
                 if (!permittedDependencies.isEmpty()) {

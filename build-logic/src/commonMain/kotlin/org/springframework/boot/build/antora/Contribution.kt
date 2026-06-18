@@ -33,7 +33,7 @@ import java.util.Map
  * 
  * @author Andy Wilkinson
  */
-internal abstract class Contribution protected constructor(
+abstract class Contribution protected constructor(
     protected val project: Project,
     protected val name: String?
 ) {
@@ -42,7 +42,7 @@ internal abstract class Contribution protected constructor(
             .project(Map.of<String?, String?>("path", path, "configuration", configurationName))
     }
 
-    protected fun outputDirectory(dependencyType: String?, theName: String?): Provider<Directory?> {
+    protected fun outputDirectory(dependencyType: String?, theName: String?): Provider<Directory> {
         return this.project.getLayout()
             .getBuildDirectory()
             .dir("generated/docs/antora-dependencies-" + dependencyType + "/" + theName)
@@ -56,21 +56,21 @@ internal abstract class Contribution protected constructor(
         return name(toCamelCase(name), type, *args)
     }
 
-    protected fun configurePlaybookGeneration(action: Action<GenerateAntoraPlaybook?>) {
+    protected fun configurePlaybookGeneration(action: Action<GenerateAntoraPlaybook>) {
         this.project.getTasks()
-            .named<GenerateAntoraPlaybook?>(
+            .named<GenerateAntoraPlaybook>(
                 AntoraConventions.GENERATE_ANTORA_PLAYBOOK_TASK_NAME,
                 GenerateAntoraPlaybook::class.java,
                 action
             )
     }
 
-    protected fun configureAntora(action: Action<AntoraTask?>) {
-        this.project.getTasks().named<AntoraTask?>("antora", AntoraTask::class.java, action)
+    protected fun configureAntora(action: Action<AntoraTask>) {
+        this.project.getTasks().named<AntoraTask>("antora", AntoraTask::class.java, action)
     }
 
-    protected fun addInputFrom(task: TaskProvider<*>, propertyName: String): Action<AntoraTask?> {
-        return Action { antora: AntoraTask? ->
+    protected fun addInputFrom(task: TaskProvider<*>, propertyName: String): Action<AntoraTask> {
+        return Action { antora: AntoraTask ->
             antora!!.getInputs()
                 .files(task)
                 .withPathSensitivity(PathSensitivity.RELATIVE)
@@ -79,8 +79,8 @@ internal abstract class Contribution protected constructor(
     }
 
     private fun name(prefix: String?, format: String, vararg args: String?): String {
-        return prefix + format.formatted(
-            *Arrays.stream<String?>(args).map<String?> { input: String? -> this.toPascalCase(input!!) }.toArray()
+        return prefix + format.format(
+            *Arrays.stream<String?>(args).map<String> { input: String? -> this.toPascalCase(input!!) }.toArray()
         )
     }
 

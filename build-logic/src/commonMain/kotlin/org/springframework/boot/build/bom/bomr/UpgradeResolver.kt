@@ -22,7 +22,7 @@ import org.springframework.boot.build.bom.Library
  * 
  * @author Andy Wilkinson
  */
-internal interface UpgradeResolver {
+interface UpgradeResolver {
     /**
      * Resolves the upgrades to be applied to the given `libraries`.
      * @param librariesToUpgrade the libraries to upgrade

@@ -1,0 +1,1188 @@
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/9.5.1/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+
+> Configure project :
+setup-android-sdk: SDK already installed at /Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/.android-sdk
+w: [33m[1m⚠️ Native task 'iosX64Test' is disabled[0m[0m
+Task 'iosX64Test' for target 'ios_x64' cannot run on the current host (macos-aarch64).
+Reason: architecture mismatch - target requires X64, current host is ARM64
+[32m[1mSolution:[0m[0m
+[32m[3mTo suppress this warning, add 'kotlin.native.ignoreDisabledTargets=true' to gradle.properties.[0m[0m
+
+w: [33m[1m⚠️ Native task 'linuxX64Test' is disabled[0m[0m
+Task 'linuxX64Test' for target 'linux_x64' cannot run on the current host (macos_arm64).
+Reason: tests can only run on linux_x64
+[32m[1mSolution:[0m[0m
+[32m[3mTo suppress this warning, add 'kotlin.native.ignoreDisabledTargets=true' to gradle.properties.[0m[0m
+
+w: [33m[1m⚠️ Native task 'mingwX64Test' is disabled[0m[0m
+Task 'mingwX64Test' for target 'mingw_x64' cannot run on the current host (macos_arm64).
+Reason: tests can only run on mingw_x64
+[32m[1mSolution:[0m[0m
+[32m[3mTo suppress this warning, add 'kotlin.native.ignoreDisabledTargets=true' to gradle.properties.[0m[0m
+
+
+> Task :build-logic:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :build-logic:pluginDescriptors UP-TO-DATE
+> Task :build-logic:processResources UP-TO-DATE
+
+> Task :build-logic:compileKotlin
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/AntoraConventions.kt:19:45 Cannot import 'version'. Functions and properties can only be imported from packages or objects.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/AntoraConventions.kt:22:25 Unresolved reference 'antora'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/AntoraConventions.kt:23:25 Unresolved reference 'antora'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/AntoraConventions.kt:24:12 Unresolved reference 'antora'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/AntoraConventions.kt:25:12 Unresolved reference 'antora'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/AntoraConventions.kt:63:34 Unresolved reference 'AntoraPlugin'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/AntoraConventions.kt:64:13 Unresolved reference 'AntoraPlugin'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/AntoraConventions.kt:64:33 Cannot infer type for type parameter 'T'. Specify it explicitly.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/AntoraConventions.kt:64:33 Unresolved reference. None of the following candidates is applicable because of a receiver type mismatch:
+val <T> KClass<T>.java: Class<T>
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/AntoraConventions.kt:64:39 Argument type mismatch: actual type is '(??? (Unresolved qualified name: AntoraPlugin)) -> ??? (Unknown lambda return type)', but '(Closure<Any>..Closure<*>)' was expected.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/AntoraConventions.kt:64:55 Unresolved reference 'AntoraPlugin'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/AntoraConventions.kt:67:55 Unresolved reference 'AntoraPlugin'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/AntoraConventions.kt:74:30 No type arguments expected for 'fun apply(id: String): (Plugin<Any>..Plugin<*>)'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/AntoraConventions.kt:74:31 Unresolved reference 'GenerateAntoraYmlPlugin'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/AntoraConventions.kt:74:56 Unresolved reference 'GenerateAntoraYmlPlugin'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/AntoraConventions.kt:74:87 Cannot infer type for type parameter 'T'. Specify it explicitly.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/AntoraConventions.kt:74:87 Unresolved reference. None of the following candidates is applicable because of a receiver type mismatch:
+val <T> KClass<T>.java: Class<T>
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/AntoraConventions.kt:77:85 Passing value as a vararg is allowed only inside a parenthesized argument list.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/AntoraConventions.kt:79:56 Passing value as a vararg is allowed only inside a parenthesized argument list.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/AntoraConventions.kt:81:61 Passing value as a vararg is allowed only inside a parenthesized argument list.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/AntoraConventions.kt:82:24 Unresolved reference 'GenerateAntoraYmlTask'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/AntoraConventions.kt:83:13 Unresolved reference 'GenerateAntoraYmlTask'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/AntoraConventions.kt:83:42 Cannot infer type for type parameter 'T'. Specify it explicitly.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/AntoraConventions.kt:83:42 Unresolved reference. None of the following candidates is applicable because of a receiver type mismatch:
+val <T> KClass<T>.java: Class<T>
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/AntoraConventions.kt:83:48 Argument type mismatch: actual type is '(??? (Unresolved qualified name: GenerateAntoraYmlTask)) -> ??? (Unknown lambda return type)', but '(Closure<Any>..Closure<*>)' was expected.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/AntoraConventions.kt:83:73 Unresolved reference 'GenerateAntoraYmlTask'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/AntoraConventions.kt:90:24 Unresolved reference 'AntoraTask'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/AntoraConventions.kt:91:13 Unresolved reference 'AntoraTask'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/AntoraConventions.kt:91:31 Cannot infer type for type parameter 'T'. Specify it explicitly.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/AntoraConventions.kt:91:31 Unresolved reference. None of the following candidates is applicable because of a receiver type mismatch:
+val <T> KClass<T>.java: Class<T>
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/AntoraConventions.kt:91:37 Argument type mismatch: actual type is '(??? (Unresolved qualified name: AntoraTask)) -> ??? (Unknown lambda return type)', but '(Closure<Any>..Closure<*>)' was expected.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/AntoraConventions.kt:91:51 Unresolved reference 'AntoraTask'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/AntoraConventions.kt:100:14 None of the following candidates is applicable:
+
+fun <T : Any> configure(type: Class<T>, action: Action<in T>): Unit:
+  Argument type mismatch: actual type is '(NodeExtension) -> Unit', but '(uninferred T (of fun <T : Any> configure)).() -> Unit' was expected.
+
+fun <T : Any> configure(type: TypeOf<T>, action: Action<in T>): Unit:
+  Argument type mismatch: actual type is '(NodeExtension) -> Unit', but '(uninferred T (of fun <T : Any> configure)).() -> Unit' was expected.
+
+fun <T : Any> configure(name: String, action: Action<in T>): Unit:
+  Argument type mismatch: actual type is '(NodeExtension) -> Unit', but '(uninferred T (of fun <T : Any> configure)).() -> Unit' was expected.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/AntoraConventions.kt:104:45 Passing value as a vararg is allowed only inside a parenthesized argument list.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/AntoraConventions.kt:108:70 Argument type mismatch: actual type is '(JavaPlugin) -> Unit', but '(Closure<Any>..Closure<*>)' was expected.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/AntoraConventions.kt:115:69 Argument type mismatch: actual type is '(Configuration) -> Unit', but '(Closure<Any>..Closure<*>)' was expected.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/AntoraConventions.kt:124:55 Argument type mismatch: actual type is 'CheckJavadocMacros.(CheckJavadocMacros) -> Unit', but '(uninferred T (of fun <T : Any> Action)).() -> Unit' was expected.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/AntoraConventions.kt:132:41 Argument type mismatch: actual type is '(NodePlugin) -> Unit', but '(Closure<Any>..Closure<*>)' was expected.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/AntoraConventions.kt:148:14 None of the following candidates is applicable:
+
+fun from(vararg sourcePaths: Any?): AbstractCopyTask:
+  Passing value as a vararg is allowed only inside a parenthesized argument list.
+
+fun from(sourcePath: Any, c: (Closure<Any>..Closure<*>)): AbstractCopyTask:
+  Argument type mismatch: actual type is '(CopySpec) -> CopySpec', but '(Closure<Any>..Closure<*>)' was expected.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/AntoraConventions.kt:150:14 Unresolved reference 'into'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/AntoraConventions.kt:161:36 None of the following candidates is applicable:
+
+fun set(entries: (Mutable)Map<out String, out String>?): Unit:
+  Argument type mismatch: actual type is 'MutableMap<String?, String?>', but '(Mutable)Map<out String, out String>?' was expected.
+
+fun set(provider: Provider<out (Mutable)Map<out String, out String>>): Unit:
+  Argument type mismatch: actual type is 'MutableMap<String?, String?>', but 'Provider<out (Mutable)Map<out String, out String>>' was expected.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/AntoraConventions.kt:162:35 None of the following candidates is applicable:
+
+fun set(elements: (Mutable)Iterable<out String>?): Unit:
+  Argument type mismatch: actual type is 'MutableList<String?>', but '(Mutable)Iterable<out String>?' was expected.
+
+fun set(provider: Provider<out (Mutable)Iterable<out String>>): Unit:
+  Argument type mismatch: actual type is 'MutableList<String?>', but 'Provider<out (Mutable)Iterable<out String>>' was expected.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/AntoraConventions.kt:166:50 Unresolved reference 'GenerateAntoraYmlTask'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/AntoraConventions.kt:169:31 Unresolved reference 'getOutputs'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/AntoraConventions.kt:171:31 Unresolved reference 'dependsOn'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/AntoraConventions.kt:172:31 Unresolved reference 'setProperty'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/AntoraConventions.kt:173:31 Unresolved reference 'setProperty'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/AntoraConventions.kt:177:31 Unresolved reference 'setProperty'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/AntoraConventions.kt:178:31 Unresolved reference 'getAsciidocAttributes'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/AntoraConventions.kt:209:39 Unresolved reference 'AntoraTask'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/AntoraConventions.kt:213:20 Unresolved reference 'setGroup'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/AntoraConventions.kt:214:20 Unresolved reference 'dependsOn'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/AntoraConventions.kt:215:20 Unresolved reference 'setPlaybook'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/AntoraConventions.kt:216:20 Unresolved reference 'setUiBundleUrl'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/AntoraConventions.kt:217:20 Unresolved reference 'args'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/AntoraConventions.kt:220:45 Argument type mismatch: actual type is '(JavaBasePlugin) -> Task', but '(Closure<Any>..Closure<*>)' was expected.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/AntoraConventions.kt:227:63 Unresolved reference 'AntoraTask'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/AntoraConventions.kt:232:39 Unresolved reference 'getPlaybook'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/AntoraConventions.kt:243:73 Unresolved reference 'getUiBundleUrl'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/antora/AntoraAsciidocAttributes.kt:57:24 Assignment type mismatch: actual type is 'BuildType?', but 'BuildType' was expected.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/antora/AntoraAsciidocAttributes.kt:59:24 Assignment type mismatch: actual type is 'MutableList<Library>', but 'MutableList<Library?>' was expected.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/antora/AntoraAsciidocAttributes.kt:61:32 Assignment type mismatch: actual type is '(Mutable)Map<String, out Any?>', but 'MutableMap<String?, *>' was expected.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/antora/AntoraAsciidocAttributes.kt:73:33 Assignment type mismatch: actual type is 'MutableMap<String?, out String?>', but 'MutableMap<String?, String>' was expected.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/antora/AntoraAsciidocAttributes.kt:208:31 No value passed for parameter 'name'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/antora/AntoraAsciidocAttributes.kt:208:33 Only safe (?.) or non-null asserted (!!.) calls are allowed on a nullable receiver of type 'MutableList<Library.Link?>?'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/antora/AntoraAsciidocAttributes.kt:208:44 Destructuring of type 'Library.Link?' requires operator function 'component1()'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/antora/AntoraAsciidocAttributes.kt:208:44 Destructuring of type 'Library.Link?' requires operator function 'component2()'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/antora/AntoraAsciidocAttributes.kt:215:29 Only safe (?.) or non-null asserted (!!.) calls are allowed on a nullable receiver of type 'MutableList<String?>?'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/antora/AntoraAsciidocAttributes.kt:267:43 None of the following candidates is applicable:
+
+fun dependencyVersionsOf(resolvedBom: ResolvedBom): MutableMap<String?, String>:
+  Argument type mismatch: actual type is 'MutableList<ResolvedBom.Id?>?', but 'ResolvedBom' was expected.
+
+fun dependencyVersionsOf(bom: ResolvedBom.Bom?): MutableMap<String?, String?>:
+  Argument type mismatch: actual type is 'MutableList<ResolvedBom.Id?>?', but 'ResolvedBom.Bom?' was expected.
+
+fun dependencyVersionsOf(managedDependencies: MutableCollection<ResolvedBom.Id>): MutableMap<String?, String?>:
+  Argument type mismatch: actual type is 'MutableList<ResolvedBom.Id?>?', but 'MutableCollection<ResolvedBom.Id>' was expected.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/antora/AntoraAsciidocAttributes.kt:267:71 Only safe (?.) or non-null asserted (!!.) calls are allowed on a nullable receiver of type 'ResolvedBom.ResolvedLibrary?'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/antora/AntoraAsciidocAttributes.kt:268:44 Only safe (?.) or non-null asserted (!!.) calls are allowed on a nullable receiver of type 'ResolvedBom.ResolvedLibrary?'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/antora/AntoraAsciidocAttributes.kt:269:47 Argument type mismatch: actual type is 'MutableMap<String?, String?>', but 'Map<out String?, String>' was expected.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/antora/AntoraAsciidocAttributes.kt:278:43 None of the following candidates is applicable:
+
+fun dependencyVersionsOf(resolvedBom: ResolvedBom): MutableMap<String?, String>:
+  Argument type mismatch: actual type is 'MutableList<ResolvedBom.Id?>?', but 'ResolvedBom' was expected.
+
+fun dependencyVersionsOf(bom: ResolvedBom.Bom?): MutableMap<String?, String?>:
+  Argument type mismatch: actual type is 'MutableList<ResolvedBom.Id?>?', but 'ResolvedBom.Bom?' was expected.
+
+fun dependencyVersionsOf(managedDependencies: MutableCollection<ResolvedBom.Id>): MutableMap<String?, String?>:
+  Argument type mismatch: actual type is 'MutableList<ResolvedBom.Id?>?', but 'MutableCollection<ResolvedBom.Id>' was expected.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/antora/AntoraContributorPlugin.kt:18:12 Unresolved reference 'antora'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/antora/AntoraContributorPlugin.kt:34:30 No type arguments expected for 'fun apply(id: String): (Plugin<Any>..Plugin<*>)'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/antora/AntoraContributorPlugin.kt:34:31 Unresolved reference 'AntoraPlugin'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/antora/AntoraContributorPlugin.kt:34:45 Unresolved reference 'AntoraPlugin'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/antora/AntoraContributorPlugin.kt:34:65 Cannot infer type for type parameter 'T'. Specify it explicitly.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/antora/AntoraContributorPlugin.kt:34:65 Unresolved reference. None of the following candidates is applicable because of a receiver type mismatch:
+val <T> KClass<T>.java: Class<T>
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/antora/AntoraContributorPlugin.kt:41:25 Argument type mismatch: actual type is 'String?', but 'Any' was expected.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/antora/CheckJavadocMacros.kt:87:15 Syntax error: Expecting '('.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/antora/CheckJavadocMacros.kt:129:66 Return type mismatch: expected 'java.lang.String!', actual 'kotlin.String!'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/antora/CheckJavadocMacros.kt:134:51 Assignment type mismatch: actual type is 'kotlin.String!', but 'java.lang.String?' was expected.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/antora/CheckJavadocMacros.kt:136:47 Assignment type mismatch: actual type is 'kotlin.String!', but 'java.lang.String?' was expected.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/antora/CheckJavadocMacros.kt:137:47 Assignment type mismatch: actual type is 'kotlin.String!', but 'java.lang.String?' was expected.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/antora/CheckJavadocMacros.kt:158:22 Argument type mismatch: actual type is 'kotlin.String', but 'java.lang.String?' was expected.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/antora/CheckJavadocMacros.kt:167:61 Argument type mismatch: actual type is 'ThrowingConsumer<InputStream>', but 'ThrowingConsumer<InputStream?>' was expected.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/antora/CheckJavadocMacros.kt:173:34 Argument type mismatch: actual type is 'kotlin.String', but 'java.lang.String?' was expected.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/antora/CheckJavadocMacros.kt:180:61 Argument type mismatch: actual type is 'ThrowingConsumer<InputStream>', but 'ThrowingConsumer<InputStream?>' was expected.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/antora/CheckJavadocMacros.kt:186:34 Argument type mismatch: actual type is 'kotlin.String', but 'java.lang.String?' was expected.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/antora/CheckJavadocMacros.kt:212:74 Type argument is not within its bounds: must be subtype of 'Any'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/antora/CheckJavadocMacros.kt:284:37 Argument type mismatch: actual type is 'kotlin.String', but 'java.lang.String' was expected.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/antora/CheckJavadocMacros.kt:291:80 Argument type mismatch: actual type is 'kotlin.String!', but 'java.lang.String' was expected.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/antora/CheckJavadocMacros.kt:302:21 'public' function exposes its 'private-in-class' parameter type 'Origin'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/antora/CheckJavadocMacros.kt:307:56 'protected (in JavadocAnchor)' function exposes its 'private-in-class' parameter type 'Origin'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/antora/CheckJavadocMacros.kt:308:13 'public' function exposes its 'private-in-class' return type 'Origin'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/antora/CheckJavadocMacros.kt:313:36 'public' function exposes its 'private-in-class' parameter type 'Origin'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/antora/CheckJavadocMacros.kt:316:53 Argument type mismatch: actual type is 'java.lang.String', but 'kotlin.String' was expected.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/antora/CheckJavadocMacros.kt:319:52 Argument type mismatch: actual type is 'java.lang.String', but 'kotlin.String?' was expected.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/antora/CheckJavadocMacros.kt:326:27 'public' function exposes its 'private-in-class' parameter type 'Origin'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/antora/CheckJavadocMacros.kt:328:36 'public' function exposes its 'private-in-class' parameter type 'Origin'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/antora/CheckJavadocMacros.kt:337:80 'public' function exposes its 'private-in-class' parameter type 'Origin'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/antora/CheckJavadocMacros.kt:339:34 Return type of 'fun toString(): String' is not a subtype of the return type of the overridden member 'fun toString(): String' defined in 'kotlin.Any'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/antora/CheckJavadocMacros.kt:340:30 None of the following candidates is applicable:
+
+fun <T> Array<T>.plus(element: T): Array<T>:
+  Unresolved reference. None of the following candidates is applicable because of a receiver type mismatch:
+fun <T> Array<T>.plus(element: T): Array<T>
+
+fun ByteArray.plus(element: Byte): ByteArray:
+  Unresolved reference. None of the following candidates is applicable because of a receiver type mismatch:
+fun ByteArray.plus(element: Byte): ByteArray
+
+fun ShortArray.plus(element: Short): ShortArray:
+  Unresolved reference. None of the following candidates is applicable because of a receiver type mismatch:
+fun ShortArray.plus(element: Short): ShortArray
+
+fun IntArray.plus(element: Int): IntArray:
+  Unresolved reference. None of the following candidates is applicable because of a receiver type mismatch:
+fun IntArray.plus(element: Int): IntArray
+
+fun LongArray.plus(element: Long): LongArray:
+  Unresolved reference. None of the following candidates is applicable because of a receiver type mismatch:
+fun LongArray.plus(element: Long): LongArray
+
+fun FloatArray.plus(element: Float): FloatArray:
+  Unresolved reference. None of the following candidates is applicable because of a receiver type mismatch:
+fun FloatArray.plus(element: Float): FloatArray
+
+fun DoubleArray.plus(element: Double): DoubleArray:
+  Unresolved reference. None of the following candidates is applicable because of a receiver type mismatch:
+fun DoubleArray.plus(element: Double): DoubleArray
+
+fun BooleanArray.plus(element: Boolean): BooleanArray:
+  Unresolved reference. None of the following candidates is applicable because of a receiver type mismatch:
+fun BooleanArray.plus(element: Boolean): BooleanArray
+
+fun CharArray.plus(element: Char): CharArray:
+  Unresolved reference. None of the following candidates is applicable because of a receiver type mismatch:
+fun CharArray.plus(element: Char): CharArray
+
+fun <T> Array<T>.plus(elements: Collection<T>): Array<T>:
+  Unresolved reference. None of the following candidates is applicable because of a receiver type mismatch:
+fun <T> Array<T>.plus(elements: Collection<T>): Array<T>
+
+fun ByteArray.plus(elements: Collection<Byte>): ByteArray:
+  Unresolved reference. None of the following candidates is applicable because of a receiver type mismatch:
+fun ByteArray.plus(elements: Collection<Byte>): ByteArray
+
+fun ShortArray.plus(elements: Collection<Short>): ShortArray:
+  Unresolved reference. None of the following candidates is applicable because of a receiver type mismatch:
+fun ShortArray.plus(elements: Collection<Short>): ShortArray
+
+fun IntArray.plus(elements: Collection<Int>): IntArray:
+  Unresolved reference. None of the following candidates is applicable because of a receiver type mismatch:
+fun IntArray.plus(elements: Collection<Int>): IntArray
+
+fun LongArray.plus(elements: Collection<Long>): LongArray:
+  Unresolved reference. None of the following candidates is applicable because of a receiver type mismatch:
+fun LongArray.plus(elements: Collection<Long>): LongArray
+
+fun FloatArray.plus(elements: Collection<Float>): FloatArray:
+  Unresolved reference. None of the following candidates is applicable because of a receiver type mismatch:
+fun FloatArray.plus(elements: Collection<Float>): FloatArray
+
+fun DoubleArray.plus(elements: Collection<Double>): DoubleArray:
+  Unresolved reference. None of the following candidates is applicable because of a receiver type mismatch:
+fun DoubleArray.plus(elements: Collection<Double>): DoubleArray
+
+fun BooleanArray.plus(elements: Collection<Boolean>): BooleanArray:
+  Unresolved reference. None of the following candidates is applicable because of a receiver type mismatch:
+fun BooleanArray.plus(elements: Collection<Boolean>): BooleanArray
+
+fun CharArray.plus(elements: Collection<Char>): CharArray:
+  Unresolved reference. None of the following candidates is applicable because of a receiver type mismatch:
+fun CharArray.plus(elements: Collection<Char>): CharArray
+
+fun <T> Array<T>.plus(elements: Array<out T>): Array<T>:
+  Unresolved reference. None of the following candidates is applicable because of a receiver type mismatch:
+fun <T> Array<T>.plus(elements: Array<out T>): Array<T>
+
+fun ByteArray.plus(elements: ByteArray): ByteArray:
+  Unresolved reference. None of the following candidates is applicable because of a receiver type mismatch:
+fun ByteArray.plus(elements: ByteArray): ByteArray
+
+fun ShortArray.plus(elements: ShortArray): ShortArray:
+  Unresolved reference. None of the following candidates is applicable because of a receiver type mismatch:
+fun ShortArray.plus(elements: ShortArray): ShortArray
+
+fun IntArray.plus(elements: IntArray): IntArray:
+  Unresolved reference. None of the following candidates is applicable because of a receiver type mismatch:
+fun IntArray.plus(elements: IntArray): IntArray
+
+fun LongArray.plus(elements: LongArray): LongArray:
+  Unresolved reference. None of the following candidates is applicable because of a receiver type mismatch:
+fun LongArray.plus(elements: LongArray): LongArray
+
+fun FloatArray.plus(elements: FloatArray): FloatArray:
+  Unresolved reference. None of the following candidates is applicable because of a receiver type mismatch:
+fun FloatArray.plus(elements: FloatArray): FloatArray
+
+fun DoubleArray.plus(elements: DoubleArray): DoubleArray:
+  Unresolved reference. None of the following candidates is applicable because of a receiver type mismatch:
+fun DoubleArray.plus(elements: DoubleArray): DoubleArray
+
+fun BooleanArray.plus(elements: BooleanArray): BooleanArray:
+  Unresolved reference. None of the following candidates is applicable because of a receiver type mismatch:
+fun BooleanArray.plus(elements: BooleanArray): BooleanArray
+
+fun CharArray.plus(elements: CharArray): CharArray:
+  Unresolved reference. None of the following candidates is applicable because of a receiver type mismatch:
+fun CharArray.plus(elements: CharArray): CharArray
+
+fun <T> Iterable<T>.plus(element: T): List<T>:
+  Unresolved reference. None of the following candidates is applicable because of a receiver type mismatch:
+fun <T> Iterable<T>.plus(element: T): List<T>
+
+fun <T> Collection<T>.plus(element: T): List<T>:
+  Unresolved reference. None of the following candidates is applicable because of a receiver type mismatch:
+fun <T> Collection<T>.plus(element: T): List<T>
+
+fun <T> Iterable<T>.plus(elements: Array<out T>): List<T>:
+  Unresolved reference. None of the following candidates is applicable because of a receiver type mismatch:
+fun <T> Iterable<T>.plus(elements: Array<out T>): List<T>
+
+fun <T> Collection<T>.plus(elements: Array<out T>): List<T>:
+  Unresolved reference. None of the following candidates is applicable because of a receiver type mismatch:
+fun <T> Collection<T>.plus(elements: Array<out T>): List<T>
+
+fun <T> Iterable<T>.plus(elements: Iterable<T>): List<T>:
+  Unresolved reference. None of the following candidates is applicable because of a receiver type mismatch:
+fun <T> Iterable<T>.plus(elements: Iterable<T>): List<T>
+
+fun <T> Collection<T>.plus(elements: Iterable<T>): List<T>:
+  Unresolved reference. None of the following candidates is applicable because of a receiver type mismatch:
+fun <T> Collection<T>.plus(elements: Iterable<T>): List<T>
+
+fun <T> Iterable<T>.plus(elements: Sequence<T>): List<T>:
+  Unresolved reference. None of the following candidates is applicable because of a receiver type mismatch:
+fun <T> Iterable<T>.plus(elements: Sequence<T>): List<T>
+
+fun <T> Collection<T>.plus(elements: Sequence<T>): List<T>:
+  Unresolved reference. None of the following candidates is applicable because of a receiver type mismatch:
+fun <T> Collection<T>.plus(elements: Sequence<T>): List<T>
+
+fun <K, V> Map<out K, V>.plus(pair: Pair<K, V>): Map<K, V>:
+  Unresolved reference. None of the following candidates is applicable because of a receiver type mismatch:
+fun <K, V> Map<out K, V>.plus(pair: Pair<K, V>): Map<K, V>
+
+fun <K, V> Map<out K, V>.plus(pairs: Iterable<Pair<K, V>>): Map<K, V>:
+  Unresolved reference. None of the following candidates is applicable because of a receiver type mismatch:
+fun <K, V> Map<out K, V>.plus(pairs: Iterable<Pair<K, V>>): Map<K, V>
+
+fun <K, V> Map<out K, V>.plus(pairs: Array<out Pair<K, V>>): Map<K, V>:
+  Unresolved reference. None of the following candidates is applicable because of a receiver type mismatch:
+fun <K, V> Map<out K, V>.plus(pairs: Array<out Pair<K, V>>): Map<K, V>
+
+fun <K, V> Map<out K, V>.plus(pairs: Sequence<Pair<K, V>>): Map<K, V>:
+  Unresolved reference. None of the following candidates is applicable because of a receiver type mismatch:
+fun <K, V> Map<out K, V>.plus(pairs: Sequence<Pair<K, V>>): Map<K, V>
+
+fun <K, V> Map<out K, V>.plus(map: Map<out K, V>): Map<K, V>:
+  Unresolved reference. None of the following candidates is applicable because of a receiver type mismatch:
+fun <K, V> Map<out K, V>.plus(map: Map<out K, V>): Map<K, V>
+
+fun <T> Set<T>.plus(element: T): Set<T>:
+  Unresolved reference. None of the following candidates is applicable because of a receiver type mismatch:
+fun <T> Set<T>.plus(element: T): Set<T>
+
+fun <T> Set<T>.plus(elements: Array<out T>): Set<T>:
+  Unresolved reference. None of the following candidates is applicable because of a receiver type mismatch:
+fun <T> Set<T>.plus(elements: Array<out T>): Set<T>
+
+fun <T> Set<T>.plus(elements: Iterable<T>): Set<T>:
+  Unresolved reference. None of the following candidates is applicable because of a receiver type mismatch:
+fun <T> Set<T>.plus(elements: Iterable<T>): Set<T>
+
+fun <T> Set<T>.plus(elements: Sequence<T>): Set<T>:
+  Unresolved reference. None of the following candidates is applicable because of a receiver type mismatch:
+fun <T> Set<T>.plus(elements: Sequence<T>): Set<T>
+
+fun UIntArray.plus(element: UInt): UIntArray:
+  Unresolved reference. None of the following candidates is applicable because of a receiver type mismatch:
+fun UIntArray.plus(element: UInt): UIntArray
+
+fun ULongArray.plus(element: ULong): ULongArray:
+  Unresolved reference. None of the following candidates is applicable because of a receiver type mismatch:
+fun ULongArray.plus(element: ULong): ULongArray
+
+fun UByteArray.plus(element: UByte): UByteArray:
+  Unresolved reference. None of the following candidates is applicable because of a receiver type mismatch:
+fun UByteArray.plus(element: UByte): UByteArray
+
+fun UShortArray.plus(element: UShort): UShortArray:
+  Unresolved reference. None of the following candidates is applicable because of a receiver type mismatch:
+fun UShortArray.plus(element: UShort): UShortArray
+
+fun UIntArray.plus(elements: Collection<UInt>): UIntArray:
+  Unresolved reference. None of the following candidates is applicable because of a receiver type mismatch:
+fun UIntArray.plus(elements: Collection<UInt>): UIntArray
+
+fun ULongArray.plus(elements: Collection<ULong>): ULongArray:
+  Unresolved reference. None of the following candidates is applicable because of a receiver type mismatch:
+fun ULongArray.plus(elements: Collection<ULong>): ULongArray
+
+fun UByteArray.plus(elements: Collection<UByte>): UByteArray:
+  Unresolved reference. None of the following candidates is applicable because of a receiver type mismatch:
+fun UByteArray.plus(elements: Collection<UByte>): UByteArray
+
+fun UShortArray.plus(elements: Collection<UShort>): UShortArray:
+  Unresolved reference. None of the following candidates is applicable because of a receiver type mismatch:
+fun UShortArray.plus(elements: Collection<UShort>): UShortArray
+
+fun UIntArray.plus(elements: UIntArray): UIntArray:
+  Unresolved reference. None of the following candidates is applicable because of a receiver type mismatch:
+fun UIntArray.plus(elements: UIntArray): UIntArray
+
+fun ULongArray.plus(elements: ULongArray): ULongArray:
+  Unresolved reference. None of the following candidates is applicable because of a receiver type mismatch:
+fun ULongArray.plus(elements: ULongArray): ULongArray
+
+fun UByteArray.plus(elements: UByteArray): UByteArray:
+  Unresolved reference. None of the following candidates is applicable because of a receiver type mismatch:
+fun UByteArray.plus(elements: UByteArray): UByteArray
+
+fun UShortArray.plus(elements: UShortArray): UShortArray:
+  Unresolved reference. None of the following candidates is applicable because of a receiver type mismatch:
+fun UShortArray.plus(elements: UShortArray): UShortArray
+
+fun BigDecimal.plus(other: BigDecimal): BigDecimal:
+  Unresolved reference. None of the following candidates is applicable because of a receiver type mismatch:
+fun BigDecimal.plus(other: BigDecimal): BigDecimal
+
+fun BigInteger.plus(other: BigInteger): BigInteger:
+  Unresolved reference. None of the following candidates is applicable because of a receiver type mismatch:
+fun BigInteger.plus(other: BigInteger): BigInteger
+
+fun String?.plus(other: Any?): String:
+  Unresolved reference. None of the following candidates is applicable because of a receiver type mismatch:
+fun String?.plus(other: Any?): String
+
+fun <T> Sequence<T>.plus(element: T): Sequence<T>:
+  Unresolved reference. None of the following candidates is applicable because of a receiver type mismatch:
+fun <T> Sequence<T>.plus(element: T): Sequence<T>
+
+fun <T> Sequence<T>.plus(elements: Array<out T>): Sequence<T>:
+  Unresolved reference. None of the following candidates is applicable because of a receiver type mismatch:
+fun <T> Sequence<T>.plus(elements: Array<out T>): Sequence<T>
+
+fun <T> Sequence<T>.plus(elements: Iterable<T>): Sequence<T>:
+  Unresolved reference. None of the following candidates is applicable because of a receiver type mismatch:
+fun <T> Sequence<T>.plus(elements: Iterable<T>): Sequence<T>
+
+fun <T> Sequence<T>.plus(elements: Sequence<T>): Sequence<T>:
+  Unresolved reference. None of the following candidates is applicable because of a receiver type mismatch:
+fun <T> Sequence<T>.plus(elements: Sequence<T>): Sequence<T>
+
+fun Char.plus(other: String): String:
+  Unresolved reference. None of the following candidates is applicable because of a receiver type mismatch:
+fun Char.plus(other: String): String
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/antora/CheckJavadocMacros.kt:344:43 'public' function exposes its 'private-in-class' parameter type 'Origin'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/antora/CheckJavadocMacros.kt:362:37 Argument type mismatch: actual type is 'kotlin.String', but 'java.lang.String?' was expected.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/antora/CheckJavadocMacros.kt:362:43 Argument type mismatch: actual type is '(Mutable)List<kotlin.String!>!', but 'MutableList<java.lang.String?>' was expected.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/antora/CheckJavadocMacros.kt:367:49 'public' function exposes its 'private-in-class' parameter type 'Origin'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/antora/CheckJavadocMacros.kt:369:44 'public' function exposes its 'private-in-class' parameter type 'Origin'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/antora/ConsumableContentContribution.kt:43:40 Argument type mismatch: actual type is 'String?', but 'String' was expected.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/antora/ConsumableContentContribution.kt:49:50 Argument type mismatch: actual type is 'CopySpec?', but 'CopySpec' was expected.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/antora/ConsumableContentContribution.kt:69:71 Argument type mismatch: actual type is 'String?', but 'String' was expected.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/antora/ConsumableContentContribution.kt:75:44 Passing value as a vararg is allowed only inside a parenthesized argument list.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/antora/ConsumableContentContribution.kt:77:44 Argument type mismatch: actual type is 'GenerateAntoraPlaybook.(GenerateAntoraPlaybook) -> Unit', but '(uninferred T (of fun <T : Any> Action)).() -> Unit' was expected.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/antora/ConsumableContentContribution.kt:78:18 Unresolved reference 'addToZipContentsCollectorDependencies'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/antora/ConsumableContentContribution.kt:85:40 Type argument is not within its bounds: must be subtype of 'Task'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/antora/ConsumableContentContribution.kt:90:35 Argument type mismatch: actual type is 'MavenPublication.(MavenPublication) -> Unit', but '(uninferred T (of fun <T : Any> Action)).() -> Unit' was expected.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/antora/ConsumableContentContribution.kt:105:24 Argument type mismatch: actual type is 'Configuration?', but 'FileCollection' was expected.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/antora/ConsumableContentContribution.kt:111:52 Unresolved reference 'getDependencies'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/antora/ConsumableContentContribution.kt:118:27 Argument type mismatch: actual type is 'MavenArtifact.(MavenArtifact) -> Unit', but '(MavenArtifact.() -> Unit)!' was expected.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/antora/ConsumableContentContribution.kt:130:35 Argument type mismatch: actual type is 'String?', but 'String' was expected.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/antora/ConsumableContentContribution.kt:130:67 Argument type mismatch: actual type is '(Configuration) -> Configuration', but '(Closure<Any>..Closure<*>)' was expected.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/antora/ContentContribution.kt:34:18 Argument type mismatch: actual type is 'Project?', but 'Project' was expected.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/antora/ContentContribution.kt:37:73 Type argument is not within its bounds: must be subtype of 'Task'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/antora/ContentContribution.kt:41:30 Passing value as a vararg is allowed only inside a parenthesized argument list.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/antora/Contribution.kt:18:12 Unresolved reference 'antora'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/antora/Contribution.kt:68:50 Unresolved reference 'AntoraTask'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/antora/Contribution.kt:69:33 Inapplicable candidate(s): fun <S : Task> named(name: String, type: Class<S>, configurationAction: Action<in S>): TaskProvider<S>
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/antora/Contribution.kt:69:39 Unresolved reference 'AntoraTask'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/antora/Contribution.kt:69:61 Unresolved reference 'AntoraTask'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/antora/Contribution.kt:69:79 Cannot infer type for type parameter 'T'. Specify it explicitly.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/antora/Contribution.kt:69:79 Unresolved reference. None of the following candidates is applicable because of a receiver type mismatch:
+val <T> KClass<T>.java: Class<T>
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/antora/Contribution.kt:72:85 Unresolved reference 'AntoraTask'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/antora/Contribution.kt:73:16 Cannot infer type for type parameter 'T'. Specify it explicitly.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/antora/Contribution.kt:73:23 Argument type mismatch: actual type is '(uninferred T (of fun <T : Any> Action)).(??? (Unresolved qualified name: AntoraTask)) -> Unit', but '(uninferred T (of fun <T : Any> Action)).() -> Unit' was expected.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/antora/Contribution.kt:73:23 Cannot infer type for type parameter 'T'. Specify it explicitly.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/antora/Contribution.kt:73:33 Unresolved reference 'AntoraTask'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/antora/Contribution.kt:74:22 Unresolved reference 'getInputs'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/antora/CopyAntoraContent.kt:38:15 Syntax error: Expecting '('.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/antora/Extensions.kt:39:48 Argument type mismatch: actual type is 'String', but 'Array<String?>?' was expected.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/antora/Extensions.kt:40:17 Argument type mismatch: actual type is 'String', but 'Array<String?>?' was expected.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/antora/Extensions.kt:41:17 Argument type mismatch: actual type is 'String', but 'Array<String?>?' was expected.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/antora/Extensions.kt:46:9 'val' cannot be reassigned.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/antora/Extensions.kt:56:53 Argument type mismatch: actual type is 'String', but 'Array<String?>?' was expected.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/antora/Extensions.kt:57:17 Argument type mismatch: actual type is 'String', but 'Array<String?>?' was expected.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/antora/Extensions.kt:58:17 Argument type mismatch: actual type is 'String', but 'Array<String?>?' was expected.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/antora/Extensions.kt:59:17 Argument type mismatch: actual type is 'String', but 'Array<String?>?' was expected.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/antora/Extensions.kt:62:9 'val' cannot be reassigned.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/antora/Extensions.kt:81:60 None of the following candidates is applicable:
+
+static fun <T : Any!> stream(p0: Array<(out) T!>!): Stream<T!>!:
+  Argument type mismatch: actual type is 'Array<CapturedType(out Array<String?>?)>', but 'Array<(out) uninferred T! (of fun <T : Any!> stream)>!' was expected.
+
+static fun stream(p0: IntArray!): IntStream!:
+  No type arguments expected for 'static fun stream(p0: IntArray!): IntStream!'.
+  Argument type mismatch: actual type is 'Array<CapturedType(out Array<String?>?)>', but 'IntArray!' was expected.
+
+static fun stream(p0: LongArray!): LongStream!:
+  No type arguments expected for 'static fun stream(p0: LongArray!): LongStream!'.
+  Argument type mismatch: actual type is 'Array<CapturedType(out Array<String?>?)>', but 'LongArray!' was expected.
+
+static fun stream(p0: DoubleArray!): DoubleStream!:
+  No type arguments expected for 'static fun stream(p0: DoubleArray!): DoubleStream!'.
+  Argument type mismatch: actual type is 'Array<CapturedType(out Array<String?>?)>', but 'DoubleArray!' was expected.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/antora/Extensions.kt:96:55 Constructor of the inner class 'inner class Xref : Extensions.AntoraExtensionsConfiguration.Customizer' can only be called with a receiver of the containing class.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/antora/Extensions.kt:100:71 Constructor of the inner class 'inner class ZipContentsCollector : Extensions.AntoraExtensionsConfiguration.Customizer' can only be called with a receiver of the containing class.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/antora/Extensions.kt:153:111 Only safe (?.) or non-null asserted (!!.) calls are allowed on a nullable receiver of type 'Extensions.AntoraExtensionsConfiguration.ZipContentsCollector.AlwaysInclude?'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/antora/Extensions.kt:159:18 'Class' is prohibited here.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/antora/GenerateAntoraPlaybook.kt:137:25 Argument type mismatch: actual type is '(Mutable)List<String>', but 'MutableList<String?>?' was expected.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/antora/GenerateAntoraPlaybook.kt:137:68 Argument type mismatch: actual type is 'MutableList<String?>', but '(Mutable)List<String>' was expected.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/antora/GenerateAntoraPlaybook.kt:137:68 Java type mismatch: expected '(Mutable)List<String>' but found 'MutableList<String?>'. Use explicit cast.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/antora/GenerateAntoraPlaybook.kt:147:36 Argument type mismatch: actual type is '(Mutable)List<Extensions.AntoraExtensionsConfiguration.ZipContentsCollector.AlwaysInclude>?', but 'MutableList<Extensions.AntoraExtensionsConfiguration.ZipContentsCollector.AlwaysInclude?>?' was expected.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/antora/GenerateAntoraPlaybook.kt:162:24 Unresolved reference 'add'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/antora/GenerateAntoraPlaybook.kt:182:81 One type argument expected for 'interface MutableList<E> : List<E>, MutableCollection<E>'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/antora/GenerateAntoraPlaybook.kt:183:39 One type argument expected. Use 'MutableList<*>' if you do not intend to pass type arguments.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/antora/GenerateAntoraPlaybook.kt:244:27 None of the following candidates is applicable:
+
+fun addAll(vararg elements: String): Unit:
+  Argument type mismatch: actual type is 'Provider<MutableList<String?>?>', but 'String' was expected.
+
+fun addAll(elements: (Mutable)Iterable<out String>): Unit:
+  Argument type mismatch: actual type is 'Provider<MutableList<String?>?>', but '(Mutable)Iterable<out String>' was expected.
+
+fun addAll(provider: Provider<out (Mutable)Iterable<out String>>): Unit:
+  Argument type mismatch: actual type is 'Provider<MutableList<String?>?>', but 'Provider<out (Mutable)Iterable<out String>>' was expected.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/antora/GenerateAntoraPlaybook.kt:244:52 Inapplicable candidate(s): fun <S : Any> map(transformer: Transformer<out S?, in (Mutable)Set<String>>): Provider<S>
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/antora/GenerateAntoraPlaybook.kt:244:56 Type argument is not within its bounds: must be subtype of 'Any'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/antora/GenerateAntoraPlaybook.kt:253:24 Return type mismatch: expected 'Provider<MutableList<String?>>', actual 'ListProperty<String>'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/antora/LocalAggregateContentContribution.kt:31:35 Argument type mismatch: actual type is 'CopySpec?', but 'CopySpec' was expected.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/antora/LocalAggregateContentContribution.kt:32:44 Argument type mismatch: actual type is 'GenerateAntoraPlaybook.(GenerateAntoraPlaybook) -> Unit', but '(uninferred T (of fun <T : Any> Action)).() -> Unit' was expected.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/antora/LocalAggregateContentContribution.kt:32:83 Unresolved reference 'addToAlwaysInclude'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/antora/LocalAggregateContentContribution.kt:38:14 Unresolved reference 'getAlwaysInclude'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/antora/SourceContribution.kt:33:75 Argument type mismatch: actual type is 'Project?', but 'Project' was expected.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/antora/SourceContribution.kt:37:82 Passing value as a vararg is allowed only inside a parenthesized argument list.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/antora/SourceContribution.kt:52:71 Argument type mismatch: actual type is 'String?', but 'String' was expected.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/antora/SourceContribution.kt:58:43 Passing value as a vararg is allowed only inside a parenthesized argument list.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/antora/SourceContribution.kt:61:20 Argument type mismatch: actual type is 'GenerateAntoraPlaybook.(GenerateAntoraPlaybook) -> Unit', but '(uninferred T (of fun <T : Any> Action)).() -> Unit' was expected.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/antora/SourceContribution.kt:71:24 Argument type mismatch: actual type is 'Configuration?', but 'FileCollection' was expected.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/antora/SourceContribution.kt:76:69 Argument type mismatch: actual type is 'String?', but 'String' was expected.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/antora/SyncAntoraSource.kt:43:15 Syntax error: Expecting '('.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/antora/SyncAntoraSource.kt:53:47 Argument type mismatch: actual type is 'SyncSpec.(SyncSpec) -> Unit', but '(uninferred T (of fun <T : Any> Action)).() -> Unit' was expected.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/antora/SyncAntoraSource.kt:53:72 Unresolved reference 'syncAntoraSource'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/BomExtension.kt:104:17 Argument type mismatch: actual type is 'String?', but 'String' was expected.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/BomExtension.kt:104:68 Argument type mismatch: actual type is 'MutableList<Library.Group?>', but 'MutableList<Library.Group>?' was expected.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/BomExtension.kt:116:29 Argument type mismatch: actual type is 'String?', but 'String' was expected.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/BomExtension.kt:117:33 Argument type mismatch: actual type is 'MutableList<Library.Group?>', but 'MutableList<Library.Group>' was expected.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/BomExtension.kt:124:17 Argument type mismatch: actual type is 'MutableList<Library>', but 'MutableList<Library?>' was expected.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/BomExtension.kt:162:65 Only safe (?.) or non-null asserted (!!.) calls are allowed on a nullable receiver of type 'Library.LibraryVersion?'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/BomExtension.kt:169:86 Only safe (?.) or non-null asserted (!!.) calls are allowed on a nullable receiver of type 'Library.ImportedBom?'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/BomExtension.kt:181:28 Only safe (?.) or non-null asserted (!!.) calls are allowed on a nullable receiver of type 'Library.LibraryVersion?'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/BomExtension.kt:191:90 Only safe (?.) or non-null asserted (!!.) calls are allowed on a nullable receiver of type 'Library.LibraryVersion?'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/BomExtension.kt:237:53 Argument type mismatch: actual type is 'MutableList<Library.Module?>', but 'MutableList<Library.Module>?' was expected.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/BomExtension.kt:346:29 Cannot check for instance of erased type 'Array<Any>'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/BomExtension.kt:348:73 Constructor of the inner class 'inner class ModuleHandler : Any' can only be called with a receiver of the containing class.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/BomExtension.kt:349:25 Unresolved reference 'closure'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/BomExtension.kt:350:25 Unresolved reference 'closure'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/BomExtension.kt:351:25 Unresolved reference 'closure'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/BomExtension.kt:403:32 Argument type mismatch: actual type is 'BomExtension.LibraryHandler.AlignWithHandler.VersionHandler?', but 'BomExtension.LibraryHandler.AlignWithHandler.VersionHandler' was expected.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/BomExtension.kt:408:32 Argument type mismatch: actual type is 'BomExtension.LibraryHandler.AlignWithHandler.PropertyHandler?', but 'BomExtension.LibraryHandler.AlignWithHandler.PropertyHandler' was expected.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/BomExtension.kt:515:41 Argument type mismatch: actual type is 'Array<CapturedType(out String?)>', but 'Array<String?>?' was expected.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/BomExtension.kt:519:51 Argument type mismatch: actual type is 'Array<CapturedType(out String?)>', but 'Array<String?>?' was expected.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/BomExtension.kt:586:55 Only safe (?.) or non-null asserted (!!.) calls are allowed on a nullable receiver of type 'BuildProperties.GitHub?'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/BomExtension.kt:587:53 Only safe (?.) or non-null asserted (!!.) calls are allowed on a nullable receiver of type 'BuildProperties.GitHub?'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/BomPlugin.kt:57:20 Argument type mismatch: actual type is 'CheckBom.(CheckBom) -> Unit', but '(uninferred T (of fun <T : Any> Action)).() -> Unit' was expected.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/BomPlugin.kt:61:60 Argument type mismatch: actual type is 'Task.(Task) -> Unit', but '(uninferred T (of fun <T : Any> Action)).() -> Unit' was expected.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/BomPlugin.kt:69:122 Argument type mismatch: actual type is '(ConfigurablePublishArtifact) -> ConfigurablePublishArtifact', but '(Closure<Any>..Closure<*>)' was expected.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/BomPlugin.kt:75:54 Argument type mismatch: actual type is '(Configuration) -> Configuration', but '(Closure<Any>..Closure<*>)' was expected.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/BomPlugin.kt:93:29 Argument type mismatch: actual type is 'MavenPublication.(MavenPublication) -> Unit', but '(uninferred T (of fun <T : Any> Action)).() -> Unit' was expected.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/BomPlugin.kt:93:69 Unresolved reference 'configurePublication'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/BomPlugin.kt:97:36 Argument type mismatch: actual type is 'MavenPom.(MavenPom) -> Unit', but '(uninferred T (of fun <T : Any> Action)).() -> Unit' was expected.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/BomPlugin.kt:97:60 Unresolved reference 'customizePom'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/BomPlugin.kt:101:32 Argument type mismatch: actual type is 'XmlProvider.(XmlProvider) -> Unit', but '(uninferred T (of fun <T : Any> Action)).() -> Unit' was expected.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/BomPlugin.kt:104:22 Unresolved reference 'bom'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/BomPlugin.kt:105:32 Cannot infer type for implicit value parameter 'it'. Specify it explicitly.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/BomPlugin.kt:105:32 Operator call 'component1()' is ambiguous for destructuring of type '??? (Unknown type for value parameter <destruct>)'. Applicable candidates:
+fun <T> Array<out T>.component1(): T
+fun ByteArray.component1(): Byte
+fun ShortArray.component1(): Short
+fun IntArray.component1(): Int
+fun LongArray.component1(): Long
+fun FloatArray.component1(): Float
+fun DoubleArray.component1(): Double
+fun BooleanArray.component1(): Boolean
+fun CharArray.component1(): Char
+fun <T> List<T>.component1(): T
+fun <K, V> Map.Entry<K, V>.component1(): K
+fun UIntArray.component1(): UInt
+fun ULongArray.component1(): ULong
+fun UByteArray.component1(): UByte
+fun UShortArray.component1(): UShort
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/BomPlugin.kt:105:32 Operator call 'component2()' is ambiguous for destructuring of type '??? (Unknown type for value parameter <destruct>)'. Applicable candidates:
+fun <T> Array<out T>.component2(): T
+fun ByteArray.component2(): Byte
+fun ShortArray.component2(): Short
+fun IntArray.component2(): Int
+fun LongArray.component2(): Long
+fun FloatArray.component2(): Float
+fun DoubleArray.component2(): Double
+fun BooleanArray.component2(): Boolean
+fun CharArray.component2(): Char
+fun <T> List<T>.component2(): T
+fun <K, V> Map.Entry<K, V>.component2(): V
+fun UIntArray.component2(): UInt
+fun ULongArray.component2(): ULong
+fun UByteArray.component2(): UByte
+fun UShortArray.component2(): UShort
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/BomPlugin.kt:153:88 Only safe (?.) or non-null asserted (!!.) calls are allowed on a nullable receiver of type 'MutableList<Library.Group>?'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/BomPlugin.kt:155:92 Only safe (?.) or non-null asserted (!!.) calls are allowed on a nullable receiver of type 'MutableList<Library.Module>?'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/BomPlugin.kt:157:101 Only safe (?.) or non-null asserted (!!.) calls are allowed on a nullable receiver of type 'MutableList<Library.Exclusion?>?'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/BomPlugin.kt:176:88 Only safe (?.) or non-null asserted (!!.) calls are allowed on a nullable receiver of type 'MutableList<Library.Group>?'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/BomPlugin.kt:178:92 Only safe (?.) or non-null asserted (!!.) calls are allowed on a nullable receiver of type 'MutableList<Library.Module>?'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/BomPlugin.kt:201:88 Only safe (?.) or non-null asserted (!!.) calls are allowed on a nullable receiver of type 'MutableList<Library.Group>?'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/BomPlugin.kt:203:92 Only safe (?.) or non-null asserted (!!.) calls are allowed on a nullable receiver of type 'MutableList<Library.Module>?'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/BomPlugin.kt:239:44 Only safe (?.) or non-null asserted (!!.) calls are allowed on a nullable receiver of type 'Library.LibraryVersion?'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/BomPlugin.kt:268:20 Return type mismatch: expected 'MutableList<Node>', actual '(MutableList<Any?>..List<*>?)'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/BomPlugin.kt:273:60 Unresolved reference 'qname'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/BomResolver.kt:47:30 Assignment type mismatch: actual type is 'DocumentBuilder?', but 'DocumentBuilder' was expected.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/BomResolver.kt:58:78 Only safe (?.) or non-null asserted (!!.) calls are allowed on a nullable receiver of type 'Library.LibraryVersion?'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/BomResolver.kt:64:65 Only safe (?.) or non-null asserted (!!.) calls are allowed on a nullable receiver of type 'Library.ImportedBom?'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/BomResolver.kt:64:87 Only safe (?.) or non-null asserted (!!.) calls are allowed on a nullable receiver of type 'Library.LibraryVersion?'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/BomResolver.kt:80:32 Only safe (?.) or non-null asserted (!!.) calls are allowed on a nullable receiver of type 'Library.LibraryVersion?'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/BomResolver.kt:100:54 Initializer type mismatch: expected 'MutableSet<ResolvedArtifact?>', actual '(Mutable)Set<ResolvedArtifact>'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/BomResolver.kt:145:36 Only safe (?.) or non-null asserted (!!.) calls are allowed on a nullable receiver of type 'ResolvedBom.Id?'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/BomResolver.kt:150:36 Only safe (?.) or non-null asserted (!!.) calls are allowed on a nullable receiver of type 'ResolvedBom.Id?'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/CheckBom.kt:85:77 Argument type mismatch: actual type is 'File?', but 'File' was expected.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/CheckBom.kt:119:24 Argument type mismatch: actual type is 'kotlin.String', but 'java.lang.String?' was expected.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/CheckBom.kt:121:28 Argument type mismatch: actual type is 'kotlin.String', but 'java.lang.String?' was expected.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/CheckBom.kt:131:13 Class 'CheckBom.CheckExclusions' is not abstract and does not implement abstract member:
+fun check(library: Library?): MutableList<String?>?
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/CheckBom.kt:135:9 'check' overrides nothing. Potential signatures for overriding:
+fun check(library: Library?): MutableList<String?>?
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/CheckBom.kt:139:43 Only safe (?.) or non-null asserted (!!.) calls are allowed on a nullable receiver of type 'MutableList<Library.Exclusion?>?'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/CheckBom.kt:140:41 Argument type mismatch: actual type is 'kotlin.String?', but 'java.lang.String?' was expected.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/CheckBom.kt:140:74 Only safe (?.) or non-null asserted (!!.) calls are allowed on a nullable receiver of type 'Library.LibraryVersion?'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/CheckBom.kt:154:73 None of the following candidates is applicable:
+
+fun <T> Array<T>.plus(element: T): Array<T>:
+  Unresolved reference. None of the following candidates is applicable because of a receiver type mismatch:
+fun <T> Array<T>.plus(element: T): Array<T>
+
+fun ByteArray.plus(element: Byte): ByteArray:
+  Unresolved reference. None of the following candidates is applicable because of a receiver type mismatch:
+fun ByteArray.plus(element: Byte): ByteArray
+
+fun ShortArray.plus(element: Short): ShortArray:
+  Unresolved reference. None of the following candidates is applicable because of a receiver type mismatch:
+fun ShortArray.plus(element: Short): ShortArray
+
+fun IntArray.plus(element: Int): IntArray:
+  Unresolved reference. None of the following candidates is applicable because of a receiver type mismatch:
+fun IntArray.plus(element: Int): IntArray
+
+fun LongArray.plus(element: Long): LongArray:
+  Unresolved reference. None of the following candidates is applicable because of a receiver type mismatch:
+fun LongArray.plus(element: Long): LongArray
+
+fun FloatArray.plus(element: Float): FloatArray:
+  Unresolved reference. None of the following candidates is applicable because of a receiver type mismatch:
+fun FloatArray.plus(element: Float): FloatArray
+
+fun DoubleArray.plus(element: Double): DoubleArray:
+  Unresolved reference. None of the following candidates is applicable because of a receiver type mismatch:
+fun DoubleArray.plus(element: Double): DoubleArray
+
+fun BooleanArray.plus(element: Boolean): BooleanArray:
+  Unresolved reference. None of the following candidates is applicable because of a receiver type mismatch:
+fun BooleanArray.plus(element: Boolean): BooleanArray
+
+fun CharArray.plus(element: Char): CharArray:
+  Unresolved reference. None of the following candidates is applicable because of a receiver type mismatch:
+fun CharArray.plus(element: Char): CharArray
+
+fun <T> Array<T>.plus(elements: Collection<T>): Array<T>:
+  Unresolved reference. None of the following candidates is applicable because of a receiver type mismatch:
+fun <T> Array<T>.plus(elements: Collection<T>): Array<T>
+
+fun ByteArray.plus(elements: Collection<Byte>): ByteArray:
+  Unresolved reference. None of the following candidates is applicable because of a receiver type mismatch:
+fun ByteArray.plus(elements: Collection<Byte>): ByteArray
+
+fun ShortArray.plus(elements: Collection<Short>): ShortArray:
+  Unresolved reference. None of the following candidates is applicable because of a receiver type mismatch:
+fun ShortArray.plus(elements: Collection<Short>): ShortArray
+
+fun IntArray.plus(elements: Collection<Int>): IntArray:
+  Unresolved reference. None of the following candidates is applicable because of a receiver type mismatch:
+fun IntArray.plus(elements: Collection<Int>): IntArray
+
+fun LongArray.plus(elements: Collection<Long>): LongArray:
+  Unresolved reference. None of the following candidates is applicable because of a receiver type mismatch:
+fun LongArray.plus(elements: Collection<Long>): LongArray
+
+fun FloatArray.plus(elements: Collection<Float>): FloatArray:
+  Unresolved reference. None of the following candidates is applicable because of a receiver type mismatch:
+fun FloatArray.plus(elements: Collection<Float>): FloatArray
+
+fun DoubleArray.plus(elements: Collection<Double>): DoubleArray:
+  Unresolved reference. None of the following candidates is applicable because of a receiver type mismatch:
+fun DoubleArray.plus(elements: Collection<Double>): DoubleArray
+
+fun BooleanArray.plus(elements: Collection<Boolean>): BooleanArray:
+  Unresolved reference. None of the following candidates is applicable because of a receiver type mismatch:
+fun BooleanArray.plus(elements: Collection<Boolean>): BooleanArray
+
+fun CharArray.plus(elements: Collection<Char>): CharArray:
+  Unresolved reference. None of the following candidates is applicable because of a receiver type mismatch:
+fun CharArray.plus(elements: Collection<Char>): CharArray
+
+fun <T> Array<T>.plus(elements: Array<out T>): Array<T>:
+  Unresolved reference. None of the following candidates is applicable because of a receiver type mismatch:
+fun <T> Array<T>.plus(elements: Array<out T>): Array<T>
+
+fun ByteArray.plus(elements: ByteArray): ByteArray:
+  Unresolved reference. None of the following candidates is applicable because of a receiver type mismatch:
+fun ByteArray.plus(elements: ByteArray): ByteArray
+
+fun ShortArray.plus(elements: ShortArray): ShortArray:
+  Unresolved reference. None of the following candidates is applicable because of a receiver type mismatch:
+fun ShortArray.plus(elements: ShortArray): ShortArray
+
+fun IntArray.plus(elements: IntArray): IntArray:
+  Unresolved reference. None of the following candidates is applicable because of a receiver type mismatch:
+fun IntArray.plus(elements: IntArray): IntArray
+
+fun LongArray.plus(elements: LongArray): LongArray:
+  Unresolved reference. None of the following candidates is applicable because of a receiver type mismatch:
+fun LongArray.plus(elements: LongArray): LongArray
+
+fun FloatArray.plus(elements: FloatArray): FloatArray:
+  Unresolved reference. None of the following candidates is applicable because of a receiver type mismatch:
+fun FloatArray.plus(elements: FloatArray): FloatArray
+
+fun DoubleArray.plus(elements: DoubleArray): DoubleArray:
+  Unresolved reference. None of the following candidates is applicable because of a receiver type mismatch:
+fun DoubleArray.plus(elements: DoubleArray): DoubleArray
+
+fun BooleanArray.plus(elements: BooleanArray): BooleanArray:
+  Unresolved reference. None of the following candidates is applicable because of a receiver type mismatch:
+fun BooleanArray.plus(elements: BooleanArray): BooleanArray
+
+fun CharArray.plus(elements: CharArray): CharArray:
+  Unresolved reference. None of the following candidates is applicable because of a receiver type mismatch:
+fun CharArray.plus(elements: CharArray): CharArray
+
+fun <T> Iterable<T>.plus(element: T): List<T>:
+  Unresolved reference. None of the following candidates is applicable because of a receiver type mismatch:
+fun <T> Iterable<T>.plus(element: T): List<T>
+
+fun <T> Collection<T>.plus(element: T): List<T>:
+  Unresolved reference. None of the following candidates is applicable because of a receiver type mismatch:
+fun <T> Collection<T>.plus(element: T): List<T>
+
+fun <T> Iterable<T>.plus(elements: Array<out T>): List<T>:
+  Unresolved reference. None of the following candidates is applicable because of a receiver type mismatch:
+fun <T> Iterable<T>.plus(elements: Array<out T>): List<T>
+
+fun <T> Collection<T>.plus(elements: Array<out T>): List<T>:
+  Unresolved reference. None of the following candidates is applicable because of a receiver type mismatch:
+fun <T> Collection<T>.plus(elements: Array<out T>): List<T>
+
+fun <T> Iterable<T>.plus(elements: Iterable<T>): List<T>:
+  Unresolved reference. None of the following candidates is applicable because of a receiver type mismatch:
+fun <T> Iterable<T>.plus(elements: Iterable<T>): List<T>
+
+fun <T> Collection<T>.plus(elements: Iterable<T>): List<T>:
+  Unresolved reference. None of the following candidates is applicable because of a receiver type mismatch:
+fun <T> Collection<T>.plus(elements: Iterable<T>): List<T>
+
+fun <T> Iterable<T>.plus(elements: Sequence<T>): List<T>:
+  Unresolved reference. None of the following candidates is applicable because of a receiver type mismatch:
+fun <T> Iterable<T>.plus(elements: Sequence<T>): List<T>
+
+fun <T> Collection<T>.plus(elements: Sequence<T>): List<T>:
+  Unresolved reference. None of the following candidates is applicable because of a receiver type mismatch:
+fun <T> Collection<T>.plus(elements: Sequence<T>): List<T>
+
+fun <K, V> Map<out K, V>.plus(pair: Pair<K, V>): Map<K, V>:
+  Unresolved reference. None of the following candidates is applicable because of a receiver type mismatch:
+fun <K, V> Map<out K, V>.plus(pair: Pair<K, V>): Map<K, V>
+
+fun <K, V> Map<out K, V>.plus(pairs: Iterable<Pair<K, V>>): Map<K, V>:
+  Unresolved reference. None of the following candidates is applicable because of a receiver type mismatch:
+fun <K, V> Map<out K, V>.plus(pairs: Iterable<Pair<K, V>>): Map<K, V>
+
+fun <K, V> Map<out K, V>.plus(pairs: Array<out Pair<K, V>>): Map<K, V>:
+  Unresolved reference. None of the following candidates is applicable because of a receiver type mismatch:
+fun <K, V> Map<out K, V>.plus(pairs: Array<out Pair<K, V>>): Map<K, V>
+
+fun <K, V> Map<out K, V>.plus(pairs: Sequence<Pair<K, V>>): Map<K, V>:
+  Unresolved reference. None of the following candidates is applicable because of a receiver type mismatch:
+fun <K, V> Map<out K, V>.plus(pairs: Sequence<Pair<K, V>>): Map<K, V>
+
+fun <K, V> Map<out K, V>.plus(map: Map<out K, V>): Map<K, V>:
+  Unresolved reference. None of the following candidates is applicable because of a receiver type mismatch:
+fun <K, V> Map<out K, V>.plus(map: Map<out K, V>): Map<K, V>
+
+fun <T> Set<T>.plus(element: T): Set<T>:
+  Unresolved reference. None of the following candidates is applicable because of a receiver type mismatch:
+fun <T> Set<T>.plus(element: T): Set<T>
+
+fun <T> Set<T>.plus(elements: Array<out T>): Set<T>:
+  Unresolved reference. None of the following candidates is applicable because of a receiver type mismatch:
+fun <T> Set<T>.plus(elements: Array<out T>): Set<T>
+
+fun <T> Set<T>.plus(elements: Iterable<T>): Set<T>:
+  Unresolved reference. None of the following candidates is applicable because of a receiver type mismatch:
+fun <T> Set<T>.plus(elements: Iterable<T>): Set<T>
+
+fun <T> Set<T>.plus(elements: Sequence<T>): Set<T>:
+  Unresolved reference. None of the following candidates is applicable because of a receiver type mismatch:
+fun <T> Set<T>.plus(elements: Sequence<T>): Set<T>
+
+fun UIntArray.plus(element: UInt): UIntArray:
+  Unresolved reference. None of the following candidates is applicable because of a receiver type mismatch:
+fun UIntArray.plus(element: UInt): UIntArray
+
+fun ULongArray.plus(element: ULong): ULongArray:
+  Unresolved reference. None of the following candidates is applicable because of a receiver type mismatch:
+fun ULongArray.plus(element: ULong): ULongArray
+
+fun UByteArray.plus(element: UByte): UByteArray:
+  Unresolved reference. None of the following candidates is applicable because of a receiver type mismatch:
+fun UByteArray.plus(element: UByte): UByteArray
+
+fun UShortArray.plus(element: UShort): UShortArray:
+  Unresolved reference. None of the following candidates is applicable because of a receiver type mismatch:
+fun UShortArray.plus(element: UShort): UShortArray
+
+fun UIntArray.plus(elements: Collection<UInt>): UIntArray:
+  Unresolved reference. None of the following candidates is applicable because of a receiver type mismatch:
+fun UIntArray.plus(elements: Collection<UInt>): UIntArray
+
+fun ULongArray.plus(elements: Collection<ULong>): ULongArray:
+  Unresolved reference. None of the following candidates is applicable because of a receiver type mismatch:
+fun ULongArray.plus(elements: Collection<ULong>): ULongArray
+
+fun UByteArray.plus(elements: Collection<UByte>): UByteArray:
+  Unresolved reference. None of the following candidates is applicable because of a receiver type mismatch:
+fun UByteArray.plus(elements: Collection<UByte>): UByteArray
+
+fun UShortArray.plus(elements: Collection<UShort>): UShortArray:
+  Unresolved reference. None of the following candidates is applicable because of a receiver type mismatch:
+fun UShortArray.plus(elements: Collection<UShort>): UShortArray
+
+fun UIntArray.plus(elements: UIntArray): UIntArray:
+  Unresolved reference. None of the following candidates is applicable because of a receiver type mismatch:
+fun UIntArray.plus(elements: UIntArray): UIntArray
+
+fun ULongArray.plus(elements: ULongArray): ULongArray:
+  Unresolved reference. None of the following candidates is applicable because of a receiver type mismatch:
+fun ULongArray.plus(elements: ULongArray): ULongArray
+
+fun UByteArray.plus(elements: UByteArray): UByteArray:
+  Unresolved reference. None of the following candidates is applicable because of a receiver type mismatch:
+fun UByteArray.plus(elements: UByteArray): UByteArray
+
+fun UShortArray.plus(elements: UShortArray): UShortArray:
+  Unresolved reference. None of the following candidates is applicable because of a receiver type mismatch:
+fun UShortArray.plus(elements: UShortArray): UShortArray
+
+fun BigDecimal.plus(other: BigDecimal): BigDecimal:
+  Unresolved reference. None of the following candidates is applicable because of a receiver type mismatch:
+fun BigDecimal.plus(other: BigDecimal): BigDecimal
+
+fun BigInteger.plus(other: BigInteger): BigInteger:
+  Unresolved reference. None of the following candidates is applicable because of a receiver type mismatch:
+fun BigInteger.plus(other: BigInteger): BigInteger
+
+fun String?.plus(other: Any?): String:
+  Unresolved reference. None of the following candidates is applicable because of a receiver type mismatch:
+fun String?.plus(other: Any?): String
+
+fun <T> Sequence<T>.plus(element: T): Sequence<T>:
+  Unresolved reference. None of the following candidates is applicable because of a receiver type mismatch:
+fun <T> Sequence<T>.plus(element: T): Sequence<T>
+
+fun <T> Sequence<T>.plus(elements: Array<out T>): Sequence<T>:
+  Unresolved reference. None of the following candidates is applicable because of a receiver type mismatch:
+fun <T> Sequence<T>.plus(elements: Array<out T>): Sequence<T>
+
+fun <T> Sequence<T>.plus(elements: Iterable<T>): Sequence<T>:
+  Unresolved reference. None of the following candidates is applicable because of a receiver type mismatch:
+fun <T> Sequence<T>.plus(elements: Iterable<T>): Sequence<T>
+
+fun <T> Sequence<T>.plus(elements: Sequence<T>): Sequence<T>:
+  Unresolved reference. None of the following candidates is applicable because of a receiver type mismatch:
+fun <T> Sequence<T>.plus(elements: Sequence<T>): Sequence<T>
+
+fun Char.plus(other: String): String:
+  Unresolved reference. None of the following candidates is applicable because of a receiver type mismatch:
+fun Char.plus(other: String): String
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/CheckBom.kt:159:64 Return type mismatch: expected 'java.lang.String!', actual 'kotlin.String'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/CheckBom.kt:162:17 Only safe (?.) or non-null asserted (!!.) calls are allowed on a nullable receiver of type 'MutableList<Library.Exclusion?>?'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/CheckBom.kt:163:65 Return type mismatch: expected 'java.lang.String!', actual 'kotlin.String'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/CheckBom.kt:180:28 Argument type mismatch: actual type is 'kotlin.String', but 'java.lang.String?' was expected.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/CheckBom.kt:185:13 Class 'CheckBom.CheckProhibitedVersions' is not abstract and does not implement abstract member:
+fun check(library: Library?): MutableList<String?>?
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/CheckBom.kt:186:9 'check' overrides nothing. Potential signatures for overriding:
+fun check(library: Library?): MutableList<String?>?
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/CheckBom.kt:188:89 Only safe (?.) or non-null asserted (!!.) calls are allowed on a nullable receiver of type 'Library.LibraryVersion?'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/CheckBom.kt:190:31 Only safe (?.) or non-null asserted (!!.) calls are allowed on a nullable receiver of type 'Library.ProhibitedVersion?'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/CheckBom.kt:190:60 Only safe (?.) or non-null asserted (!!.) calls are allowed on a nullable receiver of type 'Library.LibraryVersion?'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/CheckBom.kt:191:32 Argument type mismatch: actual type is 'kotlin.String', but 'java.lang.String?' was expected.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/CheckBom.kt:193:50 Only safe (?.) or non-null asserted (!!.) calls are allowed on a nullable receiver of type 'Library.ProhibitedVersion?'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/CheckBom.kt:216:18 Argument type mismatch: actual type is 'kotlin.String', but 'java.lang.String?' was expected.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/CheckBom.kt:222:13 Class 'CheckBom.CheckVersionAlignment' is not abstract and does not implement abstract member:
+fun check(library: Library?): MutableList<String?>?
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/CheckBom.kt:223:9 'check' overrides nothing. Potential signatures for overriding:
+fun check(library: Library?): MutableList<String?>?
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/CheckBom.kt:234:32 Only safe (?.) or non-null asserted (!!.) calls are allowed on a nullable receiver of type 'MutableSet<String?>?'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/CheckBom.kt:235:53 Only safe (?.) or non-null asserted (!!.) calls are allowed on a nullable receiver of type 'MutableSet<String?>?'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/CheckBom.kt:236:54 Only safe (?.) or non-null asserted (!!.) calls are allowed on a nullable receiver of type 'Library.LibraryVersion?'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/CheckBom.kt:238:26 Argument type mismatch: actual type is 'kotlin.String', but 'java.lang.String?' was expected.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/CheckBom.kt:238:54 Only safe (?.) or non-null asserted (!!.) calls are allowed on a nullable receiver of type 'Library.LibraryVersion?'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/CheckBom.kt:243:36 Only safe (?.) or non-null asserted (!!.) calls are allowed on a nullable receiver of type 'MutableSet<String?>?'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/CheckBom.kt:244:32 Argument type mismatch: actual type is 'kotlin.String', but 'java.lang.String?' was expected.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/CheckBom.kt:247:26 Argument type mismatch: actual type is 'kotlin.String', but 'java.lang.String?' was expected.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/CheckBom.kt:247:94 Only safe (?.) or non-null asserted (!!.) calls are allowed on a nullable receiver of type 'MutableSet<String?>?'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/CheckBom.kt:256:9 'check' overrides nothing. Potential signatures for overriding:
+fun check(library: Library?): MutableList<String?>?
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/CheckBom.kt:269:17 Only safe (?.) or non-null asserted (!!.) calls are allowed on a nullable receiver of type 'MutableList<ResolvedBom.ResolvedLibrary?>?'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/CheckBom.kt:279:13 Class 'CheckBom.CheckDependencyManagementAlignment' is not abstract and does not implement abstract base class member:
+fun check(library: Library?, resolvedLibrary: ResolvedBom.ResolvedLibrary?): MutableList<String?>?
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/CheckBom.kt:279:13 Class 'CheckBom.CheckDependencyManagementAlignment' is not abstract and does not implement abstract member:
+fun check(library: Library?): MutableList<String?>?
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/CheckBom.kt:286:44 Argument type mismatch: actual type is 'ConfigurationContainer?', but 'ConfigurationContainer' was expected.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/CheckBom.kt:286:60 Argument type mismatch: actual type is 'DependencyHandler?', but 'DependencyHandler' was expected.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/CheckBom.kt:289:16 'check' overrides nothing. Potential signatures for overriding:
+fun check(library: Library): MutableList<String?>?
+fun check(library: Library?, resolvedLibrary: ResolvedBom.ResolvedLibrary?): MutableList<String?>?
+fun check(library: Library?): MutableList<String?>?
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/CheckBom.kt:297:87 Only safe (?.) or non-null asserted (!!.) calls are allowed on a nullable receiver of type 'Library.LibraryVersion?'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/CheckBom.kt:316:31 Argument type mismatch: actual type is 'MutableList<ResolvedBom.Id?>?', but 'Collection<ResolvedBom.Id?>' was expected.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/CheckBom.kt:338:24 Argument type mismatch: actual type is 'kotlin.String', but 'java.lang.String?' was expected.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/CheckBom.kt:343:40 Argument type mismatch: actual type is 'MutableList<ResolvedBom.Id?>?', but 'Collection<ResolvedBom.Id?>' was expected.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/CheckBom.kt:348:66 Argument type mismatch: actual type is 'ResolvedBom.Bom?', but 'ResolvedBom.Bom' was expected.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/CheckBom.kt:354:13 Class 'CheckBom.CheckForUnwantedDependencyManagement' is not abstract and does not implement abstract base class member:
+fun check(library: Library?, resolvedLibrary: ResolvedBom.ResolvedLibrary?): MutableList<String?>?
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/CheckBom.kt:354:13 Class 'CheckBom.CheckForUnwantedDependencyManagement' is not abstract and does not implement abstract member:
+fun check(library: Library?): MutableList<String?>?
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/CheckBom.kt:356:16 'check' overrides nothing. Potential signatures for overriding:
+fun check(library: Library): MutableList<String?>?
+fun check(library: Library?, resolvedLibrary: ResolvedBom.ResolvedLibrary?): MutableList<String?>?
+fun check(library: Library?): MutableList<String?>?
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/CheckBom.kt:394:29 Argument type mismatch: actual type is 'ResolvedBom.Bom?', but 'ResolvedBom.Bom' was expected.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/CheckBom.kt:396:64 Argument type mismatch: actual type is 'ResolvedBom.Bom?', but 'ResolvedBom.Bom' was expected.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/CheckBom.kt:402:37 Only safe (?.) or non-null asserted (!!.) calls are allowed on a nullable receiver of type 'ResolvedBom.Bom?'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/CheckBom.kt:402:40 Only safe (?.) or non-null asserted (!!.) calls are allowed on a nullable receiver of type 'ResolvedBom.Id?'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/CheckBom.kt:411:36 Only safe (?.) or non-null asserted (!!.) calls are allowed on a nullable receiver of type 'Library.ImportedBom?'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/CheckBom.kt:411:51 Only safe (?.) or non-null asserted (!!.) calls are allowed on a nullable receiver of type 'ResolvedBom.Id?'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/CheckBom.kt:411:84 Only safe (?.) or non-null asserted (!!.) calls are allowed on a nullable receiver of type 'ResolvedBom.Id?'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/CheckBom.kt:412:32 Return type mismatch: expected 'MutableList<Library.PermittedDependency>?', actual 'MutableList<Library.PermittedDependency?>?'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/CheckBom.kt:412:43 Only safe (?.) or non-null asserted (!!.) calls are allowed on a nullable receiver of type 'Library.ImportedBom?'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/CheckBom.kt:416:20 Return type mismatch: expected 'MutableList<Library.PermittedDependency>?', actual 'MutableList<Library.PermittedDependency?>'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/CheckBom.kt:422:44 Argument type mismatch: actual type is 'MutableList<ResolvedBom.Id?>?', but 'Collection<ResolvedBom.Id?>' was expected.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/CheckBom.kt:436:23 Only safe (?.) or non-null asserted (!!.) calls are allowed on a nullable receiver of type 'ResolvedBom.Id?'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/CheckBom.kt:437:45 Only safe (?.) or non-null asserted (!!.) calls are allowed on a nullable receiver of type 'String?'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/CheckBom.kt:437:63 Only safe (?.) or non-null asserted (!!.) calls are allowed on a nullable receiver of type 'ResolvedBom.Id?'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/CheckBom.kt:459:56 Argument type mismatch: actual type is 'ResolvedBom.Bom?', but 'ResolvedBom.Bom' was expected.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/CheckBom.kt:467:40 Only safe (?.) or non-null asserted (!!.) calls are allowed on a nullable receiver of type 'ResolvedBom.Bom?'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/CheckBom.kt:467:43 Only safe (?.) or non-null asserted (!!.) calls are allowed on a nullable receiver of type 'ResolvedBom.Id?'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/CheckLinks.kt:48:29 No value passed for parameter 'name'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/CheckLinks.kt:48:31 Only safe (?.) or non-null asserted (!!.) calls are allowed on a nullable receiver of type 'MutableList<Library.Link?>?'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/CheckLinks.kt:48:42 Destructuring of type 'Library.Link?' requires operator function 'component1()'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/CheckLinks.kt:48:42 Destructuring of type 'Library.Link?' requires operator function 'component2()'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/CheckLinks.kt:53:54 Type argument is not within its bounds: must be subtype of 'Any'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/CheckLinks.kt:54:42 None of the following candidates is applicable:
+
+fun <T : Any> exchange(url: String, method: HttpMethod, requestEntity: HttpEntity<*>?, responseType: Class<T>, vararg uriVariables: Any?): ResponseEntity<T>:
+  Inapplicable candidate(s): fun <T : Any> exchange(url: String, method: HttpMethod, requestEntity: HttpEntity<*>?, responseType: Class<T>, vararg uriVariables: Any?): ResponseEntity<T>
+
+fun <T : Any> exchange(url: URI, method: HttpMethod, requestEntity: HttpEntity<*>?, responseType: Class<T>): ResponseEntity<T>:
+  Inapplicable candidate(s): fun <T : Any> exchange(url: URI, method: HttpMethod, requestEntity: HttpEntity<*>?, responseType: Class<T>): ResponseEntity<T>
+
+fun <T : Any> exchange(url: String, method: HttpMethod, requestEntity: HttpEntity<*>?, responseType: ParameterizedTypeReference<T>, vararg uriVariables: Any?): ResponseEntity<T>:
+  Inapplicable candidate(s): fun <T : Any> exchange(url: String, method: HttpMethod, requestEntity: HttpEntity<*>?, responseType: ParameterizedTypeReference<T>, vararg uriVariables: Any?): ResponseEntity<T>
+
+fun <T : Any> exchange(url: URI, method: HttpMethod, requestEntity: HttpEntity<*>?, responseType: ParameterizedTypeReference<T>): ResponseEntity<T>:
+  Inapplicable candidate(s): fun <T : Any> exchange(url: URI, method: HttpMethod, requestEntity: HttpEntity<*>?, responseType: ParameterizedTypeReference<T>): ResponseEntity<T>
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/Library.kt:231:41 Argument type mismatch: actual type is 'Array<Dependency?>', but 'Array<(out) Dependency>' was expected.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/Library.kt:385:42 Initializer type mismatch: expected 'MutableSet<File?>', actual '(Mutable)Set<File>'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/ResolvedBom.kt:48:10 Class 'ResolvedBom.Id' is not abstract and does not implement abstract member:
+fun compareTo(other: T): Int
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/ResolvedBom.kt:57:9 'compareTo' overrides nothing. Potential signatures for overriding:
+fun compareTo(other: ResolvedBom.Id?): Int
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/UpgradePolicy.kt:54:28 Only safe (?.) or non-null asserted (!!.) calls are allowed on a nullable receiver of type 'UpgradePolicy?'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/UpgradePolicy.kt:54:42 Only safe (?.) or non-null asserted (!!.) calls are allowed on a nullable receiver of type 'UpgradePolicy?'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/bomr/InteractiveUpgradeResolver.kt:32:1 Class 'InteractiveUpgradeResolver' is not abstract and does not implement abstract member:
+fun resolveUpgrades(librariesToUpgrade: MutableCollection<Library?>?, libraries: MutableCollection<Library?>?): MutableList<Upgrade?>?
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/bomr/InteractiveUpgradeResolver.kt:36:5 'resolveUpgrades' overrides nothing. Potential signatures for overriding:
+fun resolveUpgrades(librariesToUpgrade: MutableCollection<Library?>?, libraries: MutableCollection<Library?>?): MutableList<Upgrade?>?
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/bomr/InteractiveUpgradeResolver.kt:46:17 Only safe (?.) or non-null asserted (!!.) calls are allowed on a nullable receiver of type 'MutableList<LibraryWithVersionOptions?>?'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/bomr/InteractiveUpgradeResolver.kt:62:27 Only safe (?.) or non-null asserted (!!.) calls are allowed on a nullable receiver of type 'MutableList<VersionOption?>?'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/bomr/InteractiveUpgradeResolver.kt:65:43 Argument type mismatch: actual type is 'Library?', but 'Library' was expected.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/bomr/InteractiveUpgradeResolver.kt:66:52 Argument type mismatch: actual type is 'Library?', but 'Library' was expected.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/bomr/InteractiveUpgradeResolver.kt:66:61 Argument type mismatch: actual type is 'MutableList<VersionOption?>?', but 'MutableList<VersionOption?>' was expected.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/bomr/InteractiveUpgradeResolver.kt:67:74 Argument type mismatch: actual type is 'Library?', but 'Library' was expected.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/bomr/InteractiveUpgradeResolver.kt:86:69 Argument type mismatch: actual type is 'Function<UserQuestions?, VersionOption?>', but 'Function<in UserQuestions, out VersionOption>' was expected.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/bomr/InteractiveUpgradeResolver.kt:91:25 Inapplicable candidate(s): fun <T : Any> selectOption(question: String, options: (Mutable)Collection<T>, defaultOption: T): T
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/bomr/InteractiveUpgradeResolver.kt:91:38 Type argument is not within its bounds: must be subtype of 'Any'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/bomr/MavenMetadataVersionResolver.kt:45:1 Class 'MavenMetadataVersionResolver' is not abstract and does not implement abstract member:
+fun resolveVersions(groupId: String?, artifactId: String?): SortedSet<DependencyVersion?>?
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/bomr/MavenMetadataVersionResolver.kt:50:9 None of the following candidates is applicable:
+
+constructor(requestFactory: ClientHttpRequestFactory): RestTemplate:
+  Argument type mismatch: actual type is 'MutableList<HttpMessageConverter<*>?>', but 'ClientHttpRequestFactory' was expected.
+
+constructor(messageConverters: (Mutable)Iterable<HttpMessageConverter<*>>): RestTemplate:
+  Argument type mismatch: actual type is 'MutableList<HttpMessageConverter<*>?>', but '(Mutable)Iterable<HttpMessageConverter<*>>' was expected.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/bomr/MavenMetadataVersionResolver.kt:57:5 'resolveVersions' overrides nothing. Potential signatures for overriding:
+fun resolveVersions(groupId: String?, artifactId: String?): SortedSet<DependencyVersion?>?
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/bomr/MavenMetadataVersionResolver.kt:64:52 Unresolved reference 'TreeSet'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/bomr/MavenMetadataVersionResolver.kt:85:37 Type argument is not within its bounds: must be subtype of 'Any'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/bomr/MavenMetadataVersionResolver.kt:85:57 Type argument is not within its bounds: must be subtype of 'Any'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/bomr/MavenMetadataVersionResolver.kt:85:64 Too many arguments for 'constructor<T : Any>(): HttpEntity<T>'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/bomr/MavenMetadataVersionResolver.kt:87:27 None of the following candidates is applicable:
+
+fun <T : Any> exchange(url: String, method: HttpMethod, requestEntity: HttpEntity<*>?, responseType: Class<T>, vararg uriVariables: Any?): ResponseEntity<T>:
+  Inapplicable candidate(s): fun <T : Any> exchange(url: String, method: HttpMethod, requestEntity: HttpEntity<*>?, responseType: Class<T>, vararg uriVariables: Any?): ResponseEntity<T>
+
+fun <T : Any> exchange(url: URI, method: HttpMethod, requestEntity: HttpEntity<*>?, responseType: Class<T>): ResponseEntity<T>:
+  Inapplicable candidate(s): fun <T : Any> exchange(url: URI, method: HttpMethod, requestEntity: HttpEntity<*>?, responseType: Class<T>): ResponseEntity<T>
+
+fun <T : Any> exchange(url: String, method: HttpMethod, requestEntity: HttpEntity<*>?, responseType: ParameterizedTypeReference<T>, vararg uriVariables: Any?): ResponseEntity<T>:
+  Inapplicable candidate(s): fun <T : Any> exchange(url: String, method: HttpMethod, requestEntity: HttpEntity<*>?, responseType: ParameterizedTypeReference<T>, vararg uriVariables: Any?): ResponseEntity<T>
+
+fun <T : Any> exchange(url: URI, method: HttpMethod, requestEntity: HttpEntity<*>?, responseType: ParameterizedTypeReference<T>): ResponseEntity<T>:
+  Inapplicable candidate(s): fun <T : Any> exchange(url: URI, method: HttpMethod, requestEntity: HttpEntity<*>?, responseType: ParameterizedTypeReference<T>): ResponseEntity<T>
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/bomr/MavenMetadataVersionResolver.kt:87:95 Unresolved reference 'body'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/bomr/MavenMetadataVersionResolver.kt:88:61 Argument type mismatch: actual type is 'String?', but 'String' was expected.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/bomr/MoveToSnapshots.kt:39:94 Argument type mismatch: actual type is 'BomExtension?', but 'BomExtension' was expected.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/bomr/MoveToSnapshots.kt:44:50 Argument type mismatch: actual type is '(MavenArtifactRepository) -> Unit', but '(Closure<Any>..Closure<*>)' was expected.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/bomr/MoveToSnapshots.kt:57:5 'commitMessage' overrides nothing. Potential signatures for overriding:
+fun commitMessage(upgrade: Upgrade?, issueNumber: Int): String
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/bomr/MoveToSnapshots.kt:58:62 Only safe (?.) or non-null asserted (!!.) calls are allowed on a nullable receiver of type 'Library?'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/bomr/MoveToSnapshots.kt:66:5 'createVersionOptionResolver' overrides nothing. Potential signatures for overriding:
+fun createVersionOptionResolver(milestone: Milestone?): BiFunction<Library?, DependencyVersion?, VersionOption?>?
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/bomr/MoveToSnapshots.kt:67:16 'when' expression must be exhaustive. Add the 'null' branch or an 'else' branch.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/bomr/MoveToSnapshots.kt:79:41 Only safe (?.) or non-null asserted (!!.) calls are allowed on a nullable receiver of type 'BiFunction<Library?, DependencyVersion?, VersionOption?>?'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/bomr/MoveToSnapshots.kt:89:29 Argument type mismatch: actual type is 'DependencyVersion?', but 'DependencyVersion' was expected.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/bomr/MultithreadedLibraryUpdateResolver.kt:31:1 Class 'MultithreadedLibraryUpdateResolver' is not abstract and does not implement abstract member:
+fun findLibraryUpdates(librariesToUpgrade: MutableCollection<Library?>?, librariesByName: MutableMap<String?, Library?>?): MutableList<LibraryWithVersionOptions?>?
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/bomr/MultithreadedLibraryUpdateResolver.kt:35:5 'findLibraryUpdates' overrides nothing. Potential signatures for overriding:
+fun findLibraryUpdates(librariesToUpgrade: MutableCollection<Library?>?, librariesByName: MutableMap<String?, Library?>?): MutableList<LibraryWithVersionOptions?>?
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/bomr/ReleaseSchedule.kt:37:38 Type argument is not within its bounds: must be subtype of 'Any'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/bomr/ReleaseSchedule.kt:38:14 None of the following candidates is applicable:
+
+fun <T : Any> getForEntity(url: String, responseType: Class<T>, vararg uriVariables: Any?): ResponseEntity<T>:
+  Inapplicable candidate(s): fun <T : Any> getForEntity(url: String, responseType: Class<T>, vararg uriVariables: Any?): ResponseEntity<T>
+
+fun <T : Any> getForEntity(url: URI, responseType: Class<T>): ResponseEntity<T>:
+  Inapplicable candidate(s): fun <T : Any> getForEntity(url: URI, responseType: Class<T>): ResponseEntity<T>
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/bomr/ReleaseSchedule.kt:42:63 Initializer type mismatch: expected 'MutableList<MutableMap<String?, String?>?>?', actual 'MutableList<*>?'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/bomr/ReleaseSchedule.kt:43:76 Initializer type mismatch: expected 'MutableMap<String?, MutableList<ReleaseSchedule.Release?>?>', actual 'LinkedCaseInsensitiveMap<MutableList<ReleaseSchedule.Release?>?>'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/bomr/ReleaseSchedule.kt:44:38 Type argument is not within its bounds: must be subtype of 'Any'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/bomr/ReleaseSchedule.kt:46:84 Argument type mismatch: actual type is 'MutableMap<String?, String?>?', but 'MutableMap<String?, String>' was expected.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/bomr/StandardLibraryUpdateResolver.kt:33:1 Class 'StandardLibraryUpdateResolver' is not abstract and does not implement abstract member:
+fun findLibraryUpdates(librariesToUpgrade: MutableCollection<Library?>?, librariesByName: MutableMap<String?, Library?>?): MutableList<LibraryWithVersionOptions?>?
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/bomr/StandardLibraryUpdateResolver.kt:37:5 'findLibraryUpdates' overrides nothing. Potential signatures for overriding:
+fun findLibraryUpdates(librariesToUpgrade: MutableCollection<Library?>?, librariesByName: MutableMap<String?, Library?>?): MutableList<LibraryWithVersionOptions?>?
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/bomr/UpgradeApplicator.kt:34:32 Only safe (?.) or non-null asserted (!!.) calls are allowed on a nullable receiver of type 'Library?'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/bomr/UpgradeApplicator.kt:40:72 Only safe (?.) or non-null asserted (!!.) calls are allowed on a nullable receiver of type 'Library?'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/bomr/UpgradeApplicator.kt:59:42 Only safe (?.) or non-null asserted (!!.) calls are allowed on a nullable receiver of type 'Library?'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/bomr/UpgradeApplicator.kt:60:40 Only safe (?.) or non-null asserted (!!.) calls are allowed on a nullable receiver of type 'Library?'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/bomr/UpgradeApplicator.kt:67:82 Only safe (?.) or non-null asserted (!!.) calls are allowed on a nullable receiver of type 'Library?'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/bomr/UpgradeBom.kt:33:89 Argument type mismatch: actual type is 'BomExtension?', but 'BomExtension' was expected.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/bomr/UpgradeBom.kt:35:9 'when' expression must be exhaustive. Add the 'null' branch or an 'else' branch.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/bomr/UpgradeBom.kt:44:50 Argument type mismatch: actual type is '(MavenArtifactRepository) -> Unit', but '(Closure<Any>..Closure<*>)' was expected.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/bomr/UpgradeBom.kt:59:5 'commitMessage' overrides nothing. Potential signatures for overriding:
+fun commitMessage(upgrade: Upgrade?, issueNumber: Int): String
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/bomr/UpgradeBom.kt:63:5 'upgradesApplied' overrides nothing. Potential signatures for overriding:
+fun upgradesApplied(upgrades: MutableList<Upgrade>?): Unit
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/bomr/UpgradeBom.kt:72:39 Only safe (?.) or non-null asserted (!!.) calls are allowed on a nullable receiver of type 'Library?'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/bomr/UpgradeBom.kt:74:60 Only safe (?.) or non-null asserted (!!.) calls are allowed on a nullable receiver of type 'Library?'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/bomr/UpgradeBom.kt:76:39 Only safe (?.) or non-null asserted (!!.) calls are allowed on a nullable receiver of type 'Library?'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/bomr/UpgradeDependencies.kt:119:40 Argument type mismatch: actual type is 'GitHubRepository?', but 'GitHubRepository' was expected.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/bomr/UpgradeDependencies.kt:120:44 Argument type mismatch: actual type is 'GitHubRepository?', but 'GitHubRepository' was expected.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/bomr/UpgradeDependencies.kt:123:27 Argument type mismatch: actual type is 'GitHubRepository?', but 'GitHubRepository' was expected.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/bomr/UpgradeDependencies.kt:139:31 Only safe (?.) or non-null asserted (!!.) calls are allowed on a nullable receiver of type 'Library?'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/bomr/UpgradeDependencies.kt:140:65 Argument type mismatch: actual type is 'MutableList<Issue?>?', but 'MutableList<Issue>' was expected.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/bomr/UpgradeDependencies.kt:197:29 Only safe (?.) or non-null asserted (!!.) calls are allowed on a nullable receiver of type 'MutableSet<String?>?'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/bomr/UpgradeDependencies.kt:199:37 Argument type mismatch: actual type is 'MutableSet<String?>?', but 'Collection<String?>' was expected.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/bomr/UpgradeDependencies.kt:224:62 Initializer type mismatch: expected 'Optional<Milestone>', actual 'Optional<Milestone?>!'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/bomr/UpgradeDependencies.kt:224:74 Only safe (?.) or non-null asserted (!!.) calls are allowed on a nullable receiver of type 'MutableList<Milestone?>?'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/bomr/UpgradeDependencies.kt:234:56 Only safe (?.) or non-null asserted (!!.) calls are allowed on a nullable receiver of type 'Library?'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/bomr/UpgradeDependencies.kt:237:39 Only safe (?.) or non-null asserted (!!.) calls are allowed on a nullable receiver of type 'String?'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/bomr/UpgradeDependencies.kt:239:30 Only safe (?.) or non-null asserted (!!.) calls are allowed on a nullable receiver of type 'String?'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/bomr/UpgradeDependencies.kt:251:13 Argument type mismatch: actual type is 'UserInputHandler?', but 'UserInputHandler' was expected.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/bomr/UpgradeDependencies.kt:251:27 Inapplicable candidate(s): fun <T : Any> get(serviceType: Class<T>): T
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/bomr/UpgradeDependencies.kt:251:31 Type argument is not within its bounds: must be subtype of 'Any'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/bomr/UpgradeDependencies.kt:253:16 Return type mismatch: expected 'MutableList<Upgrade>', actual 'MutableList<Upgrade?>'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/bomr/UpgradeDependencies.kt:257:77 Argument type mismatch: actual type is 'MutableCollection<MavenArtifactRepository?>', but 'MutableCollection<MavenArtifactRepository>' was expected.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/bomr/UpgradeDependencies.kt:260:13 Argument type mismatch: actual type is 'BiFunction<Library?, DependencyVersion?, VersionOption?>?', but 'BiFunction<Library?, DependencyVersion?, VersionOption?>' was expected.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/bomr/UpgradeDependencies.kt:266:80 Argument type mismatch: actual type is 'Transformer<MutableList<MavenArtifactRepository?>, MutableList<String?>>', but 'Transformer<out MutableList<MavenArtifactRepository?>?, in (Mutable)List<String>>' was expected.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/bomr/UpgradeDependencies.kt:350:49 Only safe (?.) or non-null asserted (!!.) calls are allowed on a nullable receiver of type 'Library?'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/bomr/UpgradeDependencies.kt:354:44 Only safe (?.) or non-null asserted (!!.) calls are allowed on a nullable receiver of type 'Library?'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/bomr/UpgradeDependencies.kt:355:49 Only safe (?.) or non-null asserted (!!.) calls are allowed on a nullable receiver of type 'Library?'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/bomr/github/StandardGitHub.kt:57:16 None of the following candidates is applicable:
+
+constructor(requestFactory: ClientHttpRequestFactory): RestTemplate:
+  Argument type mismatch: actual type is 'MutableList<HttpMessageConverter<*>?>', but 'ClientHttpRequestFactory' was expected.
+
+constructor(messageConverters: (Mutable)Iterable<HttpMessageConverter<*>>): RestTemplate:
+  Argument type mismatch: actual type is 'MutableList<HttpMessageConverter<*>?>', but '(Mutable)Iterable<HttpMessageConverter<*>>' was expected.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/bomr/github/StandardGitHubRepository.kt:40:1 Class 'StandardGitHubRepository' is not abstract and does not implement abstract members:
+fun openIssue(title: String?, body: String?, labels: MutableList<String?>?, milestone: Milestone?): Int
+fun findIssues(labels: MutableList<String?>?, milestone: Milestone?): MutableList<Issue?>?
+val labels: MutableSet<String?>?
+val milestones: MutableList<Milestone?>?
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/bomr/github/StandardGitHubRepository.kt:41:5 'openIssue' overrides nothing. Potential signatures for overriding:
+fun openIssue(title: String?, body: String?, labels: MutableList<String?>?, milestone: Milestone?): Int
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/bomr/github/StandardGitHubRepository.kt:43:25 Argument type mismatch: actual type is 'kotlin.String', but 'java.lang.String?' was expected.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/bomr/github/StandardGitHubRepository.kt:45:29 Argument type mismatch: actual type is 'kotlin.String', but 'java.lang.String?' was expected.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/bomr/github/StandardGitHubRepository.kt:48:29 Argument type mismatch: actual type is 'kotlin.String', but 'java.lang.String?' was expected.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/bomr/github/StandardGitHubRepository.kt:50:25 Argument type mismatch: actual type is 'kotlin.String', but 'java.lang.String?' was expected.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/bomr/github/StandardGitHubRepository.kt:52:42 Type argument is not within its bounds: must be subtype of 'Any'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/bomr/github/StandardGitHubRepository.kt:53:27 None of the following candidates is applicable:
+
+fun <T : Any> postForEntity(url: String, request: Any?, responseType: Class<T>, vararg uriVariables: Any?): ResponseEntity<T>:
+  Inapplicable candidate(s): fun <T : Any> postForEntity(url: String, request: Any?, responseType: Class<T>, vararg uriVariables: Any?): ResponseEntity<T>
+
+fun <T : Any> postForEntity(url: URI, request: Any?, responseType: Class<T>): ResponseEntity<T>:
+  Inapplicable candidate(s): fun <T : Any> postForEntity(url: URI, request: Any?, responseType: Class<T>): ResponseEntity<T>
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/bomr/github/StandardGitHubRepository.kt:56:34 Only safe (?.) or non-null asserted (!!.) calls are allowed on a nullable receiver of type 'MutableMap<*, *>?'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/bomr/github/StandardGitHubRepository.kt:56:39 Receiver type 'MutableMap<*, *>?' contains star projection which prohibits the use of 'fun get(key: K): V?'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/bomr/github/StandardGitHubRepository.kt:65:5 'getLabels' overrides nothing.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/bomr/github/StandardGitHubRepository.kt:69:17 Argument type mismatch: actual type is 'Function<MutableMap<java.lang.String?, Any?>?, java.lang.String?>', but 'Function<MutableMap<kotlin.String?, Any?>?, java.lang.String?>?' was expected.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/bomr/github/StandardGitHubRepository.kt:69:73 Type inference failed. The value of the type parameter 'K' must be mentioned in input types (argument types, receiver type, or expected type). Try to specify it explicitly.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/bomr/github/StandardGitHubRepository.kt:73:5 'getMilestones' overrides nothing.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/bomr/github/StandardGitHubRepository.kt:74:59 Argument type mismatch: actual type is 'Function<MutableMap<java.lang.String?, Any?>?, Milestone>', but 'Function<MutableMap<kotlin.String?, Any?>?, Milestone?>?' was expected.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/bomr/github/StandardGitHubRepository.kt:76:17 Argument type mismatch: actual type is 'java.lang.String?', but 'kotlin.String?' was expected.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/bomr/github/StandardGitHubRepository.kt:76:29 Type inference failed. The value of the type parameter 'K' must be mentioned in input types (argument types, receiver type, or expected type). Try to specify it explicitly.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/bomr/github/StandardGitHubRepository.kt:77:28 Type inference failed. The value of the type parameter 'K' must be mentioned in input types (argument types, receiver type, or expected type). Try to specify it explicitly.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/bomr/github/StandardGitHubRepository.kt:78:31 Type inference failed. The value of the type parameter 'K' must be mentioned in input types (argument types, receiver type, or expected type). Try to specify it explicitly.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/bomr/github/StandardGitHubRepository.kt:78:85 Type inference failed. The value of the type parameter 'K' must be mentioned in input types (argument types, receiver type, or expected type). Try to specify it explicitly.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/bomr/github/StandardGitHubRepository.kt:83:5 'findIssues' overrides nothing. Potential signatures for overriding:
+fun findIssues(labels: MutableList<String?>?, milestone: Milestone?): MutableList<Issue?>?
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/bomr/github/StandardGitHubRepository.kt:98:8 One type argument expected for 'interface MutableList<E> : List<E>, MutableCollection<E>'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/bomr/github/StandardGitHubRepository.kt:99:38 Type argument is not within its bounds: must be subtype of 'Any'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/bomr/github/StandardGitHubRepository.kt:100:23 None of the following candidates is applicable:
+
+fun <T : Any> getForEntity(url: String, responseType: Class<T>, vararg uriVariables: Any?): ResponseEntity<T>:
+  Inapplicable candidate(s): fun <T : Any> getForEntity(url: String, responseType: Class<T>, vararg uriVariables: Any?): ResponseEntity<T>
+
+fun <T : Any> getForEntity(url: URI, responseType: Class<T>): ResponseEntity<T>:
+  Inapplicable candidate(s): fun <T : Any> getForEntity(url: URI, responseType: Class<T>): ResponseEntity<T>
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/bomr/version/AbstractDependencyVersion.kt:27:5 'compareTo' overrides nothing. Potential signatures for overriding:
+fun compareTo(other: DependencyVersion?): Int
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/bomr/version/AbstractDependencyVersion.kt:33:5 'isUpgrade' overrides nothing. Potential signatures for overriding:
+fun isUpgrade(candidate: DependencyVersion?, movingToSnapshots: Boolean): Boolean
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/bomr/version/ArtifactVersionDependencyVersion.kt:38:9 Argument type mismatch: actual type is 'ComparableVersion?', but 'ComparableVersion' was expected.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/bomr/version/ArtifactVersionDependencyVersion.kt:124:22 Abstract member cannot be accessed directly.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/bomr/version/ArtifactVersionDependencyVersion.kt:138:16 Return type mismatch: expected 'Optional<ArtifactVersionDependencyVersion?>', actual 'Optional<ArtifactVersionDependencyVersion>'.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/bomr/version/CalendarVersionDependencyVersion.kt:31:70 Argument type mismatch: actual type is 'ArtifactVersion?', but 'ArtifactVersion' was expected.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/bomr/version/CalendarVersionDependencyVersion.kt:34:9 Argument type mismatch: actual type is 'ArtifactVersion?', but 'ArtifactVersion' was expected.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/bomr/version/DependencyVersion.kt:64:97 Argument type mismatch: actual type is 'String?', but 'String' was expected.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/bomr/version/DependencyVersion.kt:65:97 Argument type mismatch: actual type is 'String?', but 'String' was expected.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/bomr/version/DependencyVersion.kt:66:92 Argument type mismatch: actual type is 'String?', but 'String' was expected.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/bomr/version/DependencyVersion.kt:67:98 Argument type mismatch: actual type is 'String?', but 'String' was expected.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/bomr/version/DependencyVersion.kt:68:107 Argument type mismatch: actual type is 'String?', but 'String' was expected.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/bomr/version/DependencyVersion.kt:69:93 Argument type mismatch: actual type is 'String?', but 'String' was expected.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/bomr/version/DependencyVersion.kt:70:94 Argument type mismatch: actual type is 'String?', but 'String' was expected.
+e: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build-logic/src/commonMain/kotlin/org/springframework/boot/build/bom/bomr/version/UnstructuredDependencyVersion.kt:26:1 Class 'UnstructuredDependencyVersion' is not abstract and does not implement abstract members:
+fun compareTo(other: T): Int
+fun isUpgrade(candidate: DependencyVersion?, movingToSnapshots: Boolean): Boolean
+
+> Task :build-logic:compileKotlin FAILED
+Kotlin build report is written to file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build/reports/kotlin-build/spring-boot-kotlin-build-2026-06-18-09-10-38-0.txt
+
+[Incubating] Problems report is available at: file:///Volumes/stuff/Projects/kotlinmania/spring-boot-kotlin/build/reports/problems/problems-report.html
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':build-logic:compileKotlin' (registered by plugin class 'org.jetbrains.kotlin.gradle.plugin.KotlinPluginWrapper').
+> A failure occurred while executing org.jetbrains.kotlin.compilerRunner.btapi.BuildToolsApiCompilationWork
+   > Compilation error. See log for more details
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Get more help at https://help.gradle.org.
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 10.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/9.5.1/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+
+BUILD FAILED in 14s
+3 actionable tasks: 1 executed, 2 up-to-date
+The build is running offline. A build scan will not be published at this time, but it can be published if you run the 'buildScanPublishPrevious' task in the next build.

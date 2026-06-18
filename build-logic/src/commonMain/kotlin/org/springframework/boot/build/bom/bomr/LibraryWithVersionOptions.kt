@@ -17,4 +17,4 @@ package org.springframework.boot.build.bom.bomr
 
 import org.springframework.boot.build.bom.Library
 
-internal class LibraryWithVersionOptions(val library: Library?, val versionOptions: MutableList<VersionOption?>?)
+class LibraryWithVersionOptions(val library: Library?, val versionOptions: MutableList<VersionOption?>?)

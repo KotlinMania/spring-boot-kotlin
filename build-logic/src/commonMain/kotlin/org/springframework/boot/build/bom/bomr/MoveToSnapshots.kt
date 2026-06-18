@@ -37,17 +37,16 @@ import javax.inject.Inject
  * @author Andy Wilkinson
  */
 abstract class MoveToSnapshots @Inject constructor(bom: BomExtension?) : UpgradeDependencies(bom, true) {
-    private val buildType: BuildType? = BuildProperties.get(getProject()).buildType
+    private val buildType: BuildType? = BuildProperties.get(project).buildType
 
     init {
-        getProject().getRepositories().withType<MavenArtifactRepository?>(
-            MavenArtifactRepository::class.java,
-            Action { repository: MavenArtifactRepository? ->
-                val name = repository!!.getName()
+        project.getRepositories().withType<MavenArtifactRepository>(
+            MavenArtifactRepository::class.java) { repository: MavenArtifactRepository ->
+                val name = repository!!.name
                 if (name.startsWith("spring-") && name.endsWith("-snapshot")) {
-                    getRepositoryNames().add(name)
+                    repositoryNames.add(name)
                 }
-            })
+            }
     }
 
     @TaskAction
@@ -82,19 +81,19 @@ abstract class MoveToSnapshots @Inject constructor(bom: BomExtension?) : Upgrade
                 val releases = scheduledReleases.get(library!!.calendarName)
                 if (releases != null) {
                     val matches = releases.stream()
-                        .filter { release: ReleaseSchedule.Release? -> dependencyVersion!!.isSnapshotFor(release!!.getVersion()) }
+                        .filter { release: ReleaseSchedule.Release? -> dependencyVersion!!.isSnapshotFor(release!!.version) }
                         .toList()
                     if (!matches.isEmpty()) {
                         return@BiFunction SnapshotVersionOption(
-                            versionOption.getVersion(),
-                            matches.get(0)!!.getVersion()
+                            versionOption.version,
+                            matches.get(0)!!.version
                         )
                     }
                 }
                 if (Companion.logger.isInfoEnabled()) {
                     Companion.logger.info(
                         "Ignoring {}. No release of {} scheduled before {}", dependencyVersion,
-                        library.name, milestone.getDueOn()
+                        library.name, milestone.dueOn
                     )
                 }
             }
@@ -104,7 +103,7 @@ abstract class MoveToSnapshots @Inject constructor(bom: BomExtension?) : Upgrade
 
     private fun getScheduledOpenSourceReleases(milestone: Milestone): MutableMap<String?, MutableList<ReleaseSchedule.Release?>?> {
         val releaseSchedule = ReleaseSchedule()
-        return releaseSchedule.releasesBetween(OffsetDateTime.now(), milestone.getDueOn())
+        return releaseSchedule.releasesBetween(OffsetDateTime.now(), milestone.dueOn)
     }
 
     companion object {

@@ -99,7 +99,7 @@ class Library(
         if (links == null || links.isEmpty()) {
             return null
         }
-        check(links.size <= 1) { "Expected a single '%s' link for %s".formatted(name, this.name) }
+        check(links.size <= 1) { "Expected a single '%s' link for %s".format(name, this.name) }
         return links.get(0)!!.url(this)
     }
 
@@ -243,7 +243,7 @@ class Library(
     /**
      * Version alignment for a library based on a dependency of another module.
      */
-    class DependencyVersionAlignment internal constructor(
+    class DependencyVersionAlignment constructor(
         private val dependency: String?, val from: String, val managedBy: String?, private val project: Project,
         private val libraries: MutableList<Library>, private val groups: MutableList<Group>
     ) : VersionAlignment {
@@ -287,7 +287,7 @@ class Library(
             for (dependency in resolutionResult.getAllDependencies()) {
                 versions.put(
                     dependency.getFrom().getModuleVersion()!!.getModule().toString(),
-                    dependency.getFrom().getModuleVersion()!!.getVersion()
+                    dependency.getFrom().getModuleVersion()!!.version
                 )
             }
             return versions
@@ -342,10 +342,10 @@ class Library(
             }
             return manager.groups!!
                 .stream()
-                .flatMap<Dependency?> { group: Group? ->
+                .flatMap<Dependency> { group: Group? ->
                     group!!.boms!!
                         .stream()
-                        .map<Dependency?> { bom: ImportedBom? ->
+                        .map<Dependency> { bom: ImportedBom? ->
                             this.project.getDependencies()
                                 .platform(group.id + ":" + bom!!.name + ":" + manager.version!!.version)
                         }
@@ -365,7 +365,7 @@ class Library(
     /**
      * Version alignment for a library based on a property in the pom of another module.
      */
-    class PomPropertyVersionAlignment internal constructor(
+    class PomPropertyVersionAlignment constructor(
         private val name: String?,
         private val from: String?,
         private val managedBy: String?,
@@ -413,10 +413,10 @@ class Library(
         private fun getBomDependencies(manager: Library): MutableList<Dependency?> {
             return manager.groups!!
                 .stream()
-                .flatMap<Dependency?> { group: Group? ->
+                .flatMap<Dependency> { group: Group? ->
                     group!!.boms!!
                         .stream()
-                        .map<Dependency?> { bom: ImportedBom? ->
+                        .map<Dependency> { bom: ImportedBom? ->
                             this.project.getDependencies()
                                 .platform(group.id + ":" + bom!!.name + ":" + manager.version!!.version)
                         }
@@ -470,7 +470,7 @@ class Library(
 
             private fun expandPackages(packages: MutableList<String?>): MutableList<String?> {
                 return packages.stream()
-                    .flatMap<String?> { packageName: String? -> Companion.expandPackage(packageName!!) }.toList()
+                    .flatMap<String> { packageName: String? -> Companion.expandPackage(packageName!!) }.toList()
             }
 
             private fun expandPackage(packageName: String): Stream<String?> {
@@ -481,7 +481,7 @@ class Library(
                 val root = matcher.group(1)
                 val suffixes: Array<String?> =
                     matcher.group(2).split("\\|".toRegex()).dropLastWhile { it.isEmpty() }.toTypedArray()
-                return Stream.of<String?>(*suffixes).map<String?> { suffix: String? -> root + suffix }
+                return Stream.of<String?>(*suffixes).map<String> { suffix: String? -> root + suffix }
             }
         }
     }

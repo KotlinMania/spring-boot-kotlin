@@ -47,7 +47,7 @@ data class ResolvedBom(val id: Id?, val libraries: MutableList<ResolvedLibrary?>
     @JvmRecord
     data class Id(val groupId: String?, val artifactId: String?, val version: String?, val classifier: String?) :
         Comparable<Id?> {
-        internal constructor(groupId: String?, artifactId: String?, version: String?) : this(
+        constructor(groupId: String?, artifactId: String?, version: String?) : this(
             groupId,
             artifactId,
             version,

@@ -22,7 +22,7 @@ import java.time.OffsetDateTime
  * 
  * @author Andy Wilkinson
  */
-class Milestone internal constructor(
+class Milestone constructor(
     /**
      * Returns the name of the milestone.
      * @return the name

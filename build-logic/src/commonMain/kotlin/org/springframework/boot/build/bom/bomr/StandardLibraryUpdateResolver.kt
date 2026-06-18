@@ -30,7 +30,7 @@ import java.util.function.BiFunction
  * 
  * @author Andy Wilkinson
  */
-internal class StandardLibraryUpdateResolver(
+class StandardLibraryUpdateResolver(
     private val versionResolver: VersionResolver,
     private val versionOptionResolver: BiFunction<Library?, DependencyVersion?, VersionOption?>
 ) : LibraryUpdateResolver {
@@ -66,7 +66,7 @@ internal class StandardLibraryUpdateResolver(
             options.add(alignedOption)
         }
         for (resolvedOption in determineResolvedVersionOptions(library)) {
-            if (alignedOption == null || alignedOption.getVersion() != resolvedOption.getVersion()) {
+            if (alignedOption == null || alignedOption.version != resolvedOption.version) {
                 options.add(resolvedOption)
             }
         }
@@ -112,13 +112,13 @@ internal class StandardLibraryUpdateResolver(
         }
         val versionOptions: MutableList<VersionOption> = ArrayList<VersionOption>()
         moduleVersions.values.stream()
-            .flatMap<DependencyVersion?> { obj: SortedSet<DependencyVersion?>? -> obj!!.stream() }.distinct()
+            .flatMap<DependencyVersion> { obj: SortedSet<DependencyVersion?>? -> obj!!.stream() }.distinct()
             .forEach { dependencyVersion: DependencyVersion? ->
                 var versionOption = this.versionOptionResolver.apply(library, dependencyVersion)
                 if (versionOption != null) {
                     val missingModules = getMissingModules(moduleVersions, dependencyVersion)
                     if (!missingModules.isEmpty()) {
-                        versionOption = ResolvedVersionOption(versionOption.getVersion(), missingModules)
+                        versionOption = ResolvedVersionOption(versionOption.version, missingModules)
                     }
                     versionOptions.add(versionOption)
                 }

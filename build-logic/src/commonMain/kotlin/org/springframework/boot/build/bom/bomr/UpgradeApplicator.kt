@@ -27,7 +27,7 @@ import java.util.regex.Pattern
  * 
  * @author Andy Wilkinson
  */
-internal class UpgradeApplicator(private val buildFile: Path, private val gradleProperties: Path) {
+class UpgradeApplicator(private val buildFile: Path, private val gradleProperties: Path) {
     @Throws(IOException::class)
     fun apply(upgrade: Upgrade): Path {
         val buildFileContents = Files.readString(this.buildFile)

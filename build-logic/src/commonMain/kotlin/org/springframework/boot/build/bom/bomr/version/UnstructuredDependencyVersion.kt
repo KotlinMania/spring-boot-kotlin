@@ -23,7 +23,7 @@ import org.apache.maven.artifact.versioning.ComparableVersion
  * 
  * @author Andy Wilkinson
  */
-internal class UnstructuredDependencyVersion private constructor(private val version: String) :
+class UnstructuredDependencyVersion private constructor(private val version: String) :
     AbstractDependencyVersion(
         ComparableVersion(
             version

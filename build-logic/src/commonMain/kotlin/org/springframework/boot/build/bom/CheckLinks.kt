@@ -44,7 +44,7 @@ abstract class CheckLinks @Inject constructor(private val bom: BomExtension) : D
         val requestFactory = HttpComponentsClientHttpRequestFactory(httpClient)
         val restTemplate = RestTemplate(requestFactory)
         restTemplate.setErrorHandler(NoOpResponseErrorHandler())
-        for (library in this.bom.getLibraries()) {
+        for (library in this.bom.libraries) {
             library.getLinks().forEach { (name: String?, links: MutableList<Library.Link?>?) ->
                 links!!.forEach(Consumer { link: Library.Link? ->
                     val uri: URI?
@@ -53,7 +53,7 @@ abstract class CheckLinks @Inject constructor(private val bom: BomExtension) : D
                         val response: ResponseEntity<String?> =
                             restTemplate.exchange<String?>(uri, HttpMethod.HEAD, null, String::class.java)
                         System.out.printf(
-                            "[%3d] %s - %s (%s)%n", response.getStatusCode().value(), library.getName(), name,
+                            "[%3d] %s - %s (%s)%n", response.getStatusCode().value(), library.name, name,
                             uri
                         )
                     } catch (ex: URISyntaxException) {

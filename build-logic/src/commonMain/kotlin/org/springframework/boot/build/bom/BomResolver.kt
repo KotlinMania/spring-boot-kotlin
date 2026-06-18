@@ -37,11 +37,11 @@ import javax.xml.xpath.XPathFactory
  * 
  * @author Andy Wilkinson
  */
-internal class BomResolver(
-    private val configurations: ConfigurationContainer,
-    private val dependencies: DependencyHandler
+class BomResolver(
+    val configurations: ConfigurationContainer,
+    val dependencies: DependencyHandler
 ) {
-    private val documentBuilder: DocumentBuilder
+    val documentBuilder: DocumentBuilder
 
     init {
         this.documentBuilder = XmlDocument.builder()
@@ -49,26 +49,26 @@ internal class BomResolver(
 
     fun resolve(bomExtension: BomExtension): ResolvedBom {
         val libraries: MutableList<ResolvedBom.ResolvedLibrary?> = ArrayList<ResolvedBom.ResolvedLibrary?>()
-        for (library in bomExtension.getLibraries()) {
+        for (library in bomExtension.libraries) {
             val managedDependencies: MutableList<ResolvedBom.Id?> = ArrayList<ResolvedBom.Id?>()
             val imports: MutableList<Bom?> = ArrayList<Bom?>()
-            for (group in library.getGroups()) {
-                for (module in group.getModules()) {
+            for (group in library.groups!!) {
+                for (module in group.modules!!) {
                     val id =
-                        ResolvedBom.Id(group.getId(), module.getName(), library.getVersion().getVersion().toString())
+                        ResolvedBom.Id(group.id, module.name, library.version.version.toString())
                     managedDependencies.add(id)
                 }
-                for (imported in group.getBoms()) {
+                for (imported in group.boms!!) {
                     val bom = bomFrom(
                         resolveBom(
-                            "%s:%s:%s".formatted(group.getId(), imported.name, library.getVersion().getVersion())
+                            "%s:%s:%s".format(group.id, imported.name, library.version.version)
                         )
                     )
                     imports.add(bom)
                 }
             }
             val javadocLinks = javadocLinksOf(library).stream()
-                .map<JavadocLink?> { link: Library.Link? ->
+                .map<JavadocLink> { link: Library.Link? ->
                     JavadocLink(
                         URI.create(link!!.url(library)),
                         link.packages
@@ -76,18 +76,18 @@ internal class BomResolver(
                 }
                 .toList()
             val resolvedLibrary = ResolvedBom.ResolvedLibrary(
-                library.getName(),
-                library.getVersion().getVersion().toString(), library.getVersionProperty(), managedDependencies,
+                library.name,
+                library.version.version.toString(), library.versionProperty, managedDependencies,
                 imports, ResolvedBom.Links(javadocLinks)
             )
             libraries.add(resolvedLibrary)
         }
         val idComponents: Array<String?> =
-            bomExtension.getId().split(":".toRegex()).dropLastWhile { it.isEmpty() }.toTypedArray()
+            bomExtension.id.split(":".toRegex()).dropLastWhile { it.isEmpty() }.toTypedArray()
         return ResolvedBom(ResolvedBom.Id(idComponents[0], idComponents[1], idComponents[2]), libraries)
     }
 
-    private fun javadocLinksOf(library: Library): MutableList<Library.Link?> {
+    fun javadocLinksOf(library: Library): MutableList<Library.Link?> {
         val javadocLinks = library.getLinks("javadoc")
         return if (javadocLinks != null) javadocLinks else mutableListOf<Library.Link?>()
     }
@@ -96,19 +96,19 @@ internal class BomResolver(
         return bomFrom(resolveBom(coordinates))
     }
 
-    private fun resolveBom(coordinates: String?): File {
+    fun resolveBom(coordinates: String?): File {
         val artifacts: MutableSet<ResolvedArtifact?> = this.configurations
             .detachedConfiguration(this.dependencies.create(coordinates + "@pom"))
             .getResolvedConfiguration()
             .getResolvedArtifacts()
         check(artifacts.size == 1) {
             "Expected a single artifact but '%s' resolved to %d artifacts"
-                .formatted(coordinates, artifacts.size)
+                .format(coordinates, artifacts.size)
         }
         return artifacts.iterator().next()!!.getFile()
     }
 
-    private fun bomFrom(bomFile: File?): Bom {
+    fun bomFrom(bomFile: File?): Bom {
         try {
             val bom = nodeFrom(bomFile)
             val parentBomFile = parentBomFile(bom)
@@ -155,11 +155,11 @@ internal class BomResolver(
         }
     }
 
-    private fun nodeFrom(coordinates: String?): Node {
+    fun nodeFrom(coordinates: String?): Node {
         return nodeFrom(resolveBom(coordinates))
     }
 
-    private fun nodeFrom(bomFile: File?): Node {
+    fun nodeFrom(bomFile: File?): Node {
         try {
             val document = this.documentBuilder.parse(bomFile)
             return Node(document)
@@ -168,7 +168,7 @@ internal class BomResolver(
         }
     }
 
-    private fun parentBomFile(bom: Node): File? {
+    fun parentBomFile(bom: Node): File? {
         val parent = bom.nodeAt("/project/parent")
         if (parent != null) {
             val parentGroupId = parent.textAt("groupId")
@@ -179,9 +179,9 @@ internal class BomResolver(
         return null
     }
 
-    private class Node(
-        private val delegate: org.w3c.dom.Node,
-        private val xpath: XPath = XPathFactory.newInstance().newXPath()
+    class Node(
+        val delegate: org.w3c.dom.Node,
+        val xpath: XPath = XPathFactory.newInstance().newXPath()
     ) {
         fun textAt(expression: String?): String? {
             val text = evaluate(expression + "/text()", XPathConstants.STRING) as String?
@@ -219,7 +219,7 @@ internal class BomResolver(
         }
     }
 
-    private class Properties(private val properties: MutableMap<String?, String?>) {
+    class Properties(val properties: MutableMap<String?, String?>) {
         fun replace(input: String?): String? {
             if (input != null && input.startsWith("\${") && input.endsWith("}")) {
                 val value = this.properties.get(input)
@@ -232,7 +232,7 @@ internal class BomResolver(
         }
 
         companion object {
-            private fun from(bom: Node?, resolver: Function<String?, Node?>): Properties {
+            fun from(bom: Node?, resolver: Function<String?, Node?>): Properties {
                 try {
                     val properties: MutableMap<String?, String?> = HashMap<String?, String?>()
                     var current = bom
@@ -247,7 +247,7 @@ internal class BomResolver(
                         }
                         val propertyNodes = current.nodesAt("/project/properties/*")
                         for (property in propertyNodes) {
-                            properties.putIfAbsent("\${%s}".formatted(property.name()), property.textContent())
+                            properties.putIfAbsent("\${%s}".format(property.name()), property.textContent())
                         }
                         current = parent(current, resolver)
                     }
@@ -257,7 +257,7 @@ internal class BomResolver(
                 }
             }
 
-            private fun parent(current: Node, resolver: Function<String?, Node?>): Node? {
+            fun parent(current: Node, resolver: Function<String?, Node?>): Node? {
                 val parent = current.nodeAt("/project/parent")
                 if (parent != null) {
                     val parentGroupId = parent.textAt("groupId")

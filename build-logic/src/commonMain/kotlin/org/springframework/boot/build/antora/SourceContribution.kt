@@ -30,51 +30,50 @@ import java.util.concurrent.Callable
  * 
  * @author Andy Wilkinson
  */
-internal class SourceContribution(project: Project?, name: String?) : Contribution(project, name) {
+class SourceContribution(project: Project?, name: String?) : Contribution(project, name) {
     fun produce() {
-        val antoraSource = getProject().getConfigurations().create(CONFIGURATION_NAME)
+        val antoraSource = project.getConfigurations().create(CONFIGURATION_NAME)
         val antoraSourceZip =
-            getProject().getTasks().register<Zip?>("antoraSourceZip", Zip::class.java, Action { zip: Zip? ->
-                zip!!.getDestinationDirectory().set(getProject().getLayout().getBuildDirectory().dir("antora-source"))
+            project.getTasks().register<Zip>("antoraSourceZip", Zip::class.java) { zip: Zip ->
+                zip!!.destinationDirectory.set(project.getLayout().getBuildDirectory().dir("antora-source"))
                 zip.from(AntoraConventions.ANTORA_SOURCE_DIR)
                 zip.setDescription(
-                    "Creates a zip archive of the Antora source in %s.".formatted(AntoraConventions.ANTORA_SOURCE_DIR)
+                    "Creates a zip archive of the Antora source in %s.".format(AntoraConventions.ANTORA_SOURCE_DIR)
                 )
-            })
-        getProject().getArtifacts().add(antoraSource.getName(), antoraSourceZip)
+            }
+        project.getArtifacts().add(antoraSource.name, antoraSourceZip)
     }
 
     fun consumeFrom(path: String?) {
-        val configuration = createConfiguration(getName())
-        val dependencies = getProject().getDependencies()
+        val configuration = createConfiguration(name)
+        val dependencies = project.getDependencies()
         dependencies.add(
-            configuration.getName(),
-            getProject().provider<Dependency?>(Callable { projectDependency(path, CONFIGURATION_NAME) })
+            configuration.name,
+            project.provider<Dependency>(Callable { projectDependency(path, CONFIGURATION_NAME) })
         )
-        val outputDirectory: Provider<Directory?> = outputDirectory("source", getName())
-        val tasks = getProject().getTasks()
-        val syncSource = tasks.register<SyncAntoraSource?>(
-            taskName("sync", "%s", configuration.getName()),
-            SyncAntoraSource::class.java,
-            Action { task: SyncAntoraSource? -> configureSyncSource(task!!, path, configuration, outputDirectory) })
-        configureAntora(addInputFrom(syncSource, configuration.getName()))
+        val outputDirectory: Provider<Directory> = outputDirectory("source", name)
+        val tasks = project.getTasks()
+        val syncSource = tasks.register<SyncAntoraSource>(
+            taskName("sync", "%s", configuration.name),
+            SyncAntoraSource::class.java) { task: SyncAntoraSource -> configureSyncSource(task!!, path, configuration, outputDirectory) }
+        configureAntora(addInputFrom(syncSource, configuration.name))
         configurePlaybookGeneration(
-            Action { generatePlaybook: GenerateAntoraPlaybook? ->
-                generatePlaybook!!.getContentSource().addStartPath(outputDirectory)
+            Action { generatePlaybook: GenerateAntoraPlaybook ->
+                generatePlaybook!!.contentSource.addStartPath(outputDirectory)
             })
     }
 
     private fun configureSyncSource(
         task: SyncAntoraSource, path: String?, configuration: Configuration?,
-        outputDirectory: Provider<Directory?>
+        outputDirectory: Provider<Directory>
     ) {
-        task.setDescription("Syncs the %s Antora source from %s.".formatted(getName(), path))
+        task.setDescription("Syncs the %s Antora source from %s.".format(name, path))
         task.setSource(configuration)
-        task.getOutputDirectory().set(outputDirectory)
+        task.outputDirectory.set(outputDirectory)
     }
 
     private fun createConfiguration(name: String?): Configuration {
-        return getProject().getConfigurations().create(configurationName(name, "AntoraSource"))
+        return project.getConfigurations().create(configurationName(name, "AntoraSource"))
     }
 
     companion object {

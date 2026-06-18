@@ -65,6 +65,7 @@ import kotlin.text.split
 import kotlin.text.substring
 import kotlin.text.toRegex
 import kotlin.text.trim
+import org.gradle.api.file.DirectoryProperty
 
 /**
  * A task to check `javadoc:[]` macros in Antora source files.
@@ -72,18 +73,18 @@ import kotlin.text.trim
  * @author Andy Wilkinson
  */
 abstract class CheckJavadocMacros : DefaultTask() {
-    private val projectRoot: Path
+    val projectRoot: Path
 
-    private var source: FileCollection? = null
+    var source: FileCollection? = null
 
-    private var classpath: FileCollection? = null
+    var classpath: FileCollection? = null
 
     init {
-        this.projectRoot = getProject().getRootDir().toPath()
+        this.projectRoot = project.getRootDir().toPath()
     }
 
     @InputFiles
-    fun getSource(): FileCollection {
+    fun source: FileCollection {
         return this.source!!
     }
 
@@ -102,32 +103,32 @@ abstract class CheckJavadocMacros : DefaultTask() {
     }
 
     @get:OutputDirectory
-    abstract val outputDirectory: DirectoryProperty?
+    abstract val outputDirectory: DirectoryProperty
 
     @TaskAction
     fun checkJavadocMacros() {
         val availableClasses = indexClasspath()
         val problems: MutableList<String?> = ArrayList<String?>()
         this.source!!.getAsFileTree()
-            .filter(Spec { file: File? -> file!!.getName().endsWith(".adoc") })
+            .filter(Spec { file: File? -> file!!.name.endsWith(".adoc") })
             .forEach(Consumer { file: File? -> problems.addAll(checkJavadocMacros(file!!, availableClasses)) })
-        val outputFile = this.outputDirectory.file("failure-report.txt").get().getAsFile()
+        val outputFile = this.outputDirectory.file("failure-report.txt").get().asFile
         writeReport(problems, outputFile)
         if (!problems.isEmpty()) {
-            throw VerificationException("Javadoc macro check failed. See '%s' for details".formatted(outputFile))
+            throw VerificationException("Javadoc macro check failed. See '%s' for details".format(outputFile))
         }
     }
 
-    private fun indexClasspath(): MutableSet<String?> {
+    fun indexClasspath(): MutableSet<String?> {
         val availableClasses =
-            StreamSupport.stream<File?>(this.classpath!!.spliterator(), false).flatMap<String?> { root: File? ->
+            StreamSupport.stream<File?>(this.classpath!!.spliterator(), false).flatMap<String> { root: File? ->
                 if (root!!.isFile()) {
                     try {
                         JarFile(root).use { jar ->
                             return@flatMap jar.stream()
-                                .map<String?> { obj: JarEntry? -> obj!!.getName() }
+                                .map<String> { obj: JarEntry? -> obj!!.name }
                                 .filter { entryName: String? -> entryName!!.endsWith(".class") }
-                                .map<String?> { className: String? ->
+                                .map<String> { className: String? ->
                                     var className = className
                                     if (className!!.startsWith("META-INF/versions/")) {
                                         className = className.substring("META-INF/versions/".length)
@@ -148,7 +149,7 @@ abstract class CheckJavadocMacros : DefaultTask() {
         return availableClasses
     }
 
-    private fun checkJavadocMacros(adocFile: File, availableClasses: MutableSet<String?>): MutableList<String?> {
+    fun checkJavadocMacros(adocFile: File, availableClasses: MutableSet<String?>): MutableList<String?> {
         val problems: MutableList<String?> = ArrayList<String?>()
         val macros = JavadocMacro.Companion.parse(adocFile)
         for (macro in macros) {
@@ -194,7 +195,7 @@ abstract class CheckJavadocMacros : DefaultTask() {
         return problems
     }
 
-    private fun classIsAvailable(className: String, availableClasses: MutableSet<String?>): Boolean {
+    fun classIsAvailable(className: String, availableClasses: MutableSet<String?>): Boolean {
         if (availableClasses.contains(className)) {
             return true
         }
@@ -204,11 +205,11 @@ abstract class CheckJavadocMacros : DefaultTask() {
         return false
     }
 
-    private fun jdkResourceForClass(className: String): URL? {
+    fun jdkResourceForClass(className: String): URL? {
         return javaClass.getClassLoader().getResource(className.replace(".", "/") + ".class")
     }
 
-    private fun inputStreamOf(className: String, streamHandler: ThrowingConsumer<InputStream?>) {
+    fun inputStreamOf(className: String, streamHandler: ThrowingConsumer<InputStream?>) {
         for (root in this.classpath!!) {
             if (root.isFile()) {
                 try {
@@ -238,16 +239,16 @@ abstract class CheckJavadocMacros : DefaultTask() {
         }
     }
 
-    private fun writeReport(problems: MutableList<String?>, outputFile: File) {
-        outputFile.getParentFile().mkdirs()
+    fun writeReport(problems: MutableList<String?>, outputFile: File) {
+        outputFile.parentFile.mkdirs()
         val report = StringBuilder()
         if (!problems.isEmpty()) {
             if (problems.size == 1) {
-                report.append("Found 1 javadoc macro problem:%n".formatted())
+                report.append("Found 1 javadoc macro problem:%n".format())
             } else {
-                report.append("Found %d javadoc macro problems:%n".formatted(problems.size))
+                report.append("Found %d javadoc macro problems:%n".format(problems.size))
             }
-            problems.forEach(Consumer { problem: String? -> report.append("%s%n".formatted(problem)) })
+            problems.forEach(Consumer { problem: String? -> report.append("%s%n".format(problem)) })
         }
         try {
             Files.writeString(
@@ -259,9 +260,9 @@ abstract class CheckJavadocMacros : DefaultTask() {
         }
     }
 
-    private class JavadocMacro(private val className: ClassName, private val anchor: JavadocAnchor?) {
+    class JavadocMacro(val className: ClassName, val anchor: JavadocAnchor?) {
         companion object {
-            private fun parse(adocFile: File): MutableList<JavadocMacro> {
+            fun parse(adocFile: File): MutableList<JavadocMacro> {
                 val macros: MutableList<JavadocMacro> = ArrayList<JavadocMacro>()
                 try {
                     val adocFilePath = adocFile.toPath()
@@ -298,18 +299,18 @@ abstract class CheckJavadocMacros : DefaultTask() {
         }
     }
 
-    private class ClassName(private val origin: Origin, private val name: String)
+    class ClassName(val origin: Origin, val name: String)
 
     @JvmRecord
     private data class Origin(val file: File?, val line: Int, val column: Int)
 
-    private abstract class JavadocAnchor protected constructor(private val origin: Origin) {
+    abstract class JavadocAnchor protected constructor(val origin: Origin) {
         fun origin(): Origin {
             return this.origin
         }
 
         companion object {
-            private fun of(anchor: String, origin: Origin): JavadocAnchor {
+            fun of(anchor: String, origin: Origin): JavadocAnchor {
                 var javadocAnchor: JavadocAnchor? = WellKnownAnchor.Companion.of(anchor, origin)
                 if (javadocAnchor == null) {
                     javadocAnchor = MethodAnchor.of(anchor, origin)
@@ -322,9 +323,9 @@ abstract class CheckJavadocMacros : DefaultTask() {
         }
     }
 
-    private class WellKnownAnchor(origin: Origin) : JavadocAnchor(origin) {
+    class WellKnownAnchor(origin: Origin) : JavadocAnchor(origin) {
         companion object {
-            private fun of(anchor: String, origin: Origin): WellKnownAnchor? {
+            fun of(anchor: String, origin: Origin): WellKnownAnchor? {
                 if (anchor == "enum-constant-summary") {
                     return WellKnownAnchor(origin)
                 }
@@ -333,7 +334,7 @@ abstract class CheckJavadocMacros : DefaultTask() {
         }
     }
 
-    private class MethodAnchor(private val name: String?, private val arguments: MutableList<String?>, origin: Origin) :
+    class MethodAnchor(val name: String?, val arguments: MutableList<String?>, origin: Origin) :
         JavadocAnchor(origin) {
         override fun toString(): String {
             return this.name + "(" + String.join(", ", this.arguments.toString() + ")")
@@ -350,8 +351,8 @@ abstract class CheckJavadocMacros : DefaultTask() {
                     *anchor.substring(openingIndex + 1, anchor.length - 1).split(",".toRegex())
                         .dropLastWhile { it.isEmpty() }.toTypedArray()
                 )
-                    .map<kotlin.String?> { obj: kotlin.String? -> obj!!.trim { it <= ' ' } }
-                    .map<kotlin.String?> { argument: kotlin.String? ->
+                    .map<kotlin.String> { obj: kotlin.String? -> obj!!.trim { it <= ' ' } }
+                    .map<kotlin.String> { argument: kotlin.String? ->
                         if (argument!!.endsWith("...")) argument.replace(
                             "...",
                             "[]"
@@ -363,7 +364,7 @@ abstract class CheckJavadocMacros : DefaultTask() {
         }
     }
 
-    private class FieldAnchor(private val name: kotlin.String?, origin: Origin) : JavadocAnchor(origin) {
+    class FieldAnchor(val name: kotlin.String?, origin: Origin) : JavadocAnchor(origin) {
         companion object {
             fun of(anchor: kotlin.String?, origin: Origin): FieldAnchor {
                 return FieldAnchor(anchor, origin)
@@ -371,8 +372,8 @@ abstract class CheckJavadocMacros : DefaultTask() {
         }
     }
 
-    private class MethodMatcher(private val methodAnchor: MethodAnchor) : ClassVisitor(SpringAsmInfo.ASM_VERSION) {
-        private var matched = false
+    class MethodMatcher(val methodAnchor: MethodAnchor) : ClassVisitor(SpringAsmInfo.ASM_VERSION) {
+        var matched = false
 
         override fun visitMethod(
             access: Int, name: kotlin.String, descriptor: kotlin.String, signature: kotlin.String?,
@@ -383,7 +384,7 @@ abstract class CheckJavadocMacros : DefaultTask() {
                 if (type.getArgumentCount() == this.methodAnchor.arguments.size) {
                     val argumentTypeNames = Arrays.asList<Type?>(*type.getArgumentTypes())
                         .stream()
-                        .map<kotlin.String?> { obj: Type? -> obj!!.getClassName() }
+                        .map<kotlin.String> { obj: Type? -> obj!!.getClassName() }
                         .toList()
                     if (argumentTypeNames == this.methodAnchor.arguments) {
                         this.matched = true
@@ -394,8 +395,8 @@ abstract class CheckJavadocMacros : DefaultTask() {
         }
     }
 
-    private class FieldMatcher(private val fieldAnchor: FieldAnchor) : ClassVisitor(SpringAsmInfo.ASM_VERSION) {
-        private var matched = false
+    class FieldMatcher(val fieldAnchor: FieldAnchor) : ClassVisitor(SpringAsmInfo.ASM_VERSION) {
+        var matched = false
 
         override fun visitField(
             access: Int,
@@ -412,6 +413,6 @@ abstract class CheckJavadocMacros : DefaultTask() {
     }
 
     companion object {
-        private val JAVADOC_MACRO_PATTERN: Pattern = Pattern.compile("javadoc:(.*?)\\[(.*?)\\]")
+        val JAVADOC_MACRO_PATTERN: Pattern = Pattern.compile("javadoc:(.*?)\\[(.*?)\\]")
     }
 }

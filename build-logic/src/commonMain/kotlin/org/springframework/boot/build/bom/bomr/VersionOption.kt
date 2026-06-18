@@ -26,7 +26,7 @@ import org.springframework.util.StringUtils
  * 
  * @author Andy Wilkinson
  */
-internal open class VersionOption(val version: DependencyVersion) {
+open class VersionOption(val version: DependencyVersion) {
     override fun toString(): String {
         return this.version.toString()
     }
@@ -35,14 +35,14 @@ internal open class VersionOption(val version: DependencyVersion) {
         return Upgrade(library, library.withVersion(LibraryVersion(this.version)))
     }
 
-    internal class AlignedVersionOption(version: DependencyVersion, private val alignedWith: VersionAlignment?) :
+    class AlignedVersionOption(version: DependencyVersion, private val alignedWith: VersionAlignment?) :
         VersionOption(version) {
         public override fun toString(): String {
             return super.toString() + " (aligned with " + this.alignedWith + ")"
         }
     }
 
-    internal class ResolvedVersionOption(version: DependencyVersion, private val missingModules: MutableList<String?>) :
+    class ResolvedVersionOption(version: DependencyVersion, private val missingModules: MutableList<String?>) :
         VersionOption(version) {
         public override fun toString(): String {
             if (this.missingModules.isEmpty()) {
@@ -53,7 +53,7 @@ internal open class VersionOption(val version: DependencyVersion) {
         }
     }
 
-    internal class SnapshotVersionOption(version: DependencyVersion, private val releaseVersion: DependencyVersion) :
+    class SnapshotVersionOption(version: DependencyVersion, private val releaseVersion: DependencyVersion) :
         VersionOption(version) {
         public override fun toString(): String {
             return super.toString() + " (for " + this.releaseVersion + ")"

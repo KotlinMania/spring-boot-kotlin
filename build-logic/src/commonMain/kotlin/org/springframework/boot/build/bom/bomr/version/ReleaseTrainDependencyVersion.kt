@@ -24,7 +24,7 @@ import java.util.regex.Pattern
  * 
  * @author Andy Wilkinson
  */
-internal class ReleaseTrainDependencyVersion private constructor(
+class ReleaseTrainDependencyVersion private constructor(
     private val releaseTrain: String,
     private val type: String,
     private val version: Int,

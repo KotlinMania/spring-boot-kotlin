@@ -23,7 +23,7 @@ import java.util.*
  * 
  * @author Andy Wilkinson
  */
-internal interface VersionResolver {
+interface VersionResolver {
     /**
      * Resolves the available versions for the module identified by the given
      * `groupId` and `artifactId`.

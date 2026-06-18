@@ -42,7 +42,7 @@ import javax.xml.xpath.XPathFactory
  * 
  * @author Andy Wilkinson
  */
-internal class MavenMetadataVersionResolver(
+class MavenMetadataVersionResolver(
     private val rest: RestTemplate,
     private val repositories: MutableCollection<MavenArtifactRepository>
 ) : VersionResolver {
@@ -59,7 +59,7 @@ internal class MavenMetadataVersionResolver(
         for (repository in this.repositories) {
             versions.addAll(resolveVersions(groupId, artifactId, repository))
         }
-        return versions.stream().map<DependencyVersion?> { version: String? -> DependencyVersion.parse(version) }
+        return versions.stream().map<DependencyVersion> { version: String? -> DependencyVersion.parse(version) }
             .collect(
                 Collectors.toCollection(Supplier { TreeSet() })
             )
@@ -84,7 +84,7 @@ internal class MavenMetadataVersionResolver(
             }
             val request: HttpEntity<Void?> = HttpEntity<Void?>(headers)
             val metadata: String? =
-                this.rest.exchange<String?>(url, HttpMethod.GET, request, String::class.java).getBody()
+                this.rest.exchange<String?>(url, HttpMethod.GET, request, String::class.java).body
             val metadataDocument = XmlDocument.parseContent(metadata)
             val versionNodes = XPathFactory.newInstance()
                 .newXPath()
@@ -125,7 +125,7 @@ internal class MavenMetadataVersionResolver(
             }
             throw IllegalStateException(
                 "Repository '%s (%s)' has credentials '%s' that are not PasswordCredentials"
-                    .formatted(repository.getName(), repository.getUrl(), credentials)
+                    .format(repository.name, repository.getUrl(), credentials)
             )
         }
         return null

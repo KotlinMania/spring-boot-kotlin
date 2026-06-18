@@ -31,7 +31,7 @@ import java.util.*
  * 
  * @author Andy Wilkinson
  */
-internal class StandardGitHub(private val username: String?, private val password: String?) : GitHub {
+class StandardGitHub(private val username: String?, private val password: String?) : GitHub {
     override fun getRepository(organization: String?, name: String?): GitHubRepository {
         val restTemplate = createRestTemplate()
         restTemplate.getInterceptors()

@@ -36,7 +36,7 @@ import java.util.concurrent.Callable
  * 
  * @author Andy Wilkinson
  */
-internal open class ConsumableContentContribution protected constructor(
+open class ConsumableContentContribution protected constructor(
     project: Project?,
     type: String?,
     name: String?
@@ -51,31 +51,30 @@ internal open class ConsumableContentContribution protected constructor(
             publish(producer)
         }
         val configuration = createConfiguration(
-            getName(),
+            name,
             "Configuration for %s Antora %s content artifacts."
         )
         configuration.setCanBeConsumed(true)
         configuration.setCanBeResolved(false)
-        getProject().getArtifacts().add(configuration.getName(), producer)
+        project.getArtifacts().add(configuration.name, producer)
     }
 
     fun consumeFrom(path: String?) {
-        val configuration = createConfiguration(getName(), "Configuration for %s Antora %s content.")
+        val configuration = createConfiguration(name, "Configuration for %s Antora %s content.")
         configuration.setCanBeConsumed(false)
         configuration.setCanBeResolved(true)
-        val dependencies = getProject().getDependencies()
+        val dependencies = project.getDependencies()
         dependencies.add(
-            configuration.getName(),
-            getProject().provider<Dependency?>(Callable { projectDependency(path, configuration.getName()) })
+            configuration.name,
+            project.provider<Dependency>(Callable { projectDependency(path, configuration.name) })
         )
-        val outputDirectory: Provider<Directory?> = outputDirectory("content", getName())
-        val tasks = getProject().getTasks()
-        val copyAntoraContent: TaskProvider<*> = tasks.register<CopyAntoraContent?>(
-            taskName("copy", "%s", configuration.getName()),
-            CopyAntoraContent::class.java,
-            Action { task: CopyAntoraContent? -> configureCopyContent(task!!, path, configuration, outputDirectory) })
-        configureAntora(addInputFrom(copyAntoraContent, configuration.getName()))
-        configurePlaybookGeneration(Action { task: GenerateAntoraPlaybook? ->
+        val outputDirectory: Provider<Directory> = outputDirectory("content", name)
+        val tasks = project.getTasks()
+        val copyAntoraContent: TaskProvider<*> = tasks.register<CopyAntoraContent>(
+            taskName("copy", "%s", configuration.name),
+            CopyAntoraContent::class.java) { task: CopyAntoraContent -> configureCopyContent(task!!, path, configuration, outputDirectory) }
+        configureAntora(addInputFrom(copyAntoraContent, configuration.name))
+        configurePlaybookGeneration(Action { task: GenerateAntoraPlaybook ->
             this.addToZipContentsCollectorDependencies(
                 task
             )
@@ -83,12 +82,12 @@ internal open class ConsumableContentContribution protected constructor(
         publish(copyAntoraContent)
     }
 
-    fun publish(producer: TaskProvider<out Task?>?) {
-        getProject().getExtensions()
-            .getByType<PublishingExtension?>(PublishingExtension::class.java)
-            .getPublications()
-            .withType<MavenPublication?>(MavenPublication::class.java)
-            .configureEach(Action { mavenPublication: MavenPublication? ->
+    fun publish(producer: TaskProvider<out Task?>) {
+        project.getExtensions()
+            .getByType<PublishingExtension>(PublishingExtension::class.java)
+            .publications
+            .withType<MavenPublication>(MavenPublication::class.java)
+            .configureEach(Action { mavenPublication: MavenPublication ->
                 addPublishedMavenArtifact(
                     mavenPublication!!,
                     producer
@@ -98,46 +97,44 @@ internal open class ConsumableContentContribution protected constructor(
 
     private fun configureCopyContent(
         task: CopyAntoraContent, path: String?, configuration: Configuration?,
-        outputDirectory: Provider<Directory?>
+        outputDirectory: Provider<Directory>
     ) {
         task.setDescription(
-            "Syncs the %s Antora %s content from %s.".formatted(getName(), toDescription(getType()), path)
+            "Syncs the %s Antora %s content from %s.".format(name, toDescription(type), path)
         )
         task.setSource(configuration)
-        task.getOutputFile()
-            .set(outputDirectory.map<RegularFile?>(Transformer { dir: Directory? -> this.getContentZipFile(dir!!) }))
+        task.outputFile
+            .set(outputDirectory.map<RegularFile>(Transformer { dir: Directory? -> this.getContentZipFile(dir!!) }))
     }
 
     private fun addToZipContentsCollectorDependencies(task: GenerateAntoraPlaybook) {
-        task.getAntoraExtensions().getZipContentsCollector().getDependencies().add(getName())
+        task.antoraExtensions.zipContentsCollector.getDependencies().add(name)
     }
 
-    private fun addPublishedMavenArtifact(mavenPublication: MavenPublication, producer: TaskProvider<*>?) {
-        if ("maven" == mavenPublication.getName()) {
-            val classifier: String = "%s-%s-content".formatted(getName(), getType())
+    private fun addPublishedMavenArtifact(mavenPublication: MavenPublication, producer: TaskProvider<*>) {
+        if ("maven" == mavenPublication.name) {
+            val classifier: String = "%s-%s-content".format(name, type)
             mavenPublication.artifact(
-                producer,
-                Action { mavenArtifact: MavenArtifact? -> mavenArtifact!!.setClassifier(classifier) })
+                producer) { mavenArtifact: MavenArtifact -> mavenArtifact!!.setClassifier(classifier) }
         }
     }
 
     private fun getContentZipFile(dir: Directory): RegularFile {
-        val version = getProject().getVersion()
-        return dir.file("spring-boot-docs-%s-%s-%s-content.zip".formatted(version, getName(), getType()))
+        val version = project.version
+        return dir.file("spring-boot-docs-%s-%s-%s-content.zip".format(version, name, type))
     }
 
     private fun createConfiguration(name: String?, description: String): Configuration {
-        return getProject().getConfigurations()
+        return project.getConfigurations()
             .create(
-                configurationName(name, "Antora%sContent", getType()),
-                Action { configuration: Configuration ->
+                configurationName(name, "Antora%sContent", type)) { configuration: Configuration ->
                     configuration.setDescription(
-                        description.formatted(
-                            getName(),
-                            getType()
+                        description.format(
+                            name,
+                            type
                         )
                     )
-                })
+                }
     }
 
     companion object {

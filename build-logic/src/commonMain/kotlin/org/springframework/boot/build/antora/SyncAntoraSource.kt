@@ -37,10 +37,10 @@ abstract class SyncAntoraSource @Inject constructor(
     private var source: FileCollection? = null
 
     @get:OutputDirectory
-    abstract val outputDirectory: DirectoryProperty?
+    abstract val outputDirectory: DirectoryProperty
 
     @InputFiles
-    fun getSource(): FileCollection {
+    fun source: FileCollection {
         return this.source!!
     }
 
@@ -50,11 +50,11 @@ abstract class SyncAntoraSource @Inject constructor(
 
     @TaskAction
     fun syncAntoraSource() {
-        this.fileSystemOperations.sync(Action { sync: SyncSpec? -> this.syncAntoraSource(sync) })
+        this.fileSystemOperations.sync(Action { sync: SyncSpec -> this.syncAntoraSource(sync) })
     }
 
     private fun syncAntoraSource(sync: CopySpec) {
         sync.into(this.outputDirectory)
-        this.source!!.getFiles().forEach(Consumer { file: File? -> sync.from(this.archiveOperations.zipTree(file!!)) })
+        this.source!!.files.forEach(Consumer { file: File? -> sync.from(this.archiveOperations.zipTree(file!!)) })
     }
 }

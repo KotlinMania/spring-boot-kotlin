@@ -46,6 +46,8 @@ import java.util.function.BiFunction
 import java.util.function.BiPredicate
 import java.util.regex.Pattern
 import javax.inject.Inject
+import org.gradle.api.provider.Property
+import org.gradle.api.provider.ListProperty
 
 /**
  * Base class for tasks that upgrade dependencies in a BOM.
@@ -68,10 +70,10 @@ abstract class UpgradeDependencies protected constructor(private val bom: BomExt
         this.threads.convention(2)
         this.movingToSnapshots = movingToSnapshots
         this.upgradeApplicator = UpgradeApplicator(
-            getProject().getBuildFile().toPath(),
-            File(getProject().getRootProject().getProjectDir(), "gradle.properties").toPath()
+            project.getBuildFile().toPath(),
+            File(project.getRootProject().projectDir, "gradle.properties").toPath()
         )
-        this.repositories = getProject().getRepositories()
+        this.repositories = project.getRepositories()
     }
 
     @get:Option(
@@ -79,7 +81,7 @@ abstract class UpgradeDependencies protected constructor(private val bom: BomExt
         description = "Milestone to which dependency upgrade issues should be assigned"
     )
     @get:Input
-    abstract val milestone: Property<String?>?
+    abstract val milestone: Property<String>
 
     @get:Option(
         option = "threads",
@@ -87,7 +89,7 @@ abstract class UpgradeDependencies protected constructor(private val bom: BomExt
     )
     @get:Optional
     @get:Input
-    abstract val threads: Property<Int?>?
+    abstract val threads: Property<Int>
 
     @get:Option(
         option = "libraries",
@@ -95,7 +97,7 @@ abstract class UpgradeDependencies protected constructor(private val bom: BomExt
     )
     @get:Optional
     @get:Input
-    abstract val libraries: Property<String?>?
+    abstract val libraries: Property<String>
 
     @get:Option(
         option = "dry-run-upgrades",
@@ -103,10 +105,10 @@ abstract class UpgradeDependencies protected constructor(private val bom: BomExt
     )
     @get:Optional
     @get:Input
-    abstract val dryRun: Property<Boolean?>?
+    abstract val dryRun: Property<Boolean>
 
     @get:Input
-    abstract val repositoryNames: ListProperty<String?>?
+    abstract val repositoryNames: ListProperty<String>
 
     @TaskAction
     open fun upgradeDependencies() {
@@ -144,7 +146,7 @@ abstract class UpgradeDependencies protected constructor(private val bom: BomExt
                     repository, issueLabels, milestone, title, body,
                     existingUpgradeIssue
                 )
-                if (existingUpgradeIssue != null && existingUpgradeIssue.getState() == Issue.State.CLOSED) {
+                if (existingUpgradeIssue != null && existingUpgradeIssue.state == Issue.State.CLOSED) {
                     existingUpgradeIssue.label(mutableListOf<String?>("type: task", "status: superseded"))
                 }
                 println(
@@ -152,7 +154,7 @@ abstract class UpgradeDependencies protected constructor(private val bom: BomExt
                             + getExistingUpgradeIssueMessageDetails(existingUpgradeIssue))
                 )
                 check(
-                    ProcessBuilder().command("git", "add", modified.toFile().getAbsolutePath())
+                    ProcessBuilder().command("git", "add", modified.toFile().absolutePath)
                         .start()
                         .waitFor() == 0
                 ) { "git add failed" }
@@ -173,8 +175,8 @@ abstract class UpgradeDependencies protected constructor(private val bom: BomExt
         repository: GitHubRepository, issueLabels: MutableList<String?>?, milestone: Milestone?,
         title: String?, body: String?, existingUpgradeIssue: Issue?
     ): Int {
-        if (existingUpgradeIssue != null && existingUpgradeIssue.getState() == Issue.State.OPEN) {
-            return existingUpgradeIssue.getNumber()
+        if (existingUpgradeIssue != null && existingUpgradeIssue.state == Issue.State.OPEN) {
+            return existingUpgradeIssue.number
         }
         return repository.openIssue(title, body, issueLabels, milestone)
     }
@@ -183,14 +185,14 @@ abstract class UpgradeDependencies protected constructor(private val bom: BomExt
         if (existingUpgradeIssue == null) {
             return ""
         }
-        if (existingUpgradeIssue.getState() != Issue.State.CLOSED) {
+        if (existingUpgradeIssue.state != Issue.State.CLOSED) {
             return " (completes existing upgrade)"
         }
-        return " (supersedes #" + existingUpgradeIssue.getNumber() + " " + existingUpgradeIssue.getTitle() + ")"
+        return " (supersedes #" + existingUpgradeIssue.number + " " + existingUpgradeIssue.title + ")"
     }
 
     private fun verifyLabels(repository: GitHubRepository): MutableList<String?> {
-        val availableLabels = repository.getLabels()
+        val availableLabels = repository.labels
         val issueLabels = this.bom.upgrade.gitHub!!.issueLabels
         if (!availableLabels.containsAll(issueLabels!!)) {
             val unknownLabels: MutableList<String?> = ArrayList<String?>(issueLabels)
@@ -218,9 +220,9 @@ abstract class UpgradeDependencies protected constructor(private val bom: BomExt
     }
 
     private fun determineMilestone(repository: GitHubRepository): Milestone {
-        val milestones = repository.getMilestones()
+        val milestones = repository.milestones
         val matchingMilestone: java.util.Optional<Milestone> = milestones.stream()
-            .filter { milestone: Milestone? -> milestone!!.getName() == this.milestone.get() }
+            .filter { milestone: Milestone? -> milestone!!.name == this.milestone.get() }
             .findFirst()
         if (matchingMilestone.isEmpty()) {
             throw InvalidUserDataException("Unknown milestone: " + this.milestone.get())
@@ -231,7 +233,7 @@ abstract class UpgradeDependencies protected constructor(private val bom: BomExt
     private fun findExistingUpgradeIssue(existingUpgradeIssues: MutableList<Issue>, upgrade: Upgrade): Issue? {
         val toMatch = "Upgrade to " + upgrade.toRelease.name
         for (existingUpgradeIssue in existingUpgradeIssues) {
-            var title = existingUpgradeIssue.getTitle()
+            var title = existingUpgradeIssue.title
             val lastSpaceIndex = title.lastIndexOf(' ')
             if (lastSpaceIndex > -1) {
                 title = title.substring(0, lastSpaceIndex)
@@ -270,8 +272,8 @@ abstract class UpgradeDependencies protected constructor(private val bom: BomExt
 
     private fun asRepositories(repositoryNames: MutableList<String?>): MutableList<MavenArtifactRepository?> {
         return repositoryNames.stream()
-            .map<ArtifactRepository?> { name: String? -> this.repositories.getByName(name!!) }
-            .map<MavenArtifactRepository?> { obj: ArtifactRepository? -> MavenArtifactRepository::class.java.cast(obj) }
+            .map<ArtifactRepository> { name: String? -> this.repositories.getByName(name!!) }
+            .map<MavenArtifactRepository> { obj: ArtifactRepository? -> MavenArtifactRepository::class.java.cast(obj) }
             .toList()
     }
 
@@ -352,11 +354,11 @@ abstract class UpgradeDependencies protected constructor(private val bom: BomExt
         val description = upgrade.toRelease.nameAndVersion
         val releaseNotesLink = upgrade.toRelease.getLinkUrl("releaseNotes")
         var body: String = if (releaseNotesLink != null)
-            "Upgrade to [%s](%s).".formatted(description, releaseNotesLink)
+            "Upgrade to [%s](%s).".format(description, releaseNotesLink)
         else
-            "Upgrade to %s.".formatted(description)
+            "Upgrade to %s.".format(description)
         if (existingUpgrade != null) {
-            body += "\n\nSupersedes #" + existingUpgrade.getNumber()
+            body += "\n\nSupersedes #" + existingUpgrade.number
         }
         return body
     }

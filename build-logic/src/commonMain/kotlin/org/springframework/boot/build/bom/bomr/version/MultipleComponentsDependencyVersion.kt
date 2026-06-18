@@ -27,11 +27,11 @@ import org.apache.maven.artifact.versioning.DefaultArtifactVersion
  * @author Andy Wilkinson
  * @author Moritz Halbritter
  */
-internal class MultipleComponentsDependencyVersion private constructor(
+class MultipleComponentsDependencyVersion private constructor(
     artifactVersion: ArtifactVersion?,
     private val original: String
 ) : ArtifactVersionDependencyVersion(
-    artifactVersion, ComparableVersion(
+    artifactVersion!!, ComparableVersion(
         original
     )
 ) {

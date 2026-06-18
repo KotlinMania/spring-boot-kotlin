@@ -24,10 +24,10 @@ import javax.inject.Inject
  * 
  * @author Andy Wilkinson
  */
-class AntoraDependenciesPlugin : Plugin<Project?> {
+class AntoraDependenciesPlugin : Plugin<Project> {
     override fun apply(project: Project) {
         val antoraDependencies = project.getObjects()
-            .domainObjectContainer<AntoraDependency?>(AntoraDependency::class.java)
+            .domainObjectContainer<AntoraDependency>(AntoraDependency::class.java)
         project.getExtensions().add("antoraDependencies", antoraDependencies)
     }
 

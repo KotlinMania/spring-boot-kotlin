@@ -23,7 +23,7 @@ import java.util.*
  * 
  * @author Andy Wilkinson
  */
-class Issue internal constructor(
+class Issue constructor(
     private val rest: RestTemplate,
     val number: Int,
     val title: String?,

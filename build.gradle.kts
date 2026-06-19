@@ -39,52 +39,6 @@ version = providers.gradleProperty("project.version").getOrElse("0.1.0-SNAPSHOT"
 val frameworkName = providers.gradleProperty("project.frameworkName").getOrElse("Unnamed")
 val projectNamespace = providers.gradleProperty("project.namespace").getOrElse("io.github.kotlinmania")
 val kotlinVersion = providers.gradleProperty("versions.kotlin").getOrElse("2.4.0")
-
-// ---------------------------------------------------------------------------
-// Multi-module aggregation (mirrors kotlinmania/km-io).
-// Propagates identity/repositories to every included module and orders the
-// Android SDK install ahead of any module's android {} resolution.
-// ---------------------------------------------------------------------------
-allprojects {
-    group = providers.gradleProperty("project.group").getOrElse("io.github.kotlinmania")
-    version = (properties["DeployVersion"] as String?)
-        ?: providers.gradleProperty("project.version").getOrElse("0.1.0-SNAPSHOT")
-    repositories {
-        mavenCentral()
-        google()
-        maven { url = uri("https://repo.spring.io/snapshot") }
-    }
-}
-
-subprojects {
-    // Per the km-io model, Spring's convention plugins (org.springframework.boot.*) are
-    // applied PER-MODULE in each module's own build.gradle.kts plugins{} block — NOT here.
-    // build-logic is a composite include, so its plugins resolve into each consumer's
-    // classpath; applying them from the root would drag that Java-convention classpath onto
-    // the root project, colliding with the template's KMP plugin classpath. The root only
-    // provides shared repositories and resolution strategy.
-    repositories {
-        maven {
-            name = "Shibboleth Releases"
-            url = uri("https://build.shibboleth.net/nexus/content/repositories/releases")
-            content {
-                includeGroup("org.opensaml")
-                includeGroup("net.shibboleth")
-            }
-        }
-    }
-
-    configurations.all {
-        resolutionStrategy.cacheChangingModulesFor(0, "minutes")
-    }
-
-    afterEvaluate {
-        tasks.matching { it.name == "compileAndroidMain" }.configureEach {
-            dependsOn(rootProject.tasks.named("ensureAndroidSdk"))
-        }
-    }
-}
-
 val isCodeqlBuild = providers.gradleProperty("kotlinmania.codeql").map(String::toBoolean).getOrElse(false)
 val commonMainBundleName = providers.gradleProperty("project.dependencies.commonMainBundle").get()
 val commonMainDependencyBundle =
@@ -314,7 +268,36 @@ fun installProjectAndroidSdk(execOperations: ExecOperations) {
     println("setup-android-sdk: done; SDK at $projectAndroidSdkDir")
 }
 
-installProjectAndroidSdk(serviceOf())
+// ----------------------------------------------------------------------------
+// Android SDK setup is gated to follow the requested task. It must never run for
+// non-Android invocations (jsTest, jvmTest, swiftExportSmokeTest, native /
+// androidNative links) -- an unconditional install here is what made the SDK
+// download appear on every machine and target.
+//
+// `writeAndroidLocalProperties()` always runs: it is cheap, hits no network, and
+// only points local.properties at the project-local .android-sdk so AGP can
+// resolve `sdk.dir` while the `androidLibrary {}` block evaluates.
+//
+// The SDK *package* download must happen at configuration time when -- and only
+// when -- an Android task is in the requested build. AGP validates the packages
+// while determining the dependencies of `compileAndroidMain` (task-graph
+// construction, strictly before any task executes), so a plain `dependsOn`
+// cannot supply them in time. We detect Android intent from the requested task
+// names and install eagerly in that case. androidNative* are Kotlin/Native
+// targets and need no Android SDK.
+// ----------------------------------------------------------------------------
+writeAndroidLocalProperties()
+
+fun requestedTaskWantsAndroid(rawTaskName: String): Boolean {
+    val taskName = rawTaskName.substringAfterLast(':')
+    if (taskName.contains("AndroidNative")) return false // Kotlin/Native, no SDK
+    if (taskName.contains("Android")) return true // direct AGP tasks
+    return taskName in setOf("build", "assemble", "check") // aggregates pull android
+}
+
+if (gradle.startParameter.taskNames.any(::requestedTaskWantsAndroid)) {
+    installProjectAndroidSdk(serviceOf())
+}
 
 val ensureAndroidSdk by tasks.registering {
     group = "setup"
@@ -325,7 +308,14 @@ val ensureAndroidSdk by tasks.registering {
     }
 }
 
-tasks.matching { it.name == "compileAndroidMain" }.configureEach {
+// Secondary net: order every AGP Android task after the installer (a no-op on
+// warm runs). Excludes androidNative* (Kotlin/Native) and the installer itself.
+tasks.matching { task ->
+    val taskName = task.name
+    taskName != "ensureAndroidSdk" &&
+        taskName.contains("Android") &&
+        !taskName.contains("AndroidNative")
+}.configureEach {
     dependsOn(ensureAndroidSdk)
 }
 

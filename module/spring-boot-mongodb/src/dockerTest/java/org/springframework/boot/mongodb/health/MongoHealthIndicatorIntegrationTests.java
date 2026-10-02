@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.mongodb.health;
+package io.github.kotlinmania.spring.boot.mongodb.health;
 
 import com.mongodb.ConnectionString;
 import com.mongodb.MongoClientSettings;
@@ -30,9 +30,9 @@ import org.testcontainers.junit.jupiter.Container;
 import org.testcontainers.junit.jupiter.Testcontainers;
 import org.testcontainers.mongodb.MongoDBContainer;
 
-import org.springframework.boot.health.contributor.Health;
-import org.springframework.boot.health.contributor.Status;
-import org.springframework.boot.testsupport.container.TestImage;
+import io.github.kotlinmania.spring.boot.health.contributor.Health;
+import io.github.kotlinmania.spring.boot.health.contributor.Status;
+import io.github.kotlinmania.spring.boot.testsupport.container.TestImage;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

@@ -14,16 +14,16 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.data.mongodb.autoconfigure;
+package io.github.kotlinmania.spring.boot.data.mongodb.autoconfigure;
 
 import com.mongodb.ClientSessionOptions;
 import com.mongodb.client.ClientSession;
 import com.mongodb.client.MongoDatabase;
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
-import org.springframework.boot.data.mongodb.autoconfigure.DataMongoProperties.Gridfs;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnBean;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnMissingBean;
+import io.github.kotlinmania.spring.boot.data.mongodb.autoconfigure.DataMongoProperties.Gridfs;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.dao.DataAccessException;

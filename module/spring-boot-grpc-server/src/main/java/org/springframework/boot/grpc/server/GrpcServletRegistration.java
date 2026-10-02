@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.grpc.server;
+package io.github.kotlinmania.spring.boot.grpc.server;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -30,7 +30,7 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.web.servlet.DynamicRegistrationBean;
+import io.github.kotlinmania.spring.boot.web.servlet.DynamicRegistrationBean;
 import org.springframework.core.log.LogMessage;
 import org.springframework.grpc.server.service.GrpcServiceConfigurer;
 import org.springframework.grpc.server.service.GrpcServiceDiscoverer;

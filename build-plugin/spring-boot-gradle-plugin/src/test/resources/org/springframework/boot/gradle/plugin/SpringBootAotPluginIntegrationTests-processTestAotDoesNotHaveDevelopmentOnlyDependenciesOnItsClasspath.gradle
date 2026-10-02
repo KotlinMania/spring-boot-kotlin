@@ -15,11 +15,11 @@
  */
 
 plugins {
-	id 'org.springframework.boot' version '{version}'
+	id 'io.github.kotlinmania.spring.boot. version '{version}'
 	id 'java'
 }
 
-apply plugin: 'org.springframework.boot.aot'
+apply plugin: 'io.github.kotlinmania.spring.boot.aot'
 
 repositories {
 	mavenCentral()
@@ -31,7 +31,7 @@ repositories {
 configurations.all {
 	resolutionStrategy {
 		eachDependency {
-			if (it.requested.group == 'org.springframework.boot') {
+			if (it.requested.group == 'io.github.kotlinmania.spring.boot.) {
 				it.useVersion project.bootVersion
 			}
 		}

@@ -14,17 +14,17 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.jdbc.docker.compose;
+package io.github.kotlinmania.spring.boot.jdbc.docker.compose;
 
 import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.docker.compose.core.RunningService;
-import org.springframework.boot.docker.compose.service.connection.DockerComposeConnectionDetailsFactory;
-import org.springframework.boot.docker.compose.service.connection.DockerComposeConnectionSource;
-import org.springframework.boot.jdbc.autoconfigure.JdbcConnectionDetails;
+import io.github.kotlinmania.spring.boot.docker.compose.core.RunningService;
+import io.github.kotlinmania.spring.boot.docker.compose.service.connection.DockerComposeConnectionDetailsFactory;
+import io.github.kotlinmania.spring.boot.docker.compose.service.connection.DockerComposeConnectionSource;
+import io.github.kotlinmania.spring.boot.jdbc.autoconfigure.JdbcConnectionDetails;
 import org.springframework.core.env.Environment;
 import org.springframework.util.StringUtils;
 

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.test.autoconfigure.json;
+package io.github.kotlinmania.spring.boot.test.autoconfigure.json;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
@@ -31,9 +31,9 @@ import org.springframework.beans.factory.FactoryBean;
 import org.springframework.beans.factory.config.BeanPostProcessor;
 import org.springframework.beans.factory.config.ConfigurableBeanFactory;
 import org.springframework.beans.factory.config.InstantiationAwareBeanPostProcessor;
-import org.springframework.boot.autoconfigure.AutoConfiguration;
-import org.springframework.boot.test.json.AbstractJsonMarshalTester;
-import org.springframework.boot.test.json.BasicJsonTester;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfiguration;
+import io.github.kotlinmania.spring.boot.test.json.AbstractJsonMarshalTester;
+import io.github.kotlinmania.spring.boot.test.json.BasicJsonTester;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ImportRuntimeHints;
 import org.springframework.context.annotation.Scope;

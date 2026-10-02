@@ -14,20 +14,20 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.grpc.server.autoconfigure.security;
+package io.github.kotlinmania.spring.boot.grpc.server.autoconfigure.security;
 
 import io.grpc.BindableService;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 
-import org.springframework.boot.autoconfigure.AutoConfigurations;
-import org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener;
-import org.springframework.boot.grpc.server.GrpcServletRegistration;
-import org.springframework.boot.grpc.server.autoconfigure.GrpcServerExecutorProvider;
-import org.springframework.boot.logging.LogLevel;
-import org.springframework.boot.test.context.FilteredClassLoader;
-import org.springframework.boot.test.context.runner.ApplicationContextRunner;
-import org.springframework.boot.test.context.runner.WebApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurations;
+import io.github.kotlinmania.spring.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener;
+import io.github.kotlinmania.spring.boot.grpc.server.GrpcServletRegistration;
+import io.github.kotlinmania.spring.boot.grpc.server.autoconfigure.GrpcServerExecutorProvider;
+import io.github.kotlinmania.spring.boot.logging.LogLevel;
+import io.github.kotlinmania.spring.boot.test.context.FilteredClassLoader;
+import io.github.kotlinmania.spring.boot.test.context.runner.ApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.test.context.runner.WebApplicationContextRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.grpc.server.GrpcServerFactory;

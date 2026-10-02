@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.gson.autoconfigure;
+package io.github.kotlinmania.spring.boot.gson.autoconfigure;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;

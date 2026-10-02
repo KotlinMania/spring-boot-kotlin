@@ -19,9 +19,9 @@ package smoketest.actuator.customsecurity;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.springframework.boot.actuate.web.mappings.MappingsEndpoint;
-import org.springframework.boot.security.autoconfigure.actuate.web.servlet.EndpointRequest;
-import org.springframework.boot.security.autoconfigure.web.servlet.PathRequest;
+import io.github.kotlinmania.spring.boot.actuate.web.mappings.MappingsEndpoint;
+import io.github.kotlinmania.spring.boot.security.autoconfigure.actuate.web.servlet.EndpointRequest;
+import io.github.kotlinmania.spring.boot.security.autoconfigure.web.servlet.PathRequest;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;

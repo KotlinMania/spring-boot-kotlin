@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.jms.autoconfigure;
+package io.github.kotlinmania.spring.boot.jms.autoconfigure;
 
 import java.time.Duration;
 
@@ -22,12 +22,12 @@ import io.micrometer.observation.ObservationRegistry;
 import jakarta.jms.ConnectionFactory;
 
 import org.springframework.beans.factory.ObjectProvider;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnSingleCandidate;
-import org.springframework.boot.context.properties.PropertyMapper;
-import org.springframework.boot.jms.autoconfigure.JmsProperties.DeliveryMode;
-import org.springframework.boot.jms.autoconfigure.JmsProperties.Template;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnClass;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnMissingBean;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnSingleCandidate;
+import io.github.kotlinmania.spring.boot.context.properties.PropertyMapper;
+import io.github.kotlinmania.spring.boot.jms.autoconfigure.JmsProperties.DeliveryMode;
+import io.github.kotlinmania.spring.boot.jms.autoconfigure.JmsProperties.Template;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.jms.core.JmsClient;

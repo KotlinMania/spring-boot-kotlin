@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.activemq.autoconfigure;
+package io.github.kotlinmania.spring.boot.activemq.autoconfigure;
 
 import java.time.Duration;
 import java.util.ArrayList;
@@ -22,9 +22,9 @@ import java.util.List;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.boot.context.properties.NestedConfigurationProperty;
-import org.springframework.boot.jms.autoconfigure.JmsPoolConnectionFactoryProperties;
+import io.github.kotlinmania.spring.boot.context.properties.ConfigurationProperties;
+import io.github.kotlinmania.spring.boot.context.properties.NestedConfigurationProperty;
+import io.github.kotlinmania.spring.boot.jms.autoconfigure.JmsPoolConnectionFactoryProperties;
 
 /**
  * Configuration properties for ActiveMQ.

@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.configurationsample.endpoint;
+package io.github.kotlinmania.spring.boot.configurationsample.endpoint;
 
-import org.springframework.boot.configurationsample.TestEndpoint;
+import io.github.kotlinmania.spring.boot.configurationsample.TestEndpoint;
 
 /**
  * An endpoint with unrestricted access unless configured explicitly.

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.zipkin.autoconfigure;
+package io.github.kotlinmania.spring.boot.zipkin.autoconfigure;
 
 import java.io.IOException;
 import java.net.http.HttpClient;
@@ -35,7 +35,7 @@ import zipkin2.reporter.Encoding;
 import zipkin2.reporter.HttpEndpointSupplier;
 import zipkin2.reporter.HttpEndpointSuppliers;
 
-import org.springframework.boot.testsupport.classpath.ClassPathExclusions;
+import io.github.kotlinmania.spring.boot.testsupport.classpath.ClassPathExclusions;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatException;

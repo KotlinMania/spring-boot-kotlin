@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.features.json.jackson.customserializersanddeserializers.object;
+package io.github.kotlinmania.spring.boot.docs.features.json.jackson.customserializersanddeserializers.object;
 
 class MyObject {
 

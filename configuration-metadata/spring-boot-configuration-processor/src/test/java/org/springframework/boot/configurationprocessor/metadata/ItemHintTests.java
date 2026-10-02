@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.configurationprocessor.metadata;
+package io.github.kotlinmania.spring.boot.configurationprocessor.metadata;
 
 import java.util.Collections;
 import java.util.List;
@@ -22,8 +22,8 @@ import java.util.Map;
 
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.configurationprocessor.metadata.ItemHint.ValueHint;
-import org.springframework.boot.configurationprocessor.metadata.ItemHint.ValueProvider;
+import io.github.kotlinmania.spring.boot.configurationprocessor.metadata.ItemHint.ValueHint;
+import io.github.kotlinmania.spring.boot.configurationprocessor.metadata.ItemHint.ValueProvider;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

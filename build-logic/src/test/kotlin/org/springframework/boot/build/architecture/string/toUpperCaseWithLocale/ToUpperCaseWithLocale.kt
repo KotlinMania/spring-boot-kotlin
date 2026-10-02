@@ -15,9 +15,13 @@
  */
 package org.springframework.boot.build.architecture.string.toUpperCaseWithLocale
 
-internal class ToUpperCaseWithLocale {
-    fun exampleMethod() {
-        val test = "Object must not be null"
-        println(test.uppercase())
-    }
+package io.github.kotlinmania.spring.boot.build.architecture.string.toUpperCase;
+
+class ToUpperCase {
+
+	void exampleMethod() {
+		String test = "Object must not be null";
+		System.out.println(test.toUpperCase());
+	}
+
 }

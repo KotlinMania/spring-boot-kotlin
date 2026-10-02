@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.webflux.autoconfigure;
+package io.github.kotlinmania.spring.boot.webflux.autoconfigure;
 
 import java.time.Duration;
 import java.util.List;
@@ -30,34 +30,34 @@ import org.springframework.aot.hint.RuntimeHintsRegistrar;
 import org.springframework.aot.hint.TypeReference;
 import org.springframework.beans.factory.ListableBeanFactory;
 import org.springframework.beans.factory.ObjectProvider;
-import org.springframework.boot.autoconfigure.AutoConfiguration;
-import org.springframework.boot.autoconfigure.AutoConfigureOrder;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnBooleanProperty;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnWebApplication;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnWebApplication.Type;
-import org.springframework.boot.autoconfigure.task.TaskExecutionAutoConfiguration;
-import org.springframework.boot.autoconfigure.template.TemplateAvailabilityProviders;
-import org.springframework.boot.autoconfigure.web.ConditionalOnEnabledResourceChain;
-import org.springframework.boot.autoconfigure.web.WebProperties;
-import org.springframework.boot.autoconfigure.web.WebProperties.Resources;
-import org.springframework.boot.autoconfigure.web.WebResourcesRuntimeHints;
-import org.springframework.boot.autoconfigure.web.format.DateTimeFormatters;
-import org.springframework.boot.autoconfigure.web.format.WebConversionService;
-import org.springframework.boot.context.properties.EnableConfigurationProperties;
-import org.springframework.boot.context.properties.PropertyMapper;
-import org.springframework.boot.convert.ApplicationConversionService;
-import org.springframework.boot.http.codec.CodecCustomizer;
-import org.springframework.boot.http.codec.autoconfigure.CodecsAutoConfiguration;
-import org.springframework.boot.thread.Threading;
-import org.springframework.boot.validation.autoconfigure.ValidatorAdapter;
-import org.springframework.boot.web.server.autoconfigure.ServerProperties;
-import org.springframework.boot.webflux.autoconfigure.WebFluxProperties.Apiversion;
-import org.springframework.boot.webflux.autoconfigure.WebFluxProperties.Apiversion.Use;
-import org.springframework.boot.webflux.autoconfigure.WebFluxProperties.Format;
-import org.springframework.boot.webflux.filter.OrderedHiddenHttpMethodFilter;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigureOrder;
+import io.github.kotlinmania.spring.boot.autoconfigure.EnableAutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnBooleanProperty;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnClass;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnMissingBean;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnWebApplication;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnWebApplication.Type;
+import io.github.kotlinmania.spring.boot.autoconfigure.task.TaskExecutionAutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.template.TemplateAvailabilityProviders;
+import io.github.kotlinmania.spring.boot.autoconfigure.web.ConditionalOnEnabledResourceChain;
+import io.github.kotlinmania.spring.boot.autoconfigure.web.WebProperties;
+import io.github.kotlinmania.spring.boot.autoconfigure.web.WebProperties.Resources;
+import io.github.kotlinmania.spring.boot.autoconfigure.web.WebResourcesRuntimeHints;
+import io.github.kotlinmania.spring.boot.autoconfigure.web.format.DateTimeFormatters;
+import io.github.kotlinmania.spring.boot.autoconfigure.web.format.WebConversionService;
+import io.github.kotlinmania.spring.boot.context.properties.EnableConfigurationProperties;
+import io.github.kotlinmania.spring.boot.context.properties.PropertyMapper;
+import io.github.kotlinmania.spring.boot.convert.ApplicationConversionService;
+import io.github.kotlinmania.spring.boot.http.codec.CodecCustomizer;
+import io.github.kotlinmania.spring.boot.http.codec.autoconfigure.CodecsAutoConfiguration;
+import io.github.kotlinmania.spring.boot.thread.Threading;
+import io.github.kotlinmania.spring.boot.validation.autoconfigure.ValidatorAdapter;
+import io.github.kotlinmania.spring.boot.web.server.autoconfigure.ServerProperties;
+import io.github.kotlinmania.spring.boot.webflux.autoconfigure.WebFluxProperties.Apiversion;
+import io.github.kotlinmania.spring.boot.webflux.autoconfigure.WebFluxProperties.Apiversion.Use;
+import io.github.kotlinmania.spring.boot.webflux.autoconfigure.WebFluxProperties.Format;
+import io.github.kotlinmania.spring.boot.webflux.filter.OrderedHiddenHttpMethodFilter;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.EmbeddedValueResolverAware;
 import org.springframework.context.annotation.Bean;
@@ -126,7 +126,7 @@ import org.springframework.web.server.session.WebSessionManager;
 @AutoConfiguration(
 		after = { ReactiveMultipartAutoConfiguration.class, WebSessionIdResolverAutoConfiguration.class,
 				CodecsAutoConfiguration.class },
-		afterName = "org.springframework.boot.validation.autoconfigure.ValidationAutoConfiguration")
+		afterName = "io.github.kotlinmania.spring.boot.validation.autoconfigure.ValidationAutoConfiguration")
 @ConditionalOnWebApplication(type = Type.REACTIVE)
 @ConditionalOnClass(WebFluxConfigurer.class)
 @ConditionalOnMissingBean({ WebFluxConfigurationSupport.class })
@@ -355,7 +355,7 @@ public final class WebFluxAutoConfiguration {
 		@Override
 		public Validator webFluxValidator() {
 			if (!ClassUtils.isPresent("jakarta.validation.Validator", getClass().getClassLoader())
-					|| !ClassUtils.isPresent("org.springframework.boot.validation.autoconfigure.ValidatorAdapter",
+					|| !ClassUtils.isPresent("io.github.kotlinmania.spring.boot.validation.autoconfigure.ValidatorAdapter",
 							getClass().getClassLoader())) {
 				return super.webFluxValidator();
 			}
@@ -470,7 +470,7 @@ public final class WebFluxAutoConfiguration {
 		@Override
 		public void registerHints(RuntimeHints hints, @Nullable ClassLoader classLoader) {
 			hints.reflection()
-				.registerType(TypeReference.of("org.springframework.boot.validation.autoconfigure.ValidatorAdapter"));
+				.registerType(TypeReference.of("io.github.kotlinmania.spring.boot.validation.autoconfigure.ValidatorAdapter"));
 		}
 
 	}

@@ -14,16 +14,16 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.security.oauth2.server.authorization.autoconfigure.servlet;
+package io.github.kotlinmania.spring.boot.security.oauth2.server.authorization.autoconfigure.servlet;
 
-import org.springframework.boot.autoconfigure.AutoConfiguration;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnWebApplication;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnWebApplication.Type;
-import org.springframework.boot.security.autoconfigure.SecurityAutoConfiguration;
-import org.springframework.boot.security.autoconfigure.UserDetailsServiceAutoConfiguration;
-import org.springframework.boot.security.autoconfigure.actuate.web.servlet.ManagementWebSecurityAutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.EnableAutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnClass;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnWebApplication;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnWebApplication.Type;
+import io.github.kotlinmania.spring.boot.security.autoconfigure.SecurityAutoConfiguration;
+import io.github.kotlinmania.spring.boot.security.autoconfigure.UserDetailsServiceAutoConfiguration;
+import io.github.kotlinmania.spring.boot.security.autoconfigure.actuate.web.servlet.ManagementWebSecurityAutoConfiguration;
 import org.springframework.context.annotation.Import;
 import org.springframework.security.oauth2.server.authorization.OAuth2Authorization;
 
@@ -44,7 +44,7 @@ import org.springframework.security.oauth2.server.authorization.OAuth2Authorizat
  * @see OAuth2AuthorizationServerJwtAutoConfiguration
  */
 @AutoConfiguration(before = { SecurityAutoConfiguration.class, ManagementWebSecurityAutoConfiguration.class },
-		beforeName = "org.springframework.boot.security.oauth2.server.resource.autoconfigure.OAuth2ResourceServerAutoConfiguration")
+		beforeName = "io.github.kotlinmania.spring.boot.security.oauth2.server.resource.autoconfigure.OAuth2ResourceServerAutoConfiguration")
 @ConditionalOnClass(OAuth2Authorization.class)
 @ConditionalOnWebApplication(type = Type.SERVLET)
 @Import({ OAuth2AuthorizationServerConfiguration.class, OAuth2AuthorizationServerWebSecurityConfiguration.class })

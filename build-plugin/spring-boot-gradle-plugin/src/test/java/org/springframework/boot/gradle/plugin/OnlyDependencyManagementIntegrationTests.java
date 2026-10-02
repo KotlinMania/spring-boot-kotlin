@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.gradle.plugin;
+package io.github.kotlinmania.spring.boot.gradle.plugin;
 
 import org.junit.jupiter.api.TestTemplate;
 
-import org.springframework.boot.gradle.junit.GradleCompatibility;
-import org.springframework.boot.testsupport.gradle.testkit.GradleBuild;
+import io.github.kotlinmania.spring.boot.gradle.junit.GradleCompatibility;
+import io.github.kotlinmania.spring.boot.testsupport.gradle.testkit.GradleBuild;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -38,7 +38,7 @@ class OnlyDependencyManagementIntegrationTests {
 	@TestTemplate
 	void dependencyManagementCanBeConfiguredUsingCoordinatesConstant() {
 		assertThat(this.gradleBuild.build("dependencyManagement").getOutput())
-			.contains("org.springframework.boot:spring-boot-starter ");
+			.contains("io.github.kotlinmania.spring.boot.spring-boot-starter ");
 	}
 
 }

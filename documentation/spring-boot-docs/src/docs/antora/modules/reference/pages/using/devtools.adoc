@@ -10,7 +10,7 @@ To include devtools support, add the module dependency to your build, as shown i
 ----
 <dependencies>
 	<dependency>
-		<groupId>org.springframework.boot</groupId>
+		<groupId>io.github.kotlinmania.spring.boot./groupId>
 		<artifactId>spring-boot-devtools</artifactId>
 		<optional>true</optional>
 	</dependency>
@@ -21,7 +21,7 @@ To include devtools support, add the module dependency to your build, as shown i
 [source,gradle]
 ----
 dependencies {
-	developmentOnly("org.springframework.boot:spring-boot-devtools")
+	developmentOnly("io.github.kotlinmania.spring.boot.spring-boot-devtools")
 }
 ----
 
@@ -243,7 +243,7 @@ As described earlier in the xref:#using.devtools.restart.restart-vs-reload[] sec
 If this causes issues, you can diagnose the problem by using the `spring.devtools.restart.enabled` system property, and if the app works with restart switched off, you might need to customize what gets loaded by which classloader.
 
 By default, any open project in your IDE is loaded with the "`restart`" classloader, and any regular `.jar` file is loaded with the "`base`" classloader.
-The same is true if you use `mvn spring-boot:run` or `gradle bootRun`: the project containing your javadoc:org.springframework.boot.autoconfigure.SpringBootApplication[format=annotation] is loaded with the "`restart`" classloader, and everything else with the "`base`" classloader.
+The same is true if you use `mvn spring-boot:run` or `gradle bootRun`: the project containing your javadoc:io.github.kotlinmania.spring.boot.autoconfigure.SpringBootApplication[format=annotation] is loaded with the "`restart`" classloader, and everything else with the "`base`" classloader.
 The classpath is printed on the console when you start the app, which can help to identify any problematic entries.
 Classes used reflectively, especially annotations, can be loaded into the parent (fixed) classloader on startup before the application classes which use them, and this might lead to them not being detected by Spring in the application.
 
@@ -337,7 +337,7 @@ Profile specific filenames (of the form `spring-boot-devtools-<profile>.properti
 [[using.devtools.globalsettings.configuring-file-system-watcher]]
 === Configuring File System Watcher
 
-javadoc:org.springframework.boot.devtools.filewatch.FileSystemWatcher[] works by polling the class changes with a certain time interval, and then waiting for a predefined quiet period to make sure there are no more changes.
+javadoc:io.github.kotlinmania.spring.boot.devtools.filewatch.FileSystemWatcher[] works by polling the class changes with a certain time interval, and then waiting for a predefined quiet period to make sure there are no more changes.
 Since Spring Boot relies entirely on the IDE to compile and copy files into the location from where Spring Boot can read them, you might find that there are times when certain changes are not reflected when devtools restarts the application.
 If you observe such problems constantly, try increasing the `spring.devtools.restart.poll-interval` and `spring.devtools.restart.quiet-period` parameters to the values that fit your development environment:
 
@@ -371,7 +371,7 @@ To enable it, you need to make sure that `devtools` is included in the repackage
 <build>
 	<plugins>
 		<plugin>
-			<groupId>org.springframework.boot</groupId>
+			<groupId>io.github.kotlinmania.spring.boot./groupId>
 			<artifactId>spring-boot-maven-plugin</artifactId>
 			<configuration>
 				<includeOptional>true</includeOptional>
@@ -399,7 +399,7 @@ NOTE: Remote devtools is not supported for Spring WebFlux applications.
 === Running the Remote Client Application
 
 The remote client application is designed to be run from within your IDE.
-You need to run javadoc:org.springframework.boot.devtools.RemoteSpringApplication[] with the same classpath as the remote project that you connect to.
+You need to run javadoc:io.github.kotlinmania.spring.boot.devtools.RemoteSpringApplication[] with the same classpath as the remote project that you connect to.
 The application's single required argument is the remote URL to which it connects.
 
 For example, if you are using Eclipse or Spring Tools and you have a project named `my-app` that you have deployed to Cloud Foundry, you would do the following:
@@ -407,7 +407,7 @@ For example, if you are using Eclipse or Spring Tools and you have a project nam
 * Select `Run Configurations...` from the `Run` menu.
 * Create a new `Java Application` "`launch configuration`".
 * Browse for the `my-app` project.
-* Use javadoc:org.springframework.boot.devtools.RemoteSpringApplication[] as the main class.
+* Use javadoc:io.github.kotlinmania.spring.boot.devtools.RemoteSpringApplication[] as the main class.
 * Add `+++https://myapp.cfapps.io+++` to the `Program arguments` (or whatever your remote URL is).
 
 A running remote client might resemble the following listing:
@@ -438,7 +438,7 @@ On a slower development environment, it may happen that the quiet period is not 
 The server is restarted after the first batch of class changes is uploaded.
 The next batch can’t be sent to the application, since the server is restarting.
 
-This is typically manifested by a warning in the javadoc:org.springframework.boot.devtools.RemoteSpringApplication[] logs about failing to upload some of the classes, and a consequent retry.
+This is typically manifested by a warning in the javadoc:io.github.kotlinmania.spring.boot.devtools.RemoteSpringApplication[] logs about failing to upload some of the classes, and a consequent retry.
 But it may also lead to application code inconsistency and failure to restart after the first batch of changes is uploaded.
 If you observe such problems constantly, try increasing the `spring.devtools.restart.poll-interval` and `spring.devtools.restart.quiet-period` parameters to the values that fit your development environment.
 See the xref:using/devtools.adoc#using.devtools.globalsettings.configuring-file-system-watcher[] section for configuring these properties.

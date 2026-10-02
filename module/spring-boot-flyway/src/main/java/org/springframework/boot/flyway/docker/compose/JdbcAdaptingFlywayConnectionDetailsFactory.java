@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.flyway.docker.compose;
+package io.github.kotlinmania.spring.boot.flyway.docker.compose;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.autoconfigure.service.connection.ConnectionDetailsFactory;
-import org.springframework.boot.flyway.autoconfigure.FlywayConnectionDetails;
-import org.springframework.boot.jdbc.autoconfigure.JdbcConnectionDetails;
+import io.github.kotlinmania.spring.boot.autoconfigure.service.connection.ConnectionDetailsFactory;
+import io.github.kotlinmania.spring.boot.flyway.autoconfigure.FlywayConnectionDetails;
+import io.github.kotlinmania.spring.boot.jdbc.autoconfigure.JdbcConnectionDetails;
 
 /**
  * {@link ConnectionDetailsFactory} that produces {@link FlywayConnectionDetails} by

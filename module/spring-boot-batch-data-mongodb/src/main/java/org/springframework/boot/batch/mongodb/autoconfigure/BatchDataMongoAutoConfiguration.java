@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.batch.mongodb.autoconfigure;
+package io.github.kotlinmania.spring.boot.batch.mongodb.autoconfigure;
 
 import com.mongodb.client.MongoClient;
 import org.jspecify.annotations.Nullable;
@@ -25,19 +25,19 @@ import org.springframework.batch.core.configuration.support.MongoDefaultBatchCon
 import org.springframework.batch.core.launch.JobOperator;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.ObjectProvider;
-import org.springframework.boot.autoconfigure.AutoConfiguration;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
-import org.springframework.boot.batch.autoconfigure.BatchAutoConfiguration;
-import org.springframework.boot.batch.autoconfigure.BatchJobLauncherAutoConfiguration;
-import org.springframework.boot.batch.autoconfigure.BatchTaskExecutor;
-import org.springframework.boot.batch.autoconfigure.BatchTransactionManager;
-import org.springframework.boot.context.properties.EnableConfigurationProperties;
-import org.springframework.boot.context.properties.source.InvalidConfigurationPropertyValueException;
-import org.springframework.boot.data.mongodb.autoconfigure.DataMongoAutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.EnableAutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnBean;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnClass;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnMissingBean;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnProperty;
+import io.github.kotlinmania.spring.boot.batch.autoconfigure.BatchAutoConfiguration;
+import io.github.kotlinmania.spring.boot.batch.autoconfigure.BatchJobLauncherAutoConfiguration;
+import io.github.kotlinmania.spring.boot.batch.autoconfigure.BatchTaskExecutor;
+import io.github.kotlinmania.spring.boot.batch.autoconfigure.BatchTransactionManager;
+import io.github.kotlinmania.spring.boot.context.properties.EnableConfigurationProperties;
+import io.github.kotlinmania.spring.boot.context.properties.source.InvalidConfigurationPropertyValueException;
+import io.github.kotlinmania.spring.boot.data.mongodb.autoconfigure.DataMongoAutoConfiguration;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.loader.launch;
+package io.github.kotlinmania.spring.boot.loader.launch;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
@@ -23,7 +23,7 @@ import java.net.URL;
 import java.util.function.Supplier;
 import java.util.jar.Manifest;
 
-import org.springframework.boot.loader.net.protocol.jar.JarUrlClassLoader;
+import io.github.kotlinmania.spring.boot.loader.net.protocol.jar.JarUrlClassLoader;
 
 /**
  * {@link ClassLoader} used by the {@link Launcher}.
@@ -35,7 +35,7 @@ import org.springframework.boot.loader.net.protocol.jar.JarUrlClassLoader;
  */
 public class LaunchedClassLoader extends JarUrlClassLoader {
 
-	private static final String JAR_MODE_PACKAGE_PREFIX = "org.springframework.boot.loader.jarmode.";
+	private static final String JAR_MODE_PACKAGE_PREFIX = "io.github.kotlinmania.spring.boot.loader.jarmode.";
 
 	private static final String JAR_MODE_RUNNER_CLASS_NAME = JarModeRunner.class.getName();
 

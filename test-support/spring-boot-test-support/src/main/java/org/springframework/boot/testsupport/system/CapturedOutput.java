@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.testsupport.system;
+package io.github.kotlinmania.spring.boot.testsupport.system;
 
 /**
  * Internal test class providing access to {@link System#out System.out} and

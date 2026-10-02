@@ -18,6 +18,6 @@
  * Support for testcontainers.
  */
 @NullMarked
-package org.springframework.boot.testcontainers;
+package io.github.kotlinmania.spring.boot.testcontainers;
 
 import org.jspecify.annotations.NullMarked;

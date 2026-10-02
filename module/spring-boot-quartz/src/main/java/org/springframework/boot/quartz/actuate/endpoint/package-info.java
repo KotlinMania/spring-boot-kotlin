@@ -18,6 +18,6 @@
  * Actuator endpoint for Quartz Scheduler.
  */
 @NullMarked
-package org.springframework.boot.quartz.actuate.endpoint;
+package io.github.kotlinmania.spring.boot.quartz.actuate.endpoint;
 
 import org.jspecify.annotations.NullMarked;

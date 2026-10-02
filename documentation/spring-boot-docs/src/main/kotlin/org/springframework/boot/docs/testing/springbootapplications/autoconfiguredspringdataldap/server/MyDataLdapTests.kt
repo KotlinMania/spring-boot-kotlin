@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.testing.springbootapplications.autoconfiguredspringdataldap.server
+package io.github.kotlinmania.spring.boot.docs.testing.springbootapplications.autoconfiguredspringdataldap.server
 
-import org.springframework.boot.ldap.autoconfigure.embedded.EmbeddedLdapAutoConfiguration
-import org.springframework.boot.data.ldap.test.autoconfigure.DataLdapTest
+import io.github.kotlinmania.spring.boot.ldap.autoconfigure.embedded.EmbeddedLdapAutoConfiguration
+import io.github.kotlinmania.spring.boot.data.ldap.test.autoconfigure.DataLdapTest
 
 @DataLdapTest(excludeAutoConfiguration = [EmbeddedLdapAutoConfiguration::class])
 class MyDataLdapTests {

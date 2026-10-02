@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.data.rest.autoconfigure;
+package io.github.kotlinmania.spring.boot.data.rest.autoconfigure;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.boot.context.properties.PropertyMapper;
+import io.github.kotlinmania.spring.boot.context.properties.ConfigurationProperties;
+import io.github.kotlinmania.spring.boot.context.properties.PropertyMapper;
 import org.springframework.data.rest.core.config.RepositoryRestConfiguration;
 import org.springframework.data.rest.core.mapping.RepositoryDetectionStrategy.RepositoryDetectionStrategies;
 import org.springframework.http.MediaType;

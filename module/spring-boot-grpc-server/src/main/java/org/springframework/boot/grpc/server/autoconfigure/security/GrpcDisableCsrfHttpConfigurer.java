@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.grpc.server.autoconfigure.security;
+package io.github.kotlinmania.spring.boot.grpc.server.autoconfigure.security;
 
 import jakarta.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.BeanFactoryUtils;
-import org.springframework.boot.grpc.server.GrpcServletRegistration;
-import org.springframework.boot.grpc.server.autoconfigure.security.web.servlet.GrpcRequest;
+import io.github.kotlinmania.spring.boot.grpc.server.GrpcServletRegistration;
+import io.github.kotlinmania.spring.boot.grpc.server.autoconfigure.security.web.servlet.GrpcRequest;
 import org.springframework.context.ApplicationContext;
 import org.springframework.grpc.server.service.GrpcServiceDiscoverer;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;

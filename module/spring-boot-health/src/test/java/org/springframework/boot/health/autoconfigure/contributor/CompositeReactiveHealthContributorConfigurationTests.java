@@ -14,17 +14,17 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.health.autoconfigure.contributor;
+package io.github.kotlinmania.spring.boot.health.autoconfigure.contributor;
 
 import java.util.stream.Stream;
 
 import reactor.core.publisher.Mono;
 
-import org.springframework.boot.health.autoconfigure.contributor.CompositeReactiveHealthContributorConfigurationTests.TestReactiveHealthIndicator;
-import org.springframework.boot.health.contributor.AbstractReactiveHealthIndicator;
-import org.springframework.boot.health.contributor.Health;
-import org.springframework.boot.health.contributor.ReactiveHealthContributor;
-import org.springframework.boot.health.contributor.ReactiveHealthContributors;
+import io.github.kotlinmania.spring.boot.health.autoconfigure.contributor.CompositeReactiveHealthContributorConfigurationTests.TestReactiveHealthIndicator;
+import io.github.kotlinmania.spring.boot.health.contributor.AbstractReactiveHealthIndicator;
+import io.github.kotlinmania.spring.boot.health.contributor.Health;
+import io.github.kotlinmania.spring.boot.health.contributor.ReactiveHealthContributor;
+import io.github.kotlinmania.spring.boot.health.contributor.ReactiveHealthContributors;
 
 /**
  * Tests for {@link CompositeReactiveHealthContributorConfiguration}.

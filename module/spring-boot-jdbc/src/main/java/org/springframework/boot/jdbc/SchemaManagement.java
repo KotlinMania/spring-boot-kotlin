@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.jdbc;
+package io.github.kotlinmania.spring.boot.jdbc;
 
 /**
  * An enumeration of the available schema management options.

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.configurationmetadata.json;
+package io.github.kotlinmania.spring.boot.configurationmetadata.json;
 
 // Note: this class was written without inspecting the non-free org.json source code.
 

@@ -18,6 +18,6 @@
  * Spring Boot Gradle DSL.
  */
 @NullMarked
-package org.springframework.boot.gradle.dsl;
+package io.github.kotlinmania.spring.boot.gradle.dsl;
 
 import org.jspecify.annotations.NullMarked;

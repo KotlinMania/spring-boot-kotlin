@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.groovy.template.autoconfigure;
+package io.github.kotlinmania.spring.boot.groovy.template.autoconfigure;
 
 import java.io.File;
 import java.io.StringWriter;
@@ -34,10 +34,10 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.test.util.TestPropertyValues;
-import org.springframework.boot.testsupport.BuildOutput;
-import org.springframework.boot.testsupport.classpath.resources.WithResource;
-import org.springframework.boot.web.context.servlet.AnnotationConfigServletWebApplicationContext;
+import io.github.kotlinmania.spring.boot.test.util.TestPropertyValues;
+import io.github.kotlinmania.spring.boot.testsupport.BuildOutput;
+import io.github.kotlinmania.spring.boot.testsupport.classpath.resources.WithResource;
+import io.github.kotlinmania.spring.boot.web.context.servlet.AnnotationConfigServletWebApplicationContext;
 import org.springframework.context.i18n.LocaleContextHolder;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.mock.web.MockHttpServletRequest;

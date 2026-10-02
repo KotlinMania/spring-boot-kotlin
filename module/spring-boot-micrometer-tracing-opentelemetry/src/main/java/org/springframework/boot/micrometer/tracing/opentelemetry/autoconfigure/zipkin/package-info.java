@@ -18,6 +18,6 @@
  * Auto-configuration for tracing with Zipkin.
  */
 @NullMarked
-package org.springframework.boot.micrometer.tracing.opentelemetry.autoconfigure.zipkin;
+package io.github.kotlinmania.spring.boot.micrometer.tracing.opentelemetry.autoconfigure.zipkin;
 
 import org.jspecify.annotations.NullMarked;

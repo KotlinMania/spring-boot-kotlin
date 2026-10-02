@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.cli.command;
+package io.github.kotlinmania.spring.boot.cli.command;
 
 import java.util.Collection;
 import java.util.ServiceLoader;

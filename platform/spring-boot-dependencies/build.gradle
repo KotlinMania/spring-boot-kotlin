@@ -2109,7 +2109,7 @@ bom {
 		}
 	}
 	library("Spring Boot", "${version}") {
-		group("org.springframework.boot") {
+		group("io.github.kotlinmania.spring.boot.) {
 			modules = [
 				"spring-boot",
 				"spring-boot-activemq",
@@ -2430,7 +2430,7 @@ bom {
 		links {
 			site("https://spring.io/projects/spring-boot")
 			github("https://github.com/spring-projects/spring-boot")
-			javadoc("https://docs.spring.io/spring-boot/{version}/api/java", "org.springframework.boot")
+			javadoc("https://docs.spring.io/spring-boot/{version}/api/java", "io.github.kotlinmania.spring.boot.)
 			docs("https://docs.spring.io/spring-boot/{version}")
 			releaseNotes("https://github.com/spring-projects/spring-boot/releases/tag/v{version}")
 			add("layers-xsd", version -> "https://www.springframework.org/schema/boot/layers/layers-%s.%s.xsd"

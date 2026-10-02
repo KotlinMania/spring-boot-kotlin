@@ -18,6 +18,6 @@
  * Actuator endpoint for Spring Session.
  */
 @NullMarked
-package org.springframework.boot.session.actuate.endpoint;
+package io.github.kotlinmania.spring.boot.session.actuate.endpoint;
 
 import org.jspecify.annotations.NullMarked;

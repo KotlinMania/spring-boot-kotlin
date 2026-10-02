@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.maven;
+package io.github.kotlinmania.spring.boot.maven;
 
 import java.io.File;
 import java.io.IOException;
@@ -22,7 +22,7 @@ import java.util.List;
 
 import org.apache.maven.plugin.MojoExecutionException;
 
-import org.springframework.boot.loader.tools.MainClassFinder;
+import io.github.kotlinmania.spring.boot.loader.tools.MainClassFinder;
 
 /**
  * Find a single Spring Boot Application class match based on directory.
@@ -32,7 +32,7 @@ import org.springframework.boot.loader.tools.MainClassFinder;
  */
 abstract class SpringBootApplicationClassFinder {
 
-	private static final String SPRING_BOOT_APPLICATION_CLASS_NAME = "org.springframework.boot.autoconfigure.SpringBootApplication";
+	private static final String SPRING_BOOT_APPLICATION_CLASS_NAME = "io.github.kotlinmania.spring.boot.autoconfigure.SpringBootApplication";
 
 	static String findSingleClass(File classesDirectory) throws MojoExecutionException {
 		return findSingleClass(List.of(classesDirectory));

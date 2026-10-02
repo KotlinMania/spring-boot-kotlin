@@ -18,6 +18,6 @@
  * Support for Spring Security's OAuth2 resource server.
  */
 @NullMarked
-package org.springframework.boot.security.oauth2.server.resource.autoconfigure.servlet;
+package io.github.kotlinmania.spring.boot.security.oauth2.server.resource.autoconfigure.servlet;
 
 import org.jspecify.annotations.NullMarked;

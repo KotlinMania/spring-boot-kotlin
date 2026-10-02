@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.http.converter.autoconfigure;
+package io.github.kotlinmania.spring.boot.http.converter.autoconfigure;
 
 import org.springframework.http.converter.HttpMessageConverters;
 import org.springframework.http.converter.HttpMessageConverters.ServerBuilder;

@@ -14,21 +14,21 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.data.neo4j.autoconfigure;
+package io.github.kotlinmania.spring.boot.data.neo4j.autoconfigure;
 
 import org.junit.jupiter.api.Test;
 import org.neo4j.driver.Driver;
 import reactor.core.publisher.Mono;
 import reactor.test.StepVerifier;
 
-import org.springframework.boot.autoconfigure.AutoConfigurations;
-import org.springframework.boot.autoconfigure.TestAutoConfigurationPackage;
-import org.springframework.boot.data.neo4j.domain.scan.TestNode;
-import org.springframework.boot.data.neo4j.domain.scan.TestNonAnnotated;
-import org.springframework.boot.data.neo4j.domain.scan.TestPersistent;
-import org.springframework.boot.data.neo4j.domain.scan.TestRelationshipProperties;
-import org.springframework.boot.neo4j.autoconfigure.Neo4jAutoConfiguration;
-import org.springframework.boot.test.context.runner.ApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurations;
+import io.github.kotlinmania.spring.boot.autoconfigure.TestAutoConfigurationPackage;
+import io.github.kotlinmania.spring.boot.data.neo4j.domain.scan.TestNode;
+import io.github.kotlinmania.spring.boot.data.neo4j.domain.scan.TestNonAnnotated;
+import io.github.kotlinmania.spring.boot.data.neo4j.domain.scan.TestPersistent;
+import io.github.kotlinmania.spring.boot.data.neo4j.domain.scan.TestRelationshipProperties;
+import io.github.kotlinmania.spring.boot.neo4j.autoconfigure.Neo4jAutoConfiguration;
+import io.github.kotlinmania.spring.boot.test.context.runner.ApplicationContextRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.neo4j.core.DatabaseSelection;

@@ -79,7 +79,7 @@ If you want to disable console-based logging, you can set the configprop:logging
 === Color-coded Output
 
 If your terminal supports ANSI, color output is used to aid readability.
-You can set `spring.output.ansi.enabled` to a javadoc:org.springframework.boot.ansi.AnsiOutput$Enabled[supported value] to override the auto-detection.
+You can set `spring.output.ansi.enabled` to a javadoc:io.github.kotlinmania.spring.boot.ansi.AnsiOutput$Enabled[supported value] to override the auto-detection.
 
 Color coding is configured by using the `%clr` conversion word.
 In its simplest form, the converter colors the output according to the log level, as shown in the following example:
@@ -326,7 +326,7 @@ Spring Boot includes the following pre-defined logging groups that can be used o
 | Name | Loggers
 
 | web
-| `org.springframework.core.codec`, `org.springframework.http`, `org.springframework.web`, `org.springframework.boot.actuate.endpoint.web`, `org.springframework.boot.web.servlet.ServletContextInitializerBeans`
+| `org.springframework.core.codec`, `org.springframework.http`, `org.springframework.web`, `io.github.kotlinmania.spring.boot.actuate.endpoint.web`, `io.github.kotlinmania.spring.boot.web.servlet.ServletContextInitializerBeans`
 
 | sql
 | `org.springframework.jdbc.core`, `org.hibernate.SQL`, javadoc:org.jooq.tools.LoggerListener[]
@@ -359,8 +359,8 @@ logging:
 
 The various logging systems can be activated by including the appropriate libraries on the classpath and can be further customized by providing a suitable configuration file in the root of the classpath or in a location specified by the following Spring javadoc:org.springframework.core.env.Environment[] property: configprop:logging.config[].
 
-You can force Spring Boot to use a particular logging system by using the `org.springframework.boot.logging.LoggingSystem` system property.
-The value should be the fully qualified class name of a javadoc:org.springframework.boot.logging.LoggingSystem[] implementation.
+You can force Spring Boot to use a particular logging system by using the `io.github.kotlinmania.spring.boot.logging.LoggingSystem` system property.
+The value should be the fully qualified class name of a javadoc:io.github.kotlinmania.spring.boot.logging.LoggingSystem[] implementation.
 You can also disable Spring Boot's logging configuration entirely by using a value of `none`.
 
 NOTE: Since logging is initialized *before* the javadoc:org.springframework.context.ApplicationContext[] is created, it is not possible to control logging from javadoc:org.springframework.context.annotation.PropertySources[format=annotation] in Spring javadoc:org.springframework.context.annotation.Configuration[format=annotation] files.
@@ -481,9 +481,9 @@ If you use Logback, the following properties are also transferred:
 All the supported logging systems can consult System properties when parsing their configuration files.
 See the default configurations in `spring-boot.jar` for examples:
 
-* {code-spring-boot}/core/spring-boot/src/main/resources/org/springframework/boot/logging/logback/defaults.xml[Logback]
-* {code-spring-boot}/core/spring-boot/src/main/resources/org/springframework/boot/logging/log4j2/log4j2.xml[Log4j 2]
-* {code-spring-boot}/core/spring-boot/src/main/resources/org/springframework/boot/logging/java/logging-file.properties[Java Util logging]
+* {code-spring-boot}/core/spring-boot/src/main/resources/io.github.kotlinmania.spring.boot.logging/logback/defaults.xml[Logback]
+* {code-spring-boot}/core/spring-boot/src/main/resources/io.github.kotlinmania.spring.boot.logging/log4j2/log4j2.xml[Log4j 2]
+* {code-spring-boot}/core/spring-boot/src/main/resources/io.github.kotlinmania.spring.boot.logging/java/logging-file.properties[Java Util logging]
 
 [TIP]
 ====
@@ -526,7 +526,7 @@ Logback::
 [source,xml]
 ----
 <!-- replace your encoder with StructuredLogEncoder -->
-<encoder class="org.springframework.boot.logging.logback.StructuredLogEncoder">
+<encoder class="io.github.kotlinmania.spring.boot.logging.logback.StructuredLogEncoder">
 	<format>${CONSOLE_LOG_STRUCTURED_FORMAT}</format>
 	<charset>${CONSOLE_LOG_CHARSET}</charset>
 </encoder>
@@ -534,8 +534,8 @@ Logback::
 +
 You can also refer to the default configurations included in Spring Boot:
 +
-* {code-spring-boot}/core/spring-boot/src/main/resources/org/springframework/boot/logging/logback/structured-console-appender.xml[Logback Structured Console Appender]
-* {code-spring-boot}/core/spring-boot/src/main/resources/org/springframework/boot/logging/logback/structured-file-appender.xml[Logback Structured File Appender]
+* {code-spring-boot}/core/spring-boot/src/main/resources/io.github.kotlinmania.spring.boot.logging/logback/structured-console-appender.xml[Logback Structured Console Appender]
+* {code-spring-boot}/core/spring-boot/src/main/resources/io.github.kotlinmania.spring.boot.logging/logback/structured-file-appender.xml[Logback Structured File Appender]
 Log4j2::
 +
 [source,xml]
@@ -546,8 +546,8 @@ Log4j2::
 +
 You can also refer to the default configurations included in Spring Boot:
 +
-* {code-spring-boot}/core/spring-boot/src/main/resources/org/springframework/boot/logging/log4j2/log4j2.xml[Log4j2 Console Appender]
-* {code-spring-boot}/core/spring-boot/src/main/resources/org/springframework/boot/logging/log4j2/log4j2-file.xml[Log4j2 Console and File Appender]
+* {code-spring-boot}/core/spring-boot/src/main/resources/io.github.kotlinmania.spring.boot.logging/log4j2/log4j2.xml[Log4j2 Console Appender]
+* {code-spring-boot}/core/spring-boot/src/main/resources/io.github.kotlinmania.spring.boot.logging/log4j2/log4j2-file.xml[Log4j2 Console and File Appender]
 ======
 
 
@@ -708,7 +708,7 @@ logging:
         corpname: mycorp
 ----
 
-TIP: For more advanced customizations, you can use the javadoc:org.springframework.boot.logging.structured.StructuredLoggingJsonMembersCustomizer[] interface.
+TIP: For more advanced customizations, you can use the javadoc:io.github.kotlinmania.spring.boot.logging.structured.StructuredLoggingJsonMembersCustomizer[] interface.
 You can reference one or more implementations using the configprop:logging.structured.json.customizer[] property.
 You can also declare implementations by listing them in a `META-INF/spring.factories` file.
 
@@ -757,10 +757,10 @@ logging:
 
 [TIP]
 ====
-If you need complete control over stack trace printing you can set configprop:logging.structured.json.stacktrace.printer[] to the name of a javadoc:org.springframework.boot.logging.StackTracePrinter[] implementation.
+If you need complete control over stack trace printing you can set configprop:logging.structured.json.stacktrace.printer[] to the name of a javadoc:io.github.kotlinmania.spring.boot.logging.StackTracePrinter[] implementation.
 You can also set it to `logging-system` to force regular logging system stack trace output to be used.
 
-Your `StackTracePrinter` implementation can also include a constructor argument that accepts a javadoc:org.springframework.boot.logging.StandardStackTracePrinter[] if it wishes to apply further customization to the stack trace printer created from the properties.
+Your `StackTracePrinter` implementation can also include a constructor argument that accepts a javadoc:io.github.kotlinmania.spring.boot.logging.StandardStackTracePrinter[] if it wishes to apply further customization to the stack trace printer created from the properties.
 ====
 
 
@@ -769,7 +769,7 @@ Your `StackTracePrinter` implementation can also include a constructor argument 
 === Supporting Other Structured Logging Formats
 
 The structured logging support in Spring Boot is extensible, allowing you to define your own custom format.
-To do this, implement the javadoc:org.springframework.boot.logging.structured.StructuredLogFormatter[] interface. The generic type argument has to be javadoc:ch.qos.logback.classic.spi.ILoggingEvent[] when using Logback and javadoc:org.apache.logging.log4j.core.LogEvent[] when using Log4j2 (that means your implementation is tied to a specific logging system).
+To do this, implement the javadoc:io.github.kotlinmania.spring.boot.logging.structured.StructuredLogFormatter[] interface. The generic type argument has to be javadoc:ch.qos.logback.classic.spi.ILoggingEvent[] when using Logback and javadoc:org.apache.logging.log4j.core.LogEvent[] when using Log4j2 (that means your implementation is tied to a specific logging system).
 Your implementation is then called with the log event and returns the javadoc:java.lang.String[] to be logged, as seen in this example:
 
 include-code::MyCustomFormat[]
@@ -779,7 +779,7 @@ As you can see in the example, you can return any format, it doesn't have to be 
 To enable your custom format, set the property configprop:logging.structured.format.console[] or configprop:logging.structured.format.file[] to the fully qualified class name of your implementation.
 
 Your implementation can use some constructor parameters, which are injected automatically.
-Please see the JavaDoc of javadoc:org.springframework.boot.logging.structured.StructuredLogFormatter[] for more details.
+Please see the JavaDoc of javadoc:io.github.kotlinmania.spring.boot.logging.structured.StructuredLogFormatter[] for more details.
 
 
 

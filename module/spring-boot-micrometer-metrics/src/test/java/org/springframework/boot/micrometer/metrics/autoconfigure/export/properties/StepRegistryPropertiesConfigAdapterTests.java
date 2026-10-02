@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.micrometer.metrics.autoconfigure.export.properties;
+package io.github.kotlinmania.spring.boot.micrometer.metrics.autoconfigure.export.properties;
 
-import org.springframework.boot.actuate.autoconfigure.metrics.export.properties.PushRegistryPropertiesConfigAdapterTests;
+import io.github.kotlinmania.spring.boot.actuate.autoconfigure.metrics.export.properties.PushRegistryPropertiesConfigAdapterTests;
 
 /**
  * Base test for {@link StepRegistryPropertiesConfigAdapter} implementations.

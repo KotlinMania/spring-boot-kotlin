@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.restclient.test.autoconfigure;
+package io.github.kotlinmania.spring.boot.restclient.test.autoconfigure;
 
 import org.junit.jupiter.api.Test;
 
 import org.springframework.beans.factory.NoSuchBeanDefinitionException;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.restclient.test.MockServerRestClientCustomizer;
-import org.springframework.boot.restclient.test.MockServerRestTemplateCustomizer;
+import io.github.kotlinmania.spring.boot.restclient.test.MockServerRestClientCustomizer;
+import io.github.kotlinmania.spring.boot.restclient.test.MockServerRestTemplateCustomizer;
 import org.springframework.context.ApplicationContext;
 
 import static org.assertj.core.api.Assertions.assertThatExceptionOfType;

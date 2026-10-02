@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.actuate.autoconfigure.endpoint.web;
+package io.github.kotlinmania.spring.boot.actuate.autoconfigure.endpoint.web;
 
 import java.util.Arrays;
 import java.util.Collection;
@@ -23,20 +23,20 @@ import java.util.List;
 import org.jspecify.annotations.Nullable;
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.actuate.autoconfigure.endpoint.EndpointAutoConfiguration;
-import org.springframework.boot.actuate.autoconfigure.endpoint.expose.IncludeExcludeEndpointFilter;
-import org.springframework.boot.actuate.endpoint.ApiVersion;
-import org.springframework.boot.actuate.endpoint.EndpointId;
-import org.springframework.boot.actuate.endpoint.annotation.Endpoint;
-import org.springframework.boot.actuate.endpoint.annotation.ReadOperation;
-import org.springframework.boot.actuate.endpoint.web.EndpointMediaTypes;
-import org.springframework.boot.actuate.endpoint.web.ExposableWebEndpoint;
-import org.springframework.boot.actuate.endpoint.web.PathMappedEndpoint;
-import org.springframework.boot.actuate.endpoint.web.PathMapper;
-import org.springframework.boot.actuate.endpoint.web.annotation.WebEndpointDiscoverer;
-import org.springframework.boot.autoconfigure.AutoConfigurations;
-import org.springframework.boot.test.context.runner.ApplicationContextRunner;
-import org.springframework.boot.test.context.runner.WebApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.actuate.autoconfigure.endpoint.EndpointAutoConfiguration;
+import io.github.kotlinmania.spring.boot.actuate.autoconfigure.endpoint.expose.IncludeExcludeEndpointFilter;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.ApiVersion;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.EndpointId;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.annotation.Endpoint;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.annotation.ReadOperation;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.web.EndpointMediaTypes;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.web.ExposableWebEndpoint;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.web.PathMappedEndpoint;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.web.PathMapper;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.web.annotation.WebEndpointDiscoverer;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurations;
+import io.github.kotlinmania.spring.boot.test.context.runner.ApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.test.context.runner.WebApplicationContextRunner;
 import org.springframework.stereotype.Component;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -99,7 +99,7 @@ class WebEndpointAutoConfigurationTests {
 	void webApplicationConfiguresEndpointDiscoverer() {
 		this.contextRunner.run((context) -> {
 			assertThat(context).hasSingleBean(
-					org.springframework.boot.actuate.endpoint.web.annotation.ControllerEndpointDiscoverer.class);
+					io.github.kotlinmania.spring.boot.actuate.endpoint.web.annotation.ControllerEndpointDiscoverer.class);
 			assertThat(context).hasSingleBean(WebEndpointDiscoverer.class);
 		});
 	}
@@ -114,7 +114,7 @@ class WebEndpointAutoConfigurationTests {
 	@SuppressWarnings("removal")
 	void contextShouldConfigureServletEndpointDiscoverer() {
 		this.contextRunner.run((context) -> assertThat(context)
-			.hasSingleBean(org.springframework.boot.actuate.endpoint.web.annotation.ServletEndpointDiscoverer.class));
+			.hasSingleBean(io.github.kotlinmania.spring.boot.actuate.endpoint.web.annotation.ServletEndpointDiscoverer.class));
 	}
 
 	@Test
@@ -122,7 +122,7 @@ class WebEndpointAutoConfigurationTests {
 	void contextWhenNotServletShouldNotConfigureServletEndpointDiscoverer() {
 		new ApplicationContextRunner().withConfiguration(CONFIGURATIONS)
 			.run((context) -> assertThat(context).doesNotHaveBean(
-					org.springframework.boot.actuate.endpoint.web.annotation.ServletEndpointDiscoverer.class));
+					io.github.kotlinmania.spring.boot.actuate.endpoint.web.annotation.ServletEndpointDiscoverer.class));
 	}
 
 	@Component

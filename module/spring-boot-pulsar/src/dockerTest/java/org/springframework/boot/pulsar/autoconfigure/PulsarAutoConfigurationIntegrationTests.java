@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.pulsar.autoconfigure;
+package io.github.kotlinmania.spring.boot.pulsar.autoconfigure;
 
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.TimeUnit;
@@ -25,9 +25,9 @@ import org.testcontainers.junit.jupiter.Testcontainers;
 import org.testcontainers.pulsar.PulsarContainer;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.autoconfigure.ImportAutoConfiguration;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.boot.testsupport.container.TestImage;
+import io.github.kotlinmania.spring.boot.autoconfigure.ImportAutoConfiguration;
+import io.github.kotlinmania.spring.boot.test.context.SpringBootTest;
+import io.github.kotlinmania.spring.boot.testsupport.container.TestImage;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
 import org.springframework.pulsar.annotation.PulsarListener;

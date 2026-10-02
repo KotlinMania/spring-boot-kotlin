@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.jarmode.tools;
+package io.github.kotlinmania.spring.boot.jarmode.tools;
 
 import java.io.ByteArrayInputStream;
 import java.io.File;
@@ -31,8 +31,8 @@ import java.util.zip.ZipEntry;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.io.TempDir;
 
-import org.springframework.boot.jarmode.tools.JarStructure.Entry;
-import org.springframework.boot.jarmode.tools.JarStructure.Entry.Type;
+import io.github.kotlinmania.spring.boot.jarmode.tools.JarStructure.Entry;
+import io.github.kotlinmania.spring.boot.jarmode.tools.JarStructure.Entry.Type;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -66,10 +66,10 @@ class IndexedJarStructureTests {
 	@Test
 	void shouldResolveLoaderEntry() throws IOException {
 		IndexedJarStructure structure = createStructure();
-		Entry entry = structure.resolve("org/springframework/boot/loader/launch/JarLauncher");
+		Entry entry = structure.resolve("io.github.kotlinmania.spring.boot.loader/launch/JarLauncher");
 		assertThat(entry).isNotNull();
-		assertThat(entry.location()).isEqualTo("org/springframework/boot/loader/launch/JarLauncher");
-		assertThat(entry.originalLocation()).isEqualTo("org/springframework/boot/loader/launch/JarLauncher");
+		assertThat(entry.location()).isEqualTo("io.github.kotlinmania.spring.boot.loader/launch/JarLauncher");
+		assertThat(entry.originalLocation()).isEqualTo("io.github.kotlinmania.spring.boot.loader/launch/JarLauncher");
 		assertThat(entry.type()).isEqualTo(Type.LOADER);
 	}
 
@@ -92,7 +92,7 @@ class IndexedJarStructureTests {
 			.containsEntry("Build-Jdk-Spec", "17")
 			.containsEntry("Class-Path",
 					"spring-webmvc-6.1.4.jar spring-web-6.1.4.jar spring-boot-autoconfigure-3.3.0-SNAPSHOT.jar spring-boot-3.3.0-SNAPSHOT.jar jakarta.annotation-api-2.1.1.jar spring-context-6.1.4.jar spring-aop-6.1.4.jar spring-beans-6.1.4.jar spring-expression-6.1.4.jar spring-core-6.1.4.jar snakeyaml-2.2.jar jackson-datatype-jdk8-2.16.1.jar jackson-datatype-jsr310-2.16.1.jar jackson-module-parameter-names-2.16.1.jar jackson-databind-2.16.1.jar tomcat-embed-websocket-10.1.19.jar tomcat-embed-core-10.1.19.jar tomcat-embed-el-10.1.19.jar micrometer-observation-1.13.0-M1.jar logback-classic-1.4.14.jar log4j-to-slf4j-2.23.0.jar jul-to-slf4j-2.0.12.jar spring-jcl-6.1.4.jar jackson-annotations-2.16.1.jar jackson-core-2.16.1.jar micrometer-commons-1.13.0-M1.jar logback-core-1.4.14.jar slf4j-api-2.0.12.jar log4j-api-2.23.0.jar")
-			.containsEntry("Main-Class", "org.springframework.boot.jarmode.tools.IndexedJarStructureTests")
+			.containsEntry("Main-Class", "io.github.kotlinmania.spring.boot.jarmode.tools.IndexedJarStructureTests")
 			.doesNotContainKeys("Start-Class", "Spring-Boot-Classes", "Spring-Boot-Lib", "Spring-Boot-Classpath-Index",
 					"Spring-Boot-Layers-Index");
 	}
@@ -160,8 +160,8 @@ class IndexedJarStructureTests {
 	private Manifest createManifest() throws IOException {
 		return new Manifest(new ByteArrayInputStream("""
 				Manifest-Version: 1.0
-				Main-Class: org.springframework.boot.loader.launch.JarLauncher
-				Start-Class: org.springframework.boot.jarmode.tools.IndexedJarStructureTests
+				Main-Class: io.github.kotlinmania.spring.boot.loader.launch.JarLauncher
+				Start-Class: io.github.kotlinmania.spring.boot.jarmode.tools.IndexedJarStructureTests
 				Spring-Boot-Version: 3.3.0-SNAPSHOT
 				Spring-Boot-Classes: BOOT-INF/classes/
 				Spring-Boot-Lib: BOOT-INF/lib/

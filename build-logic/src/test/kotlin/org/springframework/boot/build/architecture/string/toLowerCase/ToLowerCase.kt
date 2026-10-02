@@ -15,7 +15,16 @@
  */
 package org.springframework.boot.build.architecture.string.toLowerCase
 
-import java.util.*
+package io.github.kotlinmania.spring.boot.build.architecture.string.toLowerCaseWithLocale;
+
+import java.util.Locale;
+
+class ToLowerCaseWithLocale {
+
+	void exampleMethod() {
+		String test = "Object must not be null";
+		System.out.println(test.toLowerCase(Locale.ENGLISH));
+	}
 
 internal class ToLowerCase {
     fun exampleMethod() {

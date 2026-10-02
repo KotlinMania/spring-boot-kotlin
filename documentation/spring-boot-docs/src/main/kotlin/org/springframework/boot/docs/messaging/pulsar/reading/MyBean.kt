@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.messaging.pulsar.reading
+package io.github.kotlinmania.spring.boot.docs.messaging.pulsar.reading
 
 import org.springframework.pulsar.annotation.PulsarReader
 import org.springframework.stereotype.Component

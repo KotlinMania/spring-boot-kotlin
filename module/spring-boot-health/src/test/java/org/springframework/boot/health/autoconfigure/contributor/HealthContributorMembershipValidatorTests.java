@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.health.autoconfigure.contributor;
+package io.github.kotlinmania.spring.boot.health.autoconfigure.contributor;
 
 import java.util.Collections;
 import java.util.Map;
@@ -22,13 +22,13 @@ import java.util.Set;
 
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.diagnostics.FailureAnalyzedException;
-import org.springframework.boot.health.contributor.CompositeHealthContributor;
-import org.springframework.boot.health.contributor.Health;
-import org.springframework.boot.health.contributor.HealthIndicator;
-import org.springframework.boot.health.contributor.ReactiveHealthContributor;
-import org.springframework.boot.health.registry.DefaultHealthContributorRegistry;
-import org.springframework.boot.health.registry.DefaultReactiveHealthContributorRegistry;
+import io.github.kotlinmania.spring.boot.diagnostics.FailureAnalyzedException;
+import io.github.kotlinmania.spring.boot.health.contributor.CompositeHealthContributor;
+import io.github.kotlinmania.spring.boot.health.contributor.Health;
+import io.github.kotlinmania.spring.boot.health.contributor.HealthIndicator;
+import io.github.kotlinmania.spring.boot.health.contributor.ReactiveHealthContributor;
+import io.github.kotlinmania.spring.boot.health.registry.DefaultHealthContributorRegistry;
+import io.github.kotlinmania.spring.boot.health.registry.DefaultReactiveHealthContributorRegistry;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatExceptionOfType;

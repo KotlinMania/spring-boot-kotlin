@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.cli.command.options;
+package io.github.kotlinmania.spring.boot.cli.command.options;
 
 import java.util.Set;
 

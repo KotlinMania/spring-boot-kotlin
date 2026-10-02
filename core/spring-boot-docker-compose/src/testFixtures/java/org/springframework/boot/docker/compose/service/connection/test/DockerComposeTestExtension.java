@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docker.compose.service.connection.test;
+package io.github.kotlinmania.spring.boot.docker.compose.service.connection.test;
 
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
@@ -33,9 +33,9 @@ import org.junit.jupiter.api.extension.ParameterContext;
 import org.junit.jupiter.api.extension.ParameterResolutionException;
 import org.junit.jupiter.api.extension.ParameterResolver;
 
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.SpringApplicationShutdownHandlers;
-import org.springframework.boot.testsupport.container.TestImage;
+import io.github.kotlinmania.spring.boot.SpringApplication;
+import io.github.kotlinmania.spring.boot.SpringApplicationShutdownHandlers;
+import io.github.kotlinmania.spring.boot.testsupport.container.TestImage;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.io.ClassPathResource;

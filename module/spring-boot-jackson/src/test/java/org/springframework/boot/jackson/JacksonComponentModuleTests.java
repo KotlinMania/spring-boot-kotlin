@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.jackson;
+package io.github.kotlinmania.spring.boot.jackson;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -34,13 +34,13 @@ import org.springframework.aot.test.generate.TestGenerationContext;
 import org.springframework.beans.factory.aot.BeanFactoryInitializationAotContribution;
 import org.springframework.beans.factory.aot.BeanFactoryInitializationCode;
 import org.springframework.beans.factory.config.ConfigurableListableBeanFactory;
-import org.springframework.boot.jackson.JacksonComponentModule.JacksonComponentBeanFactoryInitializationAotProcessor;
-import org.springframework.boot.jackson.JacksonComponentModuleTests.ComponentWithInnerAbstractClass.AbstractSerializer;
-import org.springframework.boot.jackson.JacksonComponentModuleTests.ComponentWithInnerAbstractClass.ConcreteSerializer;
-import org.springframework.boot.jackson.JacksonComponentModuleTests.ComponentWithInnerAbstractClass.NotSuitable;
-import org.springframework.boot.jackson.types.Name;
-import org.springframework.boot.jackson.types.NameAndAge;
-import org.springframework.boot.jackson.types.NameAndCareer;
+import io.github.kotlinmania.spring.boot.jackson.JacksonComponentModule.JacksonComponentBeanFactoryInitializationAotProcessor;
+import io.github.kotlinmania.spring.boot.jackson.JacksonComponentModuleTests.ComponentWithInnerAbstractClass.AbstractSerializer;
+import io.github.kotlinmania.spring.boot.jackson.JacksonComponentModuleTests.ComponentWithInnerAbstractClass.ConcreteSerializer;
+import io.github.kotlinmania.spring.boot.jackson.JacksonComponentModuleTests.ComponentWithInnerAbstractClass.NotSuitable;
+import io.github.kotlinmania.spring.boot.jackson.types.Name;
+import io.github.kotlinmania.spring.boot.jackson.types.NameAndAge;
+import io.github.kotlinmania.spring.boot.jackson.types.NameAndCareer;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import static org.assertj.core.api.Assertions.assertThat;

@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.testing.springbootapplications.userconfigurationandslicing.scan;
+package io.github.kotlinmania.spring.boot.docs.testing.springbootapplications.userconfigurationandslicing.scan;
 
-import org.springframework.boot.autoconfigure.SpringBootApplication;
+import io.github.kotlinmania.spring.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication

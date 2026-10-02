@@ -14,16 +14,16 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.webclient.test.autoconfigure;
+package io.github.kotlinmania.spring.boot.webclient.test.autoconfigure;
 
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.LinkedHashSet;
 import java.util.Set;
 
-import org.springframework.boot.context.TypeExcludeFilter;
-import org.springframework.boot.jackson.JacksonComponent;
-import org.springframework.boot.test.context.filter.annotation.StandardAnnotationCustomizableTypeExcludeFilter;
+import io.github.kotlinmania.spring.boot.context.TypeExcludeFilter;
+import io.github.kotlinmania.spring.boot.jackson.JacksonComponent;
+import io.github.kotlinmania.spring.boot.test.context.filter.annotation.StandardAnnotationCustomizableTypeExcludeFilter;
 import org.springframework.util.ClassUtils;
 
 /**

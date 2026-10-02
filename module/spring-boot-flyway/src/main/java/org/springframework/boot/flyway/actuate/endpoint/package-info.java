@@ -18,6 +18,6 @@
  * Actuator endpoint for Flyway.
  */
 @NullMarked
-package org.springframework.boot.flyway.actuate.endpoint;
+package io.github.kotlinmania.spring.boot.flyway.actuate.endpoint;
 
 import org.jspecify.annotations.NullMarked;

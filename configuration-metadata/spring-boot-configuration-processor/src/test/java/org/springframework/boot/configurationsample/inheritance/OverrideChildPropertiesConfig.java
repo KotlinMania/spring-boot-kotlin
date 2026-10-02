@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.configurationsample.inheritance;
+package io.github.kotlinmania.spring.boot.configurationsample.inheritance;
 
-import org.springframework.boot.configurationsample.TestConfigurationProperties;
+import io.github.kotlinmania.spring.boot.configurationsample.TestConfigurationProperties;
 
 public class OverrideChildPropertiesConfig {
 

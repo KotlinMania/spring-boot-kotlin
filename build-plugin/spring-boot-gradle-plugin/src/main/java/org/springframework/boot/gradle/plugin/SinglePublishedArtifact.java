@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.gradle.plugin;
+package io.github.kotlinmania.spring.boot.gradle.plugin;
 
 import org.gradle.api.Buildable;
 import org.gradle.api.artifacts.Configuration;
@@ -26,8 +26,8 @@ import org.gradle.api.tasks.TaskProvider;
 import org.gradle.api.tasks.bundling.Jar;
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.gradle.tasks.bundling.BootJar;
-import org.springframework.boot.gradle.tasks.bundling.BootWar;
+import io.github.kotlinmania.spring.boot.gradle.tasks.bundling.BootJar;
+import io.github.kotlinmania.spring.boot.gradle.tasks.bundling.BootWar;
 
 /**
  * A wrapper for a {@link PublishArtifactSet} that ensures that only a single artifact is

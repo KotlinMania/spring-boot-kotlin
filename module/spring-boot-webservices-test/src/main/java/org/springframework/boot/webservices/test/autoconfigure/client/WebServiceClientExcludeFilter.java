@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.webservices.test.autoconfigure.client;
+package io.github.kotlinmania.spring.boot.webservices.test.autoconfigure.client;
 
 import java.util.Arrays;
 import java.util.LinkedHashSet;
 import java.util.Set;
 
-import org.springframework.boot.context.TypeExcludeFilter;
-import org.springframework.boot.test.context.filter.annotation.StandardAnnotationCustomizableTypeExcludeFilter;
+import io.github.kotlinmania.spring.boot.context.TypeExcludeFilter;
+import io.github.kotlinmania.spring.boot.test.context.filter.annotation.StandardAnnotationCustomizableTypeExcludeFilter;
 
 /**
  * {@link TypeExcludeFilter} for {@link WebServiceClientTest @WebServiceClientTest}.

@@ -77,7 +77,7 @@ $ export MAVEN_OPTS=-Xmx1024m
 == Using the Gradle Plugin
 
 The Spring Boot Gradle plugin also includes a `bootRun` task that can be used to run your application in an exploded form.
-The `bootRun` task is added whenever you apply the `org.springframework.boot` and `java` plugins and is shown in the following example:
+The `bootRun` task is added whenever you apply the `io.github.kotlinmania.spring.boot. and `java` plugins and is shown in the following example:
 
 [source,shell]
 ----

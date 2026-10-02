@@ -18,6 +18,6 @@
  * Actuator auditing listeners.
  */
 @NullMarked
-package org.springframework.boot.actuate.audit.listener;
+package io.github.kotlinmania.spring.boot.actuate.audit.listener;
 
 import org.jspecify.annotations.NullMarked;

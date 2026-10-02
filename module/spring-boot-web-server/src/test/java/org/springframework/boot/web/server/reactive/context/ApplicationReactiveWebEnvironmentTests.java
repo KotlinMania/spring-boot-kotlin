@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.web.server.reactive.context;
+package io.github.kotlinmania.spring.boot.web.server.reactive.context;
 
-import org.springframework.boot.AbstractApplicationEnvironmentTests;
+import io.github.kotlinmania.spring.boot.AbstractApplicationEnvironmentTests;
 import org.springframework.core.env.StandardEnvironment;
 
 /**

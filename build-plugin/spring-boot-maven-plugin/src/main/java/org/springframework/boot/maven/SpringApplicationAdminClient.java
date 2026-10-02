@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.maven;
+package io.github.kotlinmania.spring.boot.maven;
 
 import java.io.IOException;
 
@@ -40,7 +40,7 @@ import org.apache.maven.plugin.MojoExecutionException;
 class SpringApplicationAdminClient {
 
 	// Note: see SpringApplicationAdminJmxAutoConfiguration
-	static final String DEFAULT_OBJECT_NAME = "org.springframework.boot:type=Admin,name=SpringApplication";
+	static final String DEFAULT_OBJECT_NAME = "io.github.kotlinmania.spring.boot.type=Admin,name=SpringApplication";
 
 	private final MBeanServerConnection connection;
 

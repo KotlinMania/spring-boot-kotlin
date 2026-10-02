@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.health.autoconfigure.registry;
+package io.github.kotlinmania.spring.boot.health.autoconfigure.registry;
 
 import java.util.Locale;
 import java.util.Map;

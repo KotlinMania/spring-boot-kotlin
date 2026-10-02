@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.jpa.autoconfigure;
+package io.github.kotlinmania.spring.boot.jpa.autoconfigure;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.diagnostics.AbstractFailureAnalyzer;
-import org.springframework.boot.diagnostics.FailureAnalysis;
-import org.springframework.boot.diagnostics.FailureAnalyzer;
+import io.github.kotlinmania.spring.boot.diagnostics.AbstractFailureAnalyzer;
+import io.github.kotlinmania.spring.boot.diagnostics.FailureAnalysis;
+import io.github.kotlinmania.spring.boot.diagnostics.FailureAnalyzer;
 
 /**
  * {@link FailureAnalyzer} for {@link BootstrapExecutorRequiredException}.

@@ -17,7 +17,7 @@
 plugins {
 	id 'war'
 	id 'maven'
-	id 'org.springframework.boot' version '{version}'
+	id 'io.github.kotlinmania.spring.boot. version '{version}'
 }
 
 bootWar {

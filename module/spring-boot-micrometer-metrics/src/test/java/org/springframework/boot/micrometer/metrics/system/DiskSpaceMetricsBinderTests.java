@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.micrometer.metrics.system;
+package io.github.kotlinmania.spring.boot.micrometer.metrics.system;
 
 import java.io.File;
 import java.util.Arrays;

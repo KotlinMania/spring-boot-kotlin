@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.data.elasticsearch.autoconfigure;
+package io.github.kotlinmania.spring.boot.data.elasticsearch.autoconfigure;
 
 import java.util.Map;
 
@@ -26,11 +26,11 @@ import org.testcontainers.junit.jupiter.Container;
 import org.testcontainers.junit.jupiter.Testcontainers;
 import reactor.core.publisher.Mono;
 
-import org.springframework.boot.autoconfigure.AutoConfigurations;
-import org.springframework.boot.elasticsearch.autoconfigure.ElasticsearchClientAutoConfiguration;
-import org.springframework.boot.elasticsearch.autoconfigure.ElasticsearchRestClientAutoConfiguration;
-import org.springframework.boot.test.context.runner.ApplicationContextRunner;
-import org.springframework.boot.testsupport.container.TestImage;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurations;
+import io.github.kotlinmania.spring.boot.elasticsearch.autoconfigure.ElasticsearchClientAutoConfiguration;
+import io.github.kotlinmania.spring.boot.elasticsearch.autoconfigure.ElasticsearchRestClientAutoConfiguration;
+import io.github.kotlinmania.spring.boot.test.context.runner.ApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.testsupport.container.TestImage;
 import org.springframework.data.elasticsearch.client.elc.ReactiveElasticsearchClient;
 
 import static org.assertj.core.api.Assertions.assertThat;

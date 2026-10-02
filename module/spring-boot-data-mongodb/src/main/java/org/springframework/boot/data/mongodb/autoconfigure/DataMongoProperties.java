@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.data.mongodb.autoconfigure;
+package io.github.kotlinmania.spring.boot.data.mongodb.autoconfigure;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.context.properties.ConfigurationProperties;
+import io.github.kotlinmania.spring.boot.context.properties.ConfigurationProperties;
 import org.springframework.data.mongodb.core.convert.MongoCustomConversions.BigDecimalRepresentation;
 
 /**

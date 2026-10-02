@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.buildpack.platform.docker.transport;
+package io.github.kotlinmania.spring.boot.buildpack.platform.docker.transport;
 
 import java.io.IOException;
 import java.net.InetAddress;
@@ -41,9 +41,9 @@ import org.apache.hc.core5.http.protocol.HttpContext;
 import org.apache.hc.core5.util.TimeValue;
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.buildpack.platform.docker.configuration.ResolvedDockerHost;
-import org.springframework.boot.buildpack.platform.socket.NamedPipeSocket;
-import org.springframework.boot.buildpack.platform.socket.UnixDomainSocket;
+import io.github.kotlinmania.spring.boot.buildpack.platform.docker.configuration.ResolvedDockerHost;
+import io.github.kotlinmania.spring.boot.buildpack.platform.socket.NamedPipeSocket;
+import io.github.kotlinmania.spring.boot.buildpack.platform.socket.UnixDomainSocket;
 
 /**
  * {@link HttpClientTransport} that talks to local Docker.

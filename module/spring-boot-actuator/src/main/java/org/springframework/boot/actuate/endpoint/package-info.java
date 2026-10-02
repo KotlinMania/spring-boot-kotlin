@@ -18,6 +18,6 @@
  * Endpoint support.
  */
 @NullMarked
-package org.springframework.boot.actuate.endpoint;
+package io.github.kotlinmania.spring.boot.actuate.endpoint;
 
 import org.jspecify.annotations.NullMarked;

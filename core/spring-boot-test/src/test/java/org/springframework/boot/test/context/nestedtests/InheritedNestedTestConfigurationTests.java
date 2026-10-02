@@ -14,16 +14,16 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.test.context.nestedtests;
+package io.github.kotlinmania.spring.boot.test.context.nestedtests;
 
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.SpringBootConfiguration;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.boot.test.context.nestedtests.InheritedNestedTestConfigurationTests.ActionPerformer;
-import org.springframework.boot.test.context.nestedtests.InheritedNestedTestConfigurationTests.AppConfiguration;
+import io.github.kotlinmania.spring.boot.SpringBootConfiguration;
+import io.github.kotlinmania.spring.boot.test.context.SpringBootTest;
+import io.github.kotlinmania.spring.boot.test.context.nestedtests.InheritedNestedTestConfigurationTests.ActionPerformer;
+import io.github.kotlinmania.spring.boot.test.context.nestedtests.InheritedNestedTestConfigurationTests.AppConfiguration;
 import org.springframework.context.annotation.Import;
 import org.springframework.stereotype.Component;
 import org.springframework.test.context.bean.override.mockito.MockitoBean;

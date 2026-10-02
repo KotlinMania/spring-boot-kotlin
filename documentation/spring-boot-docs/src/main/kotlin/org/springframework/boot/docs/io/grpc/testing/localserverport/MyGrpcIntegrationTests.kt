@@ -1,11 +1,11 @@
-package org.springframework.boot.docs.io.grpc.testing.localserverport
+package io.github.kotlinmania.spring.boot.docs.io.grpc.testing.localserverport
 
 import io.grpc.ManagedChannel
 import io.grpc.netty.NettyChannelBuilder
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Test
-import org.springframework.boot.grpc.test.autoconfigure.LocalGrpcServerPort
-import org.springframework.boot.test.context.SpringBootTest
+import io.github.kotlinmania.spring.boot.grpc.test.autoconfigure.LocalGrpcServerPort
+import io.github.kotlinmania.spring.boot.test.context.SpringBootTest
 
 @SpringBootTest(properties = ["spring.grpc.server.port=0"])
 class MyGrpcIntegrationTests {

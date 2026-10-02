@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.buildpack.platform.docker.configuration;
+package io.github.kotlinmania.spring.boot.buildpack.platform.docker.configuration;
 
 import java.util.function.BiConsumer;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.buildpack.platform.docker.type.ImageReference;
+import io.github.kotlinmania.spring.boot.buildpack.platform.docker.type.ImageReference;
 import org.springframework.util.Assert;
 
 /**

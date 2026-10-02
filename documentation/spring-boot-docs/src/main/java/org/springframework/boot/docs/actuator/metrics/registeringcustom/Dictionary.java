@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.actuator.metrics.registeringcustom;
+package io.github.kotlinmania.spring.boot.docs.actuator.metrics.registeringcustom;
 
 import java.util.Collections;
 import java.util.List;

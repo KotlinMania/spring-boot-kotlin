@@ -18,6 +18,6 @@
  * Support for testcontainers Kafka service connections.
  */
 @NullMarked
-package org.springframework.boot.kafka.testcontainers;
+package io.github.kotlinmania.spring.boot.kafka.testcontainers;
 
 import org.jspecify.annotations.NullMarked;

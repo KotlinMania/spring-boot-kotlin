@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.web.server.context;
+package io.github.kotlinmania.spring.boot.web.server.context;
 
 import java.io.File;
 import java.util.HashSet;
@@ -26,7 +26,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.io.TempDir;
 
-import org.springframework.boot.web.server.WebServer;
+import io.github.kotlinmania.spring.boot.web.server.WebServer;
 import org.springframework.util.StringUtils;
 
 import static org.assertj.core.api.Assertions.assertThat;

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.devtools.autoconfigure;
+package io.github.kotlinmania.spring.boot.devtools.autoconfigure;
 
 import java.io.File;
 import java.net.URL;
@@ -24,22 +24,22 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.autoconfigure.AutoConfiguration;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnBooleanProperty;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
-import org.springframework.boot.context.properties.EnableConfigurationProperties;
-import org.springframework.boot.devtools.autoconfigure.DevToolsProperties.Restart;
-import org.springframework.boot.devtools.classpath.ClassPathChangedEvent;
-import org.springframework.boot.devtools.classpath.ClassPathFileSystemWatcher;
-import org.springframework.boot.devtools.classpath.ClassPathRestartStrategy;
-import org.springframework.boot.devtools.classpath.PatternClassPathRestartStrategy;
-import org.springframework.boot.devtools.filewatch.FileSystemWatcher;
-import org.springframework.boot.devtools.filewatch.FileSystemWatcherFactory;
-import org.springframework.boot.devtools.filewatch.SnapshotStateRepository;
-import org.springframework.boot.devtools.restart.ConditionalOnInitializedRestarter;
-import org.springframework.boot.devtools.restart.RestartScope;
-import org.springframework.boot.devtools.restart.Restarter;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.EnableAutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnBooleanProperty;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnMissingBean;
+import io.github.kotlinmania.spring.boot.context.properties.EnableConfigurationProperties;
+import io.github.kotlinmania.spring.boot.devtools.autoconfigure.DevToolsProperties.Restart;
+import io.github.kotlinmania.spring.boot.devtools.classpath.ClassPathChangedEvent;
+import io.github.kotlinmania.spring.boot.devtools.classpath.ClassPathFileSystemWatcher;
+import io.github.kotlinmania.spring.boot.devtools.classpath.ClassPathRestartStrategy;
+import io.github.kotlinmania.spring.boot.devtools.classpath.PatternClassPathRestartStrategy;
+import io.github.kotlinmania.spring.boot.devtools.filewatch.FileSystemWatcher;
+import io.github.kotlinmania.spring.boot.devtools.filewatch.FileSystemWatcherFactory;
+import io.github.kotlinmania.spring.boot.devtools.filewatch.SnapshotStateRepository;
+import io.github.kotlinmania.spring.boot.devtools.restart.ConditionalOnInitializedRestarter;
+import io.github.kotlinmania.spring.boot.devtools.restart.RestartScope;
+import io.github.kotlinmania.spring.boot.devtools.restart.Restarter;
 import org.springframework.context.ApplicationEvent;
 import org.springframework.context.ApplicationListener;
 import org.springframework.context.annotation.Bean;
@@ -76,14 +76,14 @@ public final class LocalDevToolsAutoConfiguration {
 		@Bean
 		@RestartScope
 		@ConditionalOnMissingBean
-		org.springframework.boot.devtools.livereload.LiveReloadServer liveReloadServer(DevToolsProperties properties) {
-			return new org.springframework.boot.devtools.livereload.LiveReloadServer(
+		io.github.kotlinmania.spring.boot.devtools.livereload.LiveReloadServer liveReloadServer(DevToolsProperties properties) {
+			return new io.github.kotlinmania.spring.boot.devtools.livereload.LiveReloadServer(
 					properties.getLivereload().getPort(), Restarter.getInstance().getThreadFactory());
 		}
 
 		@Bean
 		OptionalLiveReloadServer optionalLiveReloadServer(
-				org.springframework.boot.devtools.livereload.LiveReloadServer liveReloadServer) {
+				io.github.kotlinmania.spring.boot.devtools.livereload.LiveReloadServer liveReloadServer) {
 			return new OptionalLiveReloadServer(liveReloadServer);
 		}
 

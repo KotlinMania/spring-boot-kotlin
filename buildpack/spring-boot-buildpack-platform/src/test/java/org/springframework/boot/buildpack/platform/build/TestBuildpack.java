@@ -14,17 +14,17 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.buildpack.platform.build;
+package io.github.kotlinmania.spring.boot.buildpack.platform.build;
 
 import java.io.IOException;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.buildpack.platform.docker.type.Layer;
-import org.springframework.boot.buildpack.platform.io.Content;
-import org.springframework.boot.buildpack.platform.io.IOConsumer;
-import org.springframework.boot.buildpack.platform.io.Layout;
-import org.springframework.boot.buildpack.platform.io.Owner;
+import io.github.kotlinmania.spring.boot.buildpack.platform.docker.type.Layer;
+import io.github.kotlinmania.spring.boot.buildpack.platform.io.Content;
+import io.github.kotlinmania.spring.boot.buildpack.platform.io.IOConsumer;
+import io.github.kotlinmania.spring.boot.buildpack.platform.io.Layout;
+import io.github.kotlinmania.spring.boot.buildpack.platform.io.Owner;
 
 /**
  * A test {@link Buildpack}.

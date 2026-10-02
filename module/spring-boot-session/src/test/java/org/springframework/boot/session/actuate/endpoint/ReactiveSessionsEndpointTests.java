@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.session.actuate.endpoint;
+package io.github.kotlinmania.spring.boot.session.actuate.endpoint;
 
 import java.time.Duration;
 import java.util.Collections;
@@ -24,7 +24,7 @@ import org.junit.jupiter.api.Test;
 import reactor.core.publisher.Mono;
 import reactor.test.StepVerifier;
 
-import org.springframework.boot.session.actuate.endpoint.SessionsDescriptor.SessionDescriptor;
+import io.github.kotlinmania.spring.boot.session.actuate.endpoint.SessionsDescriptor.SessionDescriptor;
 import org.springframework.session.MapSession;
 import org.springframework.session.ReactiveFindByIndexNameSessionRepository;
 import org.springframework.session.ReactiveSessionRepository;

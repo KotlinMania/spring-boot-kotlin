@@ -1,7 +1,7 @@
 import io.spring.gradle.dependencymanagement.dsl.DependencyManagementExtension
 
 plugins {
-	id("org.springframework.boot") version "{version-spring-boot}"
+	id("io.github.kotlinmania.spring.boot.) version "{version-spring-boot}"
 }
 
 apply(plugin = "io.spring.dependency-management")
@@ -19,7 +19,7 @@ repositories {
 the<DependencyManagementExtension>().apply {
 	resolutionStrategy {
 		eachDependency {
-			if (requested.group == "org.springframework.boot") {
+			if (requested.group == "io.github.kotlinmania.spring.boot.) {
 				useVersion("TEST-SNAPSHOT")
 			}
 		}

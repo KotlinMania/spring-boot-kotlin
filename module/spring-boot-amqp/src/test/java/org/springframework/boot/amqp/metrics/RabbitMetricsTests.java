@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.amqp.metrics;
+package io.github.kotlinmania.spring.boot.amqp.metrics;
 
 import com.rabbitmq.client.ConnectionFactory;
 import io.micrometer.core.instrument.Tags;

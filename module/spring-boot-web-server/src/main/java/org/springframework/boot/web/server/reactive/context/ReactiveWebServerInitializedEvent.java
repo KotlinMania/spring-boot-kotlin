@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.web.server.reactive.context;
+package io.github.kotlinmania.spring.boot.web.server.reactive.context;
 
-import org.springframework.boot.web.server.WebServer;
-import org.springframework.boot.web.server.context.WebServerInitializedEvent;
+import io.github.kotlinmania.spring.boot.web.server.WebServer;
+import io.github.kotlinmania.spring.boot.web.server.context.WebServerInitializedEvent;
 
 /**
  * Event to be published after the {@link WebServer} is ready. Useful for obtaining the

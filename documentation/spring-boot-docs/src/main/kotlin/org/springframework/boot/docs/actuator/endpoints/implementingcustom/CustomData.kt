@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.actuator.endpoints.implementingcustom
+package io.github.kotlinmania.spring.boot.docs.actuator.endpoints.implementingcustom
 
 class CustomData(val name: String, val counter: Int)
 

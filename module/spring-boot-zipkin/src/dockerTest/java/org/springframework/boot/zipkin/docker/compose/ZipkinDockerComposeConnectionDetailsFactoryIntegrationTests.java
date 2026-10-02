@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.zipkin.docker.compose;
+package io.github.kotlinmania.spring.boot.zipkin.docker.compose;
 
-import org.springframework.boot.docker.compose.service.connection.test.DockerComposeTest;
-import org.springframework.boot.testsupport.container.TestImage;
-import org.springframework.boot.zipkin.autoconfigure.ZipkinConnectionDetails;
+import io.github.kotlinmania.spring.boot.docker.compose.service.connection.test.DockerComposeTest;
+import io.github.kotlinmania.spring.boot.testsupport.container.TestImage;
+import io.github.kotlinmania.spring.boot.zipkin.autoconfigure.ZipkinConnectionDetails;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

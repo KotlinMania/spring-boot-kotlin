@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.web.servlet.embeddedcontainer.customizing.samesite
+package io.github.kotlinmania.spring.boot.docs.web.servlet.embeddedcontainer.customizing.samesite
 
-import org.springframework.boot.web.server.servlet.CookieSameSiteSupplier
+import io.github.kotlinmania.spring.boot.web.server.servlet.CookieSameSiteSupplier
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
 

@@ -15,9 +15,7 @@
  */
 package org.springframework.boot.build.architecture.bfpp.parameters
 
-import org.springframework.beans.factory.config.BeanFactoryPostProcessor
-import org.springframework.beans.factory.config.ConfigurableListableBeanFactory
-import org.springframework.context.annotation.Bean
+package io.github.kotlinmania.spring.boot.build.architecture.bfpp.parameters;
 
 internal class ParametersBeanFactoryPostProcessorConfiguration {
     @Bean

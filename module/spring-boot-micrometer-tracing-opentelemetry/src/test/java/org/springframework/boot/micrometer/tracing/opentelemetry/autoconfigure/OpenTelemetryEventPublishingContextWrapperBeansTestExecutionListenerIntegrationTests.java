@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.micrometer.tracing.opentelemetry.autoconfigure;
+package io.github.kotlinmania.spring.boot.micrometer.tracing.opentelemetry.autoconfigure;
 
 import java.lang.reflect.Method;
 import java.util.List;
@@ -24,8 +24,8 @@ import io.opentelemetry.context.ContextStorage;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 
-import org.springframework.boot.micrometer.tracing.opentelemetry.autoconfigure.OpenTelemetryEventPublisherBeansApplicationListener.Wrapper.Storage;
-import org.springframework.boot.testsupport.classpath.ForkedClassPath;
+import io.github.kotlinmania.spring.boot.micrometer.tracing.opentelemetry.autoconfigure.OpenTelemetryEventPublisherBeansApplicationListener.Wrapper.Storage;
+import io.github.kotlinmania.spring.boot.testsupport.classpath.ForkedClassPath;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

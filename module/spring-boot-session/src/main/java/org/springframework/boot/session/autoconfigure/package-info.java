@@ -18,6 +18,6 @@
  * Auto-configuration for Spring Session.
  */
 @NullMarked
-package org.springframework.boot.session.autoconfigure;
+package io.github.kotlinmania.spring.boot.session.autoconfigure;
 
 import org.jspecify.annotations.NullMarked;

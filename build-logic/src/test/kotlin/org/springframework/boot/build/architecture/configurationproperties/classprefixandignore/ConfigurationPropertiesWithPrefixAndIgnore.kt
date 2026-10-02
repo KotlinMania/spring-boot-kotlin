@@ -15,7 +15,9 @@
  */
 package org.springframework.boot.build.architecture.configurationproperties.classprefixandignore
 
-import org.springframework.boot.build.architecture.annotations.TestConfigurationProperties
+package io.github.kotlinmania.spring.boot.build.architecture.configurationproperties.classprefixandignore;
+
+import io.github.kotlinmania.spring.boot.build.architecture.annotations.TestConfigurationProperties;
 
 @TestConfigurationProperties(prefix = "testing", ignoreUnknownFields = false)
 class ConfigurationPropertiesWithPrefixAndIgnore {

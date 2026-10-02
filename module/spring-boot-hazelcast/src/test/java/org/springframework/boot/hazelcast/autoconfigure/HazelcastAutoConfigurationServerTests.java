@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.hazelcast.autoconfigure;
+package io.github.kotlinmania.spring.boot.hazelcast.autoconfigure;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
@@ -37,12 +37,12 @@ import org.junit.jupiter.api.Test;
 
 import org.springframework.beans.factory.BeanCreationException;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.autoconfigure.AutoConfigurations;
-import org.springframework.boot.test.context.FilteredClassLoader;
-import org.springframework.boot.test.context.assertj.AssertableApplicationContext;
-import org.springframework.boot.test.context.runner.ApplicationContextRunner;
-import org.springframework.boot.test.context.runner.ContextConsumer;
-import org.springframework.boot.testsupport.classpath.resources.WithResource;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurations;
+import io.github.kotlinmania.spring.boot.test.context.FilteredClassLoader;
+import io.github.kotlinmania.spring.boot.test.context.assertj.AssertableApplicationContext;
+import io.github.kotlinmania.spring.boot.test.context.runner.ApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.test.context.runner.ContextConsumer;
+import io.github.kotlinmania.spring.boot.testsupport.classpath.resources.WithResource;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.env.Environment;
@@ -74,7 +74,7 @@ class HazelcastAutoConfigurationServerTests {
 	void systemPropertyWithXml() {
 		this.contextRunner
 			.withSystemProperties(HazelcastServerConfiguration.CONFIG_SYSTEM_PROPERTY
-					+ "=classpath:org/springframework/boot/hazelcast/autoconfigure/hazelcast-specific.xml")
+					+ "=classpath:io.github.kotlinmania.spring.boot.hazelcast/autoconfigure/hazelcast-specific.xml")
 			.run((context) -> {
 				Config config = context.getBean(HazelcastInstance.class).getConfig();
 				assertThat(config.getMapConfigs().keySet()).containsOnly("foobar");
@@ -85,7 +85,7 @@ class HazelcastAutoConfigurationServerTests {
 	void systemPropertyWithYaml() {
 		this.contextRunner
 			.withSystemProperties(HazelcastServerConfiguration.CONFIG_SYSTEM_PROPERTY
-					+ "=classpath:org/springframework/boot/hazelcast/autoconfigure/hazelcast-specific.yaml")
+					+ "=classpath:io.github.kotlinmania.spring.boot.hazelcast/autoconfigure/hazelcast-specific.yaml")
 			.run((context) -> {
 				Config config = context.getBean(HazelcastInstance.class).getConfig();
 				assertThat(config.getMapConfigs().keySet()).containsOnly("foobar");
@@ -96,7 +96,7 @@ class HazelcastAutoConfigurationServerTests {
 	void systemPropertyWithYml() {
 		this.contextRunner
 			.withSystemProperties(HazelcastServerConfiguration.CONFIG_SYSTEM_PROPERTY
-					+ "=classpath:org/springframework/boot/hazelcast/autoconfigure/hazelcast-specific.yml")
+					+ "=classpath:io.github.kotlinmania.spring.boot.hazelcast/autoconfigure/hazelcast-specific.yml")
 			.run((context) -> {
 				Config config = context.getBean(HazelcastInstance.class).getConfig();
 				assertThat(config.getMapConfigs().keySet()).containsOnly("foobar");
@@ -106,28 +106,28 @@ class HazelcastAutoConfigurationServerTests {
 	@Test
 	void explicitConfigFileWithXml() {
 		this.contextRunner
-			.withPropertyValues("spring.hazelcast.config=org/springframework/boot/hazelcast/autoconfigure/"
+			.withPropertyValues("spring.hazelcast.config=io.github.kotlinmania.spring.boot.hazelcast/autoconfigure/"
 					+ "hazelcast-specific.xml")
 			.run(assertSpecificHazelcastServer(
-					"org/springframework/boot/hazelcast/autoconfigure/hazelcast-specific.xml"));
+					"io.github.kotlinmania.spring.boot.hazelcast/autoconfigure/hazelcast-specific.xml"));
 	}
 
 	@Test
 	void explicitConfigFileWithYaml() {
 		this.contextRunner
-			.withPropertyValues("spring.hazelcast.config=org/springframework/boot/hazelcast/autoconfigure/"
+			.withPropertyValues("spring.hazelcast.config=io.github.kotlinmania.spring.boot.hazelcast/autoconfigure/"
 					+ "hazelcast-specific.yaml")
 			.run(assertSpecificHazelcastServer(
-					"org/springframework/boot/hazelcast/autoconfigure/hazelcast-specific.yaml"));
+					"io.github.kotlinmania.spring.boot.hazelcast/autoconfigure/hazelcast-specific.yaml"));
 	}
 
 	@Test
 	void explicitConfigFileWithYml() {
 		this.contextRunner
-			.withPropertyValues("spring.hazelcast.config=org/springframework/boot/hazelcast/autoconfigure/"
+			.withPropertyValues("spring.hazelcast.config=io.github.kotlinmania.spring.boot.hazelcast/autoconfigure/"
 					+ "hazelcast-specific.yml")
 			.run(assertSpecificHazelcastServer(
-					"org/springframework/boot/hazelcast/autoconfigure/hazelcast-specific.yml"));
+					"io.github.kotlinmania.spring.boot.hazelcast/autoconfigure/hazelcast-specific.yml"));
 	}
 
 	@Test
@@ -136,7 +136,7 @@ class HazelcastAutoConfigurationServerTests {
 			.withPropertyValues("spring.hazelcast.config=classpath:org/springframework/"
 					+ "boot/hazelcast/autoconfigure/hazelcast-specific.xml")
 			.run(assertSpecificHazelcastServer(
-					"org/springframework/boot/hazelcast/autoconfigure/hazelcast-specific.xml"));
+					"io.github.kotlinmania.spring.boot.hazelcast/autoconfigure/hazelcast-specific.xml"));
 	}
 
 	@Test
@@ -145,7 +145,7 @@ class HazelcastAutoConfigurationServerTests {
 			.withPropertyValues("spring.hazelcast.config=classpath:org/springframework/"
 					+ "boot/hazelcast/autoconfigure/hazelcast-specific.yaml")
 			.run(assertSpecificHazelcastServer(
-					"org/springframework/boot/hazelcast/autoconfigure/hazelcast-specific.yaml"));
+					"io.github.kotlinmania.spring.boot.hazelcast/autoconfigure/hazelcast-specific.yaml"));
 	}
 
 	@Test
@@ -154,7 +154,7 @@ class HazelcastAutoConfigurationServerTests {
 			.withPropertyValues("spring.hazelcast.config=classpath:org/springframework/"
 					+ "boot/hazelcast/autoconfigure/hazelcast-specific.yml")
 			.run(assertSpecificHazelcastServer(
-					"org/springframework/boot/hazelcast/autoconfigure/hazelcast-specific.yml"));
+					"io.github.kotlinmania.spring.boot.hazelcast/autoconfigure/hazelcast-specific.yml"));
 	}
 
 	private ContextConsumer<AssertableApplicationContext> assertSpecificHazelcastServer(String location) {

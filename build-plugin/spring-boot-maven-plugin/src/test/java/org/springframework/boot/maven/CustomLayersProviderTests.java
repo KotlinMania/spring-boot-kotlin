@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.maven;
+package io.github.kotlinmania.spring.boot.maven;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -25,9 +25,9 @@ import org.junit.jupiter.api.Test;
 import org.w3c.dom.Document;
 import org.xml.sax.InputSource;
 
-import org.springframework.boot.loader.tools.Library;
-import org.springframework.boot.loader.tools.LibraryCoordinates;
-import org.springframework.boot.loader.tools.layer.CustomLayers;
+import io.github.kotlinmania.spring.boot.loader.tools.Library;
+import io.github.kotlinmania.spring.boot.loader.tools.LibraryCoordinates;
+import io.github.kotlinmania.spring.boot.loader.tools.layer.CustomLayers;
 import org.springframework.core.io.ClassPathResource;
 
 import static org.assertj.core.api.Assertions.assertThat;

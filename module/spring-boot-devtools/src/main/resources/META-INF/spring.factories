@@ -1,13 +1,13 @@
 # ApplicationContext Initializers
 org.springframework.context.ApplicationContextInitializer=\
-org.springframework.boot.devtools.restart.RestartScopeInitializer
+io.github.kotlinmania.spring.boot.devtools.restart.RestartScopeInitializer
 
 # Application Listeners
 org.springframework.context.ApplicationListener=\
-org.springframework.boot.devtools.logger.DevToolsLogFactory$Listener,\
-org.springframework.boot.devtools.restart.RestartApplicationListener
+io.github.kotlinmania.spring.boot.devtools.logger.DevToolsLogFactory$Listener,\
+io.github.kotlinmania.spring.boot.devtools.restart.RestartApplicationListener
 
 # Environment Post Processors
-org.springframework.boot.EnvironmentPostProcessor=\
-org.springframework.boot.devtools.env.DevToolsHomePropertiesPostProcessor,\
-org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor
+io.github.kotlinmania.spring.boot.EnvironmentPostProcessor=\
+io.github.kotlinmania.spring.boot.devtools.env.DevToolsHomePropertiesPostProcessor,\
+io.github.kotlinmania.spring.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor

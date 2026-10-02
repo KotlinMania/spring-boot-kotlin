@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.rsocket.netty;
+package io.github.kotlinmania.spring.boot.rsocket.netty;
 
 import java.net.InetSocketAddress;
 import java.nio.channels.ClosedChannelException;
@@ -45,19 +45,19 @@ import reactor.netty.tcp.SslProvider.GenericSslContextSpec;
 import reactor.netty.tcp.TcpClient;
 import reactor.test.StepVerifier;
 
-import org.springframework.boot.rsocket.server.RSocketServer;
-import org.springframework.boot.rsocket.server.RSocketServer.Transport;
-import org.springframework.boot.rsocket.server.RSocketServerCustomizer;
-import org.springframework.boot.ssl.DefaultSslBundleRegistry;
-import org.springframework.boot.ssl.SslBundle;
-import org.springframework.boot.ssl.SslBundleKey;
-import org.springframework.boot.ssl.jks.JksSslStoreBundle;
-import org.springframework.boot.ssl.jks.JksSslStoreDetails;
-import org.springframework.boot.ssl.pem.PemSslStoreBundle;
-import org.springframework.boot.ssl.pem.PemSslStoreDetails;
-import org.springframework.boot.testsupport.classpath.resources.ResourcePath;
-import org.springframework.boot.testsupport.classpath.resources.WithPackageResources;
-import org.springframework.boot.web.server.Ssl;
+import io.github.kotlinmania.spring.boot.rsocket.server.RSocketServer;
+import io.github.kotlinmania.spring.boot.rsocket.server.RSocketServer.Transport;
+import io.github.kotlinmania.spring.boot.rsocket.server.RSocketServerCustomizer;
+import io.github.kotlinmania.spring.boot.ssl.DefaultSslBundleRegistry;
+import io.github.kotlinmania.spring.boot.ssl.SslBundle;
+import io.github.kotlinmania.spring.boot.ssl.SslBundleKey;
+import io.github.kotlinmania.spring.boot.ssl.jks.JksSslStoreBundle;
+import io.github.kotlinmania.spring.boot.ssl.jks.JksSslStoreDetails;
+import io.github.kotlinmania.spring.boot.ssl.pem.PemSslStoreBundle;
+import io.github.kotlinmania.spring.boot.ssl.pem.PemSslStoreDetails;
+import io.github.kotlinmania.spring.boot.testsupport.classpath.resources.ResourcePath;
+import io.github.kotlinmania.spring.boot.testsupport.classpath.resources.WithPackageResources;
+import io.github.kotlinmania.spring.boot.web.server.Ssl;
 import org.springframework.core.codec.CharSequenceEncoder;
 import org.springframework.core.codec.StringDecoder;
 import org.springframework.core.io.buffer.NettyDataBufferFactory;
@@ -371,7 +371,7 @@ class NettyRSocketServerFactoryTests {
 		NettyRSocketServerFactory factory = getFactory();
 		factory.setTransport(Transport.TCP);
 		Ssl ssl = new Ssl();
-		ssl.setKeyStore("classpath:org/springframework/boot/rsocket/netty/test.jks");
+		ssl.setKeyStore("classpath:io.github.kotlinmania.spring.boot.rsocket/netty/test.jks");
 		ssl.setKeyPassword("password");
 		factory.setSsl(ssl);
 		this.server = factory.create(new EchoRequestResponseAcceptor());

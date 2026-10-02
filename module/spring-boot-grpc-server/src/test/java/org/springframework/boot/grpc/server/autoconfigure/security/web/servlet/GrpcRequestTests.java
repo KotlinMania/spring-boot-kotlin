@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.grpc.server.autoconfigure.security.web.servlet;
+package io.github.kotlinmania.spring.boot.grpc.server.autoconfigure.security.web.servlet;
 
 import io.grpc.BindableService;
 import io.grpc.ServerServiceDefinition;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.grpc.server.autoconfigure.security.web.servlet.GrpcRequest.GrpcServletRequestMatcher;
+import io.github.kotlinmania.spring.boot.grpc.server.autoconfigure.security.web.servlet.GrpcRequest.GrpcServletRequestMatcher;
 import org.springframework.grpc.server.service.DefaultGrpcServiceDiscoverer;
 import org.springframework.grpc.server.service.GrpcServiceDiscoverer;
 import org.springframework.mock.web.MockHttpServletRequest;

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.buildpack.platform.docker.type;
+package io.github.kotlinmania.spring.boot.buildpack.platform.docker.type;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -24,7 +24,7 @@ import org.jspecify.annotations.Nullable;
 import tools.jackson.databind.JsonNode;
 import tools.jackson.databind.node.NullNode;
 
-import org.springframework.boot.buildpack.platform.json.MappedObject;
+import io.github.kotlinmania.spring.boot.buildpack.platform.json.MappedObject;
 import org.springframework.util.Assert;
 
 /**

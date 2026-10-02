@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.features.developingautoconfiguration.testing
+package io.github.kotlinmania.spring.boot.docs.features.developingautoconfiguration.testing
 
-import org.springframework.boot.autoconfigure.condition.ConditionalOnClass
-import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean
-import org.springframework.boot.context.properties.ConfigurationProperties
-import org.springframework.boot.context.properties.EnableConfigurationProperties
-import org.springframework.boot.docs.features.developingautoconfiguration.testing.MyServiceAutoConfiguration.UserProperties
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnClass
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnMissingBean
+import io.github.kotlinmania.spring.boot.context.properties.ConfigurationProperties
+import io.github.kotlinmania.spring.boot.context.properties.EnableConfigurationProperties
+import io.github.kotlinmania.spring.boot.docs.features.developingautoconfiguration.testing.MyServiceAutoConfiguration.UserProperties
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
 

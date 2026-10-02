@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.elasticsearch.health;
+package io.github.kotlinmania.spring.boot.elasticsearch.health;
 
 import java.io.InputStream;
 import java.nio.charset.StandardCharsets;
@@ -25,12 +25,12 @@ import co.elastic.clients.transport.rest5_client.low_level.Response;
 import co.elastic.clients.transport.rest5_client.low_level.Rest5Client;
 import org.apache.hc.core5.http.HttpStatus;
 
-import org.springframework.boot.health.contributor.AbstractHealthIndicator;
-import org.springframework.boot.health.contributor.Health;
-import org.springframework.boot.health.contributor.HealthIndicator;
-import org.springframework.boot.health.contributor.Status;
-import org.springframework.boot.json.JsonParser;
-import org.springframework.boot.json.JsonParserFactory;
+import io.github.kotlinmania.spring.boot.health.contributor.AbstractHealthIndicator;
+import io.github.kotlinmania.spring.boot.health.contributor.Health;
+import io.github.kotlinmania.spring.boot.health.contributor.HealthIndicator;
+import io.github.kotlinmania.spring.boot.health.contributor.Status;
+import io.github.kotlinmania.spring.boot.json.JsonParser;
+import io.github.kotlinmania.spring.boot.json.JsonParserFactory;
 import org.springframework.util.StreamUtils;
 
 /**

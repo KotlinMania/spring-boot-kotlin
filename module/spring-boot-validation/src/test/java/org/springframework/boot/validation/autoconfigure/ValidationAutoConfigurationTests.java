@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.validation.autoconfigure;
+package io.github.kotlinmania.spring.boot.validation.autoconfigure;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -31,11 +31,11 @@ import org.mockito.Mockito;
 import org.springframework.beans.factory.BeanFactoryUtils;
 import org.springframework.beans.factory.config.BeanPostProcessor;
 import org.springframework.beans.factory.support.BeanDefinitionRegistry;
-import org.springframework.boot.autoconfigure.AutoConfigurations;
-import org.springframework.boot.test.context.assertj.AssertableApplicationContext;
-import org.springframework.boot.test.context.runner.ApplicationContextRunner;
-import org.springframework.boot.validation.autoconfigure.ValidationAutoConfigurationTests.CustomValidatorConfiguration.TestBeanPostProcessor;
-import org.springframework.boot.validation.beanvalidation.MethodValidationExcludeFilter;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurations;
+import io.github.kotlinmania.spring.boot.test.context.assertj.AssertableApplicationContext;
+import io.github.kotlinmania.spring.boot.test.context.runner.ApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.validation.autoconfigure.ValidationAutoConfigurationTests.CustomValidatorConfiguration.TestBeanPostProcessor;
+import io.github.kotlinmania.spring.boot.validation.beanvalidation.MethodValidationExcludeFilter;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;

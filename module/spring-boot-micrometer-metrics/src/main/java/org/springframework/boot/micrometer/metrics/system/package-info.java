@@ -18,6 +18,6 @@
  * System metrics.
  */
 @NullMarked
-package org.springframework.boot.micrometer.metrics.system;
+package io.github.kotlinmania.spring.boot.micrometer.metrics.system;
 
 import org.jspecify.annotations.NullMarked;

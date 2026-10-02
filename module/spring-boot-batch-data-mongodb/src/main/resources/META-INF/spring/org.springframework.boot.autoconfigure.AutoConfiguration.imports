@@ -1,1 +1,1 @@
-org.springframework.boot.batch.mongodb.autoconfigure.BatchDataMongoAutoConfiguration
+io.github.kotlinmania.spring.boot.batch.mongodb.autoconfigure.BatchDataMongoAutoConfiguration

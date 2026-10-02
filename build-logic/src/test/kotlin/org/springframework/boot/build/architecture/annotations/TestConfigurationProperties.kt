@@ -15,20 +15,29 @@
  */
 package org.springframework.boot.build.architecture.annotations
 
-import org.springframework.core.annotation.AliasFor
-import org.springframework.stereotype.Indexed
+package io.github.kotlinmania.spring.boot.build.bom.bomr;
 
-@Target(
-    AnnotationTarget.CLASS,
-    AnnotationTarget.FUNCTION,
-    AnnotationTarget.PROPERTY_GETTER,
-    AnnotationTarget.PROPERTY_SETTER
-)
-@Retention(AnnotationRetention.RUNTIME)
-@Indexed
-annotation class TestConfigurationProperties(
-    @get:AliasFor("prefix") val value: String = "",
-    @get:AliasFor("value") val prefix: String = "",
-    val ignoreInvalidFields: Boolean = false,
-    val ignoreUnknownFields: Boolean = true
-)
+import java.util.List;
+
+import io.github.kotlinmania.spring.boot.build.bom.Library;
+
+class LibraryWithVersionOptions {
+
+	private final Library library;
+
+	private final List<VersionOption> versionOptions;
+
+	LibraryWithVersionOptions(Library library, List<VersionOption> versionOptions) {
+		this.library = library;
+		this.versionOptions = versionOptions;
+	}
+
+	Library getLibrary() {
+		return this.library;
+	}
+
+	List<VersionOption> getVersionOptions() {
+		return this.versionOptions;
+	}
+
+}

@@ -18,6 +18,6 @@
  * Auto-configuration for transaction support.
  */
 @NullMarked
-package org.springframework.boot.transaction.autoconfigure;
+package io.github.kotlinmania.spring.boot.transaction.autoconfigure;
 
 import org.jspecify.annotations.NullMarked;

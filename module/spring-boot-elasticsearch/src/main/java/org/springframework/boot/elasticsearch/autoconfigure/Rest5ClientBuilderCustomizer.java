@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.elasticsearch.autoconfigure;
+package io.github.kotlinmania.spring.boot.elasticsearch.autoconfigure;
 
 import java.util.function.Consumer;
 

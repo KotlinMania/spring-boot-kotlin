@@ -1,6 +1,6 @@
 plugins {
 	id 'war'
-	id 'org.springframework.boot' version '{version-spring-boot}'
+	id 'io.github.kotlinmania.spring.boot. version '{version-spring-boot}'
 }
 
 tasks.named("bootWar") {
@@ -10,7 +10,7 @@ tasks.named("bootWar") {
 // tag::properties-launcher[]
 tasks.named("bootWar") {
 	manifest {
-		attributes 'Main-Class': 'org.springframework.boot.loader.launch.PropertiesLauncher'
+		attributes 'Main-Class': 'io.github.kotlinmania.spring.boot.loader.launch.PropertiesLauncher'
 	}
 }
 // end::properties-launcher[]

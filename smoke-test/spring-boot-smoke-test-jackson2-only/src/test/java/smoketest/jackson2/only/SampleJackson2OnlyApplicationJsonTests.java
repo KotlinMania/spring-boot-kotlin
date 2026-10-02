@@ -22,8 +22,8 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.Test;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.autoconfigure.json.JsonTest;
-import org.springframework.boot.test.json.ObjectContent;
+import io.github.kotlinmania.spring.boot.test.autoconfigure.json.JsonTest;
+import io.github.kotlinmania.spring.boot.test.json.ObjectContent;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -40,7 +40,7 @@ class SampleJackson2OnlyApplicationJsonTests {
 	ObjectMapper objectMapper;
 
 	@Autowired
-	org.springframework.boot.test.json.Jackson2Tester<JsonPojo> tester;
+	io.github.kotlinmania.spring.boot.test.json.Jackson2Tester<JsonPojo> tester;
 
 	@Test
 	void objectMapperIsInjected() {

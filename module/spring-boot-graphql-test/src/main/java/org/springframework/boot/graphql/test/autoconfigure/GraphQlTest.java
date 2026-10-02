@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.graphql.test.autoconfigure;
+package io.github.kotlinmania.spring.boot.graphql.test.autoconfigure;
 
 import java.lang.annotation.Documented;
 import java.lang.annotation.ElementType;
@@ -25,13 +25,13 @@ import java.lang.annotation.Target;
 
 import org.junit.jupiter.api.extension.ExtendWith;
 
-import org.springframework.boot.autoconfigure.ImportAutoConfiguration;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.graphql.test.autoconfigure.tester.AutoConfigureGraphQlTester;
-import org.springframework.boot.graphql.test.autoconfigure.tester.AutoConfigureHttpGraphQlTester;
-import org.springframework.boot.test.autoconfigure.OverrideAutoConfiguration;
-import org.springframework.boot.test.autoconfigure.json.AutoConfigureJson;
-import org.springframework.boot.test.context.filter.annotation.TypeExcludeFilters;
+import io.github.kotlinmania.spring.boot.autoconfigure.ImportAutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.SpringBootApplication;
+import io.github.kotlinmania.spring.boot.graphql.test.autoconfigure.tester.AutoConfigureGraphQlTester;
+import io.github.kotlinmania.spring.boot.graphql.test.autoconfigure.tester.AutoConfigureHttpGraphQlTester;
+import io.github.kotlinmania.spring.boot.test.autoconfigure.OverrideAutoConfiguration;
+import io.github.kotlinmania.spring.boot.test.autoconfigure.json.AutoConfigureJson;
+import io.github.kotlinmania.spring.boot.test.context.filter.annotation.TypeExcludeFilters;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.core.annotation.AliasFor;
 import org.springframework.core.env.Environment;
@@ -72,7 +72,7 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
  * <p>
  * To load your full application configuration instead and test via
  * {@code HttpGraphQlTester}, consider using
- * {@link org.springframework.boot.test.context.SpringBootTest @SpringBootTest} combined
+ * {@link io.github.kotlinmania.spring.boot.test.context.SpringBootTest @SpringBootTest} combined
  * with {@link AutoConfigureHttpGraphQlTester @AutoConfigureHttpGraphQlTester}.
  *
  * @author Brian Clozel

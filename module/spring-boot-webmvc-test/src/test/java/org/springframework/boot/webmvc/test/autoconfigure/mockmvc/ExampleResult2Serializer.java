@@ -14,15 +14,15 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.webmvc.test.autoconfigure.mockmvc;
+package io.github.kotlinmania.spring.boot.webmvc.test.autoconfigure.mockmvc;
 
 import java.io.IOException;
 
 import com.fasterxml.jackson.core.JsonGenerator;
 import com.fasterxml.jackson.databind.SerializerProvider;
 
-import org.springframework.boot.jackson2.JsonComponent;
-import org.springframework.boot.jackson2.JsonObjectSerializer;
+import io.github.kotlinmania.spring.boot.jackson2.JsonComponent;
+import io.github.kotlinmania.spring.boot.jackson2.JsonObjectSerializer;
 
 /**
  * {@link JsonObjectSerializer} for {@link ExampleResult}.

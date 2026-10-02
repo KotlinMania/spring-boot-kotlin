@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.data.jpa.autoconfigure;
+package io.github.kotlinmania.spring.boot.data.jpa.autoconfigure;
 
 import org.springframework.context.annotation.ImportBeanDefinitionRegistrar;
 import org.springframework.data.envers.repository.config.EnableEnversRepositories;

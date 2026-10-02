@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.webtestclient.autoconfigure;
+package io.github.kotlinmania.spring.boot.webtestclient.autoconfigure;
 
 import java.lang.annotation.Documented;
 import java.lang.annotation.ElementType;
@@ -24,9 +24,9 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 import java.time.Duration;
 
-import org.springframework.boot.autoconfigure.ImportAutoConfiguration;
-import org.springframework.boot.test.context.PropertyMapping;
-import org.springframework.boot.test.context.PropertyMapping.Skip;
+import io.github.kotlinmania.spring.boot.autoconfigure.ImportAutoConfiguration;
+import io.github.kotlinmania.spring.boot.test.context.PropertyMapping;
+import io.github.kotlinmania.spring.boot.test.context.PropertyMapping.Skip;
 import org.springframework.test.web.reactive.server.WebTestClient;
 
 /**

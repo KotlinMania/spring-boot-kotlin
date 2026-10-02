@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.data.jdbc.autoconfigure;
+package io.github.kotlinmania.spring.boot.data.jdbc.autoconfigure;
 
 import java.util.function.Function;
 

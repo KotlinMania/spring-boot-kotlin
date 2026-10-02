@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.data.nosql.neo4j.connecting;
+package io.github.kotlinmania.spring.boot.docs.data.nosql.neo4j.connecting;
 
 import org.neo4j.driver.Driver;
 import org.neo4j.driver.Session;

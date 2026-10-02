@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.actuate.info;
+package io.github.kotlinmania.spring.boot.actuate.info;
 
 import java.time.Instant;
 import java.util.Map;
@@ -25,8 +25,8 @@ import org.jspecify.annotations.Nullable;
 import org.springframework.aot.hint.BindingReflectionHintsRegistrar;
 import org.springframework.aot.hint.RuntimeHints;
 import org.springframework.aot.hint.RuntimeHintsRegistrar;
-import org.springframework.boot.actuate.info.GitInfoContributor.GitInfoContributorRuntimeHints;
-import org.springframework.boot.info.GitProperties;
+import io.github.kotlinmania.spring.boot.actuate.info.GitInfoContributor.GitInfoContributorRuntimeHints;
+import io.github.kotlinmania.spring.boot.info.GitProperties;
 import org.springframework.context.annotation.ImportRuntimeHints;
 import org.springframework.core.env.PropertiesPropertySource;
 import org.springframework.core.env.PropertySource;

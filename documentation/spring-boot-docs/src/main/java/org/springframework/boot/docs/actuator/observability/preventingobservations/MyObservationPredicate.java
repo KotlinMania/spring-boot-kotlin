@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.actuator.observability.preventingobservations;
+package io.github.kotlinmania.spring.boot.docs.actuator.observability.preventingobservations;
 
 import io.micrometer.observation.Observation.Context;
 import io.micrometer.observation.ObservationPredicate;

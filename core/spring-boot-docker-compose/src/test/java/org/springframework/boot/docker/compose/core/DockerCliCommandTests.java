@@ -14,16 +14,16 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docker.compose.core;
+package io.github.kotlinmania.spring.boot.docker.compose.core;
 
 import java.time.Duration;
 import java.util.List;
 
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.docker.compose.core.DockerCliCommand.ComposeVersion;
-import org.springframework.boot.docker.compose.core.DockerCliCommand.None;
-import org.springframework.boot.logging.LogLevel;
+import io.github.kotlinmania.spring.boot.docker.compose.core.DockerCliCommand.ComposeVersion;
+import io.github.kotlinmania.spring.boot.docker.compose.core.DockerCliCommand.None;
+import io.github.kotlinmania.spring.boot.logging.LogLevel;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

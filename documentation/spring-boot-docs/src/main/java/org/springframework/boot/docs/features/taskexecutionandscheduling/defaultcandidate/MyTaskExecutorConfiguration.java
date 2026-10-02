@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.features.taskexecutionandscheduling.defaultcandidate;
+package io.github.kotlinmania.spring.boot.docs.features.taskexecutionandscheduling.defaultcandidate;
 
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;

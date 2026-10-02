@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.neo4j.health;
+package io.github.kotlinmania.spring.boot.neo4j.health;
 
 import org.jspecify.annotations.Nullable;
 import org.neo4j.driver.summary.DatabaseInfo;

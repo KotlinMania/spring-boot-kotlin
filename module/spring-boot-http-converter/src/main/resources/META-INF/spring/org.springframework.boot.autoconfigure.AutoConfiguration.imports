@@ -1,1 +1,1 @@
-org.springframework.boot.http.converter.autoconfigure.HttpMessageConvertersAutoConfiguration
+io.github.kotlinmania.spring.boot.http.converter.autoconfigure.HttpMessageConvertersAutoConfiguration

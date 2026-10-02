@@ -18,6 +18,6 @@
  * Application support for the {@code jakarta.servlet} specification.
  */
 @NullMarked
-package org.springframework.boot.servlet;
+package io.github.kotlinmania.spring.boot.servlet;
 
 import org.jspecify.annotations.NullMarked;

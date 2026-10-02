@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.cli.command;
+package io.github.kotlinmania.spring.boot.cli.command;
 
 import java.util.Collection;
 import java.util.Collections;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.cli.command.options.OptionHelp;
+import io.github.kotlinmania.spring.boot.cli.command.options.OptionHelp;
 
 /**
  * Abstract {@link Command} implementation.

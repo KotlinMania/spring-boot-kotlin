@@ -18,12 +18,12 @@ services:
       - 'CASSANDRA_CLIENT_ENCRYPTION_OPTIONS_TRUSTSTORE_PASSWORD: password'
       - 'CASSANDRA_CLIENT_ENCRYPTION_OPTIONS_STORE_TYPE: PKCS12'
     labels:
-      - 'org.springframework.boot.sslbundle.jks.keystore.type:PKCS12'
-      - 'org.springframework.boot.sslbundle.jks.keystore.location=client-keystore.p12'
-      - 'org.springframework.boot.sslbundle.jks.keystore.password=password'
-      - 'org.springframework.boot.sslbundle.jks.truststore.type=PKCS12'
-      - 'org.springframework.boot.sslbundle.jks.truststore.location=client-truststore.p12'
-      - 'org.springframework.boot.sslbundle.jks.truststore.password=password'
+      - 'io.github.kotlinmania.spring.boot.sslbundle.jks.keystore.type:PKCS12'
+      - 'io.github.kotlinmania.spring.boot.sslbundle.jks.keystore.location=client-keystore.p12'
+      - 'io.github.kotlinmania.spring.boot.sslbundle.jks.keystore.password=password'
+      - 'io.github.kotlinmania.spring.boot.sslbundle.jks.truststore.type=PKCS12'
+      - 'io.github.kotlinmania.spring.boot.sslbundle.jks.truststore.location=client-truststore.p12'
+      - 'io.github.kotlinmania.spring.boot.sslbundle.jks.truststore.password=password'
     secrets:
       - server-keystore
       - server-truststore

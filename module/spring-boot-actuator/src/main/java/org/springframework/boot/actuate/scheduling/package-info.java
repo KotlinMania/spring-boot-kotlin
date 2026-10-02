@@ -18,6 +18,6 @@
  * Actuator scheduling support.
  */
 @NullMarked
-package org.springframework.boot.actuate.scheduling;
+package io.github.kotlinmania.spring.boot.actuate.scheduling;
 
 import org.jspecify.annotations.NullMarked;

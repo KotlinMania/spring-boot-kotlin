@@ -18,6 +18,6 @@
  * HtmlUnit support classes.
  */
 @NullMarked
-package org.springframework.boot.test.web.htmlunit;
+package io.github.kotlinmania.spring.boot.test.web.htmlunit;
 
 import org.jspecify.annotations.NullMarked;

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.buildpack.platform.docker.transport;
+package io.github.kotlinmania.spring.boot.buildpack.platform.docker.transport;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -23,7 +23,7 @@ import java.nio.file.Path;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.io.TempDir;
 
-import org.springframework.boot.buildpack.platform.docker.configuration.DockerConnectionConfiguration;
+import io.github.kotlinmania.spring.boot.buildpack.platform.docker.configuration.DockerConnectionConfiguration;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

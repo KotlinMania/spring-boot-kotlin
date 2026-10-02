@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.maven;
+package io.github.kotlinmania.spring.boot.maven;
 
 import java.io.File;
 import java.io.IOException;
@@ -39,7 +39,7 @@ import org.apache.maven.project.MavenProject;
 import org.apache.maven.toolchain.ToolchainManager;
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.loader.tools.FileUtils;
+import io.github.kotlinmania.spring.boot.loader.tools.FileUtils;
 import org.springframework.util.StringUtils;
 
 /**

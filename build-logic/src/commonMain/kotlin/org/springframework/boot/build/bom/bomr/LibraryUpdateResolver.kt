@@ -15,7 +15,13 @@
  */
 package org.springframework.boot.build.bom.bomr
 
-import org.springframework.boot.build.bom.Library
+package io.github.kotlinmania.spring.boot.build.bom.bomr;
+
+import java.util.Collection;
+import java.util.List;
+import java.util.Map;
+
+import io.github.kotlinmania.spring.boot.build.bom.Library;
 
 /**
  * Resolves library updates.

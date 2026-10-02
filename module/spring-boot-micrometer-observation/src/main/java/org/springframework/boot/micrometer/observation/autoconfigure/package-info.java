@@ -18,6 +18,6 @@
  * Auto-configuration for Micrometer Observation.
  */
 @NullMarked
-package org.springframework.boot.micrometer.observation.autoconfigure;
+package io.github.kotlinmania.spring.boot.micrometer.observation.autoconfigure;
 
 import org.jspecify.annotations.NullMarked;

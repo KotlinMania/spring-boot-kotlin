@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.webflux.actuate.web.exchanges;
+package io.github.kotlinmania.spring.boot.webflux.actuate.web.exchanges;
 
 import java.net.InetAddress;
 import java.net.InetSocketAddress;
@@ -26,7 +26,7 @@ import java.util.Map;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.actuate.web.exchanges.RecordableHttpRequest;
+import io.github.kotlinmania.spring.boot.actuate.web.exchanges.RecordableHttpRequest;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.server.reactive.ServerHttpRequest;
 

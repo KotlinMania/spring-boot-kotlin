@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.testing.utilities.configdataapplicationcontextinitializer
+package io.github.kotlinmania.spring.boot.docs.testing.utilities.configdataapplicationcontextinitializer
 
 class Config
 

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docker.compose.core;
+package io.github.kotlinmania.spring.boot.docker.compose.core;
 
 import java.io.File;
 import java.io.IOException;
@@ -30,11 +30,11 @@ import org.jspecify.annotations.Nullable;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.io.TempDir;
 
-import org.springframework.boot.docker.compose.core.DockerCli.DockerComposeOptions;
-import org.springframework.boot.logging.LogLevel;
-import org.springframework.boot.testsupport.container.DisabledIfDockerUnavailable;
-import org.springframework.boot.testsupport.container.TestImage;
-import org.springframework.boot.testsupport.process.DisabledIfProcessUnavailable;
+import io.github.kotlinmania.spring.boot.docker.compose.core.DockerCli.DockerComposeOptions;
+import io.github.kotlinmania.spring.boot.logging.LogLevel;
+import io.github.kotlinmania.spring.boot.testsupport.container.DisabledIfDockerUnavailable;
+import io.github.kotlinmania.spring.boot.testsupport.container.TestImage;
+import io.github.kotlinmania.spring.boot.testsupport.process.DisabledIfProcessUnavailable;
 import org.springframework.core.io.ClassPathResource;
 
 import static org.assertj.core.api.Assertions.assertThat;

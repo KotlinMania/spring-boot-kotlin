@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.micrometer.tracing.opentelemetry.autoconfigure;
+package io.github.kotlinmania.spring.boot.micrometer.tracing.opentelemetry.autoconfigure;
 
 import java.util.List;
 
@@ -50,21 +50,21 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
 import org.springframework.beans.factory.ObjectProvider;
-import org.springframework.boot.SpringBootVersion;
-import org.springframework.boot.autoconfigure.AutoConfiguration;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
-import org.springframework.boot.context.properties.EnableConfigurationProperties;
-import org.springframework.boot.micrometer.tracing.autoconfigure.MicrometerTracingAutoConfiguration;
-import org.springframework.boot.micrometer.tracing.autoconfigure.NoopTracerAutoConfiguration;
-import org.springframework.boot.micrometer.tracing.autoconfigure.TracingProperties;
-import org.springframework.boot.micrometer.tracing.opentelemetry.autoconfigure.OpenTelemetryPropagationConfigurations.NoPropagation;
-import org.springframework.boot.micrometer.tracing.opentelemetry.autoconfigure.OpenTelemetryPropagationConfigurations.PropagationWithBaggage;
-import org.springframework.boot.micrometer.tracing.opentelemetry.autoconfigure.OpenTelemetryPropagationConfigurations.PropagationWithoutBaggage;
-import org.springframework.boot.micrometer.tracing.opentelemetry.autoconfigure.OpenTelemetryTracingProperties.Export;
-import org.springframework.boot.micrometer.tracing.opentelemetry.autoconfigure.OpenTelemetryTracingProperties.Limits;
-import org.springframework.boot.opentelemetry.autoconfigure.ConditionalOnEnabledOpenTelemetry;
+import io.github.kotlinmania.spring.boot.SpringBootVersion;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.EnableAutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnClass;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnMissingBean;
+import io.github.kotlinmania.spring.boot.context.properties.EnableConfigurationProperties;
+import io.github.kotlinmania.spring.boot.micrometer.tracing.autoconfigure.MicrometerTracingAutoConfiguration;
+import io.github.kotlinmania.spring.boot.micrometer.tracing.autoconfigure.NoopTracerAutoConfiguration;
+import io.github.kotlinmania.spring.boot.micrometer.tracing.autoconfigure.TracingProperties;
+import io.github.kotlinmania.spring.boot.micrometer.tracing.opentelemetry.autoconfigure.OpenTelemetryPropagationConfigurations.NoPropagation;
+import io.github.kotlinmania.spring.boot.micrometer.tracing.opentelemetry.autoconfigure.OpenTelemetryPropagationConfigurations.PropagationWithBaggage;
+import io.github.kotlinmania.spring.boot.micrometer.tracing.opentelemetry.autoconfigure.OpenTelemetryPropagationConfigurations.PropagationWithoutBaggage;
+import io.github.kotlinmania.spring.boot.micrometer.tracing.opentelemetry.autoconfigure.OpenTelemetryTracingProperties.Export;
+import io.github.kotlinmania.spring.boot.micrometer.tracing.opentelemetry.autoconfigure.OpenTelemetryTracingProperties.Limits;
+import io.github.kotlinmania.spring.boot.opentelemetry.autoconfigure.ConditionalOnEnabledOpenTelemetry;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Import;
 import org.springframework.util.CollectionUtils;
@@ -185,7 +185,7 @@ public final class OpenTelemetryTracingAutoConfiguration {
 	@Bean
 	@ConditionalOnMissingBean
 	Tracer otelTracer(OpenTelemetry openTelemetry) {
-		return openTelemetry.getTracer("org.springframework.boot", SpringBootVersion.getVersion());
+		return openTelemetry.getTracer("io.github.kotlinmania.spring.boot., SpringBootVersion.getVersion());
 	}
 
 	@Bean

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.gradle.plugin;
+package io.github.kotlinmania.spring.boot.gradle.plugin;
 
 import java.io.File;
 import java.io.FileWriter;
@@ -32,8 +32,8 @@ import org.gradle.testkit.runner.BuildTask;
 import org.gradle.testkit.runner.TaskOutcome;
 import org.junit.jupiter.api.TestTemplate;
 
-import org.springframework.boot.gradle.junit.GradleCompatibility;
-import org.springframework.boot.testsupport.gradle.testkit.GradleBuild;
+import io.github.kotlinmania.spring.boot.gradle.junit.GradleCompatibility;
+import io.github.kotlinmania.spring.boot.testsupport.gradle.testkit.GradleBuild;
 import org.springframework.util.FileSystemUtils;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -53,7 +53,7 @@ class NativeImagePluginActionIntegrationTests {
 	@TestTemplate
 	void applyingNativeImagePluginAppliesAotPlugin() {
 		assertThat(this.gradleBuild.build("aotPluginApplied").getOutput())
-			.contains("org.springframework.boot.aot applied = true");
+			.contains("io.github.kotlinmania.spring.boot.aot applied = true");
 	}
 
 	@TestTemplate
@@ -142,11 +142,11 @@ class NativeImagePluginActionIntegrationTests {
 	}
 
 	private void writeDummySpringApplicationAotProcessorMainClass() {
-		File examplePackage = new File(this.gradleBuild.getProjectDir(), "src/main/java/org/springframework/boot");
+		File examplePackage = new File(this.gradleBuild.getProjectDir(), "src/main/java/io.github.kotlinmania.spring.boot.);
 		examplePackage.mkdirs();
 		File main = new File(examplePackage, "SpringApplicationAotProcessor.java");
 		try (PrintWriter writer = new PrintWriter(new FileWriter(main))) {
-			writer.println("package org.springframework.boot;");
+			writer.println("package io.github.kotlinmania.spring.boot.");
 			writer.println();
 			writer.println("import java.io.IOException;");
 			writer.println();

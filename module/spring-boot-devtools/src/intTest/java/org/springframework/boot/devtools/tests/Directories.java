@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.devtools.tests;
+package io.github.kotlinmania.spring.boot.devtools.tests;
 
 import java.io.File;
 
-import org.springframework.boot.testsupport.BuildOutput;
+import io.github.kotlinmania.spring.boot.testsupport.BuildOutput;
 
 /**
  * Various directories used by the {@link ApplicationLauncher ApplicationLaunchers}.

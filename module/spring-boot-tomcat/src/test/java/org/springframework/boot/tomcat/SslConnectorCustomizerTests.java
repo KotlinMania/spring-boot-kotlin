@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.tomcat;
+package io.github.kotlinmania.spring.boot.tomcat;
 
 import java.util.Collections;
 
@@ -29,13 +29,13 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 
-import org.springframework.boot.testsupport.classpath.resources.WithPackageResources;
-import org.springframework.boot.testsupport.ssl.MockPkcs11Security;
-import org.springframework.boot.testsupport.ssl.MockPkcs11SecurityProvider;
-import org.springframework.boot.testsupport.system.OutputCaptureExtension;
-import org.springframework.boot.testsupport.web.servlet.DirtiesUrlFactories;
-import org.springframework.boot.web.server.Ssl;
-import org.springframework.boot.web.server.WebServerSslBundle;
+import io.github.kotlinmania.spring.boot.testsupport.classpath.resources.WithPackageResources;
+import io.github.kotlinmania.spring.boot.testsupport.ssl.MockPkcs11Security;
+import io.github.kotlinmania.spring.boot.testsupport.ssl.MockPkcs11SecurityProvider;
+import io.github.kotlinmania.spring.boot.testsupport.system.OutputCaptureExtension;
+import io.github.kotlinmania.spring.boot.testsupport.web.servlet.DirtiesUrlFactories;
+import io.github.kotlinmania.spring.boot.web.server.Ssl;
+import io.github.kotlinmania.spring.boot.web.server.WebServerSslBundle;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatIllegalStateException;

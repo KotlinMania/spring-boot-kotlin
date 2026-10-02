@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.jackson.autoconfigure;
+package io.github.kotlinmania.spring.boot.jackson.autoconfigure;
 
 import tools.jackson.databind.json.JsonMapper;
 

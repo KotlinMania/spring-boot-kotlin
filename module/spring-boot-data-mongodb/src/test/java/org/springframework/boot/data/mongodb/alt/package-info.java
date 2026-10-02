@@ -15,6 +15,6 @@
  */
 
 @NullMarked
-package org.springframework.boot.data.mongodb.alt;
+package io.github.kotlinmania.spring.boot.data.mongodb.alt;
 
 import org.jspecify.annotations.NullMarked;

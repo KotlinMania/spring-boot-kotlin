@@ -14,16 +14,16 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.r2dbc.testcontainers;
+package io.github.kotlinmania.spring.boot.r2dbc.testcontainers;
 
 import io.r2dbc.spi.ConnectionFactoryOptions;
 import org.testcontainers.clickhouse.ClickHouseContainer;
 import org.testcontainers.clickhouse.ClickHouseR2DBCDatabaseContainer;
 
-import org.springframework.boot.r2dbc.autoconfigure.R2dbcConnectionDetails;
-import org.springframework.boot.testcontainers.service.connection.ContainerConnectionDetailsFactory;
-import org.springframework.boot.testcontainers.service.connection.ContainerConnectionSource;
-import org.springframework.boot.testcontainers.service.connection.ServiceConnection;
+import io.github.kotlinmania.spring.boot.r2dbc.autoconfigure.R2dbcConnectionDetails;
+import io.github.kotlinmania.spring.boot.testcontainers.service.connection.ContainerConnectionDetailsFactory;
+import io.github.kotlinmania.spring.boot.testcontainers.service.connection.ContainerConnectionSource;
+import io.github.kotlinmania.spring.boot.testcontainers.service.connection.ServiceConnection;
 
 /**
  * {@link ContainerConnectionDetailsFactory} to create {@link R2dbcConnectionDetails} from

@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.jpa.autoconfigure;
+package io.github.kotlinmania.spring.boot.jpa.autoconfigure;
 
-import org.springframework.boot.jpa.EntityManagerFactoryBuilder;
+import io.github.kotlinmania.spring.boot.jpa.EntityManagerFactoryBuilder;
 
 /**
  * Callback interface that can be used to customize the

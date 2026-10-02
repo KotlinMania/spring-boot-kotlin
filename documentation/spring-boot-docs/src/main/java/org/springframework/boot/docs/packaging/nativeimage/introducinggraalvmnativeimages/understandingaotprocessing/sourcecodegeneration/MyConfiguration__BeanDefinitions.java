@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.packaging.nativeimage.introducinggraalvmnativeimages.understandingaotprocessing.sourcecodegeneration;
+package io.github.kotlinmania.spring.boot.docs.packaging.nativeimage.introducinggraalvmnativeimages.understandingaotprocessing.sourcecodegeneration;
 
 import org.springframework.beans.factory.aot.BeanInstanceSupplier;
 import org.springframework.beans.factory.config.BeanDefinition;

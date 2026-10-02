@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.maven;
+package io.github.kotlinmania.spring.boot.maven;
 
 import java.util.function.Supplier;
 
 import org.apache.maven.plugin.logging.Log;
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.loader.tools.Packager.MainClassTimeoutWarningListener;
+import io.github.kotlinmania.spring.boot.loader.tools.Packager.MainClassTimeoutWarningListener;
 
 /**
  * {@link MainClassTimeoutWarningListener} backed by a supplied Maven {@link Log}.

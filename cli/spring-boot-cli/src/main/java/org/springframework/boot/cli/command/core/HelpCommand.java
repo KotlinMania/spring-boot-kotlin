@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.cli.command.core;
+package io.github.kotlinmania.spring.boot.cli.command.core;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -24,15 +24,15 @@ import java.util.Set;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.cli.command.AbstractCommand;
-import org.springframework.boot.cli.command.Command;
-import org.springframework.boot.cli.command.CommandRunner;
-import org.springframework.boot.cli.command.HelpExample;
-import org.springframework.boot.cli.command.NoHelpCommandArgumentsException;
-import org.springframework.boot.cli.command.NoSuchCommandException;
-import org.springframework.boot.cli.command.options.OptionHelp;
-import org.springframework.boot.cli.command.status.ExitStatus;
-import org.springframework.boot.cli.util.Log;
+import io.github.kotlinmania.spring.boot.cli.command.AbstractCommand;
+import io.github.kotlinmania.spring.boot.cli.command.Command;
+import io.github.kotlinmania.spring.boot.cli.command.CommandRunner;
+import io.github.kotlinmania.spring.boot.cli.command.HelpExample;
+import io.github.kotlinmania.spring.boot.cli.command.NoHelpCommandArgumentsException;
+import io.github.kotlinmania.spring.boot.cli.command.NoSuchCommandException;
+import io.github.kotlinmania.spring.boot.cli.command.options.OptionHelp;
+import io.github.kotlinmania.spring.boot.cli.command.status.ExitStatus;
+import io.github.kotlinmania.spring.boot.cli.util.Log;
 
 /**
  * Internal {@link Command} used for 'help' requests.

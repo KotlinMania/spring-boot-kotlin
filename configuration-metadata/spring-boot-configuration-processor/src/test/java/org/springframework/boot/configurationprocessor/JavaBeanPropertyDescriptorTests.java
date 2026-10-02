@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.configurationprocessor;
+package io.github.kotlinmania.spring.boot.configurationprocessor;
 
 import javax.lang.model.element.ElementKind;
 import javax.lang.model.element.ExecutableElement;
@@ -23,11 +23,11 @@ import javax.lang.model.element.VariableElement;
 
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.configurationsample.simple.DeprecatedSingleProperty;
-import org.springframework.boot.configurationsample.simple.SimpleCollectionProperties;
-import org.springframework.boot.configurationsample.simple.SimpleProperties;
-import org.springframework.boot.configurationsample.simple.SimpleTypeProperties;
-import org.springframework.boot.configurationsample.specific.InnerClassProperties;
+import io.github.kotlinmania.spring.boot.configurationsample.simple.DeprecatedSingleProperty;
+import io.github.kotlinmania.spring.boot.configurationsample.simple.SimpleCollectionProperties;
+import io.github.kotlinmania.spring.boot.configurationsample.simple.SimpleProperties;
+import io.github.kotlinmania.spring.boot.configurationsample.simple.SimpleTypeProperties;
+import io.github.kotlinmania.spring.boot.configurationsample.specific.InnerClassProperties;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -166,7 +166,7 @@ class JavaBeanPropertyDescriptorTests extends PropertyDescriptorTests {
 			JavaBeanPropertyDescriptor property = createPropertyDescriptor(ownerElement, "first");
 			assertItemMetadata(metadataEnv, property).isGroup()
 				.hasName("test.first")
-				.hasType("org.springframework.boot.configurationsample.specific.InnerClassProperties$Foo")
+				.hasType("io.github.kotlinmania.spring.boot.configurationsample.specific.InnerClassProperties$Foo")
 				.hasSourceType(InnerClassProperties.class)
 				.hasSourceMethod("getFirst()")
 				.hasNoDescription()
@@ -188,10 +188,10 @@ class JavaBeanPropertyDescriptorTests extends PropertyDescriptorTests {
 	@Test
 	@SuppressWarnings("deprecation")
 	void javaBeanDeprecatedPropertyOnClass() {
-		process(org.springframework.boot.configurationsample.simple.DeprecatedProperties.class,
+		process(io.github.kotlinmania.spring.boot.configurationsample.simple.DeprecatedProperties.class,
 				(roundEnv, metadataEnv) -> {
 					TypeElement ownerElement = roundEnv
-						.getRootElement(org.springframework.boot.configurationsample.simple.DeprecatedProperties.class);
+						.getRootElement(io.github.kotlinmania.spring.boot.configurationsample.simple.DeprecatedProperties.class);
 					JavaBeanPropertyDescriptor property = createPropertyDescriptor(ownerElement, "name");
 					assertItemMetadata(metadataEnv, property).isProperty().isDeprecatedWithNoInformation();
 				});

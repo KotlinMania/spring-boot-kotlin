@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.gradle.testkit;
+package io.github.kotlinmania.spring.boot.gradle.testkit;
 
 import java.io.File;
 import java.io.IOException;
@@ -41,11 +41,11 @@ import tools.jackson.core.JsonParser;
 import tools.jackson.databind.JacksonModule;
 
 import org.springframework.asm.ClassVisitor;
-import org.springframework.boot.buildpack.platform.build.BuildRequest;
-import org.springframework.boot.loader.tools.Layers;
-import org.springframework.boot.testsupport.BuildOutput;
-import org.springframework.boot.testsupport.gradle.testkit.Dsl;
-import org.springframework.boot.testsupport.gradle.testkit.GradleBuild;
+import io.github.kotlinmania.spring.boot.buildpack.platform.build.BuildRequest;
+import io.github.kotlinmania.spring.boot.loader.tools.Layers;
+import io.github.kotlinmania.spring.boot.testsupport.BuildOutput;
+import io.github.kotlinmania.spring.boot.testsupport.gradle.testkit.Dsl;
+import io.github.kotlinmania.spring.boot.testsupport.gradle.testkit.GradleBuild;
 
 /**
  * Custom {@link GradleBuild} that configures the

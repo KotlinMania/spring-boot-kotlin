@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.messaging.kafka.embedded.annotation;
+package io.github.kotlinmania.spring.boot.docs.messaging.kafka.embedded.annotation;
 
-import org.springframework.boot.test.context.SpringBootTest;
+import io.github.kotlinmania.spring.boot.test.context.SpringBootTest;
 import org.springframework.kafka.test.context.EmbeddedKafka;
 
 @SpringBootTest

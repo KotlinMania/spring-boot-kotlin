@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.buildpack.platform.json;
+package io.github.kotlinmania.spring.boot.buildpack.platform.json;
 
 import org.junit.jupiter.api.Test;
 import tools.jackson.databind.DeserializationFeature;

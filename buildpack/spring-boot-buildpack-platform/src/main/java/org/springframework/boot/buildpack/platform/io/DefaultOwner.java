@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.buildpack.platform.io;
+package io.github.kotlinmania.spring.boot.buildpack.platform.io;
 
 /**
  * Default {@link Owner} implementation.

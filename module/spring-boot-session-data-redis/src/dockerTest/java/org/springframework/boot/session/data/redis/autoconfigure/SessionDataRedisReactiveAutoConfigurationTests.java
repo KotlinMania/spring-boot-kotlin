@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.session.data.redis.autoconfigure;
+package io.github.kotlinmania.spring.boot.session.data.redis.autoconfigure;
 
 import java.time.Duration;
 import java.util.List;
@@ -27,17 +27,17 @@ import org.testcontainers.junit.jupiter.Container;
 import org.testcontainers.junit.jupiter.Testcontainers;
 import reactor.core.publisher.Mono;
 
-import org.springframework.boot.autoconfigure.AutoConfigurations;
-import org.springframework.boot.data.redis.autoconfigure.DataRedisAutoConfiguration;
-import org.springframework.boot.data.redis.autoconfigure.DataRedisReactiveAutoConfiguration;
-import org.springframework.boot.session.autoconfigure.AbstractSessionReactiveAutoConfigurationTests;
-import org.springframework.boot.session.autoconfigure.SessionAutoConfiguration;
-import org.springframework.boot.test.context.assertj.AssertableReactiveWebApplicationContext;
-import org.springframework.boot.test.context.runner.ContextConsumer;
-import org.springframework.boot.test.context.runner.ReactiveWebApplicationContextRunner;
-import org.springframework.boot.testsupport.container.TestImage;
-import org.springframework.boot.web.server.autoconfigure.ServerProperties;
-import org.springframework.boot.webflux.autoconfigure.WebSessionIdResolverAutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurations;
+import io.github.kotlinmania.spring.boot.data.redis.autoconfigure.DataRedisAutoConfiguration;
+import io.github.kotlinmania.spring.boot.data.redis.autoconfigure.DataRedisReactiveAutoConfiguration;
+import io.github.kotlinmania.spring.boot.session.autoconfigure.AbstractSessionReactiveAutoConfigurationTests;
+import io.github.kotlinmania.spring.boot.session.autoconfigure.SessionAutoConfiguration;
+import io.github.kotlinmania.spring.boot.test.context.assertj.AssertableReactiveWebApplicationContext;
+import io.github.kotlinmania.spring.boot.test.context.runner.ContextConsumer;
+import io.github.kotlinmania.spring.boot.test.context.runner.ReactiveWebApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.testsupport.container.TestImage;
+import io.github.kotlinmania.spring.boot.web.server.autoconfigure.ServerProperties;
+import io.github.kotlinmania.spring.boot.webflux.autoconfigure.WebSessionIdResolverAutoConfiguration;
 import org.springframework.data.redis.connection.ReactiveRedisConnection;
 import org.springframework.data.redis.connection.ReactiveRedisConnectionFactory;
 import org.springframework.data.redis.connection.RedisConnectionFactory;

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.configurationsample.immutable;
+package io.github.kotlinmania.spring.boot.configurationsample.immutable;
 
 /**
  * Simple immutable properties with several constructors.

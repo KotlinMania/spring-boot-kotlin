@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.micrometer.metrics.autoconfigure.export.jmx;
+package io.github.kotlinmania.spring.boot.micrometer.metrics.autoconfigure.export.jmx;
 
 import io.micrometer.jmx.JmxConfig;
 import org.junit.jupiter.api.Test;

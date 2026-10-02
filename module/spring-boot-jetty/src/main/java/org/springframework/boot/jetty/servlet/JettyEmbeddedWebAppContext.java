@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.jetty.servlet;
+package io.github.kotlinmania.spring.boot.jetty.servlet;
 
 import org.eclipse.jetty.ee11.servlet.ServletHandler;
 import org.eclipse.jetty.ee11.webapp.WebAppContext;
 import org.eclipse.jetty.util.ClassMatcher;
 
-import org.springframework.boot.jetty.JettyWebServer;
+import io.github.kotlinmania.spring.boot.jetty.JettyWebServer;
 
 /**
  * Jetty {@link WebAppContext} used by {@link JettyWebServer} to support deferred
@@ -31,7 +31,7 @@ import org.springframework.boot.jetty.JettyWebServer;
 class JettyEmbeddedWebAppContext extends WebAppContext {
 
 	JettyEmbeddedWebAppContext() {
-		setHiddenClassMatcher(new ClassMatcher("org.springframework.boot.loader."));
+		setHiddenClassMatcher(new ClassMatcher("io.github.kotlinmania.spring.boot.loader."));
 	}
 
 	@Override

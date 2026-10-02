@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.health.contributor;
+package io.github.kotlinmania.spring.boot.health.contributor;
 
 import java.util.Map;
 
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.health.contributor.HealthContributors.Entry;
+import io.github.kotlinmania.spring.boot.health.contributor.HealthContributors.Entry;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.Mockito.mock;

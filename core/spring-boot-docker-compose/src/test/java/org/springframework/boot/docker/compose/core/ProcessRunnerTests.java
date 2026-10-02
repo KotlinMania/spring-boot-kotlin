@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docker.compose.core;
+package io.github.kotlinmania.spring.boot.docker.compose.core;
 
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.testsupport.process.DisabledIfProcessUnavailable;
+import io.github.kotlinmania.spring.boot.testsupport.process.DisabledIfProcessUnavailable;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatExceptionOfType;

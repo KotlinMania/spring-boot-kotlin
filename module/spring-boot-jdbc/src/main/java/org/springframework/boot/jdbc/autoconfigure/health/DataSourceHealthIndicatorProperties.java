@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.jdbc.autoconfigure.health;
+package io.github.kotlinmania.spring.boot.jdbc.autoconfigure.health;
 
-import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.boot.jdbc.health.DataSourceHealthIndicator;
+import io.github.kotlinmania.spring.boot.context.properties.ConfigurationProperties;
+import io.github.kotlinmania.spring.boot.jdbc.health.DataSourceHealthIndicator;
 
 /**
  * External configuration properties for {@link DataSourceHealthIndicator}.

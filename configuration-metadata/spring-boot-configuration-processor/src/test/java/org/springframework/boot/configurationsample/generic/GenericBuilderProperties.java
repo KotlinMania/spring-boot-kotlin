@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.configurationsample.generic;
+package io.github.kotlinmania.spring.boot.configurationsample.generic;
 
 /**
  * A configuration properties that uses the builder pattern with a generic.

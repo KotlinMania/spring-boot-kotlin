@@ -82,16 +82,16 @@ repositories {
 gradlePlugin {
 	plugins {
 		springBootPlugin {
-			id = "org.springframework.boot"
+			id = "io.github.kotlinmania.spring.boot.
 			displayName = "Spring Boot Gradle Plugin"
 			description = "Spring Boot Gradle Plugin"
-			implementationClass = "org.springframework.boot.gradle.plugin.SpringBootPlugin"
+			implementationClass = "io.github.kotlinmania.spring.boot.gradle.plugin.SpringBootPlugin"
 		}
 		springBootAotPlugin {
-			id = "org.springframework.boot.aot"
+			id = "io.github.kotlinmania.spring.boot.aot"
 			displayName = "Spring Boot AOT Gradle Plugin"
 			description = "Spring Boot AOT Gradle Plugin"
-			implementationClass = "org.springframework.boot.gradle.plugin.SpringBootAotPlugin"
+			implementationClass = "io.github.kotlinmania.spring.boot.gradle.plugin.SpringBootAotPlugin"
 		}
 	}
 }

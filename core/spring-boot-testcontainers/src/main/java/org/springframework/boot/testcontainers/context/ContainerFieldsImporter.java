@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.testcontainers.context;
+package io.github.kotlinmania.spring.boot.testcontainers.context;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.Modifier;
@@ -27,7 +27,7 @@ import org.testcontainers.containers.Container;
 import org.testcontainers.lifecycle.Startable;
 
 import org.springframework.beans.factory.support.BeanDefinitionRegistry;
-import org.springframework.boot.autoconfigure.container.ContainerImageMetadata;
+import io.github.kotlinmania.spring.boot.autoconfigure.container.ContainerImageMetadata;
 import org.springframework.util.Assert;
 import org.springframework.util.ReflectionUtils;
 

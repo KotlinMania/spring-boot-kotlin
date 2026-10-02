@@ -18,6 +18,6 @@
  * Support classes for Spring Security web Auto-configuration.
  */
 @NullMarked
-package org.springframework.boot.security.autoconfigure.web;
+package io.github.kotlinmania.spring.boot.security.autoconfigure.web;
 
 import org.jspecify.annotations.NullMarked;

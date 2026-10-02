@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.loader.nio.file;
+package io.github.kotlinmania.spring.boot.loader.nio.file;
 
 import java.io.File;
 import java.net.URI;
@@ -29,7 +29,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.io.TempDir;
 
-import org.springframework.boot.loader.testsupport.TestJar;
+import io.github.kotlinmania.spring.boot.loader.testsupport.TestJar;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatExceptionOfType;

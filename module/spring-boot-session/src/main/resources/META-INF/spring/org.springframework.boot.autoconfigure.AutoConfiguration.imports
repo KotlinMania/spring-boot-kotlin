@@ -1,2 +1,2 @@
-org.springframework.boot.session.autoconfigure.SessionAutoConfiguration
-org.springframework.boot.session.autoconfigure.SessionsEndpointAutoConfiguration
+io.github.kotlinmania.spring.boot.session.autoconfigure.SessionAutoConfiguration
+io.github.kotlinmania.spring.boot.session.autoconfigure.SessionsEndpointAutoConfiguration

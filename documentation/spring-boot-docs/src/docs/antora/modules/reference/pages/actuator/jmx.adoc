@@ -15,8 +15,8 @@ Enabling management beans provided by other libraries (for example {url-log4j2-d
 
 See the {code-spring-boot-autoconfigure-src}/jmx/JmxAutoConfiguration.java[`JmxAutoConfiguration`] class for more details.
 
-By default, Spring Boot also exposes management endpoints as JMX MBeans under the `org.springframework.boot` domain.
-To take full control over endpoint registration in the JMX domain, consider registering your own javadoc:org.springframework.boot.actuate.endpoint.jmx.EndpointObjectNameFactory[] implementation.
+By default, Spring Boot also exposes management endpoints as JMX MBeans under the `io.github.kotlinmania.spring.boot. domain.
+To take full control over endpoint registration in the JMX domain, consider registering your own javadoc:io.github.kotlinmania.spring.boot.actuate.endpoint.jmx.EndpointObjectNameFactory[] implementation.
 
 
 
@@ -24,7 +24,7 @@ To take full control over endpoint registration in the JMX domain, consider regi
 == Customizing MBean Names
 
 The name of the MBean is usually generated from the `id` of the endpoint.
-For example, the `health` endpoint is exposed as `org.springframework.boot:type=Endpoint,name=Health`.
+For example, the `health` endpoint is exposed as `io.github.kotlinmania.spring.boot.type=Endpoint,name=Health`.
 
 If your application contains more than one Spring javadoc:org.springframework.context.ApplicationContext[], you may find that names clash.
 To solve this problem, you can set the configprop:spring.jmx.unique-names[] property to `true` so that MBean names are always unique.

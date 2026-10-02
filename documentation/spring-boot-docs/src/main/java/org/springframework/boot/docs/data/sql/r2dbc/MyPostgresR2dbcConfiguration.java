@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.data.sql.r2dbc;
+package io.github.kotlinmania.spring.boot.docs.data.sql.r2dbc;
 
 import java.util.HashMap;
 import java.util.Map;
 
 import io.r2dbc.postgresql.PostgresqlConnectionFactoryProvider;
 
-import org.springframework.boot.r2dbc.autoconfigure.ConnectionFactoryOptionsBuilderCustomizer;
+import io.github.kotlinmania.spring.boot.r2dbc.autoconfigure.ConnectionFactoryOptionsBuilderCustomizer;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 

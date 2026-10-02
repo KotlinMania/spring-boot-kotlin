@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.test.util;
+package io.github.kotlinmania.spring.boot.test.util;
 
 import org.junit.jupiter.api.Test;
 

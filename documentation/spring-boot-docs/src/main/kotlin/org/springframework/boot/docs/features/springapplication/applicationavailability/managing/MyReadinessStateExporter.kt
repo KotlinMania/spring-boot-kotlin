@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.features.springapplication.applicationavailability.managing
+package io.github.kotlinmania.spring.boot.docs.features.springapplication.applicationavailability.managing
 
-import org.springframework.boot.availability.AvailabilityChangeEvent
-import org.springframework.boot.availability.ReadinessState
+import io.github.kotlinmania.spring.boot.availability.AvailabilityChangeEvent
+import io.github.kotlinmania.spring.boot.availability.ReadinessState
 import org.springframework.context.event.EventListener
 import org.springframework.stereotype.Component
 

@@ -15,7 +15,7 @@
  */
 
 plugins {
-	id 'org.springframework.boot' version '{version}'
+	id 'io.github.kotlinmania.spring.boot. version '{version}'
 }
 
 apply plugin: 'io.spring.dependency-management'
@@ -24,7 +24,7 @@ apply plugin: 'org.jetbrains.kotlin.jvm'
 dependencyManagement {
 	resolutionStrategy {
 		eachDependency {
-			if (it.requested.group == 'org.springframework.boot') {
+			if (it.requested.group == 'io.github.kotlinmania.spring.boot.) {
 				it.useVersion project.bootVersion
 			}
 		}

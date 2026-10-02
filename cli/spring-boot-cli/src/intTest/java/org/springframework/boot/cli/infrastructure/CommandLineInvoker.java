@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.cli.infrastructure;
+package io.github.kotlinmania.spring.boot.cli.infrastructure;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -35,7 +35,7 @@ import java.util.List;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipInputStream;
 
-import org.springframework.boot.testsupport.BuildOutput;
+import io.github.kotlinmania.spring.boot.testsupport.BuildOutput;
 import org.springframework.util.Assert;
 import org.springframework.util.StreamUtils;
 

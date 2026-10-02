@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.loader.launch;
+package io.github.kotlinmania.spring.boot.loader.launch;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -31,8 +31,8 @@ import java.util.jar.Manifest;
 
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.loader.net.protocol.jar.JarUrl;
-import org.springframework.boot.loader.zip.AssertFileChannelDataBlocksClosed;
+import io.github.kotlinmania.spring.boot.loader.net.protocol.jar.JarUrl;
+import io.github.kotlinmania.spring.boot.loader.zip.AssertFileChannelDataBlocksClosed;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.test.tools.SourceFile;
 import org.springframework.core.test.tools.TestCompiler;

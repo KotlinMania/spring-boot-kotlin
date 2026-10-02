@@ -1,5 +1,5 @@
-org.springframework.boot.autoconfigure.service.connection.ConnectionDetailsFactory=\
-org.springframework.boot.activemq.docker.compose.ActiveMQClassicDockerComposeConnectionDetailsFactory,\
-org.springframework.boot.activemq.docker.compose.ActiveMQDockerComposeConnectionDetailsFactory,\
-org.springframework.boot.activemq.testcontainers.ActiveMQClassicContainerConnectionDetailsFactory,\
-org.springframework.boot.activemq.testcontainers.ActiveMQContainerConnectionDetailsFactory
+io.github.kotlinmania.spring.boot.autoconfigure.service.connection.ConnectionDetailsFactory=\
+io.github.kotlinmania.spring.boot.activemq.docker.compose.ActiveMQClassicDockerComposeConnectionDetailsFactory,\
+io.github.kotlinmania.spring.boot.activemq.docker.compose.ActiveMQDockerComposeConnectionDetailsFactory,\
+io.github.kotlinmania.spring.boot.activemq.testcontainers.ActiveMQClassicContainerConnectionDetailsFactory,\
+io.github.kotlinmania.spring.boot.activemq.testcontainers.ActiveMQContainerConnectionDetailsFactory

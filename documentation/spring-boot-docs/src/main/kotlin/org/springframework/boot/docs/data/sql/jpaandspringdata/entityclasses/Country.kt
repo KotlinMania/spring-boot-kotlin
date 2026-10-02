@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.data.sql.jpaandspringdata.entityclasses
+package io.github.kotlinmania.spring.boot.docs.data.sql.jpaandspringdata.entityclasses
 
 import jakarta.persistence.Column
 import jakarta.persistence.Entity

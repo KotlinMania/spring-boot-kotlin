@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.gradle.docs;
+package io.github.kotlinmania.spring.boot.gradle.docs;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -30,8 +30,8 @@ import org.gradle.testkit.runner.BuildResult;
 import org.junit.jupiter.api.TestTemplate;
 import org.junit.jupiter.api.extension.ExtendWith;
 
-import org.springframework.boot.gradle.junit.GradleMultiDslExtension;
-import org.springframework.boot.testsupport.gradle.testkit.GradleBuild;
+import io.github.kotlinmania.spring.boot.gradle.junit.GradleMultiDslExtension;
+import io.github.kotlinmania.spring.boot.testsupport.gradle.testkit.GradleBuild;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -134,7 +134,7 @@ class PackagingDocumentationTests {
 		assertThat(file).isFile();
 		try (JarFile jar = new JarFile(file)) {
 			assertThat(jar.getManifest().getMainAttributes().getValue("Main-Class"))
-				.isEqualTo("org.springframework.boot.loader.launch.PropertiesLauncher");
+				.isEqualTo("io.github.kotlinmania.spring.boot.loader.launch.PropertiesLauncher");
 		}
 	}
 

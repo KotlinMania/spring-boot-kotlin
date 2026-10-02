@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.graphql.test.autoconfigure;
+package io.github.kotlinmania.spring.boot.graphql.test.autoconfigure;
 
-import org.springframework.boot.autoconfigure.SpringBootApplication;
+import io.github.kotlinmania.spring.boot.autoconfigure.SpringBootApplication;
 
 /**
  * Example {@link SpringBootApplication @SpringBootApplication} used with

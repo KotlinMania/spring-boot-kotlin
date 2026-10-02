@@ -1,8 +1,8 @@
-import org.springframework.boot.gradle.tasks.run.BootRun
+import io.github.kotlinmania.spring.boot.gradle.tasks.run.BootRun
 
 plugins {
 	java
-	id("org.springframework.boot") version "{version}"
+	id("io.github.kotlinmania.spring.boot.) version "{version}"
 }
 
 // tag::system-property[]

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.webservices.test.autoconfigure.client;
+package io.github.kotlinmania.spring.boot.webservices.test.autoconfigure.client;
 
 import java.lang.annotation.Documented;
 import java.lang.annotation.ElementType;
@@ -25,11 +25,11 @@ import java.lang.annotation.Target;
 
 import org.junit.jupiter.api.extension.ExtendWith;
 
-import org.springframework.boot.autoconfigure.ImportAutoConfiguration;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.test.autoconfigure.OverrideAutoConfiguration;
-import org.springframework.boot.test.context.filter.annotation.TypeExcludeFilters;
-import org.springframework.boot.webservices.client.WebServiceTemplateBuilder;
+import io.github.kotlinmania.spring.boot.autoconfigure.ImportAutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.SpringBootApplication;
+import io.github.kotlinmania.spring.boot.test.autoconfigure.OverrideAutoConfiguration;
+import io.github.kotlinmania.spring.boot.test.context.filter.annotation.TypeExcludeFilters;
+import io.github.kotlinmania.spring.boot.webservices.client.WebServiceTemplateBuilder;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.core.annotation.AliasFor;
 import org.springframework.core.env.Environment;

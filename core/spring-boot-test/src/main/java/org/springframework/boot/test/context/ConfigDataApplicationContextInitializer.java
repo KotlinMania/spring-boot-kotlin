@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.test.context;
+package io.github.kotlinmania.spring.boot.test.context;
 
-import org.springframework.boot.bootstrap.DefaultBootstrapContext;
-import org.springframework.boot.context.config.ConfigData;
-import org.springframework.boot.context.config.ConfigDataEnvironmentPostProcessor;
-import org.springframework.boot.env.DefaultPropertiesPropertySource;
-import org.springframework.boot.env.RandomValuePropertySource;
+import io.github.kotlinmania.spring.boot.bootstrap.DefaultBootstrapContext;
+import io.github.kotlinmania.spring.boot.context.config.ConfigData;
+import io.github.kotlinmania.spring.boot.context.config.ConfigDataEnvironmentPostProcessor;
+import io.github.kotlinmania.spring.boot.env.DefaultPropertiesPropertySource;
+import io.github.kotlinmania.spring.boot.env.RandomValuePropertySource;
 import org.springframework.context.ApplicationContextInitializer;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.core.env.ConfigurableEnvironment;

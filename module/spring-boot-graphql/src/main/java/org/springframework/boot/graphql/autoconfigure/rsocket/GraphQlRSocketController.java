@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.graphql.autoconfigure.rsocket;
+package io.github.kotlinmania.spring.boot.graphql.autoconfigure.rsocket;
 
 import java.util.Map;
 

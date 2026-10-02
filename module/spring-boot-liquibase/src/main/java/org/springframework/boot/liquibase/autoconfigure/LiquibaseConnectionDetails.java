@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.liquibase.autoconfigure;
+package io.github.kotlinmania.spring.boot.liquibase.autoconfigure;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.autoconfigure.service.connection.ConnectionDetails;
-import org.springframework.boot.jdbc.DatabaseDriver;
+import io.github.kotlinmania.spring.boot.autoconfigure.service.connection.ConnectionDetails;
+import io.github.kotlinmania.spring.boot.jdbc.DatabaseDriver;
 
 /**
  * Details required for Liquibase to establish a connection to an SQL service using JDBC.

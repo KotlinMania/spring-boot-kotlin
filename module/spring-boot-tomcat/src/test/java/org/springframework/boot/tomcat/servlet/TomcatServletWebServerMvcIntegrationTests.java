@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.tomcat.servlet;
+package io.github.kotlinmania.spring.boot.tomcat.servlet;
 
-import org.springframework.boot.tomcat.TomcatWebServer;
-import org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext;
-import org.springframework.boot.web.servlet.context.AbstractServletWebServerMvcIntegrationTests;
+import io.github.kotlinmania.spring.boot.tomcat.TomcatWebServer;
+import io.github.kotlinmania.spring.boot.web.server.servlet.context.ServletWebServerApplicationContext;
+import io.github.kotlinmania.spring.boot.web.servlet.context.AbstractServletWebServerMvcIntegrationTests;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 

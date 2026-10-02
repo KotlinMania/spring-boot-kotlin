@@ -18,6 +18,6 @@
  * IO classes and utilities.
  */
 @NullMarked
-package org.springframework.boot.buildpack.platform.io;
+package io.github.kotlinmania.spring.boot.buildpack.platform.io;
 
 import org.jspecify.annotations.NullMarked;

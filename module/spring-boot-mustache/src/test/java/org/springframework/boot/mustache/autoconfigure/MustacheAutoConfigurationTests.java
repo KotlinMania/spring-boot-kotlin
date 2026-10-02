@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.mustache.autoconfigure;
+package io.github.kotlinmania.spring.boot.mustache.autoconfigure;
 
 import java.nio.charset.StandardCharsets;
 import java.util.Arrays;
@@ -26,11 +26,11 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.EnumSource;
 
-import org.springframework.boot.autoconfigure.AutoConfigurations;
-import org.springframework.boot.mustache.servlet.view.MustacheViewResolver;
-import org.springframework.boot.test.context.runner.AbstractApplicationContextRunner;
-import org.springframework.boot.test.context.runner.ReactiveWebApplicationContextRunner;
-import org.springframework.boot.test.context.runner.WebApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurations;
+import io.github.kotlinmania.spring.boot.mustache.servlet.view.MustacheViewResolver;
+import io.github.kotlinmania.spring.boot.test.context.runner.AbstractApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.test.context.runner.ReactiveWebApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.test.context.runner.WebApplicationContextRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.MediaType;
@@ -72,7 +72,7 @@ class MustacheAutoConfigurationTests {
 			assertThat(context).hasSingleBean(MustacheResourceTemplateLoader.class);
 			assertThat(context).doesNotHaveBean(MustacheViewResolver.class);
 			assertThat(context)
-				.hasSingleBean(org.springframework.boot.mustache.reactive.view.MustacheViewResolver.class);
+				.hasSingleBean(io.github.kotlinmania.spring.boot.mustache.reactive.view.MustacheViewResolver.class);
 		});
 	}
 
@@ -84,7 +84,7 @@ class MustacheAutoConfigurationTests {
 				assertThat(context).hasSingleBean(MustacheResourceTemplateLoader.class);
 				assertThat(context).doesNotHaveBean(MustacheViewResolver.class);
 				assertThat(context)
-					.hasSingleBean(org.springframework.boot.mustache.reactive.view.MustacheViewResolver.class);
+					.hasSingleBean(io.github.kotlinmania.spring.boot.mustache.reactive.view.MustacheViewResolver.class);
 				assertThat(context.getBean(Mustache.Compiler.class).standardsMode).isTrue();
 			});
 	}
@@ -110,8 +110,8 @@ class MustacheAutoConfigurationTests {
 	@Test
 	void defaultReactiveViewResolverConfiguration() {
 		configure(new ReactiveWebApplicationContextRunner()).run((context) -> {
-			org.springframework.boot.mustache.reactive.view.MustacheViewResolver viewResolver = context
-				.getBean(org.springframework.boot.mustache.reactive.view.MustacheViewResolver.class);
+			io.github.kotlinmania.spring.boot.mustache.reactive.view.MustacheViewResolver viewResolver = context
+				.getBean(io.github.kotlinmania.spring.boot.mustache.reactive.view.MustacheViewResolver.class);
 			assertThat(viewResolver).extracting("charset").isEqualTo(StandardCharsets.UTF_8);
 			assertThat(viewResolver).extracting("prefix").isEqualTo("classpath:/templates/");
 			assertThat(viewResolver).extracting("requestContextAttribute").isNull();
@@ -228,7 +228,7 @@ class MustacheAutoConfigurationTests {
 		 * Reactive MustacheViewResolver
 		 */
 		REACTIVE(ReactiveWebApplicationContextRunner::new,
-				org.springframework.boot.mustache.reactive.view.MustacheViewResolver.class);
+				io.github.kotlinmania.spring.boot.mustache.reactive.view.MustacheViewResolver.class);
 
 		private final Supplier<AbstractApplicationContextRunner<?, ?, ?>> runner;
 

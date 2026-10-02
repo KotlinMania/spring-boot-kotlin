@@ -15,7 +15,7 @@
  */
 
 plugins {
-	id 'org.springframework.boot'
+	id 'io.github.kotlinmania.spring.boot.
 	id 'java'
 }
 

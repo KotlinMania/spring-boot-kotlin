@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.test.context.filter;
+package io.github.kotlinmania.spring.boot.test.context.filter;
 
-import org.springframework.boot.test.context.TestComponent;
+import io.github.kotlinmania.spring.boot.test.context.TestComponent;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration(proxyBeanMethods = false)

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.actuator.observability.contextpropagation
+package io.github.kotlinmania.spring.boot.docs.actuator.observability.contextpropagation
 
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration

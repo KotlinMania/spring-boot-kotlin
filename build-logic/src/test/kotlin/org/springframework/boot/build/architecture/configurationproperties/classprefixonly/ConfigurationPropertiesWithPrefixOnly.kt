@@ -15,7 +15,9 @@
  */
 package org.springframework.boot.build.architecture.configurationproperties.classprefixonly
 
-import org.springframework.boot.build.architecture.annotations.TestConfigurationProperties
+package io.github.kotlinmania.spring.boot.build.architecture.configurationproperties.classprefixonly;
+
+import io.github.kotlinmania.spring.boot.build.architecture.annotations.TestConfigurationProperties;
 
 @TestConfigurationProperties(prefix = "testing")
 class ConfigurationPropertiesWithPrefixOnly {

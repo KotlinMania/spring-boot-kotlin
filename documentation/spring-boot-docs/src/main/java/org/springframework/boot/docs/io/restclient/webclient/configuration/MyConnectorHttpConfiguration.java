@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.io.restclient.webclient.configuration;
+package io.github.kotlinmania.spring.boot.docs.io.restclient.webclient.configuration;
 
 import java.net.ProxySelector;
 
-import org.springframework.boot.http.client.reactive.ClientHttpConnectorBuilder;
+import io.github.kotlinmania.spring.boot.http.client.reactive.ClientHttpConnectorBuilder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 

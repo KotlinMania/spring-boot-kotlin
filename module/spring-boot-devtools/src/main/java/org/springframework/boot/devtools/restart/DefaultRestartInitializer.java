@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.devtools.restart;
+package io.github.kotlinmania.spring.boot.devtools.restart;
 
 import java.net.URL;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.devtools.system.DevToolsEnablementDeducer;
+import io.github.kotlinmania.spring.boot.devtools.system.DevToolsEnablementDeducer;
 
 /**
  * Default {@link RestartInitializer} that only enable initial restart when running a

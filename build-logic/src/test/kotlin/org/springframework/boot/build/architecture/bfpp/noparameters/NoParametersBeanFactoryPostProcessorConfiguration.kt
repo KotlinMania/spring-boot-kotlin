@@ -15,9 +15,7 @@
  */
 package org.springframework.boot.build.architecture.bfpp.noparameters
 
-import org.springframework.beans.factory.config.BeanFactoryPostProcessor
-import org.springframework.beans.factory.config.ConfigurableListableBeanFactory
-import org.springframework.context.annotation.Bean
+package io.github.kotlinmania.spring.boot.build.architecture.bfpp.noparameters;
 
 internal class NoParametersBeanFactoryPostProcessorConfiguration {
     @Bean

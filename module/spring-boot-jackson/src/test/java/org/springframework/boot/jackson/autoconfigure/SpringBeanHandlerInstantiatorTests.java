@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.jackson.autoconfigure;
+package io.github.kotlinmania.spring.boot.jackson.autoconfigure;
 
 import java.util.Collection;
 import java.util.HashMap;
@@ -47,7 +47,7 @@ import tools.jackson.databind.jsontype.TypeSerializer;
 import tools.jackson.databind.jsontype.impl.StdTypeResolverBuilder;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.runner.ApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.test.context.runner.ApplicationContextRunner;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

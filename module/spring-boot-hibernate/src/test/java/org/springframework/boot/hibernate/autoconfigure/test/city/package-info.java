@@ -15,6 +15,6 @@
  */
 
 @NullMarked
-package org.springframework.boot.hibernate.autoconfigure.test.city;
+package io.github.kotlinmania.spring.boot.hibernate.autoconfigure.test.city;
 
 import org.jspecify.annotations.NullMarked;

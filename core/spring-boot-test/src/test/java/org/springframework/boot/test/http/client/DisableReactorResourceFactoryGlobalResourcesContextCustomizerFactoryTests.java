@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.test.http.client;
+package io.github.kotlinmania.spring.boot.test.http.client;
 
 import org.junit.jupiter.api.Test;
 

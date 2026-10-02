@@ -14,19 +14,19 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.jsonb.autoconfigure;
+package io.github.kotlinmania.spring.boot.jsonb.autoconfigure;
 
 import jakarta.json.bind.Jsonb;
 
 import org.springframework.beans.factory.FactoryBean;
 import org.springframework.beans.factory.config.ConfigurableBeanFactory;
-import org.springframework.boot.autoconfigure.AutoConfiguration;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
-import org.springframework.boot.test.autoconfigure.json.ConditionalOnJsonTesters;
-import org.springframework.boot.test.autoconfigure.json.JsonMarshalTesterRuntimeHints;
-import org.springframework.boot.test.autoconfigure.json.JsonTesterFactoryBean;
-import org.springframework.boot.test.json.JsonbTester;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.EnableAutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnBean;
+import io.github.kotlinmania.spring.boot.test.autoconfigure.json.ConditionalOnJsonTesters;
+import io.github.kotlinmania.spring.boot.test.autoconfigure.json.JsonMarshalTesterRuntimeHints;
+import io.github.kotlinmania.spring.boot.test.autoconfigure.json.JsonTesterFactoryBean;
+import io.github.kotlinmania.spring.boot.test.json.JsonbTester;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ImportRuntimeHints;
 import org.springframework.context.annotation.Scope;

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.amqp.autoconfigure;
+package io.github.kotlinmania.spring.boot.amqp.autoconfigure;
 
 import java.util.List;
 import java.util.concurrent.Executor;
@@ -28,9 +28,9 @@ import org.springframework.amqp.rabbit.retry.MessageRecoverer;
 import org.springframework.amqp.rabbit.retry.RejectAndDontRequeueRecoverer;
 import org.springframework.amqp.rabbit.support.micrometer.RabbitListenerObservationConvention;
 import org.springframework.amqp.support.converter.MessageConverter;
-import org.springframework.boot.amqp.autoconfigure.RabbitProperties.ListenerRetry;
-import org.springframework.boot.amqp.autoconfigure.RabbitProperties.Retry;
-import org.springframework.boot.retry.RetryPolicySettings;
+import io.github.kotlinmania.spring.boot.amqp.autoconfigure.RabbitProperties.ListenerRetry;
+import io.github.kotlinmania.spring.boot.amqp.autoconfigure.RabbitProperties.Retry;
+import io.github.kotlinmania.spring.boot.retry.RetryPolicySettings;
 import org.springframework.core.retry.RetryPolicy;
 import org.springframework.util.Assert;
 

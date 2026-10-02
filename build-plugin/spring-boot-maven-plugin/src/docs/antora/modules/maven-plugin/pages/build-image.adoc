@@ -170,13 +170,13 @@ Refer to documentation of the builder being used to determine the image OS and a
 
 | `name` +
 (`spring-boot.build-image.imageName`)
-| javadoc:org.springframework.boot.buildpack.platform.docker.type.ImageName#of(java.lang.String)[Image name] for the generated image.
+| javadoc:io.github.kotlinmania.spring.boot.buildpack.platform.docker.type.ImageName#of(java.lang.String)[Image name] for the generated image.
 | `docker.io/library/` +
 `${project.artifactId}:${project.version}`
 
 | `pullPolicy` +
 (`spring-boot.build-image.pullPolicy`)
-| javadoc:org.springframework.boot.buildpack.platform.build.PullPolicy[Policy] used to determine when to pull the builder and run images from the registry.
+| javadoc:io.github.kotlinmania.spring.boot.buildpack.platform.build.PullPolicy[Policy] used to determine when to pull the builder and run images from the registry.
 Acceptable values are `ALWAYS`, `NEVER`, and `IF_NOT_PRESENT`.
 | `ALWAYS`
 

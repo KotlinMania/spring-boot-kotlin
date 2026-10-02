@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.jackson;
+package io.github.kotlinmania.spring.boot.jackson;
 
 import java.io.InputStream;
 import java.math.BigDecimal;
@@ -31,8 +31,8 @@ import tools.jackson.databind.json.JsonMapper;
 import tools.jackson.databind.module.SimpleModule;
 import tools.jackson.databind.node.NullNode;
 
-import org.springframework.boot.jackson.NameAndAgeJacksonComponent.Deserializer;
-import org.springframework.boot.jackson.types.NameAndAge;
+import io.github.kotlinmania.spring.boot.jackson.NameAndAgeJacksonComponent.Deserializer;
+import io.github.kotlinmania.spring.boot.jackson.types.NameAndAge;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatIllegalArgumentException;

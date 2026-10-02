@@ -18,6 +18,6 @@
  * Auto-configuration for JMS.
  */
 @NullMarked
-package org.springframework.boot.jms.autoconfigure;
+package io.github.kotlinmania.spring.boot.jms.autoconfigure;
 
 import org.jspecify.annotations.NullMarked;

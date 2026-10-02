@@ -18,6 +18,6 @@
  * Health integration for JavaMail.
  */
 @NullMarked
-package org.springframework.boot.mail.health;
+package io.github.kotlinmania.spring.boot.mail.health;
 
 import org.jspecify.annotations.NullMarked;

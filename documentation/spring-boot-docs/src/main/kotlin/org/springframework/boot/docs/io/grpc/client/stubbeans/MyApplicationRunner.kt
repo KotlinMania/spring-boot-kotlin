@@ -1,7 +1,7 @@
-package org.springframework.boot.docs.io.grpc.client.stubbeans
+package io.github.kotlinmania.spring.boot.docs.io.grpc.client.stubbeans
 
-import org.springframework.boot.ApplicationArguments
-import org.springframework.boot.ApplicationRunner
+import io.github.kotlinmania.spring.boot.ApplicationArguments
+import io.github.kotlinmania.spring.boot.ApplicationRunner
 
 
 class MyApplicationRunner(val helloStub: HelloWorldGrpc.HelloWorldBlockingStub) : ApplicationRunner {

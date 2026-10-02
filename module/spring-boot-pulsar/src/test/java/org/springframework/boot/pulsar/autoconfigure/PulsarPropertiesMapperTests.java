@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.pulsar.autoconfigure;
+package io.github.kotlinmania.spring.boot.pulsar.autoconfigure;
 
 import java.time.Duration;
 import java.util.List;
@@ -39,8 +39,8 @@ import org.apache.pulsar.client.impl.AutoClusterFailover;
 import org.apache.pulsar.common.schema.SchemaType;
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.pulsar.autoconfigure.PulsarProperties.Consumer;
-import org.springframework.boot.pulsar.autoconfigure.PulsarProperties.Failover.BackupCluster;
+import io.github.kotlinmania.spring.boot.pulsar.autoconfigure.PulsarProperties.Consumer;
+import io.github.kotlinmania.spring.boot.pulsar.autoconfigure.PulsarProperties.Failover.BackupCluster;
 import org.springframework.pulsar.core.PulsarProducerFactory;
 import org.springframework.pulsar.core.PulsarTemplate;
 import org.springframework.pulsar.listener.PulsarContainerProperties;

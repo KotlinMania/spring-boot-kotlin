@@ -18,6 +18,6 @@
  * RestClient and RestTemplate test utilities.
  */
 @NullMarked
-package org.springframework.boot.restclient.test;
+package io.github.kotlinmania.spring.boot.restclient.test;
 
 import org.jspecify.annotations.NullMarked;

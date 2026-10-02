@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.test.context.filter;
+package io.github.kotlinmania.spring.boot.test.context.filter;
 
-import org.springframework.boot.SpringApplication;
+import io.github.kotlinmania.spring.boot.SpringApplication;
 import org.springframework.context.ApplicationContextInitializer;
 import org.springframework.context.ConfigurableApplicationContext;
 

@@ -18,6 +18,6 @@
  * Auto-configuration for Cloud Foundry WebFlux endpoints.
  */
 @NullMarked
-package org.springframework.boot.cloudfoundry.autoconfigure.actuate.endpoint.reactive;
+package io.github.kotlinmania.spring.boot.cloudfoundry.autoconfigure.actuate.endpoint.reactive;
 
 import org.jspecify.annotations.NullMarked;

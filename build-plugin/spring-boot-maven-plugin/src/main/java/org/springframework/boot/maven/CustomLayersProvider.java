@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.maven;
+package io.github.kotlinmania.spring.boot.maven;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -36,14 +36,14 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
-import org.springframework.boot.loader.tools.Layer;
-import org.springframework.boot.loader.tools.Library;
-import org.springframework.boot.loader.tools.layer.ApplicationContentFilter;
-import org.springframework.boot.loader.tools.layer.ContentFilter;
-import org.springframework.boot.loader.tools.layer.ContentSelector;
-import org.springframework.boot.loader.tools.layer.CustomLayers;
-import org.springframework.boot.loader.tools.layer.IncludeExcludeContentSelector;
-import org.springframework.boot.loader.tools.layer.LibraryContentFilter;
+import io.github.kotlinmania.spring.boot.loader.tools.Layer;
+import io.github.kotlinmania.spring.boot.loader.tools.Library;
+import io.github.kotlinmania.spring.boot.loader.tools.layer.ApplicationContentFilter;
+import io.github.kotlinmania.spring.boot.loader.tools.layer.ContentFilter;
+import io.github.kotlinmania.spring.boot.loader.tools.layer.ContentSelector;
+import io.github.kotlinmania.spring.boot.loader.tools.layer.CustomLayers;
+import io.github.kotlinmania.spring.boot.loader.tools.layer.IncludeExcludeContentSelector;
+import io.github.kotlinmania.spring.boot.loader.tools.layer.LibraryContentFilter;
 
 /**
  * Produces a {@link CustomLayers} based on the given {@link Document}.

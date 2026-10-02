@@ -1,2 +1,2 @@
 org.springframework.aot.hint.RuntimeHintsRegistrar=\
-org.springframework.boot.freemarker.autoconfigure.FreeMarkerTemplateAvailabilityProvider$FreeMarkerTemplateAvailabilityRuntimeHints
+io.github.kotlinmania.spring.boot.freemarker.autoconfigure.FreeMarkerTemplateAvailabilityProvider$FreeMarkerTemplateAvailabilityRuntimeHints

@@ -15,6 +15,6 @@
  */
 
 @NullMarked
-package org.springframework.boot.data.neo4j.domain.scan;
+package io.github.kotlinmania.spring.boot.data.neo4j.domain.scan;
 
 import org.jspecify.annotations.NullMarked;

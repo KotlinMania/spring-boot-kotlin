@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.loader.launch;
+package io.github.kotlinmania.spring.boot.loader.launch;
 
 import java.io.File;
 import java.io.IOException;
@@ -38,7 +38,7 @@ import java.util.jar.JarFile;
 import java.util.jar.Manifest;
 import java.util.stream.Collectors;
 
-import org.springframework.boot.loader.net.protocol.jar.JarUrl;
+import io.github.kotlinmania.spring.boot.loader.net.protocol.jar.JarUrl;
 
 /**
  * {@link Archive} implementation backed by a {@link JarFile}.

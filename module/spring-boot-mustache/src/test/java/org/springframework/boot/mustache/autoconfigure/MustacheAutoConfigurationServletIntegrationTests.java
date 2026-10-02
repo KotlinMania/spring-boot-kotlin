@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.mustache.autoconfigure;
+package io.github.kotlinmania.spring.boot.mustache.autoconfigure;
 
 import java.util.Date;
 import java.util.HashMap;
@@ -26,15 +26,15 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.mustache.servlet.view.MustacheView;
-import org.springframework.boot.mustache.servlet.view.MustacheViewResolver;
-import org.springframework.boot.resttestclient.TestRestTemplate;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.boot.test.context.SpringBootTest.WebEnvironment;
-import org.springframework.boot.tomcat.autoconfigure.servlet.TomcatServletWebServerAutoConfiguration;
-import org.springframework.boot.web.server.WebServer;
-import org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext;
+import io.github.kotlinmania.spring.boot.SpringApplication;
+import io.github.kotlinmania.spring.boot.mustache.servlet.view.MustacheView;
+import io.github.kotlinmania.spring.boot.mustache.servlet.view.MustacheViewResolver;
+import io.github.kotlinmania.spring.boot.resttestclient.TestRestTemplate;
+import io.github.kotlinmania.spring.boot.test.context.SpringBootTest;
+import io.github.kotlinmania.spring.boot.test.context.SpringBootTest.WebEnvironment;
+import io.github.kotlinmania.spring.boot.tomcat.autoconfigure.servlet.TomcatServletWebServerAutoConfiguration;
+import io.github.kotlinmania.spring.boot.web.server.WebServer;
+import io.github.kotlinmania.spring.boot.web.server.servlet.context.ServletWebServerApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
@@ -114,9 +114,9 @@ class MustacheAutoConfigurationServletIntegrationTests {
 		MustacheViewResolver viewResolver() {
 			Mustache.Compiler compiler = Mustache.compiler()
 				.withLoader(new MustacheResourceTemplateLoader(
-						"classpath:/org/springframework/boot/mustache/autoconfigure/", ".html"));
+						"classpath:/io.github.kotlinmania.spring.boot.mustache/autoconfigure/", ".html"));
 			MustacheViewResolver resolver = new MustacheViewResolver(compiler);
-			resolver.setPrefix("classpath:/org/springframework/boot/mustache/autoconfigure/");
+			resolver.setPrefix("classpath:/io.github.kotlinmania.spring.boot.mustache/autoconfigure/");
 			resolver.setSuffix(".html");
 			return resolver;
 		}

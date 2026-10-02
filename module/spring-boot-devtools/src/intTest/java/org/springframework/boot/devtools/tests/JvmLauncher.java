@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.devtools.tests;
+package io.github.kotlinmania.spring.boot.devtools.tests;
 
 import java.io.File;
 import java.io.IOException;
@@ -29,7 +29,7 @@ import org.junit.jupiter.api.extension.BeforeTestExecutionCallback;
 import org.junit.jupiter.api.extension.Extension;
 import org.junit.jupiter.api.extension.ExtensionContext;
 
-import org.springframework.boot.testsupport.BuildOutput;
+import io.github.kotlinmania.spring.boot.testsupport.BuildOutput;
 import org.springframework.util.StringUtils;
 
 /**

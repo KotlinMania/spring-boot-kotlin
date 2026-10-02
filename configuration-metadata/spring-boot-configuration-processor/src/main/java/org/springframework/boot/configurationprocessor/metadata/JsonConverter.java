@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.configurationprocessor.metadata;
+package io.github.kotlinmania.spring.boot.configurationprocessor.metadata;
 
 import java.lang.reflect.Array;
 import java.util.Collection;
@@ -22,9 +22,9 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
 
-import org.springframework.boot.configurationprocessor.json.JSONArray;
-import org.springframework.boot.configurationprocessor.json.JSONObject;
-import org.springframework.boot.configurationprocessor.metadata.ItemMetadata.ItemType;
+import io.github.kotlinmania.spring.boot.configurationprocessor.json.JSONArray;
+import io.github.kotlinmania.spring.boot.configurationprocessor.json.JSONObject;
+import io.github.kotlinmania.spring.boot.configurationprocessor.metadata.ItemMetadata.ItemType;
 
 /**
  * Converter to change meta-data objects into JSON objects.

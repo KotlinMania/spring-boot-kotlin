@@ -92,7 +92,7 @@ Open your favorite text editor and add the following:
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
     <parent>
-		<groupId>org.springframework.boot</groupId>
+		<groupId>io.github.kotlinmania.spring.boot./groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>{version-spring-boot}</version>
 	</parent>
@@ -157,7 +157,7 @@ Open your favorite text editor and add the following:
 ----
 plugins {
 	id 'java'
-	id 'org.springframework.boot' version '{version-spring-boot}'
+	id 'io.github.kotlinmania.spring.boot. version '{version-spring-boot}'
 	id 'io.spring.dependency-management' version '{version-dependency-management-plugin}'
 }
 
@@ -223,7 +223,7 @@ To add the necessary dependencies, edit your `pom.xml` and add the `spring-boot-
 ----
 <dependencies>
 	<dependency>
-		<groupId>org.springframework.boot</groupId>
+		<groupId>io.github.kotlinmania.spring.boot./groupId>
 		<artifactId>spring-boot-starter-webmvc</artifactId>
 	</dependency>
 </dependencies>
@@ -236,7 +236,7 @@ If you run `mvn dependency:tree` again, you see that there are now a number of a
 [[getting-started.first-application.dependencies.gradle]]
 === Gradle
 
-Most Spring Boot applications use the `org.springframework.boot` Gradle plugin.
+Most Spring Boot applications use the `io.github.kotlinmania.spring.boot. Gradle plugin.
 This plugin provides useful defaults and Gradle tasks.
 The `io.spring.dependency-management` Gradle plugin provides xref:reference:using/build-systems.adoc#using.build-systems.dependency-management[dependency management] so that you can omit `version` tags for "`blessed`" dependencies.
 
@@ -261,7 +261,7 @@ To add the necessary dependencies, edit your `build.gradle` and add the `spring-
 [source,gradle]
 ----
 dependencies {
-	implementation 'org.springframework.boot:spring-boot-starter-webmvc'
+	implementation 'io.github.kotlinmania.spring.boot.spring-boot-starter-webmvc'
 }
 ----
 
@@ -303,11 +303,11 @@ See the {url-spring-framework-docs}/web/webmvc.html[MVC section] in the Spring R
 [[getting-started.first-application.code.spring-boot-application]]
 === The @SpringBootApplication Annotation
 
-The second class-level annotation is javadoc:org.springframework.boot.autoconfigure.SpringBootApplication[format=annotation].
-This annotation is known as a _meta-annotation_, it combines javadoc:org.springframework.boot.SpringBootConfiguration[format=annotation], javadoc:org.springframework.boot.autoconfigure.EnableAutoConfiguration[format=annotation] and javadoc:org.springframework.context.annotation.ComponentScan[format=annotation].
+The second class-level annotation is javadoc:io.github.kotlinmania.spring.boot.autoconfigure.SpringBootApplication[format=annotation].
+This annotation is known as a _meta-annotation_, it combines javadoc:io.github.kotlinmania.spring.boot.SpringBootConfiguration[format=annotation], javadoc:io.github.kotlinmania.spring.boot.autoconfigure.EnableAutoConfiguration[format=annotation] and javadoc:org.springframework.context.annotation.ComponentScan[format=annotation].
 
-Of those, the annotation we're most interested in here is javadoc:org.springframework.boot.autoconfigure.EnableAutoConfiguration[format=annotation].
-javadoc:org.springframework.boot.autoconfigure.EnableAutoConfiguration[format=annotation] tells Spring Boot to "`guess`" how you want to configure Spring, based on the jar dependencies that you have added.
+Of those, the annotation we're most interested in here is javadoc:io.github.kotlinmania.spring.boot.autoconfigure.EnableAutoConfiguration[format=annotation].
+javadoc:io.github.kotlinmania.spring.boot.autoconfigure.EnableAutoConfiguration[format=annotation] tells Spring Boot to "`guess`" how you want to configure Spring, based on the jar dependencies that you have added.
 Since `spring-boot-starter-webmvc` added Tomcat and Spring MVC, the auto-configuration assumes that you are developing a web application and sets up Spring accordingly.
 
 .Starters and Auto-configuration
@@ -324,9 +324,9 @@ Spring Boot still does its best to auto-configure your application.
 
 The final part of our application is the `main` method.
 This is a standard method that follows the Java convention for an application entry point.
-Our main method delegates to Spring Boot's javadoc:org.springframework.boot.SpringApplication[] class by calling `run`.
-javadoc:org.springframework.boot.SpringApplication[] bootstraps our application, starting Spring, which, in turn, starts the auto-configured Tomcat web server.
-We need to pass `MyApplication.class` as an argument to the `run` method to tell javadoc:org.springframework.boot.SpringApplication[] which is the primary Spring component.
+Our main method delegates to Spring Boot's javadoc:io.github.kotlinmania.spring.boot.SpringApplication[] class by calling `run`.
+javadoc:io.github.kotlinmania.spring.boot.SpringApplication[] bootstraps our application, starting Spring, which, in turn, starts the auto-configured Tomcat web server.
+We need to pass `MyApplication.class` as an argument to the `run` method to tell javadoc:io.github.kotlinmania.spring.boot.SpringApplication[] which is the primary Spring component.
 The `args` array is also passed through to expose any command-line arguments.
 
 
@@ -376,7 +376,7 @@ To gracefully exit the application, press `ctrl-c`.
 === Gradle
 
 At this point, your application should work.
-Since you used the `org.springframework.boot` Gradle plugin, you have a useful `bootRun` goal that you can use to start the application.
+Since you used the `io.github.kotlinmania.spring.boot. Gradle plugin, you have a useful `bootRun` goal that you can use to start the application.
 Type `gradle bootRun` from the root project directory to start the application.
 You should see output similar to the following:
 
@@ -440,7 +440,7 @@ To do so, insert the following lines just below the `dependencies` section:
 <build>
 	<plugins>
 		<plugin>
-			<groupId>org.springframework.boot</groupId>
+			<groupId>io.github.kotlinmania.spring.boot./groupId>
 			<artifactId>spring-boot-maven-plugin</artifactId>
 		</plugin>
 	</plugins>

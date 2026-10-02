@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.context.properties.migrator;
+package io.github.kotlinmania.spring.boot.context.properties.migrator;
 
 import java.time.Duration;
 import java.util.Comparator;
@@ -22,13 +22,13 @@ import java.util.Map;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.configurationmetadata.ConfigurationMetadataProperty;
-import org.springframework.boot.configurationmetadata.Deprecation;
-import org.springframework.boot.context.properties.source.ConfigurationProperty;
-import org.springframework.boot.context.properties.source.ConfigurationPropertyName;
-import org.springframework.boot.origin.Origin;
-import org.springframework.boot.origin.PropertySourceOrigin;
-import org.springframework.boot.origin.TextResourceOrigin;
+import io.github.kotlinmania.spring.boot.configurationmetadata.ConfigurationMetadataProperty;
+import io.github.kotlinmania.spring.boot.configurationmetadata.Deprecation;
+import io.github.kotlinmania.spring.boot.context.properties.source.ConfigurationProperty;
+import io.github.kotlinmania.spring.boot.context.properties.source.ConfigurationPropertyName;
+import io.github.kotlinmania.spring.boot.origin.Origin;
+import io.github.kotlinmania.spring.boot.origin.PropertySourceOrigin;
+import io.github.kotlinmania.spring.boot.origin.TextResourceOrigin;
 import org.springframework.util.Assert;
 import org.springframework.util.StringUtils;
 

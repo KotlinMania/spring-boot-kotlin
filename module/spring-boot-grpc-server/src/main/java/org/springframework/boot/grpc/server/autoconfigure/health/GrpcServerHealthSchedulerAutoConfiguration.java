@@ -14,19 +14,19 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.grpc.server.autoconfigure.health;
+package io.github.kotlinmania.spring.boot.grpc.server.autoconfigure.health;
 
 import io.grpc.Grpc;
 import io.grpc.protobuf.services.HealthStatusManager;
 
-import org.springframework.boot.autoconfigure.AutoConfiguration;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnBooleanProperty;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
-import org.springframework.boot.autoconfigure.task.DefaultTaskSchedulerConfiguration;
-import org.springframework.boot.grpc.server.autoconfigure.health.GrpcServerHealthProperties.Schedule;
-import org.springframework.boot.grpc.server.health.GrpcServerHealth;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.EnableAutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnBean;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnBooleanProperty;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnClass;
+import io.github.kotlinmania.spring.boot.autoconfigure.task.DefaultTaskSchedulerConfiguration;
+import io.github.kotlinmania.spring.boot.grpc.server.autoconfigure.health.GrpcServerHealthProperties.Schedule;
+import io.github.kotlinmania.spring.boot.grpc.server.health.GrpcServerHealth;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Import;

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.cache.actuate.endpoint;
+package io.github.kotlinmania.spring.boot.cache.actuate.endpoint;
 
 import java.util.Arrays;
 import java.util.Collections;
@@ -24,9 +24,9 @@ import java.util.concurrent.ConcurrentHashMap;
 
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.cache.actuate.endpoint.CachesEndpoint.CacheDescriptor;
-import org.springframework.boot.cache.actuate.endpoint.CachesEndpoint.CacheEntryDescriptor;
-import org.springframework.boot.cache.actuate.endpoint.CachesEndpoint.CacheManagerDescriptor;
+import io.github.kotlinmania.spring.boot.cache.actuate.endpoint.CachesEndpoint.CacheDescriptor;
+import io.github.kotlinmania.spring.boot.cache.actuate.endpoint.CachesEndpoint.CacheEntryDescriptor;
+import io.github.kotlinmania.spring.boot.cache.actuate.endpoint.CachesEndpoint.CacheManagerDescriptor;
 import org.springframework.cache.Cache;
 import org.springframework.cache.CacheManager;
 import org.springframework.cache.concurrent.ConcurrentMapCacheManager;

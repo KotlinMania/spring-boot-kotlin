@@ -15,6 +15,6 @@
  */
 
 @NullMarked
-package org.springframework.boot.security.saml2.autoconfigure.webmvc;
+package io.github.kotlinmania.spring.boot.security.saml2.autoconfigure.webmvc;
 
 import org.jspecify.annotations.NullMarked;

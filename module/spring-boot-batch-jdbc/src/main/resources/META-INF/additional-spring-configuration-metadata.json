@@ -2,7 +2,7 @@
   "properties": [
     {
       "name": "spring.batch.initialize-schema",
-      "type": "org.springframework.boot.sql.init.DatabaseInitializationMode",
+      "type": "io.github.kotlinmania.spring.boot.sql.init.DatabaseInitializationMode",
       "deprecation": {
         "replacement": "spring.batch.jdbc.initialize-schema",
         "level": "error",

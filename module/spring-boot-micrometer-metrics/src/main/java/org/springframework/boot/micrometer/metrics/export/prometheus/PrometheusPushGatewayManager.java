@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.micrometer.metrics.export.prometheus;
+package io.github.kotlinmania.spring.boot.micrometer.metrics.export.prometheus;
 
 import java.time.Duration;
 import java.util.concurrent.Executors;

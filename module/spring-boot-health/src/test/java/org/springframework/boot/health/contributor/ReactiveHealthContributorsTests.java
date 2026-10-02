@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.health.contributor;
+package io.github.kotlinmania.spring.boot.health.contributor;
 
 import java.util.stream.Stream;
 
@@ -22,7 +22,7 @@ import org.jspecify.annotations.Nullable;
 import org.junit.jupiter.api.Test;
 import org.mockito.Answers;
 
-import org.springframework.boot.health.contributor.ReactiveHealthContributors.Entry;
+import io.github.kotlinmania.spring.boot.health.contributor.ReactiveHealthContributors.Entry;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatIllegalArgumentException;

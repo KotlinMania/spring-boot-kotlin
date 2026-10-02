@@ -14,17 +14,17 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.actuate.docs.liquibase;
+package io.github.kotlinmania.spring.boot.actuate.docs.liquibase;
 
 import java.util.List;
 
 import liquibase.changelog.ChangeSet.ExecType;
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.actuate.docs.MockMvcEndpointDocumentationTests;
-import org.springframework.boot.jdbc.autoconfigure.EmbeddedDataSourceConfiguration;
-import org.springframework.boot.liquibase.actuate.endpoint.LiquibaseEndpoint;
-import org.springframework.boot.liquibase.autoconfigure.LiquibaseAutoConfiguration;
+import io.github.kotlinmania.spring.boot.actuate.docs.MockMvcEndpointDocumentationTests;
+import io.github.kotlinmania.spring.boot.jdbc.autoconfigure.EmbeddedDataSourceConfiguration;
+import io.github.kotlinmania.spring.boot.liquibase.actuate.endpoint.LiquibaseEndpoint;
+import io.github.kotlinmania.spring.boot.liquibase.autoconfigure.LiquibaseAutoConfiguration;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -44,7 +44,7 @@ import static org.springframework.restdocs.payload.PayloadDocumentation.response
  * @author Andy Wilkinson
  */
 @TestPropertySource(
-		properties = "spring.liquibase.change-log=classpath:org/springframework/boot/actuate/docs/liquibase/db.changelog-master.yaml")
+		properties = "spring.liquibase.change-log=classpath:io.github.kotlinmania.spring.boot.actuate/docs/liquibase/db.changelog-master.yaml")
 class LiquibaseEndpointDocumentationTests extends MockMvcEndpointDocumentationTests {
 
 	@Test

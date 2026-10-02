@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docker.compose.lifecycle;
+package io.github.kotlinmania.spring.boot.docker.compose.lifecycle;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.docker.compose.core.RunningService;
+import io.github.kotlinmania.spring.boot.docker.compose.core.RunningService;
 
 /**
  * Exception thrown when a single {@link RunningService} is not ready.

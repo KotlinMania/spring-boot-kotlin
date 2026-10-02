@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.configurationprocessor.test;
+package io.github.kotlinmania.spring.boot.configurationprocessor.test;
 
 import java.util.Set;
 import java.util.function.BiConsumer;

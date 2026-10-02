@@ -14,15 +14,15 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.test.context;
+package io.github.kotlinmania.spring.boot.test.context;
 
 import java.util.Arrays;
 import java.util.Objects;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.test.context.SpringBootTest.UseMainMethod;
-import org.springframework.boot.test.context.SpringBootTest.WebEnvironment;
+import io.github.kotlinmania.spring.boot.test.context.SpringBootTest.UseMainMethod;
+import io.github.kotlinmania.spring.boot.test.context.SpringBootTest.WebEnvironment;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.test.context.ContextCustomizer;
 import org.springframework.test.context.MergedContextConfiguration;

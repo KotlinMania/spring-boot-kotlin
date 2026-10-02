@@ -18,6 +18,6 @@
  * Auto-configuration for client-side HTTP metrics.
  */
 @NullMarked
-package org.springframework.boot.http.client.autoconfigure.metrics;
+package io.github.kotlinmania.spring.boot.http.client.autoconfigure.metrics;
 
 import org.jspecify.annotations.NullMarked;

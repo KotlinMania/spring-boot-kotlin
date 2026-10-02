@@ -18,6 +18,6 @@
  * Auto-configuration for RSocket.
  */
 @NullMarked
-package org.springframework.boot.rsocket.autoconfigure;
+package io.github.kotlinmania.spring.boot.rsocket.autoconfigure;
 
 import org.jspecify.annotations.NullMarked;

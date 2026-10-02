@@ -15,6 +15,6 @@
  */
 
 @NullMarked
-package org.springframework.boot.data.jdbc.domain.empty;
+package io.github.kotlinmania.spring.boot.data.jdbc.domain.empty;
 
 import org.jspecify.annotations.NullMarked;

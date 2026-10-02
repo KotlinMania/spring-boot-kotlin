@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.buildpack.platform.socket;
+package io.github.kotlinmania.spring.boot.buildpack.platform.socket;
 
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.buildpack.platform.socket.FileDescriptor.Handle;
+import io.github.kotlinmania.spring.boot.buildpack.platform.socket.FileDescriptor.Handle;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

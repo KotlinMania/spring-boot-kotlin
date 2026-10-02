@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docker.compose.service.connection;
+package io.github.kotlinmania.spring.boot.docker.compose.service.connection;
 
 import java.nio.file.Path;
 import java.util.Arrays;
@@ -23,21 +23,21 @@ import java.util.function.Predicate;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.autoconfigure.service.connection.ConnectionDetails;
-import org.springframework.boot.autoconfigure.service.connection.ConnectionDetailsFactory;
-import org.springframework.boot.docker.compose.core.DockerComposeFile;
-import org.springframework.boot.docker.compose.core.RunningService;
-import org.springframework.boot.io.ApplicationResourceLoader;
-import org.springframework.boot.origin.Origin;
-import org.springframework.boot.origin.OriginProvider;
-import org.springframework.boot.ssl.SslBundle;
-import org.springframework.boot.ssl.SslBundleKey;
-import org.springframework.boot.ssl.SslOptions;
-import org.springframework.boot.ssl.jks.JksSslStoreBundle;
-import org.springframework.boot.ssl.jks.JksSslStoreDetails;
-import org.springframework.boot.ssl.pem.PemSslStore;
-import org.springframework.boot.ssl.pem.PemSslStoreBundle;
-import org.springframework.boot.ssl.pem.PemSslStoreDetails;
+import io.github.kotlinmania.spring.boot.autoconfigure.service.connection.ConnectionDetails;
+import io.github.kotlinmania.spring.boot.autoconfigure.service.connection.ConnectionDetailsFactory;
+import io.github.kotlinmania.spring.boot.docker.compose.core.DockerComposeFile;
+import io.github.kotlinmania.spring.boot.docker.compose.core.RunningService;
+import io.github.kotlinmania.spring.boot.io.ApplicationResourceLoader;
+import io.github.kotlinmania.spring.boot.origin.Origin;
+import io.github.kotlinmania.spring.boot.origin.OriginProvider;
+import io.github.kotlinmania.spring.boot.ssl.SslBundle;
+import io.github.kotlinmania.spring.boot.ssl.SslBundleKey;
+import io.github.kotlinmania.spring.boot.ssl.SslOptions;
+import io.github.kotlinmania.spring.boot.ssl.jks.JksSslStoreBundle;
+import io.github.kotlinmania.spring.boot.ssl.jks.JksSslStoreDetails;
+import io.github.kotlinmania.spring.boot.ssl.pem.PemSslStore;
+import io.github.kotlinmania.spring.boot.ssl.pem.PemSslStoreBundle;
+import io.github.kotlinmania.spring.boot.ssl.pem.PemSslStoreDetails;
 import org.springframework.core.io.ResourceLoader;
 import org.springframework.core.io.support.SpringFactoriesLoader;
 import org.springframework.util.Assert;
@@ -163,12 +163,12 @@ public abstract class DockerComposeConnectionDetailsFactory<D extends Connection
 			if (keyStoreDetails == null && trustStoreDetails == null) {
 				return null;
 			}
-			SslBundleKey key = SslBundleKey.of(service.labels().get("org.springframework.boot.sslbundle.jks.key.alias"),
-					service.labels().get("org.springframework.boot.sslbundle.jks.key.password"));
+			SslBundleKey key = SslBundleKey.of(service.labels().get("io.github.kotlinmania.spring.boot.sslbundle.jks.key.alias"),
+					service.labels().get("io.github.kotlinmania.spring.boot.sslbundle.jks.key.password"));
 			SslOptions options = createSslOptions(
-					service.labels().get("org.springframework.boot.sslbundle.jks.options.ciphers"),
-					service.labels().get("org.springframework.boot.sslbundle.jks.options.enabled-protocols"));
-			String protocol = service.labels().get("org.springframework.boot.sslbundle.jks.protocol");
+					service.labels().get("io.github.kotlinmania.spring.boot.sslbundle.jks.options.ciphers"),
+					service.labels().get("io.github.kotlinmania.spring.boot.sslbundle.jks.options.enabled-protocols"));
+			String protocol = service.labels().get("io.github.kotlinmania.spring.boot.sslbundle.jks.protocol");
 			Path workingDirectory = getWorkingDirectory(service);
 			return SslBundle.of(
 					new JksSslStoreBundle(keyStoreDetails, trustStoreDetails, getResourceLoader(workingDirectory)), key,
@@ -182,13 +182,13 @@ public abstract class DockerComposeConnectionDetailsFactory<D extends Connection
 		}
 
 		private @Nullable JksSslStoreDetails getJksSslStoreDetails(RunningService service, String storeType) {
-			String type = service.labels().get("org.springframework.boot.sslbundle.jks.%s.type".formatted(storeType));
+			String type = service.labels().get("io.github.kotlinmania.spring.boot.sslbundle.jks.%s.type".formatted(storeType));
 			String provider = service.labels()
-				.get("org.springframework.boot.sslbundle.jks.%s.provider".formatted(storeType));
+				.get("io.github.kotlinmania.spring.boot.sslbundle.jks.%s.provider".formatted(storeType));
 			String location = service.labels()
-				.get("org.springframework.boot.sslbundle.jks.%s.location".formatted(storeType));
+				.get("io.github.kotlinmania.spring.boot.sslbundle.jks.%s.location".formatted(storeType));
 			String password = service.labels()
-				.get("org.springframework.boot.sslbundle.jks.%s.password".formatted(storeType));
+				.get("io.github.kotlinmania.spring.boot.sslbundle.jks.%s.password".formatted(storeType));
 			if (location == null) {
 				return null;
 			}
@@ -221,12 +221,12 @@ public abstract class DockerComposeConnectionDetailsFactory<D extends Connection
 			if (keyStoreDetails == null && trustStoreDetails == null) {
 				return null;
 			}
-			SslBundleKey key = SslBundleKey.of(service.labels().get("org.springframework.boot.sslbundle.pem.key.alias"),
-					service.labels().get("org.springframework.boot.sslbundle.pem.key.password"));
+			SslBundleKey key = SslBundleKey.of(service.labels().get("io.github.kotlinmania.spring.boot.sslbundle.pem.key.alias"),
+					service.labels().get("io.github.kotlinmania.spring.boot.sslbundle.pem.key.password"));
 			SslOptions options = createSslOptions(
-					service.labels().get("org.springframework.boot.sslbundle.pem.options.ciphers"),
-					service.labels().get("org.springframework.boot.sslbundle.pem.options.enabled-protocols"));
-			String protocol = service.labels().get("org.springframework.boot.sslbundle.pem.protocol");
+					service.labels().get("io.github.kotlinmania.spring.boot.sslbundle.pem.options.ciphers"),
+					service.labels().get("io.github.kotlinmania.spring.boot.sslbundle.pem.options.enabled-protocols"));
+			String protocol = service.labels().get("io.github.kotlinmania.spring.boot.sslbundle.pem.protocol");
 			Path workingDirectory = getWorkingDirectory(service);
 			ResourceLoader resourceLoader = getResourceLoader(workingDirectory);
 			return SslBundle.of(new PemSslStoreBundle(PemSslStore.load(keyStoreDetails, resourceLoader),
@@ -234,13 +234,13 @@ public abstract class DockerComposeConnectionDetailsFactory<D extends Connection
 		}
 
 		private @Nullable PemSslStoreDetails getPemSslStoreDetails(RunningService service, String storeType) {
-			String type = service.labels().get("org.springframework.boot.sslbundle.pem.%s.type".formatted(storeType));
+			String type = service.labels().get("io.github.kotlinmania.spring.boot.sslbundle.pem.%s.type".formatted(storeType));
 			String certificate = service.labels()
-				.get("org.springframework.boot.sslbundle.pem.%s.certificate".formatted(storeType));
+				.get("io.github.kotlinmania.spring.boot.sslbundle.pem.%s.certificate".formatted(storeType));
 			String privateKey = service.labels()
-				.get("org.springframework.boot.sslbundle.pem.%s.private-key".formatted(storeType));
+				.get("io.github.kotlinmania.spring.boot.sslbundle.pem.%s.private-key".formatted(storeType));
 			String privateKeyPassword = service.labels()
-				.get("org.springframework.boot.sslbundle.pem.%s.private-key-password".formatted(storeType));
+				.get("io.github.kotlinmania.spring.boot.sslbundle.pem.%s.private-key-password".formatted(storeType));
 			if (certificate == null && privateKey == null) {
 				return null;
 			}

@@ -14,20 +14,20 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.webservices.autoconfigure.client;
+package io.github.kotlinmania.spring.boot.webservices.autoconfigure.client;
 
 import java.util.List;
 
 import org.springframework.beans.factory.ObjectProvider;
-import org.springframework.boot.autoconfigure.AutoConfiguration;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
-import org.springframework.boot.http.client.ClientHttpRequestFactoryBuilder;
-import org.springframework.boot.http.client.HttpClientSettings;
-import org.springframework.boot.webservices.client.WebServiceMessageSenderFactory;
-import org.springframework.boot.webservices.client.WebServiceTemplateBuilder;
-import org.springframework.boot.webservices.client.WebServiceTemplateCustomizer;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.EnableAutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnClass;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnMissingBean;
+import io.github.kotlinmania.spring.boot.http.client.ClientHttpRequestFactoryBuilder;
+import io.github.kotlinmania.spring.boot.http.client.HttpClientSettings;
+import io.github.kotlinmania.spring.boot.webservices.client.WebServiceMessageSenderFactory;
+import io.github.kotlinmania.spring.boot.webservices.client.WebServiceTemplateBuilder;
+import io.github.kotlinmania.spring.boot.webservices.client.WebServiceTemplateCustomizer;
 import org.springframework.context.annotation.Bean;
 import org.springframework.oxm.Marshaller;
 import org.springframework.oxm.Unmarshaller;

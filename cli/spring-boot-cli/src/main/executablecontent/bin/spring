@@ -115,4 +115,4 @@ if $cygwin; then
 fi
 
 IFS=" " read -r -a javaOpts <<< "$JAVA_OPTS"
-exec "${JAVA_HOME}/bin/java" "${javaOpts[@]}" -cp "$CLASSPATH" org.springframework.boot.loader.launch.JarLauncher "$@"
+exec "${JAVA_HOME}/bin/java" "${javaOpts[@]}" -cp "$CLASSPATH" io.github.kotlinmania.spring.boot.loader.launch.JarLauncher "$@"

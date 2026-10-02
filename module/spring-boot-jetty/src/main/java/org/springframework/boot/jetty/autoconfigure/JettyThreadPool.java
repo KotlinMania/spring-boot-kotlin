@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.jetty.autoconfigure;
+package io.github.kotlinmania.spring.boot.jetty.autoconfigure;
 
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.SynchronousQueue;
@@ -28,7 +28,7 @@ import org.springframework.lang.Contract;
 
 /**
  * Creates a {@link ThreadPool} for Jetty, applying
- * {@link org.springframework.boot.jetty.autoconfigure.JettyServerProperties.Threads
+ * {@link io.github.kotlinmania.spring.boot.jetty.autoconfigure.JettyServerProperties.Threads
  * ServerProperties.Jetty.Threads Jetty thread properties}.
  *
  * @author Moritz Halbritter

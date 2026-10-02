@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.r2dbc.autoconfigure;
+package io.github.kotlinmania.spring.boot.r2dbc.autoconfigure;
 
 import java.util.function.Supplier;
 
@@ -23,7 +23,7 @@ import io.r2dbc.spi.ConnectionFactoryOptions.Builder;
 import org.jspecify.annotations.Nullable;
 
 import org.springframework.beans.factory.BeanCreationException;
-import org.springframework.boot.r2dbc.EmbeddedDatabaseConnection;
+import io.github.kotlinmania.spring.boot.r2dbc.EmbeddedDatabaseConnection;
 import org.springframework.util.StringUtils;
 
 /**

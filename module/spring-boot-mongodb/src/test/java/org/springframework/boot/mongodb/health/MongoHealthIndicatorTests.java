@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.mongodb.health;
+package io.github.kotlinmania.spring.boot.mongodb.health;
 
 import java.util.List;
 import java.util.function.Consumer;
@@ -26,8 +26,8 @@ import com.mongodb.client.MongoIterable;
 import org.bson.Document;
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.health.contributor.Health;
-import org.springframework.boot.health.contributor.Status;
+import io.github.kotlinmania.spring.boot.health.contributor.Health;
+import io.github.kotlinmania.spring.boot.health.contributor.Status;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.ArgumentMatchers.any;

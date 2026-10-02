@@ -15,8 +15,18 @@
  */
 package org.springframework.boot.build.architecture.conditionalonmissingbean.withtype
 
-import org.springframework.boot.build.architecture.annotations.TestConditionalOnMissingBean
-import org.springframework.context.annotation.Bean
+package io.github.kotlinmania.spring.boot.build.architecture.conditionalonmissingbean.withname;
+
+import io.github.kotlinmania.spring.boot.build.architecture.annotations.TestConditionalOnMissingBean;
+import org.springframework.context.annotation.Bean;
+
+class WithNameAttribute {
+
+	@Bean
+	@TestConditionalOnMissingBean(name = "myBean")
+	String helloWorld() {
+		return "Hello World";
+	}
 
 internal class WithTypeAttribute {
     @Bean

@@ -15,7 +15,7 @@
  */
 package org.springframework.boot.build.context.properties
 
-import org.gradle.kotlin.dsl.*
+package io.github.kotlinmania.spring.boot.build.context.properties;
 
 import java.util.*
 import java.util.function.Consumer

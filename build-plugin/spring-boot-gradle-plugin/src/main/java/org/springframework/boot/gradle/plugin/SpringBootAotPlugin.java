@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.gradle.plugin;
+package io.github.kotlinmania.spring.boot.gradle.plugin;
 
 import java.util.Set;
 import java.util.stream.Stream;
@@ -42,9 +42,9 @@ import org.gradle.api.tasks.TaskProvider;
 import org.gradle.jvm.toolchain.JavaToolchainService;
 import org.gradle.jvm.toolchain.JavaToolchainSpec;
 
-import org.springframework.boot.gradle.tasks.aot.AbstractAot;
-import org.springframework.boot.gradle.tasks.aot.ProcessAot;
-import org.springframework.boot.gradle.tasks.aot.ProcessTestAot;
+import io.github.kotlinmania.spring.boot.gradle.tasks.aot.AbstractAot;
+import io.github.kotlinmania.spring.boot.gradle.tasks.aot.ProcessAot;
+import io.github.kotlinmania.spring.boot.gradle.tasks.aot.ProcessTestAot;
 
 /**
  * Gradle plugin for Spring Boot AOT.

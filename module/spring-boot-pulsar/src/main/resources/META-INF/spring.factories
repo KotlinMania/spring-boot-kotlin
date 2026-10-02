@@ -1,5 +1,5 @@
 # Connection Details Factories
-org.springframework.boot.autoconfigure.service.connection.ConnectionDetailsFactory=\
-org.springframework.boot.pulsar.docker.compose.PulsarDockerComposeConnectionDetailsFactory,\
-org.springframework.boot.pulsar.testcontainers.DeprecatedPulsarContainerConnectionDetailsFactory,\
-org.springframework.boot.pulsar.testcontainers.PulsarContainerConnectionDetailsFactory
+io.github.kotlinmania.spring.boot.autoconfigure.service.connection.ConnectionDetailsFactory=\
+io.github.kotlinmania.spring.boot.pulsar.docker.compose.PulsarDockerComposeConnectionDetailsFactory,\
+io.github.kotlinmania.spring.boot.pulsar.testcontainers.DeprecatedPulsarContainerConnectionDetailsFactory,\
+io.github.kotlinmania.spring.boot.pulsar.testcontainers.PulsarContainerConnectionDetailsFactory

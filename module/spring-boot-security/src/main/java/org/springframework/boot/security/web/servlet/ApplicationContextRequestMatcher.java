@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.security.web.servlet;
+package io.github.kotlinmania.spring.boot.security.web.servlet;
 
 import java.util.function.Supplier;
 
@@ -22,7 +22,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import org.jspecify.annotations.Nullable;
 
 import org.springframework.beans.factory.config.AutowireCapableBeanFactory;
-import org.springframework.boot.web.server.context.WebServerApplicationContext;
+import io.github.kotlinmania.spring.boot.web.server.context.WebServerApplicationContext;
 import org.springframework.context.ApplicationContext;
 import org.springframework.security.web.util.matcher.RequestMatcher;
 import org.springframework.util.Assert;
@@ -44,7 +44,7 @@ import org.springframework.web.context.support.WebApplicationContextUtils;
  */
 public abstract class ApplicationContextRequestMatcher<C> implements RequestMatcher {
 
-	private static final String WEB_SERVER_CONTEXT_CLASS = "org.springframework.boot.web.server.context.WebServerApplicationContext";
+	private static final String WEB_SERVER_CONTEXT_CLASS = "io.github.kotlinmania.spring.boot.web.server.context.WebServerApplicationContext";
 
 	private final Class<? extends C> contextClass;
 

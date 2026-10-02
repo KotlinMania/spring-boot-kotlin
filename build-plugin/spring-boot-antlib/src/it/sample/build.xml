@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<project name="spring-boot-antlib-test" default="antunit" xmlns:au="antlib:org.apache.ant.antunit" xmlns:spring-boot="antlib:org.springframework.boot.ant" xmlns:ivy="antlib:org.apache.ivy.ant">
+<project name="spring-boot-antlib-test" default="antunit" xmlns:au="antlib:org.apache.ant.antunit" xmlns:spring-boot="antlib:io.github.kotlinmania.spring.boot.ant" xmlns:ivy="antlib:org.apache.ivy.ant">
 
 	<property name="src.dir" location="src/main/java" />
 	<property name="resource.dir" location="src/main/resources" />

@@ -12,7 +12,7 @@ include-code::MyCustomObservation[]
 NOTE: Low cardinality tags will be added to metrics and traces, while high cardinality tags will only be added to traces.
 
 Beans of type javadoc:io.micrometer.observation.ObservationPredicate[], javadoc:io.micrometer.observation.GlobalObservationConvention[], javadoc:io.micrometer.observation.ObservationFilter[] and javadoc:io.micrometer.observation.ObservationHandler[] will be automatically registered on the javadoc:io.micrometer.observation.ObservationRegistry[].
-You can additionally register any number of javadoc:org.springframework.boot.micrometer.observation.autoconfigure.ObservationRegistryCustomizer[] beans to further configure the registry.
+You can additionally register any number of javadoc:io.github.kotlinmania.spring.boot.micrometer.observation.autoconfigure.ObservationRegistryCustomizer[] beans to further configure the registry.
 
 TIP: Observability for JDBC can be configured using a separate project.
 The https://github.com/jdbc-observations/datasource-micrometer[Datasource Micrometer project] provides a Spring Boot starter which automatically creates observations when JDBC operations are invoked.
@@ -359,10 +359,10 @@ include-code::AutoConfiguredOpenTelemetrySdkConfiguration[]
 [[actuator.observability.opentelemetry.logging]]
 === Logging
 
-The javadoc:org.springframework.boot.opentelemetry.autoconfigure.logging.OpenTelemetryLoggingAutoConfiguration[] configures OpenTelemetry's javadoc:io.opentelemetry.sdk.logs.SdkLoggerProvider[].
-Exporting logs via OTLP is supported through the javadoc:org.springframework.boot.opentelemetry.autoconfigure.logging.otlp.OtlpLoggingAutoConfiguration[], which enables OTLP log exporting over HTTP or gRPC.
+The javadoc:io.github.kotlinmania.spring.boot.opentelemetry.autoconfigure.logging.OpenTelemetryLoggingAutoConfiguration[] configures OpenTelemetry's javadoc:io.opentelemetry.sdk.logs.SdkLoggerProvider[].
+Exporting logs via OTLP is supported through the javadoc:io.github.kotlinmania.spring.boot.opentelemetry.autoconfigure.logging.otlp.OtlpLoggingAutoConfiguration[], which enables OTLP log exporting over HTTP or gRPC.
 
-NOTE: If you need to apply advanced customizations to OTLP log record exporters, consider registering javadoc:org.springframework.boot.opentelemetry.autoconfigure.logging.otlp.OtlpHttpLogRecordExporterBuilderCustomizer[] or javadoc:org.springframework.boot.opentelemetry.autoconfigure.logging.otlp.OtlpGrpcLogRecordExporterBuilderCustomizer[] beans.
+NOTE: If you need to apply advanced customizations to OTLP log record exporters, consider registering javadoc:io.github.kotlinmania.spring.boot.opentelemetry.autoconfigure.logging.otlp.OtlpHttpLogRecordExporterBuilderCustomizer[] or javadoc:io.github.kotlinmania.spring.boot.opentelemetry.autoconfigure.logging.otlp.OtlpGrpcLogRecordExporterBuilderCustomizer[] beans.
 These will be invoked before the creation of the javadoc:io.opentelemetry.exporter.otlp.http.logs.OtlpHttpLogRecordExporter[] or javadoc:io.opentelemetry.exporter.otlp.logs.OtlpGrpcLogRecordExporter[].
 The customizers take precedence over anything applied by the auto-configuration.
 
@@ -399,7 +399,7 @@ This configuration also enables metrics export via OTLP over HTTP.
 [[actuator.observability.opentelemetry.tracing]]
 === Tracing
 
-If Micrometer tracing is used, the javadoc:org.springframework.boot.micrometer.tracing.opentelemetry.autoconfigure.OpenTelemetryTracingAutoConfiguration[] configures OpenTelemetry's javadoc:io.opentelemetry.sdk.trace.SdkTracerProvider[].
-Exporting traces through OTLP is enabled by the javadoc:org.springframework.boot.micrometer.tracing.opentelemetry.autoconfigure.otlp.OtlpTracingAutoConfiguration[], which supports exporting traces with OTLP over HTTP or gRPC.
+If Micrometer tracing is used, the javadoc:io.github.kotlinmania.spring.boot.micrometer.tracing.opentelemetry.autoconfigure.OpenTelemetryTracingAutoConfiguration[] configures OpenTelemetry's javadoc:io.opentelemetry.sdk.trace.SdkTracerProvider[].
+Exporting traces through OTLP is enabled by the javadoc:io.github.kotlinmania.spring.boot.micrometer.tracing.opentelemetry.autoconfigure.otlp.OtlpTracingAutoConfiguration[], which supports exporting traces with OTLP over HTTP or gRPC.
 
 We strongly recommend using the Micrometer Observation or Tracing API instead of using the OpenTelemetry API directly.

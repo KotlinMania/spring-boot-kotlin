@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.hibernate.autoconfigure;
+package io.github.kotlinmania.spring.boot.hibernate.autoconfigure;
 
 import java.util.Map;
 import java.util.function.Consumer;
@@ -29,12 +29,12 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 
-import org.springframework.boot.context.properties.EnableConfigurationProperties;
-import org.springframework.boot.hibernate.SpringImplicitNamingStrategy;
-import org.springframework.boot.jpa.autoconfigure.JpaProperties;
-import org.springframework.boot.test.context.assertj.AssertableApplicationContext;
-import org.springframework.boot.test.context.runner.ApplicationContextRunner;
-import org.springframework.boot.test.context.runner.ContextConsumer;
+import io.github.kotlinmania.spring.boot.context.properties.EnableConfigurationProperties;
+import io.github.kotlinmania.spring.boot.hibernate.SpringImplicitNamingStrategy;
+import io.github.kotlinmania.spring.boot.jpa.autoconfigure.JpaProperties;
+import io.github.kotlinmania.spring.boot.test.context.assertj.AssertableApplicationContext;
+import io.github.kotlinmania.spring.boot.test.context.runner.ApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.test.context.runner.ContextConsumer;
 import org.springframework.context.annotation.Configuration;
 
 import static org.assertj.core.api.Assertions.assertThat;

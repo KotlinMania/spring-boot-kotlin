@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.maven;
+package io.github.kotlinmania.spring.boot.maven;
 
 import java.io.File;
 import java.time.Instant;
@@ -36,9 +36,9 @@ import org.apache.maven.project.MavenProject;
 import org.jspecify.annotations.Nullable;
 import org.sonatype.plexus.build.incremental.BuildContext;
 
-import org.springframework.boot.loader.tools.BuildPropertiesWriter;
-import org.springframework.boot.loader.tools.BuildPropertiesWriter.NullAdditionalPropertyValueException;
-import org.springframework.boot.loader.tools.BuildPropertiesWriter.ProjectDetails;
+import io.github.kotlinmania.spring.boot.loader.tools.BuildPropertiesWriter;
+import io.github.kotlinmania.spring.boot.loader.tools.BuildPropertiesWriter.NullAdditionalPropertyValueException;
+import io.github.kotlinmania.spring.boot.loader.tools.BuildPropertiesWriter.ProjectDetails;
 
 /**
  * Generate a {@code build-info.properties} file based on the content of the current

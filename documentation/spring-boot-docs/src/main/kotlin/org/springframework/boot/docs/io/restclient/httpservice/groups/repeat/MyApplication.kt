@@ -1,7 +1,7 @@
-package org.springframework.boot.docs.io.restclient.httpservice.groups.repeat
+package io.github.kotlinmania.spring.boot.docs.io.restclient.httpservice.groups.repeat
 
-import org.springframework.boot.autoconfigure.SpringBootApplication
-import org.springframework.boot.runApplication
+import io.github.kotlinmania.spring.boot.autoconfigure.SpringBootApplication
+import io.github.kotlinmania.spring.boot.runApplication
 import org.springframework.web.service.registry.ImportHttpServices
 
 @SpringBootApplication

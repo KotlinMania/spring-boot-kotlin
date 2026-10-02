@@ -22,7 +22,7 @@ def collectAttributes(String configurationName) {
 }
 
 plugins {
-	id 'org.springframework.boot' version '{version}'
+	id 'io.github.kotlinmania.spring.boot. version '{version}'
 	id 'java'
 }
 

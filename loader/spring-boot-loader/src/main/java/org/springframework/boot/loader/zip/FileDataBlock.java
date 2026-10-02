@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.loader.zip;
+package io.github.kotlinmania.spring.boot.loader.zip;
 
 import java.io.File;
 import java.io.IOException;
@@ -28,7 +28,7 @@ import java.nio.file.Path;
 import java.nio.file.StandardOpenOption;
 import java.util.function.Supplier;
 
-import org.springframework.boot.loader.log.DebugLogger;
+import io.github.kotlinmania.spring.boot.loader.log.DebugLogger;
 
 /**
  * Reference counted {@link DataBlock} implementation backed by a {@link File} with

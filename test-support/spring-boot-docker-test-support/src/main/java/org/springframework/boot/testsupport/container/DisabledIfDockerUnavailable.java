@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.testsupport.container;
+package io.github.kotlinmania.spring.boot.testsupport.container;
 
 import java.lang.annotation.Documented;
 import java.lang.annotation.ElementType;

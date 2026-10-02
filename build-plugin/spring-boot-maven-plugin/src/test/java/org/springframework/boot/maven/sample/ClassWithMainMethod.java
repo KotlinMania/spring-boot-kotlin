@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.maven.sample;
+package io.github.kotlinmania.spring.boot.maven.sample;
 
 /**
  * Sample class with a main method.

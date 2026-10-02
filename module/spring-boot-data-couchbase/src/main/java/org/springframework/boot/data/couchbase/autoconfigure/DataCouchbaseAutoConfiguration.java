@@ -14,17 +14,17 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.data.couchbase.autoconfigure;
+package io.github.kotlinmania.spring.boot.data.couchbase.autoconfigure;
 
 import com.couchbase.client.java.Bucket;
 import jakarta.validation.Validator;
 
-import org.springframework.boot.autoconfigure.AutoConfiguration;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnSingleCandidate;
-import org.springframework.boot.context.properties.EnableConfigurationProperties;
-import org.springframework.boot.couchbase.autoconfigure.CouchbaseAutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.EnableAutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnClass;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnSingleCandidate;
+import io.github.kotlinmania.spring.boot.context.properties.EnableConfigurationProperties;
+import io.github.kotlinmania.spring.boot.couchbase.autoconfigure.CouchbaseAutoConfiguration;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
@@ -39,7 +39,7 @@ import org.springframework.data.couchbase.repository.CouchbaseRepository;
  * @since 4.0.0
  */
 @AutoConfiguration(after = CouchbaseAutoConfiguration.class,
-		afterName = "org.springframework.boot.validation.autoconfigure.ValidationAutoConfiguration")
+		afterName = "io.github.kotlinmania.spring.boot.validation.autoconfigure.ValidationAutoConfiguration")
 @ConditionalOnClass({ Bucket.class, CouchbaseRepository.class })
 @EnableConfigurationProperties(DataCouchbaseProperties.class)
 @Import({ DataCouchbaseConfiguration.class, CouchbaseClientFactoryConfiguration.class,

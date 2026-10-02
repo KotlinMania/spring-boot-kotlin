@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.r2dbc;
+package io.github.kotlinmania.spring.boot.r2dbc;
 
 import java.net.URL;
 import java.net.URLClassLoader;
@@ -90,7 +90,7 @@ class EmbeddedDatabaseConnectionTests {
 				.isEmbedded(ConnectionFactories.get("r2dbc:pool:h2:mem:///" + UUID.randomUUID())))
 			.withMessage("Cannot determine database's type as ConnectionFactory is not options-capable. To be "
 					+ "options-capable, a ConnectionFactory should be created with "
-					+ "org.springframework.boot.r2dbc.ConnectionFactoryBuilder");
+					+ "io.github.kotlinmania.spring.boot.r2dbc.ConnectionFactoryBuilder");
 	}
 
 	static Stream<Arguments> urlParameters() {

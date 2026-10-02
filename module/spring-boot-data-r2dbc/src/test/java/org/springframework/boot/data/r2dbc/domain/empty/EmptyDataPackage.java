@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.data.r2dbc.domain.empty;
+package io.github.kotlinmania.spring.boot.data.r2dbc.domain.empty;
 
 public class EmptyDataPackage {
 

@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.micrometer.metrics.autoconfigure.export.appoptics;
+package io.github.kotlinmania.spring.boot.micrometer.metrics.autoconfigure.export.appoptics;
 
 import io.micrometer.appoptics.AppOpticsConfig;
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.micrometer.metrics.autoconfigure.export.properties.StepRegistryPropertiesConfigAdapter;
+import io.github.kotlinmania.spring.boot.micrometer.metrics.autoconfigure.export.properties.StepRegistryPropertiesConfigAdapter;
 
 /**
  * Adapter to convert {@link AppOpticsProperties} to an {@link AppOpticsConfig}.

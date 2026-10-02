@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.micrometer.metrics.autoconfigure.export.properties;
+package io.github.kotlinmania.spring.boot.micrometer.metrics.autoconfigure.export.properties;
 
 import io.micrometer.core.instrument.step.StepRegistryConfig;
 

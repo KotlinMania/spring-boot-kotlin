@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.deployment;
+package io.github.kotlinmania.spring.boot.deployment;
 
 import org.testcontainers.junit.jupiter.Container;
 import org.testcontainers.junit.jupiter.Testcontainers;

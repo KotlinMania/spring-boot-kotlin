@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.testsupport.classpath.resources;
+package io.github.kotlinmania.spring.boot.testsupport.classpath.resources;
 
 /**
  * Class to test the use of {@link WithResource} on a super-class

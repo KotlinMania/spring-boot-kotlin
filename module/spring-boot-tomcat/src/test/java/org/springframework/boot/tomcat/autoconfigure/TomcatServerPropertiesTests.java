@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.tomcat.autoconfigure;
+package io.github.kotlinmania.spring.boot.tomcat.autoconfigure;
 
 import java.nio.charset.StandardCharsets;
 import java.util.Collections;
@@ -30,13 +30,13 @@ import org.apache.coyote.AbstractProtocol;
 import org.apache.tomcat.util.net.AbstractEndpoint;
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.context.properties.bind.Bindable;
-import org.springframework.boot.context.properties.bind.Binder;
-import org.springframework.boot.context.properties.source.ConfigurationPropertySource;
-import org.springframework.boot.context.properties.source.MapConfigurationPropertySource;
-import org.springframework.boot.tomcat.TomcatWebServerFactory;
-import org.springframework.boot.tomcat.autoconfigure.TomcatServerProperties.Accesslog;
-import org.springframework.boot.tomcat.autoconfigure.TomcatServerProperties.UseApr;
+import io.github.kotlinmania.spring.boot.context.properties.bind.Bindable;
+import io.github.kotlinmania.spring.boot.context.properties.bind.Binder;
+import io.github.kotlinmania.spring.boot.context.properties.source.ConfigurationPropertySource;
+import io.github.kotlinmania.spring.boot.context.properties.source.MapConfigurationPropertySource;
+import io.github.kotlinmania.spring.boot.tomcat.TomcatWebServerFactory;
+import io.github.kotlinmania.spring.boot.tomcat.autoconfigure.TomcatServerProperties.Accesslog;
+import io.github.kotlinmania.spring.boot.tomcat.autoconfigure.TomcatServerProperties.UseApr;
 import org.springframework.test.util.ReflectionTestUtils;
 
 import static org.assertj.core.api.Assertions.assertThat;

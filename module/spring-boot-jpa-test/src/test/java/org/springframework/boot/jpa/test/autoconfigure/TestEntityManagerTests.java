@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.jpa.test.autoconfigure;
+package io.github.kotlinmania.spring.boot.jpa.test.autoconfigure;
 
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.rsocket.netty;
+package io.github.kotlinmania.spring.boot.rsocket.netty;
 
 import java.net.InetSocketAddress;
 import java.time.Duration;
@@ -25,8 +25,8 @@ import org.apache.commons.logging.LogFactory;
 import org.jspecify.annotations.Nullable;
 import reactor.core.publisher.Mono;
 
-import org.springframework.boot.rsocket.server.RSocketServer;
-import org.springframework.boot.rsocket.server.RSocketServerException;
+import io.github.kotlinmania.spring.boot.rsocket.server.RSocketServer;
+import io.github.kotlinmania.spring.boot.rsocket.server.RSocketServerException;
 import org.springframework.util.Assert;
 
 /**

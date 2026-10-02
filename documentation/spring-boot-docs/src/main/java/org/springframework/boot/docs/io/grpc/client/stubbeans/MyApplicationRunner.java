@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.io.grpc.client.stubbeans;
+package io.github.kotlinmania.spring.boot.docs.io.grpc.client.stubbeans;
 
-import org.springframework.boot.ApplicationArguments;
-import org.springframework.boot.ApplicationRunner;
-import org.springframework.boot.docs.io.grpc.client.stubbeans.HelloWorldGrpc.HelloWorldBlockingStub;
+import io.github.kotlinmania.spring.boot.ApplicationArguments;
+import io.github.kotlinmania.spring.boot.ApplicationRunner;
+import io.github.kotlinmania.spring.boot.docs.io.grpc.client.stubbeans.HelloWorldGrpc.HelloWorldBlockingStub;
 import org.springframework.stereotype.Component;
 
 @Component

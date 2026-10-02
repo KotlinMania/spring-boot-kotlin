@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.actuate.endpoint.jackson;
+package io.github.kotlinmania.spring.boot.actuate.endpoint.jackson;
 
 import tools.jackson.databind.json.JsonMapper;
 
-import org.springframework.boot.actuate.endpoint.OperationResponseBody;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.OperationResponseBody;
 
 /**
  * Interface used to supply the {@link JsonMapper} that should be used when serializing

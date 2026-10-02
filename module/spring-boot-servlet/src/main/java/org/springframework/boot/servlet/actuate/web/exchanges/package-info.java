@@ -17,9 +17,9 @@
 /**
  * Actuator HTTP exchanges support for Servlet servers.
  *
- * @see org.springframework.boot.actuate.web.exchanges.HttpExchangeRepository
+ * @see io.github.kotlinmania.spring.boot.actuate.web.exchanges.HttpExchangeRepository
  */
 @NullMarked
-package org.springframework.boot.servlet.actuate.web.exchanges;
+package io.github.kotlinmania.spring.boot.servlet.actuate.web.exchanges;
 
 import org.jspecify.annotations.NullMarked;

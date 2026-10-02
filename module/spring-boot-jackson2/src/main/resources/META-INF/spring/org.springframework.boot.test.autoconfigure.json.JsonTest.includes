@@ -1,2 +1,2 @@
-org.springframework.boot.jackson2.JsonComponent
+io.github.kotlinmania.spring.boot.jackson2.JsonComponent
 com.fasterxml.jackson.databind.Module

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.web.server.servlet;
+package io.github.kotlinmania.spring.boot.web.server.servlet;
 
 import java.io.File;
 import java.io.FileWriter;
@@ -116,38 +116,38 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.EnumSource;
 import org.mockito.InOrder;
 
-import org.springframework.boot.ssl.DefaultSslBundleRegistry;
-import org.springframework.boot.ssl.SslBundle;
-import org.springframework.boot.ssl.SslStoreBundle;
-import org.springframework.boot.ssl.jks.JksSslStoreBundle;
-import org.springframework.boot.ssl.jks.JksSslStoreDetails;
-import org.springframework.boot.ssl.pem.PemSslStoreBundle;
-import org.springframework.boot.ssl.pem.PemSslStoreDetails;
-import org.springframework.boot.system.ApplicationHome;
-import org.springframework.boot.system.ApplicationTemp;
-import org.springframework.boot.testsupport.classpath.resources.ResourcePath;
-import org.springframework.boot.testsupport.classpath.resources.WithPackageResources;
-import org.springframework.boot.testsupport.junit.EnabledOnLocale;
-import org.springframework.boot.testsupport.system.CapturedOutput;
-import org.springframework.boot.testsupport.system.OutputCaptureExtension;
-import org.springframework.boot.testsupport.web.servlet.ExampleFilter;
-import org.springframework.boot.testsupport.web.servlet.ExampleServlet;
-import org.springframework.boot.web.error.ErrorPage;
-import org.springframework.boot.web.server.Compression;
-import org.springframework.boot.web.server.Cookie.SameSite;
-import org.springframework.boot.web.server.GracefulShutdownResult;
-import org.springframework.boot.web.server.Http2;
-import org.springframework.boot.web.server.MimeMappings;
-import org.springframework.boot.web.server.PortInUseException;
-import org.springframework.boot.web.server.Shutdown;
-import org.springframework.boot.web.server.Ssl;
-import org.springframework.boot.web.server.Ssl.ClientAuth;
-import org.springframework.boot.web.server.WebServer;
-import org.springframework.boot.web.server.WebServerException;
-import org.springframework.boot.web.server.servlet.Session.SessionTrackingMode;
-import org.springframework.boot.web.servlet.FilterRegistrationBean;
-import org.springframework.boot.web.servlet.ServletContextInitializer;
-import org.springframework.boot.web.servlet.ServletRegistrationBean;
+import io.github.kotlinmania.spring.boot.ssl.DefaultSslBundleRegistry;
+import io.github.kotlinmania.spring.boot.ssl.SslBundle;
+import io.github.kotlinmania.spring.boot.ssl.SslStoreBundle;
+import io.github.kotlinmania.spring.boot.ssl.jks.JksSslStoreBundle;
+import io.github.kotlinmania.spring.boot.ssl.jks.JksSslStoreDetails;
+import io.github.kotlinmania.spring.boot.ssl.pem.PemSslStoreBundle;
+import io.github.kotlinmania.spring.boot.ssl.pem.PemSslStoreDetails;
+import io.github.kotlinmania.spring.boot.system.ApplicationHome;
+import io.github.kotlinmania.spring.boot.system.ApplicationTemp;
+import io.github.kotlinmania.spring.boot.testsupport.classpath.resources.ResourcePath;
+import io.github.kotlinmania.spring.boot.testsupport.classpath.resources.WithPackageResources;
+import io.github.kotlinmania.spring.boot.testsupport.junit.EnabledOnLocale;
+import io.github.kotlinmania.spring.boot.testsupport.system.CapturedOutput;
+import io.github.kotlinmania.spring.boot.testsupport.system.OutputCaptureExtension;
+import io.github.kotlinmania.spring.boot.testsupport.web.servlet.ExampleFilter;
+import io.github.kotlinmania.spring.boot.testsupport.web.servlet.ExampleServlet;
+import io.github.kotlinmania.spring.boot.web.error.ErrorPage;
+import io.github.kotlinmania.spring.boot.web.server.Compression;
+import io.github.kotlinmania.spring.boot.web.server.Cookie.SameSite;
+import io.github.kotlinmania.spring.boot.web.server.GracefulShutdownResult;
+import io.github.kotlinmania.spring.boot.web.server.Http2;
+import io.github.kotlinmania.spring.boot.web.server.MimeMappings;
+import io.github.kotlinmania.spring.boot.web.server.PortInUseException;
+import io.github.kotlinmania.spring.boot.web.server.Shutdown;
+import io.github.kotlinmania.spring.boot.web.server.Ssl;
+import io.github.kotlinmania.spring.boot.web.server.Ssl.ClientAuth;
+import io.github.kotlinmania.spring.boot.web.server.WebServer;
+import io.github.kotlinmania.spring.boot.web.server.WebServerException;
+import io.github.kotlinmania.spring.boot.web.server.servlet.Session.SessionTrackingMode;
+import io.github.kotlinmania.spring.boot.web.servlet.FilterRegistrationBean;
+import io.github.kotlinmania.spring.boot.web.servlet.ServletContextInitializer;
+import io.github.kotlinmania.spring.boot.web.servlet.ServletRegistrationBean;
 import org.springframework.core.io.FileSystemResource;
 import org.springframework.core.io.Resource;
 import org.springframework.http.HttpMethod;
@@ -709,7 +709,7 @@ public abstract class AbstractServletWebServerFactoryTests {
 		this.webServer = factory.getWebServer(exampleServletRegistration());
 		this.webServer.start();
 		ClientHttpResponse response = getClientResponse(
-				getLocalUrl("/org/springframework/boot/SpringApplication.class"));
+				getLocalUrl("/io.github.kotlinmania.spring.boot.SpringApplication.class"));
 		assertThat(response.getStatusCode()).isEqualTo(HttpStatus.NOT_FOUND);
 	}
 
@@ -865,7 +865,7 @@ public abstract class AbstractServletWebServerFactoryTests {
 	@Test
 	void sessionCookieConfiguration() {
 		ConfigurableServletWebServerFactory factory = getFactory();
-		org.springframework.boot.web.server.Cookie cookie = factory.getSettings().getSession().getCookie();
+		io.github.kotlinmania.spring.boot.web.server.Cookie cookie = factory.getSettings().getSession().getCookie();
 		cookie.setName("testname");
 		cookie.setDomain("testdomain");
 		cookie.setPath("/testpath");
@@ -1206,7 +1206,7 @@ public abstract class AbstractServletWebServerFactoryTests {
 		Session session = factory.getSettings().getSession();
 		session.setTimeout(Duration.ofSeconds(123));
 		session.setTrackingModes(EnumSet.of(SessionTrackingMode.COOKIE, SessionTrackingMode.URL));
-		org.springframework.boot.web.server.Cookie cookie = session.getCookie();
+		io.github.kotlinmania.spring.boot.web.server.Cookie cookie = session.getCookie();
 		cookie.setName("testname");
 		cookie.setDomain("testdomain");
 		cookie.setPath("/testpath");

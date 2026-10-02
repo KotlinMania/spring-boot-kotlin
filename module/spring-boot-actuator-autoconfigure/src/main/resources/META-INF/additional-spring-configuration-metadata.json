@@ -26,7 +26,7 @@
     },
     {
       "name": "management.endpoints.access.default",
-      "type": "org.springframework.boot.actuate.endpoint.Access",
+      "type": "io.github.kotlinmania.spring.boot.actuate.endpoint.Access",
       "description": "Default access level for all endpoints."
     },
     {
@@ -61,7 +61,7 @@
     },
     {
       "name": "management.endpoints.jmx.domain",
-      "defaultValue": "org.springframework.boot"
+      "defaultValue": "io.github.kotlinmania.spring.boot.
     },
     {
       "name": "management.endpoints.jmx.exposure.include",

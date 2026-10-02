@@ -14,22 +14,22 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.data.elasticsearch.autoconfigure;
+package io.github.kotlinmania.spring.boot.data.elasticsearch.autoconfigure;
 
 import org.junit.jupiter.api.Test;
 import org.testcontainers.elasticsearch.ElasticsearchContainer;
 import org.testcontainers.junit.jupiter.Container;
 import org.testcontainers.junit.jupiter.Testcontainers;
 
-import org.springframework.boot.autoconfigure.AutoConfigurations;
-import org.springframework.boot.autoconfigure.TestAutoConfigurationPackage;
-import org.springframework.boot.data.elasticsearch.domain.city.City;
-import org.springframework.boot.data.elasticsearch.domain.city.CityRepository;
-import org.springframework.boot.data.elasticsearch.domain.empty.EmptyDataPackage;
-import org.springframework.boot.elasticsearch.autoconfigure.ElasticsearchClientAutoConfiguration;
-import org.springframework.boot.elasticsearch.autoconfigure.ElasticsearchRestClientAutoConfiguration;
-import org.springframework.boot.test.context.runner.ApplicationContextRunner;
-import org.springframework.boot.testsupport.container.TestImage;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurations;
+import io.github.kotlinmania.spring.boot.autoconfigure.TestAutoConfigurationPackage;
+import io.github.kotlinmania.spring.boot.data.elasticsearch.domain.city.City;
+import io.github.kotlinmania.spring.boot.data.elasticsearch.domain.city.CityRepository;
+import io.github.kotlinmania.spring.boot.data.elasticsearch.domain.empty.EmptyDataPackage;
+import io.github.kotlinmania.spring.boot.elasticsearch.autoconfigure.ElasticsearchClientAutoConfiguration;
+import io.github.kotlinmania.spring.boot.elasticsearch.autoconfigure.ElasticsearchRestClientAutoConfiguration;
+import io.github.kotlinmania.spring.boot.test.context.runner.ApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.testsupport.container.TestImage;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.elasticsearch.client.elc.ElasticsearchTemplate;
 import org.springframework.data.elasticsearch.config.EnableElasticsearchAuditing;

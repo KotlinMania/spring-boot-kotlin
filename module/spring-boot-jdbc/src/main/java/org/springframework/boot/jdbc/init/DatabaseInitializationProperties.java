@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.jdbc.init;
+package io.github.kotlinmania.spring.boot.jdbc.init;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.context.properties.ConfigurationPropertiesSource;
-import org.springframework.boot.sql.init.DatabaseInitializationMode;
+import io.github.kotlinmania.spring.boot.context.properties.ConfigurationPropertiesSource;
+import io.github.kotlinmania.spring.boot.sql.init.DatabaseInitializationMode;
 
 /**
  * Base configuration properties class for performing SQL database initialization.

@@ -14,15 +14,15 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.zipkin.testcontainers;
+package io.github.kotlinmania.spring.boot.zipkin.testcontainers;
 
 import org.testcontainers.containers.Container;
 import org.testcontainers.containers.GenericContainer;
 
-import org.springframework.boot.testcontainers.service.connection.ContainerConnectionDetailsFactory;
-import org.springframework.boot.testcontainers.service.connection.ContainerConnectionSource;
-import org.springframework.boot.testcontainers.service.connection.ServiceConnection;
-import org.springframework.boot.zipkin.autoconfigure.ZipkinConnectionDetails;
+import io.github.kotlinmania.spring.boot.testcontainers.service.connection.ContainerConnectionDetailsFactory;
+import io.github.kotlinmania.spring.boot.testcontainers.service.connection.ContainerConnectionSource;
+import io.github.kotlinmania.spring.boot.testcontainers.service.connection.ServiceConnection;
+import io.github.kotlinmania.spring.boot.zipkin.autoconfigure.ZipkinConnectionDetails;
 
 /**
  * {@link ContainerConnectionDetailsFactory} to create {@link ZipkinConnectionDetails}
@@ -38,7 +38,7 @@ class ZipkinContainerConnectionDetailsFactory
 	private static final int ZIPKIN_PORT = 9411;
 
 	ZipkinContainerConnectionDetailsFactory() {
-		super("openzipkin/zipkin", "org.springframework.boot.zipkin.autoconfigure.ZipkinAutoConfiguration");
+		super("openzipkin/zipkin", "io.github.kotlinmania.spring.boot.zipkin.autoconfigure.ZipkinAutoConfiguration");
 	}
 
 	@Override

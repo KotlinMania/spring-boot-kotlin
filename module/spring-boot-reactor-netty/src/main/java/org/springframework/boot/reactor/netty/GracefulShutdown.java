@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.reactor.netty;
+package io.github.kotlinmania.spring.boot.reactor.netty;
 
 import java.time.Duration;
 import java.util.function.Supplier;
@@ -24,8 +24,8 @@ import org.apache.commons.logging.LogFactory;
 import org.jspecify.annotations.Nullable;
 import reactor.netty.DisposableServer;
 
-import org.springframework.boot.web.server.GracefulShutdownCallback;
-import org.springframework.boot.web.server.GracefulShutdownResult;
+import io.github.kotlinmania.spring.boot.web.server.GracefulShutdownCallback;
+import io.github.kotlinmania.spring.boot.web.server.GracefulShutdownResult;
 
 /**
  * Handles Netty graceful shutdown.

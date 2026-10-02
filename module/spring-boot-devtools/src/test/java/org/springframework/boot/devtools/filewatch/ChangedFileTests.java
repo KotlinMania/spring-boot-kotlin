@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.devtools.filewatch;
+package io.github.kotlinmania.spring.boot.devtools.filewatch;
 
 import java.io.File;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.io.TempDir;
 
-import org.springframework.boot.devtools.filewatch.ChangedFile.Type;
+import io.github.kotlinmania.spring.boot.devtools.filewatch.ChangedFile.Type;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatIllegalArgumentException;

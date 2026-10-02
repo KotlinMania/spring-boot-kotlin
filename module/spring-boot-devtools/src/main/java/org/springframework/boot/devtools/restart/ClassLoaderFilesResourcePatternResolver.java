@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.devtools.restart;
+package io.github.kotlinmania.spring.boot.devtools.restart;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -29,10 +29,10 @@ import java.util.function.Supplier;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.devtools.restart.classloader.ClassLoaderFile;
-import org.springframework.boot.devtools.restart.classloader.ClassLoaderFile.Kind;
-import org.springframework.boot.devtools.restart.classloader.ClassLoaderFileURLStreamHandler;
-import org.springframework.boot.devtools.restart.classloader.ClassLoaderFiles;
+import io.github.kotlinmania.spring.boot.devtools.restart.classloader.ClassLoaderFile;
+import io.github.kotlinmania.spring.boot.devtools.restart.classloader.ClassLoaderFile.Kind;
+import io.github.kotlinmania.spring.boot.devtools.restart.classloader.ClassLoaderFileURLStreamHandler;
+import io.github.kotlinmania.spring.boot.devtools.restart.classloader.ClassLoaderFiles;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.core.io.AbstractResource;

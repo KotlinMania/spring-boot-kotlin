@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.ldap.autoconfigure.embedded;
+package io.github.kotlinmania.spring.boot.ldap.autoconfigure.embedded;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
@@ -33,14 +33,14 @@ import com.unboundid.ldap.sdk.schema.Schema;
 import org.junit.jupiter.api.Test;
 
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.boot.autoconfigure.AutoConfigurations;
-import org.springframework.boot.autoconfigure.context.PropertyPlaceholderAutoConfiguration;
-import org.springframework.boot.autoconfigure.ssl.SslAutoConfiguration;
-import org.springframework.boot.ldap.autoconfigure.LdapAutoConfiguration;
-import org.springframework.boot.test.context.FilteredClassLoader;
-import org.springframework.boot.test.context.runner.ApplicationContextRunner;
-import org.springframework.boot.test.util.TestPropertyValues;
-import org.springframework.boot.testsupport.classpath.resources.WithResource;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurations;
+import io.github.kotlinmania.spring.boot.autoconfigure.context.PropertyPlaceholderAutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.ssl.SslAutoConfiguration;
+import io.github.kotlinmania.spring.boot.ldap.autoconfigure.LdapAutoConfiguration;
+import io.github.kotlinmania.spring.boot.test.context.FilteredClassLoader;
+import io.github.kotlinmania.spring.boot.test.context.runner.ApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.test.util.TestPropertyValues;
+import io.github.kotlinmania.spring.boot.testsupport.classpath.resources.WithResource;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -357,7 +357,7 @@ class EmbeddedLdapAutoConfigurationTests {
 	@Test
 	void whenSslBundleIsConfiguredLdapsListenerIsConfigured() {
 		List<String> propertyValues = new ArrayList<>();
-		String location = "classpath:org/springframework/boot/ldap/autoconfigure/embedded/";
+		String location = "classpath:io.github.kotlinmania.spring.boot.ldap/autoconfigure/embedded/";
 		propertyValues.add("spring.ssl.bundle.jks.test.keystore.password=secret");
 		propertyValues.add("spring.ssl.bundle.jks.test.keystore.location=" + location + "test.jks");
 		propertyValues.add("spring.ssl.bundle.jks.test.truststore.location=" + location + "test.jks");
@@ -377,7 +377,7 @@ class EmbeddedLdapAutoConfigurationTests {
 	@Test
 	void whenSslBundleIsConfiguredButSslIsDisabledLdapListenerIsConfigured() {
 		List<String> propertyValues = new ArrayList<>();
-		String location = "classpath:org/springframework/boot/ldap/autoconfigure/embedded/";
+		String location = "classpath:io.github.kotlinmania.spring.boot.ldap/autoconfigure/embedded/";
 		propertyValues.add("spring.ssl.bundle.jks.test.keystore.password=secret");
 		propertyValues.add("spring.ssl.bundle.jks.test.keystore.location=" + location + "test.jks");
 		propertyValues.add("spring.ssl.bundle.jks.test.truststore.location=" + location + "test.jks");
@@ -397,7 +397,7 @@ class EmbeddedLdapAutoConfigurationTests {
 	@Test
 	void whenInvalidSslBundleIsConfiguredThenStartFails() {
 		List<String> propertyValues = new ArrayList<>();
-		String location = "classpath:org/springframework/boot/ldap/autoconfigure/embedded/";
+		String location = "classpath:io.github.kotlinmania.spring.boot.ldap/autoconfigure/embedded/";
 		propertyValues.add("spring.ssl.bundle.jks.test.keystore.password=secret");
 		propertyValues.add("spring.ssl.bundle.jks.test.keystore.location=" + location + "test.jks");
 		propertyValues.add("spring.ldap.embedded.port:0");

@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.sql.autoconfigure.init;
+package io.github.kotlinmania.spring.boot.sql.autoconfigure.init;
 
-import org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer;
-import org.springframework.boot.sql.init.DatabaseInitializationSettings;
+import io.github.kotlinmania.spring.boot.sql.init.AbstractScriptDatabaseInitializer;
+import io.github.kotlinmania.spring.boot.sql.init.DatabaseInitializationSettings;
 import org.springframework.context.annotation.ImportRuntimeHints;
 
 /**

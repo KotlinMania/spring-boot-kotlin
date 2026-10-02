@@ -15,6 +15,6 @@
  */
 
 @NullMarked
-package org.springframework.boot.web.server.servlet.context.testcomponents.filter;
+package io.github.kotlinmania.spring.boot.web.server.servlet.context.testcomponents.filter;
 
 import org.jspecify.annotations.NullMarked;

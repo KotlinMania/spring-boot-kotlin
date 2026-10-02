@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.security.autoconfigure.web.servlet;
+package io.github.kotlinmania.spring.boot.security.autoconfigure.web.servlet;
 
 import java.util.EnumSet;
 import java.util.Set;
 
-import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.boot.servlet.filter.OrderedFilter;
-import org.springframework.boot.web.servlet.DispatcherType;
+import io.github.kotlinmania.spring.boot.context.properties.ConfigurationProperties;
+import io.github.kotlinmania.spring.boot.servlet.filter.OrderedFilter;
+import io.github.kotlinmania.spring.boot.web.servlet.DispatcherType;
 import org.springframework.core.Ordered;
 
 /**

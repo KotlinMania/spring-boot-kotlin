@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.batch.jdbc.autoconfigure;
+package io.github.kotlinmania.spring.boot.batch.jdbc.autoconfigure;
 
 import java.util.Collections;
 import java.util.Set;
 
 import org.springframework.batch.core.repository.JobRepository;
-import org.springframework.boot.sql.init.dependency.AbstractBeansOfTypeDependsOnDatabaseInitializationDetector;
-import org.springframework.boot.sql.init.dependency.DependsOnDatabaseInitializationDetector;
+import io.github.kotlinmania.spring.boot.sql.init.dependency.AbstractBeansOfTypeDependsOnDatabaseInitializationDetector;
+import io.github.kotlinmania.spring.boot.sql.init.dependency.DependsOnDatabaseInitializationDetector;
 
 /**
  * {@link DependsOnDatabaseInitializationDetector} for Spring Batch's

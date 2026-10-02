@@ -14,19 +14,19 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.data.couchbase.autoconfigure;
+package io.github.kotlinmania.spring.boot.data.couchbase.autoconfigure;
 
 import java.util.Collections;
 
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.autoconfigure.AutoConfigurations;
-import org.springframework.boot.couchbase.autoconfigure.CouchbaseAutoConfiguration;
-import org.springframework.boot.couchbase.autoconfigure.CouchbaseProperties;
-import org.springframework.boot.data.couchbase.domain.city.City;
-import org.springframework.boot.persistence.autoconfigure.EntityScan;
-import org.springframework.boot.test.context.runner.ApplicationContextRunner;
-import org.springframework.boot.validation.autoconfigure.ValidationAutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurations;
+import io.github.kotlinmania.spring.boot.couchbase.autoconfigure.CouchbaseAutoConfiguration;
+import io.github.kotlinmania.spring.boot.couchbase.autoconfigure.CouchbaseProperties;
+import io.github.kotlinmania.spring.boot.data.couchbase.domain.city.City;
+import io.github.kotlinmania.spring.boot.persistence.autoconfigure.EntityScan;
+import io.github.kotlinmania.spring.boot.test.context.runner.ApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.validation.autoconfigure.ValidationAutoConfiguration;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;

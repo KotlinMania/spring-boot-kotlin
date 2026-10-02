@@ -14,19 +14,19 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.data.ldap.autoconfigure;
+package io.github.kotlinmania.spring.boot.data.ldap.autoconfigure;
 
 import org.jspecify.annotations.Nullable;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.autoconfigure.TestAutoConfigurationPackage;
-import org.springframework.boot.autoconfigure.context.PropertyPlaceholderAutoConfiguration;
-import org.springframework.boot.data.ldap.autoconfigure.domain.empty.EmptyDataPackage;
-import org.springframework.boot.data.ldap.autoconfigure.domain.person.Person;
-import org.springframework.boot.data.ldap.autoconfigure.domain.person.PersonRepository;
-import org.springframework.boot.ldap.autoconfigure.LdapAutoConfiguration;
-import org.springframework.boot.test.util.TestPropertyValues;
+import io.github.kotlinmania.spring.boot.autoconfigure.TestAutoConfigurationPackage;
+import io.github.kotlinmania.spring.boot.autoconfigure.context.PropertyPlaceholderAutoConfiguration;
+import io.github.kotlinmania.spring.boot.data.ldap.autoconfigure.domain.empty.EmptyDataPackage;
+import io.github.kotlinmania.spring.boot.data.ldap.autoconfigure.domain.person.Person;
+import io.github.kotlinmania.spring.boot.data.ldap.autoconfigure.domain.person.PersonRepository;
+import io.github.kotlinmania.spring.boot.ldap.autoconfigure.LdapAutoConfiguration;
+import io.github.kotlinmania.spring.boot.test.util.TestPropertyValues;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.ldap.repository.config.EnableLdapRepositories;

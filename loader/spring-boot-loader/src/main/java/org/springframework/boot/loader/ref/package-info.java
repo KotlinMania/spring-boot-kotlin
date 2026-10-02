@@ -17,4 +17,4 @@
 /**
  * Support for {@link java.lang.ref.Cleaner}.
  */
-package org.springframework.boot.loader.ref;
+package io.github.kotlinmania.spring.boot.loader.ref;

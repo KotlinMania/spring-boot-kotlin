@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.ldap.autoconfigure;
+package io.github.kotlinmania.spring.boot.ldap.autoconfigure;
 
 import java.util.HashMap;
 import java.util.Map;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.context.properties.ConfigurationProperties;
+import io.github.kotlinmania.spring.boot.context.properties.ConfigurationProperties;
 import org.springframework.core.env.Environment;
 import org.springframework.ldap.ReferralException;
 import org.springframework.ldap.core.LdapTemplate;

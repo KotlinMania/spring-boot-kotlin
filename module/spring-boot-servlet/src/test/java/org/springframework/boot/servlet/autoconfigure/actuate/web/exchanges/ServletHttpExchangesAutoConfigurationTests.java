@@ -14,19 +14,19 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.servlet.autoconfigure.actuate.web.exchanges;
+package io.github.kotlinmania.spring.boot.servlet.autoconfigure.actuate.web.exchanges;
 
 import java.util.EnumSet;
 import java.util.Set;
 
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.actuate.web.exchanges.HttpExchangeRepository;
-import org.springframework.boot.actuate.web.exchanges.InMemoryHttpExchangeRepository;
-import org.springframework.boot.actuate.web.exchanges.Include;
-import org.springframework.boot.autoconfigure.AutoConfigurations;
-import org.springframework.boot.servlet.actuate.web.exchanges.HttpExchangesFilter;
-import org.springframework.boot.test.context.runner.WebApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.actuate.web.exchanges.HttpExchangeRepository;
+import io.github.kotlinmania.spring.boot.actuate.web.exchanges.InMemoryHttpExchangeRepository;
+import io.github.kotlinmania.spring.boot.actuate.web.exchanges.Include;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurations;
+import io.github.kotlinmania.spring.boot.servlet.actuate.web.exchanges.HttpExchangesFilter;
+import io.github.kotlinmania.spring.boot.test.context.runner.WebApplicationContextRunner;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

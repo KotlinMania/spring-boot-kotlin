@@ -18,7 +18,7 @@ The following example shows how to accomplish this in Maven:
 [source,xml]
 ----
 <dependency>
-	<groupId>org.springframework.boot</groupId>
+	<groupId>io.github.kotlinmania.spring.boot./groupId>
 	<artifactId>spring-boot-starter-data-redis</artifactId>
 	<exclusions>
 		<exclusion>
@@ -38,7 +38,7 @@ The following example shows how to accomplish this in Gradle:
 [source,gradle]
 ----
 dependencies {
-	implementation('org.springframework.boot:spring-boot-starter-data-redis') {
+	implementation('io.github.kotlinmania.spring.boot.spring-boot-starter-data-redis') {
 	    exclude group: 'io.lettuce', module: 'lettuce-core'
 	}
 	implementation 'redis.clients:jedis'

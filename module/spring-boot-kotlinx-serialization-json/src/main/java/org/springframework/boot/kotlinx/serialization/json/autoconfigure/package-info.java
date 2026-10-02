@@ -18,6 +18,6 @@
  * Auto-configuration for Kotlinx Serialization JSON.
  */
 @NullMarked
-package org.springframework.boot.kotlinx.serialization.json.autoconfigure;
+package io.github.kotlinmania.spring.boot.kotlinx.serialization.json.autoconfigure;
 
 import org.jspecify.annotations.NullMarked;

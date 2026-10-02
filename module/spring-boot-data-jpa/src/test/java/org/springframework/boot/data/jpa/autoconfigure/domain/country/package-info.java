@@ -15,6 +15,6 @@
  */
 
 @NullMarked
-package org.springframework.boot.data.jpa.autoconfigure.domain.country;
+package io.github.kotlinmania.spring.boot.data.jpa.autoconfigure.domain.country;
 
 import org.jspecify.annotations.NullMarked;

@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.configurationsample.source;
+package io.github.kotlinmania.spring.boot.configurationsample.source;
 
-import org.springframework.boot.configurationsample.TestConfigurationProperties;
+import io.github.kotlinmania.spring.boot.configurationsample.TestConfigurationProperties;
 
 @TestConfigurationProperties("example")
 public class ConcreteProperties extends BaseSource {

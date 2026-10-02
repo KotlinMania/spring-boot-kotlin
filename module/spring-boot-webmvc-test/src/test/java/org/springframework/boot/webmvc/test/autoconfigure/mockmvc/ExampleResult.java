@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.webmvc.test.autoconfigure.mockmvc;
+package io.github.kotlinmania.spring.boot.webmvc.test.autoconfigure.mockmvc;
 
-import org.springframework.boot.jackson.JacksonComponent;
+import io.github.kotlinmania.spring.boot.jackson.JacksonComponent;
 
 /**
  * Example result that requires a {@link JacksonComponent}.

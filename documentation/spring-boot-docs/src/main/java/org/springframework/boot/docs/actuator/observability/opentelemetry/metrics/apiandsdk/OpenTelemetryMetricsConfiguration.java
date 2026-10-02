@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.actuator.observability.opentelemetry.metrics.apiandsdk;
+package io.github.kotlinmania.spring.boot.docs.actuator.observability.opentelemetry.metrics.apiandsdk;
 
 import java.time.Duration;
 

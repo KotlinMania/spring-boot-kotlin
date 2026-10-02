@@ -1,3 +1,3 @@
-org.springframework.boot.integration.autoconfigure.IntegrationAutoConfiguration
-org.springframework.boot.integration.autoconfigure.IntegrationGraphEndpointAutoConfiguration
-org.springframework.boot.integration.autoconfigure.metrics.IntegrationMetricsAutoConfiguration
+io.github.kotlinmania.spring.boot.integration.autoconfigure.IntegrationAutoConfiguration
+io.github.kotlinmania.spring.boot.integration.autoconfigure.IntegrationGraphEndpointAutoConfiguration
+io.github.kotlinmania.spring.boot.integration.autoconfigure.metrics.IntegrationMetricsAutoConfiguration

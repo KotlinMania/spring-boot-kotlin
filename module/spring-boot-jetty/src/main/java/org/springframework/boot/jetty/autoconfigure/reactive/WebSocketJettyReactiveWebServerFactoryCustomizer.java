@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.jetty.autoconfigure.reactive;
+package io.github.kotlinmania.spring.boot.jetty.autoconfigure.reactive;
 
 import jakarta.servlet.ServletContext;
 import org.eclipse.jetty.ee11.servlet.ServletContextHandler;
@@ -26,8 +26,8 @@ import org.eclipse.jetty.websocket.core.server.WebSocketMappings;
 import org.eclipse.jetty.websocket.core.server.WebSocketServerComponents;
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.jetty.reactive.JettyReactiveWebServerFactory;
-import org.springframework.boot.web.server.WebServerFactoryCustomizer;
+import io.github.kotlinmania.spring.boot.jetty.reactive.JettyReactiveWebServerFactory;
+import io.github.kotlinmania.spring.boot.web.server.WebServerFactoryCustomizer;
 import org.springframework.core.Ordered;
 
 /**

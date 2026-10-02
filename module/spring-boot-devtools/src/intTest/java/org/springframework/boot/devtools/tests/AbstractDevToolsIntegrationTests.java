@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.devtools.tests;
+package io.github.kotlinmania.spring.boot.devtools.tests;
 
 import java.io.File;
 import java.time.Duration;
@@ -32,7 +32,7 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.extension.RegisterExtension;
 import org.junit.jupiter.api.io.TempDir;
 
-import org.springframework.boot.testsupport.BuildOutput;
+import io.github.kotlinmania.spring.boot.testsupport.BuildOutput;
 import org.springframework.util.Assert;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;

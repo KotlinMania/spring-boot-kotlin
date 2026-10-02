@@ -18,6 +18,6 @@
  * Auto-configuration for actuator info concerns.
  */
 @NullMarked
-package org.springframework.boot.actuate.autoconfigure.info;
+package io.github.kotlinmania.spring.boot.actuate.autoconfigure.info;
 
 import org.jspecify.annotations.NullMarked;

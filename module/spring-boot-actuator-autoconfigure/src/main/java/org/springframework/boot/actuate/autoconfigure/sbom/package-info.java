@@ -18,6 +18,6 @@
  * Auto-configuration for actuator SBOM concerns.
  */
 @NullMarked
-package org.springframework.boot.actuate.autoconfigure.sbom;
+package io.github.kotlinmania.spring.boot.actuate.autoconfigure.sbom;
 
 import org.jspecify.annotations.NullMarked;

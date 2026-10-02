@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.jdbc.metadata;
+package io.github.kotlinmania.spring.boot.jdbc.metadata;
 
 import java.sql.SQLException;
 

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.actuate.docs.info;
+package io.github.kotlinmania.spring.boot.actuate.docs.info;
 
 import java.time.Instant;
 import java.util.List;
@@ -22,23 +22,23 @@ import java.util.Properties;
 
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.actuate.docs.MockMvcEndpointDocumentationTests;
-import org.springframework.boot.actuate.info.BuildInfoContributor;
-import org.springframework.boot.actuate.info.GitInfoContributor;
-import org.springframework.boot.actuate.info.InfoContributor;
-import org.springframework.boot.actuate.info.InfoEndpoint;
-import org.springframework.boot.actuate.info.JavaInfoContributor;
-import org.springframework.boot.actuate.info.OsInfoContributor;
-import org.springframework.boot.actuate.info.ProcessInfoContributor;
-import org.springframework.boot.actuate.info.SslInfoContributor;
-import org.springframework.boot.info.BuildProperties;
-import org.springframework.boot.info.GitProperties;
-import org.springframework.boot.info.SslInfo;
-import org.springframework.boot.ssl.DefaultSslBundleRegistry;
-import org.springframework.boot.ssl.SslBundle;
-import org.springframework.boot.ssl.SslStoreBundle;
-import org.springframework.boot.ssl.jks.JksSslStoreBundle;
-import org.springframework.boot.ssl.jks.JksSslStoreDetails;
+import io.github.kotlinmania.spring.boot.actuate.docs.MockMvcEndpointDocumentationTests;
+import io.github.kotlinmania.spring.boot.actuate.info.BuildInfoContributor;
+import io.github.kotlinmania.spring.boot.actuate.info.GitInfoContributor;
+import io.github.kotlinmania.spring.boot.actuate.info.InfoContributor;
+import io.github.kotlinmania.spring.boot.actuate.info.InfoEndpoint;
+import io.github.kotlinmania.spring.boot.actuate.info.JavaInfoContributor;
+import io.github.kotlinmania.spring.boot.actuate.info.OsInfoContributor;
+import io.github.kotlinmania.spring.boot.actuate.info.ProcessInfoContributor;
+import io.github.kotlinmania.spring.boot.actuate.info.SslInfoContributor;
+import io.github.kotlinmania.spring.boot.info.BuildProperties;
+import io.github.kotlinmania.spring.boot.info.GitProperties;
+import io.github.kotlinmania.spring.boot.info.SslInfo;
+import io.github.kotlinmania.spring.boot.ssl.DefaultSslBundleRegistry;
+import io.github.kotlinmania.spring.boot.ssl.SslBundle;
+import io.github.kotlinmania.spring.boot.ssl.SslStoreBundle;
+import io.github.kotlinmania.spring.boot.ssl.jks.JksSslStoreBundle;
+import io.github.kotlinmania.spring.boot.ssl.jks.JksSslStoreDetails;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.restdocs.mockmvc.MockMvcRestDocumentation;

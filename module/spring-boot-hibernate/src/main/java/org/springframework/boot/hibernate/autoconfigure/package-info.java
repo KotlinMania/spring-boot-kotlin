@@ -18,6 +18,6 @@
  * Auto-configuration for JPA and Spring ORM.
  */
 @NullMarked
-package org.springframework.boot.hibernate.autoconfigure;
+package io.github.kotlinmania.spring.boot.hibernate.autoconfigure;
 
 import org.jspecify.annotations.NullMarked;

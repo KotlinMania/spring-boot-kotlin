@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.loader.net.protocol.nested;
+package io.github.kotlinmania.spring.boot.loader.net.protocol.nested;
 
 import java.io.File;
 import java.net.MalformedURLException;
@@ -29,7 +29,7 @@ import org.junit.jupiter.api.condition.EnabledOnOs;
 import org.junit.jupiter.api.condition.OS;
 import org.junit.jupiter.api.io.TempDir;
 
-import org.springframework.boot.loader.net.protocol.Handlers;
+import io.github.kotlinmania.spring.boot.loader.net.protocol.Handlers;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatIllegalArgumentException;

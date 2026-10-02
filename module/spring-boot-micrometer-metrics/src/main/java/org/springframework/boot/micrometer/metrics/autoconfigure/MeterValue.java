@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.micrometer.metrics.autoconfigure;
+package io.github.kotlinmania.spring.boot.micrometer.metrics.autoconfigure;
 
 import java.time.Duration;
 import java.util.concurrent.TimeUnit;
@@ -22,7 +22,7 @@ import java.util.concurrent.TimeUnit;
 import io.micrometer.core.instrument.Meter.Type;
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.convert.DurationStyle;
+import io.github.kotlinmania.spring.boot.convert.DurationStyle;
 import org.springframework.util.StringUtils;
 
 /**

@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.webflux.test.autoconfigure;
+package io.github.kotlinmania.spring.boot.webflux.test.autoconfigure;
 
-import org.springframework.boot.jackson.JacksonComponent;
+import io.github.kotlinmania.spring.boot.jackson.JacksonComponent;
 
 /**
  * Example result that requires a {@link JacksonComponent}.

@@ -15,6 +15,6 @@
  */
 
 @NullMarked
-package org.springframework.boot.thymeleaf.autoconfigure.webfluxtest;
+package io.github.kotlinmania.spring.boot.thymeleaf.autoconfigure.webfluxtest;
 
 import org.jspecify.annotations.NullMarked;

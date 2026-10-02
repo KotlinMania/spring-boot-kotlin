@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.jetty;
+package io.github.kotlinmania.spring.boot.jetty;
 
 import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.util.thread.ThreadPool;
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.web.server.ConfigurableWebServerFactory;
+import io.github.kotlinmania.spring.boot.web.server.ConfigurableWebServerFactory;
 
 /**
  * {@link ConfigurableWebServerFactory} for Jetty-specific features.

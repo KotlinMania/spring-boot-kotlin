@@ -18,6 +18,6 @@
  * Support for Testcontainers OpenTelemetry metrics service connections.
  */
 @NullMarked
-package org.springframework.boot.micrometer.metrics.testcontainers.otlp;
+package io.github.kotlinmania.spring.boot.micrometer.metrics.testcontainers.otlp;
 
 import org.jspecify.annotations.NullMarked;

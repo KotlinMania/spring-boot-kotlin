@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.actuate.autoconfigure.web.server;
+package io.github.kotlinmania.spring.boot.actuate.autoconfigure.web.server;
 
 import java.lang.reflect.Modifier;
 
@@ -22,10 +22,10 @@ import org.springframework.beans.FatalBeanException;
 import org.springframework.beans.factory.NoSuchBeanDefinitionException;
 import org.springframework.beans.factory.support.BeanDefinitionRegistry;
 import org.springframework.beans.factory.support.RootBeanDefinition;
-import org.springframework.boot.ApplicationContextFactory;
-import org.springframework.boot.WebApplicationType;
-import org.springframework.boot.support.SystemEnvironmentPropertySourceEnvironmentPostProcessor;
-import org.springframework.boot.web.server.WebServerFactory;
+import io.github.kotlinmania.spring.boot.ApplicationContextFactory;
+import io.github.kotlinmania.spring.boot.WebApplicationType;
+import io.github.kotlinmania.spring.boot.support.SystemEnvironmentPropertySourceEnvironmentPostProcessor;
+import io.github.kotlinmania.spring.boot.web.server.WebServerFactory;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigRegistry;

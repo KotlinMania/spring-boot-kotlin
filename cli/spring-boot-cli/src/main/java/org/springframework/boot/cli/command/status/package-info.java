@@ -18,6 +18,6 @@
  * CLI command status.
  */
 @NullMarked
-package org.springframework.boot.cli.command.status;
+package io.github.kotlinmania.spring.boot.cli.command.status;
 
 import org.jspecify.annotations.NullMarked;

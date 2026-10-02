@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.jetty;
+package io.github.kotlinmania.spring.boot.jetty;
 
 import java.net.InetSocketAddress;
 import java.util.ArrayList;
@@ -40,8 +40,8 @@ import org.eclipse.jetty.util.thread.Scheduler;
 import org.eclipse.jetty.util.thread.ThreadPool;
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.web.server.AbstractConfigurableWebServerFactory;
-import org.springframework.boot.web.server.Ssl;
+import io.github.kotlinmania.spring.boot.web.server.AbstractConfigurableWebServerFactory;
+import io.github.kotlinmania.spring.boot.web.server.Ssl;
 import org.springframework.util.Assert;
 import org.springframework.util.StringUtils;
 

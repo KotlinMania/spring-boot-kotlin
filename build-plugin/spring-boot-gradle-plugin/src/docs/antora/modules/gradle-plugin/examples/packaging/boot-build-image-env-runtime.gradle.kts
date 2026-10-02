@@ -1,8 +1,8 @@
-import org.springframework.boot.gradle.tasks.bundling.BootBuildImage
+import io.github.kotlinmania.spring.boot.gradle.tasks.bundling.BootBuildImage
 
 plugins {
 	java
-	id("org.springframework.boot") version "{version-spring-boot}"
+	id("io.github.kotlinmania.spring.boot.) version "{version-spring-boot}"
 }
 
 // tag::env-runtime[]

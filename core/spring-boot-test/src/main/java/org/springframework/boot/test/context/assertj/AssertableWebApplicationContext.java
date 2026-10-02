@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.test.context.assertj;
+package io.github.kotlinmania.spring.boot.test.context.assertj;
 
 import java.util.function.Supplier;
 
-import org.springframework.boot.test.context.runner.WebApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.test.context.runner.WebApplicationContextRunner;
 import org.springframework.web.context.ConfigurableWebApplicationContext;
 import org.springframework.web.context.WebApplicationContext;
 

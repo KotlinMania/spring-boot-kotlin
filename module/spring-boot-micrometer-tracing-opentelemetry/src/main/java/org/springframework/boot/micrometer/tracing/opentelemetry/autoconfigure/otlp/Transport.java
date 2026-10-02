@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.micrometer.tracing.opentelemetry.autoconfigure.otlp;
+package io.github.kotlinmania.spring.boot.micrometer.tracing.opentelemetry.autoconfigure.otlp;
 
 /**
  * Transport used to send OTLP data.

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.data.nosql.mongodb.connecting
+package io.github.kotlinmania.spring.boot.docs.data.nosql.mongodb.connecting
 
 import com.mongodb.client.MongoCollection
 import org.bson.Document

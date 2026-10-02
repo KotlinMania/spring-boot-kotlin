@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.batch.jdbc.autoconfigure;
+package io.github.kotlinmania.spring.boot.batch.jdbc.autoconfigure;
 
 import javax.sql.DataSource;
 
-import org.springframework.boot.jdbc.init.DataSourceScriptDatabaseInitializer;
-import org.springframework.boot.jdbc.init.PropertiesBasedDataSourceScriptDatabaseInitializer;
+import io.github.kotlinmania.spring.boot.jdbc.init.DataSourceScriptDatabaseInitializer;
+import io.github.kotlinmania.spring.boot.jdbc.init.PropertiesBasedDataSourceScriptDatabaseInitializer;
 
 /**
  * {@link DataSourceScriptDatabaseInitializer} for the Spring Batch database. May be

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docker.compose.lifecycle;
+package io.github.kotlinmania.spring.boot.docker.compose.lifecycle;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -27,14 +27,14 @@ import org.apache.commons.logging.LogFactory;
 import org.jspecify.annotations.Nullable;
 
 import org.springframework.aot.AotDetector;
-import org.springframework.boot.SpringApplicationShutdownHandlers;
-import org.springframework.boot.docker.compose.core.DockerCompose;
-import org.springframework.boot.docker.compose.core.DockerComposeFile;
-import org.springframework.boot.docker.compose.core.RunningService;
-import org.springframework.boot.docker.compose.lifecycle.DockerComposeProperties.Readiness.Wait;
-import org.springframework.boot.docker.compose.lifecycle.DockerComposeProperties.Start;
-import org.springframework.boot.docker.compose.lifecycle.DockerComposeProperties.Start.Skip;
-import org.springframework.boot.docker.compose.lifecycle.DockerComposeProperties.Stop;
+import io.github.kotlinmania.spring.boot.SpringApplicationShutdownHandlers;
+import io.github.kotlinmania.spring.boot.docker.compose.core.DockerCompose;
+import io.github.kotlinmania.spring.boot.docker.compose.core.DockerComposeFile;
+import io.github.kotlinmania.spring.boot.docker.compose.core.RunningService;
+import io.github.kotlinmania.spring.boot.docker.compose.lifecycle.DockerComposeProperties.Readiness.Wait;
+import io.github.kotlinmania.spring.boot.docker.compose.lifecycle.DockerComposeProperties.Start;
+import io.github.kotlinmania.spring.boot.docker.compose.lifecycle.DockerComposeProperties.Start.Skip;
+import io.github.kotlinmania.spring.boot.docker.compose.lifecycle.DockerComposeProperties.Stop;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationListener;
 import org.springframework.context.aot.AbstractAotProcessor;
@@ -56,7 +56,7 @@ class DockerComposeLifecycleManager {
 
 	private static final Log logger = LogFactory.getLog(DockerComposeLifecycleManager.class);
 
-	private static final String IGNORE_LABEL = "org.springframework.boot.ignore";
+	private static final String IGNORE_LABEL = "io.github.kotlinmania.spring.boot.ignore";
 
 	private final @Nullable File workingDirectory;
 

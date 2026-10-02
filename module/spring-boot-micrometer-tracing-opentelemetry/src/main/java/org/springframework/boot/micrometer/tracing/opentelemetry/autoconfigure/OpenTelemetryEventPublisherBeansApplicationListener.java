@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.micrometer.tracing.opentelemetry.autoconfigure;
+package io.github.kotlinmania.spring.boot.micrometer.tracing.opentelemetry.autoconfigure;
 
 import java.util.List;
 import java.util.concurrent.atomic.AtomicBoolean;
@@ -26,7 +26,7 @@ import io.opentelemetry.context.ContextStorage;
 import io.opentelemetry.context.Scope;
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.context.event.ApplicationStartingEvent;
+import io.github.kotlinmania.spring.boot.context.event.ApplicationStartingEvent;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationEvent;
 import org.springframework.context.ApplicationListener;

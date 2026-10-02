@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.micrometer.metrics.autoconfigure.export.prometheus;
+package io.github.kotlinmania.spring.boot.micrometer.metrics.autoconfigure.export.prometheus;
 
 import java.io.IOException;
 import java.io.OutputStream;
@@ -25,7 +25,7 @@ import io.prometheus.metrics.expositionformats.PrometheusProtobufWriter;
 import io.prometheus.metrics.expositionformats.PrometheusTextFormatWriter;
 import io.prometheus.metrics.model.snapshots.MetricSnapshots;
 
-import org.springframework.boot.actuate.endpoint.Producible;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.Producible;
 import org.springframework.util.MimeType;
 import org.springframework.util.MimeTypeUtils;
 

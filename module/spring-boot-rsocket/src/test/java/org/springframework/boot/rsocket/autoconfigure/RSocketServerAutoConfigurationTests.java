@@ -14,23 +14,23 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.rsocket.autoconfigure;
+package io.github.kotlinmania.spring.boot.rsocket.autoconfigure;
 
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.autoconfigure.AutoConfigurations;
-import org.springframework.boot.autoconfigure.ssl.SslAutoConfiguration;
-import org.springframework.boot.rsocket.context.RSocketPortInfoApplicationContextInitializer;
-import org.springframework.boot.rsocket.context.RSocketServerBootstrap;
-import org.springframework.boot.rsocket.server.RSocketServerCustomizer;
-import org.springframework.boot.rsocket.server.RSocketServerFactory;
-import org.springframework.boot.ssl.NoSuchSslBundleException;
-import org.springframework.boot.test.context.FilteredClassLoader;
-import org.springframework.boot.test.context.runner.ApplicationContextRunner;
-import org.springframework.boot.test.context.runner.ReactiveWebApplicationContextRunner;
-import org.springframework.boot.testsupport.classpath.resources.WithPackageResources;
-import org.springframework.boot.web.server.WebServerFactoryCustomizer;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurations;
+import io.github.kotlinmania.spring.boot.autoconfigure.ssl.SslAutoConfiguration;
+import io.github.kotlinmania.spring.boot.rsocket.context.RSocketPortInfoApplicationContextInitializer;
+import io.github.kotlinmania.spring.boot.rsocket.context.RSocketServerBootstrap;
+import io.github.kotlinmania.spring.boot.rsocket.server.RSocketServerCustomizer;
+import io.github.kotlinmania.spring.boot.rsocket.server.RSocketServerFactory;
+import io.github.kotlinmania.spring.boot.ssl.NoSuchSslBundleException;
+import io.github.kotlinmania.spring.boot.test.context.FilteredClassLoader;
+import io.github.kotlinmania.spring.boot.test.context.runner.ApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.test.context.runner.ReactiveWebApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.testsupport.classpath.resources.WithPackageResources;
+import io.github.kotlinmania.spring.boot.web.server.WebServerFactoryCustomizer;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.codec.CharSequenceEncoder;

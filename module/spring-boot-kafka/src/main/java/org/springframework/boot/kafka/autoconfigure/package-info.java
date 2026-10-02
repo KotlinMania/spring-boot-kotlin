@@ -18,6 +18,6 @@
  * Auto-configuration for Apache Kafka.
  */
 @NullMarked
-package org.springframework.boot.kafka.autoconfigure;
+package io.github.kotlinmania.spring.boot.kafka.autoconfigure;
 
 import org.jspecify.annotations.NullMarked;

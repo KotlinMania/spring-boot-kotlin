@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.maven;
+package io.github.kotlinmania.spring.boot.maven;
 
 import java.util.Collections;
 import java.util.HashSet;
@@ -62,7 +62,7 @@ public abstract class DependencyFilter extends AbstractArtifactsFilter {
 
 	/**
 	 * Check if the specified {@link org.apache.maven.artifact.Artifact} matches the
-	 * specified {@link org.springframework.boot.maven.FilterableDependency}. Returns
+	 * specified {@link io.github.kotlinmania.spring.boot.maven.FilterableDependency}. Returns
 	 * {@code true} if it should be excluded
 	 * @param artifact the Maven {@link Artifact}
 	 * @param dependency the {@link FilterableDependency}

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.actuate.autoconfigure.metrics.export.properties;
+package io.github.kotlinmania.spring.boot.actuate.autoconfigure.metrics.export.properties;
 
 import java.lang.reflect.Method;
 import java.util.Arrays;
@@ -25,7 +25,7 @@ import java.util.stream.Collectors;
 import io.micrometer.core.instrument.config.validate.Validated;
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.micrometer.metrics.autoconfigure.export.properties.PropertiesConfigAdapter;
+import io.github.kotlinmania.spring.boot.micrometer.metrics.autoconfigure.export.properties.PropertiesConfigAdapter;
 import org.springframework.core.annotation.AnnotatedElementUtils;
 
 import static org.assertj.core.api.Assertions.assertThat;

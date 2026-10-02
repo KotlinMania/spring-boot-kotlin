@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.data.mongodb.autoconfigure;
+package io.github.kotlinmania.spring.boot.data.mongodb.autoconfigure;
 
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.autoconfigure.AutoConfigurations;
-import org.springframework.boot.test.context.runner.ApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurations;
+import io.github.kotlinmania.spring.boot.test.context.runner.ApplicationContextRunner;
 import org.springframework.data.mongodb.core.convert.MongoCustomConversions.BigDecimalRepresentation;
 import org.springframework.data.mongodb.core.convert.MongoCustomConversions.MongoConverterConfigurationAdapter;
 import org.springframework.test.util.ReflectionTestUtils;

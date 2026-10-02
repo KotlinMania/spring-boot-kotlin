@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.buildpack.platform.docker;
+package io.github.kotlinmania.spring.boot.buildpack.platform.docker;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -30,22 +30,22 @@ import org.apache.hc.core5.http.Header;
 import org.apache.hc.core5.net.URIBuilder;
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.buildpack.platform.docker.PushImageUpdateEvent.ErrorDetail;
-import org.springframework.boot.buildpack.platform.docker.configuration.DockerConnectionConfiguration;
-import org.springframework.boot.buildpack.platform.docker.transport.HttpTransport;
-import org.springframework.boot.buildpack.platform.docker.transport.HttpTransport.Response;
-import org.springframework.boot.buildpack.platform.docker.type.ContainerConfig;
-import org.springframework.boot.buildpack.platform.docker.type.ContainerContent;
-import org.springframework.boot.buildpack.platform.docker.type.ContainerReference;
-import org.springframework.boot.buildpack.platform.docker.type.ContainerStatus;
-import org.springframework.boot.buildpack.platform.docker.type.Image;
-import org.springframework.boot.buildpack.platform.docker.type.ImageArchive;
-import org.springframework.boot.buildpack.platform.docker.type.ImageReference;
-import org.springframework.boot.buildpack.platform.docker.type.VolumeName;
-import org.springframework.boot.buildpack.platform.io.IOBiConsumer;
-import org.springframework.boot.buildpack.platform.io.TarArchive;
-import org.springframework.boot.buildpack.platform.json.JsonStream;
-import org.springframework.boot.buildpack.platform.json.SharedJsonMapper;
+import io.github.kotlinmania.spring.boot.buildpack.platform.docker.PushImageUpdateEvent.ErrorDetail;
+import io.github.kotlinmania.spring.boot.buildpack.platform.docker.configuration.DockerConnectionConfiguration;
+import io.github.kotlinmania.spring.boot.buildpack.platform.docker.transport.HttpTransport;
+import io.github.kotlinmania.spring.boot.buildpack.platform.docker.transport.HttpTransport.Response;
+import io.github.kotlinmania.spring.boot.buildpack.platform.docker.type.ContainerConfig;
+import io.github.kotlinmania.spring.boot.buildpack.platform.docker.type.ContainerContent;
+import io.github.kotlinmania.spring.boot.buildpack.platform.docker.type.ContainerReference;
+import io.github.kotlinmania.spring.boot.buildpack.platform.docker.type.ContainerStatus;
+import io.github.kotlinmania.spring.boot.buildpack.platform.docker.type.Image;
+import io.github.kotlinmania.spring.boot.buildpack.platform.docker.type.ImageArchive;
+import io.github.kotlinmania.spring.boot.buildpack.platform.docker.type.ImageReference;
+import io.github.kotlinmania.spring.boot.buildpack.platform.docker.type.VolumeName;
+import io.github.kotlinmania.spring.boot.buildpack.platform.io.IOBiConsumer;
+import io.github.kotlinmania.spring.boot.buildpack.platform.io.TarArchive;
+import io.github.kotlinmania.spring.boot.buildpack.platform.json.JsonStream;
+import io.github.kotlinmania.spring.boot.buildpack.platform.json.SharedJsonMapper;
 import org.springframework.util.Assert;
 import org.springframework.util.StringUtils;
 

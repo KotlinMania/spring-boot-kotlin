@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.grpc.server.health;
+package io.github.kotlinmania.spring.boot.grpc.server.health;
 
 import java.util.Collections;
 import java.util.HashMap;
@@ -24,7 +24,7 @@ import java.util.Map;
 import io.grpc.health.v1.HealthCheckResponse.ServingStatus;
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.health.contributor.Status;
+import io.github.kotlinmania.spring.boot.health.contributor.Status;
 import org.springframework.lang.Contract;
 
 /**

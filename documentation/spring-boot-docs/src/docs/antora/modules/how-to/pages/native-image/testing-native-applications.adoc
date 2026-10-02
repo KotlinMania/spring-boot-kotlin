@@ -57,7 +57,7 @@ For example, you might choose to run native tests once a day.
 
 Spring Framework includes ahead-of-time support for running tests.
 All the usual Spring testing features work with native image tests.
-For example, you can continue to use the javadoc:org.springframework.boot.test.context.SpringBootTest[format=annotation] annotation.
+For example, you can continue to use the javadoc:io.github.kotlinmania.spring.boot.test.context.SpringBootTest[format=annotation] annotation.
 You can also use Spring Boot xref:reference:testing/spring-boot-applications.adoc#testing.spring-boot-applications.autoconfigured-tests[test slices] to test only specific parts of your application.
 
 Spring Framework's native testing support works in the following way:
@@ -79,7 +79,7 @@ You should have a `<parent>` section that looks like this:
 [source,xml,subs="verbatim,attributes"]
 ----
 <parent>
-	<groupId>org.springframework.boot</groupId>
+	<groupId>io.github.kotlinmania.spring.boot./groupId>
 	<artifactId>spring-boot-starter-parent</artifactId>
 	<version>{version-spring-boot}</version>
 </parent>

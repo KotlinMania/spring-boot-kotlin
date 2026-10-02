@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.appendix.configurationmetadata.format.property;
+package io.github.kotlinmania.spring.boot.docs.appendix.configurationmetadata.format.property;
 
-import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.boot.context.properties.DeprecatedConfigurationProperty;
+import io.github.kotlinmania.spring.boot.context.properties.ConfigurationProperties;
+import io.github.kotlinmania.spring.boot.context.properties.DeprecatedConfigurationProperty;
 
 @ConfigurationProperties("my.app")
 public class MyProperties {

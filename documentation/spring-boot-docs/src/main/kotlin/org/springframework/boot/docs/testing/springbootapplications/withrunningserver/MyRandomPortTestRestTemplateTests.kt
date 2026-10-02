@@ -14,15 +14,15 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.testing.springbootapplications.withrunningserver
+package io.github.kotlinmania.spring.boot.docs.testing.springbootapplications.withrunningserver
 
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Test
 import org.springframework.beans.factory.annotation.Autowired
-import org.springframework.boot.test.context.SpringBootTest
-import org.springframework.boot.test.context.SpringBootTest.WebEnvironment
-import org.springframework.boot.resttestclient.TestRestTemplate
-import org.springframework.boot.resttestclient.autoconfigure.AutoConfigureTestRestTemplate
+import io.github.kotlinmania.spring.boot.test.context.SpringBootTest
+import io.github.kotlinmania.spring.boot.test.context.SpringBootTest.WebEnvironment
+import io.github.kotlinmania.spring.boot.resttestclient.TestRestTemplate
+import io.github.kotlinmania.spring.boot.resttestclient.autoconfigure.AutoConfigureTestRestTemplate
 
 @SpringBootTest(webEnvironment = WebEnvironment.RANDOM_PORT)
 @AutoConfigureTestRestTemplate

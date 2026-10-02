@@ -17,7 +17,7 @@
 /**
  * JAR URL support, including support for nested jars.
  *
- * @see org.springframework.boot.loader.net.protocol.jar.JarUrl
- * @see org.springframework.boot.loader.net.protocol.jar.Handler
+ * @see io.github.kotlinmania.spring.boot.loader.net.protocol.jar.JarUrl
+ * @see io.github.kotlinmania.spring.boot.loader.net.protocol.jar.Handler
  */
-package org.springframework.boot.loader.net.protocol.jar;
+package io.github.kotlinmania.spring.boot.loader.net.protocol.jar;

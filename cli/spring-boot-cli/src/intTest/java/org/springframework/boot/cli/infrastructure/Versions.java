@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.cli.infrastructure;
+package io.github.kotlinmania.spring.boot.cli.infrastructure;
 
 import java.io.FileInputStream;
 import java.io.IOException;

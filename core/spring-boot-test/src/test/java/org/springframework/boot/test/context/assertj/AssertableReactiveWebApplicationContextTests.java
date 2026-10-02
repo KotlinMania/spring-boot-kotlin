@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.test.context.assertj;
+package io.github.kotlinmania.spring.boot.test.context.assertj;
 
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.web.context.reactive.ConfigurableReactiveWebApplicationContext;
+import io.github.kotlinmania.spring.boot.web.context.reactive.ConfigurableReactiveWebApplicationContext;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.Mockito.mock;

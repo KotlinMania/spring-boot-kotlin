@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.jarmode.tools;
+package io.github.kotlinmania.spring.boot.jarmode.tools;
 
 import java.io.PrintStream;
 import java.util.ArrayDeque;
@@ -26,9 +26,9 @@ import org.assertj.core.api.InstanceOfAssertFactories;
 import org.jspecify.annotations.Nullable;
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.jarmode.tools.Command.Option;
-import org.springframework.boot.jarmode.tools.Command.Options;
-import org.springframework.boot.jarmode.tools.Command.Parameters;
+import io.github.kotlinmania.spring.boot.jarmode.tools.Command.Option;
+import io.github.kotlinmania.spring.boot.jarmode.tools.Command.Options;
+import io.github.kotlinmania.spring.boot.jarmode.tools.Command.Parameters;
 
 import static org.assertj.core.api.Assertions.as;
 import static org.assertj.core.api.Assertions.assertThat;

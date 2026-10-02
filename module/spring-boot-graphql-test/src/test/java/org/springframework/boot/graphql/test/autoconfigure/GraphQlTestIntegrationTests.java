@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.graphql.test.autoconfigure;
+package io.github.kotlinmania.spring.boot.graphql.test.autoconfigure;
 
 import org.junit.jupiter.api.Test;
 

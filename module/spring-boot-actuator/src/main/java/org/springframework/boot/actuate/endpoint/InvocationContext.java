@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.actuate.endpoint;
+package io.github.kotlinmania.spring.boot.actuate.endpoint;
 
 import java.security.Principal;
 import java.util.ArrayList;
@@ -24,7 +24,7 @@ import java.util.Map;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.actuate.endpoint.invoke.OperationInvoker;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.invoke.OperationInvoker;
 import org.springframework.util.Assert;
 
 /**

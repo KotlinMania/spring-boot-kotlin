@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.actuate.endpoint;
+package io.github.kotlinmania.spring.boot.actuate.endpoint;
 
 /**
  * An enumeration of the different types of operation supported by an endpoint.

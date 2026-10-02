@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.configurationmetadata.json;
+package io.github.kotlinmania.spring.boot.configurationmetadata.json;
 
 import java.util.ArrayList;
 import java.util.Collection;

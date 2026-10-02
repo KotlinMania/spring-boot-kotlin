@@ -18,6 +18,6 @@
  * Auto-configuration for Spring gRPC tests.
  */
 @NullMarked
-package org.springframework.boot.grpc.test.autoconfigure;
+package io.github.kotlinmania.spring.boot.grpc.test.autoconfigure;
 
 import org.jspecify.annotations.NullMarked;

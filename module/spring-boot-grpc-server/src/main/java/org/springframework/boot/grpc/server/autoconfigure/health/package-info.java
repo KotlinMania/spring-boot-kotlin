@@ -18,6 +18,6 @@
  * Auto-configuration for gRPC server health checks.
  */
 @NullMarked
-package org.springframework.boot.grpc.server.autoconfigure.health;
+package io.github.kotlinmania.spring.boot.grpc.server.autoconfigure.health;
 
 import org.jspecify.annotations.NullMarked;

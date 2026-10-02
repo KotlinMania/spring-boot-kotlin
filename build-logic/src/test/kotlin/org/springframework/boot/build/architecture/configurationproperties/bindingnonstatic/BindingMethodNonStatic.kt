@@ -15,8 +15,22 @@
  */
 package org.springframework.boot.build.architecture.configurationproperties.bindingnonstatic
 
-import org.springframework.boot.build.architecture.annotations.TestConfigurationPropertiesBinding
-import org.springframework.context.annotation.Bean
+package io.github.kotlinmania.spring.boot.build.architecture.configurationproperties.methodvalueonly;
+
+import io.github.kotlinmania.spring.boot.build.architecture.annotations.TestConfigurationProperties;
+
+public class ConfigurationPropertiesWithValueOnly {
+
+	private String property;
+
+	@TestConfigurationProperties("testing")
+	public String getProperty() {
+		return this.property;
+	}
+
+	public void setProperty(String property) {
+		this.property = property;
+	}
 
 class BindingMethodNonStatic {
     @Bean

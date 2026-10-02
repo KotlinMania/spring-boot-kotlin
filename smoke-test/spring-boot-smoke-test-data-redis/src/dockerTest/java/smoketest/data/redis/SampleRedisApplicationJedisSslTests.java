@@ -25,12 +25,12 @@ import org.testcontainers.junit.jupiter.Container;
 import org.testcontainers.junit.jupiter.Testcontainers;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.data.redis.test.autoconfigure.DataRedisTest;
-import org.springframework.boot.testcontainers.service.connection.PemKeyStore;
-import org.springframework.boot.testcontainers.service.connection.PemTrustStore;
-import org.springframework.boot.testcontainers.service.connection.ServiceConnection;
-import org.springframework.boot.testsupport.classpath.ClassPathExclusions;
-import org.springframework.boot.testsupport.container.TestImage;
+import io.github.kotlinmania.spring.boot.data.redis.test.autoconfigure.DataRedisTest;
+import io.github.kotlinmania.spring.boot.testcontainers.service.connection.PemKeyStore;
+import io.github.kotlinmania.spring.boot.testcontainers.service.connection.PemTrustStore;
+import io.github.kotlinmania.spring.boot.testcontainers.service.connection.ServiceConnection;
+import io.github.kotlinmania.spring.boot.testsupport.classpath.ClassPathExclusions;
+import io.github.kotlinmania.spring.boot.testsupport.container.TestImage;
 import org.springframework.data.redis.core.RedisOperations;
 
 import static org.assertj.core.api.Assertions.assertThat;

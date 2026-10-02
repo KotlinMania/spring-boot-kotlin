@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.configurationmetadata;
+package io.github.kotlinmania.spring.boot.configurationmetadata;
 
 import java.io.Serializable;
 import java.util.LinkedHashMap;

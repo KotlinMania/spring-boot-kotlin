@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.restclient.test;
+package io.github.kotlinmania.spring.boot.restclient.test;
 
 import java.io.IOException;
 import java.io.OutputStream;
@@ -148,7 +148,7 @@ public class RootUriRequestExpectationManager implements RequestExpectationManag
 	/**
 	 * Return {@link RequestExpectationManager} to be used for binding with the specified
 	 * {@link RestTemplate}. If the {@link RestTemplate} is using a
-	 * {@link org.springframework.boot.restclient.RootUriTemplateHandler} then a
+	 * {@link io.github.kotlinmania.spring.boot.restclient.RootUriTemplateHandler} then a
 	 * {@link RootUriRequestExpectationManager} is returned, otherwise the source manager
 	 * is returned unchanged.
 	 * @param restTemplate the source REST template
@@ -160,7 +160,7 @@ public class RootUriRequestExpectationManager implements RequestExpectationManag
 			RequestExpectationManager expectationManager) {
 		Assert.notNull(restTemplate, "'restTemplate' must not be null");
 		UriTemplateHandler templateHandler = restTemplate.getUriTemplateHandler();
-		if (templateHandler instanceof org.springframework.boot.restclient.RootUriTemplateHandler rootHandler
+		if (templateHandler instanceof io.github.kotlinmania.spring.boot.restclient.RootUriTemplateHandler rootHandler
 				&& rootHandler.getRootUri() != null) {
 			return new RootUriRequestExpectationManager(rootHandler.getRootUri(), expectationManager);
 		}

@@ -25,7 +25,7 @@
     },
     {
       "name": "spring.data.mongodb.repositories.type",
-      "type": "org.springframework.boot.autoconfigure.data.RepositoryType",
+      "type": "io.github.kotlinmania.spring.boot.autoconfigure.data.RepositoryType",
       "description": "Type of Mongo repositories to enable.",
       "defaultValue": "auto"
     }

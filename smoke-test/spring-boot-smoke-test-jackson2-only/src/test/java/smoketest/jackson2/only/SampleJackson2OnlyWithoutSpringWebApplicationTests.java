@@ -24,8 +24,8 @@ import javax.management.ObjectName;
 
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.boot.testsupport.classpath.ClassPathExclusions;
+import io.github.kotlinmania.spring.boot.test.context.SpringBootTest;
+import io.github.kotlinmania.spring.boot.testsupport.classpath.ClassPathExclusions;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -44,7 +44,7 @@ class SampleJackson2OnlyWithoutSpringWebApplicationTests {
 	void jmxEndpointsShouldWork() throws Exception {
 		MBeanServer mbeanServer = ManagementFactory.getPlatformMBeanServer();
 		Map<String, Object> result = (Map<String, Object>) mbeanServer.invoke(
-				ObjectName.getInstance("org.springframework.boot:type=Endpoint,name=Configprops"),
+				ObjectName.getInstance("io.github.kotlinmania.spring.boot.type=Endpoint,name=Configprops"),
 				"configurationProperties", new Object[0], null);
 		assertThat(result).containsOnlyKeys("contexts");
 	}

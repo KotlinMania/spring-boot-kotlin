@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.io.quartz
+package io.github.kotlinmania.spring.boot.docs.io.quartz
 
 import java.util.Date
 

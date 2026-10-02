@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.test.context;
+package io.github.kotlinmania.spring.boot.test.context;
 
 import java.io.InputStream;
 import java.net.URL;
@@ -37,7 +37,7 @@ import static org.assertj.core.api.Assertions.assertThatIllegalArgumentException
 class FilteredClassLoaderTests {
 
 	static ClassPathResource TEST_RESOURCE = new ClassPathResource(
-			"org/springframework/boot/test/context/FilteredClassLoaderTestsResource.txt");
+			"io.github.kotlinmania.spring.boot.test/context/FilteredClassLoaderTestsResource.txt");
 
 	@Test
 	void loadClassWhenFilteredOnPackageShouldThrowClassNotFound() throws Exception {

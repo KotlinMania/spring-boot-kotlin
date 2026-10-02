@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.messaging.kafka.receiving;
+package io.github.kotlinmania.spring.boot.docs.messaging.kafka.receiving;
 
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.stereotype.Component;

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.testsupport.ssl;
+package io.github.kotlinmania.spring.boot.testsupport.ssl;
 
 import java.security.Security;
 

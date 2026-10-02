@@ -14,16 +14,16 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.session.actuate.endpoint;
+package io.github.kotlinmania.spring.boot.session.actuate.endpoint;
 
 import org.jspecify.annotations.Nullable;
 import reactor.core.publisher.Mono;
 
-import org.springframework.boot.actuate.endpoint.annotation.DeleteOperation;
-import org.springframework.boot.actuate.endpoint.annotation.Endpoint;
-import org.springframework.boot.actuate.endpoint.annotation.ReadOperation;
-import org.springframework.boot.actuate.endpoint.annotation.Selector;
-import org.springframework.boot.session.actuate.endpoint.SessionsDescriptor.SessionDescriptor;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.annotation.DeleteOperation;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.annotation.Endpoint;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.annotation.ReadOperation;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.annotation.Selector;
+import io.github.kotlinmania.spring.boot.session.actuate.endpoint.SessionsDescriptor.SessionDescriptor;
 import org.springframework.session.ReactiveFindByIndexNameSessionRepository;
 import org.springframework.session.ReactiveSessionRepository;
 import org.springframework.session.Session;

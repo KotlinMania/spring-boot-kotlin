@@ -19,8 +19,8 @@ package smoketest.jackson2.mixed;
 import org.junit.jupiter.api.Test;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.autoconfigure.json.JsonTest;
-import org.springframework.boot.test.json.JacksonTester;
+import io.github.kotlinmania.spring.boot.test.autoconfigure.json.JsonTest;
+import io.github.kotlinmania.spring.boot.test.json.JacksonTester;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -34,7 +34,7 @@ class SampleJackson2MixedApplicationJsonTests {
 
 	@Autowired
 	@SuppressWarnings({ "deprecation", "removal" })
-	org.springframework.boot.test.json.Jackson2Tester<Pojo> jackson2Tester;
+	io.github.kotlinmania.spring.boot.test.json.Jackson2Tester<Pojo> jackson2Tester;
 
 	@Autowired
 	JacksonTester<Pojo> jacksonTester;

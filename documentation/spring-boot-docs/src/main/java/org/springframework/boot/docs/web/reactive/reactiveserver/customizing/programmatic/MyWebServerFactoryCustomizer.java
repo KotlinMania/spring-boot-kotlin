@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.web.reactive.reactiveserver.customizing.programmatic;
+package io.github.kotlinmania.spring.boot.docs.web.reactive.reactiveserver.customizing.programmatic;
 
-import org.springframework.boot.web.server.WebServerFactoryCustomizer;
-import org.springframework.boot.web.server.reactive.ConfigurableReactiveWebServerFactory;
+import io.github.kotlinmania.spring.boot.web.server.WebServerFactoryCustomizer;
+import io.github.kotlinmania.spring.boot.web.server.reactive.ConfigurableReactiveWebServerFactory;
 import org.springframework.stereotype.Component;
 
 @Component

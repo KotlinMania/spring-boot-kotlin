@@ -58,17 +58,17 @@ if (project.hasProperty("oldVersion") && project.hasProperty("newVersion")) {
 		inputs.files(prepareOldMetadata, prepareNewMetadata)
 		outputs.file(project.file("build/configuration-metadata-changelog.adoc"))
 		classpath = sourceSets.main.runtimeClasspath
-		mainClass = 'org.springframework.boot.configurationmetadata.changelog.ChangelogGenerator'
+		mainClass = 'io.github.kotlinmania.spring.boot.configurationmetadata.changelog.ChangelogGenerator'
 		args = [project.file("build/configuration-metadata-diff/$oldVersion"), project.file("build/configuration-metadata-diff/$newVersion"), project.file("build/configuration-metadata-changelog.adoc")]
 	}
 }
 
 def bootArtifactsFromBom(def version) {
 	project.provider {
-		def bomDependency = project.dependencies.create("org.springframework.boot:spring-boot-dependencies:$version@pom")
+		def bomDependency = project.dependencies.create("io.github.kotlinmania.spring.boot.spring-boot-dependencies:$version@pom")
 		def bom = new XmlSlurper().parse(configurations.detachedConfiguration(bomDependency).singleFile)
 		return bom.dependencyManagement.dependencies.dependency
-				.findAll { it.groupId == "org.springframework.boot" }
-				.collect { project.dependencies.create("org.springframework.boot:${it.artifactId}:$version") }
+				.findAll { it.groupId == "io.github.kotlinmania.spring.boot. }
+				.collect { project.dependencies.create("io.github.kotlinmania.spring.boot.${it.artifactId}:$version") }
 	}			
 }

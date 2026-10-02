@@ -18,6 +18,6 @@
  * Support for exporting actuator metrics to Humio.
  */
 @NullMarked
-package org.springframework.boot.micrometer.metrics.autoconfigure.export.humio;
+package io.github.kotlinmania.spring.boot.micrometer.metrics.autoconfigure.export.humio;
 
 import org.jspecify.annotations.NullMarked;

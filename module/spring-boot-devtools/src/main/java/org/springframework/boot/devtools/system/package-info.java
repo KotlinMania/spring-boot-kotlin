@@ -18,6 +18,6 @@
  * Devtools system support classes.
  */
 @NullMarked
-package org.springframework.boot.devtools.system;
+package io.github.kotlinmania.spring.boot.devtools.system;
 
 import org.jspecify.annotations.NullMarked;

@@ -14,16 +14,16 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.ldap.docker.compose;
+package io.github.kotlinmania.spring.boot.ldap.docker.compose;
 
 import java.util.Map;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.docker.compose.core.RunningService;
-import org.springframework.boot.docker.compose.service.connection.DockerComposeConnectionDetailsFactory;
-import org.springframework.boot.docker.compose.service.connection.DockerComposeConnectionSource;
-import org.springframework.boot.ldap.autoconfigure.LdapConnectionDetails;
+import io.github.kotlinmania.spring.boot.docker.compose.core.RunningService;
+import io.github.kotlinmania.spring.boot.docker.compose.service.connection.DockerComposeConnectionDetailsFactory;
+import io.github.kotlinmania.spring.boot.docker.compose.service.connection.DockerComposeConnectionSource;
+import io.github.kotlinmania.spring.boot.ldap.autoconfigure.LdapConnectionDetails;
 
 /**
  * {@link DockerComposeConnectionDetailsFactory} to create {@link LdapConnectionDetails}

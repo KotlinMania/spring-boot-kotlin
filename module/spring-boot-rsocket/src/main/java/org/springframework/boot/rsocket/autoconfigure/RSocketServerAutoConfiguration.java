@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.rsocket.autoconfigure;
+package io.github.kotlinmania.spring.boot.rsocket.autoconfigure;
 
 import java.util.function.Consumer;
 
@@ -25,24 +25,24 @@ import reactor.netty.http.server.HttpServer;
 import reactor.netty.http.server.WebsocketServerSpec.Builder;
 
 import org.springframework.beans.factory.ObjectProvider;
-import org.springframework.boot.autoconfigure.AutoConfiguration;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
-import org.springframework.boot.autoconfigure.condition.AllNestedConditions;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnWebApplication;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnWebApplication.Type;
-import org.springframework.boot.context.properties.EnableConfigurationProperties;
-import org.springframework.boot.context.properties.PropertyMapper;
-import org.springframework.boot.reactor.netty.autoconfigure.ReactorNettyConfigurations;
-import org.springframework.boot.rsocket.autoconfigure.RSocketProperties.Server.Spec;
-import org.springframework.boot.rsocket.context.RSocketServerBootstrap;
-import org.springframework.boot.rsocket.netty.NettyRSocketServerFactory;
-import org.springframework.boot.rsocket.server.RSocketServerCustomizer;
-import org.springframework.boot.rsocket.server.RSocketServerFactory;
-import org.springframework.boot.ssl.SslBundles;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.EnableAutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.AllNestedConditions;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnBean;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnClass;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnMissingBean;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnProperty;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnWebApplication;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnWebApplication.Type;
+import io.github.kotlinmania.spring.boot.context.properties.EnableConfigurationProperties;
+import io.github.kotlinmania.spring.boot.context.properties.PropertyMapper;
+import io.github.kotlinmania.spring.boot.reactor.netty.autoconfigure.ReactorNettyConfigurations;
+import io.github.kotlinmania.spring.boot.rsocket.autoconfigure.RSocketProperties.Server.Spec;
+import io.github.kotlinmania.spring.boot.rsocket.context.RSocketServerBootstrap;
+import io.github.kotlinmania.spring.boot.rsocket.netty.NettyRSocketServerFactory;
+import io.github.kotlinmania.spring.boot.rsocket.server.RSocketServerCustomizer;
+import io.github.kotlinmania.spring.boot.rsocket.server.RSocketServerFactory;
+import io.github.kotlinmania.spring.boot.ssl.SslBundles;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Conditional;
 import org.springframework.context.annotation.Configuration;
@@ -56,9 +56,9 @@ import org.springframework.util.unit.DataSize;
 
 /**
  * {@link EnableAutoConfiguration Auto-configuration} for RSocket servers. In the case of
- * {@link org.springframework.boot.WebApplicationType#REACTIVE}, the RSocket server is
+ * {@link io.github.kotlinmania.spring.boot.WebApplicationType#REACTIVE}, the RSocket server is
  * added as a WebSocket endpoint on the existing
- * {@link org.springframework.boot.reactor.netty.NettyWebServer}. If a specific server
+ * {@link io.github.kotlinmania.spring.boot.reactor.netty.NettyWebServer}. If a specific server
  * port is configured, a new standalone RSocket server is created.
  *
  * @author Brian Clozel

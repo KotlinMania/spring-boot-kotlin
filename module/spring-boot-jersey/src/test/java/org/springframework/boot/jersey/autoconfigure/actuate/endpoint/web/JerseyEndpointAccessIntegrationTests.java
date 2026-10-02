@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.jersey.autoconfigure.actuate.endpoint.web;
+package io.github.kotlinmania.spring.boot.jersey.autoconfigure.actuate.endpoint.web;
 
 import java.io.IOException;
 import java.time.Duration;
@@ -26,17 +26,17 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.actuate.autoconfigure.beans.BeansEndpointAutoConfiguration;
-import org.springframework.boot.actuate.autoconfigure.endpoint.EndpointAutoConfiguration;
-import org.springframework.boot.actuate.autoconfigure.endpoint.web.WebEndpointAutoConfiguration;
-import org.springframework.boot.actuate.autoconfigure.web.server.ManagementContextAutoConfiguration;
-import org.springframework.boot.autoconfigure.AutoConfigurations;
-import org.springframework.boot.jersey.autoconfigure.JerseyAutoConfiguration;
-import org.springframework.boot.test.context.assertj.AssertableWebApplicationContext;
-import org.springframework.boot.test.context.runner.WebApplicationContextRunner;
-import org.springframework.boot.tomcat.autoconfigure.servlet.TomcatServletWebServerAutoConfiguration;
-import org.springframework.boot.web.server.servlet.context.AnnotationConfigServletWebServerApplicationContext;
-import org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext;
+import io.github.kotlinmania.spring.boot.actuate.autoconfigure.beans.BeansEndpointAutoConfiguration;
+import io.github.kotlinmania.spring.boot.actuate.autoconfigure.endpoint.EndpointAutoConfiguration;
+import io.github.kotlinmania.spring.boot.actuate.autoconfigure.endpoint.web.WebEndpointAutoConfiguration;
+import io.github.kotlinmania.spring.boot.actuate.autoconfigure.web.server.ManagementContextAutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurations;
+import io.github.kotlinmania.spring.boot.jersey.autoconfigure.JerseyAutoConfiguration;
+import io.github.kotlinmania.spring.boot.test.context.assertj.AssertableWebApplicationContext;
+import io.github.kotlinmania.spring.boot.test.context.runner.WebApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.tomcat.autoconfigure.servlet.TomcatServletWebServerAutoConfiguration;
+import io.github.kotlinmania.spring.boot.web.server.servlet.context.AnnotationConfigServletWebServerApplicationContext;
+import io.github.kotlinmania.spring.boot.web.server.servlet.context.ServletWebServerApplicationContext;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.HttpStatus;
 import org.springframework.test.web.reactive.server.EntityExchangeResult;
@@ -56,7 +56,7 @@ class JerseyEndpointAccessIntegrationTests {
 	private final WebApplicationContextRunner contextRunner = new WebApplicationContextRunner(
 			AnnotationConfigServletWebServerApplicationContext::new)
 		.withConfiguration(
-				AutoConfigurations.of(org.springframework.boot.jackson2.autoconfigure.Jackson2AutoConfiguration.class,
+				AutoConfigurations.of(io.github.kotlinmania.spring.boot.jackson2.autoconfigure.Jackson2AutoConfiguration.class,
 						JerseyAutoConfiguration.class, EndpointAutoConfiguration.class,
 						TomcatServletWebServerAutoConfiguration.class, WebEndpointAutoConfiguration.class,
 						ManagementContextAutoConfiguration.class, BeansEndpointAutoConfiguration.class))
@@ -165,14 +165,14 @@ class JerseyEndpointAccessIntegrationTests {
 				String.format("Unexpected %s HTTP status for endpoint %s", result.getStatus(), path));
 	}
 
-	@org.springframework.boot.actuate.endpoint.web.annotation.ServletEndpoint(id = "customservlet")
+	@io.github.kotlinmania.spring.boot.actuate.endpoint.web.annotation.ServletEndpoint(id = "customservlet")
 	@SuppressWarnings({ "deprecation", "removal" })
 	static class CustomServletEndpoint
-			implements Supplier<org.springframework.boot.actuate.endpoint.web.EndpointServlet> {
+			implements Supplier<io.github.kotlinmania.spring.boot.actuate.endpoint.web.EndpointServlet> {
 
 		@Override
-		public org.springframework.boot.actuate.endpoint.web.EndpointServlet get() {
-			return new org.springframework.boot.actuate.endpoint.web.EndpointServlet(new HttpServlet() {
+		public io.github.kotlinmania.spring.boot.actuate.endpoint.web.EndpointServlet get() {
+			return new io.github.kotlinmania.spring.boot.actuate.endpoint.web.EndpointServlet(new HttpServlet() {
 
 				@Override
 				protected void doGet(HttpServletRequest req, HttpServletResponse resp)

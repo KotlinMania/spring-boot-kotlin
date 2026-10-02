@@ -14,17 +14,17 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.reactor.netty.autoconfigure;
+package io.github.kotlinmania.spring.boot.reactor.netty.autoconfigure;
 
 import java.time.Duration;
 
 import io.netty.channel.ChannelOption;
 
-import org.springframework.boot.cloud.CloudPlatform;
-import org.springframework.boot.context.properties.PropertyMapper;
-import org.springframework.boot.reactor.netty.NettyReactiveWebServerFactory;
-import org.springframework.boot.web.server.WebServerFactoryCustomizer;
-import org.springframework.boot.web.server.autoconfigure.ServerProperties;
+import io.github.kotlinmania.spring.boot.cloud.CloudPlatform;
+import io.github.kotlinmania.spring.boot.context.properties.PropertyMapper;
+import io.github.kotlinmania.spring.boot.reactor.netty.NettyReactiveWebServerFactory;
+import io.github.kotlinmania.spring.boot.web.server.WebServerFactoryCustomizer;
+import io.github.kotlinmania.spring.boot.web.server.autoconfigure.ServerProperties;
 import org.springframework.core.Ordered;
 import org.springframework.core.env.Environment;
 

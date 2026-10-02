@@ -14,26 +14,26 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.http.client.autoconfigure.reactive;
+package io.github.kotlinmania.spring.boot.http.client.autoconfigure.reactive;
 
 import java.util.List;
 
 import reactor.core.publisher.Mono;
 
 import org.springframework.beans.factory.ObjectProvider;
-import org.springframework.boot.autoconfigure.AutoConfiguration;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
-import org.springframework.boot.context.properties.EnableConfigurationProperties;
-import org.springframework.boot.http.client.HttpClientSettings;
-import org.springframework.boot.http.client.autoconfigure.HttpClientAutoConfiguration;
-import org.springframework.boot.http.client.reactive.ClientHttpConnectorBuilder;
-import org.springframework.boot.http.client.reactive.JdkClientHttpConnectorBuilder;
-import org.springframework.boot.http.client.reactive.ReactorClientHttpConnectorBuilder;
-import org.springframework.boot.reactor.netty.autoconfigure.ReactorNettyConfigurations;
-import org.springframework.boot.thread.Threading;
-import org.springframework.boot.util.LambdaSafe;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.EnableAutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnClass;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnMissingBean;
+import io.github.kotlinmania.spring.boot.context.properties.EnableConfigurationProperties;
+import io.github.kotlinmania.spring.boot.http.client.HttpClientSettings;
+import io.github.kotlinmania.spring.boot.http.client.autoconfigure.HttpClientAutoConfiguration;
+import io.github.kotlinmania.spring.boot.http.client.reactive.ClientHttpConnectorBuilder;
+import io.github.kotlinmania.spring.boot.http.client.reactive.JdkClientHttpConnectorBuilder;
+import io.github.kotlinmania.spring.boot.http.client.reactive.ReactorClientHttpConnectorBuilder;
+import io.github.kotlinmania.spring.boot.reactor.netty.autoconfigure.ReactorNettyConfigurations;
+import io.github.kotlinmania.spring.boot.thread.Threading;
+import io.github.kotlinmania.spring.boot.util.LambdaSafe;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Conditional;
 import org.springframework.context.annotation.Configuration;

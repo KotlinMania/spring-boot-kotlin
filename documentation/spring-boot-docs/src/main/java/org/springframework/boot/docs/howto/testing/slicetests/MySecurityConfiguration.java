@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.howto.testing.slicetests;
+package io.github.kotlinmania.spring.boot.docs.howto.testing.slicetests;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

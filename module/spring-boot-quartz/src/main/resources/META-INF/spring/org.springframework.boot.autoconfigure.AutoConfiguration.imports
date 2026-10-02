@@ -1,2 +1,2 @@
-org.springframework.boot.quartz.autoconfigure.QuartzAutoConfiguration
-org.springframework.boot.quartz.autoconfigure.QuartzEndpointAutoConfiguration
+io.github.kotlinmania.spring.boot.quartz.autoconfigure.QuartzAutoConfiguration
+io.github.kotlinmania.spring.boot.quartz.autoconfigure.QuartzEndpointAutoConfiguration

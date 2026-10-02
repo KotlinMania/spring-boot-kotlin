@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.micrometer.metrics.autoconfigure.export.otlp;
+package io.github.kotlinmania.spring.boot.micrometer.metrics.autoconfigure.export.otlp;
 
 import java.io.IOException;
 import java.time.Duration;

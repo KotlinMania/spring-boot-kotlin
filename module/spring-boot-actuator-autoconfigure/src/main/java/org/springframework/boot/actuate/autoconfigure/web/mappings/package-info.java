@@ -18,6 +18,6 @@
  * Classes for auto-configuration of actuator web request mapping concerns.
  */
 @NullMarked
-package org.springframework.boot.actuate.autoconfigure.web.mappings;
+package io.github.kotlinmania.spring.boot.actuate.autoconfigure.web.mappings;
 
 import org.jspecify.annotations.NullMarked;

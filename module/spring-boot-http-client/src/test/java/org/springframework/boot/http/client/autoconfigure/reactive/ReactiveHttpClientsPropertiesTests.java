@@ -14,16 +14,16 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.http.client.autoconfigure.reactive;
+package io.github.kotlinmania.spring.boot.http.client.autoconfigure.reactive;
 
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.http.client.autoconfigure.reactive.ReactiveHttpClientsProperties.Connector;
-import org.springframework.boot.http.client.reactive.HttpComponentsClientHttpConnectorBuilder;
-import org.springframework.boot.http.client.reactive.JdkClientHttpConnectorBuilder;
-import org.springframework.boot.http.client.reactive.JettyClientHttpConnectorBuilder;
-import org.springframework.boot.http.client.reactive.ReactorClientHttpConnectorBuilder;
+import io.github.kotlinmania.spring.boot.http.client.autoconfigure.reactive.ReactiveHttpClientsProperties.Connector;
+import io.github.kotlinmania.spring.boot.http.client.reactive.HttpComponentsClientHttpConnectorBuilder;
+import io.github.kotlinmania.spring.boot.http.client.reactive.JdkClientHttpConnectorBuilder;
+import io.github.kotlinmania.spring.boot.http.client.reactive.JettyClientHttpConnectorBuilder;
+import io.github.kotlinmania.spring.boot.http.client.reactive.ReactorClientHttpConnectorBuilder;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

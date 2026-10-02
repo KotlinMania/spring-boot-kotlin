@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.cli.json;
+package io.github.kotlinmania.spring.boot.cli.json;
 
 import java.lang.reflect.Array;
 import java.util.ArrayList;

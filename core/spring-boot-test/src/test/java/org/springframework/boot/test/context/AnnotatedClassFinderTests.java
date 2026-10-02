@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.test.context;
+package io.github.kotlinmania.spring.boot.test.context;
 
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.SpringBootConfiguration;
-import org.springframework.boot.test.context.example.ExampleConfig;
-import org.springframework.boot.test.context.example.scan.Example;
+import io.github.kotlinmania.spring.boot.SpringBootConfiguration;
+import io.github.kotlinmania.spring.boot.test.context.example.ExampleConfig;
+import io.github.kotlinmania.spring.boot.test.context.example.scan.Example;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatIllegalArgumentException;
@@ -50,7 +50,7 @@ class AnnotatedClassFinderTests {
 
 	@Test
 	void findFromPackageWhenNoConfigurationFoundShouldReturnNull() {
-		Class<?> config = this.finder.findFromPackage("org.springframework.boot");
+		Class<?> config = this.finder.findFromPackage("io.github.kotlinmania.spring.boot.);
 		assertThat(config).isNull();
 	}
 
@@ -62,7 +62,7 @@ class AnnotatedClassFinderTests {
 
 	@Test
 	void findFromPackageWhenConfigurationIsFoundShouldReturnConfiguration() {
-		Class<?> config = this.finder.findFromPackage("org.springframework.boot.test.context.example.scan");
+		Class<?> config = this.finder.findFromPackage("io.github.kotlinmania.spring.boot.test.context.example.scan");
 		assertThat(config).isEqualTo(ExampleConfig.class);
 	}
 

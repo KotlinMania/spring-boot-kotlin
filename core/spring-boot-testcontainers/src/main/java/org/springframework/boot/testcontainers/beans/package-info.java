@@ -18,6 +18,6 @@
  * Spring bean support classes for Testcontainers.
  */
 @NullMarked
-package org.springframework.boot.testcontainers.beans;
+package io.github.kotlinmania.spring.boot.testcontainers.beans;
 
 import org.jspecify.annotations.NullMarked;

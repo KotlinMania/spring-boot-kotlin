@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.flyway.autoconfigure;
+package io.github.kotlinmania.spring.boot.flyway.autoconfigure;
 
 import java.beans.PropertyDescriptor;
 import java.time.Duration;

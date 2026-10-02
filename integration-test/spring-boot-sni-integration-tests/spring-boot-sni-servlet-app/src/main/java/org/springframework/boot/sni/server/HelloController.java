@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.sni.server;
+package io.github.kotlinmania.spring.boot.sni.server;
 
 import jakarta.servlet.http.HttpServletRequest;
 

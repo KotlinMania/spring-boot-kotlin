@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.web.servlet.springmvc.messageconverters;
+package io.github.kotlinmania.spring.boot.docs.web.servlet.springmvc.messageconverters;
 
 import java.io.IOException;
 

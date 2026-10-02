@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.configurationprocessor;
+package io.github.kotlinmania.spring.boot.configurationprocessor;
 
 import java.util.Collections;
 import java.util.List;
@@ -28,12 +28,12 @@ import javax.lang.model.element.TypeElement;
 import javax.tools.FileObject;
 import javax.tools.StandardLocation;
 
-import org.springframework.boot.configurationprocessor.metadata.ConfigurationMetadata;
-import org.springframework.boot.configurationprocessor.metadata.ItemDeprecation;
-import org.springframework.boot.configurationprocessor.metadata.ItemHint;
-import org.springframework.boot.configurationprocessor.metadata.ItemMetadata;
-import org.springframework.boot.configurationprocessor.metadata.JsonMarshaller;
-import org.springframework.boot.configurationprocessor.support.ConventionUtils;
+import io.github.kotlinmania.spring.boot.configurationprocessor.metadata.ConfigurationMetadata;
+import io.github.kotlinmania.spring.boot.configurationprocessor.metadata.ItemDeprecation;
+import io.github.kotlinmania.spring.boot.configurationprocessor.metadata.ItemHint;
+import io.github.kotlinmania.spring.boot.configurationprocessor.metadata.ItemMetadata;
+import io.github.kotlinmania.spring.boot.configurationprocessor.metadata.JsonMarshaller;
+import io.github.kotlinmania.spring.boot.configurationprocessor.support.ConventionUtils;
 
 /**
  * Resolve source configuration metadata for arbitrary types.

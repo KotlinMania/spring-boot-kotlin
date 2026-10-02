@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.testcontainers.lifecycle;
+package io.github.kotlinmania.spring.boot.testcontainers.lifecycle;
 
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.diagnostics.FailureAnalysis;
+import io.github.kotlinmania.spring.boot.diagnostics.FailureAnalysis;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

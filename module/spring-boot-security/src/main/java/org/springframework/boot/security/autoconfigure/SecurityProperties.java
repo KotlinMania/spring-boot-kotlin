@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.security.autoconfigure;
+package io.github.kotlinmania.spring.boot.security.autoconfigure;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
-import org.springframework.boot.context.properties.ConfigurationProperties;
+import io.github.kotlinmania.spring.boot.context.properties.ConfigurationProperties;
 import org.springframework.util.StringUtils;
 
 /**

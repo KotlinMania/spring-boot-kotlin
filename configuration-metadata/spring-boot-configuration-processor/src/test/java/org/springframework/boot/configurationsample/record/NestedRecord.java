@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.configurationsample.record;
+package io.github.kotlinmania.spring.boot.configurationsample.record;
 
 public record NestedRecord(String myNestedProperty) {
 

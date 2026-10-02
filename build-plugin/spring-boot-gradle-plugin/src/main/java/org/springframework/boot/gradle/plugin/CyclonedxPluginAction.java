@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.gradle.plugin;
+package io.github.kotlinmania.spring.boot.gradle.plugin;
 
 import org.cyclonedx.gradle.CyclonedxAggregateTask;
 import org.cyclonedx.gradle.CyclonedxPlugin;
@@ -31,8 +31,8 @@ import org.gradle.api.tasks.SourceSet;
 import org.gradle.api.tasks.TaskProvider;
 import org.gradle.api.tasks.bundling.Jar;
 
-import org.springframework.boot.gradle.tasks.bundling.BootJar;
-import org.springframework.boot.gradle.tasks.bundling.BootWar;
+import io.github.kotlinmania.spring.boot.gradle.tasks.bundling.BootJar;
+import io.github.kotlinmania.spring.boot.gradle.tasks.bundling.BootWar;
 
 /**
  * {@link Action} that is executed in response to the {@link CyclonedxPlugin} being

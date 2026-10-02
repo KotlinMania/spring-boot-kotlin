@@ -18,6 +18,6 @@
  * Support for mapping annotation attribute values in the Spring {@code Environment}.
  */
 @NullMarked
-package org.springframework.boot.test.context;
+package io.github.kotlinmania.spring.boot.test.context;
 
 import org.jspecify.annotations.NullMarked;

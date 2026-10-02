@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.testing.springbootapplications.jmx;
+package io.github.kotlinmania.spring.boot.docs.testing.springbootapplications.jmx;
 
 /**
  * Tests for SampleJmxTests

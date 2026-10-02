@@ -18,6 +18,6 @@
  * Auto-configuration for Spring Batch with Data MongoDB.
  */
 @NullMarked
-package org.springframework.boot.batch.mongodb.autoconfigure;
+package io.github.kotlinmania.spring.boot.batch.mongodb.autoconfigure;
 
 import org.jspecify.annotations.NullMarked;

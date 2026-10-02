@@ -14,15 +14,15 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.configurationmetadata.changelog;
+package io.github.kotlinmania.spring.boot.configurationmetadata.changelog;
 
 import java.io.File;
 import java.io.IOException;
 import java.util.jar.JarEntry;
 import java.util.jar.JarFile;
 
-import org.springframework.boot.configurationmetadata.ConfigurationMetadataRepository;
-import org.springframework.boot.configurationmetadata.ConfigurationMetadataRepositoryJsonBuilder;
+import io.github.kotlinmania.spring.boot.configurationmetadata.ConfigurationMetadataRepository;
+import io.github.kotlinmania.spring.boot.configurationmetadata.ConfigurationMetadataRepositoryJsonBuilder;
 
 /**
  * Generates a configuration metadata changelog. Requires three arguments:

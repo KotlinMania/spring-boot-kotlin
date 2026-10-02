@@ -15,6 +15,6 @@
  */
 
 @NullMarked
-package org.springframework.boot.data.elasticsearch.domain.empty;
+package io.github.kotlinmania.spring.boot.data.elasticsearch.domain.empty;
 
 import org.jspecify.annotations.NullMarked;

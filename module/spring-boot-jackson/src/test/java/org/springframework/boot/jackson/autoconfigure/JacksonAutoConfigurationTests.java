@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.jackson.autoconfigure;
+package io.github.kotlinmania.spring.boot.jackson.autoconfigure;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -69,21 +69,21 @@ import tools.jackson.module.kotlin.KotlinModule;
 import org.springframework.aot.hint.RuntimeHints;
 import org.springframework.aot.hint.predicate.RuntimeHintsPredicates;
 import org.springframework.beans.factory.BeanCurrentlyInCreationException;
-import org.springframework.boot.autoconfigure.AutoConfigurationPackage;
-import org.springframework.boot.autoconfigure.AutoConfigurations;
-import org.springframework.boot.jackson.JacksonComponent;
-import org.springframework.boot.jackson.JacksonMixin;
-import org.springframework.boot.jackson.JacksonMixinModule;
-import org.springframework.boot.jackson.JacksonMixinModuleEntries;
-import org.springframework.boot.jackson.ObjectValueSerializer;
-import org.springframework.boot.jackson.autoconfigure.JacksonAutoConfiguration.CborConfiguration.StandardCborFactoryBuilderCustomizer;
-import org.springframework.boot.jackson.autoconfigure.JacksonAutoConfiguration.CborConfiguration.StandardCborMapperBuilderCustomizer;
-import org.springframework.boot.jackson.autoconfigure.JacksonAutoConfiguration.JacksonAutoConfigurationRuntimeHints;
-import org.springframework.boot.jackson.autoconfigure.JacksonAutoConfiguration.JacksonJsonCustomizerConfiguration.StandardJsonFactoryBuilderCustomizer;
-import org.springframework.boot.jackson.autoconfigure.JacksonAutoConfiguration.JacksonJsonCustomizerConfiguration.StandardJsonMapperBuilderCustomizer;
-import org.springframework.boot.jackson.autoconfigure.JacksonAutoConfiguration.XmlConfiguration.StandardXmlFactoryBuilderCustomizer;
-import org.springframework.boot.jackson.autoconfigure.JacksonAutoConfiguration.XmlConfiguration.StandardXmlMapperBuilderCustomizer;
-import org.springframework.boot.test.context.runner.ApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurationPackage;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurations;
+import io.github.kotlinmania.spring.boot.jackson.JacksonComponent;
+import io.github.kotlinmania.spring.boot.jackson.JacksonMixin;
+import io.github.kotlinmania.spring.boot.jackson.JacksonMixinModule;
+import io.github.kotlinmania.spring.boot.jackson.JacksonMixinModuleEntries;
+import io.github.kotlinmania.spring.boot.jackson.ObjectValueSerializer;
+import io.github.kotlinmania.spring.boot.jackson.autoconfigure.JacksonAutoConfiguration.CborConfiguration.StandardCborFactoryBuilderCustomizer;
+import io.github.kotlinmania.spring.boot.jackson.autoconfigure.JacksonAutoConfiguration.CborConfiguration.StandardCborMapperBuilderCustomizer;
+import io.github.kotlinmania.spring.boot.jackson.autoconfigure.JacksonAutoConfiguration.JacksonAutoConfigurationRuntimeHints;
+import io.github.kotlinmania.spring.boot.jackson.autoconfigure.JacksonAutoConfiguration.JacksonJsonCustomizerConfiguration.StandardJsonFactoryBuilderCustomizer;
+import io.github.kotlinmania.spring.boot.jackson.autoconfigure.JacksonAutoConfiguration.JacksonJsonCustomizerConfiguration.StandardJsonMapperBuilderCustomizer;
+import io.github.kotlinmania.spring.boot.jackson.autoconfigure.JacksonAutoConfiguration.XmlConfiguration.StandardXmlFactoryBuilderCustomizer;
+import io.github.kotlinmania.spring.boot.jackson.autoconfigure.JacksonAutoConfiguration.XmlConfiguration.StandardXmlMapperBuilderCustomizer;
+import io.github.kotlinmania.spring.boot.test.context.runner.ApplicationContextRunner;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

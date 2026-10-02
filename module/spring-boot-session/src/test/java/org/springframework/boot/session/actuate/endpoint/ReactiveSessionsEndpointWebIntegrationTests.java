@@ -14,15 +14,15 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.session.actuate.endpoint;
+package io.github.kotlinmania.spring.boot.session.actuate.endpoint;
 
 import java.util.Collections;
 
 import net.minidev.json.JSONArray;
 import reactor.core.publisher.Mono;
 
-import org.springframework.boot.actuate.endpoint.web.test.WebEndpointTest;
-import org.springframework.boot.actuate.endpoint.web.test.WebEndpointTest.Infrastructure;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.web.test.WebEndpointTest;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.web.test.WebEndpointTest.Infrastructure;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.session.MapSession;

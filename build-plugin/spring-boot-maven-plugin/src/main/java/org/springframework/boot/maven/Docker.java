@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.maven;
+package io.github.kotlinmania.spring.boot.maven;
 
 import org.apache.maven.plugin.logging.Log;
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.buildpack.platform.build.BuilderDockerConfiguration;
-import org.springframework.boot.buildpack.platform.docker.configuration.DockerRegistryAuthentication;
+import io.github.kotlinmania.spring.boot.buildpack.platform.build.BuilderDockerConfiguration;
+import io.github.kotlinmania.spring.boot.buildpack.platform.docker.configuration.DockerRegistryAuthentication;
 import org.springframework.util.Assert;
 
 /**

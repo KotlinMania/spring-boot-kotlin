@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.configurationsample.inheritance;
+package io.github.kotlinmania.spring.boot.configurationsample.inheritance;
 
 public class ChildProperties extends BaseProperties {
 

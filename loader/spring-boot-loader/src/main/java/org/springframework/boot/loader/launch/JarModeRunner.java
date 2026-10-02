@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.loader.launch;
+package io.github.kotlinmania.spring.boot.loader.launch;
 
 import java.util.List;
 
-import org.springframework.boot.loader.jarmode.JarMode;
-import org.springframework.boot.loader.jarmode.JarModeErrorException;
+import io.github.kotlinmania.spring.boot.loader.jarmode.JarMode;
+import io.github.kotlinmania.spring.boot.loader.jarmode.JarModeErrorException;
 import org.springframework.core.io.support.SpringFactoriesLoader;
 import org.springframework.util.ClassUtils;
 

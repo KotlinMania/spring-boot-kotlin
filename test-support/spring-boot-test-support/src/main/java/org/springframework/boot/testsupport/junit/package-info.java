@@ -17,4 +17,4 @@
 /**
  * General support classes for testing with JUnit.
  */
-package org.springframework.boot.testsupport.junit;
+package io.github.kotlinmania.spring.boot.testsupport.junit;

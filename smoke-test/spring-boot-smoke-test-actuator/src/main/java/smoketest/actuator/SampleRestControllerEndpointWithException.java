@@ -16,7 +16,7 @@
 
 package smoketest.actuator;
 
-import org.springframework.boot.actuate.endpoint.web.annotation.RestControllerEndpoint;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.web.annotation.RestControllerEndpoint;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Component;

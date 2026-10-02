@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.data.jpa.autoconfigure;
+package io.github.kotlinmania.spring.boot.data.jpa.autoconfigure;
 
 import org.junit.jupiter.api.Test;
 
 import org.springframework.beans.factory.BeanCreationException;
-import org.springframework.boot.testsupport.classpath.ClassPathExclusions;
+import io.github.kotlinmania.spring.boot.testsupport.classpath.ClassPathExclusions;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

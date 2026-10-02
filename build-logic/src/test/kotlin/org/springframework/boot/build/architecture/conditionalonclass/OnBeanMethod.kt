@@ -15,8 +15,18 @@
  */
 package org.springframework.boot.build.architecture.conditionalonclass
 
-import org.springframework.boot.build.architecture.annotations.TestConditionalOnClass
-import org.springframework.context.annotation.Bean
+package io.github.kotlinmania.spring.boot.build.architecture.conditionalonclass;
+
+import io.github.kotlinmania.spring.boot.build.architecture.annotations.TestConditionalOnClass;
+import org.springframework.context.annotation.Bean;
+
+class OnBeanMethod {
+
+	@Bean
+	@TestConditionalOnClass(String.class)
+	String helloWorld() {
+		return "Hello World";
+	}
 
 internal class OnBeanMethod {
     @Bean

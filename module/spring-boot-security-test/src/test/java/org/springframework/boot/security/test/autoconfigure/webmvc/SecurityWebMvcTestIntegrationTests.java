@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.security.test.autoconfigure.webmvc;
+package io.github.kotlinmania.spring.boot.security.test.autoconfigure.webmvc;
 
 import org.junit.jupiter.api.Test;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.assertj.AssertableApplicationContext;
-import org.springframework.boot.webmvc.test.autoconfigure.WebMvcTest;
+import io.github.kotlinmania.spring.boot.test.context.assertj.AssertableApplicationContext;
+import io.github.kotlinmania.spring.boot.webmvc.test.autoconfigure.WebMvcTest;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.security.web.SecurityFilterChain;
 

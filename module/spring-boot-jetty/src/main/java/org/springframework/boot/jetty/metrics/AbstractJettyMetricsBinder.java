@@ -14,15 +14,15 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.jetty.metrics;
+package io.github.kotlinmania.spring.boot.jetty.metrics;
 
 import org.eclipse.jetty.server.Server;
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.context.event.ApplicationStartedEvent;
-import org.springframework.boot.jetty.JettyWebServer;
-import org.springframework.boot.web.server.WebServer;
-import org.springframework.boot.web.server.context.WebServerApplicationContext;
+import io.github.kotlinmania.spring.boot.context.event.ApplicationStartedEvent;
+import io.github.kotlinmania.spring.boot.jetty.JettyWebServer;
+import io.github.kotlinmania.spring.boot.web.server.WebServer;
+import io.github.kotlinmania.spring.boot.web.server.context.WebServerApplicationContext;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationListener;
 

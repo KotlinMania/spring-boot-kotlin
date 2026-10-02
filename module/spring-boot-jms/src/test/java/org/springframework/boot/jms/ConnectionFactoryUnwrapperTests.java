@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.jms;
+package io.github.kotlinmania.spring.boot.jms;
 
 import jakarta.jms.ConnectionFactory;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
 import org.messaginghub.pooled.jms.JmsPoolConnectionFactory;
 
-import org.springframework.boot.testsupport.classpath.ClassPathExclusions;
+import io.github.kotlinmania.spring.boot.testsupport.classpath.ClassPathExclusions;
 import org.springframework.jms.connection.CachingConnectionFactory;
 import org.springframework.jms.connection.SingleConnectionFactory;
 import org.springframework.util.ClassUtils;

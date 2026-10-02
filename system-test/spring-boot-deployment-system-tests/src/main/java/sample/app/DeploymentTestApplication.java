@@ -16,8 +16,8 @@
 
 package sample.app;
 
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
+import io.github.kotlinmania.spring.boot.autoconfigure.SpringBootApplication;
+import io.github.kotlinmania.spring.boot.web.servlet.support.SpringBootServletInitializer;
 
 @SpringBootApplication
 public class DeploymentTestApplication extends SpringBootServletInitializer {

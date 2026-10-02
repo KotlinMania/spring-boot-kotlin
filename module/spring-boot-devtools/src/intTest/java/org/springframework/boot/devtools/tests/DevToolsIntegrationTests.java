@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.devtools.tests;
+package io.github.kotlinmania.spring.boot.devtools.tests;
 
 import java.io.File;
 import java.util.concurrent.TimeUnit;
@@ -25,8 +25,8 @@ import org.apache.hc.core5.util.TimeValue;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.MethodSource;
 
-import org.springframework.boot.restclient.RestTemplateBuilder;
-import org.springframework.boot.resttestclient.TestRestTemplate;
+import io.github.kotlinmania.spring.boot.restclient.RestTemplateBuilder;
+import io.github.kotlinmania.spring.boot.resttestclient.TestRestTemplate;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.client.HttpComponentsClientHttpRequestFactory;
 
@@ -47,7 +47,7 @@ class DevToolsIntegrationTests extends AbstractDevToolsIntegrationTests {
 	@ParameterizedTest(name = "{0}")
 	@MethodSource("parameters")
 	void addARequestMappingToAnExistingController(ApplicationLauncher applicationLauncher) throws Exception {
-		launchApplication(applicationLauncher, "--logging.level.org.springframework.boot=trace");
+		launchApplication(applicationLauncher, "--logging.level.io.github.kotlinmania.spring.boot.trace");
 		String urlBase = "http://localhost:" + awaitServerPort();
 		assertThat(this.template.getForObject(urlBase + "/one", String.class)).isEqualTo("one");
 		assertThat(this.template.getForEntity(urlBase + "/two", String.class).getStatusCode())

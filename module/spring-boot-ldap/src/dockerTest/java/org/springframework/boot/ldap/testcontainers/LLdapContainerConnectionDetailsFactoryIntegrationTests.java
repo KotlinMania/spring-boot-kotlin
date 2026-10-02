@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.ldap.testcontainers;
+package io.github.kotlinmania.spring.boot.ldap.testcontainers;
 
 import java.util.List;
 
@@ -24,10 +24,10 @@ import org.testcontainers.junit.jupiter.Testcontainers;
 import org.testcontainers.ldap.LLdapContainer;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.autoconfigure.ImportAutoConfiguration;
-import org.springframework.boot.ldap.autoconfigure.LdapAutoConfiguration;
-import org.springframework.boot.testcontainers.service.connection.ServiceConnection;
-import org.springframework.boot.testsupport.container.TestImage;
+import io.github.kotlinmania.spring.boot.autoconfigure.ImportAutoConfiguration;
+import io.github.kotlinmania.spring.boot.ldap.autoconfigure.LdapAutoConfiguration;
+import io.github.kotlinmania.spring.boot.testcontainers.service.connection.ServiceConnection;
+import io.github.kotlinmania.spring.boot.testsupport.container.TestImage;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.ldap.core.AttributesMapper;
 import org.springframework.ldap.core.LdapTemplate;

@@ -18,6 +18,6 @@
  * Auto-configuration for LDAP.
  */
 @NullMarked
-package org.springframework.boot.ldap.autoconfigure;
+package io.github.kotlinmania.spring.boot.ldap.autoconfigure;
 
 import org.jspecify.annotations.NullMarked;

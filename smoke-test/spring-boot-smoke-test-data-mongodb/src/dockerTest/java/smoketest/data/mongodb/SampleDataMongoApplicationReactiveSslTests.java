@@ -24,11 +24,11 @@ import org.testcontainers.junit.jupiter.Testcontainers;
 import org.testcontainers.mongodb.MongoDBContainer;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.boot.testcontainers.service.connection.PemKeyStore;
-import org.springframework.boot.testcontainers.service.connection.PemTrustStore;
-import org.springframework.boot.testcontainers.service.connection.ServiceConnection;
-import org.springframework.boot.testsupport.container.TestImage;
+import io.github.kotlinmania.spring.boot.test.context.SpringBootTest;
+import io.github.kotlinmania.spring.boot.testcontainers.service.connection.PemKeyStore;
+import io.github.kotlinmania.spring.boot.testcontainers.service.connection.PemTrustStore;
+import io.github.kotlinmania.spring.boot.testcontainers.service.connection.ServiceConnection;
+import io.github.kotlinmania.spring.boot.testsupport.container.TestImage;
 import org.springframework.data.mongodb.core.ReactiveMongoTemplate;
 
 import static org.assertj.core.api.Assertions.assertThat;

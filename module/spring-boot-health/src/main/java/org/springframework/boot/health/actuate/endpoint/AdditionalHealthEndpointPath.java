@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.health.actuate.endpoint;
+package io.github.kotlinmania.spring.boot.health.actuate.endpoint;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.actuate.endpoint.web.WebServerNamespace;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.web.WebServerNamespace;
 import org.springframework.util.Assert;
 import org.springframework.util.StringUtils;
 

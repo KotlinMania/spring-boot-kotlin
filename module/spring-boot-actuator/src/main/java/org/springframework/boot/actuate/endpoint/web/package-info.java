@@ -18,6 +18,6 @@
  * Web support for actuator endpoints.
  */
 @NullMarked
-package org.springframework.boot.actuate.endpoint.web;
+package io.github.kotlinmania.spring.boot.actuate.endpoint.web;
 
 import org.jspecify.annotations.NullMarked;

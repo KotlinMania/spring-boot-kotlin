@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.actuator.micrometertracing.baggage
+package io.github.kotlinmania.spring.boot.docs.actuator.micrometertracing.baggage
 
 import io.micrometer.tracing.Tracer
 import org.springframework.stereotype.Component

@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.webflux.test.autoconfigure;
+package io.github.kotlinmania.spring.boot.webflux.test.autoconfigure;
 
-import org.springframework.boot.test.autoconfigure.TestSliceTestContextBootstrapper;
-import org.springframework.boot.test.context.ReactiveWebMergedContextConfiguration;
+import io.github.kotlinmania.spring.boot.test.autoconfigure.TestSliceTestContextBootstrapper;
+import io.github.kotlinmania.spring.boot.test.context.ReactiveWebMergedContextConfiguration;
 import org.springframework.test.context.MergedContextConfiguration;
 import org.springframework.test.context.TestContextBootstrapper;
 

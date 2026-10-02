@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.grpc.server.autoconfigure;
+package io.github.kotlinmania.spring.boot.grpc.server.autoconfigure;
 
 import javax.net.ssl.KeyManagerFactory;
 import javax.net.ssl.TrustManagerFactory;
@@ -22,8 +22,8 @@ import javax.net.ssl.TrustManagerFactory;
 import io.grpc.TlsServerCredentials.ClientAuth;
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.ssl.SslBundles;
-import org.springframework.boot.ssl.SslManagerBundle;
+import io.github.kotlinmania.spring.boot.ssl.SslBundles;
+import io.github.kotlinmania.spring.boot.ssl.SslManagerBundle;
 import org.springframework.util.Assert;
 
 /**

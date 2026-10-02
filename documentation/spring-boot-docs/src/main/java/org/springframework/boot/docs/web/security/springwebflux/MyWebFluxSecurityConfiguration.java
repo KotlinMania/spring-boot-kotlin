@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.web.security.springwebflux;
+package io.github.kotlinmania.spring.boot.docs.web.security.springwebflux;
 
-import org.springframework.boot.security.autoconfigure.web.reactive.PathRequest;
+import io.github.kotlinmania.spring.boot.security.autoconfigure.web.reactive.PathRequest;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.web.server.ServerHttpSecurity;

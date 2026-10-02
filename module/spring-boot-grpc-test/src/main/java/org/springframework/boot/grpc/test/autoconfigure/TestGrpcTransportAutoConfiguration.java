@@ -14,20 +14,20 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.grpc.test.autoconfigure;
+package io.github.kotlinmania.spring.boot.grpc.test.autoconfigure;
 
 import io.grpc.BindableService;
 import io.grpc.inprocess.InProcessServerBuilder;
 import io.grpc.stub.AbstractStub;
 
 import org.springframework.beans.factory.ObjectProvider;
-import org.springframework.boot.autoconfigure.AutoConfiguration;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
-import org.springframework.boot.grpc.client.autoconfigure.GrpcClientAutoConfiguration;
-import org.springframework.boot.grpc.server.autoconfigure.GrpcServerAutoConfiguration;
-import org.springframework.boot.grpc.server.autoconfigure.GrpcServerProperties;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnBean;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnClass;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnMissingBean;
+import io.github.kotlinmania.spring.boot.grpc.client.autoconfigure.GrpcClientAutoConfiguration;
+import io.github.kotlinmania.spring.boot.grpc.server.autoconfigure.GrpcServerAutoConfiguration;
+import io.github.kotlinmania.spring.boot.grpc.server.autoconfigure.GrpcServerProperties;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.context.annotation.Bean;

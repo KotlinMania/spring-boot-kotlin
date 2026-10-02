@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.actuate.info;
+package io.github.kotlinmania.spring.boot.actuate.info;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.condition.EnabledForJreRange;
@@ -24,8 +24,8 @@ import org.springframework.aot.hint.MemberCategory;
 import org.springframework.aot.hint.RuntimeHints;
 import org.springframework.aot.hint.TypeReference;
 import org.springframework.aot.hint.predicate.RuntimeHintsPredicates;
-import org.springframework.boot.actuate.info.ProcessInfoContributor.ProcessInfoContributorRuntimeHints;
-import org.springframework.boot.info.ProcessInfo;
+import io.github.kotlinmania.spring.boot.actuate.info.ProcessInfoContributor.ProcessInfoContributorRuntimeHints;
+import io.github.kotlinmania.spring.boot.info.ProcessInfo;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

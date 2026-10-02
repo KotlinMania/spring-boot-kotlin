@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.jackson2.types;
+package io.github.kotlinmania.spring.boot.jackson2.types;
 
 import org.jspecify.annotations.Nullable;
 

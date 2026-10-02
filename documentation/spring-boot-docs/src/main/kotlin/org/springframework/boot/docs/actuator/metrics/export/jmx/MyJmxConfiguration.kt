@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.actuator.metrics.export.jmx
+package io.github.kotlinmania.spring.boot.docs.actuator.metrics.export.jmx
 
 import io.micrometer.core.instrument.Clock
 import io.micrometer.core.instrument.Meter

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.groovy.template.autoconfigure;
+package io.github.kotlinmania.spring.boot.groovy.template.autoconfigure;
 
 import java.nio.charset.StandardCharsets;
 

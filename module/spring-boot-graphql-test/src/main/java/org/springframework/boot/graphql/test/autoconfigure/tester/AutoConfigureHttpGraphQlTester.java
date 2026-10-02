@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.graphql.test.autoconfigure.tester;
+package io.github.kotlinmania.spring.boot.graphql.test.autoconfigure.tester;
 
 import java.lang.annotation.Documented;
 import java.lang.annotation.ElementType;
@@ -23,8 +23,8 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
-import org.springframework.boot.autoconfigure.ImportAutoConfiguration;
-import org.springframework.boot.webtestclient.autoconfigure.AutoConfigureWebTestClient;
+import io.github.kotlinmania.spring.boot.autoconfigure.ImportAutoConfiguration;
+import io.github.kotlinmania.spring.boot.webtestclient.autoconfigure.AutoConfigureWebTestClient;
 import org.springframework.graphql.test.tester.HttpGraphQlTester;
 
 /**

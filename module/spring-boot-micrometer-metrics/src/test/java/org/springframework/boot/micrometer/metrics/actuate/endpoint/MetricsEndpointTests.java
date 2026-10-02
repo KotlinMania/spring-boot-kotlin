@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.micrometer.metrics.actuate.endpoint;
+package io.github.kotlinmania.spring.boot.micrometer.metrics.actuate.endpoint;
 
 import java.util.Collections;
 import java.util.Optional;
@@ -29,8 +29,8 @@ import io.micrometer.core.instrument.simple.SimpleConfig;
 import io.micrometer.core.instrument.simple.SimpleMeterRegistry;
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.actuate.endpoint.InvalidEndpointRequestException;
-import org.springframework.boot.micrometer.metrics.actuate.endpoint.MetricsEndpoint.MetricDescriptor;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.InvalidEndpointRequestException;
+import io.github.kotlinmania.spring.boot.micrometer.metrics.actuate.endpoint.MetricsEndpoint.MetricDescriptor;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatExceptionOfType;

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.devtools.env;
+package io.github.kotlinmania.spring.boot.devtools.env;
 
 import java.util.Collections;
 import java.util.Map;
@@ -22,12 +22,12 @@ import java.util.Map;
 import org.apache.commons.logging.Log;
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.EnvironmentPostProcessor;
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.devtools.logger.DevToolsLogFactory;
-import org.springframework.boot.devtools.restart.Restarter;
-import org.springframework.boot.devtools.settings.DevToolsSettings;
-import org.springframework.boot.devtools.system.DevToolsEnablementDeducer;
+import io.github.kotlinmania.spring.boot.EnvironmentPostProcessor;
+import io.github.kotlinmania.spring.boot.SpringApplication;
+import io.github.kotlinmania.spring.boot.devtools.logger.DevToolsLogFactory;
+import io.github.kotlinmania.spring.boot.devtools.restart.Restarter;
+import io.github.kotlinmania.spring.boot.devtools.settings.DevToolsSettings;
+import io.github.kotlinmania.spring.boot.devtools.system.DevToolsEnablementDeducer;
 import org.springframework.core.NativeDetector;
 import org.springframework.core.Ordered;
 import org.springframework.core.annotation.Order;
@@ -57,7 +57,7 @@ public class DevToolsPropertyDefaultsPostProcessor implements EnvironmentPostPro
 
 	private static final String[] WEB_ENVIRONMENT_CLASSES = {
 			"org.springframework.web.context.ConfigurableWebEnvironment",
-			"org.springframework.boot.web.reactive.context.ConfigurableReactiveWebEnvironment" };
+			"io.github.kotlinmania.spring.boot.web.reactive.context.ConfigurableReactiveWebEnvironment" };
 
 	private static final Map<String, Object> PROPERTIES;
 

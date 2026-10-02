@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.data.neo4j.domain.city;
+package io.github.kotlinmania.spring.boot.data.neo4j.domain.city;
 
 import java.io.Serializable;
 
-import org.springframework.boot.data.neo4j.domain.country.Country;
+import io.github.kotlinmania.spring.boot.data.neo4j.domain.country.Country;
 import org.springframework.data.neo4j.core.schema.GeneratedValue;
 import org.springframework.data.neo4j.core.schema.Id;
 import org.springframework.data.neo4j.core.schema.Node;

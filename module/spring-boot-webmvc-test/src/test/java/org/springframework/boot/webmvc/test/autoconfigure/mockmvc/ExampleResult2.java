@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.webmvc.test.autoconfigure.mockmvc;
+package io.github.kotlinmania.spring.boot.webmvc.test.autoconfigure.mockmvc;
 
 /**
- * Example result that requires a {@link org.springframework.boot.jackson2.JsonComponent}.
+ * Example result that requires a {@link io.github.kotlinmania.spring.boot.jackson2.JsonComponent}.
  *
  * @param id sample data
  * @author Stephane Nicoll

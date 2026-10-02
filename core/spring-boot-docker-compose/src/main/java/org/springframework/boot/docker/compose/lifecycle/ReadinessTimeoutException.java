@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docker.compose.lifecycle;
+package io.github.kotlinmania.spring.boot.docker.compose.lifecycle;
 
 import java.time.Duration;
 import java.util.List;
 import java.util.Objects;
 
-import org.springframework.boot.docker.compose.core.RunningService;
+import io.github.kotlinmania.spring.boot.docker.compose.core.RunningService;
 
 /**
  * Exception thrown if readiness checking has timed out.

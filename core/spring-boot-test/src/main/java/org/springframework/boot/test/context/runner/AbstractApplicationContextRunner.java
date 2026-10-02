@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.test.context.runner;
+package io.github.kotlinmania.spring.boot.test.context.runner;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -33,12 +33,12 @@ import org.springframework.beans.factory.support.AbstractAutowireCapableBeanFact
 import org.springframework.beans.factory.support.BeanDefinitionRegistry;
 import org.springframework.beans.factory.support.BeanNameGenerator;
 import org.springframework.beans.factory.support.DefaultListableBeanFactory;
-import org.springframework.boot.context.annotation.Configurations;
-import org.springframework.boot.context.annotation.UserConfigurations;
-import org.springframework.boot.test.context.FilteredClassLoader;
-import org.springframework.boot.test.context.assertj.ApplicationContextAssert;
-import org.springframework.boot.test.context.assertj.ApplicationContextAssertProvider;
-import org.springframework.boot.test.util.TestPropertyValues;
+import io.github.kotlinmania.spring.boot.context.annotation.Configurations;
+import io.github.kotlinmania.spring.boot.context.annotation.UserConfigurations;
+import io.github.kotlinmania.spring.boot.test.context.FilteredClassLoader;
+import io.github.kotlinmania.spring.boot.test.context.assertj.ApplicationContextAssert;
+import io.github.kotlinmania.spring.boot.test.context.assertj.ApplicationContextAssertProvider;
+import io.github.kotlinmania.spring.boot.test.util.TestPropertyValues;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextInitializer;
 import org.springframework.context.ConfigurableApplicationContext;

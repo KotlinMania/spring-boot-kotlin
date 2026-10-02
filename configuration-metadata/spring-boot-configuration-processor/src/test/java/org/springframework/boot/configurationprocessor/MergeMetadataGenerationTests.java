@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.configurationprocessor;
+package io.github.kotlinmania.spring.boot.configurationprocessor;
 
 import java.util.Arrays;
 import java.util.Collections;
@@ -22,17 +22,17 @@ import java.util.List;
 
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.configurationprocessor.json.JSONArray;
-import org.springframework.boot.configurationprocessor.json.JSONObject;
-import org.springframework.boot.configurationprocessor.metadata.ConfigurationMetadata;
-import org.springframework.boot.configurationprocessor.metadata.ItemDeprecation;
-import org.springframework.boot.configurationprocessor.metadata.ItemHint;
-import org.springframework.boot.configurationprocessor.metadata.ItemMetadata;
-import org.springframework.boot.configurationprocessor.metadata.Metadata;
-import org.springframework.boot.configurationprocessor.metadata.TestJsonConverter;
-import org.springframework.boot.configurationsample.simple.DeprecatedSingleProperty;
-import org.springframework.boot.configurationsample.simple.SimpleProperties;
-import org.springframework.boot.configurationsample.specific.SimpleConflictingProperties;
+import io.github.kotlinmania.spring.boot.configurationprocessor.json.JSONArray;
+import io.github.kotlinmania.spring.boot.configurationprocessor.json.JSONObject;
+import io.github.kotlinmania.spring.boot.configurationprocessor.metadata.ConfigurationMetadata;
+import io.github.kotlinmania.spring.boot.configurationprocessor.metadata.ItemDeprecation;
+import io.github.kotlinmania.spring.boot.configurationprocessor.metadata.ItemHint;
+import io.github.kotlinmania.spring.boot.configurationprocessor.metadata.ItemMetadata;
+import io.github.kotlinmania.spring.boot.configurationprocessor.metadata.Metadata;
+import io.github.kotlinmania.spring.boot.configurationprocessor.metadata.TestJsonConverter;
+import io.github.kotlinmania.spring.boot.configurationsample.simple.DeprecatedSingleProperty;
+import io.github.kotlinmania.spring.boot.configurationsample.simple.SimpleProperties;
+import io.github.kotlinmania.spring.boot.configurationsample.specific.SimpleConflictingProperties;
 import org.springframework.core.test.tools.CompilationException;
 
 import static org.assertj.core.api.Assertions.assertThat;

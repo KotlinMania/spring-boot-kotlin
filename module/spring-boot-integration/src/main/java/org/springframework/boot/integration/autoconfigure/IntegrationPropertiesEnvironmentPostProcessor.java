@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.integration.autoconfigure;
+package io.github.kotlinmania.spring.boot.integration.autoconfigure;
 
 import java.io.IOException;
 import java.util.Collections;
@@ -23,12 +23,12 @@ import java.util.Map;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.EnvironmentPostProcessor;
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.env.OriginTrackedMapPropertySource;
-import org.springframework.boot.env.PropertiesPropertySourceLoader;
-import org.springframework.boot.origin.Origin;
-import org.springframework.boot.origin.OriginLookup;
+import io.github.kotlinmania.spring.boot.EnvironmentPostProcessor;
+import io.github.kotlinmania.spring.boot.SpringApplication;
+import io.github.kotlinmania.spring.boot.env.OriginTrackedMapPropertySource;
+import io.github.kotlinmania.spring.boot.env.PropertiesPropertySourceLoader;
+import io.github.kotlinmania.spring.boot.origin.Origin;
+import io.github.kotlinmania.spring.boot.origin.OriginLookup;
 import org.springframework.core.Ordered;
 import org.springframework.core.env.ConfigurableEnvironment;
 import org.springframework.core.env.PropertySource;

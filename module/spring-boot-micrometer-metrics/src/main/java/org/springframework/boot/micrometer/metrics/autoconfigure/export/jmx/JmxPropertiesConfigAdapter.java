@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.micrometer.metrics.autoconfigure.export.jmx;
+package io.github.kotlinmania.spring.boot.micrometer.metrics.autoconfigure.export.jmx;
 
 import java.time.Duration;
 
 import io.micrometer.jmx.JmxConfig;
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.micrometer.metrics.autoconfigure.export.properties.PropertiesConfigAdapter;
+import io.github.kotlinmania.spring.boot.micrometer.metrics.autoconfigure.export.properties.PropertiesConfigAdapter;
 
 /**
  * Adapter to convert {@link JmxProperties} to a {@link JmxConfig}.

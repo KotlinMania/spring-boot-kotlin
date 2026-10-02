@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.jetty.autoconfigure;
+package io.github.kotlinmania.spring.boot.jetty.autoconfigure;
 
 import java.io.IOException;
 
@@ -25,11 +25,11 @@ import jakarta.servlet.ServletRequest;
 import jakarta.servlet.ServletResponse;
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.jetty.autoconfigure.AutoConfigureWebServerJettyServletTests.ServletConfiguration;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.boot.test.context.SpringBootTest.WebEnvironment;
-import org.springframework.boot.test.web.server.LocalServerPort;
-import org.springframework.boot.web.server.test.AutoConfigureWebServer;
+import io.github.kotlinmania.spring.boot.jetty.autoconfigure.AutoConfigureWebServerJettyServletTests.ServletConfiguration;
+import io.github.kotlinmania.spring.boot.test.context.SpringBootTest;
+import io.github.kotlinmania.spring.boot.test.context.SpringBootTest.WebEnvironment;
+import io.github.kotlinmania.spring.boot.test.web.server.LocalServerPort;
+import io.github.kotlinmania.spring.boot.web.server.test.AutoConfigureWebServer;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.test.web.servlet.client.RestTestClient;

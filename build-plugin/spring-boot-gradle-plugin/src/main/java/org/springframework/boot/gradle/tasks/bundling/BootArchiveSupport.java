@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.gradle.tasks.bundling;
+package io.github.kotlinmania.spring.boot.gradle.tasks.bundling;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -59,9 +59,9 @@ class BootArchiveSupport {
 
 	static {
 		Set<String> defaultLauncherClasses = new HashSet<>();
-		defaultLauncherClasses.add("org.springframework.boot.loader.launch.JarLauncher");
-		defaultLauncherClasses.add("org.springframework.boot.loader.launch.PropertiesLauncher");
-		defaultLauncherClasses.add("org.springframework.boot.loader.launch.WarLauncher");
+		defaultLauncherClasses.add("io.github.kotlinmania.spring.boot.loader.launch.JarLauncher");
+		defaultLauncherClasses.add("io.github.kotlinmania.spring.boot.loader.launch.PropertiesLauncher");
+		defaultLauncherClasses.add("io.github.kotlinmania.spring.boot.loader.launch.WarLauncher");
 		DEFAULT_LAUNCHER_CLASSES = Collections.unmodifiableSet(defaultLauncherClasses);
 	}
 

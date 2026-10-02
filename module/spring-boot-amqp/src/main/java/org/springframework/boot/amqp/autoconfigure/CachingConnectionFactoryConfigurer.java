@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.amqp.autoconfigure;
+package io.github.kotlinmania.spring.boot.amqp.autoconfigure;
 
 import java.time.Duration;
 
 import org.springframework.amqp.rabbit.connection.CachingConnectionFactory;
-import org.springframework.boot.context.properties.PropertyMapper;
+import io.github.kotlinmania.spring.boot.context.properties.PropertyMapper;
 
 /**
  * Configures Rabbit {@link CachingConnectionFactory} with sensible defaults tuned using

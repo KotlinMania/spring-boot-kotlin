@@ -18,6 +18,6 @@
  * Support for exporting actuator metrics to Prometheus.
  */
 @NullMarked
-package org.springframework.boot.micrometer.metrics.autoconfigure.export.prometheus;
+package io.github.kotlinmania.spring.boot.micrometer.metrics.autoconfigure.export.prometheus;
 
 import org.jspecify.annotations.NullMarked;

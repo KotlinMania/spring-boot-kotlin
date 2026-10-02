@@ -14,17 +14,17 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.grpc.client.autoconfigure;
+package io.github.kotlinmania.spring.boot.grpc.client.autoconfigure;
 
 import io.grpc.ChannelCredentials;
 import io.grpc.InsecureChannelCredentials;
 import io.grpc.TlsChannelCredentials;
 import io.grpc.TlsChannelCredentials.Builder;
 
-import org.springframework.boot.grpc.client.autoconfigure.GrpcClientProperties.Channel;
-import org.springframework.boot.grpc.client.autoconfigure.GrpcClientProperties.Channel.Ssl;
-import org.springframework.boot.ssl.SslBundle;
-import org.springframework.boot.ssl.SslBundles;
+import io.github.kotlinmania.spring.boot.grpc.client.autoconfigure.GrpcClientProperties.Channel;
+import io.github.kotlinmania.spring.boot.grpc.client.autoconfigure.GrpcClientProperties.Channel.Ssl;
+import io.github.kotlinmania.spring.boot.ssl.SslBundle;
+import io.github.kotlinmania.spring.boot.ssl.SslBundles;
 import org.springframework.grpc.client.ChannelCredentialsProvider;
 import org.springframework.grpc.internal.InsecureTrustManagerFactory;
 

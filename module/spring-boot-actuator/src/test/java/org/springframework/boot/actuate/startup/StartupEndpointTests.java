@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.actuate.startup;
+package io.github.kotlinmania.spring.boot.actuate.startup;
 
 import java.util.Set;
 import java.util.function.Consumer;
@@ -25,11 +25,11 @@ import org.springframework.aot.hint.MemberCategory;
 import org.springframework.aot.hint.RuntimeHints;
 import org.springframework.aot.hint.TypeReference;
 import org.springframework.aot.hint.predicate.RuntimeHintsPredicates;
-import org.springframework.boot.SpringBootVersion;
-import org.springframework.boot.actuate.startup.StartupEndpoint.StartupDescriptor;
-import org.springframework.boot.actuate.startup.StartupEndpoint.StartupEndpointRuntimeHints;
-import org.springframework.boot.context.metrics.buffering.BufferingApplicationStartup;
-import org.springframework.boot.test.context.runner.ApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.SpringBootVersion;
+import io.github.kotlinmania.spring.boot.actuate.startup.StartupEndpoint.StartupDescriptor;
+import io.github.kotlinmania.spring.boot.actuate.startup.StartupEndpoint.StartupEndpointRuntimeHints;
+import io.github.kotlinmania.spring.boot.context.metrics.buffering.BufferingApplicationStartup;
+import io.github.kotlinmania.spring.boot.test.context.runner.ApplicationContextRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.metrics.ApplicationStartup;
@@ -81,7 +81,7 @@ class StartupEndpointTests {
 		RuntimeHints runtimeHints = new RuntimeHints();
 		new StartupEndpointRuntimeHints().registerHints(runtimeHints, getClass().getClassLoader());
 		Set<TypeReference> bindingTypes = Set.of(
-				TypeReference.of("org.springframework.boot.context.metrics.buffering.BufferedStartupStep$DefaultTag"),
+				TypeReference.of("io.github.kotlinmania.spring.boot.context.metrics.buffering.BufferedStartupStep$DefaultTag"),
 				TypeReference.of("org.springframework.core.metrics.jfr.FlightRecorderStartupStep$FlightRecorderTag"));
 		for (TypeReference bindingType : bindingTypes) {
 			assertThat(RuntimeHintsPredicates.reflection()

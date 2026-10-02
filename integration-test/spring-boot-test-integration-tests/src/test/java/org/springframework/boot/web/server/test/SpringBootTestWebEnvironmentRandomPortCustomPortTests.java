@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.web.server.test;
+package io.github.kotlinmania.spring.boot.web.server.test;
 
 import org.junit.jupiter.api.Test;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.boot.test.context.SpringBootTest.WebEnvironment;
-import org.springframework.boot.web.server.test.AbstractSpringBootTestWebServerWebEnvironmentTests.AbstractConfig;
+import io.github.kotlinmania.spring.boot.test.context.SpringBootTest;
+import io.github.kotlinmania.spring.boot.test.context.SpringBootTest.WebEnvironment;
+import io.github.kotlinmania.spring.boot.web.server.test.AbstractSpringBootTestWebServerWebEnvironmentTests.AbstractConfig;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.env.Environment;
 import org.springframework.test.annotation.DirtiesContext;

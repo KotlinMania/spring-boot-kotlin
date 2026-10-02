@@ -19,6 +19,6 @@
  * {@link org.springframework.context.ApplicationContext ApplicationContext}.
  */
 @NullMarked
-package org.springframework.boot.testcontainers.lifecycle;
+package io.github.kotlinmania.spring.boot.testcontainers.lifecycle;
 
 import org.jspecify.annotations.NullMarked;

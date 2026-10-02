@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.testing.springbootapplications.autoconfiguredspringdataneo4j.propagation
+package io.github.kotlinmania.spring.boot.docs.testing.springbootapplications.autoconfiguredspringdataneo4j.propagation
 
 import org.springframework.beans.factory.annotation.Autowired
-import org.springframework.boot.data.neo4j.test.autoconfigure.DataNeo4jTest
+import io.github.kotlinmania.spring.boot.data.neo4j.test.autoconfigure.DataNeo4jTest
 
 @DataNeo4jTest
 class MyDataNeo4jTests(@Autowired val repository: SomeRepository) {

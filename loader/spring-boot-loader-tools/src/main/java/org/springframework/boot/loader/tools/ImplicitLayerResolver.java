@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.loader.tools;
+package io.github.kotlinmania.spring.boot.loader.tools;
 
 /**
  * Implementation of {@link Layers} that uses implicit rules.
@@ -24,7 +24,7 @@ package org.springframework.boot.loader.tools;
  */
 class ImplicitLayerResolver extends StandardLayers {
 
-	private static final String SPRING_BOOT_LOADER_PREFIX = "org/springframework/boot/loader/";
+	private static final String SPRING_BOOT_LOADER_PREFIX = "io.github.kotlinmania.spring.boot.loader/";
 
 	@Override
 	public Layer getLayer(String name) {

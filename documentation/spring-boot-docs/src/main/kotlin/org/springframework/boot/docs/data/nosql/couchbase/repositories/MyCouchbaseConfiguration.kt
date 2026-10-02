@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.data.nosql.couchbase.repositories
+package io.github.kotlinmania.spring.boot.docs.data.nosql.couchbase.repositories
 
 import org.assertj.core.util.Arrays
 import org.springframework.context.annotation.Bean

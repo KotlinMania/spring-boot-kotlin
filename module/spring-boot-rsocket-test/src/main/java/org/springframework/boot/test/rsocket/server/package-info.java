@@ -18,6 +18,6 @@
  * RSocket server test utilities and support classes.
  */
 @NullMarked
-package org.springframework.boot.test.rsocket.server;
+package io.github.kotlinmania.spring.boot.test.rsocket.server;
 
 import org.jspecify.annotations.NullMarked;

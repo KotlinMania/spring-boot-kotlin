@@ -18,6 +18,6 @@
  * Auto-configuration for gRPC web security when using a servlet stack.
  */
 @NullMarked
-package org.springframework.boot.grpc.server.autoconfigure.security.web.servlet;
+package io.github.kotlinmania.spring.boot.grpc.server.autoconfigure.security.web.servlet;
 
 import org.jspecify.annotations.NullMarked;

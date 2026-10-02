@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.web.server;
+package io.github.kotlinmania.spring.boot.web.server;
 
 import org.apache.coyote.http11.Http11NioProtocol;
 import org.junit.jupiter.api.Test;

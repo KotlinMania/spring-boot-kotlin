@@ -17,4 +17,4 @@
 /**
  * The configuration properties meta-data model and JSON writing support.
  */
-package org.springframework.boot.configurationprocessor.metadata;
+package io.github.kotlinmania.spring.boot.configurationprocessor.metadata;

@@ -16,8 +16,8 @@
 
 package smoketest.web.secure;
 
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.boot.test.context.SpringBootTest.WebEnvironment;
+import io.github.kotlinmania.spring.boot.test.context.SpringBootTest;
+import io.github.kotlinmania.spring.boot.test.context.SpringBootTest.WebEnvironment;
 import org.springframework.context.annotation.Bean;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.web.SecurityFilterChain;
@@ -41,7 +41,7 @@ class CustomServletPathErrorPageTests extends AbstractErrorPageTests {
 		super("/custom/servlet/path");
 	}
 
-	@org.springframework.boot.test.context.TestConfiguration(proxyBeanMethods = false)
+	@io.github.kotlinmania.spring.boot.test.context.TestConfiguration(proxyBeanMethods = false)
 	static class SecurityConfiguration {
 
 		@Bean

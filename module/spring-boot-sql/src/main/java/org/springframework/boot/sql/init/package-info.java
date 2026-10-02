@@ -18,6 +18,6 @@
  * Support for initialization of an SQL database.
  */
 @NullMarked
-package org.springframework.boot.sql.init;
+package io.github.kotlinmania.spring.boot.sql.init;
 
 import org.jspecify.annotations.NullMarked;

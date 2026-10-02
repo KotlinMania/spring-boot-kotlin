@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.http.client.autoconfigure.reactive;
+package io.github.kotlinmania.spring.boot.http.client.autoconfigure.reactive;
 
 import java.time.Duration;
 import java.util.ArrayList;
@@ -28,18 +28,18 @@ import reactor.netty.http.client.HttpClient;
 import reactor.netty.resources.LoopResources;
 
 import org.springframework.beans.factory.config.BeanDefinition;
-import org.springframework.boot.autoconfigure.AutoConfigurations;
-import org.springframework.boot.autoconfigure.ssl.SslAutoConfiguration;
-import org.springframework.boot.http.client.HttpClientSettings;
-import org.springframework.boot.http.client.HttpRedirects;
-import org.springframework.boot.http.client.autoconfigure.HttpClientAutoConfiguration;
-import org.springframework.boot.http.client.reactive.ClientHttpConnectorBuilder;
-import org.springframework.boot.http.client.reactive.JdkClientHttpConnectorBuilder;
-import org.springframework.boot.http.client.reactive.JettyClientHttpConnectorBuilder;
-import org.springframework.boot.http.client.reactive.ReactorClientHttpConnectorBuilder;
-import org.springframework.boot.ssl.SslBundle;
-import org.springframework.boot.test.context.FilteredClassLoader;
-import org.springframework.boot.test.context.runner.ApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurations;
+import io.github.kotlinmania.spring.boot.autoconfigure.ssl.SslAutoConfiguration;
+import io.github.kotlinmania.spring.boot.http.client.HttpClientSettings;
+import io.github.kotlinmania.spring.boot.http.client.HttpRedirects;
+import io.github.kotlinmania.spring.boot.http.client.autoconfigure.HttpClientAutoConfiguration;
+import io.github.kotlinmania.spring.boot.http.client.reactive.ClientHttpConnectorBuilder;
+import io.github.kotlinmania.spring.boot.http.client.reactive.JdkClientHttpConnectorBuilder;
+import io.github.kotlinmania.spring.boot.http.client.reactive.JettyClientHttpConnectorBuilder;
+import io.github.kotlinmania.spring.boot.http.client.reactive.ReactorClientHttpConnectorBuilder;
+import io.github.kotlinmania.spring.boot.ssl.SslBundle;
+import io.github.kotlinmania.spring.boot.test.context.FilteredClassLoader;
+import io.github.kotlinmania.spring.boot.test.context.runner.ApplicationContextRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.task.VirtualThreadTaskExecutor;
@@ -196,7 +196,7 @@ class ReactiveHttpClientAutoConfigurationTests {
 
 	private List<String> sslPropertyValues() {
 		List<String> propertyValues = new ArrayList<>();
-		String location = "classpath:org/springframework/boot/autoconfigure/ssl/";
+		String location = "classpath:io.github.kotlinmania.spring.boot.autoconfigure/ssl/";
 		propertyValues.add("spring.ssl.bundle.pem.test.key.alias=alias1");
 		propertyValues.add("spring.ssl.bundle.pem.test.truststore.type=PKCS12");
 		propertyValues.add("spring.ssl.bundle.pem.test.truststore.certificate=" + location + "rsa-cert.pem");

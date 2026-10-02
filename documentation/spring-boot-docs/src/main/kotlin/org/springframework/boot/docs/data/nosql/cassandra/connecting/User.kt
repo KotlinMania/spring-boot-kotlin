@@ -14,6 +14,6 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.data.nosql.cassandra.connecting
+package io.github.kotlinmania.spring.boot.docs.data.nosql.cassandra.connecting
 
 class User

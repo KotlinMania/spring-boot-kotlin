@@ -1,8 +1,8 @@
 # Connection Details Factories
-org.springframework.boot.autoconfigure.service.connection.ConnectionDetailsFactory=\
-org.springframework.boot.amqp.docker.compose.RabbitDockerComposeConnectionDetailsFactory,\
-org.springframework.boot.amqp.docker.compose.RabbitStreamDockerComposeConnectionDetailsFactory,\
-org.springframework.boot.amqp.testcontainers.DeprecatedRabbitContainerConnectionDetailsFactory,\
-org.springframework.boot.amqp.testcontainers.RabbitContainerConnectionDetailsFactory,\
-org.springframework.boot.amqp.testcontainers.RabbitStreamContainerConnectionDetailsFactory
+io.github.kotlinmania.spring.boot.autoconfigure.service.connection.ConnectionDetailsFactory=\
+io.github.kotlinmania.spring.boot.amqp.docker.compose.RabbitDockerComposeConnectionDetailsFactory,\
+io.github.kotlinmania.spring.boot.amqp.docker.compose.RabbitStreamDockerComposeConnectionDetailsFactory,\
+io.github.kotlinmania.spring.boot.amqp.testcontainers.DeprecatedRabbitContainerConnectionDetailsFactory,\
+io.github.kotlinmania.spring.boot.amqp.testcontainers.RabbitContainerConnectionDetailsFactory,\
+io.github.kotlinmania.spring.boot.amqp.testcontainers.RabbitStreamContainerConnectionDetailsFactory
 

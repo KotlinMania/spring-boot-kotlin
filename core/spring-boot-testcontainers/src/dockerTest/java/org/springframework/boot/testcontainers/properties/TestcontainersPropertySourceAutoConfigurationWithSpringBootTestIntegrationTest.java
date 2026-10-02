@@ -14,16 +14,16 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.testcontainers.properties;
+package io.github.kotlinmania.spring.boot.testcontainers.properties;
 
 import org.junit.jupiter.api.Test;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.SpringBootConfiguration;
-import org.springframework.boot.autoconfigure.ImportAutoConfiguration;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.boot.test.context.TestConfiguration;
-import org.springframework.boot.testcontainers.properties.TestcontainersPropertySourceAutoConfigurationWithSpringBootTestIntegrationTest.TestConfig;
+import io.github.kotlinmania.spring.boot.SpringBootConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.ImportAutoConfiguration;
+import io.github.kotlinmania.spring.boot.test.context.SpringBootTest;
+import io.github.kotlinmania.spring.boot.test.context.TestConfiguration;
+import io.github.kotlinmania.spring.boot.testcontainers.properties.TestcontainersPropertySourceAutoConfigurationWithSpringBootTestIntegrationTest.TestConfig;
 import org.springframework.context.annotation.Bean;
 import org.springframework.core.env.Environment;
 import org.springframework.test.context.DynamicPropertyRegistrar;

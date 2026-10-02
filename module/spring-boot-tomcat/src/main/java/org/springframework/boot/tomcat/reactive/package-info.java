@@ -18,6 +18,6 @@
  * Reactive web server implementation backed by Tomcat.
  */
 @NullMarked
-package org.springframework.boot.tomcat.reactive;
+package io.github.kotlinmania.spring.boot.tomcat.reactive;
 
 import org.jspecify.annotations.NullMarked;

@@ -18,6 +18,6 @@
  * Reactive web server abstractions.
  */
 @NullMarked
-package org.springframework.boot.web.server.reactive;
+package io.github.kotlinmania.spring.boot.web.server.reactive;
 
 import org.jspecify.annotations.NullMarked;

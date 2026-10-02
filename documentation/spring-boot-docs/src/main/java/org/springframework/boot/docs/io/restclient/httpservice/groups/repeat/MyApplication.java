@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.io.restclient.httpservice.groups.repeat;
+package io.github.kotlinmania.spring.boot.docs.io.restclient.httpservice.groups.repeat;
 
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
+import io.github.kotlinmania.spring.boot.SpringApplication;
+import io.github.kotlinmania.spring.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.service.registry.ImportHttpServices;
 
 @SpringBootApplication

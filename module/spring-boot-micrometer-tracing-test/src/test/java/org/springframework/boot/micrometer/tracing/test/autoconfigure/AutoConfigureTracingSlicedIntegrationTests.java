@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.micrometer.tracing.test.autoconfigure;
+package io.github.kotlinmania.spring.boot.micrometer.tracing.test.autoconfigure;
 
 import io.micrometer.observation.ObservationRegistry;
 import io.micrometer.tracing.Tracer;

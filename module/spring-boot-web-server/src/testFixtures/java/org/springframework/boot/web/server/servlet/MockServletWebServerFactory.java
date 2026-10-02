@@ -14,15 +14,15 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.web.server.servlet;
+package io.github.kotlinmania.spring.boot.web.server.servlet;
 
 import jakarta.servlet.ServletContext;
 
-import org.springframework.boot.web.server.AbstractConfigurableWebServerFactory;
-import org.springframework.boot.web.server.WebServer;
-import org.springframework.boot.web.server.servlet.MockServletWebServer.RegisteredFilter;
-import org.springframework.boot.web.server.servlet.MockServletWebServer.RegisteredServlet;
-import org.springframework.boot.web.servlet.ServletContextInitializer;
+import io.github.kotlinmania.spring.boot.web.server.AbstractConfigurableWebServerFactory;
+import io.github.kotlinmania.spring.boot.web.server.WebServer;
+import io.github.kotlinmania.spring.boot.web.server.servlet.MockServletWebServer.RegisteredFilter;
+import io.github.kotlinmania.spring.boot.web.server.servlet.MockServletWebServer.RegisteredServlet;
+import io.github.kotlinmania.spring.boot.web.servlet.ServletContextInitializer;
 
 import static org.mockito.Mockito.spy;
 

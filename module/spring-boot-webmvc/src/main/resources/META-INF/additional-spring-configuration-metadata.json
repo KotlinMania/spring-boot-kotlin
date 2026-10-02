@@ -61,7 +61,7 @@
     },
     {
       "name": "spring.mvc.locale-resolver",
-      "type": "org.springframework.boot.autoconfigure.web.WebProperties$LocaleResolver",
+      "type": "io.github.kotlinmania.spring.boot.autoconfigure.web.WebProperties$LocaleResolver",
       "deprecation": {
         "level": "error",
         "replacement": "spring.web.locale-resolver",

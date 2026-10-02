@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.configurationsample.source;
+package io.github.kotlinmania.spring.boot.configurationsample.source;
 
 /**
  * Immutable type with manual metadata. This illustrates the case where the type of a

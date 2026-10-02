@@ -15,6 +15,6 @@
  */
 
 @NullMarked
-package org.springframework.boot.loader.launch;
+package io.github.kotlinmania.spring.boot.loader.launch;
 
 import org.jspecify.annotations.NullMarked;

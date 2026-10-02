@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.loader.nio.file;
+package io.github.kotlinmania.spring.boot.loader.nio.file;
 
 import java.io.IOException;
 import java.io.UncheckedIOException;
@@ -25,11 +25,11 @@ import java.nio.channels.NonWritableChannelException;
 import java.nio.channels.SeekableByteChannel;
 import java.nio.file.Path;
 
-import org.springframework.boot.loader.net.protocol.nested.NestedLocation;
-import org.springframework.boot.loader.ref.Cleaner;
-import org.springframework.boot.loader.zip.CloseableDataBlock;
-import org.springframework.boot.loader.zip.DataBlock;
-import org.springframework.boot.loader.zip.ZipContent;
+import io.github.kotlinmania.spring.boot.loader.net.protocol.nested.NestedLocation;
+import io.github.kotlinmania.spring.boot.loader.ref.Cleaner;
+import io.github.kotlinmania.spring.boot.loader.zip.CloseableDataBlock;
+import io.github.kotlinmania.spring.boot.loader.zip.DataBlock;
+import io.github.kotlinmania.spring.boot.loader.zip.ZipContent;
 
 /**
  * {@link SeekableByteChannel} implementation for {@link NestedLocation nested} jar files.

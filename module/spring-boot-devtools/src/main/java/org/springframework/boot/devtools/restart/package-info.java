@@ -18,6 +18,6 @@
  * Application restart support.
  */
 @NullMarked
-package org.springframework.boot.devtools.restart;
+package io.github.kotlinmania.spring.boot.devtools.restart;
 
 import org.jspecify.annotations.NullMarked;

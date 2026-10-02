@@ -18,6 +18,6 @@
  * Interfaces and classes relating to invoking operation methods.
  */
 @NullMarked
-package org.springframework.boot.actuate.endpoint.invoke;
+package io.github.kotlinmania.spring.boot.actuate.endpoint.invoke;
 
 import org.jspecify.annotations.NullMarked;

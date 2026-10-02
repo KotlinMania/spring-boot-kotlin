@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.testing.testcontainers.springbeans;
+package io.github.kotlinmania.spring.boot.docs.testing.testcontainers.springbeans;
 
 import org.testcontainers.mongodb.MongoDBContainer;
 import org.testcontainers.utility.DockerImageName;
 
-import org.springframework.boot.test.context.TestConfiguration;
+import io.github.kotlinmania.spring.boot.test.context.TestConfiguration;
 import org.springframework.context.annotation.Bean;
 
 @TestConfiguration(proxyBeanMethods = false)

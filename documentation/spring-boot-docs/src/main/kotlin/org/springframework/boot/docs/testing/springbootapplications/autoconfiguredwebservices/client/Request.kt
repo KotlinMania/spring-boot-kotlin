@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.testing.springbootapplications.autoconfiguredwebservices.client
+package io.github.kotlinmania.spring.boot.docs.testing.springbootapplications.autoconfiguredwebservices.client
 
 import jakarta.xml.bind.annotation.XmlRootElement
 

@@ -14,15 +14,15 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.test.context.filter;
+package io.github.kotlinmania.spring.boot.test.context.filter;
 
 import java.io.IOException;
 
 import org.jspecify.annotations.Nullable;
 
 import org.springframework.beans.factory.config.ConfigurableListableBeanFactory;
-import org.springframework.boot.context.TypeExcludeFilter;
-import org.springframework.boot.test.context.TestComponent;
+import io.github.kotlinmania.spring.boot.context.TypeExcludeFilter;
+import io.github.kotlinmania.spring.boot.test.context.TestComponent;
 import org.springframework.core.type.classreading.MetadataReader;
 import org.springframework.core.type.classreading.MetadataReaderFactory;
 

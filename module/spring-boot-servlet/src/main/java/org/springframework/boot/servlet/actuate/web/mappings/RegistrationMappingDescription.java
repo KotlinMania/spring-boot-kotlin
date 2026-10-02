@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.servlet.actuate.web.mappings;
+package io.github.kotlinmania.spring.boot.servlet.actuate.web.mappings;
 
 import jakarta.servlet.Registration;
 

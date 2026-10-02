@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.web.server.reactive.context.config;
+package io.github.kotlinmania.spring.boot.web.server.reactive.context.config;
 
-import org.springframework.boot.web.server.reactive.MockReactiveWebServerFactory;
+import io.github.kotlinmania.spring.boot.web.server.reactive.MockReactiveWebServerFactory;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.server.reactive.HttpHandler;

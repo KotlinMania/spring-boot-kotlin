@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.websocket.autoconfigure.servlet;
+package io.github.kotlinmania.spring.boot.websocket.autoconfigure.servlet;
 
 import java.util.List;
 import java.util.Map;
@@ -23,17 +23,17 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import org.jspecify.annotations.Nullable;
 import tools.jackson.databind.json.JsonMapper;
 
-import org.springframework.boot.LazyInitializationExcludeFilter;
-import org.springframework.boot.autoconfigure.AutoConfiguration;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
-import org.springframework.boot.autoconfigure.condition.AnyNestedCondition;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingClass;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnWebApplication;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnWebApplication.Type;
-import org.springframework.boot.autoconfigure.task.TaskExecutionAutoConfiguration;
+import io.github.kotlinmania.spring.boot.LazyInitializationExcludeFilter;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.EnableAutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.AnyNestedCondition;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnBean;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnClass;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnMissingClass;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnProperty;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnWebApplication;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnWebApplication.Type;
+import io.github.kotlinmania.spring.boot.autoconfigure.task.TaskExecutionAutoConfiguration;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Conditional;
 import org.springframework.context.annotation.Configuration;
@@ -58,8 +58,8 @@ import org.springframework.web.socket.config.annotation.WebSocketMessageBrokerCo
  * @author Moritz Halbritter
  * @since 4.0.0
  */
-@AutoConfiguration(afterName = { "org.springframework.boot.jackson.autoconfigure.JacksonAutoConfiguration",
-		"org.springframework.boot.jackson2.autoconfigure.Jackson2AutoConfiguration" })
+@AutoConfiguration(afterName = { "io.github.kotlinmania.spring.boot.jackson.autoconfigure.JacksonAutoConfiguration",
+		"io.github.kotlinmania.spring.boot.jackson2.autoconfigure.Jackson2AutoConfiguration" })
 @ConditionalOnWebApplication(type = Type.SERVLET)
 @ConditionalOnClass({ WebSocketMessageBrokerConfigurer.class, DelegatingWebSocketMessageBrokerConfiguration.class })
 @ConditionalOnBean(DelegatingWebSocketMessageBrokerConfiguration.class)

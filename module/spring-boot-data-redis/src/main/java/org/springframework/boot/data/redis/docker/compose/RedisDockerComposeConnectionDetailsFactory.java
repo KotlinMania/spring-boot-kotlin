@@ -14,15 +14,15 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.data.redis.docker.compose;
+package io.github.kotlinmania.spring.boot.data.redis.docker.compose;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.data.redis.autoconfigure.DataRedisConnectionDetails;
-import org.springframework.boot.docker.compose.core.RunningService;
-import org.springframework.boot.docker.compose.service.connection.DockerComposeConnectionDetailsFactory;
-import org.springframework.boot.docker.compose.service.connection.DockerComposeConnectionSource;
-import org.springframework.boot.ssl.SslBundle;
+import io.github.kotlinmania.spring.boot.data.redis.autoconfigure.DataRedisConnectionDetails;
+import io.github.kotlinmania.spring.boot.docker.compose.core.RunningService;
+import io.github.kotlinmania.spring.boot.docker.compose.service.connection.DockerComposeConnectionDetailsFactory;
+import io.github.kotlinmania.spring.boot.docker.compose.service.connection.DockerComposeConnectionSource;
+import io.github.kotlinmania.spring.boot.ssl.SslBundle;
 
 /**
  * {@link DockerComposeConnectionDetailsFactory} to create

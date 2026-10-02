@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.configurationsample.simple;
+package io.github.kotlinmania.spring.boot.configurationsample.simple;
 
 /**
  * This has no annotation on purpose to check that no meta-data is generated.

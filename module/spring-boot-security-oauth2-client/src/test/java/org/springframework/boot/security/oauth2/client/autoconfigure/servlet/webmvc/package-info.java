@@ -15,6 +15,6 @@
  */
 
 @NullMarked
-package org.springframework.boot.security.oauth2.client.autoconfigure.servlet.webmvc;
+package io.github.kotlinmania.spring.boot.security.oauth2.client.autoconfigure.servlet.webmvc;
 
 import org.jspecify.annotations.NullMarked;

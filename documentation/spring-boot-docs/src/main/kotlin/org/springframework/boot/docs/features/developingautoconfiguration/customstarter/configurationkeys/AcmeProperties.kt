@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.features.developingautoconfiguration.customstarter.configurationkeys
+package io.github.kotlinmania.spring.boot.docs.features.developingautoconfiguration.customstarter.configurationkeys
 
-import org.springframework.boot.context.properties.ConfigurationProperties
+import io.github.kotlinmania.spring.boot.context.properties.ConfigurationProperties
 import java.time.Duration
 
 @ConfigurationProperties("acme")

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.testcontainers;
+package io.github.kotlinmania.spring.boot.testcontainers;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
@@ -25,10 +25,10 @@ import org.junit.jupiter.api.Test;
 import org.testcontainers.containers.Container;
 import org.testcontainers.postgresql.PostgreSQLContainer;
 
-import org.springframework.boot.testcontainers.beans.TestcontainerBeanDefinition;
-import org.springframework.boot.testcontainers.context.ImportTestcontainers;
-import org.springframework.boot.testsupport.container.DisabledIfDockerUnavailable;
-import org.springframework.boot.testsupport.container.TestImage;
+import io.github.kotlinmania.spring.boot.testcontainers.beans.TestcontainerBeanDefinition;
+import io.github.kotlinmania.spring.boot.testcontainers.context.ImportTestcontainers;
+import io.github.kotlinmania.spring.boot.testsupport.container.DisabledIfDockerUnavailable;
+import io.github.kotlinmania.spring.boot.testsupport.container.TestImage;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.test.context.DynamicPropertyRegistry;
 import org.springframework.test.context.DynamicPropertySource;

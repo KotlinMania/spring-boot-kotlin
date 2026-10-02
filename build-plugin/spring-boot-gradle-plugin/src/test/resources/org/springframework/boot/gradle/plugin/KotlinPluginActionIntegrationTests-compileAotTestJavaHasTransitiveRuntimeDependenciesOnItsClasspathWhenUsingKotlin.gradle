@@ -15,8 +15,8 @@
  */
 
 plugins {
-	id 'org.springframework.boot'
-	id 'org.springframework.boot.aot'
+	id 'io.github.kotlinmania.spring.boot.
+	id 'io.github.kotlinmania.spring.boot.aot'
 	id 'java'
 	id "org.jetbrains.kotlin.jvm"
 }
@@ -31,7 +31,7 @@ repositories {
 configurations.all {
 	resolutionStrategy {
 		eachDependency {
-			if (it.requested.group == 'org.springframework.boot') {
+			if (it.requested.group == 'io.github.kotlinmania.spring.boot.) {
 				it.useVersion project.bootVersion
 			}
 		}

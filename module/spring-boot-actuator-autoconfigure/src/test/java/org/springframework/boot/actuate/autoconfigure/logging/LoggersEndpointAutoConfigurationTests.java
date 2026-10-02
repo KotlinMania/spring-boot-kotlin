@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.actuate.autoconfigure.logging;
+package io.github.kotlinmania.spring.boot.actuate.autoconfigure.logging;
 
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.actuate.logging.LoggersEndpoint;
-import org.springframework.boot.autoconfigure.AutoConfigurations;
-import org.springframework.boot.logging.LoggingSystem;
-import org.springframework.boot.test.context.runner.ApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.actuate.logging.LoggersEndpoint;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurations;
+import io.github.kotlinmania.spring.boot.logging.LoggingSystem;
+import io.github.kotlinmania.spring.boot.test.context.runner.ApplicationContextRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -58,7 +58,7 @@ class LoggersEndpointAutoConfigurationTests {
 
 	@Test
 	void runWithNoneLoggingSystemShouldNotHaveEndpointBean() {
-		this.contextRunner.withSystemProperties("org.springframework.boot.logging.LoggingSystem=none")
+		this.contextRunner.withSystemProperties("io.github.kotlinmania.spring.boot.logging.LoggingSystem=none")
 			.run((context) -> assertThat(context).doesNotHaveBean(LoggersEndpoint.class));
 	}
 

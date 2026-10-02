@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.actuator.metrics.gettingstarted.commontags
+package io.github.kotlinmania.spring.boot.docs.actuator.metrics.gettingstarted.commontags
 
 import io.micrometer.core.instrument.MeterRegistry
-import org.springframework.boot.micrometer.metrics.autoconfigure.MeterRegistryCustomizer
+import io.github.kotlinmania.spring.boot.micrometer.metrics.autoconfigure.MeterRegistryCustomizer
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
 

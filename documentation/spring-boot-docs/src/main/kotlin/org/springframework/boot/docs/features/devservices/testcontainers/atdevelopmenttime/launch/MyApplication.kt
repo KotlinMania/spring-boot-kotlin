@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.features.devservices.testcontainers.atdevelopmenttime.launch
+package io.github.kotlinmania.spring.boot.docs.features.devservices.testcontainers.atdevelopmenttime.launch
 
-import org.springframework.boot.autoconfigure.SpringBootApplication
-import org.springframework.boot.docs.features.springapplication.MyApplication
-import org.springframework.boot.runApplication
+import io.github.kotlinmania.spring.boot.autoconfigure.SpringBootApplication
+import io.github.kotlinmania.spring.boot.docs.features.springapplication.MyApplication
+import io.github.kotlinmania.spring.boot.runApplication
 
 @SpringBootApplication
 class MyApplication

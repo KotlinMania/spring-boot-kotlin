@@ -1,5 +1,9 @@
 import org.gradle.api.GradleException
 import org.gradle.api.artifacts.VersionCatalogsExtension
+import org.gradle.api.file.ArchiveOperations
+import org.gradle.api.file.FileSystemOperations
+import org.gradle.api.tasks.ClasspathNormalizer
+import org.gradle.api.tasks.PathSensitivity
 import org.gradle.api.tasks.testing.AbstractTestTask
 import org.gradle.api.tasks.testing.logging.TestExceptionFormat
 import org.gradle.api.tasks.testing.logging.TestLogEvent
@@ -8,7 +12,6 @@ import org.gradle.process.ExecOperations
 import org.jetbrains.kotlin.gradle.ExperimentalWasmDsl
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 import org.jetbrains.kotlin.gradle.dsl.KotlinVersion
-import org.jetbrains.kotlin.gradle.plugin.KotlinTarget
 import org.jetbrains.kotlin.gradle.plugin.mpp.KotlinNativeTarget
 import org.jetbrains.kotlin.gradle.plugin.mpp.apple.XCFramework
 import org.jetbrains.kotlin.gradle.targets.js.nodejs.NodeJsEnvSpec
@@ -24,21 +27,19 @@ import java.nio.file.StandardCopyOption
 import java.util.zip.ZipInputStream
 
 plugins {
-    alias(libs.plugins.kotlin.multiplatform)
+    id("org.jetbrains.kotlin.multiplatform")
     alias(libs.plugins.kotlin.serialization)
     alias(libs.plugins.android.kmp)
     alias(libs.plugins.vanniktech)
     alias(libs.plugins.detekt)
     alias(libs.plugins.ktlint)
-    alias(libs.plugins.kotlinx.benchmark)
-    alias(libs.plugins.kotlin.allopen)
 }
 
 group = providers.gradleProperty("project.group").getOrElse("io.github.kotlinmania")
 version = providers.gradleProperty("project.version").getOrElse("0.1.0-SNAPSHOT")
 val frameworkName = providers.gradleProperty("project.frameworkName").getOrElse("Unnamed")
 val projectNamespace = providers.gradleProperty("project.namespace").getOrElse("io.github.kotlinmania")
-val kotlinVersion = providers.gradleProperty("versions.kotlin").getOrElse("2.4.0")
+val kotlinVersion = providers.gradleProperty("versions.kotlin").getOrElse("2.3.21")
 val isCodeqlBuild = providers.gradleProperty("kotlinmania.codeql").map(String::toBoolean).getOrElse(false)
 val commonMainBundleName = providers.gradleProperty("project.dependencies.commonMainBundle").get()
 val commonMainDependencyBundle =
@@ -48,62 +49,7 @@ val commonMainDependencyBundle =
         .findBundle(commonMainBundleName)
         .orElseThrow { GradleException("Missing libs bundle '$commonMainBundleName'") }
 
-fun csvProperty(name: String): Set<String> =
-    providers
-        .gradleProperty(name)
-        .map { value ->
-            value
-                .split(",")
-                .map { it.trim() }
-                .filter { it.isNotEmpty() }
-                .toSet()
-        }.getOrElse(emptySet())
-
-fun optionalTrimmedProperty(name: String): String? =
-    providers
-        .gradleProperty(name)
-        .map { it.trim() }
-        .orNull
-        ?.takeIf { it.isNotEmpty() }
-
-val enabledFeatureNames = csvProperty("project.features")
-val benchmarkEnabled = "benchmark" in enabledFeatureNames
-val benchmarkTargetNames = csvProperty("project.benchmark.targets")
-val commonBenchmarkBundleName = optionalTrimmedProperty("project.dependencies.commonBenchmarkBundle")
-val commonBenchmarkDependencyBundle =
-    commonBenchmarkBundleName?.let { bundleName ->
-        extensions
-            .getByType(VersionCatalogsExtension::class.java)
-            .named("libs")
-            .findBundle(bundleName)
-            .orElseThrow { GradleException("Missing libs bundle '$bundleName'") }
-    }
-if (benchmarkEnabled && commonBenchmarkDependencyBundle == null) {
-    throw GradleException("Feature 'benchmark' requires project.dependencies.commonBenchmarkBundle")
-}
-val benchmarkWarmups = providers.gradleProperty("project.benchmark.warmups").map { it.toInt() }.getOrElse(3)
-val benchmarkIterations = providers.gradleProperty("project.benchmark.iterations").map { it.toInt() }.getOrElse(5)
-val benchmarkIterationTime = providers.gradleProperty("project.benchmark.iterationTime").map { it.toLong() }.getOrElse(1L)
-val benchmarkIterationTimeUnit = providers.gradleProperty("project.benchmark.iterationTimeUnit").getOrElse("s")
-val intellijCoroutinesVersion =
-    providers.gradleProperty("versions.intellij.coroutines").getOrElse("1.10.2-intellij-1")
-
-// KGP runs Swift Export in an isolated worker whose classpath is
-// `swiftExportClasspath`. Adding a dependency disables KGP's default
-// dependency population, so keep the default embeddable runner explicit too.
-val projectDependencyHandler = project.dependencies
-configurations.configureEach {
-    if (name == "swiftExportClasspath") {
-        dependencies.add(projectDependencyHandler.create("org.jetbrains.kotlin:swift-export-embeddable:$kotlinVersion"))
-        dependencies.add(
-            projectDependencyHandler.create(
-                "org.jetbrains.intellij.deps.kotlinx:kotlinx-coroutines-core-jvm:$intellijCoroutinesVersion",
-            ),
-        )
-    }
-}
-
-// Opt-ins shared across Kotlin targets.
+// Opt-ins shared between the top-level compilerOptions and the codeqlCompileJvm kotlinc invocation.
 val commonOptIns =
     listOf(
         "kotlin.time.ExperimentalTime",
@@ -157,7 +103,6 @@ val requiredAndroidSdkPackageDirs =
     )
 
 fun writeAndroidLocalProperties() {
-    projectAndroidSdkDir.mkdirs()
     val sdkDirPropertyValue = projectAndroidSdkDir.absolutePath.replace("\\", "/")
     layout.projectDirectory
         .file("local.properties")
@@ -268,36 +213,7 @@ fun installProjectAndroidSdk(execOperations: ExecOperations) {
     println("setup-android-sdk: done; SDK at $projectAndroidSdkDir")
 }
 
-// ----------------------------------------------------------------------------
-// Android SDK setup is gated to follow the requested task. It must never run for
-// non-Android invocations (jsTest, jvmTest, swiftExportSmokeTest, native /
-// androidNative links) -- an unconditional install here is what made the SDK
-// download appear on every machine and target.
-//
-// `writeAndroidLocalProperties()` always runs: it is cheap, hits no network, and
-// only points local.properties at the project-local .android-sdk so AGP can
-// resolve `sdk.dir` while the `androidLibrary {}` block evaluates.
-//
-// The SDK *package* download must happen at configuration time when -- and only
-// when -- an Android task is in the requested build. AGP validates the packages
-// while determining the dependencies of `compileAndroidMain` (task-graph
-// construction, strictly before any task executes), so a plain `dependsOn`
-// cannot supply them in time. We detect Android intent from the requested task
-// names and install eagerly in that case. androidNative* are Kotlin/Native
-// targets and need no Android SDK.
-// ----------------------------------------------------------------------------
 writeAndroidLocalProperties()
-
-fun requestedTaskWantsAndroid(rawTaskName: String): Boolean {
-    val taskName = rawTaskName.substringAfterLast(':')
-    if (taskName.contains("AndroidNative")) return false // Kotlin/Native, no SDK
-    if (taskName.contains("Android")) return true // direct AGP tasks
-    return taskName in setOf("build", "assemble", "check") // aggregates pull android
-}
-
-if (gradle.startParameter.taskNames.any(::requestedTaskWantsAndroid)) {
-    installProjectAndroidSdk(serviceOf())
-}
 
 val ensureAndroidSdk by tasks.registering {
     group = "setup"
@@ -308,25 +224,8 @@ val ensureAndroidSdk by tasks.registering {
     }
 }
 
-// Secondary net: order every AGP Android task after the installer (a no-op on
-// warm runs). Excludes androidNative* (Kotlin/Native) and the installer itself.
-tasks
-    .matching { task ->
-        val taskName = task.name
-        taskName != "ensureAndroidSdk" &&
-            taskName.contains("Android") &&
-            !taskName.contains("AndroidNative")
-    }.configureEach {
-        dependsOn(ensureAndroidSdk)
-    }
-
-// Gap #9b: KGP-generated bridge boilerplate and KotlinCoroutineSupport runtime
-// produce warnings (unchecked casts, unused expressions, opt-in requirements)
-// that cannot be fixed in source — they are regenerated every build.
-tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompilationTask<*>>().configureEach {
-    if (name.startsWith("compileSwiftExport")) {
-        compilerOptions.allWarningsAsErrors.set(false)
-    }
+tasks.matching { it.name == "compileAndroidMain" }.configureEach {
+    dependsOn(ensureAndroidSdk)
 }
 
 val jvmToolchainVersion = providers.gradleProperty("jvm.toolchain").getOrElse("21").toInt()
@@ -348,11 +247,11 @@ kotlin {
     applyDefaultHierarchyTemplate()
 
     compilerOptions {
-        languageVersion.set(KotlinVersion.KOTLIN_2_4)
-        apiVersion.set(KotlinVersion.KOTLIN_2_4)
+        languageVersion.set(KotlinVersion.KOTLIN_2_3)
+        apiVersion.set(KotlinVersion.KOTLIN_2_3)
         allWarningsAsErrors.set(!isCodeqlBuild)
         optIn.addAll(commonOptIns)
-        freeCompilerArgs.addAll("-Xexpect-actual-classes", "-Xsuppress-version-warnings")
+        freeCompilerArgs.add("-Xexpect-actual-classes")
     }
 
     val xcf = XCFramework(frameworkName)
@@ -368,72 +267,33 @@ kotlin {
         }
     }
 
-    fun KotlinTarget.configureBenchmarkCompilation() {
-        if (!benchmarkEnabled || name !in benchmarkTargetNames) return
-        val mainCompilation = compilations.getByName("main")
-        compilations.create("benchmark") {
-            associateWith(mainCompilation)
-            defaultSourceSet.dependencies {
-                implementation(commonBenchmarkDependencyBundle!!)
-            }
-        }
-    }
-
     // Apple — Tier 1/2 targets
-    macosArm64 {
-        configureBenchmarkCompilation()
-        addToXcf()
-    }
-    iosArm64 {
-        configureBenchmarkCompilation()
-        addToXcf(static = true)
-    }
-    iosSimulatorArm64 {
-        configureBenchmarkCompilation()
-        addToXcf(static = true)
-    }
-    tvosArm64 {
-        configureBenchmarkCompilation()
-        addToXcf()
-    }
-    tvosSimulatorArm64 {
-        configureBenchmarkCompilation()
-        addToXcf()
-    }
-    watchosArm64 {
-        configureBenchmarkCompilation()
-        addToXcf()
-    }
-    watchosDeviceArm64 {
-        configureBenchmarkCompilation()
-        addToXcf()
-    }
-    watchosSimulatorArm64 {
-        configureBenchmarkCompilation()
-        addToXcf()
-    }
+    macosArm64 { addToXcf() }
+    iosArm64 { addToXcf(static = true) }
+    iosSimulatorArm64 { addToXcf(static = true) }
+    tvosArm64 { addToXcf() }
+    tvosSimulatorArm64 { addToXcf() }
+    watchosArm64 { addToXcf() }
+    watchosDeviceArm64 { addToXcf() }
+    watchosSimulatorArm64 { addToXcf() }
 
     // iosX64: Intel Mac simulator. Tier 3 in Kotlin/Native but NOT deprecated —
     // Apple still ships x86_64 iOS simulator runtimes, so it is always built.
-    iosX64 {
-        configureBenchmarkCompilation()
-        addToXcf(static = true)
-    }
+    iosX64 { addToXcf(static = true) }
 
     // Other native — Tier 1/2
-    linuxX64 { configureBenchmarkCompilation() }
-    linuxArm64 { configureBenchmarkCompilation() }
-    mingwX64 { configureBenchmarkCompilation() }
+    linuxX64()
+    linuxArm64()
+    mingwX64()
 
     // Android NDK — always built (full target surface, no opt-in gate).
-    androidNativeArm32 { configureBenchmarkCompilation() }
-    androidNativeArm64 { configureBenchmarkCompilation() }
-    androidNativeX86 { configureBenchmarkCompilation() }
-    androidNativeX64 { configureBenchmarkCompilation() }
+    androidNativeArm32()
+    androidNativeArm64()
+    androidNativeX86()
+    androidNativeX64()
 
     // Web
     js {
-        configureBenchmarkCompilation()
         browser()
         nodejs()
     }
@@ -441,19 +301,17 @@ kotlin {
     // wasmJs is Stable as of Kotlin 2.2; @OptIn may be removable — verify before dropping on wasmWasi.
     @OptIn(ExperimentalWasmDsl::class)
     wasmJs {
-        configureBenchmarkCompilation()
         browser()
         nodejs()
     }
 
     @OptIn(ExperimentalWasmDsl::class)
     wasmWasi {
-        configureBenchmarkCompilation()
         nodejs()
     }
 
-    // Swift Export bridge — Experimental per Kotlin 2.4.0 release notes.
-    // KGP 2.4.0 does not expose a public opt-in annotation; warnings (if any)
+    // Swift Export bridge — Experimental per Kotlin 2.3.0 release notes.
+    // KGP 2.3.21 does not expose a public opt-in annotation; warnings (if any)
     // arrive via KotlinToolingDiagnostics, not @RequiresOptIn.
     swiftExport {
         moduleName = frameworkName
@@ -464,7 +322,7 @@ kotlin {
         }
     }
 
-    // Android KMP library. Block name is `android` — `androidLibrary` is deprecated in current KGP.
+    // Android KMP library. Block name is `android` — `androidLibrary` is deprecated in KGP 2.3.x.
     android {
         namespace = projectNamespace
         compileSdk = projectCompileSdk.toInt()
@@ -475,7 +333,6 @@ kotlin {
 
     // JVM — jvmTarget derived from the same toolchain property so they can't drift.
     jvm {
-        configureBenchmarkCompilation()
         compilerOptions {
             jvmTarget.set(JvmTarget.fromTarget(jvmToolchainVersion.toString()))
         }
@@ -488,38 +345,12 @@ kotlin {
         commonTest.dependencies {
             implementation(kotlin("test"))
         }
-        if (benchmarkEnabled) {
-            val commonBenchmark = maybeCreate("commonBenchmark")
-            commonBenchmark.dependencies {
-                implementation(commonBenchmarkDependencyBundle!!)
-            }
-            benchmarkTargetNames.forEach { targetName ->
-                findByName("${targetName}Benchmark")?.dependsOn(commonBenchmark)
-            }
-        }
     }
 }
 
-allOpen {
-    annotation("org.openjdk.jmh.annotations.State")
-    annotation("kotlinx.benchmark.State")
-}
-
-if (benchmarkEnabled) {
-    benchmark {
-        targets {
-            benchmarkTargetNames.forEach { targetName ->
-                register("${targetName}Benchmark")
-            }
-        }
-        configurations {
-            named("main") {
-                warmups = benchmarkWarmups
-                iterations = benchmarkIterations
-                iterationTime = benchmarkIterationTime
-                iterationTimeUnit = benchmarkIterationTimeUnit
-            }
-        }
+tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompilationTask<*>>().configureEach {
+    if (name.startsWith("compileSwiftExport")) {
+        compilerOptions.allWarningsAsErrors.set(false)
     }
 }
 
@@ -579,23 +410,6 @@ ktlint {
         exclude("**/build/**")
         include("**/src/**/kotlin/**")
     }
-}
-
-if (benchmarkEnabled) {
-    tasks
-        .withType<io.gitlab.arturbosch.detekt.Detekt>()
-        .matching {
-            it.name.contains("BenchmarkBenchmark")
-        }.configureEach {
-            enabled = false
-        }
-
-    tasks
-        .matching {
-            it.name.startsWith("runKtlintCheckOver") && it.name.endsWith("BenchmarkBenchmarkSourceSet")
-        }.configureEach {
-            enabled = false
-        }
 }
 
 tasks.named("check") {
@@ -708,12 +522,156 @@ mavenPublishing {
 }
 
 // ============================================================================
+// CodeQL extraction
+// ============================================================================
+val codeqlKotlincScope =
+    configurations.dependencyScope("codeqlKotlinc") {
+        description = "Kotlin compiler (CodeQL extraction target only)"
+    }
+val codeqlSourceScope =
+    configurations.dependencyScope("codeqlSourceClasspath") {
+        description = "Runtime classpath for CodeQL extraction of commonMain sources"
+    }
+val codeqlAarScope =
+    configurations.dependencyScope("codeqlAndroidAar") {
+        description = "Android AAR artifacts for CodeQL dependency classpath extraction"
+    }
+val codeqlKotlincFiles =
+    configurations.resolvable("codeqlKotlincFiles") {
+        extendsFrom(codeqlKotlincScope.get())
+    }
+val codeqlSourceFiles =
+    configurations.resolvable("codeqlSourceFiles") {
+        extendsFrom(codeqlSourceScope.get())
+    }
+val codeqlAarFiles =
+    configurations.resolvable("codeqlAarFiles") {
+        extendsFrom(codeqlAarScope.get())
+    }
+
+val codeqlLanguageVersion =
+    providers
+        .gradleProperty("kotlin.languageVersion")
+        .getOrElse(kotlinVersion.split('.').take(2).joinToString("."))
+val codeqlApiVersion = providers.gradleProperty("kotlin.apiVersion").getOrElse(codeqlLanguageVersion)
+val codeqlKotlinSourceSetNames =
+    providers
+        .gradleProperty("project.codeql.kotlinSourceSets")
+        .getOrElse("commonMain")
+        .splitToSequence(",")
+        .map { it.trim() }
+        .filter { it.isNotEmpty() }
+        .toList()
+val codeqlKotlinCommonSourceSetNames =
+    providers
+        .gradleProperty("project.codeql.kotlinCommonSourceSets")
+        .getOrElse("commonMain")
+        .splitToSequence(",")
+        .map { it.trim() }
+        .filter { it.isNotEmpty() }
+        .toList()
+
+dependencies {
+    val codeqlKotlinVersion = providers.gradleProperty("codeql.kotlin.version").getOrElse(kotlinVersion)
+    add("codeqlKotlinc", "org.jetbrains.kotlin:kotlin-compiler-embeddable:$codeqlKotlinVersion")
+
+    providers
+        .gradleProperty("project.dependencies.codeqlSourceClasspath")
+        .getOrElse("")
+        .splitToSequence(",")
+        .map { it.trim() }
+        .filter { it.isNotEmpty() }
+        .forEach { add("codeqlSourceClasspath", it) }
+
+    providers
+        .gradleProperty("project.dependencies.codeqlAndroidAar")
+        .getOrElse("")
+        .splitToSequence(",")
+        .map { it.trim() }
+        .filter { it.isNotEmpty() }
+        .forEach { add("codeqlAndroidAar", it) }
+}
+
+val codeqlCompileJvm =
+    tasks.register<JavaExec>("codeqlCompileJvm") {
+        description =
+            "Compile ${codeqlKotlinSourceSetNames.joinToString(",")} Kotlin sources " +
+                "with kotlinc $codeqlLanguageVersion for CodeQL Java/Kotlin extraction."
+        group = "verification"
+        classpath(codeqlKotlincFiles)
+        mainClass.set("org.jetbrains.kotlin.cli.jvm.K2JVMCompiler")
+        // Inject services at config time — config-cache safe; project.copy/zipTree in a task
+        // action would violate https://docs.gradle.org/9.5.1/userguide/configuration_cache.html
+        val fs = serviceOf<FileSystemOperations>()
+        val archives = serviceOf<ArchiveOperations>()
+        val outDir = layout.buildDirectory.dir("classes/kotlin/codeql-jvm")
+        val aarExtractDir = layout.buildDirectory.dir("codeql/android-aar")
+        val commonSources =
+            files(
+                codeqlKotlinCommonSourceSetNames.map { sourceSetName ->
+                    fileTree("src/$sourceSetName/kotlin") { include("**/*.kt") }
+                },
+            )
+        val sources =
+            files(
+                codeqlKotlinSourceSetNames.map { sourceSetName ->
+                    fileTree("src/$sourceSetName/kotlin") { include("**/*.kt") }
+                },
+            )
+        inputs.files(sources).withPathSensitivity(PathSensitivity.RELATIVE)
+        inputs.files(commonSources).withPathSensitivity(PathSensitivity.RELATIVE)
+        inputs.files(codeqlSourceFiles).withNormalizer(ClasspathNormalizer::class.java)
+        inputs.files(codeqlAarFiles).withNormalizer(ClasspathNormalizer::class.java)
+        outputs.dir(outDir)
+        outputs.dir(aarExtractDir)
+        doFirst {
+            outDir.get().asFile.mkdirs()
+            val extractedJars =
+                codeqlAarFiles.get().resolve().mapNotNull { aar ->
+                    val extractTarget = aarExtractDir.get().asFile.resolve(aar.nameWithoutExtension)
+                    extractTarget.mkdirs()
+                    fs.copy {
+                        from(archives.zipTree(aar))
+                        include("classes.jar")
+                        into(extractTarget)
+                    }
+                    extractTarget.resolve("classes.jar").takeIf { it.exists() }
+                }
+            val fullClasspath =
+                (codeqlSourceFiles.get().resolve() + extractedJars)
+                    .joinToString(File.pathSeparator) { it.absolutePath }
+            val commonSourceFiles = commonSources.files.toMutableList()
+            require(commonSourceFiles.isNotEmpty()) {
+                "project.codeql.kotlinCommonSourceSets must resolve to at least one Kotlin source file"
+            }
+            val sourceFiles = sources.files.toMutableList()
+            require(sourceFiles.isNotEmpty()) {
+                "project.codeql.kotlinSourceSets must resolve to at least one Kotlin source file"
+            }
+            args = listOf(
+                "-d",
+                outDir.get().asFile.absolutePath,
+                "-classpath",
+                fullClasspath,
+                "-jvm-target",
+                jvmToolchainVersion.toString(),
+                "-no-stdlib",
+                "-no-reflect",
+                "-language-version",
+                codeqlLanguageVersion,
+                "-api-version",
+                codeqlApiVersion,
+                "-Xmulti-platform",
+                "-Xcommon-sources=${commonSourceFiles.joinToString(",") { it.absolutePath }}",
+                "-Xexpect-actual-classes",
+            ) + commonOptIns.flatMap { listOf("-opt-in", it) } + sourceFiles.map { it.absolutePath }
+        }
+    }
+
+// ============================================================================
 // Tasks
 // ============================================================================
 
-// Exact test lifecycle task. Without this, ./gradlew test is ambiguous between
-// Android test task names. This runs commonTest through the KMP allTests
-// lifecycle and adds the Android host + Swift Export parity tests.
 tasks.register("setupAndroidSdk") {
     group = "setup"
     description = "Downloads and configures the project-local Android SDK. (Alias for ensureAndroidSdk)"
@@ -779,10 +737,7 @@ tasks.register("swiftExportSmokeTest") {
             }.assertNormalExitValue()
 
         val generatedPackageSwift =
-            layout.buildDirectory
-                .file("SPMPackage/macosArm64/Debug/Package.swift")
-                .get()
-                .asFile
+            layout.buildDirectory.file("SPMPackage/macosArm64/Debug/Package.swift").get().asFile
         if (generatedPackageSwift.exists()) {
             val text = generatedPackageSwift.readText()
             if (!text.contains("platforms:")) {
@@ -794,12 +749,6 @@ tasks.register("swiftExportSmokeTest") {
                 )
             }
         }
-
-        execOperations
-            .exec {
-                workingDir = layout.projectDirectory.dir("swift-test-harness").asFile
-                commandLine("swift", "package", "reset")
-            }.assertNormalExitValue()
 
         execOperations
             .exec {

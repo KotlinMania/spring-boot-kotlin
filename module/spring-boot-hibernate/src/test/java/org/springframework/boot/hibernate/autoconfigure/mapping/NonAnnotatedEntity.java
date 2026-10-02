@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.hibernate.autoconfigure.mapping;
+package io.github.kotlinmania.spring.boot.hibernate.autoconfigure.mapping;
 
 /**
  * A non annotated entity that is handled by a custom "mapping-file".

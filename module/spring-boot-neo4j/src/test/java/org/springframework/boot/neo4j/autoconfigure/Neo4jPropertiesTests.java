@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.neo4j.autoconfigure;
+package io.github.kotlinmania.spring.boot.neo4j.autoconfigure;
 
 import java.time.Duration;
 
@@ -23,7 +23,7 @@ import org.junit.jupiter.api.Test;
 import org.neo4j.driver.Config;
 import org.neo4j.driver.internal.retry.RetrySettings;
 
-import org.springframework.boot.neo4j.autoconfigure.Neo4jProperties.Pool;
+import io.github.kotlinmania.spring.boot.neo4j.autoconfigure.Neo4jProperties.Pool;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

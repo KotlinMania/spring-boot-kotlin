@@ -17,4 +17,4 @@
 /**
  * Classes for {@link java.lang.System System}-related testing.
  */
-package org.springframework.boot.testsupport.system;
+package io.github.kotlinmania.spring.boot.testsupport.system;

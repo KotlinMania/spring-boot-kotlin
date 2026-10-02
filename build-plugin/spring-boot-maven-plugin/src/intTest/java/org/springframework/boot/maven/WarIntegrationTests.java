@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.maven;
+package io.github.kotlinmania.spring.boot.maven;
 
 import java.io.File;
 import java.io.IOException;
@@ -29,9 +29,9 @@ import java.util.jar.JarFile;
 import org.junit.jupiter.api.TestTemplate;
 import org.junit.jupiter.api.extension.ExtendWith;
 
-import org.springframework.boot.loader.tools.JarModeLibrary;
-import org.springframework.boot.loader.tools.LibraryCoordinates;
-import org.springframework.boot.testsupport.FileUtils;
+import io.github.kotlinmania.spring.boot.loader.tools.JarModeLibrary;
+import io.github.kotlinmania.spring.boot.loader.tools.LibraryCoordinates;
+import io.github.kotlinmania.spring.boot.testsupport.FileUtils;
 import org.springframework.util.FileSystemUtils;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -59,10 +59,10 @@ class WarIntegrationTests extends AbstractArchiveIntegrationTests {
 				.hasEntryWithNameStartingWith("WEB-INF/lib/spring-core")
 				.hasEntryWithNameStartingWith("WEB-INF/lib/commons-logging")
 				.hasEntryWithNameStartingWith("WEB-INF/lib-provided/jakarta.servlet-api-6")
-				.hasEntryWithName("org/springframework/boot/loader/launch/WarLauncher.class")
+				.hasEntryWithName("io.github.kotlinmania.spring.boot.loader/launch/WarLauncher.class")
 				.hasEntryWithName("WEB-INF/classes/org/test/SampleApplication.class")
 				.hasEntryWithName("index.html")
-				.manifest((manifest) -> manifest.hasMainClass("org.springframework.boot.loader.launch.WarLauncher")
+				.manifest((manifest) -> manifest.hasMainClass("io.github.kotlinmania.spring.boot.loader.launch.WarLauncher")
 					.hasStartClass("org.test.SampleApplication")
 					.hasAttribute("Not-Used", "Foo")));
 	}

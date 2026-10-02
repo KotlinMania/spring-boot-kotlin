@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.web.server.servlet.context.testcomponents.listener;
+package io.github.kotlinmania.spring.boot.web.server.servlet.context.testcomponents.listener;
 
 import java.io.IOException;
 import java.util.EnumSet;

@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.jpa.autoconfigure;
+package io.github.kotlinmania.spring.boot.jpa.autoconfigure;
 
 import jakarta.persistence.EntityManagerFactory;
 
 import org.springframework.beans.factory.config.BeanDefinition;
 import org.springframework.beans.factory.config.BeanFactoryPostProcessor;
-import org.springframework.boot.autoconfigure.AbstractDependsOnBeanFactoryPostProcessor;
+import io.github.kotlinmania.spring.boot.autoconfigure.AbstractDependsOnBeanFactoryPostProcessor;
 import org.springframework.orm.jpa.AbstractEntityManagerFactoryBean;
 
 /**

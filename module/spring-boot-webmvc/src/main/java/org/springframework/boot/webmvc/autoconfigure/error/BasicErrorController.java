@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.webmvc.autoconfigure.error;
+package io.github.kotlinmania.spring.boot.webmvc.autoconfigure.error;
 
 import java.util.Collections;
 import java.util.List;
@@ -24,11 +24,11 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.autoconfigure.web.ErrorProperties;
-import org.springframework.boot.web.error.ErrorAttributeOptions;
-import org.springframework.boot.web.error.ErrorAttributeOptions.Include;
-import org.springframework.boot.web.error.ErrorPageRegistrar;
-import org.springframework.boot.webmvc.error.ErrorAttributes;
+import io.github.kotlinmania.spring.boot.autoconfigure.web.ErrorProperties;
+import io.github.kotlinmania.spring.boot.web.error.ErrorAttributeOptions;
+import io.github.kotlinmania.spring.boot.web.error.ErrorAttributeOptions.Include;
+import io.github.kotlinmania.spring.boot.web.error.ErrorPageRegistrar;
+import io.github.kotlinmania.spring.boot.webmvc.error.ErrorAttributes;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -43,7 +43,7 @@ import org.springframework.web.servlet.ModelAndView;
  * Basic global error {@link Controller @Controller}, rendering {@link ErrorAttributes}.
  * More specific errors can be handled either using Spring MVC abstractions (e.g.
  * {@code @ExceptionHandler}) or by
- * {@link ErrorPageRegistrar#registerErrorPages(org.springframework.boot.web.error.ErrorPageRegistry)
+ * {@link ErrorPageRegistrar#registerErrorPages(io.github.kotlinmania.spring.boot.web.error.ErrorPageRegistry)
  * registering error pages}.
  *
  * @author Dave Syer

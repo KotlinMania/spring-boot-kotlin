@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.buildpack.platform.io;
+package io.github.kotlinmania.spring.boot.buildpack.platform.io;
 
 import java.io.IOException;
 import java.nio.file.Files;

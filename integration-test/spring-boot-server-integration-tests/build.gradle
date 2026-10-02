@@ -49,7 +49,7 @@ tasks.register("syncTestRepository", Sync) {
 	}
 }
 
-tasks.register("syncAppSource", org.springframework.boot.build.SyncAppSource) {
+tasks.register("syncAppSource", io.github.kotlinmania.spring.boot.build.SyncAppSource) {
 	sourceDirectory = file("spring-boot-server-tests-app")
 	destinationDirectory = file(layout.buildDirectory.dir("spring-boot-server-tests-app"))
 }

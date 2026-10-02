@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.data.sql.jooq.dslcontext;
+package io.github.kotlinmania.spring.boot.docs.data.sql.jooq.dslcontext;
 
 import java.util.GregorianCalendar;
 

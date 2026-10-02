@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.testing.springbootapplications.autoconfiguredspringdataneo4j.nopropagation
+package io.github.kotlinmania.spring.boot.docs.testing.springbootapplications.autoconfiguredspringdataneo4j.nopropagation
 
-import org.springframework.boot.data.neo4j.test.autoconfigure.DataNeo4jTest
+import io.github.kotlinmania.spring.boot.data.neo4j.test.autoconfigure.DataNeo4jTest
 import org.springframework.transaction.annotation.Propagation
 import org.springframework.transaction.annotation.Transactional
 

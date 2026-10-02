@@ -15,7 +15,9 @@
  */
 package org.springframework.boot.build.architecture.annotations
 
-import kotlin.reflect.KClass
+package io.github.kotlinmania.spring.boot.build.springframework;
+
+import org.gradle.api.Task;
 
 /**
  * `@ConditionalOnClass` analogue for architecture checks.

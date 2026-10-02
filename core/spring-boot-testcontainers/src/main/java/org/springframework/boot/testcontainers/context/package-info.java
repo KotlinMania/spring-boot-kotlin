@@ -18,6 +18,6 @@
  * Spring context support classes for Testcontainers.
  */
 @NullMarked
-package org.springframework.boot.testcontainers.context;
+package io.github.kotlinmania.spring.boot.testcontainers.context;
 
 import org.jspecify.annotations.NullMarked;

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.tomcat;
+package io.github.kotlinmania.spring.boot.tomcat;
 
 import java.util.Arrays;
 import java.util.HashMap;
@@ -40,14 +40,14 @@ import org.apache.commons.logging.LogFactory;
 import org.apache.naming.ContextBindings;
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.tomcat.reactive.TomcatReactiveWebServerFactory;
-import org.springframework.boot.tomcat.servlet.TomcatServletWebServerFactory;
-import org.springframework.boot.web.server.GracefulShutdownCallback;
-import org.springframework.boot.web.server.GracefulShutdownResult;
-import org.springframework.boot.web.server.PortInUseException;
-import org.springframework.boot.web.server.Shutdown;
-import org.springframework.boot.web.server.WebServer;
-import org.springframework.boot.web.server.WebServerException;
+import io.github.kotlinmania.spring.boot.tomcat.reactive.TomcatReactiveWebServerFactory;
+import io.github.kotlinmania.spring.boot.tomcat.servlet.TomcatServletWebServerFactory;
+import io.github.kotlinmania.spring.boot.web.server.GracefulShutdownCallback;
+import io.github.kotlinmania.spring.boot.web.server.GracefulShutdownResult;
+import io.github.kotlinmania.spring.boot.web.server.PortInUseException;
+import io.github.kotlinmania.spring.boot.web.server.Shutdown;
+import io.github.kotlinmania.spring.boot.web.server.WebServer;
+import io.github.kotlinmania.spring.boot.web.server.WebServerException;
 import org.springframework.util.Assert;
 import org.springframework.util.StringUtils;
 

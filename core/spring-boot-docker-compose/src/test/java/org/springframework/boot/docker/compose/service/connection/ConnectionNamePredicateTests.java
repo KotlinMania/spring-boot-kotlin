@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docker.compose.service.connection;
+package io.github.kotlinmania.spring.boot.docker.compose.service.connection;
 
 import java.util.Map;
 import java.util.function.Predicate;
@@ -22,8 +22,8 @@ import java.util.function.Predicate;
 import org.jspecify.annotations.Nullable;
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.docker.compose.core.ImageReference;
-import org.springframework.boot.docker.compose.core.RunningService;
+import io.github.kotlinmania.spring.boot.docker.compose.core.ImageReference;
+import io.github.kotlinmania.spring.boot.docker.compose.core.RunningService;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.BDDMockito.given;
@@ -104,7 +104,7 @@ class ConnectionNamePredicateTests {
 		given(source.getRunningService()).willReturn(runningService);
 		given(runningService.image()).willReturn(ImageReference.of(connectionName));
 		if (label != null) {
-			given(runningService.labels()).willReturn(Map.of("org.springframework.boot.service-connection", label));
+			given(runningService.labels()).willReturn(Map.of("io.github.kotlinmania.spring.boot.service-connection", label));
 		}
 		return source;
 	}

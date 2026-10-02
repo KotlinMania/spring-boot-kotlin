@@ -18,6 +18,6 @@
  * Support for Docker Compose Hazelcast service connections.
  */
 @NullMarked
-package org.springframework.boot.hazelcast.docker.compose;
+package io.github.kotlinmania.spring.boot.hazelcast.docker.compose;
 
 import org.jspecify.annotations.NullMarked;

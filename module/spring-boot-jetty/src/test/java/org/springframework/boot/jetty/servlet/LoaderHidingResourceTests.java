@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.jetty.servlet;
+package io.github.kotlinmania.spring.boot.jetty.servlet;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -50,7 +50,7 @@ class LoaderHidingResourceTests {
 		assertThat(deepList(loaderHidingResource)).hasOnlyElementsOfType(LoaderHidingResource.class)
 			.extracting(Resource::getName)
 			.contains("/assets/image.jpg")
-			.doesNotContain("/org/springframework/boot/Loader.class");
+			.doesNotContain("/io.github.kotlinmania.spring.boot.Loader.class");
 	}
 
 	@Test
@@ -62,7 +62,7 @@ class LoaderHidingResourceTests {
 		assertThat(allResources).hasOnlyElementsOfType(LoaderHidingResource.class)
 			.extracting(Resource::getName)
 			.contains("/assets/image.jpg")
-			.doesNotContain("/org/springframework/boot/Loader.class");
+			.doesNotContain("/io.github.kotlinmania.spring.boot.Loader.class");
 	}
 
 	@Test
@@ -78,7 +78,7 @@ class LoaderHidingResourceTests {
 		assertThat(doesntExist).isNotNull();
 		assertThat(doesntExist.exists()).isFalse();
 		assertThat(doesntExist).isInstanceOf(LoaderHidingResource.class);
-		assertThat(loaderHidingResource.resolve("/org/springframework/boot/Loader.class")).isNull();
+		assertThat(loaderHidingResource.resolve("/io.github.kotlinmania.spring.boot.Loader.class")).isNull();
 	}
 
 	private URI createExampleWar(File temp) throws IOException {
@@ -86,8 +86,8 @@ class LoaderHidingResourceTests {
 		try (JarOutputStream out = new JarOutputStream(new FileOutputStream(exampleWarFile))) {
 			out.putNextEntry(new ZipEntry("org/"));
 			out.putNextEntry(new ZipEntry("org/springframework/"));
-			out.putNextEntry(new ZipEntry("org/springframework/boot/"));
-			out.putNextEntry(new ZipEntry("org/springframework/boot/Loader.class"));
+			out.putNextEntry(new ZipEntry("io.github.kotlinmania.spring.boot."));
+			out.putNextEntry(new ZipEntry("io.github.kotlinmania.spring.boot.Loader.class"));
 			out.putNextEntry(new ZipEntry("assets/"));
 			out.putNextEntry(new ZipEntry("assets/image.jpg"));
 		}

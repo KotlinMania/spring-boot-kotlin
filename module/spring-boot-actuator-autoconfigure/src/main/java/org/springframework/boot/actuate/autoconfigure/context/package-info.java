@@ -18,6 +18,6 @@
  * Auto-configuration for actuator Spring Context concerns.
  */
 @NullMarked
-package org.springframework.boot.actuate.autoconfigure.context;
+package io.github.kotlinmania.spring.boot.actuate.autoconfigure.context;
 
 import org.jspecify.annotations.NullMarked;

@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.r2dbc.init;
+package io.github.kotlinmania.spring.boot.r2dbc.init;
 
 import io.r2dbc.spi.ConnectionFactory;
 
 import org.springframework.beans.factory.InitializingBean;
-import org.springframework.boot.r2dbc.EmbeddedDatabaseConnection;
-import org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer;
-import org.springframework.boot.sql.init.DatabaseInitializationSettings;
+import io.github.kotlinmania.spring.boot.r2dbc.EmbeddedDatabaseConnection;
+import io.github.kotlinmania.spring.boot.sql.init.AbstractScriptDatabaseInitializer;
+import io.github.kotlinmania.spring.boot.sql.init.DatabaseInitializationSettings;
 import org.springframework.core.io.Resource;
 import org.springframework.r2dbc.connection.init.ResourceDatabasePopulator;
 

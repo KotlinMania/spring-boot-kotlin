@@ -14,23 +14,23 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.configurationprocessor;
+package io.github.kotlinmania.spring.boot.configurationprocessor;
 
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.configurationprocessor.metadata.ConfigurationMetadata;
-import org.springframework.boot.configurationprocessor.metadata.Metadata;
-import org.springframework.boot.configurationsample.lombok.LombokAccessLevelOverwriteDataProperties;
-import org.springframework.boot.configurationsample.lombok.LombokAccessLevelOverwriteDefaultProperties;
-import org.springframework.boot.configurationsample.lombok.LombokAccessLevelOverwriteExplicitProperties;
-import org.springframework.boot.configurationsample.lombok.LombokAccessLevelProperties;
-import org.springframework.boot.configurationsample.lombok.LombokExplicitProperties;
-import org.springframework.boot.configurationsample.lombok.LombokInnerClassProperties;
-import org.springframework.boot.configurationsample.lombok.LombokInnerClassWithGetterProperties;
-import org.springframework.boot.configurationsample.lombok.LombokSimpleDataProperties;
-import org.springframework.boot.configurationsample.lombok.LombokSimpleProperties;
-import org.springframework.boot.configurationsample.lombok.LombokSimpleValueProperties;
-import org.springframework.boot.configurationsample.lombok.SimpleLombokPojo;
+import io.github.kotlinmania.spring.boot.configurationprocessor.metadata.ConfigurationMetadata;
+import io.github.kotlinmania.spring.boot.configurationprocessor.metadata.Metadata;
+import io.github.kotlinmania.spring.boot.configurationsample.lombok.LombokAccessLevelOverwriteDataProperties;
+import io.github.kotlinmania.spring.boot.configurationsample.lombok.LombokAccessLevelOverwriteDefaultProperties;
+import io.github.kotlinmania.spring.boot.configurationsample.lombok.LombokAccessLevelOverwriteExplicitProperties;
+import io.github.kotlinmania.spring.boot.configurationsample.lombok.LombokAccessLevelProperties;
+import io.github.kotlinmania.spring.boot.configurationsample.lombok.LombokExplicitProperties;
+import io.github.kotlinmania.spring.boot.configurationsample.lombok.LombokInnerClassProperties;
+import io.github.kotlinmania.spring.boot.configurationsample.lombok.LombokInnerClassWithGetterProperties;
+import io.github.kotlinmania.spring.boot.configurationsample.lombok.LombokSimpleDataProperties;
+import io.github.kotlinmania.spring.boot.configurationsample.lombok.LombokSimpleProperties;
+import io.github.kotlinmania.spring.boot.configurationsample.lombok.LombokSimpleValueProperties;
+import io.github.kotlinmania.spring.boot.configurationsample.lombok.SimpleLombokPojo;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

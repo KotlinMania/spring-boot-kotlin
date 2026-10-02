@@ -1,3 +1,3 @@
-org.springframework.boot.opentelemetry.autoconfigure.OpenTelemetrySdkAutoConfiguration
-org.springframework.boot.opentelemetry.autoconfigure.logging.OpenTelemetryLoggingAutoConfiguration
-org.springframework.boot.opentelemetry.autoconfigure.logging.otlp.OtlpLoggingAutoConfiguration
+io.github.kotlinmania.spring.boot.opentelemetry.autoconfigure.OpenTelemetrySdkAutoConfiguration
+io.github.kotlinmania.spring.boot.opentelemetry.autoconfigure.logging.OpenTelemetryLoggingAutoConfiguration
+io.github.kotlinmania.spring.boot.opentelemetry.autoconfigure.logging.otlp.OtlpLoggingAutoConfiguration

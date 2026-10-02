@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.graphql.autoconfigure;
+package io.github.kotlinmania.spring.boot.graphql.autoconfigure;
 
 import java.util.Arrays;
 import java.util.List;

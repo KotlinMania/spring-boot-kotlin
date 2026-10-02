@@ -18,6 +18,6 @@
  * Auto-configuration for task execution and scheduling metrics.
  */
 @NullMarked
-package org.springframework.boot.micrometer.metrics.autoconfigure.task;
+package io.github.kotlinmania.spring.boot.micrometer.metrics.autoconfigure.task;
 
 import org.jspecify.annotations.NullMarked;

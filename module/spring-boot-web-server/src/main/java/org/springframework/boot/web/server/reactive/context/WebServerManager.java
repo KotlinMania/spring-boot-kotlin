@@ -14,15 +14,15 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.web.server.reactive.context;
+package io.github.kotlinmania.spring.boot.web.server.reactive.context;
 
 import java.util.function.Supplier;
 
 import reactor.core.publisher.Mono;
 
-import org.springframework.boot.web.server.GracefulShutdownCallback;
-import org.springframework.boot.web.server.WebServer;
-import org.springframework.boot.web.server.reactive.ReactiveWebServerFactory;
+import io.github.kotlinmania.spring.boot.web.server.GracefulShutdownCallback;
+import io.github.kotlinmania.spring.boot.web.server.WebServer;
+import io.github.kotlinmania.spring.boot.web.server.reactive.ReactiveWebServerFactory;
 import org.springframework.http.server.reactive.HttpHandler;
 import org.springframework.http.server.reactive.ServerHttpRequest;
 import org.springframework.http.server.reactive.ServerHttpResponse;

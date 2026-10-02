@@ -1,3 +1,3 @@
-org.springframework.boot.cassandra.autoconfigure.CassandraAutoConfiguration
-org.springframework.boot.cassandra.autoconfigure.health.CassandraHealthContributorAutoConfiguration
-org.springframework.boot.cassandra.autoconfigure.health.CassandraReactiveHealthContributorAutoConfiguration
+io.github.kotlinmania.spring.boot.cassandra.autoconfigure.CassandraAutoConfiguration
+io.github.kotlinmania.spring.boot.cassandra.autoconfigure.health.CassandraHealthContributorAutoConfiguration
+io.github.kotlinmania.spring.boot.cassandra.autoconfigure.health.CassandraReactiveHealthContributorAutoConfiguration

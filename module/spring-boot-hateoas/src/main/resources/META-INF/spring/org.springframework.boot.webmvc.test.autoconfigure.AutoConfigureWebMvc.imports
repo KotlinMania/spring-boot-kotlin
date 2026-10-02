@@ -1,1 +1,1 @@
-org.springframework.boot.hateoas.autoconfigure.HypermediaAutoConfiguration
+io.github.kotlinmania.spring.boot.hateoas.autoconfigure.HypermediaAutoConfiguration

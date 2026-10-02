@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.cli.command.init;
+package io.github.kotlinmania.spring.boot.cli.command.init;
 
 import java.io.ByteArrayInputStream;
 import java.io.File;
@@ -25,7 +25,7 @@ import java.util.zip.ZipInputStream;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.cli.util.Log;
+import io.github.kotlinmania.spring.boot.cli.util.Log;
 import org.springframework.util.Assert;
 import org.springframework.util.FileCopyUtils;
 import org.springframework.util.StreamUtils;

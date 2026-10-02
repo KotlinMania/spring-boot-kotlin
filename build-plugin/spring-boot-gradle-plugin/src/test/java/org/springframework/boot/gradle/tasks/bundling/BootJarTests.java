@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.gradle.tasks.bundling;
+package io.github.kotlinmania.spring.boot.gradle.tasks.bundling;
 
 import java.io.File;
 import java.io.IOException;
@@ -25,7 +25,7 @@ import org.gradle.api.JavaVersion;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.testsupport.classpath.ClassPathExclusions;
+import io.github.kotlinmania.spring.boot.testsupport.classpath.ClassPathExclusions;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -41,7 +41,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 class BootJarTests extends AbstractBootArchiveTests<BootJar> {
 
 	BootJarTests() {
-		super(BootJar.class, "org.springframework.boot.loader.launch.JarLauncher", "BOOT-INF/lib/", "BOOT-INF/classes/",
+		super(BootJar.class, "io.github.kotlinmania.spring.boot.loader.launch.JarLauncher", "BOOT-INF/lib/", "BOOT-INF/classes/",
 				"BOOT-INF/");
 	}
 

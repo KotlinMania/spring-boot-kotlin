@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.web.server.reactive;
+package io.github.kotlinmania.spring.boot.web.server.reactive;
 
-import org.springframework.boot.web.server.AbstractConfigurableWebServerFactory;
+import io.github.kotlinmania.spring.boot.web.server.AbstractConfigurableWebServerFactory;
 
 /**
  * Abstract base class for {@link ReactiveWebServerFactory} implementations.

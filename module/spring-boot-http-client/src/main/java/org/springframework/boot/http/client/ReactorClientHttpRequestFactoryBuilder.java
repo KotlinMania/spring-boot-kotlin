@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.http.client;
+package io.github.kotlinmania.spring.boot.http.client;
 
 import java.time.Duration;
 import java.util.Collection;
@@ -28,7 +28,7 @@ import reactor.netty.http.client.HttpClient;
 import reactor.netty.http.client.HttpClientConfig;
 import reactor.netty.transport.ClientTransport.ResolvedAddressSelector;
 
-import org.springframework.boot.context.properties.PropertyMapper;
+import io.github.kotlinmania.spring.boot.context.properties.PropertyMapper;
 import org.springframework.http.client.ReactorClientHttpRequestFactory;
 import org.springframework.http.client.ReactorResourceFactory;
 import org.springframework.util.Assert;

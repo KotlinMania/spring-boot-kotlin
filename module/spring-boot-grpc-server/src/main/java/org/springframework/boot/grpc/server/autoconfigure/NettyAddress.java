@@ -14,15 +14,15 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.grpc.server.autoconfigure;
+package io.github.kotlinmania.spring.boot.grpc.server.autoconfigure;
 
 import java.net.InetAddress;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.context.properties.source.InvalidConfigurationPropertyValueException;
-import org.springframework.boot.context.properties.source.MutuallyExclusiveConfigurationPropertiesException;
-import org.springframework.boot.grpc.server.autoconfigure.GrpcServerProperties.Netty.Transport;
+import io.github.kotlinmania.spring.boot.context.properties.source.InvalidConfigurationPropertyValueException;
+import io.github.kotlinmania.spring.boot.context.properties.source.MutuallyExclusiveConfigurationPropertiesException;
+import io.github.kotlinmania.spring.boot.grpc.server.autoconfigure.GrpcServerProperties.Netty.Transport;
 import org.springframework.grpc.internal.GrpcUtils;
 import org.springframework.grpc.server.GrpcServerFactory;
 import org.springframework.util.StringUtils;

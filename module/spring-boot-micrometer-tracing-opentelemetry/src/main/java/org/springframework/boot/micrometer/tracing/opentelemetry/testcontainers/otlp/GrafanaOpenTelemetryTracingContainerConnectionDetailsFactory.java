@@ -14,17 +14,17 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.micrometer.tracing.opentelemetry.testcontainers.otlp;
+package io.github.kotlinmania.spring.boot.micrometer.tracing.opentelemetry.testcontainers.otlp;
 
 import org.jspecify.annotations.Nullable;
 import org.testcontainers.grafana.LgtmStackContainer;
 
-import org.springframework.boot.micrometer.tracing.opentelemetry.autoconfigure.otlp.OtlpTracingConnectionDetails;
-import org.springframework.boot.micrometer.tracing.opentelemetry.autoconfigure.otlp.Transport;
-import org.springframework.boot.ssl.SslBundle;
-import org.springframework.boot.testcontainers.service.connection.ContainerConnectionDetailsFactory;
-import org.springframework.boot.testcontainers.service.connection.ContainerConnectionSource;
-import org.springframework.boot.testcontainers.service.connection.ServiceConnection;
+import io.github.kotlinmania.spring.boot.micrometer.tracing.opentelemetry.autoconfigure.otlp.OtlpTracingConnectionDetails;
+import io.github.kotlinmania.spring.boot.micrometer.tracing.opentelemetry.autoconfigure.otlp.Transport;
+import io.github.kotlinmania.spring.boot.ssl.SslBundle;
+import io.github.kotlinmania.spring.boot.testcontainers.service.connection.ContainerConnectionDetailsFactory;
+import io.github.kotlinmania.spring.boot.testcontainers.service.connection.ContainerConnectionSource;
+import io.github.kotlinmania.spring.boot.testcontainers.service.connection.ServiceConnection;
 
 /**
  * {@link ContainerConnectionDetailsFactory} to create
@@ -39,7 +39,7 @@ class GrafanaOpenTelemetryTracingContainerConnectionDetailsFactory
 
 	GrafanaOpenTelemetryTracingContainerConnectionDetailsFactory() {
 		super(ContainerConnectionDetailsFactory.ANY_CONNECTION_NAME,
-				"org.springframework.boot.micrometer.tracing.opentelemetry.autoconfigure.otlp.OtlpTracingAutoConfiguration");
+				"io.github.kotlinmania.spring.boot.micrometer.tracing.opentelemetry.autoconfigure.otlp.OtlpTracingAutoConfiguration");
 	}
 
 	@Override

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.actuator.metrics.customizing;
+package io.github.kotlinmania.spring.boot.docs.actuator.metrics.customizing;
 
 import io.micrometer.core.instrument.config.MeterFilter;
 

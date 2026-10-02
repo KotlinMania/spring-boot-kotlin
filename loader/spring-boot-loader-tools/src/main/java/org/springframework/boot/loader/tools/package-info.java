@@ -18,6 +18,6 @@
  * Tools for generating executable JAR/WAR files.
  */
 @NullMarked
-package org.springframework.boot.loader.tools;
+package io.github.kotlinmania.spring.boot.loader.tools;
 
 import org.jspecify.annotations.NullMarked;

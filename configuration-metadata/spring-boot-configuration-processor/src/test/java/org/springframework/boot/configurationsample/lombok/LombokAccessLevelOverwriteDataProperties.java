@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.configurationsample.lombok;
+package io.github.kotlinmania.spring.boot.configurationsample.lombok;
 
 import lombok.AccessLevel;
 import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 
-import org.springframework.boot.configurationsample.TestConfigurationProperties;
+import io.github.kotlinmania.spring.boot.configurationsample.TestConfigurationProperties;
 
 /**
  * Configuration properties using Lombok @Data on element level and overwriting behaviour

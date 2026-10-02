@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.webmvc.test.autoconfigure;
+package io.github.kotlinmania.spring.boot.webmvc.test.autoconfigure;
 
 /**
  * MVC print options specified from {@link AutoConfigureMockMvc @AutoConfigureMockMvc}.

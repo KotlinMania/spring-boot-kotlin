@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.grpc.server.autoconfigure.health;
+package io.github.kotlinmania.spring.boot.grpc.server.autoconfigure.health;
 
-import org.springframework.boot.grpc.server.health.HealthCheckedGrpcComponent;
-import org.springframework.boot.grpc.server.health.StatusAggregator;
-import org.springframework.boot.grpc.server.health.StatusMapper;
-import org.springframework.boot.health.autoconfigure.contributor.HealthContributorMembership;
+import io.github.kotlinmania.spring.boot.grpc.server.health.HealthCheckedGrpcComponent;
+import io.github.kotlinmania.spring.boot.grpc.server.health.StatusAggregator;
+import io.github.kotlinmania.spring.boot.grpc.server.health.StatusMapper;
+import io.github.kotlinmania.spring.boot.health.autoconfigure.contributor.HealthContributorMembership;
 
 /**
  * Auto-configured {@link HealthCheckedGrpcComponent}.

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.howto.deployment.cloud.cloudfoundry.bindingtoservices
+package io.github.kotlinmania.spring.boot.docs.howto.deployment.cloud.cloudfoundry.bindingtoservices
 
 import org.springframework.context.EnvironmentAware
 import org.springframework.core.env.Environment

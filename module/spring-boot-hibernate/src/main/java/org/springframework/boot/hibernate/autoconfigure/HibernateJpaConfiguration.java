@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.hibernate.autoconfigure;
+package io.github.kotlinmania.spring.boot.hibernate.autoconfigure;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -38,16 +38,16 @@ import org.springframework.aot.hint.TypeHint;
 import org.springframework.aot.hint.TypeHint.Builder;
 import org.springframework.aot.hint.TypeReference;
 import org.springframework.beans.factory.ObjectProvider;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnSingleCandidate;
-import org.springframework.boot.context.properties.EnableConfigurationProperties;
-import org.springframework.boot.hibernate.SpringImplicitNamingStrategy;
-import org.springframework.boot.hibernate.autoconfigure.HibernateJpaConfiguration.HibernateRuntimeHints;
-import org.springframework.boot.jdbc.SchemaManagementProvider;
-import org.springframework.boot.jdbc.metadata.CompositeDataSourcePoolMetadataProvider;
-import org.springframework.boot.jdbc.metadata.DataSourcePoolMetadata;
-import org.springframework.boot.jdbc.metadata.DataSourcePoolMetadataProvider;
-import org.springframework.boot.jpa.autoconfigure.JpaBaseConfiguration;
-import org.springframework.boot.jpa.autoconfigure.JpaProperties;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnSingleCandidate;
+import io.github.kotlinmania.spring.boot.context.properties.EnableConfigurationProperties;
+import io.github.kotlinmania.spring.boot.hibernate.SpringImplicitNamingStrategy;
+import io.github.kotlinmania.spring.boot.hibernate.autoconfigure.HibernateJpaConfiguration.HibernateRuntimeHints;
+import io.github.kotlinmania.spring.boot.jdbc.SchemaManagementProvider;
+import io.github.kotlinmania.spring.boot.jdbc.metadata.CompositeDataSourcePoolMetadataProvider;
+import io.github.kotlinmania.spring.boot.jdbc.metadata.DataSourcePoolMetadata;
+import io.github.kotlinmania.spring.boot.jdbc.metadata.DataSourcePoolMetadataProvider;
+import io.github.kotlinmania.spring.boot.jpa.autoconfigure.JpaBaseConfiguration;
+import io.github.kotlinmania.spring.boot.jpa.autoconfigure.JpaProperties;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.ImportRuntimeHints;
 import org.springframework.jdbc.support.SQLExceptionTranslator;

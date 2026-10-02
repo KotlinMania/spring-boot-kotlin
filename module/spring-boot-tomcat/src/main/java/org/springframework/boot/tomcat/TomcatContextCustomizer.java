@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.tomcat;
+package io.github.kotlinmania.spring.boot.tomcat;
 
 import org.apache.catalina.Context;
 
-import org.springframework.boot.tomcat.servlet.TomcatServletWebServerFactory;
+import io.github.kotlinmania.spring.boot.tomcat.servlet.TomcatServletWebServerFactory;
 
 /**
  * Callback interface that can be used to customize a Tomcat {@link Context}.

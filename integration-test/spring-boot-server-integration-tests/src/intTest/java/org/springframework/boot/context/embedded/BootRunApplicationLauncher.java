@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.context.embedded;
+package io.github.kotlinmania.spring.boot.context.embedded;
 
 import java.io.File;
 import java.io.FileOutputStream;

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.jetty;
+package io.github.kotlinmania.spring.boot.jetty;
 
 import java.io.IOException;
 import java.util.Collection;
@@ -34,12 +34,12 @@ import org.eclipse.jetty.server.handler.ContextHandler;
 import org.eclipse.jetty.server.handler.StatisticsHandler;
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.jetty.reactive.JettyReactiveWebServerFactory;
-import org.springframework.boot.web.server.GracefulShutdownCallback;
-import org.springframework.boot.web.server.GracefulShutdownResult;
-import org.springframework.boot.web.server.PortInUseException;
-import org.springframework.boot.web.server.WebServer;
-import org.springframework.boot.web.server.WebServerException;
+import io.github.kotlinmania.spring.boot.jetty.reactive.JettyReactiveWebServerFactory;
+import io.github.kotlinmania.spring.boot.web.server.GracefulShutdownCallback;
+import io.github.kotlinmania.spring.boot.web.server.GracefulShutdownResult;
+import io.github.kotlinmania.spring.boot.web.server.PortInUseException;
+import io.github.kotlinmania.spring.boot.web.server.WebServer;
+import io.github.kotlinmania.spring.boot.web.server.WebServerException;
 import org.springframework.http.server.reactive.ServletHttpHandlerAdapter;
 import org.springframework.util.Assert;
 import org.springframework.util.StringUtils;

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.test.http.server;
+package io.github.kotlinmania.spring.boot.test.http.server;
 
 import java.net.URI;
 import java.util.Map;
@@ -23,9 +23,9 @@ import java.util.concurrent.atomic.AtomicInteger;
 import org.jspecify.annotations.Nullable;
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.test.http.server.LocalTestWebServer.BaseUriDetails;
-import org.springframework.boot.test.http.server.LocalTestWebServer.Scheme;
-import org.springframework.boot.testsupport.classpath.resources.WithResource;
+import io.github.kotlinmania.spring.boot.test.http.server.LocalTestWebServer.BaseUriDetails;
+import io.github.kotlinmania.spring.boot.test.http.server.LocalTestWebServer.Scheme;
+import io.github.kotlinmania.spring.boot.testsupport.classpath.resources.WithResource;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.GenericApplicationContext;
 import org.springframework.web.util.UriBuilder;
@@ -159,10 +159,10 @@ class LocalTestWebServerTests {
 
 	@Test
 	@WithResource(name = "META-INF/spring.factories", content = """
-			org.springframework.boot.test.http.server.LocalTestWebServer$Provider=\
-			org.springframework.boot.test.http.server.LocalTestWebServerTests$Provider1,\
-			org.springframework.boot.test.http.server.LocalTestWebServerTests$Provider2,\
-			org.springframework.boot.test.http.server.LocalTestWebServerTests$Provider3
+			io.github.kotlinmania.spring.boot.test.http.server.LocalTestWebServer$Provider=\
+			io.github.kotlinmania.spring.boot.test.http.server.LocalTestWebServerTests$Provider1,\
+			io.github.kotlinmania.spring.boot.test.http.server.LocalTestWebServerTests$Provider2,\
+			io.github.kotlinmania.spring.boot.test.http.server.LocalTestWebServerTests$Provider3
 			""")
 	void getReturnsFirstProvided() {
 		ApplicationContext applicationContext = new GenericApplicationContext();
@@ -173,8 +173,8 @@ class LocalTestWebServerTests {
 
 	@Test
 	@WithResource(name = "META-INF/spring.factories", content = """
-			org.springframework.boot.test.http.server.LocalTestWebServer$Provider=\
-			org.springframework.boot.test.http.server.LocalTestWebServerTests$Provider1
+			io.github.kotlinmania.spring.boot.test.http.server.LocalTestWebServer$Provider=\
+			io.github.kotlinmania.spring.boot.test.http.server.LocalTestWebServerTests$Provider1
 			""")
 	void getWhenNoneReturnsNull() {
 		ApplicationContext applicationContext = new GenericApplicationContext();
@@ -184,8 +184,8 @@ class LocalTestWebServerTests {
 
 	@Test
 	@WithResource(name = "META-INF/spring.factories", content = """
-			org.springframework.boot.test.http.server.LocalTestWebServer$Provider=\
-			org.springframework.boot.test.http.server.LocalTestWebServerTests$Provider1
+			io.github.kotlinmania.spring.boot.test.http.server.LocalTestWebServer$Provider=\
+			io.github.kotlinmania.spring.boot.test.http.server.LocalTestWebServerTests$Provider1
 			""")
 	void obtainWhenNoneProvidedThrowsException() {
 		ApplicationContext applicationContext = new GenericApplicationContext();

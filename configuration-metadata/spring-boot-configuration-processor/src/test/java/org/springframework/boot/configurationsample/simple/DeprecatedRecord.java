@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.configurationsample.simple;
+package io.github.kotlinmania.spring.boot.configurationsample.simple;
 
-import org.springframework.boot.configurationsample.TestConfigurationProperties;
-import org.springframework.boot.configurationsample.TestDeprecatedConfigurationProperty;
-import org.springframework.boot.configurationsample.TestName;
+import io.github.kotlinmania.spring.boot.configurationsample.TestConfigurationProperties;
+import io.github.kotlinmania.spring.boot.configurationsample.TestDeprecatedConfigurationProperty;
+import io.github.kotlinmania.spring.boot.configurationsample.TestName;
 
 /**
  * Configuration properties as record with deprecated property.

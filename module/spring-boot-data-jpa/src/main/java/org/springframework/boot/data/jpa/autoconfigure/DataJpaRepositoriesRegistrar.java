@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.data.jpa.autoconfigure;
+package io.github.kotlinmania.spring.boot.data.jpa.autoconfigure;
 
 import java.lang.annotation.Annotation;
 import java.util.Locale;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.autoconfigure.data.AbstractRepositoryConfigurationSourceSupport;
+import io.github.kotlinmania.spring.boot.autoconfigure.data.AbstractRepositoryConfigurationSourceSupport;
 import org.springframework.context.annotation.ImportBeanDefinitionRegistrar;
 import org.springframework.core.env.Environment;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.jackson2;
+package io.github.kotlinmania.spring.boot.jackson2;
 
 import java.io.IOException;
 
@@ -23,7 +23,7 @@ import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.JsonSerializer;
 import com.fasterxml.jackson.databind.SerializerProvider;
 
-import org.springframework.boot.jackson.ObjectValueSerializer;
+import io.github.kotlinmania.spring.boot.jackson.ObjectValueSerializer;
 
 /**
  * Helper base class for {@link JsonSerializer} implementations that serialize objects.

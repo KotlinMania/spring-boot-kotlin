@@ -16,7 +16,7 @@
 
 package smoketest.web.secure;
 
-import org.springframework.boot.test.context.SpringBootTest;
+import io.github.kotlinmania.spring.boot.test.context.SpringBootTest;
 import org.springframework.context.annotation.Bean;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.web.SecurityFilterChain;
@@ -40,7 +40,7 @@ class CustomServletPathUnauthenticatedErrorPageTests extends AbstractUnauthentic
 		super("/custom/servlet/path");
 	}
 
-	@org.springframework.boot.test.context.TestConfiguration(proxyBeanMethods = false)
+	@io.github.kotlinmania.spring.boot.test.context.TestConfiguration(proxyBeanMethods = false)
 	static class SecurityConfiguration {
 
 		@Bean

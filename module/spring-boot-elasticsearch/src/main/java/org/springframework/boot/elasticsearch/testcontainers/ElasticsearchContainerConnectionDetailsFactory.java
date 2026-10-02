@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.elasticsearch.testcontainers;
+package io.github.kotlinmania.spring.boot.elasticsearch.testcontainers;
 
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
@@ -29,14 +29,14 @@ import java.util.List;
 import org.jspecify.annotations.Nullable;
 import org.testcontainers.elasticsearch.ElasticsearchContainer;
 
-import org.springframework.boot.elasticsearch.autoconfigure.ElasticsearchConnectionDetails;
-import org.springframework.boot.elasticsearch.autoconfigure.ElasticsearchConnectionDetails.Node.Protocol;
-import org.springframework.boot.ssl.SslBundle;
-import org.springframework.boot.ssl.SslStoreBundle;
-import org.springframework.boot.testcontainers.service.connection.ContainerConnectionDetailsFactory;
-import org.springframework.boot.testcontainers.service.connection.ContainerConnectionSource;
-import org.springframework.boot.testcontainers.service.connection.ServiceConnection;
-import org.springframework.boot.testcontainers.service.connection.Ssl;
+import io.github.kotlinmania.spring.boot.elasticsearch.autoconfigure.ElasticsearchConnectionDetails;
+import io.github.kotlinmania.spring.boot.elasticsearch.autoconfigure.ElasticsearchConnectionDetails.Node.Protocol;
+import io.github.kotlinmania.spring.boot.ssl.SslBundle;
+import io.github.kotlinmania.spring.boot.ssl.SslStoreBundle;
+import io.github.kotlinmania.spring.boot.testcontainers.service.connection.ContainerConnectionDetailsFactory;
+import io.github.kotlinmania.spring.boot.testcontainers.service.connection.ContainerConnectionSource;
+import io.github.kotlinmania.spring.boot.testcontainers.service.connection.ServiceConnection;
+import io.github.kotlinmania.spring.boot.testcontainers.service.connection.Ssl;
 
 /**
  * {@link ContainerConnectionDetailsFactory} to create

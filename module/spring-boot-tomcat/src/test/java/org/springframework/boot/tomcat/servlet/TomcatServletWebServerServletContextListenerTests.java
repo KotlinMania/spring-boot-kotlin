@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.tomcat.servlet;
+package io.github.kotlinmania.spring.boot.tomcat.servlet;
 
 import jakarta.servlet.ServletContextListener;
 
-import org.springframework.boot.web.server.servlet.AbstractServletWebServerServletContextListenerTests;
+import io.github.kotlinmania.spring.boot.web.server.servlet.AbstractServletWebServerServletContextListenerTests;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 

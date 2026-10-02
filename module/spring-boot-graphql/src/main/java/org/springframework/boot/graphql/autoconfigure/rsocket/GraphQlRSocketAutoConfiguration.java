@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.graphql.autoconfigure.rsocket;
+package io.github.kotlinmania.spring.boot.graphql.autoconfigure.rsocket;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import graphql.GraphQL;
@@ -23,15 +23,15 @@ import reactor.netty.http.server.HttpServer;
 import tools.jackson.databind.json.JsonMapper;
 
 import org.springframework.beans.factory.ObjectProvider;
-import org.springframework.boot.autoconfigure.AutoConfiguration;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
-import org.springframework.boot.autoconfigure.condition.AnyNestedCondition;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingClass;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
-import org.springframework.boot.graphql.autoconfigure.GraphQlAutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.EnableAutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.AnyNestedCondition;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnBean;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnClass;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnMissingBean;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnMissingClass;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnProperty;
+import io.github.kotlinmania.spring.boot.graphql.autoconfigure.GraphQlAutoConfiguration;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Conditional;
 import org.springframework.context.annotation.Configuration;
@@ -52,9 +52,9 @@ import org.springframework.messaging.rsocket.annotation.support.RSocketMessageHa
  * @since 4.0.0
  */
 @AutoConfiguration(after = GraphQlAutoConfiguration.class,
-		afterName = { "org.springframework.boot.rsocket.autoconfigure.RSocketMessagingAutoConfiguration",
-				"org.springframework.boot.jackson.autoconfigure.JacksonAutoConfiguration",
-				"org.springframework.boot.jackson2.autoconfigure.Jackson2AutoConfiguration" })
+		afterName = { "io.github.kotlinmania.spring.boot.rsocket.autoconfigure.RSocketMessagingAutoConfiguration",
+				"io.github.kotlinmania.spring.boot.jackson.autoconfigure.JacksonAutoConfiguration",
+				"io.github.kotlinmania.spring.boot.jackson2.autoconfigure.Jackson2AutoConfiguration" })
 @ConditionalOnClass({ GraphQL.class, GraphQlSource.class, RSocketServer.class, HttpServer.class })
 @ConditionalOnBean({ RSocketMessageHandler.class, AnnotatedControllerConfigurer.class })
 @ConditionalOnProperty("spring.graphql.rsocket.mapping")

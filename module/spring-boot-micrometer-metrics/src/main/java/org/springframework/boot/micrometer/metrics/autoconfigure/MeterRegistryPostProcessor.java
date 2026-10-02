@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.micrometer.metrics.autoconfigure;
+package io.github.kotlinmania.spring.boot.micrometer.metrics.autoconfigure;
 
 import java.util.LinkedHashSet;
 import java.util.List;
@@ -31,8 +31,8 @@ import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.ObjectProvider;
 import org.springframework.beans.factory.SmartInitializingSingleton;
 import org.springframework.beans.factory.config.BeanPostProcessor;
-import org.springframework.boot.micrometer.metrics.MaximumAllowableTagsMeterFilter;
-import org.springframework.boot.util.LambdaSafe;
+import io.github.kotlinmania.spring.boot.micrometer.metrics.MaximumAllowableTagsMeterFilter;
+import io.github.kotlinmania.spring.boot.util.LambdaSafe;
 import org.springframework.context.ApplicationContext;
 
 /**

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.loader.tools.layer;
+package io.github.kotlinmania.spring.boot.loader.tools.layer;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -22,9 +22,9 @@ import java.util.List;
 import java.util.function.Supplier;
 import java.util.stream.Stream;
 
-import org.springframework.boot.loader.tools.Layer;
-import org.springframework.boot.loader.tools.Layers;
-import org.springframework.boot.loader.tools.Library;
+import io.github.kotlinmania.spring.boot.loader.tools.Layer;
+import io.github.kotlinmania.spring.boot.loader.tools.Layers;
+import io.github.kotlinmania.spring.boot.loader.tools.Library;
 import org.springframework.util.Assert;
 
 /**

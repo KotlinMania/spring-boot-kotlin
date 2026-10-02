@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.quartz.autoconfigure;
+package io.github.kotlinmania.spring.boot.quartz.autoconfigure;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -52,20 +52,20 @@ import org.quartz.impl.calendar.WeeklyCalendar;
 import org.quartz.simpl.RAMJobStore;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.autoconfigure.AutoConfigurations;
-import org.springframework.boot.flyway.autoconfigure.FlywayAutoConfiguration;
-import org.springframework.boot.jdbc.autoconfigure.DataSourceAutoConfiguration;
-import org.springframework.boot.jdbc.autoconfigure.DataSourceProperties;
-import org.springframework.boot.jdbc.autoconfigure.DataSourceTransactionManagerAutoConfiguration;
-import org.springframework.boot.jdbc.init.DataSourceScriptDatabaseInitializer;
-import org.springframework.boot.liquibase.autoconfigure.LiquibaseAutoConfiguration;
-import org.springframework.boot.sql.init.DatabaseInitializationSettings;
-import org.springframework.boot.test.context.FilteredClassLoader;
-import org.springframework.boot.test.context.assertj.AssertableApplicationContext;
-import org.springframework.boot.test.context.runner.ApplicationContextRunner;
-import org.springframework.boot.test.context.runner.ContextConsumer;
-import org.springframework.boot.test.system.CapturedOutput;
-import org.springframework.boot.test.system.OutputCaptureExtension;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurations;
+import io.github.kotlinmania.spring.boot.flyway.autoconfigure.FlywayAutoConfiguration;
+import io.github.kotlinmania.spring.boot.jdbc.autoconfigure.DataSourceAutoConfiguration;
+import io.github.kotlinmania.spring.boot.jdbc.autoconfigure.DataSourceProperties;
+import io.github.kotlinmania.spring.boot.jdbc.autoconfigure.DataSourceTransactionManagerAutoConfiguration;
+import io.github.kotlinmania.spring.boot.jdbc.init.DataSourceScriptDatabaseInitializer;
+import io.github.kotlinmania.spring.boot.liquibase.autoconfigure.LiquibaseAutoConfiguration;
+import io.github.kotlinmania.spring.boot.sql.init.DatabaseInitializationSettings;
+import io.github.kotlinmania.spring.boot.test.context.FilteredClassLoader;
+import io.github.kotlinmania.spring.boot.test.context.assertj.AssertableApplicationContext;
+import io.github.kotlinmania.spring.boot.test.context.runner.ApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.test.context.runner.ContextConsumer;
+import io.github.kotlinmania.spring.boot.test.system.CapturedOutput;
+import io.github.kotlinmania.spring.boot.test.system.OutputCaptureExtension;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
@@ -161,7 +161,7 @@ class QuartzAutoConfigurationTests {
 					throw new RuntimeException(ex);
 				}
 			})
-			.withClassLoader(new FilteredClassLoader("org.springframework.boot.jdbc", "org.springframework.boot.sql") {
+			.withClassLoader(new FilteredClassLoader("io.github.kotlinmania.spring.boot.jdbc", "io.github.kotlinmania.spring.boot.sql") {
 
 				@Override
 				public Enumeration<URL> getResources(String name) throws IOException {
@@ -170,11 +170,11 @@ class QuartzAutoConfigurationTests {
 						return resources;
 					}
 					// Hide META-INF/spring.factories files with entries from
-					// org.springframework.boot.jdbc
+					// io.github.kotlinmania.spring.boot.jdbc
 					return Collections.enumeration(Collections.list(resources).stream().filter((url) -> {
 						try (InputStream input = url.openStream()) {
 							String content = StreamUtils.copyToString(input, StandardCharsets.UTF_8);
-							return !content.contains("org.springframework.boot.jdbc.");
+							return !content.contains("io.github.kotlinmania.spring.boot.jdbc.");
 						}
 						catch (IOException ex) {
 							return true;

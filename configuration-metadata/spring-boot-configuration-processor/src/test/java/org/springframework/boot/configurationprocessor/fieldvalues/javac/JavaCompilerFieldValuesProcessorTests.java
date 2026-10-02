@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.configurationprocessor.fieldvalues.javac;
+package io.github.kotlinmania.spring.boot.configurationprocessor.fieldvalues.javac;
 
 import javax.annotation.processing.ProcessingEnvironment;
 
 import org.opentest4j.TestAbortedException;
 
-import org.springframework.boot.configurationprocessor.fieldvalues.AbstractFieldValuesProcessorTests;
-import org.springframework.boot.configurationprocessor.fieldvalues.FieldValuesParser;
+import io.github.kotlinmania.spring.boot.configurationprocessor.fieldvalues.AbstractFieldValuesProcessorTests;
+import io.github.kotlinmania.spring.boot.configurationprocessor.fieldvalues.FieldValuesParser;
 
 /**
  * Tests for {@link JavaCompilerFieldValuesParser}.

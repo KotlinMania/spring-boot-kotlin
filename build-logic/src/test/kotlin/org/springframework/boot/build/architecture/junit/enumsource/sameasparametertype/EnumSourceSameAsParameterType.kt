@@ -15,7 +15,7 @@
  */
 package org.springframework.boot.build.architecture.junit.enumsource.sameasparametertype
 
-import org.junit.jupiter.params.provider.EnumSource
+package io.github.kotlinmania.spring.boot.build.architecture.junit.enumsource.inferredfromparametertype;
 
 internal class EnumSourceSameAsParameterType {
     @EnumSource(Example::class)

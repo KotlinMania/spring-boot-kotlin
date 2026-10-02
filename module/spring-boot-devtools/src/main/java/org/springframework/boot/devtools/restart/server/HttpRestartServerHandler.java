@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.devtools.restart.server;
+package io.github.kotlinmania.spring.boot.devtools.restart.server;
 
 import java.io.IOException;
 
-import org.springframework.boot.devtools.remote.server.Handler;
+import io.github.kotlinmania.spring.boot.devtools.remote.server.Handler;
 import org.springframework.http.server.ServerHttpRequest;
 import org.springframework.http.server.ServerHttpResponse;
 import org.springframework.util.Assert;

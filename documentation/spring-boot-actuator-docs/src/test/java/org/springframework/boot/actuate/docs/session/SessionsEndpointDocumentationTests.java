@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.actuate.docs.session;
+package io.github.kotlinmania.spring.boot.actuate.docs.session;
 
 import java.time.Instant;
 import java.util.HashMap;
@@ -24,9 +24,9 @@ import java.util.UUID;
 
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.actuate.context.ShutdownEndpoint;
-import org.springframework.boot.actuate.docs.MockMvcEndpointDocumentationTests;
-import org.springframework.boot.session.actuate.endpoint.SessionsEndpoint;
+import io.github.kotlinmania.spring.boot.actuate.context.ShutdownEndpoint;
+import io.github.kotlinmania.spring.boot.actuate.docs.MockMvcEndpointDocumentationTests;
+import io.github.kotlinmania.spring.boot.session.actuate.endpoint.SessionsEndpoint;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpStatus;

@@ -18,6 +18,6 @@
  * Auto-configuration for Thymeleaf.
  */
 @NullMarked
-package org.springframework.boot.thymeleaf.autoconfigure;
+package io.github.kotlinmania.spring.boot.thymeleaf.autoconfigure;
 
 import org.jspecify.annotations.NullMarked;

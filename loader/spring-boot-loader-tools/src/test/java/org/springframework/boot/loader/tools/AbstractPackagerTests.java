@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.loader.tools;
+package io.github.kotlinmania.spring.boot.loader.tools;
 
 import java.io.ByteArrayInputStream;
 import java.io.File;
@@ -47,8 +47,8 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.io.TempDir;
 import org.zeroturnaround.zip.ZipUtil;
 
-import org.springframework.boot.loader.tools.sample.ClassWithMainMethod;
-import org.springframework.boot.loader.tools.sample.ClassWithoutMainMethod;
+import io.github.kotlinmania.spring.boot.loader.tools.sample.ClassWithMainMethod;
+import io.github.kotlinmania.spring.boot.loader.tools.sample.ClassWithoutMainMethod;
 import org.springframework.util.FileCopyUtils;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -108,7 +108,7 @@ abstract class AbstractPackagerTests<P extends Packager> {
 		Manifest actualManifest = getPackagedManifest();
 		assertThat(actualManifest).isNotNull();
 		assertThat(actualManifest.getMainAttributes().getValue("Main-Class"))
-			.isEqualTo("org.springframework.boot.loader.launch.JarLauncher");
+			.isEqualTo("io.github.kotlinmania.spring.boot.loader.launch.JarLauncher");
 		assertThat(actualManifest.getMainAttributes().getValue("Start-Class")).isEqualTo("a.b.C");
 		assertThat(hasPackagedLauncherClasses()).isTrue();
 	}
@@ -125,7 +125,7 @@ abstract class AbstractPackagerTests<P extends Packager> {
 		Manifest actualManifest = getPackagedManifest();
 		assertThat(actualManifest).isNotNull();
 		assertThat(actualManifest.getMainAttributes().getValue("Main-Class"))
-			.isEqualTo("org.springframework.boot.loader.launch.JarLauncher");
+			.isEqualTo("io.github.kotlinmania.spring.boot.loader.launch.JarLauncher");
 		assertThat(actualManifest.getMainAttributes().getValue("Start-Class")).isEqualTo("a.b.C");
 		assertThat(hasPackagedLauncherClasses()).isTrue();
 	}
@@ -138,7 +138,7 @@ abstract class AbstractPackagerTests<P extends Packager> {
 		Manifest actualManifest = getPackagedManifest();
 		assertThat(actualManifest).isNotNull();
 		assertThat(actualManifest.getMainAttributes().getValue("Main-Class"))
-			.isEqualTo("org.springframework.boot.loader.launch.JarLauncher");
+			.isEqualTo("io.github.kotlinmania.spring.boot.loader.launch.JarLauncher");
 		assertThat(actualManifest.getMainAttributes().getValue("Start-Class")).isEqualTo("a.b.C");
 		assertThat(hasPackagedLauncherClasses()).isTrue();
 	}
@@ -553,7 +553,7 @@ abstract class AbstractPackagerTests<P extends Packager> {
 			callback.library(newLibrary(libraryTwo, LibraryScope.COMPILE, true));
 			callback.library(newLibrary(libraryThree, LibraryScope.COMPILE, false));
 		});
-		assertThat(getPackagedEntryNames()).containsSubsequence("org/springframework/boot/loader/",
+		assertThat(getPackagedEntryNames()).containsSubsequence("io.github.kotlinmania.spring.boot.loader/",
 				"BOOT-INF/classes/com/example/Application.class", "BOOT-INF/lib/" + libraryOne.getName(),
 				"BOOT-INF/lib/" + libraryTwo.getName(), "BOOT-INF/lib/" + libraryThree.getName());
 	}
@@ -566,7 +566,7 @@ abstract class AbstractPackagerTests<P extends Packager> {
 		P packager = createPackager(this.testJarFile.getFile("war"));
 		packager.setLayout(new Layouts.War());
 		execute(packager, (callback) -> callback.library(newLibrary(library, LibraryScope.COMPILE, true)));
-		assertThat(getPackagedEntryNames()).containsSubsequence("org/springframework/boot/loader/",
+		assertThat(getPackagedEntryNames()).containsSubsequence("io.github.kotlinmania.spring.boot.loader/",
 				"WEB-INF/classes/com/example/Application.class", "WEB-INF/lib/" + library.getName());
 		ZipEntry unpackLibrary = getPackagedEntry("WEB-INF/lib/" + library.getName());
 		assertThat(unpackLibrary).isNotNull();
@@ -729,8 +729,8 @@ abstract class AbstractPackagerTests<P extends Packager> {
 	}
 
 	protected boolean hasPackagedLauncherClasses() throws IOException {
-		return hasPackagedEntry("org/springframework/boot/")
-				&& hasPackagedEntry("org/springframework/boot/loader/launch/JarLauncher.class");
+		return hasPackagedEntry("io.github.kotlinmania.spring.boot.")
+				&& hasPackagedEntry("io.github.kotlinmania.spring.boot.loader/launch/JarLauncher.class");
 	}
 
 	protected boolean hasPackagedEntry(String name) throws IOException {

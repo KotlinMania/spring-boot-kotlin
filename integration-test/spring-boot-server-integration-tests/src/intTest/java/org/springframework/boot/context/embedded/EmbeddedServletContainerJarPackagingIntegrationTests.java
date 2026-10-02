@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.context.embedded;
+package io.github.kotlinmania.spring.boot.context.embedded;
 
 import org.junit.jupiter.api.TestTemplate;
 import org.junit.jupiter.api.condition.DisabledOnOs;
@@ -74,7 +74,7 @@ class EmbeddedServletContainerJarPackagingIntegrationTests {
 
 	@TestTemplate
 	void launcherIsNotAvailableViaHttp(RestTemplate rest) {
-		ResponseEntity<String> entity = rest.getForEntity("/org/springframework/boot/loader/Launcher.class",
+		ResponseEntity<String> entity = rest.getForEntity("/io.github.kotlinmania.spring.boot.loader/Launcher.class",
 				String.class);
 		assertThat(entity.getStatusCode()).isEqualTo(HttpStatus.NOT_FOUND);
 	}

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.sql.init;
+package io.github.kotlinmania.spring.boot.sql.init;
 
 /**
  * Helper to get the settings used by the {@link AbstractScriptDatabaseInitializer}.

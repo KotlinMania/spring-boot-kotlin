@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.configurationsample.record;
+package io.github.kotlinmania.spring.boot.configurationsample.record;
 
-import org.springframework.boot.configurationsample.TestConfigurationProperties;
+import io.github.kotlinmania.spring.boot.configurationsample.TestConfigurationProperties;
 
 @TestConfigurationProperties("record-with-getter")
 public record RecordWithGetter(String alpha) {

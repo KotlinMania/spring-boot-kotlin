@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docker.compose.service.connection;
+package io.github.kotlinmania.spring.boot.docker.compose.service.connection;
 
-import org.springframework.boot.docker.compose.core.RunningService;
+import io.github.kotlinmania.spring.boot.docker.compose.core.RunningService;
 import org.springframework.core.env.Environment;
 
 /**

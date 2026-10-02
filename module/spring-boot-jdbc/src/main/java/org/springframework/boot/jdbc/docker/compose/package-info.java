@@ -18,6 +18,6 @@
  * Support for Docker Compose JDBC service connections.
  */
 @NullMarked
-package org.springframework.boot.jdbc.docker.compose;
+package io.github.kotlinmania.spring.boot.jdbc.docker.compose;
 
 import org.jspecify.annotations.NullMarked;

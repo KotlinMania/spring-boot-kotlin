@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.maven;
+package io.github.kotlinmania.spring.boot.maven;
 
 import java.io.File;
 import java.io.IOException;
@@ -30,15 +30,15 @@ import org.junit.jupiter.api.condition.EnabledOnOs;
 import org.junit.jupiter.api.condition.OS;
 import org.junit.jupiter.api.extension.ExtendWith;
 
-import org.springframework.boot.buildpack.platform.docker.DockerApi;
-import org.springframework.boot.buildpack.platform.docker.DockerApi.ImageApi;
-import org.springframework.boot.buildpack.platform.docker.DockerApi.VolumeApi;
-import org.springframework.boot.buildpack.platform.docker.transport.DockerEngineException;
-import org.springframework.boot.buildpack.platform.docker.type.Image;
-import org.springframework.boot.buildpack.platform.docker.type.ImageName;
-import org.springframework.boot.buildpack.platform.docker.type.ImageReference;
-import org.springframework.boot.buildpack.platform.docker.type.VolumeName;
-import org.springframework.boot.testsupport.container.DisabledIfDockerUnavailable;
+import io.github.kotlinmania.spring.boot.buildpack.platform.docker.DockerApi;
+import io.github.kotlinmania.spring.boot.buildpack.platform.docker.DockerApi.ImageApi;
+import io.github.kotlinmania.spring.boot.buildpack.platform.docker.DockerApi.VolumeApi;
+import io.github.kotlinmania.spring.boot.buildpack.platform.docker.transport.DockerEngineException;
+import io.github.kotlinmania.spring.boot.buildpack.platform.docker.type.Image;
+import io.github.kotlinmania.spring.boot.buildpack.platform.docker.type.ImageName;
+import io.github.kotlinmania.spring.boot.buildpack.platform.docker.type.ImageReference;
+import io.github.kotlinmania.spring.boot.buildpack.platform.docker.type.VolumeName;
+import io.github.kotlinmania.spring.boot.testsupport.container.DisabledIfDockerUnavailable;
 import org.springframework.util.FileSystemUtils;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -347,7 +347,7 @@ class BuildImageTests extends AbstractArchiveIntegrationTests {
 				assertThat(jar).isFile();
 				assertThat(buildLog(project)).contains("Building image")
 					.contains("docker.io/library/build-image-zip-packaging:0.0.1.BUILD-SNAPSHOT")
-					.contains("Main-Class: org.springframework.boot.loader.launch.PropertiesLauncher")
+					.contains("Main-Class: io.github.kotlinmania.spring.boot.loader.launch.PropertiesLauncher")
 					.contains("Successfully built image");
 				removeImage("build-image-zip-packaging", "0.0.1.BUILD-SNAPSHOT");
 			});

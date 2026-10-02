@@ -14,8 +14,8 @@
  * limitations under the License.
  */
 
-import org.springframework.boot.build.properties.BuildProperties
-import org.springframework.boot.build.properties.BuildType
+import io.github.kotlinmania.spring.boot.build.properties.BuildProperties
+import io.github.kotlinmania.spring.boot.build.properties.BuildType
 
 plugins {
 	id "java"
@@ -84,8 +84,8 @@ tasks.register("fullJar", Jar) {
 	}
 	manifest {
 		attributes(
-			"Main-Class": "org.springframework.boot.loader.launch.JarLauncher",
-			"Start-Class": "org.springframework.boot.cli.SpringCli"
+			"Main-Class": "io.github.kotlinmania.spring.boot.loader.launch.JarLauncher",
+			"Start-Class": "io.github.kotlinmania.spring.boot.cli.SpringCli"
 		)
 	}
 }
@@ -124,7 +124,7 @@ tasks.register("tar", Tar) {
 }
 
 if (BuildProperties.get(project).buildType() == BuildType.OPEN_SOURCE) {
-	def homebrewFormula = tasks.register("homebrewFormula", org.springframework.boot.build.cli.HomebrewFormula) {
+	def homebrewFormula = tasks.register("homebrewFormula", io.github.kotlinmania.spring.boot.build.cli.HomebrewFormula) {
 		dependsOn tar
 		outputDir = layout.buildDirectory.dir("homebrew")
 		template = file("src/main/homebrew/spring-boot.rb")

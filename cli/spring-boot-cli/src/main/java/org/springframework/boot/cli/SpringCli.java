@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.cli;
+package io.github.kotlinmania.spring.boot.cli;
 
 import java.io.File;
 import java.net.MalformedURLException;
@@ -24,13 +24,13 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.ServiceLoader;
 
-import org.springframework.boot.cli.command.CommandFactory;
-import org.springframework.boot.cli.command.CommandRunner;
-import org.springframework.boot.cli.command.core.HelpCommand;
-import org.springframework.boot.cli.command.core.HintCommand;
-import org.springframework.boot.cli.command.core.VersionCommand;
-import org.springframework.boot.cli.command.shell.ShellCommand;
-import org.springframework.boot.loader.tools.LogbackInitializer;
+import io.github.kotlinmania.spring.boot.cli.command.CommandFactory;
+import io.github.kotlinmania.spring.boot.cli.command.CommandRunner;
+import io.github.kotlinmania.spring.boot.cli.command.core.HelpCommand;
+import io.github.kotlinmania.spring.boot.cli.command.core.HintCommand;
+import io.github.kotlinmania.spring.boot.cli.command.core.VersionCommand;
+import io.github.kotlinmania.spring.boot.cli.command.shell.ShellCommand;
+import io.github.kotlinmania.spring.boot.loader.tools.LogbackInitializer;
 import org.springframework.util.Assert;
 import org.springframework.util.ClassUtils;
 import org.springframework.util.SystemPropertyUtils;

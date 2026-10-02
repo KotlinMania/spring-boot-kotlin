@@ -15,6 +15,6 @@
  */
 
 @NullMarked
-package org.springframework.boot.data.ldap.autoconfigure.domain.empty;
+package io.github.kotlinmania.spring.boot.data.ldap.autoconfigure.domain.empty;
 
 import org.jspecify.annotations.NullMarked;

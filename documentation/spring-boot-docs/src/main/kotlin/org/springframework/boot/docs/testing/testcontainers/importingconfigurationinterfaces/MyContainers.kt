@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.testing.testcontainers.importingconfigurationinterfaces
+package io.github.kotlinmania.spring.boot.docs.testing.testcontainers.importingconfigurationinterfaces
 
 import org.testcontainers.junit.jupiter.Container
 import org.testcontainers.mongodb.MongoDBContainer

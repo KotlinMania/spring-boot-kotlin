@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.configurationsample;
+package io.github.kotlinmania.spring.boot.configurationsample;
 
 /**
  * Alternative to Spring Boot's {@code @Access} for testing (removes the need for a

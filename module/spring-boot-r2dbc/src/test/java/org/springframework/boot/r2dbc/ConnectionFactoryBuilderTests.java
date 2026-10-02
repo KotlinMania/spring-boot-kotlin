@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.r2dbc;
+package io.github.kotlinmania.spring.boot.r2dbc;
 
 import java.time.Duration;
 import java.util.ArrayList;
@@ -38,7 +38,7 @@ import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 import org.reactivestreams.Publisher;
 
-import org.springframework.boot.r2dbc.ConnectionFactoryBuilder.PoolingAwareOptionsCapableWrapper;
+import io.github.kotlinmania.spring.boot.r2dbc.ConnectionFactoryBuilder.PoolingAwareOptionsCapableWrapper;
 import org.springframework.core.ResolvableType;
 import org.springframework.util.ReflectionUtils;
 import org.springframework.util.ReflectionUtils.FieldFilter;

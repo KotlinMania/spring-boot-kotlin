@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.micrometer.tracing.autoconfigure.prometheus;
+package io.github.kotlinmania.spring.boot.micrometer.tracing.autoconfigure.prometheus;
 
 import io.micrometer.tracing.Span;
 import io.micrometer.tracing.TraceContext;
@@ -24,9 +24,9 @@ import org.junit.jupiter.api.Test;
 
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.ObjectProvider;
-import org.springframework.boot.context.properties.source.InvalidConfigurationPropertyValueException;
-import org.springframework.boot.micrometer.tracing.autoconfigure.TracingProperties.Exemplars.Include;
-import org.springframework.boot.micrometer.tracing.autoconfigure.prometheus.PrometheusExemplarsAutoConfiguration.LazyTracingSpanContext;
+import io.github.kotlinmania.spring.boot.context.properties.source.InvalidConfigurationPropertyValueException;
+import io.github.kotlinmania.spring.boot.micrometer.tracing.autoconfigure.TracingProperties.Exemplars.Include;
+import io.github.kotlinmania.spring.boot.micrometer.tracing.autoconfigure.prometheus.PrometheusExemplarsAutoConfiguration.LazyTracingSpanContext;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatExceptionOfType;

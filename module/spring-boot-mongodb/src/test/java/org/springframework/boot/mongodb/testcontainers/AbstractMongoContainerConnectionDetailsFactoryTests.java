@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.mongodb.testcontainers;
+package io.github.kotlinmania.spring.boot.mongodb.testcontainers;
 
 import com.mongodb.ConnectionString;
 import org.junit.jupiter.api.Test;
 
 import org.springframework.aot.hint.RuntimeHints;
 import org.springframework.aot.hint.predicate.RuntimeHintsPredicates;
-import org.springframework.boot.testcontainers.service.connection.ContainerConnectionDetailsFactoryHints;
+import io.github.kotlinmania.spring.boot.testcontainers.service.connection.ContainerConnectionDetailsFactoryHints;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

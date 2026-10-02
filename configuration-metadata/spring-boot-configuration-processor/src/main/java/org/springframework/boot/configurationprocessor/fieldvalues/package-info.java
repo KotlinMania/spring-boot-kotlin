@@ -17,4 +17,4 @@
 /**
  * Abstraction for field value parsing.
  */
-package org.springframework.boot.configurationprocessor.fieldvalues;
+package io.github.kotlinmania.spring.boot.configurationprocessor.fieldvalues;

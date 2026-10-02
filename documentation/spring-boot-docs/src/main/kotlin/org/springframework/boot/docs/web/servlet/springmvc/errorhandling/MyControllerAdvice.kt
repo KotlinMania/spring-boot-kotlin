@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.web.servlet.springmvc.errorhandling
+package io.github.kotlinmania.spring.boot.docs.web.servlet.springmvc.errorhandling
 
 import jakarta.servlet.RequestDispatcher
 import jakarta.servlet.http.HttpServletRequest

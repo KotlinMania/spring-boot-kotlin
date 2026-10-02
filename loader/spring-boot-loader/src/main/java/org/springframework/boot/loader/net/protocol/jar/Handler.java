@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.loader.net.protocol.jar;
+package io.github.kotlinmania.spring.boot.loader.net.protocol.jar;
 
 import java.io.IOException;
 import java.net.MalformedURLException;
@@ -28,7 +28,7 @@ import java.net.URLStreamHandler;
  *
  * @author Phillip Webb
  * @since 3.2.0
- * @see org.springframework.boot.loader.net.protocol.Handlers
+ * @see io.github.kotlinmania.spring.boot.loader.net.protocol.Handlers
  */
 public class Handler extends URLStreamHandler {
 
@@ -105,7 +105,7 @@ public class Handler extends URLStreamHandler {
 
 	private void assertInnerUrlIsNotMalformed(String spec, String innerUrl) {
 		if (innerUrl.startsWith("nested:")) {
-			org.springframework.boot.loader.net.protocol.nested.Handler.assertUrlIsNotMalformed(innerUrl);
+			io.github.kotlinmania.spring.boot.loader.net.protocol.nested.Handler.assertUrlIsNotMalformed(innerUrl);
 			return;
 		}
 		try {

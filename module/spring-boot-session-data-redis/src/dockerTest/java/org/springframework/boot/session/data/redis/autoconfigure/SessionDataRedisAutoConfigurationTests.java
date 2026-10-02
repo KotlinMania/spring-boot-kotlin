@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.session.data.redis.autoconfigure;
+package io.github.kotlinmania.spring.boot.session.data.redis.autoconfigure;
 
 import java.time.Duration;
 import java.util.Map;
@@ -25,17 +25,17 @@ import org.junit.jupiter.api.Test;
 import org.testcontainers.junit.jupiter.Container;
 import org.testcontainers.junit.jupiter.Testcontainers;
 
-import org.springframework.boot.autoconfigure.AutoConfigurations;
-import org.springframework.boot.context.properties.source.InvalidConfigurationPropertyValueException;
-import org.springframework.boot.data.redis.autoconfigure.DataRedisAutoConfiguration;
-import org.springframework.boot.session.autoconfigure.AbstractSessionAutoConfigurationTests;
-import org.springframework.boot.session.autoconfigure.SessionAutoConfiguration;
-import org.springframework.boot.session.autoconfigure.SessionTimeout;
-import org.springframework.boot.test.context.assertj.AssertableWebApplicationContext;
-import org.springframework.boot.test.context.runner.ContextConsumer;
-import org.springframework.boot.test.context.runner.WebApplicationContextRunner;
-import org.springframework.boot.testsupport.container.TestImage;
-import org.springframework.boot.web.server.autoconfigure.ServerProperties;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurations;
+import io.github.kotlinmania.spring.boot.context.properties.source.InvalidConfigurationPropertyValueException;
+import io.github.kotlinmania.spring.boot.data.redis.autoconfigure.DataRedisAutoConfiguration;
+import io.github.kotlinmania.spring.boot.session.autoconfigure.AbstractSessionAutoConfigurationTests;
+import io.github.kotlinmania.spring.boot.session.autoconfigure.SessionAutoConfiguration;
+import io.github.kotlinmania.spring.boot.session.autoconfigure.SessionTimeout;
+import io.github.kotlinmania.spring.boot.test.context.assertj.AssertableWebApplicationContext;
+import io.github.kotlinmania.spring.boot.test.context.runner.ContextConsumer;
+import io.github.kotlinmania.spring.boot.test.context.runner.WebApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.testsupport.container.TestImage;
+import io.github.kotlinmania.spring.boot.web.server.autoconfigure.ServerProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.redis.connection.RedisConnection;

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.data.cassandra.autoconfigure;
+package io.github.kotlinmania.spring.boot.data.cassandra.autoconfigure;
 
 import com.datastax.oss.driver.api.core.CqlSession;
 import com.datastax.oss.driver.api.core.context.DriverContext;

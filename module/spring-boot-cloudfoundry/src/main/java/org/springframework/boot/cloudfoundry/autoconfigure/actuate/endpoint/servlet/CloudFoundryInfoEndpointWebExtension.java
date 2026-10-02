@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.cloudfoundry.autoconfigure.actuate.endpoint.servlet;
+package io.github.kotlinmania.spring.boot.cloudfoundry.autoconfigure.actuate.endpoint.servlet;
 
 import java.util.Map;
 
-import org.springframework.boot.actuate.endpoint.annotation.EndpointExtension;
-import org.springframework.boot.actuate.endpoint.annotation.ReadOperation;
-import org.springframework.boot.actuate.info.InfoEndpoint;
-import org.springframework.boot.cloudfoundry.autoconfigure.actuate.endpoint.EndpointCloudFoundryExtension;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.annotation.EndpointExtension;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.annotation.ReadOperation;
+import io.github.kotlinmania.spring.boot.actuate.info.InfoEndpoint;
+import io.github.kotlinmania.spring.boot.cloudfoundry.autoconfigure.actuate.endpoint.EndpointCloudFoundryExtension;
 
 /**
  * {@link EndpointExtension @EndpointExtension} for the {@link InfoEndpoint} that always

@@ -14,17 +14,17 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.grpc.server.autoconfigure.security;
+package io.github.kotlinmania.spring.boot.grpc.server.autoconfigure.security;
 
 import io.grpc.BindableService;
 
-import org.springframework.boot.autoconfigure.AutoConfiguration;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnBooleanProperty;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
-import org.springframework.boot.grpc.server.autoconfigure.GrpcServerAutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.EnableAutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnBean;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnBooleanProperty;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnClass;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnMissingBean;
+import io.github.kotlinmania.spring.boot.grpc.server.autoconfigure.GrpcServerAutoConfiguration;
 import org.springframework.context.annotation.Bean;
 import org.springframework.grpc.server.GlobalServerInterceptor;
 import org.springframework.grpc.server.GrpcServerFactory;
@@ -44,9 +44,9 @@ import static org.springframework.security.config.Customizer.withDefaults;
  * @author Phillip Webb
  * @since 4.1.0
  */
-@AutoConfiguration(beforeName = "org.springframework.boot.security.autoconfigure.UserDetailsServiceAutoConfiguration",
-		afterName = { "org.springframework.boot.security.autoconfigure.SecurityAutoConfiguration",
-				"org.springframework.boot.security.oauth2.server.resource.autoconfigure.OAuth2ResourceServerAutoConfiguration" },
+@AutoConfiguration(beforeName = "io.github.kotlinmania.spring.boot.security.autoconfigure.UserDetailsServiceAutoConfiguration",
+		afterName = { "io.github.kotlinmania.spring.boot.security.autoconfigure.SecurityAutoConfiguration",
+				"io.github.kotlinmania.spring.boot.security.oauth2.server.resource.autoconfigure.OAuth2ResourceServerAutoConfiguration" },
 		after = { GrpcServerSecurityAutoConfiguration.class, GrpcServerAutoConfiguration.class })
 @ConditionalOnBooleanProperty(name = "spring.grpc.server.enabled", matchIfMissing = true)
 @ConditionalOnClass({ BindableService.class, GrpcServerFactory.class, ObjectPostProcessor.class })

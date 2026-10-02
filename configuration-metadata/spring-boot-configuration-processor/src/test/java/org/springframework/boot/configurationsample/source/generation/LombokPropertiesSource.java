@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.configurationsample.source.generation;
+package io.github.kotlinmania.spring.boot.configurationsample.source.generation;
 
 import lombok.Getter;
 import lombok.Setter;
 
-import org.springframework.boot.configurationsample.TestConfigurationPropertiesSource;
+import io.github.kotlinmania.spring.boot.configurationsample.TestConfigurationPropertiesSource;
 
 @Getter
 @Setter

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.context.embedded;
+package io.github.kotlinmania.spring.boot.context.embedded;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -76,7 +76,7 @@ class EmbeddedServletContainerWarDevelopmentIntegrationTests {
 		ResponseEntity<String> entity = rest.getForEntity("/resourcePaths", String.class);
 		assertThat(entity.getStatusCode()).isEqualTo(HttpStatus.OK);
 		assertThat(readLines(entity.getBody()))
-			.noneMatch((resourcePath) -> resourcePath.startsWith("/org/springframework/boot/loader"));
+			.noneMatch((resourcePath) -> resourcePath.startsWith("/io.github.kotlinmania.spring.boot.loader"));
 	}
 
 	private List<String> readLines(String input) {

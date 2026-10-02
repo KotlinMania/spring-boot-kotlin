@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.data.couchbase.test.autoconfigure;
+package io.github.kotlinmania.spring.boot.data.couchbase.test.autoconfigure;
 
-import org.springframework.boot.context.TypeExcludeFilter;
-import org.springframework.boot.test.context.filter.annotation.StandardAnnotationCustomizableTypeExcludeFilter;
+import io.github.kotlinmania.spring.boot.context.TypeExcludeFilter;
+import io.github.kotlinmania.spring.boot.test.context.filter.annotation.StandardAnnotationCustomizableTypeExcludeFilter;
 
 /**
  * {@link TypeExcludeFilter} for {@link DataCouchbaseTest @DataCouchbaseaTest}.

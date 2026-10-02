@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.features.externalconfig.typesafeconfigurationproperties.constructorbinding
+package io.github.kotlinmania.spring.boot.docs.features.externalconfig.typesafeconfigurationproperties.constructorbinding
 
-import org.springframework.boot.context.properties.ConfigurationProperties
-import org.springframework.boot.context.properties.bind.DefaultValue
+import io.github.kotlinmania.spring.boot.context.properties.ConfigurationProperties
+import io.github.kotlinmania.spring.boot.context.properties.bind.DefaultValue
 import java.net.InetAddress
 
 @ConfigurationProperties("my.service")

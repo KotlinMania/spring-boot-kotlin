@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.couchbase.health;
+package io.github.kotlinmania.spring.boot.couchbase.health;
 
 import java.util.Collection;
 import java.util.HashMap;
@@ -24,7 +24,7 @@ import com.couchbase.client.core.diagnostics.ClusterState;
 import com.couchbase.client.core.diagnostics.DiagnosticsResult;
 import com.couchbase.client.core.diagnostics.EndpointDiagnostics;
 
-import org.springframework.boot.health.contributor.Health;
+import io.github.kotlinmania.spring.boot.health.contributor.Health;
 
 /**
  * Details of Couchbase's health.

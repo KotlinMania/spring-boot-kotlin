@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.features.profiles
+package io.github.kotlinmania.spring.boot.docs.features.profiles
 
 import org.springframework.context.annotation.Configuration
 import org.springframework.context.annotation.Profile

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.health.registry;
+package io.github.kotlinmania.spring.boot.health.registry;
 
 /**
  * Interface that can be used to validate names before they are added to a health

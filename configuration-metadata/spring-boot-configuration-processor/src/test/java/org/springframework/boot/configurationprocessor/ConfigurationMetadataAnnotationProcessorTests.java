@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.configurationprocessor;
+package io.github.kotlinmania.spring.boot.configurationprocessor;
 
 import java.time.temporal.ChronoField;
 import java.time.temporal.ChronoUnit;
@@ -25,80 +25,80 @@ import java.util.function.Function;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.configurationprocessor.metadata.ConfigurationMetadata;
-import org.springframework.boot.configurationprocessor.metadata.ItemIgnore;
-import org.springframework.boot.configurationprocessor.metadata.ItemMetadata;
-import org.springframework.boot.configurationprocessor.metadata.Metadata;
-import org.springframework.boot.configurationprocessor.test.CompiledMetadataReader;
-import org.springframework.boot.configurationprocessor.test.TestConfigurationMetadataAnnotationProcessor;
-import org.springframework.boot.configurationsample.deprecation.Dbcp2Configuration;
-import org.springframework.boot.configurationsample.method.NestedPropertiesMethod;
-import org.springframework.boot.configurationsample.method.NestedPropertiesMethodImmutable;
-import org.springframework.boot.configurationsample.record.ExampleRecord;
-import org.springframework.boot.configurationsample.record.NestedPropertiesRecord;
-import org.springframework.boot.configurationsample.record.RecordWithGetter;
-import org.springframework.boot.configurationsample.recursive.RecursiveProperties;
-import org.springframework.boot.configurationsample.simple.ClassWithNestedProperties;
-import org.springframework.boot.configurationsample.simple.DeprecatedFieldSingleProperty;
-import org.springframework.boot.configurationsample.simple.DeprecatedRecord;
-import org.springframework.boot.configurationsample.simple.DeprecatedSingleProperty;
-import org.springframework.boot.configurationsample.simple.DescriptionProperties;
-import org.springframework.boot.configurationsample.simple.HierarchicalProperties;
-import org.springframework.boot.configurationsample.simple.HierarchicalPropertiesGrandparent;
-import org.springframework.boot.configurationsample.simple.HierarchicalPropertiesParent;
-import org.springframework.boot.configurationsample.simple.IgnoredProperties;
-import org.springframework.boot.configurationsample.simple.InnerClassWithPrivateConstructor;
-import org.springframework.boot.configurationsample.simple.NotAnnotated;
-import org.springframework.boot.configurationsample.simple.SimpleArrayProperties;
-import org.springframework.boot.configurationsample.simple.SimpleCollectionProperties;
-import org.springframework.boot.configurationsample.simple.SimplePrefixValueProperties;
-import org.springframework.boot.configurationsample.simple.SimpleProperties;
-import org.springframework.boot.configurationsample.simple.SimpleTypeProperties;
-import org.springframework.boot.configurationsample.source.ConcreteProperties;
-import org.springframework.boot.configurationsample.source.ConcreteSource;
-import org.springframework.boot.configurationsample.source.ConcreteSourceAnnotated;
-import org.springframework.boot.configurationsample.source.ConventionSource;
-import org.springframework.boot.configurationsample.source.ConventionSourceAnnotated;
-import org.springframework.boot.configurationsample.source.ImmutableSource;
-import org.springframework.boot.configurationsample.source.ImmutableSourceAnnotated;
-import org.springframework.boot.configurationsample.source.LombokSource;
-import org.springframework.boot.configurationsample.source.LombokSourceAnnotated;
-import org.springframework.boot.configurationsample.source.ParentWithHintProperties;
-import org.springframework.boot.configurationsample.source.RecordSource;
-import org.springframework.boot.configurationsample.source.RecordSourceAnnotated;
-import org.springframework.boot.configurationsample.source.SimpleSource;
-import org.springframework.boot.configurationsample.source.SimpleSourceAnnotated;
-import org.springframework.boot.configurationsample.source.generation.AbstractPropertiesSource;
-import org.springframework.boot.configurationsample.source.generation.ConfigurationPropertySourcesContainer;
-import org.springframework.boot.configurationsample.source.generation.ConfigurationPropertySourcesContainer.First;
-import org.springframework.boot.configurationsample.source.generation.ConfigurationPropertySourcesContainer.Second;
-import org.springframework.boot.configurationsample.source.generation.ConfigurationPropertySourcesContainer.Third;
-import org.springframework.boot.configurationsample.source.generation.ImmutablePropertiesSource;
-import org.springframework.boot.configurationsample.source.generation.LombokPropertiesSource;
-import org.springframework.boot.configurationsample.source.generation.NestedPropertiesSource;
-import org.springframework.boot.configurationsample.source.generation.RecordPropertiesSources;
-import org.springframework.boot.configurationsample.source.generation.SimplePropertiesSource;
-import org.springframework.boot.configurationsample.specific.AnnotatedGetter;
-import org.springframework.boot.configurationsample.specific.BoxingPojo;
-import org.springframework.boot.configurationsample.specific.BuilderPojo;
-import org.springframework.boot.configurationsample.specific.DeprecatedLessPreciseTypePojo;
-import org.springframework.boot.configurationsample.specific.DeprecatedSimplePojo;
-import org.springframework.boot.configurationsample.specific.DeprecatedUnrelatedMethodPojo;
-import org.springframework.boot.configurationsample.specific.DoubleRegistrationProperties;
-import org.springframework.boot.configurationsample.specific.EmptyDefaultValueProperties;
-import org.springframework.boot.configurationsample.specific.EnumValuesPojo;
-import org.springframework.boot.configurationsample.specific.ExcludedTypesPojo;
-import org.springframework.boot.configurationsample.specific.InnerClassAnnotatedGetterConfig;
-import org.springframework.boot.configurationsample.specific.InnerClassHierarchicalProperties;
-import org.springframework.boot.configurationsample.specific.InnerClassProperties;
-import org.springframework.boot.configurationsample.specific.InnerClassRootConfig;
-import org.springframework.boot.configurationsample.specific.InvalidAccessorProperties;
-import org.springframework.boot.configurationsample.specific.InvalidDefaultValueCharacterProperties;
-import org.springframework.boot.configurationsample.specific.InvalidDefaultValueFloatingPointProperties;
-import org.springframework.boot.configurationsample.specific.InvalidDefaultValueNumberProperties;
-import org.springframework.boot.configurationsample.specific.InvalidDoubleRegistrationProperties;
-import org.springframework.boot.configurationsample.specific.SimplePojo;
-import org.springframework.boot.configurationsample.specific.StaticAccessor;
+import io.github.kotlinmania.spring.boot.configurationprocessor.metadata.ConfigurationMetadata;
+import io.github.kotlinmania.spring.boot.configurationprocessor.metadata.ItemIgnore;
+import io.github.kotlinmania.spring.boot.configurationprocessor.metadata.ItemMetadata;
+import io.github.kotlinmania.spring.boot.configurationprocessor.metadata.Metadata;
+import io.github.kotlinmania.spring.boot.configurationprocessor.test.CompiledMetadataReader;
+import io.github.kotlinmania.spring.boot.configurationprocessor.test.TestConfigurationMetadataAnnotationProcessor;
+import io.github.kotlinmania.spring.boot.configurationsample.deprecation.Dbcp2Configuration;
+import io.github.kotlinmania.spring.boot.configurationsample.method.NestedPropertiesMethod;
+import io.github.kotlinmania.spring.boot.configurationsample.method.NestedPropertiesMethodImmutable;
+import io.github.kotlinmania.spring.boot.configurationsample.record.ExampleRecord;
+import io.github.kotlinmania.spring.boot.configurationsample.record.NestedPropertiesRecord;
+import io.github.kotlinmania.spring.boot.configurationsample.record.RecordWithGetter;
+import io.github.kotlinmania.spring.boot.configurationsample.recursive.RecursiveProperties;
+import io.github.kotlinmania.spring.boot.configurationsample.simple.ClassWithNestedProperties;
+import io.github.kotlinmania.spring.boot.configurationsample.simple.DeprecatedFieldSingleProperty;
+import io.github.kotlinmania.spring.boot.configurationsample.simple.DeprecatedRecord;
+import io.github.kotlinmania.spring.boot.configurationsample.simple.DeprecatedSingleProperty;
+import io.github.kotlinmania.spring.boot.configurationsample.simple.DescriptionProperties;
+import io.github.kotlinmania.spring.boot.configurationsample.simple.HierarchicalProperties;
+import io.github.kotlinmania.spring.boot.configurationsample.simple.HierarchicalPropertiesGrandparent;
+import io.github.kotlinmania.spring.boot.configurationsample.simple.HierarchicalPropertiesParent;
+import io.github.kotlinmania.spring.boot.configurationsample.simple.IgnoredProperties;
+import io.github.kotlinmania.spring.boot.configurationsample.simple.InnerClassWithPrivateConstructor;
+import io.github.kotlinmania.spring.boot.configurationsample.simple.NotAnnotated;
+import io.github.kotlinmania.spring.boot.configurationsample.simple.SimpleArrayProperties;
+import io.github.kotlinmania.spring.boot.configurationsample.simple.SimpleCollectionProperties;
+import io.github.kotlinmania.spring.boot.configurationsample.simple.SimplePrefixValueProperties;
+import io.github.kotlinmania.spring.boot.configurationsample.simple.SimpleProperties;
+import io.github.kotlinmania.spring.boot.configurationsample.simple.SimpleTypeProperties;
+import io.github.kotlinmania.spring.boot.configurationsample.source.ConcreteProperties;
+import io.github.kotlinmania.spring.boot.configurationsample.source.ConcreteSource;
+import io.github.kotlinmania.spring.boot.configurationsample.source.ConcreteSourceAnnotated;
+import io.github.kotlinmania.spring.boot.configurationsample.source.ConventionSource;
+import io.github.kotlinmania.spring.boot.configurationsample.source.ConventionSourceAnnotated;
+import io.github.kotlinmania.spring.boot.configurationsample.source.ImmutableSource;
+import io.github.kotlinmania.spring.boot.configurationsample.source.ImmutableSourceAnnotated;
+import io.github.kotlinmania.spring.boot.configurationsample.source.LombokSource;
+import io.github.kotlinmania.spring.boot.configurationsample.source.LombokSourceAnnotated;
+import io.github.kotlinmania.spring.boot.configurationsample.source.ParentWithHintProperties;
+import io.github.kotlinmania.spring.boot.configurationsample.source.RecordSource;
+import io.github.kotlinmania.spring.boot.configurationsample.source.RecordSourceAnnotated;
+import io.github.kotlinmania.spring.boot.configurationsample.source.SimpleSource;
+import io.github.kotlinmania.spring.boot.configurationsample.source.SimpleSourceAnnotated;
+import io.github.kotlinmania.spring.boot.configurationsample.source.generation.AbstractPropertiesSource;
+import io.github.kotlinmania.spring.boot.configurationsample.source.generation.ConfigurationPropertySourcesContainer;
+import io.github.kotlinmania.spring.boot.configurationsample.source.generation.ConfigurationPropertySourcesContainer.First;
+import io.github.kotlinmania.spring.boot.configurationsample.source.generation.ConfigurationPropertySourcesContainer.Second;
+import io.github.kotlinmania.spring.boot.configurationsample.source.generation.ConfigurationPropertySourcesContainer.Third;
+import io.github.kotlinmania.spring.boot.configurationsample.source.generation.ImmutablePropertiesSource;
+import io.github.kotlinmania.spring.boot.configurationsample.source.generation.LombokPropertiesSource;
+import io.github.kotlinmania.spring.boot.configurationsample.source.generation.NestedPropertiesSource;
+import io.github.kotlinmania.spring.boot.configurationsample.source.generation.RecordPropertiesSources;
+import io.github.kotlinmania.spring.boot.configurationsample.source.generation.SimplePropertiesSource;
+import io.github.kotlinmania.spring.boot.configurationsample.specific.AnnotatedGetter;
+import io.github.kotlinmania.spring.boot.configurationsample.specific.BoxingPojo;
+import io.github.kotlinmania.spring.boot.configurationsample.specific.BuilderPojo;
+import io.github.kotlinmania.spring.boot.configurationsample.specific.DeprecatedLessPreciseTypePojo;
+import io.github.kotlinmania.spring.boot.configurationsample.specific.DeprecatedSimplePojo;
+import io.github.kotlinmania.spring.boot.configurationsample.specific.DeprecatedUnrelatedMethodPojo;
+import io.github.kotlinmania.spring.boot.configurationsample.specific.DoubleRegistrationProperties;
+import io.github.kotlinmania.spring.boot.configurationsample.specific.EmptyDefaultValueProperties;
+import io.github.kotlinmania.spring.boot.configurationsample.specific.EnumValuesPojo;
+import io.github.kotlinmania.spring.boot.configurationsample.specific.ExcludedTypesPojo;
+import io.github.kotlinmania.spring.boot.configurationsample.specific.InnerClassAnnotatedGetterConfig;
+import io.github.kotlinmania.spring.boot.configurationsample.specific.InnerClassHierarchicalProperties;
+import io.github.kotlinmania.spring.boot.configurationsample.specific.InnerClassProperties;
+import io.github.kotlinmania.spring.boot.configurationsample.specific.InnerClassRootConfig;
+import io.github.kotlinmania.spring.boot.configurationsample.specific.InvalidAccessorProperties;
+import io.github.kotlinmania.spring.boot.configurationsample.specific.InvalidDefaultValueCharacterProperties;
+import io.github.kotlinmania.spring.boot.configurationsample.specific.InvalidDefaultValueFloatingPointProperties;
+import io.github.kotlinmania.spring.boot.configurationsample.specific.InvalidDefaultValueNumberProperties;
+import io.github.kotlinmania.spring.boot.configurationsample.specific.InvalidDoubleRegistrationProperties;
+import io.github.kotlinmania.spring.boot.configurationsample.specific.SimplePojo;
+import io.github.kotlinmania.spring.boot.configurationsample.specific.StaticAccessor;
 import org.springframework.core.test.tools.CompilationException;
 import org.springframework.core.test.tools.Compiled;
 import org.springframework.core.test.tools.ResourceFile;
@@ -125,16 +125,16 @@ class ConfigurationMetadataAnnotationProcessorTests extends AbstractMetadataGene
 	@Test
 	void supportedAnnotations() {
 		assertThat(new ConfigurationMetadataAnnotationProcessor().getSupportedAnnotationTypes())
-			.containsExactlyInAnyOrder("org.springframework.boot.autoconfigure.AutoConfiguration",
-					"org.springframework.boot.context.properties.ConfigurationProperties",
-					"org.springframework.boot.context.properties.ConfigurationPropertiesSource",
+			.containsExactlyInAnyOrder("io.github.kotlinmania.spring.boot.autoconfigure.AutoConfiguration",
+					"io.github.kotlinmania.spring.boot.context.properties.ConfigurationProperties",
+					"io.github.kotlinmania.spring.boot.context.properties.ConfigurationPropertiesSource",
 					"org.springframework.context.annotation.Configuration",
-					"org.springframework.boot.actuate.endpoint.annotation.Endpoint",
-					"org.springframework.boot.actuate.endpoint.jmx.annotation.JmxEndpoint",
-					"org.springframework.boot.actuate.endpoint.web.annotation.ControllerEndpoint",
-					"org.springframework.boot.actuate.endpoint.web.annotation.RestControllerEndpoint",
-					"org.springframework.boot.actuate.endpoint.web.annotation.ServletEndpoint",
-					"org.springframework.boot.actuate.endpoint.web.annotation.WebEndpoint");
+					"io.github.kotlinmania.spring.boot.actuate.endpoint.annotation.Endpoint",
+					"io.github.kotlinmania.spring.boot.actuate.endpoint.jmx.annotation.JmxEndpoint",
+					"io.github.kotlinmania.spring.boot.actuate.endpoint.web.annotation.ControllerEndpoint",
+					"io.github.kotlinmania.spring.boot.actuate.endpoint.web.annotation.RestControllerEndpoint",
+					"io.github.kotlinmania.spring.boot.actuate.endpoint.web.annotation.ServletEndpoint",
+					"io.github.kotlinmania.spring.boot.actuate.endpoint.web.annotation.WebEndpoint");
 	}
 
 	@Test
@@ -243,7 +243,7 @@ class ConfigurationMetadataAnnotationProcessorTests extends AbstractMetadataGene
 	@Test
 	@SuppressWarnings("deprecation")
 	void deprecatedProperties() {
-		Class<?> type = org.springframework.boot.configurationsample.simple.DeprecatedProperties.class;
+		Class<?> type = io.github.kotlinmania.spring.boot.configurationsample.simple.DeprecatedProperties.class;
 		ConfigurationMetadata metadata = compile(type);
 		assertThat(metadata).has(Metadata.withGroup("deprecated").fromSource(type));
 		assertThat(metadata)
@@ -335,7 +335,7 @@ class ConfigurationMetadataAnnotationProcessorTests extends AbstractMetadataGene
 		assertThat(metadata).has(Metadata.withProperty("collection.bytes", "java.util.Collection<java.lang.Byte>"));
 		assertThat(metadata).has(Metadata.withProperty("collection.doubles", "java.util.List<java.lang.Double>"));
 		assertThat(metadata).has(Metadata.withProperty("collection.names-to-holders",
-				"java.util.Map<java.lang.String,org.springframework.boot.configurationsample.simple.SimpleCollectionProperties$Holder<java.lang.String>>"));
+				"java.util.Map<java.lang.String,io.github.kotlinmania.spring.boot.configurationsample.simple.SimpleCollectionProperties$Holder<java.lang.String>>"));
 	}
 
 	@Test
@@ -345,7 +345,7 @@ class ConfigurationMetadataAnnotationProcessorTests extends AbstractMetadataGene
 		assertThat(metadata).has(Metadata.withProperty("array.primitive", "java.lang.Integer[]"));
 		assertThat(metadata).has(Metadata.withProperty("array.simple", "java.lang.String[]"));
 		assertThat(metadata).has(Metadata.withProperty("array.inner",
-				"org.springframework.boot.configurationsample.simple.SimpleArrayProperties$Holder[]"));
+				"io.github.kotlinmania.spring.boot.configurationsample.simple.SimpleArrayProperties$Holder[]"));
 		assertThat(metadata)
 			.has(Metadata.withProperty("array.name-to-integer", "java.util.Map<java.lang.String,java.lang.Integer>[]"));
 		assertThat(metadata.getItems()).hasSize(5);
@@ -532,7 +532,7 @@ class ConfigurationMetadataAnnotationProcessorTests extends AbstractMetadataGene
 	@Test
 	void recordProperties() {
 		String source = """
-				@org.springframework.boot.configurationsample.TestConfigurationProperties("implicit")
+				@io.github.kotlinmania.spring.boot.configurationsample.TestConfigurationProperties("implicit")
 				public record ExampleRecord(String someString, Integer someInteger) {
 				}
 				""";
@@ -544,10 +544,10 @@ class ConfigurationMetadataAnnotationProcessorTests extends AbstractMetadataGene
 	@Test
 	void recordPropertiesWithDefaultValues() {
 		String source = """
-				@org.springframework.boot.configurationsample.TestConfigurationProperties("record.defaults")
+				@io.github.kotlinmania.spring.boot.configurationsample.TestConfigurationProperties("record.defaults")
 				public record ExampleRecord(
-					@org.springframework.boot.configurationsample.TestDefaultValue("An1s9n") String someString,
-					@org.springframework.boot.configurationsample.TestDefaultValue("594") Integer someInteger) {
+					@io.github.kotlinmania.spring.boot.configurationsample.TestDefaultValue("An1s9n") String someString,
+					@io.github.kotlinmania.spring.boot.configurationsample.TestDefaultValue("594") Integer someInteger) {
 				}
 				""";
 		ConfigurationMetadata metadata = compile(source);
@@ -560,9 +560,9 @@ class ConfigurationMetadataAnnotationProcessorTests extends AbstractMetadataGene
 	@Test
 	void multiConstructorRecordProperties() {
 		String source = """
-				@org.springframework.boot.configurationsample.TestConfigurationProperties("multi")
+				@io.github.kotlinmania.spring.boot.configurationsample.TestConfigurationProperties("multi")
 				public record ExampleRecord(String someString, Integer someInteger) {
-					@org.springframework.boot.configurationsample.TestConstructorBinding
+					@io.github.kotlinmania.spring.boot.configurationsample.TestConstructorBinding
 					public ExampleRecord(String someString) {
 						this(someString, 42);
 					}

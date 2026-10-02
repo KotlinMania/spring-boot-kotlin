@@ -14,24 +14,24 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.session.data.redis.autoconfigure;
+package io.github.kotlinmania.spring.boot.session.data.redis.autoconfigure;
 
-import org.springframework.boot.autoconfigure.AutoConfiguration;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnWebApplication;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnWebApplication.Type;
-import org.springframework.boot.context.properties.EnableConfigurationProperties;
-import org.springframework.boot.context.properties.PropertyMapper;
-import org.springframework.boot.context.properties.source.InvalidConfigurationPropertyValueException;
-import org.springframework.boot.data.redis.autoconfigure.DataRedisAutoConfiguration;
-import org.springframework.boot.data.redis.autoconfigure.DataRedisReactiveAutoConfiguration;
-import org.springframework.boot.session.autoconfigure.SessionAutoConfiguration;
-import org.springframework.boot.session.autoconfigure.SessionProperties;
-import org.springframework.boot.session.autoconfigure.SessionTimeout;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.EnableAutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnBean;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnClass;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnMissingBean;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnProperty;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnWebApplication;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnWebApplication.Type;
+import io.github.kotlinmania.spring.boot.context.properties.EnableConfigurationProperties;
+import io.github.kotlinmania.spring.boot.context.properties.PropertyMapper;
+import io.github.kotlinmania.spring.boot.context.properties.source.InvalidConfigurationPropertyValueException;
+import io.github.kotlinmania.spring.boot.data.redis.autoconfigure.DataRedisAutoConfiguration;
+import io.github.kotlinmania.spring.boot.data.redis.autoconfigure.DataRedisReactiveAutoConfiguration;
+import io.github.kotlinmania.spring.boot.session.autoconfigure.SessionAutoConfiguration;
+import io.github.kotlinmania.spring.boot.session.autoconfigure.SessionProperties;
+import io.github.kotlinmania.spring.boot.session.autoconfigure.SessionTimeout;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
@@ -69,10 +69,10 @@ import org.springframework.session.data.redis.config.annotation.web.server.Redis
  * @since 4.0.0
  */
 @AutoConfiguration(before = SessionAutoConfiguration.class,
-		beforeName = { "org.springframework.boot.webflux.autoconfigure.HttpHandlerAutoConfiguration",
-				"org.springframework.boot.webflux.autoconfigure.WebFluxAutoConfiguration" },
+		beforeName = { "io.github.kotlinmania.spring.boot.webflux.autoconfigure.HttpHandlerAutoConfiguration",
+				"io.github.kotlinmania.spring.boot.webflux.autoconfigure.WebFluxAutoConfiguration" },
 		after = { DataRedisAutoConfiguration.class, DataRedisReactiveAutoConfiguration.class },
-		afterName = "org.springframework.boot.webflux.autoconfigure.WebSessionIdResolverAutoConfiguration")
+		afterName = "io.github.kotlinmania.spring.boot.webflux.autoconfigure.WebSessionIdResolverAutoConfiguration")
 @ConditionalOnClass(Session.class)
 @EnableConfigurationProperties(SessionDataRedisProperties.class)
 public final class SessionDataRedisAutoConfiguration {

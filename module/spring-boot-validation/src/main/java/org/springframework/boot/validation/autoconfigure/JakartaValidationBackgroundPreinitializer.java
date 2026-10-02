@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.validation.autoconfigure;
+package io.github.kotlinmania.spring.boot.validation.autoconfigure;
 
 import jakarta.validation.Configuration;
 import jakarta.validation.Validation;
 
-import org.springframework.boot.autoconfigure.preinitialize.BackgroundPreinitializer;
+import io.github.kotlinmania.spring.boot.autoconfigure.preinitialize.BackgroundPreinitializer;
 
 /**
  * {@link BackgroundPreinitializer} for jakarta.validation.

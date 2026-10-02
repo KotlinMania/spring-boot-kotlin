@@ -18,6 +18,6 @@
  * Health registry support.
  */
 @NullMarked
-package org.springframework.boot.health.registry;
+package io.github.kotlinmania.spring.boot.health.registry;
 
 import org.jspecify.annotations.NullMarked;

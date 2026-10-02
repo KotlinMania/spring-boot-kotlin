@@ -15,8 +15,11 @@
  */
 package org.springframework.boot.build.bom.bomr
 
-import org.springframework.boot.build.bom.bomr.version.DependencyVersion
-import java.util.*
+package io.github.kotlinmania.spring.boot.build.bom.bomr;
+
+import java.util.SortedSet;
+
+import io.github.kotlinmania.spring.boot.build.bom.bomr.version.DependencyVersion;
 
 /**
  * Resolves the available versions for a module.

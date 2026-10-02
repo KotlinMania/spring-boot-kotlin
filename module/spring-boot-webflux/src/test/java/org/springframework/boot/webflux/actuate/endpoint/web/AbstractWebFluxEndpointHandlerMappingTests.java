@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.webflux.actuate.endpoint.web;
+package io.github.kotlinmania.spring.boot.webflux.actuate.endpoint.web;
 
 import org.junit.jupiter.api.Test;
 
 import org.springframework.aot.hint.RuntimeHints;
 import org.springframework.aot.hint.TypeReference;
 import org.springframework.aot.hint.predicate.RuntimeHintsPredicates;
-import org.springframework.boot.webflux.actuate.endpoint.web.AbstractWebFluxEndpointHandlerMapping.AbstractWebFluxEndpointHandlerMappingRuntimeHints;
+import io.github.kotlinmania.spring.boot.webflux.actuate.endpoint.web.AbstractWebFluxEndpointHandlerMapping.AbstractWebFluxEndpointHandlerMappingRuntimeHints;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -39,15 +39,15 @@ class AbstractWebFluxEndpointHandlerMappingTests {
 				getClass().getClassLoader());
 		assertThat(RuntimeHintsPredicates.reflection()
 			.onType(TypeReference
-				.of("org.springframework.boot.webflux.actuate.endpoint.web.AbstractWebFluxEndpointHandlerMapping.WriteOperationHandler")))
+				.of("io.github.kotlinmania.spring.boot.webflux.actuate.endpoint.web.AbstractWebFluxEndpointHandlerMapping.WriteOperationHandler")))
 			.accepts(runtimeHints);
 		assertThat(RuntimeHintsPredicates.reflection()
 			.onType(TypeReference
-				.of("org.springframework.boot.webflux.actuate.endpoint.web.AbstractWebFluxEndpointHandlerMapping.ReadOperationHandler")))
+				.of("io.github.kotlinmania.spring.boot.webflux.actuate.endpoint.web.AbstractWebFluxEndpointHandlerMapping.ReadOperationHandler")))
 			.accepts(runtimeHints);
 		assertThat(RuntimeHintsPredicates.reflection()
 			.onType(TypeReference
-				.of("org.springframework.boot.webflux.actuate.endpoint.web.AbstractWebFluxEndpointHandlerMapping.CatchAllHandler")))
+				.of("io.github.kotlinmania.spring.boot.webflux.actuate.endpoint.web.AbstractWebFluxEndpointHandlerMapping.CatchAllHandler")))
 			.accepts(runtimeHints);
 	}
 

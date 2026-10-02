@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.jersey.autoconfigure.metrics;
+package io.github.kotlinmania.spring.boot.jersey.autoconfigure.metrics;
 
 import io.micrometer.observation.ObservationRegistry;
 import org.glassfish.jersey.micrometer.server.JerseyObservationConvention;
@@ -22,17 +22,17 @@ import org.glassfish.jersey.micrometer.server.ObservationApplicationEventListene
 import org.glassfish.jersey.server.ResourceConfig;
 
 import org.springframework.beans.factory.ObjectProvider;
-import org.springframework.boot.autoconfigure.AutoConfiguration;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnWebApplication;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnWebApplication.Type;
-import org.springframework.boot.context.properties.EnableConfigurationProperties;
-import org.springframework.boot.jersey.autoconfigure.ResourceConfigCustomizer;
-import org.springframework.boot.micrometer.metrics.MaximumAllowableTagsMeterFilter;
-import org.springframework.boot.micrometer.metrics.autoconfigure.MetricsProperties;
-import org.springframework.boot.micrometer.observation.autoconfigure.ObservationProperties;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.EnableAutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnBean;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnClass;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnWebApplication;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnWebApplication.Type;
+import io.github.kotlinmania.spring.boot.context.properties.EnableConfigurationProperties;
+import io.github.kotlinmania.spring.boot.jersey.autoconfigure.ResourceConfigCustomizer;
+import io.github.kotlinmania.spring.boot.micrometer.metrics.MaximumAllowableTagsMeterFilter;
+import io.github.kotlinmania.spring.boot.micrometer.metrics.autoconfigure.MetricsProperties;
+import io.github.kotlinmania.spring.boot.micrometer.observation.autoconfigure.ObservationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.core.annotation.Order;
 
@@ -46,7 +46,7 @@ import org.springframework.core.annotation.Order;
  * @since 4.0.0
  */
 @AutoConfiguration(
-		afterName = "org.springframework.boot.micrometer.observation.autoconfigure.ObservationAutoConfiguration")
+		afterName = "io.github.kotlinmania.spring.boot.micrometer.observation.autoconfigure.ObservationAutoConfiguration")
 @ConditionalOnWebApplication(type = Type.SERVLET)
 @ConditionalOnClass({ ResourceConfig.class, ObservationApplicationEventListener.class })
 @ConditionalOnBean({ ResourceConfig.class, ObservationRegistry.class })

@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.webmvc.actuate.endpoint.web.test;
+package io.github.kotlinmania.spring.boot.webmvc.actuate.endpoint.web.test;
 
 import java.util.List;
 
-import org.springframework.boot.actuate.endpoint.web.test.WebEndpointInfrastructureProvider;
-import org.springframework.boot.actuate.endpoint.web.test.WebEndpointTest.Infrastructure;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.web.test.WebEndpointInfrastructureProvider;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.web.test.WebEndpointTest.Infrastructure;
 
 /**
  * {@link WebEndpointInfrastructureProvider} for MVC.

@@ -18,6 +18,6 @@
  * Actuator servlet request mappings support.
  */
 @NullMarked
-package org.springframework.boot.servlet.actuate.web.mappings;
+package io.github.kotlinmania.spring.boot.servlet.actuate.web.mappings;
 
 import org.jspecify.annotations.NullMarked;

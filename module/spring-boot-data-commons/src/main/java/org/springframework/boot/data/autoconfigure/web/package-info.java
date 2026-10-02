@@ -18,6 +18,6 @@
  * Auto-configuration for Spring Data web.
  */
 @NullMarked
-package org.springframework.boot.data.autoconfigure.web;
+package io.github.kotlinmania.spring.boot.data.autoconfigure.web;
 
 import org.jspecify.annotations.NullMarked;

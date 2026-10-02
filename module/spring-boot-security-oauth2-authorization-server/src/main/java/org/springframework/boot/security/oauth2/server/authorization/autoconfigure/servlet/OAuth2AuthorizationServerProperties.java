@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.security.oauth2.server.authorization.autoconfigure.servlet;
+package io.github.kotlinmania.spring.boot.security.oauth2.server.authorization.autoconfigure.servlet;
 
 import java.time.Duration;
 import java.util.HashMap;
@@ -25,8 +25,8 @@ import java.util.Set;
 import org.jspecify.annotations.Nullable;
 
 import org.springframework.beans.factory.InitializingBean;
-import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.boot.context.properties.NestedConfigurationProperty;
+import io.github.kotlinmania.spring.boot.context.properties.ConfigurationProperties;
+import io.github.kotlinmania.spring.boot.context.properties.NestedConfigurationProperty;
 import org.springframework.util.CollectionUtils;
 import org.springframework.util.StringUtils;
 

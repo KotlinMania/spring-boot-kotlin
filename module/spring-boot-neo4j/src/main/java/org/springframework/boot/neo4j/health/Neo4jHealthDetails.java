@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.neo4j.health;
+package io.github.kotlinmania.spring.boot.neo4j.health;
 
 import org.neo4j.driver.Record;
 import org.neo4j.driver.summary.ResultSummary;

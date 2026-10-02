@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.configurationsample.generic;
+package io.github.kotlinmania.spring.boot.configurationsample.generic;
 
 /**
  * An intermediate layer that resolves some of the generics from the parent but not all.

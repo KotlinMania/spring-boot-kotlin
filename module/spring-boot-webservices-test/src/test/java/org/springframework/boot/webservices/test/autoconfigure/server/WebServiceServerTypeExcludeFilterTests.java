@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.webservices.test.autoconfigure.server;
+package io.github.kotlinmania.spring.boot.webservices.test.autoconfigure.server;
 
 import java.io.IOException;
 

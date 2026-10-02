@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.testing.springbootapplications.userconfigurationandslicing
+package io.github.kotlinmania.spring.boot.docs.testing.springbootapplications.userconfigurationandslicing
 
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.loader.tools;
+package io.github.kotlinmania.spring.boot.loader.tools;
 
 import java.io.File;
 import java.io.IOException;
@@ -47,7 +47,7 @@ public class JarModeLibrary extends Library {
 
 	private static LibraryCoordinates createCoordinates(String artifactId) {
 		String version = JarModeLibrary.class.getPackage().getImplementationVersion();
-		return LibraryCoordinates.of("org.springframework.boot", artifactId, version);
+		return LibraryCoordinates.of("io.github.kotlinmania.spring.boot., artifactId, version);
 	}
 
 	private static String getJarName(LibraryCoordinates coordinates) {

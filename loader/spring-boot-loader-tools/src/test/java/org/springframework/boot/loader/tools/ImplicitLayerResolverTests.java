@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.loader.tools;
+package io.github.kotlinmania.spring.boot.loader.tools;
 
 import org.junit.jupiter.api.Test;
 
@@ -62,9 +62,9 @@ class ImplicitLayerResolverTests {
 
 	@Test
 	void getLayerWhenLoaderClassReturnsLoaderLayer() {
-		assertThat(this.layers.getLayer("org/springframework/boot/loader/Launcher.class"))
+		assertThat(this.layers.getLayer("io.github.kotlinmania.spring.boot.loader/Launcher.class"))
 			.isEqualTo(StandardLayers.SPRING_BOOT_LOADER);
-		assertThat(this.layers.getLayer("org/springframework/boot/loader/Utils.class"))
+		assertThat(this.layers.getLayer("io.github.kotlinmania.spring.boot.loader/Utils.class"))
 			.isEqualTo(StandardLayers.SPRING_BOOT_LOADER);
 	}
 

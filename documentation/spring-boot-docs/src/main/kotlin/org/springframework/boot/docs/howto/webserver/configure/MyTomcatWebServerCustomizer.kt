@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.howto.webserver.configure
+package io.github.kotlinmania.spring.boot.docs.howto.webserver.configure
 
-import org.springframework.boot.tomcat.servlet.TomcatServletWebServerFactory
-import org.springframework.boot.web.server.WebServerFactoryCustomizer
+import io.github.kotlinmania.spring.boot.tomcat.servlet.TomcatServletWebServerFactory
+import io.github.kotlinmania.spring.boot.web.server.WebServerFactoryCustomizer
 import org.springframework.stereotype.Component
 
 @Component

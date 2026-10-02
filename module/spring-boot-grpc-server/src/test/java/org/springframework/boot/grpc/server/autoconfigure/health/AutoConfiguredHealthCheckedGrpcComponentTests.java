@@ -14,15 +14,15 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.grpc.server.autoconfigure.health;
+package io.github.kotlinmania.spring.boot.grpc.server.autoconfigure.health;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 
-import org.springframework.boot.grpc.server.health.StatusAggregator;
-import org.springframework.boot.grpc.server.health.StatusMapper;
+import io.github.kotlinmania.spring.boot.grpc.server.health.StatusAggregator;
+import io.github.kotlinmania.spring.boot.grpc.server.health.StatusMapper;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

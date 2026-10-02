@@ -18,6 +18,6 @@
  * Auto-configuration for actuator startup time metrics.
  */
 @NullMarked
-package org.springframework.boot.micrometer.metrics.autoconfigure.startup;
+package io.github.kotlinmania.spring.boot.micrometer.metrics.autoconfigure.startup;
 
 import org.jspecify.annotations.NullMarked;

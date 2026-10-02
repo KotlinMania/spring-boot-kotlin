@@ -18,6 +18,6 @@
  * Support for Java Database Connectivity (JDBC).
  */
 @NullMarked
-package org.springframework.boot.jdbc;
+package io.github.kotlinmania.spring.boot.jdbc;
 
 import org.jspecify.annotations.NullMarked;

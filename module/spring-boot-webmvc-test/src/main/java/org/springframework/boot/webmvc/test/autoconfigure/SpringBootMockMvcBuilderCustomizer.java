@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.webmvc.test.autoconfigure;
+package io.github.kotlinmania.spring.boot.webmvc.test.autoconfigure;
 
 import java.io.PrintStream;
 import java.io.PrintWriter;
@@ -33,12 +33,12 @@ import org.jspecify.annotations.Nullable;
 
 import org.springframework.beans.factory.ListableBeanFactory;
 import org.springframework.beans.factory.NoSuchBeanDefinitionException;
-import org.springframework.boot.web.servlet.AbstractFilterRegistrationBean;
-import org.springframework.boot.web.servlet.DelegatingFilterProxyRegistrationBean;
-import org.springframework.boot.web.servlet.FilterRegistration;
-import org.springframework.boot.web.servlet.FilterRegistrationBean;
-import org.springframework.boot.web.servlet.RegistrationBean;
-import org.springframework.boot.web.servlet.ServletContextInitializerBeans;
+import io.github.kotlinmania.spring.boot.web.servlet.AbstractFilterRegistrationBean;
+import io.github.kotlinmania.spring.boot.web.servlet.DelegatingFilterProxyRegistrationBean;
+import io.github.kotlinmania.spring.boot.web.servlet.FilterRegistration;
+import io.github.kotlinmania.spring.boot.web.servlet.FilterRegistrationBean;
+import io.github.kotlinmania.spring.boot.web.servlet.RegistrationBean;
+import io.github.kotlinmania.spring.boot.web.servlet.ServletContextInitializerBeans;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.core.annotation.Order;

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.grpc.server.autoconfigure;
+package io.github.kotlinmania.spring.boot.grpc.server.autoconfigure;
 
 import java.time.Duration;
 import java.util.concurrent.TimeUnit;
@@ -23,9 +23,9 @@ import java.util.function.Consumer;
 
 import io.grpc.ServerBuilder;
 
-import org.springframework.boot.context.properties.PropertyMapper;
-import org.springframework.boot.grpc.server.autoconfigure.GrpcServerProperties.Inbound;
-import org.springframework.boot.grpc.server.autoconfigure.GrpcServerProperties.Keepalive;
+import io.github.kotlinmania.spring.boot.context.properties.PropertyMapper;
+import io.github.kotlinmania.spring.boot.grpc.server.autoconfigure.GrpcServerProperties.Inbound;
+import io.github.kotlinmania.spring.boot.grpc.server.autoconfigure.GrpcServerProperties.Keepalive;
 import org.springframework.grpc.server.ServerBuilderCustomizer;
 import org.springframework.util.ClassUtils;
 import org.springframework.util.unit.DataSize;

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.grpc.server.autoconfigure.security.web.servlet;
+package io.github.kotlinmania.spring.boot.grpc.server.autoconfigure.security.web.servlet;
 
 import java.util.Collection;
 import java.util.Collections;
@@ -27,7 +27,7 @@ import java.util.stream.Stream;
 import jakarta.servlet.http.HttpServletRequest;
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.security.web.servlet.ApplicationContextRequestMatcher;
+import io.github.kotlinmania.spring.boot.security.web.servlet.ApplicationContextRequestMatcher;
 import org.springframework.grpc.server.service.GrpcServiceDiscoverer;
 import org.springframework.security.web.servlet.util.matcher.PathPatternRequestMatcher;
 import org.springframework.security.web.util.matcher.OrRequestMatcher;

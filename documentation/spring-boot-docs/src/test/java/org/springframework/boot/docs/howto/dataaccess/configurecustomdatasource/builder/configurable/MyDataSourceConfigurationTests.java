@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.howto.dataaccess.configurecustomdatasource.builder.configurable;
+package io.github.kotlinmania.spring.boot.docs.howto.dataaccess.configurecustomdatasource.builder.configurable;
 
 import java.sql.SQLException;
 
@@ -25,8 +25,8 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.docs.howto.dataaccess.configurecustomdatasource.configurable.MyDataSourceConfiguration;
-import org.springframework.boot.test.context.SpringBootTest;
+import io.github.kotlinmania.spring.boot.docs.howto.dataaccess.configurecustomdatasource.configurable.MyDataSourceConfiguration;
+import io.github.kotlinmania.spring.boot.test.context.SpringBootTest;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Import;
 import org.springframework.test.context.junit.jupiter.SpringExtension;

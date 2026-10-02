@@ -14,15 +14,15 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.web.server.context;
+package io.github.kotlinmania.spring.boot.web.server.context;
 
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.diagnostics.FailureAnalysis;
-import org.springframework.boot.web.server.reactive.ReactiveWebServerFactory;
-import org.springframework.boot.web.server.reactive.context.ReactiveWebServerApplicationContext;
-import org.springframework.boot.web.server.servlet.ServletWebServerFactory;
-import org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext;
+import io.github.kotlinmania.spring.boot.diagnostics.FailureAnalysis;
+import io.github.kotlinmania.spring.boot.web.server.reactive.ReactiveWebServerFactory;
+import io.github.kotlinmania.spring.boot.web.server.reactive.context.ReactiveWebServerApplicationContext;
+import io.github.kotlinmania.spring.boot.web.server.servlet.ServletWebServerFactory;
+import io.github.kotlinmania.spring.boot.web.server.servlet.context.ServletWebServerApplicationContext;
 import org.springframework.context.ApplicationContextException;
 import org.springframework.context.ConfigurableApplicationContext;
 

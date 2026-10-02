@@ -80,7 +80,7 @@
     },
     {
       "name": "spring.http.reactiveclient.redirects",
-      "type": "org.springframework.boot.http.client.HttpRedirects",
+      "type": "io.github.kotlinmania.spring.boot.http.client.HttpRedirects",
       "description": "Handling for HTTP redirects.",
       "deprecated": true,
       "deprecation": {
@@ -100,9 +100,9 @@
     },
     {
       "name": "spring.http.serviceclient",
-      "type": "java.util.Map<String,org.springframework.boot.http.client.autoconfigure.HttpClientProperties>",
+      "type": "java.util.Map<String,io.github.kotlinmania.spring.boot.http.client.autoconfigure.HttpClientProperties>",
       "description": "HTTP Service Client definitions",
-      "sourceType": "org.springframework.boot.http.client.autoconfigure.service.HttpServiceClientProperties"
+      "sourceType": "io.github.kotlinmania.spring.boot.http.client.autoconfigure.service.HttpServiceClientProperties"
     }
   ]
 }

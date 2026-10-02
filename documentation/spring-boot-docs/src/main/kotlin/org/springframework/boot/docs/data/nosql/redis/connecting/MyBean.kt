@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.data.nosql.redis.connecting
+package io.github.kotlinmania.spring.boot.docs.data.nosql.redis.connecting
 
 import org.springframework.data.redis.core.StringRedisTemplate
 import org.springframework.stereotype.Component

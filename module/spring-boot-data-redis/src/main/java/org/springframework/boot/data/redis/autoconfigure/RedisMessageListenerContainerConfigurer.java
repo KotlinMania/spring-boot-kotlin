@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.data.redis.autoconfigure;
+package io.github.kotlinmania.spring.boot.data.redis.autoconfigure;
 
 import java.time.Duration;
 import java.util.function.Predicate;
 
-import org.springframework.boot.context.properties.PropertyMapper;
-import org.springframework.boot.data.redis.autoconfigure.DataRedisProperties.Listener;
-import org.springframework.boot.data.redis.autoconfigure.DataRedisProperties.Recovery;
+import io.github.kotlinmania.spring.boot.context.properties.PropertyMapper;
+import io.github.kotlinmania.spring.boot.data.redis.autoconfigure.DataRedisProperties.Listener;
+import io.github.kotlinmania.spring.boot.data.redis.autoconfigure.DataRedisProperties.Recovery;
 import org.springframework.core.retry.RetryPolicy;
 import org.springframework.data.redis.connection.RedisConnectionFactory;
 import org.springframework.data.redis.listener.RedisMessageListenerContainer;

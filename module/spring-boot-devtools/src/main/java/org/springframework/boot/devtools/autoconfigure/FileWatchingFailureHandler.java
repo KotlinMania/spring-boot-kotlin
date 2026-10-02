@@ -14,18 +14,18 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.devtools.autoconfigure;
+package io.github.kotlinmania.spring.boot.devtools.autoconfigure;
 
 import java.util.Set;
 import java.util.concurrent.CountDownLatch;
 
-import org.springframework.boot.devtools.classpath.ClassPathDirectories;
-import org.springframework.boot.devtools.filewatch.ChangedFiles;
-import org.springframework.boot.devtools.filewatch.FileChangeListener;
-import org.springframework.boot.devtools.filewatch.FileSystemWatcher;
-import org.springframework.boot.devtools.filewatch.FileSystemWatcherFactory;
-import org.springframework.boot.devtools.restart.FailureHandler;
-import org.springframework.boot.devtools.restart.Restarter;
+import io.github.kotlinmania.spring.boot.devtools.classpath.ClassPathDirectories;
+import io.github.kotlinmania.spring.boot.devtools.filewatch.ChangedFiles;
+import io.github.kotlinmania.spring.boot.devtools.filewatch.FileChangeListener;
+import io.github.kotlinmania.spring.boot.devtools.filewatch.FileSystemWatcher;
+import io.github.kotlinmania.spring.boot.devtools.filewatch.FileSystemWatcherFactory;
+import io.github.kotlinmania.spring.boot.devtools.restart.FailureHandler;
+import io.github.kotlinmania.spring.boot.devtools.restart.Restarter;
 
 /**
  * {@link FailureHandler} that waits for filesystem changes before retrying.

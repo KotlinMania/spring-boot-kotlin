@@ -18,6 +18,6 @@
  * Support for Testcontainers OpenTelemetry tracing service connections.
  */
 @NullMarked
-package org.springframework.boot.micrometer.tracing.opentelemetry.testcontainers.otlp;
+package io.github.kotlinmania.spring.boot.micrometer.tracing.opentelemetry.testcontainers.otlp;
 
 import org.jspecify.annotations.NullMarked;

@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.testing.springbootapplications.autoconfiguredjooq;
+package io.github.kotlinmania.spring.boot.docs.testing.springbootapplications.autoconfiguredjooq;
 
 import org.jooq.DSLContext;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.jooq.test.autoconfigure.JooqTest;
+import io.github.kotlinmania.spring.boot.jooq.test.autoconfigure.JooqTest;
 
 @JooqTest
 class MyJooqTests {

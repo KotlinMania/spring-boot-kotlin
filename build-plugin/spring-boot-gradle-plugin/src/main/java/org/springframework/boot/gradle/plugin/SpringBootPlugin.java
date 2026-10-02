@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.gradle.plugin;
+package io.github.kotlinmania.spring.boot.gradle.plugin;
 
 import java.util.Arrays;
 import java.util.List;
@@ -27,11 +27,11 @@ import org.gradle.api.artifacts.Configuration;
 import org.gradle.util.GradleVersion;
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.gradle.dsl.SpringBootExtension;
-import org.springframework.boot.gradle.tasks.bundling.BootBuildImage;
-import org.springframework.boot.gradle.tasks.bundling.BootJar;
-import org.springframework.boot.gradle.tasks.bundling.BootWar;
-import org.springframework.boot.gradle.util.VersionExtractor;
+import io.github.kotlinmania.spring.boot.gradle.dsl.SpringBootExtension;
+import io.github.kotlinmania.spring.boot.gradle.tasks.bundling.BootBuildImage;
+import io.github.kotlinmania.spring.boot.gradle.tasks.bundling.BootJar;
+import io.github.kotlinmania.spring.boot.gradle.tasks.bundling.BootWar;
+import io.github.kotlinmania.spring.boot.gradle.util.VersionExtractor;
 
 /**
  * Gradle plugin for Spring Boot.
@@ -112,7 +112,7 @@ public class SpringBootPlugin implements Plugin<Project> {
 	 * The coordinates {@code (group:name:version)} of the
 	 * {@code spring-boot-dependencies} bom.
 	 */
-	public static final String BOM_COORDINATES = "org.springframework.boot:spring-boot-dependencies:"
+	public static final String BOM_COORDINATES = "io.github.kotlinmania.spring.boot.spring-boot-dependencies:"
 			+ SPRING_BOOT_VERSION;
 
 	@Override

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.data.mongodb.test.autoconfigure;
+package io.github.kotlinmania.spring.boot.data.mongodb.test.autoconfigure;
 
 import org.springframework.data.mongodb.repository.ReactiveMongoRepository;
 

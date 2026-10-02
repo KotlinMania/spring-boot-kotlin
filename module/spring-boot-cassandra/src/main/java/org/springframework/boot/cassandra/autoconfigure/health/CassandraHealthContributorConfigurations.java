@@ -14,21 +14,21 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.cassandra.autoconfigure.health;
+package io.github.kotlinmania.spring.boot.cassandra.autoconfigure.health;
 
 import java.util.Map;
 
 import com.datastax.oss.driver.api.core.CqlSession;
 
 import org.springframework.beans.factory.config.ConfigurableListableBeanFactory;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
-import org.springframework.boot.cassandra.health.CassandraDriverHealthIndicator;
-import org.springframework.boot.cassandra.health.CassandraDriverReactiveHealthIndicator;
-import org.springframework.boot.health.autoconfigure.contributor.CompositeHealthContributorConfiguration;
-import org.springframework.boot.health.autoconfigure.contributor.CompositeReactiveHealthContributorConfiguration;
-import org.springframework.boot.health.contributor.HealthContributor;
-import org.springframework.boot.health.contributor.ReactiveHealthContributor;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnBean;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnMissingBean;
+import io.github.kotlinmania.spring.boot.cassandra.health.CassandraDriverHealthIndicator;
+import io.github.kotlinmania.spring.boot.cassandra.health.CassandraDriverReactiveHealthIndicator;
+import io.github.kotlinmania.spring.boot.health.autoconfigure.contributor.CompositeHealthContributorConfiguration;
+import io.github.kotlinmania.spring.boot.health.autoconfigure.contributor.CompositeReactiveHealthContributorConfiguration;
+import io.github.kotlinmania.spring.boot.health.contributor.HealthContributor;
+import io.github.kotlinmania.spring.boot.health.contributor.ReactiveHealthContributor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 

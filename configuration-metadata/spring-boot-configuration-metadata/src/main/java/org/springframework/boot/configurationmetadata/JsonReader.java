@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.configurationmetadata;
+package io.github.kotlinmania.spring.boot.configurationmetadata;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -25,8 +25,8 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Locale;
 
-import org.springframework.boot.configurationmetadata.json.JSONArray;
-import org.springframework.boot.configurationmetadata.json.JSONObject;
+import io.github.kotlinmania.spring.boot.configurationmetadata.json.JSONArray;
+import io.github.kotlinmania.spring.boot.configurationmetadata.json.JSONObject;
 
 /**
  * Read standard JSON metadata format as {@link ConfigurationMetadataRepository}.

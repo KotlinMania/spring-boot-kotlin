@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.howto.springmvc.writexmlrestservice
+package io.github.kotlinmania.spring.boot.docs.howto.springmvc.writexmlrestservice
 
 import jakarta.xml.bind.annotation.XmlRootElement
 

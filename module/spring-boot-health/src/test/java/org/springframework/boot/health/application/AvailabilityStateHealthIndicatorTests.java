@@ -14,18 +14,18 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.health.application;
+package io.github.kotlinmania.spring.boot.health.application;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 
-import org.springframework.boot.availability.ApplicationAvailability;
-import org.springframework.boot.availability.AvailabilityState;
-import org.springframework.boot.availability.LivenessState;
-import org.springframework.boot.health.contributor.Health;
-import org.springframework.boot.health.contributor.Status;
+import io.github.kotlinmania.spring.boot.availability.ApplicationAvailability;
+import io.github.kotlinmania.spring.boot.availability.AvailabilityState;
+import io.github.kotlinmania.spring.boot.availability.LivenessState;
+import io.github.kotlinmania.spring.boot.health.contributor.Health;
+import io.github.kotlinmania.spring.boot.health.contributor.Status;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatIllegalArgumentException;

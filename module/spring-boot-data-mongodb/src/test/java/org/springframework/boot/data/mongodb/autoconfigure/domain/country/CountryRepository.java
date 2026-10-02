@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.data.mongodb.autoconfigure.domain.country;
+package io.github.kotlinmania.spring.boot.data.mongodb.autoconfigure.domain.country;
 
 import org.springframework.data.repository.Repository;
 

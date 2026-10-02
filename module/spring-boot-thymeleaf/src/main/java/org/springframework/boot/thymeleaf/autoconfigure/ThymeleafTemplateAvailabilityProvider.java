@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.thymeleaf.autoconfigure;
+package io.github.kotlinmania.spring.boot.thymeleaf.autoconfigure;
 
-import org.springframework.boot.autoconfigure.template.TemplateAvailabilityProvider;
+import io.github.kotlinmania.spring.boot.autoconfigure.template.TemplateAvailabilityProvider;
 import org.springframework.core.env.Environment;
 import org.springframework.core.io.ResourceLoader;
 import org.springframework.util.ClassUtils;

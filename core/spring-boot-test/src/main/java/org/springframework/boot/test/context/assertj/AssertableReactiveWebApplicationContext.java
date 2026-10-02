@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.test.context.assertj;
+package io.github.kotlinmania.spring.boot.test.context.assertj;
 
 import java.util.function.Supplier;
 
-import org.springframework.boot.web.context.reactive.ConfigurableReactiveWebApplicationContext;
-import org.springframework.boot.web.context.reactive.ReactiveWebApplicationContext;
+import io.github.kotlinmania.spring.boot.web.context.reactive.ConfigurableReactiveWebApplicationContext;
+import io.github.kotlinmania.spring.boot.web.context.reactive.ReactiveWebApplicationContext;
 
 /**
  * A {@link ReactiveWebApplicationContext} that additionally supports AssertJ style

@@ -18,6 +18,6 @@
  * Auto-configuration for Reactor.
  */
 @NullMarked
-package org.springframework.boot.reactor.autoconfigure;
+package io.github.kotlinmania.spring.boot.reactor.autoconfigure;
 
 import org.jspecify.annotations.NullMarked;

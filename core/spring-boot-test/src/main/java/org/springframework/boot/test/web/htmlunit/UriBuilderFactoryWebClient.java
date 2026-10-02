@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.test.web.htmlunit;
+package io.github.kotlinmania.spring.boot.test.web.htmlunit;
 
 import java.io.IOException;
 

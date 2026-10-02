@@ -18,6 +18,6 @@
  * Auto-configuration for Flyway.
  */
 @NullMarked
-package org.springframework.boot.flyway.autoconfigure;
+package io.github.kotlinmania.spring.boot.flyway.autoconfigure;
 
 import org.jspecify.annotations.NullMarked;

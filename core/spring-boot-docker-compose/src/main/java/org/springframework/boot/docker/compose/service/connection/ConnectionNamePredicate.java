@@ -14,15 +14,15 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docker.compose.service.connection;
+package io.github.kotlinmania.spring.boot.docker.compose.service.connection;
 
 import java.util.Arrays;
 import java.util.Set;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
-import org.springframework.boot.docker.compose.core.ImageReference;
-import org.springframework.boot.docker.compose.core.RunningService;
+import io.github.kotlinmania.spring.boot.docker.compose.core.ImageReference;
+import io.github.kotlinmania.spring.boot.docker.compose.core.RunningService;
 import org.springframework.util.Assert;
 
 /**
@@ -47,7 +47,7 @@ class ConnectionNamePredicate implements Predicate<DockerComposeConnectionSource
 	}
 
 	private String getActual(RunningService service) {
-		String label = service.labels().get("org.springframework.boot.service-connection");
+		String label = service.labels().get("io.github.kotlinmania.spring.boot.service-connection");
 		return asCanonicalName((label != null) ? label : service.image().getName());
 	}
 

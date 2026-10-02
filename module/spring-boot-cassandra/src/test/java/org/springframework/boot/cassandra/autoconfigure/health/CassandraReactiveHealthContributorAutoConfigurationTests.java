@@ -14,15 +14,15 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.cassandra.autoconfigure.health;
+package io.github.kotlinmania.spring.boot.cassandra.autoconfigure.health;
 
 import com.datastax.oss.driver.api.core.CqlSession;
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.autoconfigure.AutoConfigurations;
-import org.springframework.boot.cassandra.health.CassandraDriverReactiveHealthIndicator;
-import org.springframework.boot.health.autoconfigure.contributor.HealthContributorAutoConfiguration;
-import org.springframework.boot.test.context.runner.ApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurations;
+import io.github.kotlinmania.spring.boot.cassandra.health.CassandraDriverReactiveHealthIndicator;
+import io.github.kotlinmania.spring.boot.health.autoconfigure.contributor.HealthContributorAutoConfiguration;
+import io.github.kotlinmania.spring.boot.test.context.runner.ApplicationContextRunner;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.Mockito.mock;

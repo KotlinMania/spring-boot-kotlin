@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.pulsar.autoconfigure;
+package io.github.kotlinmania.spring.boot.pulsar.autoconfigure;
 
 import java.time.Duration;
 import java.util.HashMap;
@@ -35,13 +35,13 @@ import org.assertj.core.extractor.Extractors;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.context.properties.bind.BindException;
-import org.springframework.boot.context.properties.bind.Binder;
-import org.springframework.boot.context.properties.source.MapConfigurationPropertySource;
-import org.springframework.boot.pulsar.autoconfigure.PulsarProperties.Defaults.SchemaInfo;
-import org.springframework.boot.pulsar.autoconfigure.PulsarProperties.Defaults.TypeMapping;
-import org.springframework.boot.pulsar.autoconfigure.PulsarProperties.Failover;
-import org.springframework.boot.pulsar.autoconfigure.PulsarProperties.Failover.BackupCluster;
+import io.github.kotlinmania.spring.boot.context.properties.bind.BindException;
+import io.github.kotlinmania.spring.boot.context.properties.bind.Binder;
+import io.github.kotlinmania.spring.boot.context.properties.source.MapConfigurationPropertySource;
+import io.github.kotlinmania.spring.boot.pulsar.autoconfigure.PulsarProperties.Defaults.SchemaInfo;
+import io.github.kotlinmania.spring.boot.pulsar.autoconfigure.PulsarProperties.Defaults.TypeMapping;
+import io.github.kotlinmania.spring.boot.pulsar.autoconfigure.PulsarProperties.Failover;
+import io.github.kotlinmania.spring.boot.pulsar.autoconfigure.PulsarProperties.Failover.BackupCluster;
 import org.springframework.pulsar.core.PulsarTopicBuilder;
 
 import static org.assertj.core.api.Assertions.assertThat;

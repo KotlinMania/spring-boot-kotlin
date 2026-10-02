@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.opentelemetry.autoconfigure;
+package io.github.kotlinmania.spring.boot.opentelemetry.autoconfigure;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -28,12 +28,12 @@ import java.util.Set;
 import org.apache.commons.logging.Log;
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.EnvironmentPostProcessor;
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.env.OriginTrackedMapPropertySource;
-import org.springframework.boot.logging.DeferredLogFactory;
-import org.springframework.boot.opentelemetry.autoconfigure.OpenTelemetryEnvironmentVariables.EnvVariable;
-import org.springframework.boot.origin.OriginTrackedValue;
+import io.github.kotlinmania.spring.boot.EnvironmentPostProcessor;
+import io.github.kotlinmania.spring.boot.SpringApplication;
+import io.github.kotlinmania.spring.boot.env.OriginTrackedMapPropertySource;
+import io.github.kotlinmania.spring.boot.logging.DeferredLogFactory;
+import io.github.kotlinmania.spring.boot.opentelemetry.autoconfigure.OpenTelemetryEnvironmentVariables.EnvVariable;
+import io.github.kotlinmania.spring.boot.origin.OriginTrackedValue;
 import org.springframework.core.env.ConfigurableEnvironment;
 import org.springframework.util.Assert;
 import org.springframework.util.StringUtils;

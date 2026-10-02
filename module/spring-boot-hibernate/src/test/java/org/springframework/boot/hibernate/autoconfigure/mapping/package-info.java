@@ -15,6 +15,6 @@
  */
 
 @NullMarked
-package org.springframework.boot.hibernate.autoconfigure.mapping;
+package io.github.kotlinmania.spring.boot.hibernate.autoconfigure.mapping;
 
 import org.jspecify.annotations.NullMarked;

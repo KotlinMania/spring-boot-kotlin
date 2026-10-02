@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.actuator.metrics.registeringcustom
+package io.github.kotlinmania.spring.boot.docs.actuator.metrics.registeringcustom
 
 import io.micrometer.core.instrument.MeterRegistry
 import io.micrometer.core.instrument.Tags

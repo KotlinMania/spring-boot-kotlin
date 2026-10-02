@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.testsupport.classpath.resources;
+package io.github.kotlinmania.spring.boot.testsupport.classpath.resources;
 
 import java.io.File;
 import java.io.IOException;

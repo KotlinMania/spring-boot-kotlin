@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.cli.command;
+package io.github.kotlinmania.spring.boot.cli.command;
 
 import java.util.EnumSet;
 import java.util.Set;
@@ -27,8 +27,8 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 
-import org.springframework.boot.cli.command.core.HelpCommand;
-import org.springframework.boot.cli.command.core.HintCommand;
+import io.github.kotlinmania.spring.boot.cli.command.core.HelpCommand;
+import io.github.kotlinmania.spring.boot.cli.command.core.HintCommand;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatExceptionOfType;

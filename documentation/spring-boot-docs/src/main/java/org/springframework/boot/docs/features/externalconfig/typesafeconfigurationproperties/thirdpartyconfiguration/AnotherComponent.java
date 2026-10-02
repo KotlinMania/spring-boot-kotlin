@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.features.externalconfig.typesafeconfigurationproperties.thirdpartyconfiguration;
+package io.github.kotlinmania.spring.boot.docs.features.externalconfig.typesafeconfigurationproperties.thirdpartyconfiguration;
 
 class AnotherComponent {
 

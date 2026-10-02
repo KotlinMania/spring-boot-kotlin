@@ -14,19 +14,19 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.webmvc.test.autoconfigure;
+package io.github.kotlinmania.spring.boot.webmvc.test.autoconfigure;
 
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.LinkedHashSet;
 import java.util.Set;
 
-import org.springframework.boot.context.TypeExcludeFilter;
-import org.springframework.boot.test.context.filter.annotation.StandardAnnotationCustomizableTypeExcludeFilter;
-import org.springframework.boot.web.servlet.DelegatingFilterProxyRegistrationBean;
-import org.springframework.boot.web.servlet.FilterRegistrationBean;
-import org.springframework.boot.webmvc.autoconfigure.WebMvcRegistrations;
-import org.springframework.boot.webmvc.error.ErrorAttributes;
+import io.github.kotlinmania.spring.boot.context.TypeExcludeFilter;
+import io.github.kotlinmania.spring.boot.test.context.filter.annotation.StandardAnnotationCustomizableTypeExcludeFilter;
+import io.github.kotlinmania.spring.boot.web.servlet.DelegatingFilterProxyRegistrationBean;
+import io.github.kotlinmania.spring.boot.web.servlet.FilterRegistrationBean;
+import io.github.kotlinmania.spring.boot.webmvc.autoconfigure.WebMvcRegistrations;
+import io.github.kotlinmania.spring.boot.webmvc.error.ErrorAttributes;
 import org.springframework.core.convert.converter.Converter;
 import org.springframework.core.convert.converter.GenericConverter;
 import org.springframework.http.converter.HttpMessageConverter;
@@ -50,8 +50,8 @@ class WebMvcTypeExcludeFilter extends StandardAnnotationCustomizableTypeExcludeF
 	private static final Class<?>[] NO_CONTROLLERS = {};
 
 	private static final String[] OPTIONAL_INCLUDES = { "tools.jackson.databind.JacksonModule",
-			"org.springframework.boot.jackson.JacksonComponent", "org.thymeleaf.dialect.IDialect",
-			"com.fasterxml.jackson.databind.Module", "org.springframework.boot.jackson2.JsonComponent" };
+			"io.github.kotlinmania.spring.boot.jackson.JacksonComponent", "org.thymeleaf.dialect.IDialect",
+			"com.fasterxml.jackson.databind.Module", "io.github.kotlinmania.spring.boot.jackson2.JsonComponent" };
 
 	private static final Set<Class<?>> KNOWN_INCLUDES;
 

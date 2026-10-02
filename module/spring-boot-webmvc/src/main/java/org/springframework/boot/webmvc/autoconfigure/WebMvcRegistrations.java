@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.webmvc.autoconfigure;
+package io.github.kotlinmania.spring.boot.webmvc.autoconfigure;
 
 import org.jspecify.annotations.Nullable;
 
@@ -37,7 +37,7 @@ import org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandl
  *
  * @author Brian Clozel
  * @since 4.0.0
- * @see org.springframework.boot.webmvc.autoconfigure.WebMvcAutoConfiguration.EnableWebMvcConfiguration
+ * @see io.github.kotlinmania.spring.boot.webmvc.autoconfigure.WebMvcAutoConfiguration.EnableWebMvcConfiguration
  */
 public interface WebMvcRegistrations {
 

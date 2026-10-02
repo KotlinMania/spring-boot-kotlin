@@ -18,6 +18,6 @@
  * Auto-configuration for JVM metrics.
  */
 @NullMarked
-package org.springframework.boot.micrometer.metrics.autoconfigure.jvm;
+package io.github.kotlinmania.spring.boot.micrometer.metrics.autoconfigure.jvm;
 
 import org.jspecify.annotations.NullMarked;

@@ -18,6 +18,6 @@
  * Auto-configuration for Servlet-based Spring Security.
  */
 @NullMarked
-package org.springframework.boot.security.autoconfigure.web.servlet;
+package io.github.kotlinmania.spring.boot.security.autoconfigure.web.servlet;
 
 import org.jspecify.annotations.NullMarked;

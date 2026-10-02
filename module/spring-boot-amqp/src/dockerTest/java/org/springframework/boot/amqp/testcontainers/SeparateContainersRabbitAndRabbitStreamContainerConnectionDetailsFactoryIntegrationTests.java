@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.amqp.testcontainers;
+package io.github.kotlinmania.spring.boot.amqp.testcontainers;
 
 import java.nio.charset.StandardCharsets;
 import java.time.Duration;
@@ -35,15 +35,15 @@ import org.springframework.amqp.core.Queue;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.amqp.autoconfigure.EnvironmentBuilderCustomizer;
-import org.springframework.boot.amqp.autoconfigure.RabbitAutoConfiguration;
-import org.springframework.boot.amqp.autoconfigure.RabbitConnectionDetails;
-import org.springframework.boot.amqp.autoconfigure.RabbitStreamConnectionDetails;
-import org.springframework.boot.amqp.testcontainers.RabbitContainerConnectionDetailsFactory.RabbitMqContainerConnectionDetails;
-import org.springframework.boot.amqp.testcontainers.RabbitStreamContainerConnectionDetailsFactory.RabbitMqStreamContainerConnectionDetails;
-import org.springframework.boot.autoconfigure.ImportAutoConfiguration;
-import org.springframework.boot.testcontainers.service.connection.ServiceConnection;
-import org.springframework.boot.testsupport.container.TestImage;
+import io.github.kotlinmania.spring.boot.amqp.autoconfigure.EnvironmentBuilderCustomizer;
+import io.github.kotlinmania.spring.boot.amqp.autoconfigure.RabbitAutoConfiguration;
+import io.github.kotlinmania.spring.boot.amqp.autoconfigure.RabbitConnectionDetails;
+import io.github.kotlinmania.spring.boot.amqp.autoconfigure.RabbitStreamConnectionDetails;
+import io.github.kotlinmania.spring.boot.amqp.testcontainers.RabbitContainerConnectionDetailsFactory.RabbitMqContainerConnectionDetails;
+import io.github.kotlinmania.spring.boot.amqp.testcontainers.RabbitStreamContainerConnectionDetailsFactory.RabbitMqStreamContainerConnectionDetails;
+import io.github.kotlinmania.spring.boot.autoconfigure.ImportAutoConfiguration;
+import io.github.kotlinmania.spring.boot.testcontainers.service.connection.ServiceConnection;
+import io.github.kotlinmania.spring.boot.testsupport.container.TestImage;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.rabbit.stream.producer.RabbitStreamTemplate;

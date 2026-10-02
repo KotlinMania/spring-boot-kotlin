@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.buildpack.platform.docker.configuration;
+package io.github.kotlinmania.spring.boot.buildpack.platform.docker.configuration;
 
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -22,8 +22,8 @@ import java.nio.file.Paths;
 import com.sun.jna.Platform;
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.buildpack.platform.docker.configuration.DockerConfigurationMetadata.DockerContext;
-import org.springframework.boot.buildpack.platform.system.Environment;
+import io.github.kotlinmania.spring.boot.buildpack.platform.docker.configuration.DockerConfigurationMetadata.DockerContext;
+import io.github.kotlinmania.spring.boot.buildpack.platform.system.Environment;
 
 /**
  * Resolves a {@link DockerHost} from the environment, configuration, or using defaults.

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.actuate.endpoint.web;
+package io.github.kotlinmania.spring.boot.actuate.endpoint.web;
 
 import java.util.Collections;
 import java.util.EnumSet;
@@ -35,8 +35,8 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 
-import org.springframework.boot.actuate.endpoint.Access;
-import org.springframework.boot.actuate.endpoint.EndpointId;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.Access;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.EndpointId;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatIllegalArgumentException;
@@ -165,7 +165,7 @@ class ServletEndpointRegistrarTests {
 		then(this.servletContext).should()
 			.addFilter(eq("test-actuator-endpoint-access-filter"), (Filter) assertArg((filter) -> assertThat(filter)
 				.isInstanceOf(
-						org.springframework.boot.actuate.endpoint.web.ServletEndpointRegistrar.ReadOnlyAccessFilter.class)));
+						io.github.kotlinmania.spring.boot.actuate.endpoint.web.ServletEndpointRegistrar.ReadOnlyAccessFilter.class)));
 		then(this.filterDynamic).should()
 			.addMappingForServletNames(EnumSet.allOf(DispatcherType.class), false, "test-actuator-endpoint");
 	}

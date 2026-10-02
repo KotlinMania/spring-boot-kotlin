@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.devtools.filewatch;
+package io.github.kotlinmania.spring.boot.devtools.filewatch;
 
 /**
  * Factory used to create new {@link FileSystemWatcher} instances.

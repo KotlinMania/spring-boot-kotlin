@@ -14,15 +14,15 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.cloudfoundry.autoconfigure.actuate.endpoint.reactive;
+package io.github.kotlinmania.spring.boot.cloudfoundry.autoconfigure.actuate.endpoint.reactive;
 
 import org.junit.jupiter.api.Test;
 
 import org.springframework.aot.hint.RuntimeHints;
 import org.springframework.aot.hint.predicate.RuntimeHintsPredicates;
-import org.springframework.boot.actuate.endpoint.web.Link;
-import org.springframework.boot.cloudfoundry.autoconfigure.actuate.endpoint.reactive.CloudFoundryWebFluxEndpointHandlerMapping.CloudFoundryLinksHandler;
-import org.springframework.boot.cloudfoundry.autoconfigure.actuate.endpoint.reactive.CloudFoundryWebFluxEndpointHandlerMapping.CloudFoundryWebFluxEndpointHandlerMappingRuntimeHints;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.web.Link;
+import io.github.kotlinmania.spring.boot.cloudfoundry.autoconfigure.actuate.endpoint.reactive.CloudFoundryWebFluxEndpointHandlerMapping.CloudFoundryLinksHandler;
+import io.github.kotlinmania.spring.boot.cloudfoundry.autoconfigure.actuate.endpoint.reactive.CloudFoundryWebFluxEndpointHandlerMapping.CloudFoundryWebFluxEndpointHandlerMappingRuntimeHints;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

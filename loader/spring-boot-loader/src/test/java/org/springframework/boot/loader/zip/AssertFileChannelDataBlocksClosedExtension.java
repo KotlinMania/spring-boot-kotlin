@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.loader.zip;
+package io.github.kotlinmania.spring.boot.loader.zip;
 
 import java.io.Closeable;
 import java.io.IOException;
@@ -29,8 +29,8 @@ import org.junit.jupiter.api.extension.AfterEachCallback;
 import org.junit.jupiter.api.extension.BeforeEachCallback;
 import org.junit.jupiter.api.extension.ExtensionContext;
 
-import org.springframework.boot.loader.ref.DefaultCleanerTracking;
-import org.springframework.boot.loader.zip.FileDataBlock.Tracker;
+import io.github.kotlinmania.spring.boot.loader.ref.DefaultCleanerTracking;
+import io.github.kotlinmania.spring.boot.loader.zip.FileDataBlock.Tracker;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

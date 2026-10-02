@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.io.jta.mixingxaandnonxaconnections.primary
+package io.github.kotlinmania.spring.boot.docs.io.jta.mixingxaandnonxaconnections.primary
 
 import jakarta.jms.ConnectionFactory
 

@@ -18,6 +18,6 @@
  * Auto-configuration for HTTP codecs.
  */
 @NullMarked
-package org.springframework.boot.http.codec.autoconfigure;
+package io.github.kotlinmania.spring.boot.http.codec.autoconfigure;
 
 import org.jspecify.annotations.NullMarked;

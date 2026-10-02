@@ -17,7 +17,7 @@
 /**
  * Nested URL support.
  *
- * @see org.springframework.boot.loader.net.protocol.nested.NestedLocation
- * @see org.springframework.boot.loader.net.protocol.nested.Handler
+ * @see io.github.kotlinmania.spring.boot.loader.net.protocol.nested.NestedLocation
+ * @see io.github.kotlinmania.spring.boot.loader.net.protocol.nested.Handler
  */
-package org.springframework.boot.loader.net.protocol.nested;
+package io.github.kotlinmania.spring.boot.loader.net.protocol.nested;

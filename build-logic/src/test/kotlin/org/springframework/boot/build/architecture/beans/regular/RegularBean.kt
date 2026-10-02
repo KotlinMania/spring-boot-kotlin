@@ -15,8 +15,10 @@
  */
 package org.springframework.boot.build.architecture.beans.regular
 
-import org.springframework.context.annotation.Bean
-import org.springframework.context.annotation.Configuration
+package io.github.kotlinmania.spring.boot.build.architecture.beans.regular;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 
 @Configuration(proxyBeanMethods = false)
 internal object RegularBean {

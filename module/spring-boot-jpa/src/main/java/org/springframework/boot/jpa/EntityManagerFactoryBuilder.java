@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.jpa;
+package io.github.kotlinmania.spring.boot.jpa;
 
 import java.net.URL;
 import java.util.ArrayList;
@@ -32,7 +32,7 @@ import javax.sql.DataSource;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.context.properties.PropertyMapper;
+import io.github.kotlinmania.spring.boot.context.properties.PropertyMapper;
 import org.springframework.core.task.AsyncTaskExecutor;
 import org.springframework.orm.jpa.JpaVendorAdapter;
 import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;

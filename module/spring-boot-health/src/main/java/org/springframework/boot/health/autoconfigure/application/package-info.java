@@ -15,6 +15,6 @@
  */
 
 @NullMarked
-package org.springframework.boot.health.autoconfigure.application;
+package io.github.kotlinmania.spring.boot.health.autoconfigure.application;
 
 import org.jspecify.annotations.NullMarked;

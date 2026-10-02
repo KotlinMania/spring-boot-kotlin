@@ -18,6 +18,6 @@
  * Metrics for JDBC.
  */
 @NullMarked
-package org.springframework.boot.jdbc.metrics;
+package io.github.kotlinmania.spring.boot.jdbc.metrics;
 
 import org.jspecify.annotations.NullMarked;

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.devtools.restart;
+package io.github.kotlinmania.spring.boot.devtools.restart;
 
 import java.lang.reflect.Method;
 import java.lang.reflect.Modifier;
@@ -56,7 +56,7 @@ class MainMethod {
 	}
 
 	private boolean isLoaderClass(String className) {
-		return className.startsWith("org.springframework.boot.loader.");
+		return className.startsWith("io.github.kotlinmania.spring.boot.loader.");
 	}
 
 	private @Nullable Method getMainMethod(StackTraceElement element) {

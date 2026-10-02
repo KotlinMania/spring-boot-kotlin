@@ -19,6 +19,6 @@
  *
  */
 @NullMarked
-package org.springframework.boot.actuate.security;
+package io.github.kotlinmania.spring.boot.actuate.security;
 
 import org.jspecify.annotations.NullMarked;

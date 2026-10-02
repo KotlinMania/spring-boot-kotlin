@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.webflux.test.autoconfigure;
+package io.github.kotlinmania.spring.boot.webflux.test.autoconfigure;
 
 import java.io.IOException;
 
@@ -22,7 +22,7 @@ import org.junit.jupiter.api.Test;
 import reactor.core.publisher.Mono;
 import tools.jackson.databind.module.SimpleModule;
 
-import org.springframework.boot.jackson.JacksonComponent;
+import io.github.kotlinmania.spring.boot.jackson.JacksonComponent;
 import org.springframework.context.annotation.ComponentScan.Filter;
 import org.springframework.context.annotation.FilterType;
 import org.springframework.core.type.classreading.MetadataReader;
@@ -208,7 +208,7 @@ class WebFluxTypeExcludeFilterTests {
 
 	}
 
-	@org.springframework.boot.jackson2.JsonComponent
+	@io.github.kotlinmania.spring.boot.jackson2.JsonComponent
 	@SuppressWarnings("removal")
 	static class ExampleJsonComponent {
 

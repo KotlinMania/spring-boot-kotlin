@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.jackson2.autoconfigure;
+package io.github.kotlinmania.spring.boot.jackson2.autoconfigure;
 
 import java.util.EnumMap;
 import java.util.Locale;
@@ -33,8 +33,8 @@ import com.fasterxml.jackson.databind.cfg.EnumFeature;
 import com.fasterxml.jackson.databind.cfg.JsonNodeFeature;
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.boot.context.properties.DeprecatedConfigurationProperty;
+import io.github.kotlinmania.spring.boot.context.properties.ConfigurationProperties;
+import io.github.kotlinmania.spring.boot.context.properties.DeprecatedConfigurationProperty;
 
 /**
  * Configuration properties to configure Jackson 2.

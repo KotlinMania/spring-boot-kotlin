@@ -1,4 +1,4 @@
-org.springframework.boot.data.couchbase.autoconfigure.DataCouchbaseAutoConfiguration
-org.springframework.boot.data.couchbase.autoconfigure.DataCouchbaseReactiveAutoConfiguration
-org.springframework.boot.data.couchbase.autoconfigure.DataCouchbaseReactiveRepositoriesAutoConfiguration
-org.springframework.boot.data.couchbase.autoconfigure.DataCouchbaseRepositoriesAutoConfiguration
+io.github.kotlinmania.spring.boot.data.couchbase.autoconfigure.DataCouchbaseAutoConfiguration
+io.github.kotlinmania.spring.boot.data.couchbase.autoconfigure.DataCouchbaseReactiveAutoConfiguration
+io.github.kotlinmania.spring.boot.data.couchbase.autoconfigure.DataCouchbaseReactiveRepositoriesAutoConfiguration
+io.github.kotlinmania.spring.boot.data.couchbase.autoconfigure.DataCouchbaseRepositoriesAutoConfiguration

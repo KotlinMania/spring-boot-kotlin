@@ -18,6 +18,6 @@
  * Auto-configuration for WebFlux-based actuator web concerns.
  */
 @NullMarked
-package org.springframework.boot.webflux.autoconfigure.actuate.web;
+package io.github.kotlinmania.spring.boot.webflux.autoconfigure.actuate.web;
 
 import org.jspecify.annotations.NullMarked;

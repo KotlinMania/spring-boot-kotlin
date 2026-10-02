@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.jetty.autoconfigure;
+package io.github.kotlinmania.spring.boot.jetty.autoconfigure;
 
-import org.springframework.boot.autoconfigure.condition.ConditionalOnNotWarDeployment;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnThreading;
-import org.springframework.boot.jetty.autoconfigure.reactive.JettyReactiveWebServerAutoConfiguration;
-import org.springframework.boot.jetty.autoconfigure.servlet.JettyServletWebServerAutoConfiguration;
-import org.springframework.boot.thread.Threading;
-import org.springframework.boot.web.server.autoconfigure.ServerProperties;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnNotWarDeployment;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnThreading;
+import io.github.kotlinmania.spring.boot.jetty.autoconfigure.reactive.JettyReactiveWebServerAutoConfiguration;
+import io.github.kotlinmania.spring.boot.jetty.autoconfigure.servlet.JettyServletWebServerAutoConfiguration;
+import io.github.kotlinmania.spring.boot.thread.Threading;
+import io.github.kotlinmania.spring.boot.web.server.autoconfigure.ServerProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.env.Environment;

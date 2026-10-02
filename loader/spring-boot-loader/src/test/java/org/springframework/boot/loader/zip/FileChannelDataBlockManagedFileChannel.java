@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.loader.zip;
+package io.github.kotlinmania.spring.boot.loader.zip;
 
-import org.springframework.boot.loader.zip.FileDataBlock.FileAccess;
+import io.github.kotlinmania.spring.boot.loader.zip.FileDataBlock.FileAccess;
 
 /**
  * Test access to {@link FileAccess} details.

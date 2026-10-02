@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.loader.net.protocol.nested;
+package io.github.kotlinmania.spring.boot.loader.net.protocol.nested;
 
 import java.io.File;
 import java.net.URI;
@@ -23,7 +23,7 @@ import java.nio.file.Path;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
-import org.springframework.boot.loader.net.util.UrlDecoder;
+import io.github.kotlinmania.spring.boot.loader.net.util.UrlDecoder;
 
 /**
  * A location obtained from a {@code nested:} {@link URL} consisting of a jar file and an

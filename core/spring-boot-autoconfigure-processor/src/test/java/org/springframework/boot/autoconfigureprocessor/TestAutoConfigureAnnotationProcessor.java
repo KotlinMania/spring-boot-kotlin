@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.autoconfigureprocessor;
+package io.github.kotlinmania.spring.boot.autoconfigureprocessor;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -27,14 +27,14 @@ import javax.annotation.processing.SupportedAnnotationTypes;
  * @author Madhura Bhave
  * @author Scott Frederick
  */
-@SupportedAnnotationTypes({ "org.springframework.boot.autoconfigureprocessor.TestConditionalOnClass",
-		"org.springframework.boot.autoconfigureprocessor.TestConditionalOnBean",
-		"org.springframework.boot.autoconfigureprocessor.TestConditionalOnSingleCandidate",
-		"org.springframework.boot.autoconfigureprocessor.TestConditionalOnWebApplication",
-		"org.springframework.boot.autoconfigureprocessor.TestAutoConfigureBefore",
-		"org.springframework.boot.autoconfigureprocessor.TestAutoConfigureAfter",
-		"org.springframework.boot.autoconfigureprocessor.TestAutoConfigureOrder",
-		"org.springframework.boot.autoconfigureprocessor.TestAutoConfiguration" })
+@SupportedAnnotationTypes({ "io.github.kotlinmania.spring.boot.autoconfigureprocessor.TestConditionalOnClass",
+		"io.github.kotlinmania.spring.boot.autoconfigureprocessor.TestConditionalOnBean",
+		"io.github.kotlinmania.spring.boot.autoconfigureprocessor.TestConditionalOnSingleCandidate",
+		"io.github.kotlinmania.spring.boot.autoconfigureprocessor.TestConditionalOnWebApplication",
+		"io.github.kotlinmania.spring.boot.autoconfigureprocessor.TestAutoConfigureBefore",
+		"io.github.kotlinmania.spring.boot.autoconfigureprocessor.TestAutoConfigureAfter",
+		"io.github.kotlinmania.spring.boot.autoconfigureprocessor.TestAutoConfigureOrder",
+		"io.github.kotlinmania.spring.boot.autoconfigureprocessor.TestAutoConfiguration" })
 public class TestAutoConfigureAnnotationProcessor extends AutoConfigureAnnotationProcessor {
 
 	public TestAutoConfigureAnnotationProcessor() {
@@ -43,7 +43,7 @@ public class TestAutoConfigureAnnotationProcessor extends AutoConfigureAnnotatio
 	@Override
 	protected List<PropertyGenerator> getPropertyGenerators() {
 		List<PropertyGenerator> generators = new ArrayList<>();
-		String annotationPackage = "org.springframework.boot.autoconfigureprocessor";
+		String annotationPackage = "io.github.kotlinmania.spring.boot.autoconfigureprocessor";
 		generators.add(PropertyGenerator.of(annotationPackage, "ConditionalOnClass")
 			.withAnnotation("TestConditionalOnClass", new OnClassConditionValueExtractor()));
 		generators.add(PropertyGenerator.of(annotationPackage, "ConditionalOnBean")

@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.jarmode.tools;
+package io.github.kotlinmania.spring.boot.jarmode.tools;
 
 import java.io.PrintStream;
 import java.util.List;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.loader.jarmode.JarMode;
+import io.github.kotlinmania.spring.boot.loader.jarmode.JarMode;
 
 /**
  * {@link JarMode} providing {@code "tools"} support.

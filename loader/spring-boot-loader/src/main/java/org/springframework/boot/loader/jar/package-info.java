@@ -16,6 +16,6 @@
 
 /**
  * Alternative {@link java.util.jar.JarFile} implementation with support for nested jars.
- * @see org.springframework.boot.loader.jar.NestedJarFile
+ * @see io.github.kotlinmania.spring.boot.loader.jar.NestedJarFile
  */
-package org.springframework.boot.loader.jar;
+package io.github.kotlinmania.spring.boot.loader.jar;

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.howto.dataaccess.usemultipleentitymanagers
+package io.github.kotlinmania.spring.boot.docs.howto.dataaccess.usemultipleentitymanagers
 
 import org.springframework.context.annotation.Configuration
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories

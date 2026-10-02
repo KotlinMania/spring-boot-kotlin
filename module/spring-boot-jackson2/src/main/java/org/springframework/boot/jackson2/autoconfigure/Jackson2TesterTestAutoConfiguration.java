@@ -14,20 +14,20 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.jackson2.autoconfigure;
+package io.github.kotlinmania.spring.boot.jackson2.autoconfigure;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import org.springframework.beans.factory.FactoryBean;
 import org.springframework.beans.factory.config.ConfigurableBeanFactory;
-import org.springframework.boot.autoconfigure.AutoConfiguration;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
-import org.springframework.boot.test.autoconfigure.json.ConditionalOnJsonTesters;
-import org.springframework.boot.test.autoconfigure.json.JsonMarshalTesterRuntimeHints;
-import org.springframework.boot.test.autoconfigure.json.JsonTesterFactoryBean;
-import org.springframework.boot.test.json.GsonTester;
-import org.springframework.boot.test.json.Jackson2Tester;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.EnableAutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnBean;
+import io.github.kotlinmania.spring.boot.test.autoconfigure.json.ConditionalOnJsonTesters;
+import io.github.kotlinmania.spring.boot.test.autoconfigure.json.JsonMarshalTesterRuntimeHints;
+import io.github.kotlinmania.spring.boot.test.autoconfigure.json.JsonTesterFactoryBean;
+import io.github.kotlinmania.spring.boot.test.json.GsonTester;
+import io.github.kotlinmania.spring.boot.test.json.Jackson2Tester;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ImportRuntimeHints;
 import org.springframework.context.annotation.Scope;

@@ -16,8 +16,8 @@
 
 package smoketest.oauth2.client;
 
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
+import io.github.kotlinmania.spring.boot.SpringApplication;
+import io.github.kotlinmania.spring.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 public class SampleReactiveOAuth2ClientApplication {

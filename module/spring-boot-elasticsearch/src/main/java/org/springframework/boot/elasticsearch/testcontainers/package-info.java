@@ -18,6 +18,6 @@
  * Support for testcontainers Elasticsearch service connections.
  */
 @NullMarked
-package org.springframework.boot.elasticsearch.testcontainers;
+package io.github.kotlinmania.spring.boot.elasticsearch.testcontainers;
 
 import org.jspecify.annotations.NullMarked;

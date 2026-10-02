@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.test.util;
+package io.github.kotlinmania.spring.boot.test.util;
 
 import java.util.Arrays;
 import java.util.LinkedHashMap;
@@ -24,8 +24,8 @@ import java.util.stream.Stream;
 import org.jspecify.annotations.Nullable;
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.test.util.TestPropertyValues.Pair;
-import org.springframework.boot.test.util.TestPropertyValues.Type;
+import io.github.kotlinmania.spring.boot.test.util.TestPropertyValues.Pair;
+import io.github.kotlinmania.spring.boot.test.util.TestPropertyValues.Type;
 import org.springframework.core.env.ConfigurableEnvironment;
 import org.springframework.core.env.PropertySource;
 import org.springframework.core.env.StandardEnvironment;

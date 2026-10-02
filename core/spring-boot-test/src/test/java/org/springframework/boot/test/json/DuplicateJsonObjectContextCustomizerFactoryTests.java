@@ -14,15 +14,15 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.test.json;
+package io.github.kotlinmania.spring.boot.test.json;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 
-import org.springframework.boot.testsupport.classpath.ClassPathOverrides;
-import org.springframework.boot.testsupport.system.CapturedOutput;
-import org.springframework.boot.testsupport.system.OutputCaptureExtension;
+import io.github.kotlinmania.spring.boot.testsupport.classpath.ClassPathOverrides;
+import io.github.kotlinmania.spring.boot.testsupport.system.CapturedOutput;
+import io.github.kotlinmania.spring.boot.testsupport.system.OutputCaptureExtension;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.integration.autoconfigure;
+package io.github.kotlinmania.spring.boot.integration.autoconfigure;
 
 import java.io.FileNotFoundException;
 import java.lang.reflect.Modifier;
@@ -29,15 +29,15 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.MethodSource;
 
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.context.properties.bind.BindResult;
-import org.springframework.boot.context.properties.bind.Bindable;
-import org.springframework.boot.context.properties.bind.Binder;
-import org.springframework.boot.origin.Origin;
-import org.springframework.boot.origin.OriginLookup;
-import org.springframework.boot.origin.TextResourceOrigin;
-import org.springframework.boot.origin.TextResourceOrigin.Location;
-import org.springframework.boot.testsupport.classpath.resources.WithResource;
+import io.github.kotlinmania.spring.boot.SpringApplication;
+import io.github.kotlinmania.spring.boot.context.properties.bind.BindResult;
+import io.github.kotlinmania.spring.boot.context.properties.bind.Bindable;
+import io.github.kotlinmania.spring.boot.context.properties.bind.Binder;
+import io.github.kotlinmania.spring.boot.origin.Origin;
+import io.github.kotlinmania.spring.boot.origin.OriginLookup;
+import io.github.kotlinmania.spring.boot.origin.TextResourceOrigin;
+import io.github.kotlinmania.spring.boot.origin.TextResourceOrigin.Location;
+import io.github.kotlinmania.spring.boot.testsupport.classpath.resources.WithResource;
 import org.springframework.core.env.ConfigurableEnvironment;
 import org.springframework.core.env.MapPropertySource;
 import org.springframework.core.env.PropertySource;
@@ -163,11 +163,11 @@ class IntegrationPropertiesEnvironmentPostProcessorTests {
 	@MethodSource("mappedConfigurationProperties")
 	@ParameterizedTest
 	void mappedPropertiesExistOnBootsIntegrationProperties(String mapping) {
-		Bindable<org.springframework.boot.integration.autoconfigure.IntegrationProperties> bindable = Bindable
-			.of(org.springframework.boot.integration.autoconfigure.IntegrationProperties.class);
+		Bindable<io.github.kotlinmania.spring.boot.integration.autoconfigure.IntegrationProperties> bindable = Bindable
+			.of(io.github.kotlinmania.spring.boot.integration.autoconfigure.IntegrationProperties.class);
 		MockEnvironment environment = new MockEnvironment().withProperty(mapping,
 				(mapping.contains("max") || mapping.contains("timeout")) ? "1" : "true");
-		BindResult<org.springframework.boot.integration.autoconfigure.IntegrationProperties> result = Binder
+		BindResult<io.github.kotlinmania.spring.boot.integration.autoconfigure.IntegrationProperties> result = Binder
 			.get(environment)
 			.bind("spring.integration", bindable);
 		assertThat(result.isBound()).isTrue();

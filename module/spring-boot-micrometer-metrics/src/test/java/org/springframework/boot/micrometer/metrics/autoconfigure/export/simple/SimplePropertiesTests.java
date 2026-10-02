@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.micrometer.metrics.autoconfigure.export.simple;
+package io.github.kotlinmania.spring.boot.micrometer.metrics.autoconfigure.export.simple;
 
 import io.micrometer.core.instrument.simple.SimpleConfig;
 import org.junit.jupiter.api.Test;

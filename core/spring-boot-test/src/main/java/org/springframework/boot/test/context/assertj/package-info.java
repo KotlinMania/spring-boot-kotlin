@@ -18,6 +18,6 @@
  * AssertJ support for ApplicationContexts.
  */
 @NullMarked
-package org.springframework.boot.test.context.assertj;
+package io.github.kotlinmania.spring.boot.test.context.assertj;
 
 import org.jspecify.annotations.NullMarked;

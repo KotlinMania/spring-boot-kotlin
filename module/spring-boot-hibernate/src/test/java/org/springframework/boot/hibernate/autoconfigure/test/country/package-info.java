@@ -15,6 +15,6 @@
  */
 
 @NullMarked
-package org.springframework.boot.hibernate.autoconfigure.test.country;
+package io.github.kotlinmania.spring.boot.hibernate.autoconfigure.test.country;
 
 import org.jspecify.annotations.NullMarked;

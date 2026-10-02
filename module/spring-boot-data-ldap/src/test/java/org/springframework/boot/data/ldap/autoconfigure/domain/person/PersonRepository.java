@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.data.ldap.autoconfigure.domain.person;
+package io.github.kotlinmania.spring.boot.data.ldap.autoconfigure.domain.person;
 
 import javax.naming.Name;
 

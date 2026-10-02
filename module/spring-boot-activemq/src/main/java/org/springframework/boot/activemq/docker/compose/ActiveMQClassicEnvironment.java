@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.activemq.docker.compose;
+package io.github.kotlinmania.spring.boot.activemq.docker.compose;
 
 import java.util.Map;
 

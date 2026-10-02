@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.grpc.client.autoconfigure;
+package io.github.kotlinmania.spring.boot.grpc.client.autoconfigure;
 
 import java.time.Duration;
 import java.time.temporal.ChronoUnit;
@@ -23,10 +23,10 @@ import java.util.Map;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.boot.context.properties.bind.Name;
-import org.springframework.boot.convert.DataSizeUnit;
-import org.springframework.boot.convert.DurationUnit;
+import io.github.kotlinmania.spring.boot.context.properties.ConfigurationProperties;
+import io.github.kotlinmania.spring.boot.context.properties.bind.Name;
+import io.github.kotlinmania.spring.boot.convert.DataSizeUnit;
+import io.github.kotlinmania.spring.boot.convert.DurationUnit;
 import org.springframework.util.unit.DataSize;
 import org.springframework.util.unit.DataUnit;
 

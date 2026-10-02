@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.r2dbc.autoconfigure;
+package io.github.kotlinmania.spring.boot.r2dbc.autoconfigure;
 
-import org.springframework.boot.diagnostics.AbstractFailureAnalyzer;
-import org.springframework.boot.diagnostics.FailureAnalysis;
-import org.springframework.boot.r2dbc.EmbeddedDatabaseConnection;
-import org.springframework.boot.r2dbc.autoconfigure.ConnectionFactoryOptionsInitializer.ConnectionFactoryBeanCreationException;
+import io.github.kotlinmania.spring.boot.diagnostics.AbstractFailureAnalyzer;
+import io.github.kotlinmania.spring.boot.diagnostics.FailureAnalysis;
+import io.github.kotlinmania.spring.boot.r2dbc.EmbeddedDatabaseConnection;
+import io.github.kotlinmania.spring.boot.r2dbc.autoconfigure.ConnectionFactoryOptionsInitializer.ConnectionFactoryBeanCreationException;
 import org.springframework.core.env.Environment;
 import org.springframework.util.ObjectUtils;
 import org.springframework.util.StringUtils;

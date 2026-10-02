@@ -1,23 +1,23 @@
 # Application Context Factories
-org.springframework.boot.ApplicationContextFactory=\
-org.springframework.boot.web.server.reactive.context.ReactiveWebServerApplicationContextFactory,\
-org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContextFactory
+io.github.kotlinmania.spring.boot.ApplicationContextFactory=\
+io.github.kotlinmania.spring.boot.web.server.reactive.context.ReactiveWebServerApplicationContextFactory,\
+io.github.kotlinmania.spring.boot.web.server.servlet.context.ServletWebServerApplicationContextFactory
 
 # Application Context Initializers
 org.springframework.context.ApplicationContextInitializer=\
-org.springframework.boot.web.server.context.ServerPortInfoApplicationContextInitializer
+io.github.kotlinmania.spring.boot.web.server.context.ServerPortInfoApplicationContextInitializer
 
 # Failure Analyzers
-org.springframework.boot.diagnostics.FailureAnalyzer=\
-org.springframework.boot.web.server.PortInUseFailureAnalyzer,\
-org.springframework.boot.web.server.context.MissingWebServerFactoryBeanFailureAnalyzer
+io.github.kotlinmania.spring.boot.diagnostics.FailureAnalyzer=\
+io.github.kotlinmania.spring.boot.web.server.PortInUseFailureAnalyzer,\
+io.github.kotlinmania.spring.boot.web.server.context.MissingWebServerFactoryBeanFailureAnalyzer
 
 # HTTP Server LocalTestWebServer Providers
-org.springframework.boot.test.http.server.LocalTestWebServer$Provider=\
-org.springframework.boot.web.server.reactive.context.ReactiveWebServerApplicationContextLocalTestWebServerProvider,\
-org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContextLocalTestWebServerProvider
+io.github.kotlinmania.spring.boot.test.http.server.LocalTestWebServer$Provider=\
+io.github.kotlinmania.spring.boot.web.server.reactive.context.ReactiveWebServerApplicationContextLocalTestWebServerProvider,\
+io.github.kotlinmania.spring.boot.web.server.servlet.context.ServletWebServerApplicationContextLocalTestWebServerProvider
 
 # Spring Test Context Customizer Factories
 org.springframework.test.context.ContextCustomizerFactory=\
-org.springframework.boot.web.server.context.SpringBootTestRandomPortContextCustomizerFactory
+io.github.kotlinmania.spring.boot.web.server.context.SpringBootTestRandomPortContextCustomizerFactory
 

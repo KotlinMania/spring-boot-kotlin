@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.cache.autoconfigure.metrics;
+package io.github.kotlinmania.spring.boot.cache.autoconfigure.metrics;
 
 import java.util.Collection;
 import java.util.Map;
@@ -24,9 +24,9 @@ import io.micrometer.core.instrument.Tag;
 
 import org.springframework.beans.factory.config.ConfigurableListableBeanFactory;
 import org.springframework.beans.factory.support.SimpleAutowireCandidateResolver;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
-import org.springframework.boot.cache.metrics.CacheMeterBinderProvider;
-import org.springframework.boot.cache.metrics.CacheMetricsRegistrar;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnBean;
+import io.github.kotlinmania.spring.boot.cache.metrics.CacheMeterBinderProvider;
+import io.github.kotlinmania.spring.boot.cache.metrics.CacheMetricsRegistrar;
 import org.springframework.cache.Cache;
 import org.springframework.cache.CacheManager;
 import org.springframework.context.annotation.Bean;

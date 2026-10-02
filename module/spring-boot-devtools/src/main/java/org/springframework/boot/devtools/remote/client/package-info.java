@@ -18,6 +18,6 @@
  * Client support for a remotely running Spring Boot application.
  */
 @NullMarked
-package org.springframework.boot.devtools.remote.client;
+package io.github.kotlinmania.spring.boot.devtools.remote.client;
 
 import org.jspecify.annotations.NullMarked;

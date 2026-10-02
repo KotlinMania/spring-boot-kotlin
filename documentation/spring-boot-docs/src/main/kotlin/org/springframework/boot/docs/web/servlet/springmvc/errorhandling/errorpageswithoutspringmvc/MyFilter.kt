@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.web.servlet.springmvc.errorhandling.errorpageswithoutspringmvc
+package io.github.kotlinmania.spring.boot.docs.web.servlet.springmvc.errorhandling.errorpageswithoutspringmvc
 
 import jakarta.servlet.FilterChain
 import jakarta.servlet.ServletRequest

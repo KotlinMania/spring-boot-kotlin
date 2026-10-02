@@ -18,6 +18,6 @@
  * Auto-configuration for Groovy templates.
  */
 @NullMarked
-package org.springframework.boot.groovy.template.autoconfigure;
+package io.github.kotlinmania.spring.boot.groovy.template.autoconfigure;
 
 import org.jspecify.annotations.NullMarked;

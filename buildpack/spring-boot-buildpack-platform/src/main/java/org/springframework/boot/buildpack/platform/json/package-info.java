@@ -18,6 +18,6 @@
  * Utilities and classes for JSON processing.
  */
 @NullMarked
-package org.springframework.boot.buildpack.platform.json;
+package io.github.kotlinmania.spring.boot.buildpack.platform.json;
 
 import org.jspecify.annotations.NullMarked;

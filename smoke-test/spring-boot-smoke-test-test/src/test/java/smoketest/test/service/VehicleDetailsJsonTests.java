@@ -19,8 +19,8 @@ package smoketest.test.service;
 import org.junit.jupiter.api.Test;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.autoconfigure.json.JsonTest;
-import org.springframework.boot.test.json.JacksonTester;
+import io.github.kotlinmania.spring.boot.test.autoconfigure.json.JsonTest;
+import io.github.kotlinmania.spring.boot.test.json.JacksonTester;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

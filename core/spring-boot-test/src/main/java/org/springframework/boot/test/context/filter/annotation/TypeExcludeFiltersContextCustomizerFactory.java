@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.test.context.filter.annotation;
+package io.github.kotlinmania.spring.boot.test.context.filter.annotation;
 
 import java.util.Arrays;
 import java.util.LinkedHashSet;
@@ -23,7 +23,7 @@ import java.util.List;
 import org.jspecify.annotations.Nullable;
 
 import org.springframework.aot.AotDetector;
-import org.springframework.boot.context.TypeExcludeFilter;
+import io.github.kotlinmania.spring.boot.context.TypeExcludeFilter;
 import org.springframework.test.context.ContextConfigurationAttributes;
 import org.springframework.test.context.ContextCustomizer;
 import org.springframework.test.context.ContextCustomizerFactory;

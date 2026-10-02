@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.devtools.settings;
+package io.github.kotlinmania.spring.boot.devtools.settings;
 
 import java.io.File;
 import java.io.IOException;

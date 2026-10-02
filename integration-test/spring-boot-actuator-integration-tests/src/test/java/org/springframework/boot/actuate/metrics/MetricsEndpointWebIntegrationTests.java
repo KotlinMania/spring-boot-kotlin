@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.actuate.metrics;
+package io.github.kotlinmania.spring.boot.actuate.metrics;
 
 import java.util.List;
 import java.util.Map;
@@ -26,8 +26,8 @@ import io.micrometer.core.instrument.simple.SimpleConfig;
 import io.micrometer.core.instrument.simple.SimpleMeterRegistry;
 import tools.jackson.databind.json.JsonMapper;
 
-import org.springframework.boot.actuate.endpoint.web.test.WebEndpointTest;
-import org.springframework.boot.micrometer.metrics.actuate.endpoint.MetricsEndpoint;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.web.test.WebEndpointTest;
+import io.github.kotlinmania.spring.boot.micrometer.metrics.actuate.endpoint.MetricsEndpoint;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.test.web.reactive.server.WebTestClient;

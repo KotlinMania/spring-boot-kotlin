@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.gradle.plugin;
+package io.github.kotlinmania.spring.boot.gradle.plugin;
 
 import java.io.File;
 import java.io.IOException;
@@ -27,8 +27,8 @@ import org.junit.jupiter.api.TestTemplate;
 import org.junit.jupiter.api.condition.EnabledOnJre;
 import org.junit.jupiter.api.condition.JRE;
 
-import org.springframework.boot.gradle.junit.GradleCompatibility;
-import org.springframework.boot.testsupport.gradle.testkit.GradleBuild;
+import io.github.kotlinmania.spring.boot.gradle.junit.GradleCompatibility;
+import io.github.kotlinmania.spring.boot.testsupport.gradle.testkit.GradleBuild;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatNoException;
@@ -126,7 +126,7 @@ class SpringBootAotPluginIntegrationTests {
 
 	@TestTemplate
 	void processAotRunsWhenProjectHasMainSource() throws IOException {
-		writeMainClass("org.springframework.boot", "SpringApplicationAotProcessor");
+		writeMainClass("io.github.kotlinmania.spring.boot., "SpringApplicationAotProcessor");
 		writeMainClass("com.example", "Main");
 		BuildTask task = this.gradleBuild.build("processAot").task(":processAot");
 		assertThat(task).isNotNull();

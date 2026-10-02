@@ -14,18 +14,18 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.servlet.autoconfigure.actuate.web.mappings;
+package io.github.kotlinmania.spring.boot.servlet.autoconfigure.actuate.web.mappings;
 
-import org.springframework.boot.actuate.autoconfigure.endpoint.condition.ConditionalOnAvailableEndpoint;
-import org.springframework.boot.actuate.web.mappings.MappingDescriptionProvider;
-import org.springframework.boot.actuate.web.mappings.MappingsEndpoint;
-import org.springframework.boot.autoconfigure.AutoConfiguration;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnWebApplication;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnWebApplication.Type;
-import org.springframework.boot.servlet.actuate.web.mappings.FiltersMappingDescriptionProvider;
-import org.springframework.boot.servlet.actuate.web.mappings.ServletsMappingDescriptionProvider;
+import io.github.kotlinmania.spring.boot.actuate.autoconfigure.endpoint.condition.ConditionalOnAvailableEndpoint;
+import io.github.kotlinmania.spring.boot.actuate.web.mappings.MappingDescriptionProvider;
+import io.github.kotlinmania.spring.boot.actuate.web.mappings.MappingsEndpoint;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.EnableAutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnClass;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnWebApplication;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnWebApplication.Type;
+import io.github.kotlinmania.spring.boot.servlet.actuate.web.mappings.FiltersMappingDescriptionProvider;
+import io.github.kotlinmania.spring.boot.servlet.actuate.web.mappings.ServletsMappingDescriptionProvider;
 import org.springframework.context.annotation.Bean;
 
 /**

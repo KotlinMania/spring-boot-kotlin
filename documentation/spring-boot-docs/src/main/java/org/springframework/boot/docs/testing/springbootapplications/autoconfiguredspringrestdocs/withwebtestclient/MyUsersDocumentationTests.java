@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.testing.springbootapplications.autoconfiguredspringrestdocs.withwebtestclient;
+package io.github.kotlinmania.spring.boot.docs.testing.springbootapplications.autoconfiguredspringrestdocs.withwebtestclient;
 
 import org.junit.jupiter.api.Test;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.restdocs.test.autoconfigure.AutoConfigureRestDocs;
-import org.springframework.boot.webflux.test.autoconfigure.WebFluxTest;
+import io.github.kotlinmania.spring.boot.restdocs.test.autoconfigure.AutoConfigureRestDocs;
+import io.github.kotlinmania.spring.boot.webflux.test.autoconfigure.WebFluxTest;
 import org.springframework.test.web.reactive.server.WebTestClient;
 
 import static org.springframework.restdocs.webtestclient.WebTestClientRestDocumentation.document;

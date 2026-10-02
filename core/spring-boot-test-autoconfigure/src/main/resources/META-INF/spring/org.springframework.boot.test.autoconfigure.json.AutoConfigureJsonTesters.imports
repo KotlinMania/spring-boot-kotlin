@@ -1,1 +1,1 @@
-org.springframework.boot.test.autoconfigure.json.JsonTestersAutoConfiguration
+io.github.kotlinmania.spring.boot.test.autoconfigure.json.JsonTestersAutoConfiguration

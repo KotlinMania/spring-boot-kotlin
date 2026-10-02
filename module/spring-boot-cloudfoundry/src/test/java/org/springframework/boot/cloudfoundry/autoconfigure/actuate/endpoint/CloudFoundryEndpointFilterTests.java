@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.cloudfoundry.autoconfigure.actuate.endpoint;
+package io.github.kotlinmania.spring.boot.cloudfoundry.autoconfigure.actuate.endpoint;
 
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.actuate.endpoint.annotation.DiscoveredEndpoint;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.annotation.DiscoveredEndpoint;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.BDDMockito.given;

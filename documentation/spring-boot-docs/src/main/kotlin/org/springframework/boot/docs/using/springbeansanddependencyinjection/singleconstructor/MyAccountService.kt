@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.using.springbeansanddependencyinjection.singleconstructor
+package io.github.kotlinmania.spring.boot.docs.using.springbeansanddependencyinjection.singleconstructor
 
 import org.springframework.stereotype.Service
 

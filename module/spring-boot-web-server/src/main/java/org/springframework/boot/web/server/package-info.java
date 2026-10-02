@@ -18,6 +18,6 @@
  * Support for embedded web servers.
  */
 @NullMarked
-package org.springframework.boot.web.server;
+package io.github.kotlinmania.spring.boot.web.server;
 
 import org.jspecify.annotations.NullMarked;

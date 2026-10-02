@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.actuate.endpoint.web;
+package io.github.kotlinmania.spring.boot.actuate.endpoint.web;
 
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
-import org.springframework.boot.actuate.endpoint.ApiVersion;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.ApiVersion;
 import org.springframework.util.Assert;
 
 /**

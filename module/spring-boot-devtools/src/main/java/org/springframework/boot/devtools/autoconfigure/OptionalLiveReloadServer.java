@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.devtools.autoconfigure;
+package io.github.kotlinmania.spring.boot.devtools.autoconfigure;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.jspecify.annotations.Nullable;
 
 import org.springframework.beans.factory.InitializingBean;
-import org.springframework.boot.devtools.livereload.LiveReloadServer;
+import io.github.kotlinmania.spring.boot.devtools.livereload.LiveReloadServer;
 import org.springframework.core.log.LogMessage;
 
 /**

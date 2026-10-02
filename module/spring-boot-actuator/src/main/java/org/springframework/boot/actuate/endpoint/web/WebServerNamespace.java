@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.actuate.endpoint.web;
+package io.github.kotlinmania.spring.boot.actuate.endpoint.web;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.web.server.context.WebServerApplicationContext;
+import io.github.kotlinmania.spring.boot.web.server.context.WebServerApplicationContext;
 import org.springframework.context.ApplicationContext;
 import org.springframework.util.ClassUtils;
 import org.springframework.util.StringUtils;
@@ -33,7 +33,7 @@ import org.springframework.util.StringUtils;
  */
 public final class WebServerNamespace {
 
-	private static final String WEB_SERVER_CONTEXT_CLASS = "org.springframework.boot.web.server.context.WebServerApplicationContext";
+	private static final String WEB_SERVER_CONTEXT_CLASS = "io.github.kotlinmania.spring.boot.web.server.context.WebServerApplicationContext";
 
 	/**
 	 * {@link WebServerNamespace} that represents the main server.

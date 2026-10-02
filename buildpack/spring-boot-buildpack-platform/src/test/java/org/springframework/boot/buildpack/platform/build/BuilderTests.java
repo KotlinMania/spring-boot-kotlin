@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.buildpack.platform.build;
+package io.github.kotlinmania.spring.boot.buildpack.platform.build;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
@@ -27,23 +27,23 @@ import org.junit.jupiter.api.Test;
 import org.mockito.ArgumentCaptor;
 import org.mockito.stubbing.Answer;
 
-import org.springframework.boot.buildpack.platform.build.Builder.BuildLogAdapter;
-import org.springframework.boot.buildpack.platform.docker.DockerApi;
-import org.springframework.boot.buildpack.platform.docker.DockerApi.ContainerApi;
-import org.springframework.boot.buildpack.platform.docker.DockerApi.ImageApi;
-import org.springframework.boot.buildpack.platform.docker.DockerApi.VolumeApi;
-import org.springframework.boot.buildpack.platform.docker.DockerLog;
-import org.springframework.boot.buildpack.platform.docker.ImagePlatform;
-import org.springframework.boot.buildpack.platform.docker.TotalProgressPullListener;
-import org.springframework.boot.buildpack.platform.docker.configuration.DockerRegistryAuthentication;
-import org.springframework.boot.buildpack.platform.docker.transport.TestDockerEngineException;
-import org.springframework.boot.buildpack.platform.docker.type.Binding;
-import org.springframework.boot.buildpack.platform.docker.type.ContainerReference;
-import org.springframework.boot.buildpack.platform.docker.type.ContainerStatus;
-import org.springframework.boot.buildpack.platform.docker.type.Image;
-import org.springframework.boot.buildpack.platform.docker.type.ImageArchive;
-import org.springframework.boot.buildpack.platform.docker.type.ImageReference;
-import org.springframework.boot.buildpack.platform.io.TarArchive;
+import io.github.kotlinmania.spring.boot.buildpack.platform.build.Builder.BuildLogAdapter;
+import io.github.kotlinmania.spring.boot.buildpack.platform.docker.DockerApi;
+import io.github.kotlinmania.spring.boot.buildpack.platform.docker.DockerApi.ContainerApi;
+import io.github.kotlinmania.spring.boot.buildpack.platform.docker.DockerApi.ImageApi;
+import io.github.kotlinmania.spring.boot.buildpack.platform.docker.DockerApi.VolumeApi;
+import io.github.kotlinmania.spring.boot.buildpack.platform.docker.DockerLog;
+import io.github.kotlinmania.spring.boot.buildpack.platform.docker.ImagePlatform;
+import io.github.kotlinmania.spring.boot.buildpack.platform.docker.TotalProgressPullListener;
+import io.github.kotlinmania.spring.boot.buildpack.platform.docker.configuration.DockerRegistryAuthentication;
+import io.github.kotlinmania.spring.boot.buildpack.platform.docker.transport.TestDockerEngineException;
+import io.github.kotlinmania.spring.boot.buildpack.platform.docker.type.Binding;
+import io.github.kotlinmania.spring.boot.buildpack.platform.docker.type.ContainerReference;
+import io.github.kotlinmania.spring.boot.buildpack.platform.docker.type.ContainerStatus;
+import io.github.kotlinmania.spring.boot.buildpack.platform.docker.type.Image;
+import io.github.kotlinmania.spring.boot.buildpack.platform.docker.type.ImageArchive;
+import io.github.kotlinmania.spring.boot.buildpack.platform.docker.type.ImageReference;
+import io.github.kotlinmania.spring.boot.buildpack.platform.io.TarArchive;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatExceptionOfType;

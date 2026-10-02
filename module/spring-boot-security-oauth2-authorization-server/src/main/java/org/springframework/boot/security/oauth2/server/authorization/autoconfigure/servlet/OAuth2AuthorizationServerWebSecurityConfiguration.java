@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.security.oauth2.server.authorization.autoconfigure.servlet;
+package io.github.kotlinmania.spring.boot.security.oauth2.server.authorization.autoconfigure.servlet;
 
 import java.util.Set;
 
-import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
-import org.springframework.boot.security.autoconfigure.web.servlet.ConditionalOnDefaultWebSecurity;
-import org.springframework.boot.security.autoconfigure.web.servlet.SecurityFilterProperties;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnBean;
+import io.github.kotlinmania.spring.boot.security.autoconfigure.web.servlet.ConditionalOnDefaultWebSecurity;
+import io.github.kotlinmania.spring.boot.security.autoconfigure.web.servlet.SecurityFilterProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.Ordered;

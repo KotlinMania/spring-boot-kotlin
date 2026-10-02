@@ -18,6 +18,6 @@
  * Auto-configuration for Spring Data Redis observation.
  */
 @NullMarked
-package org.springframework.boot.data.redis.autoconfigure.observation;
+package io.github.kotlinmania.spring.boot.data.redis.autoconfigure.observation;
 
 import org.jspecify.annotations.NullMarked;

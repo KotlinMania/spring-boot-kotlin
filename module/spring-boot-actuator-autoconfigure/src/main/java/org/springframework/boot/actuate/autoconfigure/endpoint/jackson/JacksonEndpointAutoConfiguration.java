@@ -14,16 +14,16 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.actuate.autoconfigure.endpoint.jackson;
+package io.github.kotlinmania.spring.boot.actuate.autoconfigure.endpoint.jackson;
 
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import tools.jackson.databind.json.JsonMapper;
 
-import org.springframework.boot.actuate.endpoint.jackson.EndpointJsonMapper;
-import org.springframework.boot.autoconfigure.AutoConfiguration;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnBooleanProperty;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.jackson.EndpointJsonMapper;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.EnableAutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnBooleanProperty;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnClass;
 import org.springframework.context.annotation.Bean;
 
 /**

@@ -15,6 +15,6 @@
  */
 
 @NullMarked
-package org.springframework.boot.jackson2.scan.d;
+package io.github.kotlinmania.spring.boot.jackson2.scan.d;
 
 import org.jspecify.annotations.NullMarked;

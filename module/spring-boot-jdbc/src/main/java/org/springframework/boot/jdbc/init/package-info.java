@@ -19,6 +19,6 @@
  * DataSource}.
  */
 @NullMarked
-package org.springframework.boot.jdbc.init;
+package io.github.kotlinmania.spring.boot.jdbc.init;
 
 import org.jspecify.annotations.NullMarked;

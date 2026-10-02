@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.servlet.autoconfigure.actuate.web.mappings;
+package io.github.kotlinmania.spring.boot.servlet.autoconfigure.actuate.web.mappings;
 
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.autoconfigure.AutoConfigurations;
-import org.springframework.boot.servlet.actuate.web.mappings.FiltersMappingDescriptionProvider;
-import org.springframework.boot.servlet.actuate.web.mappings.ServletsMappingDescriptionProvider;
-import org.springframework.boot.test.context.runner.WebApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurations;
+import io.github.kotlinmania.spring.boot.servlet.actuate.web.mappings.FiltersMappingDescriptionProvider;
+import io.github.kotlinmania.spring.boot.servlet.actuate.web.mappings.ServletsMappingDescriptionProvider;
+import io.github.kotlinmania.spring.boot.test.context.runner.WebApplicationContextRunner;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

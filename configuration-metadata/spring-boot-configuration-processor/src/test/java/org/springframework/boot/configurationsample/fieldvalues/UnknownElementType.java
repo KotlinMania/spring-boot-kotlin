@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.configurationsample.fieldvalues;
+package io.github.kotlinmania.spring.boot.configurationsample.fieldvalues;
 
 /**
  * Type used to check unknown array element types.

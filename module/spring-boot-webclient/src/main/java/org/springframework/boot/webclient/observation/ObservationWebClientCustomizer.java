@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.webclient.observation;
+package io.github.kotlinmania.spring.boot.webclient.observation;
 
 import io.micrometer.observation.ObservationRegistry;
 
-import org.springframework.boot.webclient.WebClientCustomizer;
+import io.github.kotlinmania.spring.boot.webclient.WebClientCustomizer;
 import org.springframework.web.reactive.function.client.ClientRequestObservationConvention;
 import org.springframework.web.reactive.function.client.WebClient;
 

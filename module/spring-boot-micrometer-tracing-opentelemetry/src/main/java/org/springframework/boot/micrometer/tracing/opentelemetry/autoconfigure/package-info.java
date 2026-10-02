@@ -18,6 +18,6 @@
  * Auto-configuration for Micrometer Tracing with OpenTelemetry.
  */
 @NullMarked
-package org.springframework.boot.micrometer.tracing.opentelemetry.autoconfigure;
+package io.github.kotlinmania.spring.boot.micrometer.tracing.opentelemetry.autoconfigure;
 
 import org.jspecify.annotations.NullMarked;

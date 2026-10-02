@@ -22,7 +22,7 @@ By default, the auto-configuration will try to configure the following (in order
 The `spring-boot-starter-rsocket` starter provides both dependencies.
 See the xref:features/json.adoc#features.json.jackson[Jackson support section] to know more about customization possibilities.
 
-Developers can customize the javadoc:org.springframework.messaging.rsocket.RSocketStrategies[] component by creating beans that implement the javadoc:org.springframework.boot.rsocket.messaging.RSocketStrategiesCustomizer[] interface.
+Developers can customize the javadoc:org.springframework.messaging.rsocket.RSocketStrategies[] component by creating beans that implement the javadoc:io.github.kotlinmania.spring.boot.rsocket.messaging.RSocketStrategiesCustomizer[] interface.
 Note that their javadoc:org.springframework.core.annotation.Order[format=annotation] is important, as it determines the order of codecs.
 
 
@@ -36,7 +36,7 @@ The required dependencies are provided by the `spring-boot-starter-rsocket`.
 Spring Boot allows exposing RSocket over WebSocket from a WebFlux server, or standing up an independent RSocket server.
 This depends on the type of application and its configuration.
 
-For WebFlux application (that is of type javadoc:org.springframework.boot.WebApplicationType#REACTIVE[]), the RSocket server will be plugged into the Web Server only if the following properties match:
+For WebFlux application (that is of type javadoc:io.github.kotlinmania.spring.boot.WebApplicationType#REACTIVE[]), the RSocket server will be plugged into the Web Server only if the following properties match:
 
 [configprops,yaml]
 ----

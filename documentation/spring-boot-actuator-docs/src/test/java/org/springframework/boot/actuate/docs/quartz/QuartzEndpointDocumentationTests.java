@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.actuate.docs.quartz;
+package io.github.kotlinmania.spring.boot.actuate.docs.quartz;
 
 import java.time.Instant;
 import java.util.ArrayList;
@@ -52,11 +52,11 @@ import org.quartz.TriggerKey;
 import org.quartz.impl.matchers.GroupMatcher;
 import org.quartz.spi.OperableTrigger;
 
-import org.springframework.boot.actuate.docs.MockMvcEndpointDocumentationTests;
-import org.springframework.boot.actuate.endpoint.Show;
-import org.springframework.boot.json.JsonWriter;
-import org.springframework.boot.quartz.actuate.endpoint.QuartzEndpoint;
-import org.springframework.boot.quartz.actuate.endpoint.QuartzEndpointWebExtension;
+import io.github.kotlinmania.spring.boot.actuate.docs.MockMvcEndpointDocumentationTests;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.Show;
+import io.github.kotlinmania.spring.boot.json.JsonWriter;
+import io.github.kotlinmania.spring.boot.quartz.actuate.endpoint.QuartzEndpoint;
+import io.github.kotlinmania.spring.boot.quartz.actuate.endpoint.QuartzEndpointWebExtension;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.MediaType;

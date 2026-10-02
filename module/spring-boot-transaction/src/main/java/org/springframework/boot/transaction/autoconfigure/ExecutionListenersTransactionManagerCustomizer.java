@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.transaction.autoconfigure;
+package io.github.kotlinmania.spring.boot.transaction.autoconfigure;
 
 import java.util.List;
 

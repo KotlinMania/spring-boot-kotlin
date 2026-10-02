@@ -18,6 +18,6 @@
  * Actuator servlet request mappings auto-configuration.
  */
 @NullMarked
-package org.springframework.boot.servlet.autoconfigure.actuate.web.mappings;
+package io.github.kotlinmania.spring.boot.servlet.autoconfigure.actuate.web.mappings;
 
 import org.jspecify.annotations.NullMarked;

@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.couchbase.health;
+package io.github.kotlinmania.spring.boot.couchbase.health;
 
 import com.couchbase.client.java.Cluster;
 import reactor.core.publisher.Mono;
 
-import org.springframework.boot.health.contributor.AbstractReactiveHealthIndicator;
-import org.springframework.boot.health.contributor.Health;
-import org.springframework.boot.health.contributor.ReactiveHealthIndicator;
+import io.github.kotlinmania.spring.boot.health.contributor.AbstractReactiveHealthIndicator;
+import io.github.kotlinmania.spring.boot.health.contributor.Health;
+import io.github.kotlinmania.spring.boot.health.contributor.ReactiveHealthIndicator;
 
 /**
  * A {@link ReactiveHealthIndicator} for Couchbase.

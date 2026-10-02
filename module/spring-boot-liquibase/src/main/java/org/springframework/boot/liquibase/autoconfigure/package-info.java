@@ -18,6 +18,6 @@
  * Auto-configuration for Liquibase.
  */
 @NullMarked
-package org.springframework.boot.liquibase.autoconfigure;
+package io.github.kotlinmania.spring.boot.liquibase.autoconfigure;
 
 import org.jspecify.annotations.NullMarked;

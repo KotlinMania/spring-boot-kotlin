@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.cli.command.core;
+package io.github.kotlinmania.spring.boot.cli.command.core;
 
-import org.springframework.boot.cli.command.AbstractCommand;
-import org.springframework.boot.cli.command.Command;
-import org.springframework.boot.cli.command.status.ExitStatus;
-import org.springframework.boot.cli.util.Log;
+import io.github.kotlinmania.spring.boot.cli.command.AbstractCommand;
+import io.github.kotlinmania.spring.boot.cli.command.Command;
+import io.github.kotlinmania.spring.boot.cli.command.status.ExitStatus;
+import io.github.kotlinmania.spring.boot.cli.util.Log;
 
 /**
  * {@link Command} to display the 'version' number.

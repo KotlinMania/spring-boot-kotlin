@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.loader.zip;
+package io.github.kotlinmania.spring.boot.loader.zip;
 
 import java.io.EOFException;
 import java.io.IOException;
@@ -23,7 +23,7 @@ import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
 import java.nio.charset.StandardCharsets;
 
-import org.springframework.boot.loader.log.DebugLogger;
+import io.github.kotlinmania.spring.boot.loader.log.DebugLogger;
 
 /**
  * Internal utility class for working with the string content of zip records. Provides

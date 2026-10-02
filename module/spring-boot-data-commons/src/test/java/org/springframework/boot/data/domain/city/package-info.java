@@ -15,6 +15,6 @@
  */
 
 @NullMarked
-package org.springframework.boot.data.domain.city;
+package io.github.kotlinmania.spring.boot.data.domain.city;
 
 import org.jspecify.annotations.NullMarked;

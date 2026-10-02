@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.devtools.settings;
+package io.github.kotlinmania.spring.boot.devtools.settings;
 
 import java.net.URL;
 import java.util.ArrayList;
@@ -29,7 +29,7 @@ import java.util.regex.Pattern;
 import org.apache.commons.logging.Log;
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.devtools.logger.DevToolsLogFactory;
+import io.github.kotlinmania.spring.boot.devtools.logger.DevToolsLogFactory;
 import org.springframework.core.io.UrlResource;
 import org.springframework.core.io.support.PropertiesLoaderUtils;
 

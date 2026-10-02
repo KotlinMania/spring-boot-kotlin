@@ -18,6 +18,6 @@
  * Core integration between Spring Boot and Spring WebFlux.
  */
 @NullMarked
-package org.springframework.boot.webflux;
+package io.github.kotlinmania.spring.boot.webflux;
 
 import org.jspecify.annotations.NullMarked;

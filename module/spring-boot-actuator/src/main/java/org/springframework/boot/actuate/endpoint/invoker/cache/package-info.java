@@ -18,6 +18,6 @@
  * Caching support for actuator endpoints.
  */
 @NullMarked
-package org.springframework.boot.actuate.endpoint.invoker.cache;
+package io.github.kotlinmania.spring.boot.actuate.endpoint.invoker.cache;
 
 import org.jspecify.annotations.NullMarked;

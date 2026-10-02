@@ -15,7 +15,7 @@
  */
 package org.springframework.boot.build.architecture.junit.enumsource.valuenecessary
 
-import org.junit.jupiter.params.provider.EnumSource
+package io.github.kotlinmania.spring.boot.build.architecture.junit.enumsource.valuenecessary;
 
 internal class EnumSourceValueNecessary {
     @EnumSource(Example::class)

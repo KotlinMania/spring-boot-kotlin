@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.loader.tools;
+package io.github.kotlinmania.spring.boot.loader.tools;
 
 import java.io.File;
 import java.io.IOException;
@@ -36,7 +36,7 @@ import org.apache.commons.compress.archivers.zip.ZipFile;
 import org.jspecify.annotations.Nullable;
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.loader.tools.sample.ClassWithMainMethod;
+import io.github.kotlinmania.spring.boot.loader.tools.sample.ClassWithMainMethod;
 import org.springframework.util.FileCopyUtils;
 import org.springframework.util.StopWatch;
 import org.springframework.util.StringUtils;
@@ -80,7 +80,7 @@ class RepackagerTests extends AbstractPackagerTests<Repackager> {
 		repackager.repackage(NO_LIBRARIES);
 		Manifest actualManifest = getPackagedManifest();
 		assertThat(actualManifest.getMainAttributes().getValue("Main-Class"))
-			.isEqualTo("org.springframework.boot.loader.launch.JarLauncher");
+			.isEqualTo("io.github.kotlinmania.spring.boot.loader.launch.JarLauncher");
 		assertThat(actualManifest.getMainAttributes().getValue("Start-Class")).isEqualTo("a.b.C");
 		assertThat(hasPackagedLauncherClasses()).isTrue();
 	}
@@ -162,7 +162,7 @@ class RepackagerTests extends AbstractPackagerTests<Repackager> {
 		assertThat(this.destination).isNotNull();
 		repackager.repackage(this.destination, NO_LIBRARIES);
 		for (ZipArchiveEntry entry : getAllPackagedEntries()) {
-			if (entry.getName().startsWith("org/springframework/boot/loader")) {
+			if (entry.getName().startsWith("io.github.kotlinmania.spring.boot.loader")) {
 				if (timestamp == null) {
 					timestamp = entry.getTime();
 				}
@@ -217,8 +217,8 @@ class RepackagerTests extends AbstractPackagerTests<Repackager> {
 	}
 
 	private boolean hasLauncherClasses(File file) throws IOException {
-		return hasEntry(file, "org/springframework/boot/")
-				&& hasEntry(file, "org/springframework/boot/loader/launch/JarLauncher.class");
+		return hasEntry(file, "io.github.kotlinmania.spring.boot.")
+				&& hasEntry(file, "io.github.kotlinmania.spring.boot.loader/launch/JarLauncher.class");
 	}
 
 	private boolean hasEntry(File file, String name) throws IOException {

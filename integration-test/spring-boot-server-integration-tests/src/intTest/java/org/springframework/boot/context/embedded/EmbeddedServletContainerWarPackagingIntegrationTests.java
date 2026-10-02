@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.context.embedded;
+package io.github.kotlinmania.spring.boot.context.embedded;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -86,7 +86,7 @@ class EmbeddedServletContainerWarPackagingIntegrationTests {
 
 	@TestTemplate
 	void loaderClassesAreNotAvailableViaHttp(RestTemplate rest) {
-		ResponseEntity<String> entity = rest.getForEntity("/org/springframework/boot/loader/Launcher.class",
+		ResponseEntity<String> entity = rest.getForEntity("/io.github.kotlinmania.spring.boot.loader/Launcher.class",
 				String.class);
 		assertThat(entity.getStatusCode()).isEqualTo(HttpStatus.NOT_FOUND);
 		entity = rest.getForEntity("/org/springframework/../springframework/boot/loader/Launcher.class", String.class);
@@ -98,7 +98,7 @@ class EmbeddedServletContainerWarPackagingIntegrationTests {
 		ResponseEntity<String> entity = rest.getForEntity("/resourcePaths", String.class);
 		assertThat(entity.getStatusCode()).isEqualTo(HttpStatus.OK);
 		assertThat(readLines(entity.getBody()))
-			.noneMatch((resourcePath) -> resourcePath.startsWith("/org/springframework/boot/loader"));
+			.noneMatch((resourcePath) -> resourcePath.startsWith("/io.github.kotlinmania.spring.boot.loader"));
 	}
 
 	@TestTemplate

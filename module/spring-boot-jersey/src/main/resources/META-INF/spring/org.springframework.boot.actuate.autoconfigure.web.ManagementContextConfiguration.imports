@@ -1,4 +1,4 @@
-org.springframework.boot.jersey.autoconfigure.actuate.web.JerseyChildManagementContextConfiguration
-org.springframework.boot.jersey.autoconfigure.actuate.web.JerseyEndpointManagementContextConfiguration
-org.springframework.boot.jersey.autoconfigure.actuate.web.JerseySameManagementContextConfiguration
-org.springframework.boot.jersey.autoconfigure.actuate.web.JerseyWebEndpointManagementContextConfiguration
+io.github.kotlinmania.spring.boot.jersey.autoconfigure.actuate.web.JerseyChildManagementContextConfiguration
+io.github.kotlinmania.spring.boot.jersey.autoconfigure.actuate.web.JerseyEndpointManagementContextConfiguration
+io.github.kotlinmania.spring.boot.jersey.autoconfigure.actuate.web.JerseySameManagementContextConfiguration
+io.github.kotlinmania.spring.boot.jersey.autoconfigure.actuate.web.JerseyWebEndpointManagementContextConfiguration

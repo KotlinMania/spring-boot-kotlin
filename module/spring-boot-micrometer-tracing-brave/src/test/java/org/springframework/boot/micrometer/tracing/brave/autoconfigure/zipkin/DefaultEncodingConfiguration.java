@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.micrometer.tracing.brave.autoconfigure.zipkin;
+package io.github.kotlinmania.spring.boot.micrometer.tracing.brave.autoconfigure.zipkin;
 
 import zipkin2.reporter.Encoding;
 
-import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
-import org.springframework.boot.test.context.TestConfiguration;
-import org.springframework.boot.zipkin.autoconfigure.ZipkinAutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnMissingBean;
+import io.github.kotlinmania.spring.boot.test.context.TestConfiguration;
+import io.github.kotlinmania.spring.boot.zipkin.autoconfigure.ZipkinAutoConfiguration;
 import org.springframework.context.annotation.Bean;
 
 /**

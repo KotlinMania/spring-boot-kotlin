@@ -14,16 +14,16 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.jdbc.docker.compose;
+package io.github.kotlinmania.spring.boot.jdbc.docker.compose;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
 
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.docker.compose.core.ConnectionPorts;
-import org.springframework.boot.docker.compose.core.RunningService;
-import org.springframework.boot.jdbc.autoconfigure.JdbcConnectionDetails;
+import io.github.kotlinmania.spring.boot.docker.compose.core.ConnectionPorts;
+import io.github.kotlinmania.spring.boot.docker.compose.core.RunningService;
+import io.github.kotlinmania.spring.boot.jdbc.autoconfigure.JdbcConnectionDetails;
 import org.springframework.mock.env.MockEnvironment;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -63,7 +63,7 @@ class PostgresJdbcDockerComposeConnectionDetailsFactoryConnectionDetailsTests {
 
 	@Test
 	void createConnectionDetailsWithLabels() {
-		this.labels.put("org.springframework.boot.jdbc.parameters", "connectTimeout=30&ApplicationName=spring-boot");
+		this.labels.put("io.github.kotlinmania.spring.boot.jdbc.parameters", "connectTimeout=30&ApplicationName=spring-boot");
 		JdbcConnectionDetails connectionDetails = getConnectionDetails();
 		assertConnectionDetails(connectionDetails);
 		assertThat(connectionDetails.getJdbcUrl()).endsWith("?connectTimeout=30&ApplicationName=spring-boot");
@@ -71,7 +71,7 @@ class PostgresJdbcDockerComposeConnectionDetailsFactoryConnectionDetailsTests {
 
 	@Test
 	void createConnectionDetailsWithApplicationNameLabelTakesPrecedence() {
-		this.labels.put("org.springframework.boot.jdbc.parameters", "ApplicationName=spring-boot");
+		this.labels.put("io.github.kotlinmania.spring.boot.jdbc.parameters", "ApplicationName=spring-boot");
 		this.environment.setProperty("spring.application.name", "my-app");
 		JdbcConnectionDetails connectionDetails = getConnectionDetails();
 		assertConnectionDetails(connectionDetails);
@@ -88,7 +88,7 @@ class PostgresJdbcDockerComposeConnectionDetailsFactoryConnectionDetailsTests {
 
 	@Test
 	void createConnectionDetailsAppendSpringApplicationName() {
-		this.labels.put("org.springframework.boot.jdbc.parameters", "connectTimeout=30");
+		this.labels.put("io.github.kotlinmania.spring.boot.jdbc.parameters", "connectTimeout=30");
 		this.environment.setProperty("spring.application.name", "spring boot");
 		JdbcConnectionDetails connectionDetails = getConnectionDetails();
 		assertConnectionDetails(connectionDetails);
@@ -97,7 +97,7 @@ class PostgresJdbcDockerComposeConnectionDetailsFactoryConnectionDetailsTests {
 
 	@Test
 	void createConnectionDetailsAppendSpringApplicationNameParametersEndedWithAmpersand() {
-		this.labels.put("org.springframework.boot.jdbc.parameters", "connectTimeout=30&");
+		this.labels.put("io.github.kotlinmania.spring.boot.jdbc.parameters", "connectTimeout=30&");
 		this.environment.setProperty("spring.application.name", "spring boot");
 		JdbcConnectionDetails connectionDetails = getConnectionDetails();
 		assertConnectionDetails(connectionDetails);

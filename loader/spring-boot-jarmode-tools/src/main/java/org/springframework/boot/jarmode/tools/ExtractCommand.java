@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.jarmode.tools;
+package io.github.kotlinmania.spring.boot.jarmode.tools;
 
 import java.io.BufferedOutputStream;
 import java.io.File;
@@ -47,9 +47,9 @@ import java.util.zip.ZipInputStream;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.jarmode.tools.JarStructure.Entry;
-import org.springframework.boot.jarmode.tools.JarStructure.Entry.Type;
-import org.springframework.boot.loader.jarmode.JarModeErrorException;
+import io.github.kotlinmania.spring.boot.jarmode.tools.JarStructure.Entry;
+import io.github.kotlinmania.spring.boot.jarmode.tools.JarStructure.Entry.Type;
+import io.github.kotlinmania.spring.boot.loader.jarmode.JarModeErrorException;
 import org.springframework.util.Assert;
 import org.springframework.util.StreamUtils;
 import org.springframework.util.StringUtils;

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.jackson.autoconfigure.jsontest.app;
+package io.github.kotlinmania.spring.boot.jackson.autoconfigure.jsontest.app;
 
 import java.util.Date;
 import java.util.UUID;
@@ -26,10 +26,10 @@ import tools.jackson.databind.DeserializationContext;
 import tools.jackson.databind.JsonNode;
 import tools.jackson.databind.SerializationContext;
 
-import org.springframework.boot.jackson.JacksonComponent;
-import org.springframework.boot.jackson.ObjectValueDeserializer;
-import org.springframework.boot.jackson.ObjectValueSerializer;
-import org.springframework.boot.test.autoconfigure.json.JsonTest;
+import io.github.kotlinmania.spring.boot.jackson.JacksonComponent;
+import io.github.kotlinmania.spring.boot.jackson.ObjectValueDeserializer;
+import io.github.kotlinmania.spring.boot.jackson.ObjectValueSerializer;
+import io.github.kotlinmania.spring.boot.test.autoconfigure.json.JsonTest;
 
 /**
  * Example {@link JacksonComponent @JacksonComponent} for use with

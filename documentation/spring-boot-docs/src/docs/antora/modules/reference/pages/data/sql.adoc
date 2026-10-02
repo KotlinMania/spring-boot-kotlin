@@ -42,7 +42,7 @@ For example, the typical POM dependencies would be as follows:
 [source,xml]
 ----
 <dependency>
-	<groupId>org.springframework.boot</groupId>
+	<groupId>io.github.kotlinmania.spring.boot./groupId>
 	<artifactId>spring-boot-starter-data-jpa</artifactId>
 </dependency>
 <dependency>
@@ -93,7 +93,7 @@ If you need to specify a specific class, you can use the configprop:spring.datas
 NOTE: For a pooling javadoc:javax.sql.DataSource[] to be created, we need to be able to verify that a valid javadoc:java.sql.Driver[] class is available, so we check for that before doing anything.
 In other words, if you set `spring.datasource.driver-class-name=com.mysql.jdbc.Driver`, then that class has to be loadable.
 
-See javadoc:org.springframework.boot.jdbc.autoconfigure.DataSourceProperties[] API documentation for more of the supported options.
+See javadoc:io.github.kotlinmania.spring.boot.jdbc.autoconfigure.DataSourceProperties[] API documentation for more of the supported options.
 These are the standard options that work regardless of xref:data/sql.adoc#data.sql.datasource.connection-pool[the actual implementation].
 It is also possible to fine-tune implementation-specific settings by using their respective prefix (`+spring.datasource.hikari.*+`, `+spring.datasource.tomcat.*+`, `+spring.datasource.dbcp2.*+`, and `+spring.datasource.oracleucp.*+`).
 See the documentation of the connection pool implementation you are using for more details.
@@ -130,9 +130,9 @@ NOTE: If you use the `spring-boot-starter-jdbc` or `spring-boot-starter-data-jpa
 You can bypass that algorithm completely and specify the connection pool to use by setting the configprop:spring.datasource.type[] property.
 This is especially important if you run your application in a Tomcat container, as `tomcat-jdbc` is provided by default.
 
-Additional connection pools can always be configured manually, using javadoc:org.springframework.boot.jdbc.DataSourceBuilder[].
+Additional connection pools can always be configured manually, using javadoc:io.github.kotlinmania.spring.boot.jdbc.DataSourceBuilder[].
 If you define your own javadoc:javax.sql.DataSource[] bean, auto-configuration does not occur.
-The following connection pools are supported by javadoc:org.springframework.boot.jdbc.DataSourceBuilder[]:
+The following connection pools are supported by javadoc:io.github.kotlinmania.spring.boot.jdbc.DataSourceBuilder[]:
 
 * HikariCP
 * Tomcat pooling javadoc:javax.sql.DataSource[]
@@ -249,7 +249,7 @@ A typical entity class resembles the following example:
 
 include-code::City[]
 
-TIP: You can customize entity scanning locations by using the javadoc:org.springframework.boot.persistence.autoconfigure.EntityScan[format=annotation] annotation.
+TIP: You can customize entity scanning locations by using the javadoc:io.github.kotlinmania.spring.boot.persistence.autoconfigure.EntityScan[format=annotation] annotation.
 See the xref:how-to:data-access.adoc#howto.data-access.separate-entity-definitions-from-spring-configuration[] section of the "`How-to Guides`".
 
 
@@ -274,7 +274,7 @@ include-code::CityRepository[]
 
 Spring Data JPA repositories support three different modes of bootstrapping: default, deferred, and lazy.
 To enable deferred or lazy bootstrapping, set the configprop:spring.data.jpa.repositories.bootstrap-mode[] property to `deferred` or `lazy` respectively.
-When using deferred or lazy bootstrapping, the auto-configured javadoc:org.springframework.boot.jpa.EntityManagerFactoryBuilder[] will use the context's javadoc:org.springframework.core.task.AsyncTaskExecutor[], if any, as the bootstrap executor.
+When using deferred or lazy bootstrapping, the auto-configured javadoc:io.github.kotlinmania.spring.boot.jpa.EntityManagerFactoryBuilder[] will use the context's javadoc:org.springframework.core.task.AsyncTaskExecutor[], if any, as the bootstrap executor.
 If more than one exists, the one named `applicationTaskExecutor` will be used.
 
 [NOTE]
@@ -368,7 +368,7 @@ The https://www.h2database.com[H2 database] provides a https://www.h2database.co
 The console is auto-configured when the following conditions are met:
 
 * You are developing a servlet-based web application.
-* `org.springframework.boot:spring-boot-h2console` is on the classpath.
+* `io.github.kotlinmania.spring.boot.spring-boot-h2console` is on the classpath.
 * You are using xref:using/devtools.adoc[Spring Boot's developer tools].
 
 TIP: If you are not using Spring Boot's developer tools but would still like to make use of H2's console, you can configure the configprop:spring.h2.console.enabled[] property with a value of `true`.
@@ -484,7 +484,7 @@ NOTE: Spring Boot can only auto-configure dialects supported by the open source 
 [[data.sql.jooq.customizing]]
 === Customizing jOOQ
 
-More advanced customizations can be achieved by defining your own javadoc:org.springframework.boot.jooq.autoconfigure.DefaultConfigurationCustomizer[] bean that will be invoked prior to creating the javadoc:org.jooq.Configuration[] javadoc:org.springframework.context.annotation.Bean[format=annotation].
+More advanced customizations can be achieved by defining your own javadoc:io.github.kotlinmania.spring.boot.jooq.autoconfigure.DefaultConfigurationCustomizer[] bean that will be invoked prior to creating the javadoc:org.jooq.Configuration[] javadoc:org.springframework.context.annotation.Bean[format=annotation].
 This takes precedence to anything that is applied by the auto-configuration.
 
 You can also create your own javadoc:org.jooq.Configuration[] javadoc:org.springframework.context.annotation.Bean[format=annotation] if you want to take complete control of the jOOQ configuration.
@@ -517,7 +517,7 @@ Information specified in the URL takes precedence over individual properties, th
 
 TIP: The "`How-to Guides`" section includes a xref:how-to:data-initialization.adoc#howto.data-initialization.using-basic-sql-scripts[section on how to initialize a database].
 
-To customize the connections created by a javadoc:io.r2dbc.spi.ConnectionFactory[], that is, set specific parameters that you do not want (or cannot) configure in your central database configuration, you can use a javadoc:org.springframework.boot.r2dbc.autoconfigure.ConnectionFactoryOptionsBuilderCustomizer[] javadoc:org.springframework.context.annotation.Bean[format=annotation].
+To customize the connections created by a javadoc:io.r2dbc.spi.ConnectionFactory[], that is, set specific parameters that you do not want (or cannot) configure in your central database configuration, you can use a javadoc:io.github.kotlinmania.spring.boot.r2dbc.autoconfigure.ConnectionFactoryOptionsBuilderCustomizer[] javadoc:org.springframework.context.annotation.Bean[format=annotation].
 The following example shows how to manually override the database port while the rest of the options are taken from the application configuration:
 
 include-code::MyR2dbcConfiguration[]

@@ -14,17 +14,17 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.security.oauth2.client.autoconfigure.reactive;
+package io.github.kotlinmania.spring.boot.security.oauth2.client.autoconfigure.reactive;
 
 import org.junit.jupiter.api.Test;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.SpringBootConfiguration;
-import org.springframework.boot.webflux.test.autoconfigure.WebFluxTest;
+import io.github.kotlinmania.spring.boot.SpringBootConfiguration;
+import io.github.kotlinmania.spring.boot.webflux.test.autoconfigure.WebFluxTest;
 import org.springframework.context.ApplicationContext;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.springframework.boot.autoconfigure.AutoConfigurationImportedCondition.importedAutoConfiguration;
+import static io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurationImportedCondition.importedAutoConfiguration;
 
 /**
  * Integration tests for reactive OAuth2 client with {@link WebFluxTest @WebFluxTest}.

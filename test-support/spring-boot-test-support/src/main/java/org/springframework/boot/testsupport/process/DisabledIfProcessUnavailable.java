@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.testsupport.process;
+package io.github.kotlinmania.spring.boot.testsupport.process;
 
 import java.lang.annotation.Documented;
 import java.lang.annotation.ElementType;

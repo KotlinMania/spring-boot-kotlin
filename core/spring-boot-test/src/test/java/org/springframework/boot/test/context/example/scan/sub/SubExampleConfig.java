@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.test.context.example.scan.sub;
+package io.github.kotlinmania.spring.boot.test.context.example.scan.sub;
 
-import org.springframework.boot.SpringBootConfiguration;
+import io.github.kotlinmania.spring.boot.SpringBootConfiguration;
 
 /**
  * Example config used in {@code AnnotatedClassFinderTests}. Should not be found since

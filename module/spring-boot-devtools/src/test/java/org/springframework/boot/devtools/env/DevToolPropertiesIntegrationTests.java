@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.devtools.env;
+package io.github.kotlinmania.spring.boot.devtools.env;
 
 import java.net.URL;
 import java.util.Collections;
@@ -27,13 +27,13 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import org.springframework.beans.factory.NoSuchBeanDefinitionException;
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.WebApplicationType;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
-import org.springframework.boot.devtools.restart.RestartInitializer;
-import org.springframework.boot.devtools.restart.Restarter;
-import org.springframework.boot.testsupport.classpath.ForkedClassPath;
-import org.springframework.boot.testsupport.classpath.resources.WithResource;
+import io.github.kotlinmania.spring.boot.SpringApplication;
+import io.github.kotlinmania.spring.boot.WebApplicationType;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnProperty;
+import io.github.kotlinmania.spring.boot.devtools.restart.RestartInitializer;
+import io.github.kotlinmania.spring.boot.devtools.restart.Restarter;
+import io.github.kotlinmania.spring.boot.testsupport.classpath.ForkedClassPath;
+import io.github.kotlinmania.spring.boot.testsupport.classpath.resources.WithResource;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

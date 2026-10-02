@@ -15,7 +15,15 @@
  */
 package org.springframework.boot.build.architecture.objects.requireNonNullWithString
 
-import java.util.*
+package io.github.kotlinmania.spring.boot.build.architecture.objects.requireNonNullWithString;
+
+import java.util.Objects;
+
+class RequireNonNullWithString {
+
+	void exampleMethod() {
+		Objects.requireNonNull(new Object(), "Object cannot be null");
+	}
 
 internal class RequireNonNullWithString {
     fun exampleMethod() {

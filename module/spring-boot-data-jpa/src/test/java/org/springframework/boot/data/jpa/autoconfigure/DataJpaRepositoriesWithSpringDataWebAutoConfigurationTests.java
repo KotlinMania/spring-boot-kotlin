@@ -14,18 +14,18 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.data.jpa.autoconfigure;
+package io.github.kotlinmania.spring.boot.data.jpa.autoconfigure;
 
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.autoconfigure.AutoConfigurations;
-import org.springframework.boot.autoconfigure.TestAutoConfigurationPackage;
-import org.springframework.boot.data.autoconfigure.web.DataWebAutoConfiguration;
-import org.springframework.boot.data.jpa.autoconfigure.domain.city.City;
-import org.springframework.boot.data.jpa.autoconfigure.domain.city.CityRepository;
-import org.springframework.boot.hibernate.autoconfigure.HibernateJpaAutoConfiguration;
-import org.springframework.boot.jdbc.autoconfigure.DataSourceAutoConfiguration;
-import org.springframework.boot.test.context.runner.WebApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurations;
+import io.github.kotlinmania.spring.boot.autoconfigure.TestAutoConfigurationPackage;
+import io.github.kotlinmania.spring.boot.data.autoconfigure.web.DataWebAutoConfiguration;
+import io.github.kotlinmania.spring.boot.data.jpa.autoconfigure.domain.city.City;
+import io.github.kotlinmania.spring.boot.data.jpa.autoconfigure.domain.city.CityRepository;
+import io.github.kotlinmania.spring.boot.hibernate.autoconfigure.HibernateJpaAutoConfiguration;
+import io.github.kotlinmania.spring.boot.jdbc.autoconfigure.DataSourceAutoConfiguration;
+import io.github.kotlinmania.spring.boot.test.context.runner.WebApplicationContextRunner;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.geo.Distance;
 import org.springframework.data.web.PageableHandlerMethodArgumentResolver;

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.actuate.audit;
+package io.github.kotlinmania.spring.boot.actuate.audit;
 
 import java.io.Serializable;
 import java.time.Instant;

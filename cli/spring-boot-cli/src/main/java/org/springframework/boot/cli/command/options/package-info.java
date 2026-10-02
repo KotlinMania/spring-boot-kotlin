@@ -18,6 +18,6 @@
  * Support classes for handling command line options.
  */
 @NullMarked
-package org.springframework.boot.cli.command.options;
+package io.github.kotlinmania.spring.boot.cli.command.options;
 
 import org.jspecify.annotations.NullMarked;

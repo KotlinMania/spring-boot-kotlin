@@ -18,6 +18,6 @@
  * CLI command for initializing a new application using Spring Initializr.
  */
 @NullMarked
-package org.springframework.boot.cli.command.init;
+package io.github.kotlinmania.spring.boot.cli.command.init;
 
 import org.jspecify.annotations.NullMarked;

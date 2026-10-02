@@ -18,7 +18,7 @@ package smoketest.config;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.context.properties.ConfigurationProperties;
+import io.github.kotlinmania.spring.boot.context.properties.ConfigurationProperties;
 
 @ConfigurationProperties("from-env")
 class FromEnvConfigurationProperties {

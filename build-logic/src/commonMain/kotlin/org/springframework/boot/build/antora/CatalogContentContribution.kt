@@ -15,7 +15,9 @@
  */
 package org.springframework.boot.build.antora
 
-import org.gradle.api.Project
+package io.github.kotlinmania.spring.boot.build.antora;
+
+import org.gradle.api.Project;
 
 /**
  * A contribution of catalog content.

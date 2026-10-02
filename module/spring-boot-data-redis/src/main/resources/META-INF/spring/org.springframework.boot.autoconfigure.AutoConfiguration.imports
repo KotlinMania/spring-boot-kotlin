@@ -1,6 +1,6 @@
-org.springframework.boot.data.redis.autoconfigure.DataRedisAutoConfiguration
-org.springframework.boot.data.redis.autoconfigure.DataRedisReactiveAutoConfiguration
-org.springframework.boot.data.redis.autoconfigure.DataRedisRepositoriesAutoConfiguration
-org.springframework.boot.data.redis.autoconfigure.health.DataRedisHealthContributorAutoConfiguration
-org.springframework.boot.data.redis.autoconfigure.health.DataRedisReactiveHealthContributorAutoConfiguration
-org.springframework.boot.data.redis.autoconfigure.observation.LettuceObservationAutoConfiguration
+io.github.kotlinmania.spring.boot.data.redis.autoconfigure.DataRedisAutoConfiguration
+io.github.kotlinmania.spring.boot.data.redis.autoconfigure.DataRedisReactiveAutoConfiguration
+io.github.kotlinmania.spring.boot.data.redis.autoconfigure.DataRedisRepositoriesAutoConfiguration
+io.github.kotlinmania.spring.boot.data.redis.autoconfigure.health.DataRedisHealthContributorAutoConfiguration
+io.github.kotlinmania.spring.boot.data.redis.autoconfigure.health.DataRedisReactiveHealthContributorAutoConfiguration
+io.github.kotlinmania.spring.boot.data.redis.autoconfigure.observation.LettuceObservationAutoConfiguration

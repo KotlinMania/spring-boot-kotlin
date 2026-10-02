@@ -55,13 +55,13 @@ To declare dependencies, a typical `ivy.xml` file looks something like the follo
 [source,xml]
 ----
 <ivy-module version="2.0">
-	<info organisation="org.springframework.boot" module="spring-boot-sample-ant" />
+	<info organisation="io.github.kotlinmania.spring.boot. module="spring-boot-sample-ant" />
 	<configurations>
 		<conf name="compile" description="everything needed to compile this module" />
 		<conf name="runtime" extends="compile" description="everything needed to run this module" />
 	</configurations>
 	<dependencies>
-		<dependency org="org.springframework.boot" name="spring-boot-starter"
+		<dependency org="io.github.kotlinmania.spring.boot. name="spring-boot-starter"
 			rev="${spring-boot.version}" conf="compile" />
 	</dependencies>
 </ivy-module>
@@ -73,7 +73,7 @@ A typical `build.xml` looks like the following example:
 ----
 <project
 	xmlns:ivy="antlib:org.apache.ivy.ant"
-	xmlns:spring-boot="antlib:org.springframework.boot.ant"
+	xmlns:spring-boot="antlib:io.github.kotlinmania.spring.boot.ant"
 	name="myapp" default="build">
 
 	<property name="spring-boot.version" value="{version-spring-boot}" />
@@ -131,7 +131,7 @@ Rather, a third-party starter typically starts with the name of the project.
 For example, a third-party starter project called `thirdpartyproject` would typically be named `thirdpartyproject-spring-boot-starter`.
 ****
 
-The following application starters are provided by Spring Boot under the `org.springframework.boot` group:
+The following application starters are provided by Spring Boot under the `io.github.kotlinmania.spring.boot. group:
 
 .Spring Boot application starters
 include::ROOT:partial$starters/application-starters.adoc[]

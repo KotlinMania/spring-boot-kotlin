@@ -14,17 +14,17 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.data.redis.autoconfigure.observation;
+package io.github.kotlinmania.spring.boot.data.redis.autoconfigure.observation;
 
 import io.lettuce.core.RedisClient;
 import io.lettuce.core.tracing.MicrometerTracing;
 import io.micrometer.observation.ObservationRegistry;
 
-import org.springframework.boot.autoconfigure.AutoConfiguration;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
-import org.springframework.boot.data.redis.autoconfigure.ClientResourcesBuilderCustomizer;
-import org.springframework.boot.data.redis.autoconfigure.DataRedisAutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnBean;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnClass;
+import io.github.kotlinmania.spring.boot.data.redis.autoconfigure.ClientResourcesBuilderCustomizer;
+import io.github.kotlinmania.spring.boot.data.redis.autoconfigure.DataRedisAutoConfiguration;
 import org.springframework.context.annotation.Bean;
 
 /**
@@ -36,7 +36,7 @@ import org.springframework.context.annotation.Bean;
  * @since 4.0.0
  */
 @AutoConfiguration(before = DataRedisAutoConfiguration.class,
-		afterName = "org.springframework.boot.micrometer.observation.autoconfigure.ObservationAutoConfiguration")
+		afterName = "io.github.kotlinmania.spring.boot.micrometer.observation.autoconfigure.ObservationAutoConfiguration")
 @ConditionalOnClass({ RedisClient.class, MicrometerTracing.class, ObservationRegistry.class })
 @ConditionalOnBean(ObservationRegistry.class)
 public final class LettuceObservationAutoConfiguration {

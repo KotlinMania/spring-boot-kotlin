@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.actuate.env;
+package io.github.kotlinmania.spring.boot.actuate.env;
 
 import java.security.Principal;
 import java.util.Collections;
@@ -23,9 +23,9 @@ import org.jspecify.annotations.Nullable;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.actuate.endpoint.SecurityContext;
-import org.springframework.boot.actuate.endpoint.Show;
-import org.springframework.boot.actuate.env.EnvironmentEndpoint.EnvironmentEntryDescriptor;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.SecurityContext;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.Show;
+import io.github.kotlinmania.spring.boot.actuate.env.EnvironmentEndpoint.EnvironmentEntryDescriptor;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.BDDMockito.given;

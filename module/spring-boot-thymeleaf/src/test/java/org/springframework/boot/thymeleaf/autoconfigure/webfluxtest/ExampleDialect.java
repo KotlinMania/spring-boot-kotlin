@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.thymeleaf.autoconfigure.webfluxtest;
+package io.github.kotlinmania.spring.boot.thymeleaf.autoconfigure.webfluxtest;
 
 import org.thymeleaf.dialect.IDialect;
 
-import org.springframework.boot.webflux.test.autoconfigure.WebFluxTest;
+import io.github.kotlinmania.spring.boot.webflux.test.autoconfigure.WebFluxTest;
 import org.springframework.stereotype.Component;
 
 /**

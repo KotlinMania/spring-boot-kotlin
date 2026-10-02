@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.howto.httpclients.webclientreactornettycustomization;
+package io.github.kotlinmania.spring.boot.docs.howto.httpclients.webclientreactornettycustomization;
 
 import io.netty.channel.ChannelOption;
 import io.netty.handler.timeout.ReadTimeoutHandler;

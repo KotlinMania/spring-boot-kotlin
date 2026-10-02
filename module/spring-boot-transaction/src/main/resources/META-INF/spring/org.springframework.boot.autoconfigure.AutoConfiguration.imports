@@ -1,3 +1,3 @@
-org.springframework.boot.transaction.autoconfigure.TransactionAutoConfiguration
-org.springframework.boot.transaction.autoconfigure.TransactionManagerCustomizationAutoConfiguration
-org.springframework.boot.transaction.jta.autoconfigure.JtaAutoConfiguration
+io.github.kotlinmania.spring.boot.transaction.autoconfigure.TransactionAutoConfiguration
+io.github.kotlinmania.spring.boot.transaction.autoconfigure.TransactionManagerCustomizationAutoConfiguration
+io.github.kotlinmania.spring.boot.transaction.jta.autoconfigure.JtaAutoConfiguration

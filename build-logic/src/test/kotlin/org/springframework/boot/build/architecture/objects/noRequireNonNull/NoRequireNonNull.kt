@@ -15,8 +15,20 @@
  */
 package org.springframework.boot.build.architecture.objects.noRequireNonNull
 
-import org.springframework.util.Assert
-import java.util.function.Consumer
+package io.github.kotlinmania.spring.boot.build.architecture.objects.noRequireNonNull;
+
+import java.util.Collections;
+
+import org.springframework.util.Assert;
+
+class NoRequireNonNull {
+
+	void exampleMethod() {
+		Assert.notNull(new Object(), "Object must not be null");
+		// Compilation of a method reference generates code that uses
+		// Objects.requireNonNull(Object). Check that it doesn't cause a failure.
+		Collections.emptyList().forEach(System.out::println);
+	}
 
 internal class NoRequireNonNull {
     fun exampleMethod() {

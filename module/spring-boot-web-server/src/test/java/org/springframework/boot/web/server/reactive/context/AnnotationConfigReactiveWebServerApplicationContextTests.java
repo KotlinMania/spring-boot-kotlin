@@ -14,15 +14,15 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.web.server.reactive.context;
+package io.github.kotlinmania.spring.boot.web.server.reactive.context;
 
 import org.jspecify.annotations.Nullable;
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.web.server.reactive.MockReactiveWebServerFactory;
-import org.springframework.boot.web.server.reactive.ReactiveWebServerFactory;
-import org.springframework.boot.web.server.reactive.context.WebServerManager.DelayedInitializationHttpHandler;
-import org.springframework.boot.web.server.reactive.context.config.ExampleReactiveWebServerApplicationConfiguration;
+import io.github.kotlinmania.spring.boot.web.server.reactive.MockReactiveWebServerFactory;
+import io.github.kotlinmania.spring.boot.web.server.reactive.ReactiveWebServerFactory;
+import io.github.kotlinmania.spring.boot.web.server.reactive.context.WebServerManager.DelayedInitializationHttpHandler;
+import io.github.kotlinmania.spring.boot.web.server.reactive.context.config.ExampleReactiveWebServerApplicationConfiguration;
 import org.springframework.context.ApplicationListener;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

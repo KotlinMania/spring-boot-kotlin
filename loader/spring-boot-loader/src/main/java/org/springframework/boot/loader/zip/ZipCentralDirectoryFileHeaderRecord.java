@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.loader.zip;
+package io.github.kotlinmania.spring.boot.loader.zip;
 
 import java.io.IOException;
 import java.nio.ByteBuffer;
@@ -26,7 +26,7 @@ import java.time.temporal.ChronoUnit;
 import java.time.temporal.ValueRange;
 import java.util.zip.ZipEntry;
 
-import org.springframework.boot.loader.log.DebugLogger;
+import io.github.kotlinmania.spring.boot.loader.log.DebugLogger;
 
 /**
  * A ZIP File "Central directory file header record" (CDFH).

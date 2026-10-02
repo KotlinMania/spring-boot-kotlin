@@ -1,2 +1,2 @@
 org.springframework.aot.hint.RuntimeHintsRegistrar=\
-org.springframework.boot.groovy.template.autoconfigure.GroovyTemplateAvailabilityProvider$GroovyTemplateAvailabilityRuntimeHints
+io.github.kotlinmania.spring.boot.groovy.template.autoconfigure.GroovyTemplateAvailabilityProvider$GroovyTemplateAvailabilityRuntimeHints

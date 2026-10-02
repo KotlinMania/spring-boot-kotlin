@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.actuate.autoconfigure.endpoint.jackson;
+package io.github.kotlinmania.spring.boot.actuate.autoconfigure.endpoint.jackson;
 
 import java.time.Duration;
 import java.time.Instant;
@@ -26,10 +26,10 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.Test;
 import tools.jackson.databind.json.JsonMapper;
 
-import org.springframework.boot.actuate.endpoint.jackson.EndpointJsonMapper;
-import org.springframework.boot.autoconfigure.AutoConfigurations;
-import org.springframework.boot.test.context.FilteredClassLoader;
-import org.springframework.boot.test.context.runner.ApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.jackson.EndpointJsonMapper;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurations;
+import io.github.kotlinmania.spring.boot.test.context.FilteredClassLoader;
+import io.github.kotlinmania.spring.boot.test.context.runner.ApplicationContextRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.converter.json.Jackson2ObjectMapperBuilder;
@@ -53,34 +53,34 @@ class Jackson2EndpointAutoConfigurationTests {
 	@Test
 	void endpointObjectMapperWhenNoProperty() {
 		this.runner.run((context) -> assertThat(context)
-			.hasSingleBean(org.springframework.boot.actuate.endpoint.jackson.EndpointJackson2ObjectMapper.class));
+			.hasSingleBean(io.github.kotlinmania.spring.boot.actuate.endpoint.jackson.EndpointJackson2ObjectMapper.class));
 	}
 
 	@Test
 	void endpointObjectMapperWhenPropertyTrue() {
 		this.runner.run((context) -> assertThat(context)
-			.hasSingleBean(org.springframework.boot.actuate.endpoint.jackson.EndpointJackson2ObjectMapper.class));
+			.hasSingleBean(io.github.kotlinmania.spring.boot.actuate.endpoint.jackson.EndpointJackson2ObjectMapper.class));
 	}
 
 	@Test
 	void endpointObjectMapperWhenPropertyFalse() {
 		this.runner.withPropertyValues("management.endpoints.jackson2.isolated-object-mapper=false")
 			.run((context) -> assertThat(context)
-				.doesNotHaveBean(org.springframework.boot.actuate.endpoint.jackson.EndpointJackson2ObjectMapper.class));
+				.doesNotHaveBean(io.github.kotlinmania.spring.boot.actuate.endpoint.jackson.EndpointJackson2ObjectMapper.class));
 	}
 
 	@Test
 	void endpointObjectMapperWhenSpringWebIsAbsent() {
 		this.runner.withClassLoader(new FilteredClassLoader(Jackson2ObjectMapperBuilder.class))
 			.run((context) -> assertThat(context)
-				.doesNotHaveBean(org.springframework.boot.actuate.endpoint.jackson.EndpointJackson2ObjectMapper.class));
+				.doesNotHaveBean(io.github.kotlinmania.spring.boot.actuate.endpoint.jackson.EndpointJackson2ObjectMapper.class));
 	}
 
 	@Test
 	void endpointObjectMapperDoesNotSerializeDatesAsTimestamps() {
 		this.runner.run((context) -> {
 			ObjectMapper objectMapper = context
-				.getBean(org.springframework.boot.actuate.endpoint.jackson.EndpointJackson2ObjectMapper.class)
+				.getBean(io.github.kotlinmania.spring.boot.actuate.endpoint.jackson.EndpointJackson2ObjectMapper.class)
 				.get();
 			Instant now = Instant.now();
 			String json = objectMapper.writeValueAsString(Map.of("timestamp", now));
@@ -92,7 +92,7 @@ class Jackson2EndpointAutoConfigurationTests {
 	void endpointObjectMapperDoesNotSerializeDurationsAsTimestamps() {
 		this.runner.run((context) -> {
 			ObjectMapper objectMapper = context
-				.getBean(org.springframework.boot.actuate.endpoint.jackson.EndpointJackson2ObjectMapper.class)
+				.getBean(io.github.kotlinmania.spring.boot.actuate.endpoint.jackson.EndpointJackson2ObjectMapper.class)
 				.get();
 			Duration duration = Duration.ofSeconds(42);
 			String json = objectMapper.writeValueAsString(Map.of("duration", duration));
@@ -104,7 +104,7 @@ class Jackson2EndpointAutoConfigurationTests {
 	void endpointObjectMapperDoesNotSerializeNullValues() {
 		this.runner.run((context) -> {
 			ObjectMapper objectMapper = context
-				.getBean(org.springframework.boot.actuate.endpoint.jackson.EndpointJackson2ObjectMapper.class)
+				.getBean(io.github.kotlinmania.spring.boot.actuate.endpoint.jackson.EndpointJackson2ObjectMapper.class)
 				.get();
 			HashMap<String, String> map = new HashMap<>();
 			map.put("key", null);

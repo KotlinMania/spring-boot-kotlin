@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.testcontainers.service.connection;
+package io.github.kotlinmania.spring.boot.testcontainers.service.connection;
 
 import java.util.Map;
 
@@ -24,11 +24,11 @@ import org.testcontainers.postgresql.PostgreSQLContainer;
 
 import org.springframework.beans.factory.support.DefaultListableBeanFactory;
 import org.springframework.beans.factory.support.RootBeanDefinition;
-import org.springframework.boot.autoconfigure.service.connection.ConnectionDetails;
-import org.springframework.boot.autoconfigure.service.connection.ConnectionDetailsFactories;
-import org.springframework.boot.autoconfigure.service.connection.ConnectionDetailsFactoryNotFoundException;
-import org.springframework.boot.autoconfigure.service.connection.ConnectionDetailsNotFoundException;
-import org.springframework.boot.origin.Origin;
+import io.github.kotlinmania.spring.boot.autoconfigure.service.connection.ConnectionDetails;
+import io.github.kotlinmania.spring.boot.autoconfigure.service.connection.ConnectionDetailsFactories;
+import io.github.kotlinmania.spring.boot.autoconfigure.service.connection.ConnectionDetailsFactoryNotFoundException;
+import io.github.kotlinmania.spring.boot.autoconfigure.service.connection.ConnectionDetailsNotFoundException;
+import io.github.kotlinmania.spring.boot.origin.Origin;
 import org.springframework.core.annotation.MergedAnnotation;
 
 import static org.assertj.core.api.Assertions.assertThat;

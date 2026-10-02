@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.testcontainers;
+package io.github.kotlinmania.spring.boot.testcontainers;
 
 import org.testcontainers.junit.jupiter.Container;
 import org.testcontainers.postgresql.PostgreSQLContainer;
 
-import org.springframework.boot.testcontainers.service.connection.ServiceConnection;
+import io.github.kotlinmania.spring.boot.testcontainers.service.connection.ServiceConnection;
 
 /**
  * Container definitions for {@link LoadTimeWeaverAwareConsumerImportTestcontainersTests}.

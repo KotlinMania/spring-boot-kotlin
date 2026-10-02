@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.features.externalconfig.typesafeconfigurationproperties.enablingannotatedtypes
+package io.github.kotlinmania.spring.boot.docs.features.externalconfig.typesafeconfigurationproperties.enablingannotatedtypes
 
-import org.springframework.boot.autoconfigure.SpringBootApplication
-import org.springframework.boot.context.properties.ConfigurationPropertiesScan
+import io.github.kotlinmania.spring.boot.autoconfigure.SpringBootApplication
+import io.github.kotlinmania.spring.boot.context.properties.ConfigurationPropertiesScan
 
 @SpringBootApplication
 @ConfigurationPropertiesScan("com.example.app", "com.example.another")

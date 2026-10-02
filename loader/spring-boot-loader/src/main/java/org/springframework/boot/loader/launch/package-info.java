@@ -20,7 +20,7 @@
  * need to create shade style jars) and are executed without unpacking. The only
  * constraint is that nested JARs must be stored in the archive uncompressed.
  *
- * @see org.springframework.boot.loader.launch.JarLauncher
- * @see org.springframework.boot.loader.launch.WarLauncher
+ * @see io.github.kotlinmania.spring.boot.loader.launch.JarLauncher
+ * @see io.github.kotlinmania.spring.boot.loader.launch.WarLauncher
  */
-package org.springframework.boot.loader.launch;
+package io.github.kotlinmania.spring.boot.loader.launch;

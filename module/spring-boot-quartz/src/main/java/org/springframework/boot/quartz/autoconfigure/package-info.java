@@ -18,6 +18,6 @@
  * Auto-configuration for Quartz Scheduler.
  */
 @NullMarked
-package org.springframework.boot.quartz.autoconfigure;
+package io.github.kotlinmania.spring.boot.quartz.autoconfigure;
 
 import org.jspecify.annotations.NullMarked;

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.data.nosql.mongodb.template;
+package io.github.kotlinmania.spring.boot.docs.data.nosql.mongodb.template;
 
 import com.mongodb.client.MongoCollection;
 import org.bson.Document;

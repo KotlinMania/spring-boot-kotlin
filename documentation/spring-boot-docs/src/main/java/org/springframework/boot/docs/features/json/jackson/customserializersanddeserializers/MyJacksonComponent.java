@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.features.json.jackson.customserializersanddeserializers;
+package io.github.kotlinmania.spring.boot.docs.features.json.jackson.customserializersanddeserializers;
 
 import tools.jackson.core.JsonGenerator;
 import tools.jackson.core.JsonParser;
@@ -24,7 +24,7 @@ import tools.jackson.databind.SerializationContext;
 import tools.jackson.databind.ValueDeserializer;
 import tools.jackson.databind.ValueSerializer;
 
-import org.springframework.boot.jackson.JacksonComponent;
+import io.github.kotlinmania.spring.boot.jackson.JacksonComponent;
 
 @JacksonComponent
 public class MyJacksonComponent {

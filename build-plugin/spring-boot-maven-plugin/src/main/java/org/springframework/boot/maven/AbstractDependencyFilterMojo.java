@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.maven;
+package io.github.kotlinmania.spring.boot.maven;
 
 import java.io.File;
 import java.net.MalformedURLException;
@@ -49,7 +49,7 @@ public abstract class AbstractDependencyFilterMojo extends AbstractMojo {
 	static final ExcludeFilter DEVTOOLS_EXCLUDE_FILTER;
 	static {
 		Exclude exclude = new Exclude();
-		exclude.setGroupId("org.springframework.boot");
+		exclude.setGroupId("io.github.kotlinmania.spring.boot.);
 		exclude.setArtifactId("spring-boot-devtools");
 		DEVTOOLS_EXCLUDE_FILTER = new ExcludeFilter(exclude);
 	}
@@ -57,7 +57,7 @@ public abstract class AbstractDependencyFilterMojo extends AbstractMojo {
 	static final ExcludeFilter DOCKER_COMPOSE_EXCLUDE_FILTER;
 	static {
 		Exclude exclude = new Exclude();
-		exclude.setGroupId("org.springframework.boot");
+		exclude.setGroupId("io.github.kotlinmania.spring.boot.);
 		exclude.setArtifactId("spring-boot-docker-compose");
 		DOCKER_COMPOSE_EXCLUDE_FILTER = new ExcludeFilter(exclude);
 	}

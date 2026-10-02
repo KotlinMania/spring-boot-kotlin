@@ -1,1 +1,1 @@
-org.springframework.boot.freemarker.autoconfigure.FreeMarkerAutoConfiguration
+io.github.kotlinmania.spring.boot.freemarker.autoconfigure.FreeMarkerAutoConfiguration

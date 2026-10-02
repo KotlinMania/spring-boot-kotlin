@@ -1,1 +1,1 @@
-org.springframework.boot.data.rest.autoconfigure.DataRestAutoConfiguration
+io.github.kotlinmania.spring.boot.data.rest.autoconfigure.DataRestAutoConfiguration

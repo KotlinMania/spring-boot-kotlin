@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.cli.command;
+package io.github.kotlinmania.spring.boot.cli.command;
 
 import java.util.Collection;
 
-import org.springframework.boot.cli.command.options.OptionHandler;
-import org.springframework.boot.cli.command.options.OptionHelp;
-import org.springframework.boot.cli.command.status.ExitStatus;
+import io.github.kotlinmania.spring.boot.cli.command.options.OptionHandler;
+import io.github.kotlinmania.spring.boot.cli.command.options.OptionHelp;
+import io.github.kotlinmania.spring.boot.cli.command.status.ExitStatus;
 
 /**
  * Base class for a {@link Command} that parse options using an {@link OptionHandler}.

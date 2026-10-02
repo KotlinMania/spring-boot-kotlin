@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.loader.jar;
+package io.github.kotlinmania.spring.boot.loader.jar;
 
 import java.util.jar.Attributes;
 import java.util.jar.Attributes.Name;
 import java.util.jar.Manifest;
 
-import org.springframework.boot.loader.zip.ZipContent;
+import io.github.kotlinmania.spring.boot.loader.zip.ZipContent;
 
 /**
  * Info obtained from a {@link ZipContent} instance relating to the {@link Manifest}.

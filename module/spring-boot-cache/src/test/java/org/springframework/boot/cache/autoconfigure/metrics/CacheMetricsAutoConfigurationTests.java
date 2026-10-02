@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.cache.autoconfigure.metrics;
+package io.github.kotlinmania.spring.boot.cache.autoconfigure.metrics;
 
 import java.util.Collections;
 import java.util.List;
@@ -24,10 +24,10 @@ import io.micrometer.core.instrument.MeterRegistry;
 import io.micrometer.core.instrument.simple.SimpleMeterRegistry;
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.autoconfigure.AutoConfigurations;
-import org.springframework.boot.cache.autoconfigure.CacheAutoConfiguration;
-import org.springframework.boot.cache.metrics.JCacheCacheMeterBinderProvider;
-import org.springframework.boot.test.context.runner.ApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurations;
+import io.github.kotlinmania.spring.boot.cache.autoconfigure.CacheAutoConfiguration;
+import io.github.kotlinmania.spring.boot.cache.metrics.JCacheCacheMeterBinderProvider;
+import io.github.kotlinmania.spring.boot.test.context.runner.ApplicationContextRunner;
 import org.springframework.cache.CacheManager;
 import org.springframework.cache.annotation.CachingConfigurer;
 import org.springframework.cache.annotation.EnableCaching;

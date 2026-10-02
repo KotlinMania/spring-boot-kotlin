@@ -17,4 +17,4 @@
 /**
  * Non-blocking IO {@link java.nio.file.FileSystem} implementation for nested support.
  */
-package org.springframework.boot.loader.nio.file;
+package io.github.kotlinmania.spring.boot.loader.nio.file;

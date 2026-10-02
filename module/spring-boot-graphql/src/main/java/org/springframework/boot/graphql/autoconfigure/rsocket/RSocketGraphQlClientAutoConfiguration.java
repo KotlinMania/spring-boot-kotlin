@@ -14,17 +14,17 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.graphql.autoconfigure.rsocket;
+package io.github.kotlinmania.spring.boot.graphql.autoconfigure.rsocket;
 
 import graphql.GraphQL;
 import io.rsocket.RSocket;
 import io.rsocket.transport.netty.client.TcpClientTransport;
 
 import org.springframework.beans.factory.config.ConfigurableBeanFactory;
-import org.springframework.boot.autoconfigure.AutoConfiguration;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.EnableAutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnClass;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Scope;
 import org.springframework.graphql.client.RSocketGraphQlClient;
@@ -41,7 +41,7 @@ import org.springframework.util.MimeTypeUtils;
  * @author Brian Clozel
  * @since 4.0.0
  */
-@AutoConfiguration(afterName = "org.springframework.boot.rsocket.autoconfigure.RSocketRequesterAutoConfiguration")
+@AutoConfiguration(afterName = "io.github.kotlinmania.spring.boot.rsocket.autoconfigure.RSocketRequesterAutoConfiguration")
 @ConditionalOnClass({ GraphQL.class, RSocketGraphQlClient.class, RSocketRequester.class, RSocket.class,
 		TcpClientTransport.class })
 public final class RSocketGraphQlClientAutoConfiguration {

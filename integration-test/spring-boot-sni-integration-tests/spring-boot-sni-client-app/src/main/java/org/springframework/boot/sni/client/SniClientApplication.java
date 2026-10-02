@@ -14,20 +14,20 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.sni.server;
+package io.github.kotlinmania.spring.boot.sni.server;
 
 import java.util.Arrays;
 
-import org.springframework.boot.CommandLineRunner;
-import org.springframework.boot.WebApplicationType;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.builder.SpringApplicationBuilder;
-import org.springframework.boot.restclient.autoconfigure.RestClientSsl;
+import io.github.kotlinmania.spring.boot.CommandLineRunner;
+import io.github.kotlinmania.spring.boot.WebApplicationType;
+import io.github.kotlinmania.spring.boot.autoconfigure.SpringBootApplication;
+import io.github.kotlinmania.spring.boot.builder.SpringApplicationBuilder;
+import io.github.kotlinmania.spring.boot.restclient.autoconfigure.RestClientSsl;
 import org.springframework.context.annotation.Bean;
 import org.springframework.http.ResponseEntity;
 import org.springframework.util.Assert;
 import org.springframework.web.client.RestClient;
-import org.springframework.boot.ssl.SslBundles;
+import io.github.kotlinmania.spring.boot.ssl.SslBundles;
 
 @SpringBootApplication
 public class SniClientApplication {

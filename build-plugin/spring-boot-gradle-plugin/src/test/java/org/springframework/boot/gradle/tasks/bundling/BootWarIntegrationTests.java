@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.gradle.tasks.bundling;
+package io.github.kotlinmania.spring.boot.gradle.tasks.bundling;
 
 import java.io.IOException;
 import java.util.Arrays;
@@ -24,7 +24,7 @@ import java.util.TreeSet;
 import org.assertj.core.api.Assumptions;
 import org.gradle.util.GradleVersion;
 
-import org.springframework.boot.gradle.junit.GradleCompatibility;
+import io.github.kotlinmania.spring.boot.gradle.junit.GradleCompatibility;
 
 /**
  * Integration tests for {@link BootWar}.

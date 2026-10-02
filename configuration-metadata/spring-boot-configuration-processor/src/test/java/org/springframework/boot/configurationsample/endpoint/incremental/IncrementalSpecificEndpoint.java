@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.configurationsample.endpoint.incremental;
+package io.github.kotlinmania.spring.boot.configurationsample.endpoint.incremental;
 
-import org.springframework.boot.configurationsample.TestJmxEndpoint;
+import io.github.kotlinmania.spring.boot.configurationsample.TestJmxEndpoint;
 
 /**
  * A meta-annotated endpoint.

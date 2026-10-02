@@ -17,4 +17,4 @@
 /**
  * Servlet test support.
  */
-package org.springframework.boot.testsupport.web.servlet;
+package io.github.kotlinmania.spring.boot.testsupport.web.servlet;

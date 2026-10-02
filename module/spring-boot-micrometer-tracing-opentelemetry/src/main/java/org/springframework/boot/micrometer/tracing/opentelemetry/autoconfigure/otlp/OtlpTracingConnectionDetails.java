@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.micrometer.tracing.opentelemetry.autoconfigure.otlp;
+package io.github.kotlinmania.spring.boot.micrometer.tracing.opentelemetry.autoconfigure.otlp;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.autoconfigure.service.connection.ConnectionDetails;
-import org.springframework.boot.ssl.SslBundle;
+import io.github.kotlinmania.spring.boot.autoconfigure.service.connection.ConnectionDetails;
+import io.github.kotlinmania.spring.boot.ssl.SslBundle;
 
 /**
  * Details required to establish a connection to an OpenTelemetry service.

@@ -16,7 +16,7 @@
 
 package smoketest.test;
 
-import org.springframework.boot.CommandLineRunner;
+import io.github.kotlinmania.spring.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
 /**

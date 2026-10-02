@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.maven;
+package io.github.kotlinmania.spring.boot.maven;
 
 import java.util.Base64;
 
@@ -22,9 +22,9 @@ import org.apache.maven.plugin.logging.Log;
 import org.apache.maven.plugin.logging.SystemStreamLog;
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.buildpack.platform.build.BuilderDockerConfiguration;
-import org.springframework.boot.buildpack.platform.docker.configuration.DockerConnectionConfiguration;
-import org.springframework.boot.buildpack.platform.docker.configuration.DockerRegistryAuthentication;
+import io.github.kotlinmania.spring.boot.buildpack.platform.build.BuilderDockerConfiguration;
+import io.github.kotlinmania.spring.boot.buildpack.platform.docker.configuration.DockerConnectionConfiguration;
+import io.github.kotlinmania.spring.boot.buildpack.platform.docker.configuration.DockerRegistryAuthentication;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatIllegalArgumentException;

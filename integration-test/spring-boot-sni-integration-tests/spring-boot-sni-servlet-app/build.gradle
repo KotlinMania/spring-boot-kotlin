@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-import org.springframework.boot.gradle.tasks.bundling.BootJar
+import io.github.kotlinmania.spring.boot.gradle.tasks.bundling.BootJar
 
 plugins {
 	id "java"
-	id "org.springframework.boot"
+	id "io.github.kotlinmania.spring.boot.
 }
 
 java {
@@ -44,22 +44,22 @@ configurations {
 dependencies {
 	compileOnly("jakarta.servlet:jakarta.servlet-api:6.0.0")
 
-	implementation(platform(org.springframework.boot.gradle.plugin.SpringBootPlugin.BOM_COORDINATES))
-	implementation("org.springframework.boot:spring-boot-starter-webmvc") {
-		exclude group: 'org.springframework.boot', module: 'spring-boot-starter-tomcat'
+	implementation(platform(io.github.kotlinmania.spring.boot.gradle.plugin.SpringBootPlugin.BOM_COORDINATES))
+	implementation("io.github.kotlinmania.spring.boot.spring-boot-starter-webmvc") {
+		exclude group: 'io.github.kotlinmania.spring.boot., module: 'spring-boot-starter-tomcat'
 	}
-	implementation("org.springframework.boot:spring-boot-starter-actuator")
+	implementation("io.github.kotlinmania.spring.boot.spring-boot-starter-actuator")
 
 	app(files(sourceSets.main.output))
-	app('org.springframework.boot:spring-boot-starter-webmvc') {
-		exclude group: 'org.springframework.boot', module: 'spring-boot-starter-tomcat'
+	app('io.github.kotlinmania.spring.boot.spring-boot-starter-webmvc') {
+		exclude group: 'io.github.kotlinmania.spring.boot., module: 'spring-boot-starter-tomcat'
 	}
-	tomcat("org.springframework.boot:spring-boot-starter-tomcat")
+	tomcat("io.github.kotlinmania.spring.boot.spring-boot-starter-tomcat")
 }
 
 ["tomcat"].each { webServer ->
 	def configurer = { task ->
-		task.mainClass = "org.springframework.boot.sni.server.SniServerApplication"
+		task.mainClass = "io.github.kotlinmania.spring.boot.sni.server.SniServerApplication"
 		task.classpath = configurations.getByName(webServer)
 		task.archiveClassifier = webServer
 		task.targetJavaVersion = project.java.targetCompatibility

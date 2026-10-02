@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.loader.tools;
+package io.github.kotlinmania.spring.boot.loader.tools;
 
 import java.io.ByteArrayInputStream;
 import java.io.File;
@@ -36,11 +36,11 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.io.TempDir;
 
-import org.springframework.boot.loader.tools.MainClassFinder.MainClass;
-import org.springframework.boot.loader.tools.MainClassFinder.MainClassCallback;
-import org.springframework.boot.loader.tools.sample.AnnotatedClassWithMainMethod;
-import org.springframework.boot.loader.tools.sample.ClassWithMainMethod;
-import org.springframework.boot.loader.tools.sample.ClassWithoutMainMethod;
+import io.github.kotlinmania.spring.boot.loader.tools.MainClassFinder.MainClass;
+import io.github.kotlinmania.spring.boot.loader.tools.MainClassFinder.MainClassCallback;
+import io.github.kotlinmania.spring.boot.loader.tools.sample.AnnotatedClassWithMainMethod;
+import io.github.kotlinmania.spring.boot.loader.tools.sample.ClassWithMainMethod;
+import io.github.kotlinmania.spring.boot.loader.tools.sample.ClassWithoutMainMethod;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatIllegalStateException;
@@ -107,7 +107,7 @@ class MainClassFinderTests {
 		this.testJarFile.addClass("a/b/c/E.class", AnnotatedClassWithMainMethod.class);
 		try (JarFile jarFile = this.testJarFile.getJarFile()) {
 			String mainClass = MainClassFinder.findSingleMainClass(jarFile, "",
-					"org.springframework.boot.loader.tools.sample.SomeApplication");
+					"io.github.kotlinmania.spring.boot.loader.tools.sample.SomeApplication");
 			assertThat(mainClass).isEqualTo("a.b.c.E");
 		}
 	}
@@ -162,7 +162,7 @@ class MainClassFinderTests {
 		this.testJarFile.addClass("a/B.class", ClassWithMainMethod.class);
 		this.testJarFile.addClass("a/b/c/E.class", AnnotatedClassWithMainMethod.class);
 		String mainClass = MainClassFinder.findSingleMainClass(this.testJarFile.getJarSource(),
-				"org.springframework.boot.loader.tools.sample.SomeApplication");
+				"io.github.kotlinmania.spring.boot.loader.tools.sample.SomeApplication");
 		assertThat(mainClass).isEqualTo("a.b.c.E");
 	}
 

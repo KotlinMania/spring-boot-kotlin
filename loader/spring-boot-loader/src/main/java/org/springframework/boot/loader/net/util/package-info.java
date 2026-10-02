@@ -17,4 +17,4 @@
 /**
  * Net utilities.
  */
-package org.springframework.boot.loader.net.util;
+package io.github.kotlinmania.spring.boot.loader.net.util;

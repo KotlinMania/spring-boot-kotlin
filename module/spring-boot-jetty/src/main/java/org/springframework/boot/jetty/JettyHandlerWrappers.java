@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.jetty;
+package io.github.kotlinmania.spring.boot.jetty;
 
 import org.eclipse.jetty.compression.gzip.GzipCompression;
 import org.eclipse.jetty.compression.server.CompressionConfig;
@@ -28,7 +28,7 @@ import org.eclipse.jetty.server.Request;
 import org.eclipse.jetty.server.Response;
 import org.eclipse.jetty.util.Callback;
 
-import org.springframework.boot.web.server.Compression;
+import io.github.kotlinmania.spring.boot.web.server.Compression;
 
 /**
  * Jetty {@code HandlerWrapper} static factory.

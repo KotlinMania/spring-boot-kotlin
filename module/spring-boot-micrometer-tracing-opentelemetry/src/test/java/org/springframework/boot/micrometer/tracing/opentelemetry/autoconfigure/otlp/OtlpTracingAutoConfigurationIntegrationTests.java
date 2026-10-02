@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.micrometer.tracing.opentelemetry.autoconfigure.otlp;
+package io.github.kotlinmania.spring.boot.micrometer.tracing.opentelemetry.autoconfigure.otlp;
 
 import java.io.InputStream;
 import java.nio.charset.StandardCharsets;
@@ -46,13 +46,13 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.autoconfigure.AutoConfigurations;
-import org.springframework.boot.micrometer.observation.autoconfigure.ObservationAutoConfiguration;
-import org.springframework.boot.micrometer.tracing.autoconfigure.MicrometerTracingAutoConfiguration;
-import org.springframework.boot.micrometer.tracing.opentelemetry.autoconfigure.OpenTelemetryTracingAutoConfiguration;
-import org.springframework.boot.micrometer.tracing.opentelemetry.autoconfigure.otlp.OtlpTracingAutoConfigurationIntegrationTests.MockGrpcServer.RecordedGrpcRequest;
-import org.springframework.boot.opentelemetry.autoconfigure.OpenTelemetrySdkAutoConfiguration;
-import org.springframework.boot.test.context.runner.ApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurations;
+import io.github.kotlinmania.spring.boot.micrometer.observation.autoconfigure.ObservationAutoConfiguration;
+import io.github.kotlinmania.spring.boot.micrometer.tracing.autoconfigure.MicrometerTracingAutoConfiguration;
+import io.github.kotlinmania.spring.boot.micrometer.tracing.opentelemetry.autoconfigure.OpenTelemetryTracingAutoConfiguration;
+import io.github.kotlinmania.spring.boot.micrometer.tracing.opentelemetry.autoconfigure.otlp.OtlpTracingAutoConfigurationIntegrationTests.MockGrpcServer.RecordedGrpcRequest;
+import io.github.kotlinmania.spring.boot.opentelemetry.autoconfigure.OpenTelemetrySdkAutoConfiguration;
+import io.github.kotlinmania.spring.boot.test.context.runner.ApplicationContextRunner;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -104,7 +104,7 @@ class OtlpTracingAutoConfigurationIntegrationTests {
 				assertThat(request.getHeader("custom")).isEqualTo("42");
 				assertThat(request.getBodySize()).isPositive();
 				try (Buffer body = request.getBody()) {
-					assertThat(body.readString(StandardCharsets.UTF_8)).contains("org.springframework.boot");
+					assertThat(body.readString(StandardCharsets.UTF_8)).contains("io.github.kotlinmania.spring.boot.);
 				}
 			});
 	}
@@ -129,7 +129,7 @@ class OtlpTracingAutoConfigurationIntegrationTests {
 				assertThat(request.getBodySize()).isPositive();
 				try (Buffer uncompressed = new Buffer(); Buffer body = request.getBody()) {
 					uncompressed.writeAll(new GzipSource(body));
-					assertThat(uncompressed.readString(StandardCharsets.UTF_8)).contains("org.springframework.boot");
+					assertThat(uncompressed.readString(StandardCharsets.UTF_8)).contains("io.github.kotlinmania.spring.boot.);
 				}
 			});
 	}
@@ -150,7 +150,7 @@ class OtlpTracingAutoConfigurationIntegrationTests {
 				assertThat(request).isNotNull();
 				assertThat(request.headers().get("Content-Type")).isEqualTo("application/grpc");
 				assertThat(request.headers().get("custom")).isEqualTo("42");
-				assertThat(request.bodyAsString()).contains("org.springframework.boot");
+				assertThat(request.bodyAsString()).contains("io.github.kotlinmania.spring.boot.);
 			});
 	}
 

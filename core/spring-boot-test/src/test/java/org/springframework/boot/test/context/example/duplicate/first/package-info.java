@@ -15,6 +15,6 @@
  */
 
 @NullMarked
-package org.springframework.boot.test.context.example.duplicate.first;
+package io.github.kotlinmania.spring.boot.test.context.example.duplicate.first;
 
 import org.jspecify.annotations.NullMarked;

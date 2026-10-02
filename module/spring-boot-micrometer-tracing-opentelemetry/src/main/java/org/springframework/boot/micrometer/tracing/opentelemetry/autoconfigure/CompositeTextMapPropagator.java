@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.micrometer.tracing.opentelemetry.autoconfigure;
+package io.github.kotlinmania.spring.boot.micrometer.tracing.opentelemetry.autoconfigure;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -34,9 +34,9 @@ import io.opentelemetry.context.propagation.TextMapSetter;
 import io.opentelemetry.extension.trace.propagation.B3Propagator;
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.micrometer.tracing.autoconfigure.TracingProperties;
-import org.springframework.boot.micrometer.tracing.autoconfigure.TracingProperties.Propagation;
-import org.springframework.boot.micrometer.tracing.autoconfigure.TracingProperties.Propagation.PropagationType;
+import io.github.kotlinmania.spring.boot.micrometer.tracing.autoconfigure.TracingProperties;
+import io.github.kotlinmania.spring.boot.micrometer.tracing.autoconfigure.TracingProperties.Propagation;
+import io.github.kotlinmania.spring.boot.micrometer.tracing.autoconfigure.TracingProperties.Propagation.PropagationType;
 
 /**
  * {@link TextMapPropagator} which supports multiple tracing formats. It is able to

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.data.nosql.mongodb.repositories
+package io.github.kotlinmania.spring.boot.docs.data.nosql.mongodb.repositories
 
 class City
 

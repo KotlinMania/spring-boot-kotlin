@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.webmvc.error;
+package io.github.kotlinmania.spring.boot.webmvc.error;
 
 import org.springframework.stereotype.Controller;
 

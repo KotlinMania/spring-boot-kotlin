@@ -16,8 +16,8 @@
 
 package cli.command;
 
-import org.springframework.boot.cli.command.AbstractCommand;
-import org.springframework.boot.cli.command.status.ExitStatus;
+import io.github.kotlinmania.spring.boot.cli.command.AbstractCommand;
+import io.github.kotlinmania.spring.boot.cli.command.status.ExitStatus;
 
 /**
  * @author Dave Syer

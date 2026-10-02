@@ -18,6 +18,6 @@
  * Auto-configuration for embedded web servers tests.
  */
 @NullMarked
-package org.springframework.boot.web.server.test;
+package io.github.kotlinmania.spring.boot.web.server.test;
 
 import org.jspecify.annotations.NullMarked;

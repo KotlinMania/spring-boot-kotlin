@@ -16,7 +16,7 @@
 
 package smoketest.actuator.noweb;
 
-import org.springframework.boot.context.properties.ConfigurationProperties;
+import io.github.kotlinmania.spring.boot.context.properties.ConfigurationProperties;
 
 @ConfigurationProperties(prefix = "service", ignoreUnknownFields = false)
 public class ServiceProperties {

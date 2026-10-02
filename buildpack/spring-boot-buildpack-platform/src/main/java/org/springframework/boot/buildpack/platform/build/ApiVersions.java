@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.buildpack.platform.build;
+package io.github.kotlinmania.spring.boot.buildpack.platform.build;
 
 import java.util.Arrays;
 import java.util.stream.IntStream;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.buildpack.platform.docker.ApiVersion;
+import io.github.kotlinmania.spring.boot.buildpack.platform.docker.ApiVersion;
 import org.springframework.util.StringUtils;
 
 /**

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.kafka.autoconfigure;
+package io.github.kotlinmania.spring.boot.kafka.autoconfigure;
 
 import java.io.IOException;
 import java.security.KeyStore;
@@ -27,7 +27,7 @@ import javax.net.ssl.SSLParameters;
 import org.apache.kafka.common.security.auth.SslEngineFactory;
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.ssl.SslBundle;
+import io.github.kotlinmania.spring.boot.ssl.SslBundle;
 import org.springframework.util.Assert;
 
 /**

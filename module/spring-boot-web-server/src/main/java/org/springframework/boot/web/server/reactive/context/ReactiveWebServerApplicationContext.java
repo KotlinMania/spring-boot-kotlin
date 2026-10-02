@@ -14,21 +14,21 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.web.server.reactive.context;
+package io.github.kotlinmania.spring.boot.web.server.reactive.context;
 
 import org.jspecify.annotations.Nullable;
 
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.support.DefaultListableBeanFactory;
-import org.springframework.boot.WebApplicationType;
-import org.springframework.boot.availability.AvailabilityChangeEvent;
-import org.springframework.boot.availability.ReadinessState;
-import org.springframework.boot.web.context.reactive.GenericReactiveWebApplicationContext;
-import org.springframework.boot.web.server.WebServer;
-import org.springframework.boot.web.server.context.ConfigurableWebServerApplicationContext;
-import org.springframework.boot.web.server.context.MissingWebServerFactoryBeanException;
-import org.springframework.boot.web.server.context.WebServerGracefulShutdownLifecycle;
-import org.springframework.boot.web.server.reactive.ReactiveWebServerFactory;
+import io.github.kotlinmania.spring.boot.WebApplicationType;
+import io.github.kotlinmania.spring.boot.availability.AvailabilityChangeEvent;
+import io.github.kotlinmania.spring.boot.availability.ReadinessState;
+import io.github.kotlinmania.spring.boot.web.context.reactive.GenericReactiveWebApplicationContext;
+import io.github.kotlinmania.spring.boot.web.server.WebServer;
+import io.github.kotlinmania.spring.boot.web.server.context.ConfigurableWebServerApplicationContext;
+import io.github.kotlinmania.spring.boot.web.server.context.MissingWebServerFactoryBeanException;
+import io.github.kotlinmania.spring.boot.web.server.context.WebServerGracefulShutdownLifecycle;
+import io.github.kotlinmania.spring.boot.web.server.reactive.ReactiveWebServerFactory;
 import org.springframework.context.ApplicationContextException;
 import org.springframework.core.metrics.StartupStep;
 import org.springframework.http.server.reactive.HttpHandler;

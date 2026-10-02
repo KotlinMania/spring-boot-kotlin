@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.cache.actuate.endpoint;
+package io.github.kotlinmania.spring.boot.cache.actuate.endpoint;
 
 import java.util.Collection;
 import java.util.Collections;

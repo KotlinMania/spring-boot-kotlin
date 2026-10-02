@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.io.caching.testing;
+package io.github.kotlinmania.spring.boot.docs.io.caching.testing;
 
-import org.springframework.boot.cache.test.autoconfigure.AutoConfigureCache;
-import org.springframework.boot.test.context.SpringBootTest;
+import io.github.kotlinmania.spring.boot.cache.test.autoconfigure.AutoConfigureCache;
+import io.github.kotlinmania.spring.boot.test.context.SpringBootTest;
 
 @SpringBootTest
 @AutoConfigureCache

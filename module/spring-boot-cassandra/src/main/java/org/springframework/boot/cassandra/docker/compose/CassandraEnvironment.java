@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.cassandra.docker.compose;
+package io.github.kotlinmania.spring.boot.cassandra.docker.compose;
 
 import java.util.Map;
 

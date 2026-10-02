@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.webmvc.autoconfigure.actuate.web;
+package io.github.kotlinmania.spring.boot.webmvc.autoconfigure.actuate.web;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -25,35 +25,35 @@ import java.util.List;
 import tools.jackson.databind.json.JsonMapper;
 
 import org.springframework.beans.factory.config.BeanDefinition;
-import org.springframework.boot.actuate.autoconfigure.endpoint.condition.ConditionalOnAvailableEndpoint;
-import org.springframework.boot.actuate.autoconfigure.endpoint.expose.EndpointExposure;
-import org.springframework.boot.actuate.autoconfigure.endpoint.web.CorsEndpointProperties;
-import org.springframework.boot.actuate.autoconfigure.endpoint.web.WebEndpointProperties;
-import org.springframework.boot.actuate.autoconfigure.web.ManagementContextConfiguration;
-import org.springframework.boot.actuate.autoconfigure.web.server.ConditionalOnManagementPort;
-import org.springframework.boot.actuate.autoconfigure.web.server.ManagementPortType;
-import org.springframework.boot.actuate.endpoint.EndpointAccessResolver;
-import org.springframework.boot.actuate.endpoint.ExposableEndpoint;
-import org.springframework.boot.actuate.endpoint.OperationResponseBody;
-import org.springframework.boot.actuate.endpoint.annotation.Endpoint;
-import org.springframework.boot.actuate.endpoint.jackson.EndpointJsonMapper;
-import org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver;
-import org.springframework.boot.actuate.endpoint.web.EndpointMapping;
-import org.springframework.boot.actuate.endpoint.web.EndpointMediaTypes;
-import org.springframework.boot.actuate.endpoint.web.ExposableWebEndpoint;
-import org.springframework.boot.actuate.endpoint.web.WebEndpointsSupplier;
-import org.springframework.boot.actuate.endpoint.web.WebServerNamespace;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnWebApplication;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnWebApplication.Type;
-import org.springframework.boot.context.properties.EnableConfigurationProperties;
-import org.springframework.boot.health.actuate.endpoint.HealthEndpoint;
-import org.springframework.boot.health.actuate.endpoint.HealthEndpointGroups;
-import org.springframework.boot.webmvc.actuate.endpoint.web.AdditionalHealthEndpointPathsWebMvcHandlerMapping;
-import org.springframework.boot.webmvc.actuate.endpoint.web.WebMvcEndpointHandlerMapping;
-import org.springframework.boot.webmvc.autoconfigure.DispatcherServletPath;
+import io.github.kotlinmania.spring.boot.actuate.autoconfigure.endpoint.condition.ConditionalOnAvailableEndpoint;
+import io.github.kotlinmania.spring.boot.actuate.autoconfigure.endpoint.expose.EndpointExposure;
+import io.github.kotlinmania.spring.boot.actuate.autoconfigure.endpoint.web.CorsEndpointProperties;
+import io.github.kotlinmania.spring.boot.actuate.autoconfigure.endpoint.web.WebEndpointProperties;
+import io.github.kotlinmania.spring.boot.actuate.autoconfigure.web.ManagementContextConfiguration;
+import io.github.kotlinmania.spring.boot.actuate.autoconfigure.web.server.ConditionalOnManagementPort;
+import io.github.kotlinmania.spring.boot.actuate.autoconfigure.web.server.ManagementPortType;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.EndpointAccessResolver;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.ExposableEndpoint;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.OperationResponseBody;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.annotation.Endpoint;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.jackson.EndpointJsonMapper;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.web.EndpointLinksResolver;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.web.EndpointMapping;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.web.EndpointMediaTypes;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.web.ExposableWebEndpoint;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.web.WebEndpointsSupplier;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.web.WebServerNamespace;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnBean;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnClass;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnMissingBean;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnWebApplication;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnWebApplication.Type;
+import io.github.kotlinmania.spring.boot.context.properties.EnableConfigurationProperties;
+import io.github.kotlinmania.spring.boot.health.actuate.endpoint.HealthEndpoint;
+import io.github.kotlinmania.spring.boot.health.actuate.endpoint.HealthEndpointGroups;
+import io.github.kotlinmania.spring.boot.webmvc.actuate.endpoint.web.AdditionalHealthEndpointPathsWebMvcHandlerMapping;
+import io.github.kotlinmania.spring.boot.webmvc.actuate.endpoint.web.WebMvcEndpointHandlerMapping;
+import io.github.kotlinmania.spring.boot.webmvc.autoconfigure.DispatcherServletPath;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Role;
@@ -87,8 +87,8 @@ public class WebMvcEndpointManagementContextConfiguration {
 	@ConditionalOnMissingBean
 	@SuppressWarnings("removal")
 	WebMvcEndpointHandlerMapping webEndpointServletHandlerMapping(WebEndpointsSupplier webEndpointsSupplier,
-			org.springframework.boot.actuate.endpoint.web.annotation.ServletEndpointsSupplier servletEndpointsSupplier,
-			org.springframework.boot.actuate.endpoint.web.annotation.ControllerEndpointsSupplier controllerEndpointsSupplier,
+			io.github.kotlinmania.spring.boot.actuate.endpoint.web.annotation.ServletEndpointsSupplier servletEndpointsSupplier,
+			io.github.kotlinmania.spring.boot.actuate.endpoint.web.annotation.ControllerEndpointsSupplier controllerEndpointsSupplier,
 			EndpointMediaTypes endpointMediaTypes, CorsEndpointProperties corsProperties,
 			WebEndpointProperties webEndpointProperties, Environment environment) {
 		List<ExposableEndpoint<?>> allEndpoints = new ArrayList<>();
@@ -114,23 +114,23 @@ public class WebMvcEndpointManagementContextConfiguration {
 	@ConditionalOnMissingBean
 	@SuppressWarnings("removal")
 	@Deprecated(since = "3.3.5", forRemoval = true)
-	org.springframework.boot.webmvc.actuate.endpoint.web.ControllerEndpointHandlerMapping controllerEndpointHandlerMapping(
-			org.springframework.boot.actuate.endpoint.web.annotation.ControllerEndpointsSupplier controllerEndpointsSupplier,
+	io.github.kotlinmania.spring.boot.webmvc.actuate.endpoint.web.ControllerEndpointHandlerMapping controllerEndpointHandlerMapping(
+			io.github.kotlinmania.spring.boot.actuate.endpoint.web.annotation.ControllerEndpointsSupplier controllerEndpointsSupplier,
 			CorsEndpointProperties corsProperties, WebEndpointProperties webEndpointProperties,
 			EndpointAccessResolver endpointAccessResolver) {
 		EndpointMapping endpointMapping = new EndpointMapping(webEndpointProperties.getBasePath());
-		return new org.springframework.boot.webmvc.actuate.endpoint.web.ControllerEndpointHandlerMapping(
+		return new io.github.kotlinmania.spring.boot.webmvc.actuate.endpoint.web.ControllerEndpointHandlerMapping(
 				endpointMapping, controllerEndpointsSupplier.getEndpoints(), corsProperties.toCorsConfiguration(),
 				endpointAccessResolver);
 	}
 
 	@Bean
 	@SuppressWarnings("removal")
-	org.springframework.boot.actuate.endpoint.web.ServletEndpointRegistrar servletEndpointRegistrar(
+	io.github.kotlinmania.spring.boot.actuate.endpoint.web.ServletEndpointRegistrar servletEndpointRegistrar(
 			WebEndpointProperties properties,
-			org.springframework.boot.actuate.endpoint.web.annotation.ServletEndpointsSupplier servletEndpointsSupplier,
+			io.github.kotlinmania.spring.boot.actuate.endpoint.web.annotation.ServletEndpointsSupplier servletEndpointsSupplier,
 			DispatcherServletPath dispatcherServletPath, EndpointAccessResolver endpointAccessResolver) {
-		return new org.springframework.boot.actuate.endpoint.web.ServletEndpointRegistrar(
+		return new io.github.kotlinmania.spring.boot.actuate.endpoint.web.ServletEndpointRegistrar(
 				dispatcherServletPath.getRelativePath(properties.getBasePath()),
 				servletEndpointsSupplier.getEndpoints(), endpointAccessResolver);
 	}
@@ -145,10 +145,10 @@ public class WebMvcEndpointManagementContextConfiguration {
 
 	@Bean
 	@SuppressWarnings("removal")
-	@ConditionalOnBean(org.springframework.boot.actuate.endpoint.jackson.EndpointJackson2ObjectMapper.class)
+	@ConditionalOnBean(io.github.kotlinmania.spring.boot.actuate.endpoint.jackson.EndpointJackson2ObjectMapper.class)
 	@Role(BeanDefinition.ROLE_INFRASTRUCTURE)
 	static EndpointJackson2ObjectMapperWebMvcConfigurer endpointJackson2ObjectMapperWebMvcConfigurer(
-			org.springframework.boot.actuate.endpoint.jackson.EndpointJackson2ObjectMapper endpointJsonMapper) {
+			io.github.kotlinmania.spring.boot.actuate.endpoint.jackson.EndpointJackson2ObjectMapper endpointJsonMapper) {
 		return new EndpointJackson2ObjectMapperWebMvcConfigurer(endpointJsonMapper);
 	}
 
@@ -209,7 +209,7 @@ public class WebMvcEndpointManagementContextConfiguration {
 
 	/**
 	 * {@link WebMvcConfigurer} to apply
-	 * {@link org.springframework.boot.actuate.endpoint.jackson.EndpointJackson2ObjectMapper}
+	 * {@link io.github.kotlinmania.spring.boot.actuate.endpoint.jackson.EndpointJackson2ObjectMapper}
 	 * for {@link OperationResponseBody} to
 	 * {@link org.springframework.http.converter.json.MappingJackson2HttpMessageConverter}
 	 * instances.
@@ -220,10 +220,10 @@ public class WebMvcEndpointManagementContextConfiguration {
 	@SuppressWarnings("removal")
 	static class EndpointJackson2ObjectMapperWebMvcConfigurer implements WebMvcConfigurer {
 
-		private final org.springframework.boot.actuate.endpoint.jackson.EndpointJackson2ObjectMapper mapper;
+		private final io.github.kotlinmania.spring.boot.actuate.endpoint.jackson.EndpointJackson2ObjectMapper mapper;
 
 		EndpointJackson2ObjectMapperWebMvcConfigurer(
-				org.springframework.boot.actuate.endpoint.jackson.EndpointJackson2ObjectMapper mapper) {
+				io.github.kotlinmania.spring.boot.actuate.endpoint.jackson.EndpointJackson2ObjectMapper mapper) {
 			this.mapper = mapper;
 		}
 

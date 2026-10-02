@@ -1,3 +1,3 @@
-org.springframework.boot.jms.autoconfigure.JmsAutoConfiguration
-org.springframework.boot.jms.autoconfigure.JndiConnectionFactoryAutoConfiguration
-org.springframework.boot.jms.autoconfigure.health.JmsHealthContributorAutoConfiguration
+io.github.kotlinmania.spring.boot.jms.autoconfigure.JmsAutoConfiguration
+io.github.kotlinmania.spring.boot.jms.autoconfigure.JndiConnectionFactoryAutoConfiguration
+io.github.kotlinmania.spring.boot.jms.autoconfigure.health.JmsHealthContributorAutoConfiguration

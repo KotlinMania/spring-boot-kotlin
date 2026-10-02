@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.appendix.configurationmetadata.annotationprocessor.automaticmetadatageneration;
+package io.github.kotlinmania.spring.boot.docs.appendix.configurationmetadata.annotationprocessor.automaticmetadatageneration;
 
-import org.springframework.boot.context.properties.ConfigurationProperties;
+import io.github.kotlinmania.spring.boot.context.properties.ConfigurationProperties;
 
 @ConfigurationProperties("my.server")
 public class MyServerProperties {

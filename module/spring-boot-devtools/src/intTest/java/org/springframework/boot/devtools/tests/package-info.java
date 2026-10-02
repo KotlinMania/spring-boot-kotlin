@@ -15,6 +15,6 @@
  */
 
 @NullMarked
-package org.springframework.boot.devtools.tests;
+package io.github.kotlinmania.spring.boot.devtools.tests;
 
 import org.jspecify.annotations.NullMarked;

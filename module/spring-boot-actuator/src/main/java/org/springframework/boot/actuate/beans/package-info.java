@@ -18,6 +18,6 @@
  * Actuator support relating to Spring Beans.
  */
 @NullMarked
-package org.springframework.boot.actuate.beans;
+package io.github.kotlinmania.spring.boot.actuate.beans;
 
 import org.jspecify.annotations.NullMarked;

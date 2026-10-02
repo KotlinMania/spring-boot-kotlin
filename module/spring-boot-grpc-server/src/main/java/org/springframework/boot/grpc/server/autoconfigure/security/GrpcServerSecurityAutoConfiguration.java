@@ -14,23 +14,23 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.grpc.server.autoconfigure.security;
+package io.github.kotlinmania.spring.boot.grpc.server.autoconfigure.security;
 
 import io.grpc.BindableService;
 import io.grpc.internal.GrpcUtil;
 
-import org.springframework.boot.autoconfigure.AutoConfiguration;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnBooleanProperty;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
-import org.springframework.boot.grpc.server.GrpcServletRegistration;
-import org.springframework.boot.grpc.server.autoconfigure.GrpcServerAutoConfiguration;
-import org.springframework.boot.grpc.server.autoconfigure.GrpcServerExecutorProvider;
-import org.springframework.boot.grpc.server.autoconfigure.security.GrpcServerSecurityAutoConfiguration.ExceptionHandlerConfiguration;
-import org.springframework.boot.grpc.server.autoconfigure.security.GrpcServerSecurityAutoConfiguration.GrpcNativeSecurityConfigurerConfiguration;
-import org.springframework.boot.grpc.server.autoconfigure.security.GrpcServerSecurityAutoConfiguration.GrpcServletSecurityConfigurerConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.EnableAutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnBean;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnBooleanProperty;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnClass;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnMissingBean;
+import io.github.kotlinmania.spring.boot.grpc.server.GrpcServletRegistration;
+import io.github.kotlinmania.spring.boot.grpc.server.autoconfigure.GrpcServerAutoConfiguration;
+import io.github.kotlinmania.spring.boot.grpc.server.autoconfigure.GrpcServerExecutorProvider;
+import io.github.kotlinmania.spring.boot.grpc.server.autoconfigure.security.GrpcServerSecurityAutoConfiguration.ExceptionHandlerConfiguration;
+import io.github.kotlinmania.spring.boot.grpc.server.autoconfigure.security.GrpcServerSecurityAutoConfiguration.GrpcNativeSecurityConfigurerConfiguration;
+import io.github.kotlinmania.spring.boot.grpc.server.autoconfigure.security.GrpcServerSecurityAutoConfiguration.GrpcServletSecurityConfigurerConfiguration;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -58,7 +58,7 @@ import org.springframework.security.web.SecurityFilterChain;
  * @since 4.1.0
  */
 @AutoConfiguration(after = GrpcServerAutoConfiguration.class,
-		afterName = "org.springframework.boot.security.autoconfigure.SecurityAutoConfiguration")
+		afterName = "io.github.kotlinmania.spring.boot.security.autoconfigure.SecurityAutoConfiguration")
 @ConditionalOnBooleanProperty(name = "spring.grpc.server.enabled", matchIfMissing = true)
 @ConditionalOnClass({ BindableService.class, GrpcServerFactory.class, ObjectPostProcessor.class })
 @Import({ ExceptionHandlerConfiguration.class, GrpcNativeSecurityConfigurerConfiguration.class,

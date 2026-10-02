@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.mongodb.docker.compose;
+package io.github.kotlinmania.spring.boot.mongodb.docker.compose;
 
 import java.util.Map;
 

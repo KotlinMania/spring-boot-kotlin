@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.webmvc.test.autoconfigure;
+package io.github.kotlinmania.spring.boot.webmvc.test.autoconfigure;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -36,10 +36,10 @@ import jakarta.servlet.http.HttpServlet;
 import org.assertj.core.api.InstanceOfAssertFactories;
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.web.context.servlet.AnnotationConfigServletWebApplicationContext;
-import org.springframework.boot.web.servlet.FilterRegistrationBean;
-import org.springframework.boot.webmvc.test.autoconfigure.SpringBootMockMvcBuilderCustomizer.DeferredLinesWriter;
-import org.springframework.boot.webmvc.test.autoconfigure.SpringBootMockMvcBuilderCustomizer.LinesWriter;
+import io.github.kotlinmania.spring.boot.web.context.servlet.AnnotationConfigServletWebApplicationContext;
+import io.github.kotlinmania.spring.boot.web.servlet.FilterRegistrationBean;
+import io.github.kotlinmania.spring.boot.webmvc.test.autoconfigure.SpringBootMockMvcBuilderCustomizer.DeferredLinesWriter;
+import io.github.kotlinmania.spring.boot.webmvc.test.autoconfigure.SpringBootMockMvcBuilderCustomizer.LinesWriter;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.mock.web.MockServletContext;

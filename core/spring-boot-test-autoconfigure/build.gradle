@@ -16,7 +16,6 @@
 
 plugins {
 	id "java-library"
-	id "io.github.kotlinmania.spring.boot.conventions"
 	id "io.github.kotlinmania.spring.boot.configuration-metadata"
 	id "io.github.kotlinmania.spring.boot.deployed"
 	id "io.github.kotlinmania.spring.boot.optional-dependencies"

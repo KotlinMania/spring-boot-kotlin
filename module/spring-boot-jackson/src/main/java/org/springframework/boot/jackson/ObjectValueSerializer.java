@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.jackson;
+package io.github.kotlinmania.spring.boot.jackson;
 
 import tools.jackson.core.JsonGenerator;
 import tools.jackson.databind.SerializationContext;

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.data.redis.autoconfigure;
+package io.github.kotlinmania.spring.boot.data.redis.autoconfigure;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,12 +22,12 @@ import java.util.List;
 import org.jspecify.annotations.Nullable;
 
 import org.springframework.beans.factory.ObjectProvider;
-import org.springframework.boot.data.redis.autoconfigure.DataRedisConnectionDetails.Cluster;
-import org.springframework.boot.data.redis.autoconfigure.DataRedisConnectionDetails.Node;
-import org.springframework.boot.data.redis.autoconfigure.DataRedisConnectionDetails.Sentinel;
-import org.springframework.boot.data.redis.autoconfigure.DataRedisConnectionDetails.Standalone;
-import org.springframework.boot.data.redis.autoconfigure.DataRedisProperties.Pool;
-import org.springframework.boot.ssl.SslBundle;
+import io.github.kotlinmania.spring.boot.data.redis.autoconfigure.DataRedisConnectionDetails.Cluster;
+import io.github.kotlinmania.spring.boot.data.redis.autoconfigure.DataRedisConnectionDetails.Node;
+import io.github.kotlinmania.spring.boot.data.redis.autoconfigure.DataRedisConnectionDetails.Sentinel;
+import io.github.kotlinmania.spring.boot.data.redis.autoconfigure.DataRedisConnectionDetails.Standalone;
+import io.github.kotlinmania.spring.boot.data.redis.autoconfigure.DataRedisProperties.Pool;
+import io.github.kotlinmania.spring.boot.ssl.SslBundle;
 import org.springframework.data.redis.connection.RedisClusterConfiguration;
 import org.springframework.data.redis.connection.RedisNode;
 import org.springframework.data.redis.connection.RedisPassword;

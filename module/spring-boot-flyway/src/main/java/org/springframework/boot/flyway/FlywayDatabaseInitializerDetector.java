@@ -14,15 +14,15 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.flyway;
+package io.github.kotlinmania.spring.boot.flyway;
 
 import java.util.Collections;
 import java.util.Set;
 
 import org.flywaydb.core.Flyway;
 
-import org.springframework.boot.sql.init.dependency.AbstractBeansOfTypeDatabaseInitializerDetector;
-import org.springframework.boot.sql.init.dependency.DatabaseInitializerDetector;
+import io.github.kotlinmania.spring.boot.sql.init.dependency.AbstractBeansOfTypeDatabaseInitializerDetector;
+import io.github.kotlinmania.spring.boot.sql.init.dependency.DatabaseInitializerDetector;
 
 /**
  * A {@link DatabaseInitializerDetector} for {@link Flyway}.

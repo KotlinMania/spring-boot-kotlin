@@ -15,7 +15,19 @@
  */
 package org.springframework.boot.build.architecture.assertj.noCheckReturnValue
 
-import org.assertj.core.api.AbstractAssert
+package io.github.kotlinmania.spring.boot.build.architecture.assertj.noCheckReturnValue;
+
+import org.assertj.core.api.AbstractAssert;
+
+public class NoCheckReturnValue extends AbstractAssert<NoCheckReturnValue, Object> {
+
+	NoCheckReturnValue() {
+		super(null, NoCheckReturnValue.class);
+	}
+
+	public Object notReturningSelf() {
+		return new Object();
+	}
 
 class NoCheckReturnValue internal constructor() :
     AbstractAssert<NoCheckReturnValue?, Any?>(null, NoCheckReturnValue::class.java) {

@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.actuator.micrometertracing.gettingstarted
+package io.github.kotlinmania.spring.boot.docs.actuator.micrometertracing.gettingstarted
 
 import org.apache.commons.logging.Log
 import org.apache.commons.logging.LogFactory
-import org.springframework.boot.autoconfigure.SpringBootApplication
-import org.springframework.boot.runApplication
+import io.github.kotlinmania.spring.boot.autoconfigure.SpringBootApplication
+import io.github.kotlinmania.spring.boot.runApplication
 import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RestController
 

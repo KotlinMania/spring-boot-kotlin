@@ -14,15 +14,15 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.ldap.autoconfigure.embedded;
+package io.github.kotlinmania.spring.boot.ldap.autoconfigure.embedded;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.boot.convert.Delimiter;
+import io.github.kotlinmania.spring.boot.context.properties.ConfigurationProperties;
+import io.github.kotlinmania.spring.boot.convert.Delimiter;
 import org.springframework.core.io.Resource;
 
 /**

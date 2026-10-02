@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.loader.launch;
+package io.github.kotlinmania.spring.boot.loader.launch;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -39,9 +39,9 @@ import java.util.jar.Manifest;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import org.springframework.boot.loader.launch.Archive.Entry;
-import org.springframework.boot.loader.log.DebugLogger;
-import org.springframework.boot.loader.net.protocol.jar.JarUrl;
+import io.github.kotlinmania.spring.boot.loader.launch.Archive.Entry;
+import io.github.kotlinmania.spring.boot.loader.log.DebugLogger;
+import io.github.kotlinmania.spring.boot.loader.net.protocol.jar.JarUrl;
 
 /**
  * {@link Launcher} for archives with user-configured classpath and main class through a

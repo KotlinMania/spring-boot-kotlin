@@ -18,6 +18,6 @@
  * Spring WebFlux support for actuator endpoints.
  */
 @NullMarked
-package org.springframework.boot.webflux.actuate.endpoint.web;
+package io.github.kotlinmania.spring.boot.webflux.actuate.endpoint.web;
 
 import org.jspecify.annotations.NullMarked;

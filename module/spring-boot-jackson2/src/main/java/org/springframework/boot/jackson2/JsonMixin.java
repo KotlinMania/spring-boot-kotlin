@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.jackson2;
+package io.github.kotlinmania.spring.boot.jackson2;
 
 import java.lang.annotation.Documented;
 import java.lang.annotation.ElementType;
@@ -32,7 +32,7 @@ import org.springframework.core.annotation.AliasFor;
  * @see JsonMixinModule
  * @since 4.0.0
  * @deprecated since 4.0.0 for removal in 4.3.0 in favor of Jackson 3 and
- * {@link org.springframework.boot.jackson.JacksonMixin}.
+ * {@link io.github.kotlinmania.spring.boot.jackson.JacksonMixin}.
  */
 @Target(ElementType.TYPE)
 @Retention(RetentionPolicy.RUNTIME)

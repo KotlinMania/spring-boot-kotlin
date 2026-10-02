@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.data.sql.jpaandspringdata.enversrepositories;
+package io.github.kotlinmania.spring.boot.docs.data.sql.jpaandspringdata.enversrepositories;
 
-import org.springframework.boot.docs.data.sql.jpaandspringdata.entityclasses.Country;
+import io.github.kotlinmania.spring.boot.docs.data.sql.jpaandspringdata.entityclasses.Country;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.repository.Repository;

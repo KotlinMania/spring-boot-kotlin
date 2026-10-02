@@ -14,15 +14,15 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.neo4j.docker.compose;
+package io.github.kotlinmania.spring.boot.neo4j.docker.compose;
 
 import org.neo4j.driver.AuthTokens;
 import org.neo4j.driver.Driver;
 import org.neo4j.driver.GraphDatabase;
 
-import org.springframework.boot.docker.compose.service.connection.test.DockerComposeTest;
-import org.springframework.boot.neo4j.autoconfigure.Neo4jConnectionDetails;
-import org.springframework.boot.testsupport.container.TestImage;
+import io.github.kotlinmania.spring.boot.docker.compose.service.connection.test.DockerComposeTest;
+import io.github.kotlinmania.spring.boot.neo4j.autoconfigure.Neo4jConnectionDetails;
+import io.github.kotlinmania.spring.boot.testsupport.container.TestImage;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatNoException;

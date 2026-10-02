@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.servlet.autoconfigure;
+package io.github.kotlinmania.spring.boot.servlet.autoconfigure;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -25,10 +25,10 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 
 import org.springframework.beans.factory.NoSuchBeanDefinitionException;
-import org.springframework.boot.servlet.filter.OrderedFormContentFilter;
-import org.springframework.boot.servlet.filter.OrderedHiddenHttpMethodFilter;
-import org.springframework.boot.test.util.TestPropertyValues;
-import org.springframework.boot.web.context.servlet.AnnotationConfigServletWebApplicationContext;
+import io.github.kotlinmania.spring.boot.servlet.filter.OrderedFormContentFilter;
+import io.github.kotlinmania.spring.boot.servlet.filter.OrderedHiddenHttpMethodFilter;
+import io.github.kotlinmania.spring.boot.test.util.TestPropertyValues;
+import io.github.kotlinmania.spring.boot.web.context.servlet.AnnotationConfigServletWebApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.annotation.AnnotationAwareOrderComparator;

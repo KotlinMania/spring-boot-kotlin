@@ -14,18 +14,18 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.thymeleaf.autoconfigure.webmvctest;
+package io.github.kotlinmania.spring.boot.thymeleaf.autoconfigure.webmvctest;
 
 import org.junit.jupiter.api.Test;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.thymeleaf.autoconfigure.ThymeleafAutoConfiguration;
-import org.springframework.boot.webmvc.test.autoconfigure.WebMvcTest;
+import io.github.kotlinmania.spring.boot.thymeleaf.autoconfigure.ThymeleafAutoConfiguration;
+import io.github.kotlinmania.spring.boot.webmvc.test.autoconfigure.WebMvcTest;
 import org.springframework.context.ApplicationContext;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatNoException;
-import static org.springframework.boot.autoconfigure.AutoConfigurationImportedCondition.importedAutoConfiguration;
+import static io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurationImportedCondition.importedAutoConfiguration;
 
 /**
  * Integration tests for Thymeleaf with {@link WebMvcTest @WebMvcTest}.

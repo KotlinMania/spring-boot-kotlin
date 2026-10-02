@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.http.client.reactive;
+package io.github.kotlinmania.spring.boot.http.client.reactive;
 
 import java.util.List;
 import java.util.function.Consumer;
@@ -30,9 +30,9 @@ import org.apache.hc.client5.http.impl.nio.PoolingAsyncClientConnectionManagerBu
 import org.apache.hc.core5.http.nio.ssl.TlsStrategy;
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.http.client.HttpClientSettings;
-import org.springframework.boot.http.client.HttpComponentsHttpAsyncClientBuilder;
-import org.springframework.boot.ssl.SslBundle;
+import io.github.kotlinmania.spring.boot.http.client.HttpClientSettings;
+import io.github.kotlinmania.spring.boot.http.client.HttpComponentsHttpAsyncClientBuilder;
+import io.github.kotlinmania.spring.boot.ssl.SslBundle;
 import org.springframework.http.client.reactive.HttpComponentsClientHttpConnector;
 import org.springframework.util.Assert;
 import org.springframework.util.ClassUtils;

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.gradle.tasks.bundling;
+package io.github.kotlinmania.spring.boot.gradle.tasks.bundling;
 
 import javax.inject.Inject;
 
@@ -25,7 +25,7 @@ import org.gradle.api.provider.Property;
 import org.gradle.api.tasks.Input;
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.buildpack.platform.build.Cache;
+import io.github.kotlinmania.spring.boot.buildpack.platform.build.Cache;
 
 /**
  * Configuration for an image building cache.

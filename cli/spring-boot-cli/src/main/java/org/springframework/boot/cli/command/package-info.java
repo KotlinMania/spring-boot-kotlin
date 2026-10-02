@@ -18,6 +18,6 @@
  * Command infrastructure for the CLI.
  */
 @NullMarked
-package org.springframework.boot.cli.command;
+package io.github.kotlinmania.spring.boot.cli.command;
 
 import org.jspecify.annotations.NullMarked;

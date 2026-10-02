@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.jdbc.metrics;
+package io.github.kotlinmania.spring.boot.jdbc.metrics;
 
 import java.util.Collection;
 import java.util.Map;
@@ -29,9 +29,9 @@ import io.micrometer.core.instrument.Tags;
 import io.micrometer.core.instrument.binder.MeterBinder;
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.jdbc.metadata.CompositeDataSourcePoolMetadataProvider;
-import org.springframework.boot.jdbc.metadata.DataSourcePoolMetadata;
-import org.springframework.boot.jdbc.metadata.DataSourcePoolMetadataProvider;
+import io.github.kotlinmania.spring.boot.jdbc.metadata.CompositeDataSourcePoolMetadataProvider;
+import io.github.kotlinmania.spring.boot.jdbc.metadata.DataSourcePoolMetadata;
+import io.github.kotlinmania.spring.boot.jdbc.metadata.DataSourcePoolMetadataProvider;
 import org.springframework.util.Assert;
 import org.springframework.util.ConcurrentReferenceHashMap;
 

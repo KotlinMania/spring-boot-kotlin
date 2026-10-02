@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.data.jdbc.test.autoconfigure;
+package io.github.kotlinmania.spring.boot.data.jdbc.test.autoconfigure;
 
 import javax.sql.DataSource;
 
@@ -22,16 +22,16 @@ import org.junit.jupiter.api.Test;
 
 import org.springframework.beans.factory.NoSuchBeanDefinitionException;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.testcontainers.service.connection.ServiceConnectionAutoConfiguration;
-import org.springframework.boot.transaction.autoconfigure.TransactionAutoConfiguration;
-import org.springframework.boot.transaction.autoconfigure.TransactionManagerCustomizationAutoConfiguration;
+import io.github.kotlinmania.spring.boot.testcontainers.service.connection.ServiceConnectionAutoConfiguration;
+import io.github.kotlinmania.spring.boot.transaction.autoconfigure.TransactionAutoConfiguration;
+import io.github.kotlinmania.spring.boot.transaction.autoconfigure.TransactionManagerCustomizationAutoConfiguration;
 import org.springframework.context.ApplicationContext;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.test.context.TestPropertySource;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatExceptionOfType;
-import static org.springframework.boot.autoconfigure.AutoConfigurationImportedCondition.importedAutoConfiguration;
+import static io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurationImportedCondition.importedAutoConfiguration;
 
 /**
  * Integration tests for {@link DataJdbcTest @DataJdbcTest}.
@@ -40,7 +40,7 @@ import static org.springframework.boot.autoconfigure.AutoConfigurationImportedCo
  */
 @DataJdbcTest
 @TestPropertySource(
-		properties = "spring.sql.init.schemaLocations=classpath:org/springframework/boot/data/jdbc/test/autoconfigure/schema.sql")
+		properties = "spring.sql.init.schemaLocations=classpath:io.github.kotlinmania.spring.boot.data/jdbc/test/autoconfigure/schema.sql")
 class DataJdbcTestIntegrationTests {
 
 	@Autowired

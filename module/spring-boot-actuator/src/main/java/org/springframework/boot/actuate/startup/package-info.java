@@ -18,6 +18,6 @@
  * Actuator support for {@link org.springframework.core.metrics.ApplicationStartup}.
  */
 @NullMarked
-package org.springframework.boot.actuate.startup;
+package io.github.kotlinmania.spring.boot.actuate.startup;
 
 import org.jspecify.annotations.NullMarked;

@@ -14,32 +14,32 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.actuate.autoconfigure.info;
+package io.github.kotlinmania.spring.boot.actuate.autoconfigure.info;
 
 import java.util.Map;
 import java.util.Properties;
 
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.actuate.info.BuildInfoContributor;
-import org.springframework.boot.actuate.info.EnvironmentInfoContributor;
-import org.springframework.boot.actuate.info.GitInfoContributor;
-import org.springframework.boot.actuate.info.Info;
-import org.springframework.boot.actuate.info.InfoContributor;
-import org.springframework.boot.actuate.info.JavaInfoContributor;
-import org.springframework.boot.actuate.info.OsInfoContributor;
-import org.springframework.boot.actuate.info.ProcessInfoContributor;
-import org.springframework.boot.actuate.info.SslInfoContributor;
-import org.springframework.boot.autoconfigure.AutoConfigurations;
-import org.springframework.boot.autoconfigure.ssl.SslAutoConfiguration;
-import org.springframework.boot.info.BuildProperties;
-import org.springframework.boot.info.GitProperties;
-import org.springframework.boot.info.JavaInfo;
-import org.springframework.boot.info.OsInfo;
-import org.springframework.boot.info.ProcessInfo;
-import org.springframework.boot.info.SslInfo;
-import org.springframework.boot.ssl.SslBundles;
-import org.springframework.boot.test.context.runner.ApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.actuate.info.BuildInfoContributor;
+import io.github.kotlinmania.spring.boot.actuate.info.EnvironmentInfoContributor;
+import io.github.kotlinmania.spring.boot.actuate.info.GitInfoContributor;
+import io.github.kotlinmania.spring.boot.actuate.info.Info;
+import io.github.kotlinmania.spring.boot.actuate.info.InfoContributor;
+import io.github.kotlinmania.spring.boot.actuate.info.JavaInfoContributor;
+import io.github.kotlinmania.spring.boot.actuate.info.OsInfoContributor;
+import io.github.kotlinmania.spring.boot.actuate.info.ProcessInfoContributor;
+import io.github.kotlinmania.spring.boot.actuate.info.SslInfoContributor;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurations;
+import io.github.kotlinmania.spring.boot.autoconfigure.ssl.SslAutoConfiguration;
+import io.github.kotlinmania.spring.boot.info.BuildProperties;
+import io.github.kotlinmania.spring.boot.info.GitProperties;
+import io.github.kotlinmania.spring.boot.info.JavaInfo;
+import io.github.kotlinmania.spring.boot.info.OsInfo;
+import io.github.kotlinmania.spring.boot.info.ProcessInfo;
+import io.github.kotlinmania.spring.boot.info.SslInfo;
+import io.github.kotlinmania.spring.boot.ssl.SslBundles;
+import io.github.kotlinmania.spring.boot.test.context.runner.ApplicationContextRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 

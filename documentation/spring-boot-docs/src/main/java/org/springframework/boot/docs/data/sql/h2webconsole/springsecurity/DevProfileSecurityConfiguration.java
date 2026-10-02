@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.data.sql.h2webconsole.springsecurity;
+package io.github.kotlinmania.spring.boot.docs.data.sql.h2webconsole.springsecurity;
 
-import org.springframework.boot.security.autoconfigure.web.servlet.PathRequest;
+import io.github.kotlinmania.spring.boot.security.autoconfigure.web.servlet.PathRequest;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;

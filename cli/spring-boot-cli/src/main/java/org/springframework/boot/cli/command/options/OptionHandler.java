@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.cli.command.options;
+package io.github.kotlinmania.spring.boot.cli.command.options;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
@@ -38,8 +38,8 @@ import joptsimple.OptionSet;
 import joptsimple.OptionSpecBuilder;
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.cli.command.OptionParsingCommand;
-import org.springframework.boot.cli.command.status.ExitStatus;
+import io.github.kotlinmania.spring.boot.cli.command.OptionParsingCommand;
+import io.github.kotlinmania.spring.boot.cli.command.status.ExitStatus;
 
 /**
  * Delegate used by {@link OptionParsingCommand} to parse options and run the command.

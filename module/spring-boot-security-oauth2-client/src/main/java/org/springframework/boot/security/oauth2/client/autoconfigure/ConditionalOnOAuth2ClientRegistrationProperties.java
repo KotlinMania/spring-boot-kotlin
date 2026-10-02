@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.security.oauth2.client.autoconfigure;
+package io.github.kotlinmania.spring.boot.security.oauth2.client.autoconfigure;
 
 import java.lang.annotation.Documented;
 import java.lang.annotation.ElementType;

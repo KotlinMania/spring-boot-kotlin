@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.actuate.endpoint.web.annotation;
+package io.github.kotlinmania.spring.boot.actuate.endpoint.web.annotation;
 
-import org.springframework.boot.actuate.endpoint.EndpointsSupplier;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.EndpointsSupplier;
 
 /**
  * {@link EndpointsSupplier} for {@link ExposableControllerEndpoint controller endpoints}.

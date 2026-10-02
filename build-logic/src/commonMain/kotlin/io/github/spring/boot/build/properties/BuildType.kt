@@ -15,7 +15,9 @@
  */
 package org.springframework.boot.build.properties
 
-import org.gradle.kotlin.dsl.*
+package io.github.kotlinmania.spring.boot.build.properties;
+
+import java.util.Locale;
 
 /**
  * The type of build being performed.

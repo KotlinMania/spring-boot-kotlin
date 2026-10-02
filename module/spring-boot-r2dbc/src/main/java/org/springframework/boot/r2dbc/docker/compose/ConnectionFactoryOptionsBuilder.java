@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.r2dbc.docker.compose;
+package io.github.kotlinmania.spring.boot.r2dbc.docker.compose;
 
 import java.util.Collections;
 import java.util.LinkedHashMap;
@@ -24,7 +24,7 @@ import io.r2dbc.spi.ConnectionFactoryOptions;
 import io.r2dbc.spi.Option;
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.docker.compose.core.RunningService;
+import io.github.kotlinmania.spring.boot.docker.compose.core.RunningService;
 import org.springframework.util.Assert;
 import org.springframework.util.StringUtils;
 
@@ -38,7 +38,7 @@ import org.springframework.util.StringUtils;
  */
 class ConnectionFactoryOptionsBuilder {
 
-	private static final String PARAMETERS_LABEL = "org.springframework.boot.r2dbc.parameters";
+	private static final String PARAMETERS_LABEL = "io.github.kotlinmania.spring.boot.r2dbc.parameters";
 
 	private final String driver;
 

@@ -18,6 +18,6 @@
  * Remote restart server.
  */
 @NullMarked
-package org.springframework.boot.devtools.restart.server;
+package io.github.kotlinmania.spring.boot.devtools.restart.server;
 
 import org.jspecify.annotations.NullMarked;

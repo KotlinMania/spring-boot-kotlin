@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.io.caching.provider.cache2k
+package io.github.kotlinmania.spring.boot.docs.io.caching.provider.cache2k
 
-import org.springframework.boot.cache.autoconfigure.Cache2kBuilderCustomizer
+import io.github.kotlinmania.spring.boot.cache.autoconfigure.Cache2kBuilderCustomizer
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
 import java.util.concurrent.TimeUnit

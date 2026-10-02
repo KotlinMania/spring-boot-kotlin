@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.data.redis.autoconfigure;
+package io.github.kotlinmania.spring.boot.data.redis.autoconfigure;
 
 import io.lettuce.core.resource.ClientResources;
 import io.lettuce.core.resource.ClientResources.Builder;

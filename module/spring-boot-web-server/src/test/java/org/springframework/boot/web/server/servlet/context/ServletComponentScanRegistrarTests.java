@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.web.server.servlet.context;
+package io.github.kotlinmania.spring.boot.web.server.servlet.context;
 
 import java.util.function.Consumer;
 
@@ -26,7 +26,7 @@ import org.springframework.aot.hint.MemberCategory;
 import org.springframework.aot.hint.predicate.RuntimeHintsPredicates;
 import org.springframework.aot.test.generate.TestGenerationContext;
 import org.springframework.beans.factory.support.RootBeanDefinition;
-import org.springframework.boot.web.server.servlet.context.testcomponents.listener.TestListener;
+import io.github.kotlinmania.spring.boot.web.server.servlet.context.testcomponents.listener.TestListener;
 import org.springframework.context.ApplicationContextInitializer;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.Configuration;
@@ -115,7 +115,7 @@ class ServletComponentScanRegistrarTests {
 		ServletComponentRegisteringPostProcessor postProcessor = this.context
 			.getBean(ServletComponentRegisteringPostProcessor.class);
 		assertThat(postProcessor.getPackagesToScan())
-			.containsExactly("org.springframework.boot.web.server.servlet.context");
+			.containsExactly("io.github.kotlinmania.spring.boot.web.server.servlet.context");
 	}
 
 	@Test
@@ -124,7 +124,7 @@ class ServletComponentScanRegistrarTests {
 		ServletComponentRegisteringPostProcessor postProcessor = this.context
 			.getBean(ServletComponentRegisteringPostProcessor.class);
 		assertThat(postProcessor.getPackagesToScan()).containsExactlyInAnyOrder(
-				"org.springframework.boot.web.server.servlet.context", "com.example.foo", "com.example.bar");
+				"io.github.kotlinmania.spring.boot.web.server.servlet.context", "com.example.foo", "com.example.bar");
 	}
 
 	@Test
@@ -133,7 +133,7 @@ class ServletComponentScanRegistrarTests {
 		ServletComponentRegisteringPostProcessor postProcessor = this.context
 			.getBean(ServletComponentRegisteringPostProcessor.class);
 		assertThat(postProcessor.getPackagesToScan()).containsExactlyInAnyOrder(
-				"org.springframework.boot.web.server.servlet.context", "com.example.foo", "com.example.bar");
+				"io.github.kotlinmania.spring.boot.web.server.servlet.context", "com.example.foo", "com.example.bar");
 	}
 
 	@Test
@@ -225,13 +225,13 @@ class ServletComponentScanRegistrarTests {
 	}
 
 	@Configuration(proxyBeanMethods = false)
-	@ServletComponentScan("org.springframework.boot.web.server.servlet.context.testcomponents.listener")
+	@ServletComponentScan("io.github.kotlinmania.spring.boot.web.server.servlet.context.testcomponents.listener")
 	static class ScanListenerPackage {
 
 	}
 
 	@Configuration(proxyBeanMethods = false)
-	@ServletComponentScan("org.springframework.boot.web.server.servlet.context.testcomponents.servlet")
+	@ServletComponentScan("io.github.kotlinmania.spring.boot.web.server.servlet.context.testcomponents.servlet")
 	static class ScanServletPackage {
 
 	}

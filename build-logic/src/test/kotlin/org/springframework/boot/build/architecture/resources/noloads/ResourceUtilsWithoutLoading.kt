@@ -15,9 +15,20 @@
  */
 package org.springframework.boot.build.architecture.resources.noloads
 
-import org.springframework.util.ResourceUtils
-import java.net.MalformedURLException
-import java.net.URL
+package io.github.kotlinmania.spring.boot.build.architecture.resources.noloads;
+
+import java.net.MalformedURLException;
+import java.net.URL;
+
+import org.springframework.util.ResourceUtils;
+
+public class ResourceUtilsWithoutLoading {
+
+	void inspectResourceLocation() throws MalformedURLException {
+		ResourceUtils.isUrl("gradle.properties");
+		ResourceUtils.isFileURL(new URL("gradle.properties"));
+		"test".startsWith(ResourceUtils.FILE_URL_PREFIX);
+	}
 
 class ResourceUtilsWithoutLoading {
     @Throws(MalformedURLException::class)

@@ -18,6 +18,6 @@
  * Support for Docker Compose Artemis service connections.
  */
 @NullMarked
-package org.springframework.boot.artemis.docker.compose;
+package io.github.kotlinmania.spring.boot.artemis.docker.compose;
 
 import org.jspecify.annotations.NullMarked;

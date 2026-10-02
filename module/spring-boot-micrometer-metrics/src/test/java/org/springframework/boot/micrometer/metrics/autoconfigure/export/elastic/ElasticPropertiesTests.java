@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.micrometer.metrics.autoconfigure.export.elastic;
+package io.github.kotlinmania.spring.boot.micrometer.metrics.autoconfigure.export.elastic;
 
 import io.micrometer.elastic.ElasticConfig;
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.micrometer.metrics.autoconfigure.export.properties.StepRegistryPropertiesTests;
+import io.github.kotlinmania.spring.boot.micrometer.metrics.autoconfigure.export.properties.StepRegistryPropertiesTests;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

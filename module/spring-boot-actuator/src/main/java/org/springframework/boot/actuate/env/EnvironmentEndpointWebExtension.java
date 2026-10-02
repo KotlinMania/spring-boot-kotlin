@@ -14,20 +14,20 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.actuate.env;
+package io.github.kotlinmania.spring.boot.actuate.env;
 
 import java.util.Set;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.actuate.endpoint.SecurityContext;
-import org.springframework.boot.actuate.endpoint.Show;
-import org.springframework.boot.actuate.endpoint.annotation.ReadOperation;
-import org.springframework.boot.actuate.endpoint.annotation.Selector;
-import org.springframework.boot.actuate.endpoint.web.WebEndpointResponse;
-import org.springframework.boot.actuate.endpoint.web.annotation.EndpointWebExtension;
-import org.springframework.boot.actuate.env.EnvironmentEndpoint.EnvironmentDescriptor;
-import org.springframework.boot.actuate.env.EnvironmentEndpoint.EnvironmentEntryDescriptor;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.SecurityContext;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.Show;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.annotation.ReadOperation;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.annotation.Selector;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.web.WebEndpointResponse;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.web.annotation.EndpointWebExtension;
+import io.github.kotlinmania.spring.boot.actuate.env.EnvironmentEndpoint.EnvironmentDescriptor;
+import io.github.kotlinmania.spring.boot.actuate.env.EnvironmentEndpoint.EnvironmentEntryDescriptor;
 
 /**
  * {@link EndpointWebExtension @EndpointWebExtension} for the {@link EnvironmentEndpoint}.

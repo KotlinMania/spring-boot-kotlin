@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.features.springapplication.startuptracking
+package io.github.kotlinmania.spring.boot.docs.features.springapplication.startuptracking
 
-import org.springframework.boot.autoconfigure.SpringBootApplication
-import org.springframework.boot.context.metrics.buffering.BufferingApplicationStartup
-import org.springframework.boot.runApplication
+import io.github.kotlinmania.spring.boot.autoconfigure.SpringBootApplication
+import io.github.kotlinmania.spring.boot.context.metrics.buffering.BufferingApplicationStartup
+import io.github.kotlinmania.spring.boot.runApplication
 
 @SpringBootApplication
 class MyApplication

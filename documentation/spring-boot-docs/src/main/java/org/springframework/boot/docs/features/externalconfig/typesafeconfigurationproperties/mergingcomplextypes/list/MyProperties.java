@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.features.externalconfig.typesafeconfigurationproperties.mergingcomplextypes.list;
+package io.github.kotlinmania.spring.boot.docs.features.externalconfig.typesafeconfigurationproperties.mergingcomplextypes.list;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import org.springframework.boot.context.properties.ConfigurationProperties;
+import io.github.kotlinmania.spring.boot.context.properties.ConfigurationProperties;
 
 @ConfigurationProperties("my")
 public class MyProperties {

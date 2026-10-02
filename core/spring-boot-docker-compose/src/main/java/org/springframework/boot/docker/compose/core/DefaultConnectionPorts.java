@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docker.compose.core;
+package io.github.kotlinmania.spring.boot.docker.compose.core;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -24,10 +24,10 @@ import java.util.Map;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.docker.compose.core.DockerCliInspectResponse.Config;
-import org.springframework.boot.docker.compose.core.DockerCliInspectResponse.HostConfig;
-import org.springframework.boot.docker.compose.core.DockerCliInspectResponse.HostPort;
-import org.springframework.boot.docker.compose.core.DockerCliInspectResponse.NetworkSettings;
+import io.github.kotlinmania.spring.boot.docker.compose.core.DockerCliInspectResponse.Config;
+import io.github.kotlinmania.spring.boot.docker.compose.core.DockerCliInspectResponse.HostConfig;
+import io.github.kotlinmania.spring.boot.docker.compose.core.DockerCliInspectResponse.HostPort;
+import io.github.kotlinmania.spring.boot.docker.compose.core.DockerCliInspectResponse.NetworkSettings;
 import org.springframework.util.Assert;
 import org.springframework.util.CollectionUtils;
 import org.springframework.util.StringUtils;

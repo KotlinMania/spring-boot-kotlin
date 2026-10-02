@@ -1,2 +1,2 @@
-org.springframework.boot.jackson.JacksonComponent
+io.github.kotlinmania.spring.boot.jackson.JacksonComponent
 tools.jackson.databind.JacksonModule

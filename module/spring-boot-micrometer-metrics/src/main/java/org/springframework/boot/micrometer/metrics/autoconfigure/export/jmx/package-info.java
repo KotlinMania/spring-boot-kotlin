@@ -18,6 +18,6 @@
  * Support for exporting actuator metrics to JMX.
  */
 @NullMarked
-package org.springframework.boot.micrometer.metrics.autoconfigure.export.jmx;
+package io.github.kotlinmania.spring.boot.micrometer.metrics.autoconfigure.export.jmx;
 
 import org.jspecify.annotations.NullMarked;

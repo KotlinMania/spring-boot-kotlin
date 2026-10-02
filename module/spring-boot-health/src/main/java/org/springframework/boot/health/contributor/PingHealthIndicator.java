@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.health.contributor;
+package io.github.kotlinmania.spring.boot.health.contributor;
 
 /**
  * Auto-configured {@link HealthIndicator} that always returns {@link Status#UP}.

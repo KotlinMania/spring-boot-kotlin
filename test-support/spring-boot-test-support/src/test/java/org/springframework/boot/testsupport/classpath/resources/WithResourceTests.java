@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.testsupport.classpath.resources;
+package io.github.kotlinmania.spring.boot.testsupport.classpath.resources;
 
 import java.io.File;
 import java.io.IOException;
@@ -100,23 +100,23 @@ class WithResourceTests {
 	}
 
 	@Test
-	@WithResource(name = "org/springframework/boot/testsupport/classpath/resources/resource-1.txt",
+	@WithResource(name = "io.github.kotlinmania.spring.boot.testsupport/classpath/resources/resource-1.txt",
 			content = "from-with-resource")
 	void whenWithResourceCreatesResourceThatIsAvailableElsewhereBothResourcesCanBeLoaded() throws IOException {
 		Resource[] resources = new PathMatchingResourcePatternResolver()
-			.getResources("classpath*:org/springframework/boot/testsupport/classpath/resources/resource-1.txt");
+			.getResources("classpath*:io.github.kotlinmania.spring.boot.testsupport/classpath/resources/resource-1.txt");
 		assertThat(resources).hasSize(2);
 		assertThat(resources).extracting((resource) -> resource.getContentAsString(StandardCharsets.UTF_8))
 			.containsExactly("from-with-resource", "one");
 	}
 
 	@Test
-	@WithResource(name = "org/springframework/boot/testsupport/classpath/resources/resource-1.txt",
+	@WithResource(name = "io.github.kotlinmania.spring.boot.testsupport/classpath/resources/resource-1.txt",
 			content = "from-with-resource", additional = false)
 	void whenWithResourceCreatesResourceThatIsNotAdditionalThenResourceThatIsAvailableElsewhereCannotBeLoaded()
 			throws IOException {
 		Resource[] resources = new PathMatchingResourcePatternResolver()
-			.getResources("classpath*:org/springframework/boot/testsupport/classpath/resources/resource-1.txt");
+			.getResources("classpath*:io.github.kotlinmania.spring.boot.testsupport/classpath/resources/resource-1.txt");
 		assertThat(resources).hasSize(1);
 		assertThat(resources[0].getContentAsString(StandardCharsets.UTF_8)).isEqualTo("from-with-resource");
 	}

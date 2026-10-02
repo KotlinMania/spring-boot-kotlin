@@ -15,6 +15,6 @@
  */
 
 @NullMarked
-package org.springframework.boot.data.r2dbc.domain.city;
+package io.github.kotlinmania.spring.boot.data.r2dbc.domain.city;
 
 import org.jspecify.annotations.NullMarked;

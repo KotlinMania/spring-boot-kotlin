@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.ldap.health;
+package io.github.kotlinmania.spring.boot.ldap.health;
 
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.health.contributor.Health;
-import org.springframework.boot.health.contributor.Status;
+import io.github.kotlinmania.spring.boot.health.contributor.Health;
+import io.github.kotlinmania.spring.boot.health.contributor.Status;
 import org.springframework.ldap.CommunicationException;
 import org.springframework.ldap.core.ContextExecutor;
 import org.springframework.ldap.core.LdapTemplate;

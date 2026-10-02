@@ -18,6 +18,6 @@
  * Main entry point of the Spring Boot CLI.
  */
 @NullMarked
-package org.springframework.boot.cli;
+package io.github.kotlinmania.spring.boot.cli;
 
 import org.jspecify.annotations.NullMarked;

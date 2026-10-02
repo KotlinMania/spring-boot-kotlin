@@ -18,6 +18,6 @@
  * Support for testcontainers MongoDB service connections.
  */
 @NullMarked
-package org.springframework.boot.mongodb.testcontainers;
+package io.github.kotlinmania.spring.boot.mongodb.testcontainers;
 
 import org.jspecify.annotations.NullMarked;

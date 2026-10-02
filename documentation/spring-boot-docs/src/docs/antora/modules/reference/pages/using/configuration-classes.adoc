@@ -2,7 +2,7 @@
 = Configuration Classes
 
 Spring Boot favors Java-based configuration.
-Although it is possible to use javadoc:org.springframework.boot.SpringApplication[] with XML sources, we generally recommend that your primary source be a single javadoc:org.springframework.context.annotation.Configuration[format=annotation] class.
+Although it is possible to use javadoc:io.github.kotlinmania.spring.boot.SpringApplication[] with XML sources, we generally recommend that your primary source be a single javadoc:org.springframework.context.annotation.Configuration[format=annotation] class.
 Usually the class that defines the `main` method is a good candidate as the primary javadoc:org.springframework.context.annotation.Configuration[format=annotation].
 
 TIP: Many Spring configuration examples have been published on the Internet that use XML configuration.

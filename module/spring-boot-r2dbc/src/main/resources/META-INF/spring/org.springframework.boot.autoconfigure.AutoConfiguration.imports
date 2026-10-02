@@ -1,7 +1,7 @@
-org.springframework.boot.r2dbc.autoconfigure.R2dbcAutoConfiguration
-org.springframework.boot.r2dbc.autoconfigure.R2dbcInitializationAutoConfiguration
-org.springframework.boot.r2dbc.autoconfigure.R2dbcProxyAutoConfiguration
-org.springframework.boot.r2dbc.autoconfigure.R2dbcTransactionManagerAutoConfiguration
-org.springframework.boot.r2dbc.autoconfigure.health.ConnectionFactoryHealthContributorAutoConfiguration
-org.springframework.boot.r2dbc.autoconfigure.metrics.ConnectionPoolMetricsAutoConfiguration
-org.springframework.boot.r2dbc.autoconfigure.observation.R2dbcObservationAutoConfiguration
+io.github.kotlinmania.spring.boot.r2dbc.autoconfigure.R2dbcAutoConfiguration
+io.github.kotlinmania.spring.boot.r2dbc.autoconfigure.R2dbcInitializationAutoConfiguration
+io.github.kotlinmania.spring.boot.r2dbc.autoconfigure.R2dbcProxyAutoConfiguration
+io.github.kotlinmania.spring.boot.r2dbc.autoconfigure.R2dbcTransactionManagerAutoConfiguration
+io.github.kotlinmania.spring.boot.r2dbc.autoconfigure.health.ConnectionFactoryHealthContributorAutoConfiguration
+io.github.kotlinmania.spring.boot.r2dbc.autoconfigure.metrics.ConnectionPoolMetricsAutoConfiguration
+io.github.kotlinmania.spring.boot.r2dbc.autoconfigure.observation.R2dbcObservationAutoConfiguration

@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.gradle.docs;
+package io.github.kotlinmania.spring.boot.gradle.docs;
 
 import org.junit.jupiter.api.TestTemplate;
 import org.junit.jupiter.api.extension.ExtendWith;
 
-import org.springframework.boot.gradle.junit.GradleMultiDslExtension;
-import org.springframework.boot.testsupport.gradle.testkit.Dsl;
-import org.springframework.boot.testsupport.gradle.testkit.GradleBuild;
+import io.github.kotlinmania.spring.boot.gradle.junit.GradleMultiDslExtension;
+import io.github.kotlinmania.spring.boot.testsupport.gradle.testkit.Dsl;
+import io.github.kotlinmania.spring.boot.testsupport.gradle.testkit.GradleBuild;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assumptions.assumingThat;
@@ -54,7 +54,7 @@ class ManagingDependenciesDocumentationTests {
 	void dependencyManagementInIsolation() {
 		assertThat(this.gradleBuild.script(Examples.DIR + "managing-dependencies/configure-bom")
 			.build("dependencyManagement")
-			.getOutput()).contains("org.springframework.boot:spring-boot-starter ");
+			.getOutput()).contains("io.github.kotlinmania.spring.boot.spring-boot-starter ");
 	}
 
 	@TestTemplate
@@ -64,14 +64,14 @@ class ManagingDependenciesDocumentationTests {
 						this.gradleBuild.script(Examples.DIR + "managing-dependencies/configure-bom-with-plugins")
 							.build("dependencyManagement")
 							.getOutput())
-					.contains("org.springframework.boot:spring-boot-starter TEST-SNAPSHOT"));
+					.contains("io.github.kotlinmania.spring.boot.spring-boot-starter TEST-SNAPSHOT"));
 	}
 
 	@TestTemplate
 	void configurePlatform() {
 		assertThat(this.gradleBuild.script(Examples.DIR + "managing-dependencies/configure-platform")
 			.build("dependencies", "--configuration", "compileClasspath")
-			.getOutput()).contains("org.springframework.boot:spring-boot-starter ");
+			.getOutput()).contains("io.github.kotlinmania.spring.boot.spring-boot-starter ");
 	}
 
 	@TestTemplate

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.cli.command.shell;
+package io.github.kotlinmania.spring.boot.cli.command.shell;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -23,10 +23,10 @@ import java.util.List;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.cli.command.Command;
-import org.springframework.boot.cli.command.options.OptionHelp;
-import org.springframework.boot.cli.command.status.ExitStatus;
-import org.springframework.boot.loader.tools.JavaExecutable;
+import io.github.kotlinmania.spring.boot.cli.command.Command;
+import io.github.kotlinmania.spring.boot.cli.command.options.OptionHelp;
+import io.github.kotlinmania.spring.boot.cli.command.status.ExitStatus;
+import io.github.kotlinmania.spring.boot.loader.tools.JavaExecutable;
 
 /**
  * Decorate an existing command to run it by forking the current java process.
@@ -35,7 +35,7 @@ import org.springframework.boot.loader.tools.JavaExecutable;
  */
 class ForkProcessCommand extends RunProcessCommand {
 
-	private static final String MAIN_CLASS = "org.springframework.boot.loader.launch.JarLauncher";
+	private static final String MAIN_CLASS = "io.github.kotlinmania.spring.boot.loader.launch.JarLauncher";
 
 	private final Command command;
 

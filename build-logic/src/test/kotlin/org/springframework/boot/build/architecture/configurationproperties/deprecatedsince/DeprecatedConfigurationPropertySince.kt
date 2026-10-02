@@ -15,7 +15,20 @@
  */
 package org.springframework.boot.build.architecture.configurationproperties.deprecatedsince
 
-import org.springframework.boot.build.architecture.annotations.TestDeprecatedConfigurationProperty
+package io.github.kotlinmania.spring.boot.build.architecture.configurationproperties.bindingnonstatic;
+
+import java.util.List;
+
+import io.github.kotlinmania.spring.boot.build.architecture.annotations.TestConfigurationPropertiesBinding;
+import org.springframework.context.annotation.Bean;
+
+public class BindingMethodNonStatic {
+
+	@Bean
+	@TestConfigurationPropertiesBinding
+	public List<String> binder() {
+		return List.of("hello", "world");
+	}
 
 class DeprecatedConfigurationPropertySince {
     @get:Deprecated("")

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.data.autoconfigure.metrics;
+package io.github.kotlinmania.spring.boot.data.autoconfigure.metrics;
 
 import java.util.Collection;
 import java.util.Collections;
@@ -31,14 +31,14 @@ import io.micrometer.core.instrument.simple.SimpleMeterRegistry;
 import org.junit.jupiter.api.Test;
 
 import org.springframework.beans.factory.ObjectFactory;
-import org.springframework.boot.autoconfigure.AutoConfigurations;
-import org.springframework.boot.data.metrics.AutoTimer;
-import org.springframework.boot.data.metrics.DefaultRepositoryTagsProvider;
-import org.springframework.boot.data.metrics.MetricsRepositoryMethodInvocationListener;
-import org.springframework.boot.data.metrics.RepositoryTagsProvider;
-import org.springframework.boot.micrometer.metrics.autoconfigure.MetricsAutoConfiguration;
-import org.springframework.boot.test.context.assertj.AssertableApplicationContext;
-import org.springframework.boot.test.context.runner.ApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurations;
+import io.github.kotlinmania.spring.boot.data.metrics.AutoTimer;
+import io.github.kotlinmania.spring.boot.data.metrics.DefaultRepositoryTagsProvider;
+import io.github.kotlinmania.spring.boot.data.metrics.MetricsRepositoryMethodInvocationListener;
+import io.github.kotlinmania.spring.boot.data.metrics.RepositoryTagsProvider;
+import io.github.kotlinmania.spring.boot.micrometer.metrics.autoconfigure.MetricsAutoConfiguration;
+import io.github.kotlinmania.spring.boot.test.context.assertj.AssertableApplicationContext;
+import io.github.kotlinmania.spring.boot.test.context.runner.ApplicationContextRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.repository.Repository;

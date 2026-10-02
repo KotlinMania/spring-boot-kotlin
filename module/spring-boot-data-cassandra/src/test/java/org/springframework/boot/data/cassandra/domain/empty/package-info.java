@@ -15,6 +15,6 @@
  */
 
 @NullMarked
-package org.springframework.boot.data.cassandra.domain.empty;
+package io.github.kotlinmania.spring.boot.data.cassandra.domain.empty;
 
 import org.jspecify.annotations.NullMarked;

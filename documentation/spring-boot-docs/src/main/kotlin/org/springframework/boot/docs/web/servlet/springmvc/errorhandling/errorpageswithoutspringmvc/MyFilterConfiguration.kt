@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.web.servlet.springmvc.errorhandling.errorpageswithoutspringmvc
+package io.github.kotlinmania.spring.boot.docs.web.servlet.springmvc.errorhandling.errorpageswithoutspringmvc
 
 import jakarta.servlet.DispatcherType
-import org.springframework.boot.web.servlet.FilterRegistrationBean
+import io.github.kotlinmania.spring.boot.web.servlet.FilterRegistrationBean
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
 import java.util.EnumSet

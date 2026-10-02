@@ -18,6 +18,6 @@
  * Auto-configuration for Spring Integration metrics.
  */
 @NullMarked
-package org.springframework.boot.integration.autoconfigure.metrics;
+package io.github.kotlinmania.spring.boot.integration.autoconfigure.metrics;
 
 import org.jspecify.annotations.NullMarked;

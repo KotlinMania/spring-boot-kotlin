@@ -14,26 +14,26 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.jetty.autoconfigure.reactive;
+package io.github.kotlinmania.spring.boot.jetty.autoconfigure.reactive;
 
 import org.eclipse.jetty.ee11.servlet.ServletHolder;
 import org.eclipse.jetty.ee11.websocket.jakarta.server.config.JakartaWebSocketServletContainerInitializer;
 import org.eclipse.jetty.server.Server;
 
 import org.springframework.beans.factory.ObjectProvider;
-import org.springframework.boot.autoconfigure.AutoConfiguration;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnWebApplication;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnWebApplication.Type;
-import org.springframework.boot.context.properties.EnableConfigurationProperties;
-import org.springframework.boot.jetty.JettyServerCustomizer;
-import org.springframework.boot.jetty.autoconfigure.JettyServerProperties;
-import org.springframework.boot.jetty.autoconfigure.JettyWebServerConfiguration;
-import org.springframework.boot.jetty.reactive.JettyReactiveWebServerFactory;
-import org.springframework.boot.web.server.autoconfigure.reactive.ReactiveWebServerConfiguration;
-import org.springframework.boot.web.server.reactive.ReactiveWebServerFactory;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.EnableAutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnClass;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnMissingBean;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnWebApplication;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnWebApplication.Type;
+import io.github.kotlinmania.spring.boot.context.properties.EnableConfigurationProperties;
+import io.github.kotlinmania.spring.boot.jetty.JettyServerCustomizer;
+import io.github.kotlinmania.spring.boot.jetty.autoconfigure.JettyServerProperties;
+import io.github.kotlinmania.spring.boot.jetty.autoconfigure.JettyWebServerConfiguration;
+import io.github.kotlinmania.spring.boot.jetty.reactive.JettyReactiveWebServerFactory;
+import io.github.kotlinmania.spring.boot.web.server.autoconfigure.reactive.ReactiveWebServerConfiguration;
+import io.github.kotlinmania.spring.boot.web.server.reactive.ReactiveWebServerFactory;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;

@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.data.mongodb.test.autoconfigure;
+package io.github.kotlinmania.spring.boot.data.mongodb.test.autoconfigure;
 
-import org.springframework.boot.autoconfigure.SpringBootApplication;
+import io.github.kotlinmania.spring.boot.autoconfigure.SpringBootApplication;
 
 /**
  * Test application for testing {@link DataMongoTest @DataMongoTest}.

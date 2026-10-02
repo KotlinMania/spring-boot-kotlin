@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.buildpack.platform.docker.transport;
+package io.github.kotlinmania.spring.boot.buildpack.platform.docker.transport;
 
 import java.util.function.Consumer;
 
@@ -23,9 +23,9 @@ import javax.net.ssl.SSLContext;
 import org.apache.hc.core5.http.HttpHost;
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.buildpack.platform.docker.configuration.DockerConnectionConfiguration;
-import org.springframework.boot.buildpack.platform.docker.configuration.ResolvedDockerHost;
-import org.springframework.boot.buildpack.platform.docker.ssl.SslContextFactory;
+import io.github.kotlinmania.spring.boot.buildpack.platform.docker.configuration.DockerConnectionConfiguration;
+import io.github.kotlinmania.spring.boot.buildpack.platform.docker.configuration.ResolvedDockerHost;
+import io.github.kotlinmania.spring.boot.buildpack.platform.docker.ssl.SslContextFactory;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatIllegalStateException;

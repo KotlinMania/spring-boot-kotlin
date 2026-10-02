@@ -14,15 +14,15 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.webmvc.actuate.endpoint.web;
+package io.github.kotlinmania.spring.boot.webmvc.actuate.endpoint.web;
 
 import org.junit.jupiter.api.Test;
 
 import org.springframework.aot.hint.RuntimeHints;
 import org.springframework.aot.hint.predicate.RuntimeHintsPredicates;
-import org.springframework.boot.actuate.endpoint.web.Link;
-import org.springframework.boot.webmvc.actuate.endpoint.web.WebMvcEndpointHandlerMapping.WebMvcEndpointHandlerMappingRuntimeHints;
-import org.springframework.boot.webmvc.actuate.endpoint.web.WebMvcEndpointHandlerMapping.WebMvcLinksHandler;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.web.Link;
+import io.github.kotlinmania.spring.boot.webmvc.actuate.endpoint.web.WebMvcEndpointHandlerMapping.WebMvcEndpointHandlerMappingRuntimeHints;
+import io.github.kotlinmania.spring.boot.webmvc.actuate.endpoint.web.WebMvcEndpointHandlerMapping.WebMvcLinksHandler;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

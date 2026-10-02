@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.jersey.actuate.endpoint.web.test;
+package io.github.kotlinmania.spring.boot.jersey.actuate.endpoint.web.test;
 
 import java.util.Collection;
 import java.util.Collections;
@@ -23,16 +23,16 @@ import java.util.HashSet;
 import org.glassfish.jersey.server.ResourceConfig;
 import org.glassfish.jersey.server.model.Resource;
 
-import org.springframework.boot.actuate.endpoint.invoke.convert.ConversionServiceParameterValueMapper;
-import org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver;
-import org.springframework.boot.actuate.endpoint.web.EndpointMapping;
-import org.springframework.boot.actuate.endpoint.web.EndpointMediaTypes;
-import org.springframework.boot.actuate.endpoint.web.annotation.WebEndpointDiscoverer;
-import org.springframework.boot.autoconfigure.ImportAutoConfiguration;
-import org.springframework.boot.jersey.actuate.endpoint.web.JerseyEndpointResourceFactory;
-import org.springframework.boot.jersey.autoconfigure.JerseyAutoConfiguration;
-import org.springframework.boot.jersey.autoconfigure.ResourceConfigCustomizer;
-import org.springframework.boot.tomcat.servlet.TomcatServletWebServerFactory;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.invoke.convert.ConversionServiceParameterValueMapper;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.web.EndpointLinksResolver;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.web.EndpointMapping;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.web.EndpointMediaTypes;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.web.annotation.WebEndpointDiscoverer;
+import io.github.kotlinmania.spring.boot.autoconfigure.ImportAutoConfiguration;
+import io.github.kotlinmania.spring.boot.jersey.actuate.endpoint.web.JerseyEndpointResourceFactory;
+import io.github.kotlinmania.spring.boot.jersey.autoconfigure.JerseyAutoConfiguration;
+import io.github.kotlinmania.spring.boot.jersey.autoconfigure.ResourceConfigCustomizer;
+import io.github.kotlinmania.spring.boot.tomcat.servlet.TomcatServletWebServerFactory;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -45,7 +45,7 @@ import org.springframework.context.annotation.Configuration;
  */
 @SuppressWarnings("removal")
 @Configuration(proxyBeanMethods = false)
-@ImportAutoConfiguration({ org.springframework.boot.jackson2.autoconfigure.Jackson2AutoConfiguration.class,
+@ImportAutoConfiguration({ io.github.kotlinmania.spring.boot.jackson2.autoconfigure.Jackson2AutoConfiguration.class,
 		JerseyAutoConfiguration.class })
 class JerseyEndpointConfiguration {
 

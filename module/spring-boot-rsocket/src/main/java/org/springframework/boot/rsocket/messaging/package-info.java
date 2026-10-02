@@ -18,6 +18,6 @@
  * Support for RSocket-based messaging.
  */
 @NullMarked
-package org.springframework.boot.rsocket.messaging;
+package io.github.kotlinmania.spring.boot.rsocket.messaging;
 
 import org.jspecify.annotations.NullMarked;

@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.test.context.bootstrap;
+package io.github.kotlinmania.spring.boot.test.context.bootstrap;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTestContextBootstrapper;
-import org.springframework.boot.test.context.TestConfiguration;
+import io.github.kotlinmania.spring.boot.test.context.SpringBootTestContextBootstrapper;
+import io.github.kotlinmania.spring.boot.test.context.TestConfiguration;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.test.context.BootstrapWith;

@@ -17,10 +17,10 @@
 /**
  * Reactive and servlet web server implementations backed by Tomcat.
  *
- * @see org.springframework.boot.tomcat.servlet.TomcatServletWebServerFactory
- * @see org.springframework.boot.tomcat.reactive.TomcatReactiveWebServerFactory
+ * @see io.github.kotlinmania.spring.boot.tomcat.servlet.TomcatServletWebServerFactory
+ * @see io.github.kotlinmania.spring.boot.tomcat.reactive.TomcatReactiveWebServerFactory
  */
 @NullMarked
-package org.springframework.boot.tomcat;
+package io.github.kotlinmania.spring.boot.tomcat;
 
 import org.jspecify.annotations.NullMarked;

@@ -3877,7 +3877,7 @@
           "source": "syft-generated"
         }
       ],
-      "purl": "pkg:maven/org.springframework.boot.loader.launch.JarLauncher/sbom-test-gradle@0.0.1-SNAPSHOT",
+      "purl": "pkg:maven/io.github.kotlinmania.spring.boot.loader.launch.JarLauncher/sbom-test-gradle@0.0.1-SNAPSHOT",
       "metadataType": "java-archive",
       "metadata": {
         "virtualPath": "/sbom-test-gradle-0.0.1-SNAPSHOT.jar",
@@ -3889,7 +3889,7 @@
             },
             {
               "key": "Main-Class",
-              "value": "org.springframework.boot.loader.launch.JarLauncher"
+              "value": "io.github.kotlinmania.spring.boot.loader.launch.JarLauncher"
             },
             {
               "key": "Start-Class",
@@ -4564,7 +4564,7 @@
           "source": "syft-generated"
         }
       ],
-      "purl": "pkg:maven/org.springframework.boot/spring-boot@3.3.0-SNAPSHOT",
+      "purl": "pkg:maven/io.github.kotlinmania.spring.boot.spring-boot@3.3.0-SNAPSHOT",
       "metadataType": "java-archive",
       "metadata": {
         "virtualPath": "/sbom-test-gradle-0.0.1-SNAPSHOT.jar:BOOT-INF/lib/spring-boot-3.3.0-SNAPSHOT.jar",
@@ -4723,7 +4723,7 @@
           "source": "syft-generated"
         }
       ],
-      "purl": "pkg:maven/org.springframework.boot/spring-boot-actuator@3.3.0-SNAPSHOT",
+      "purl": "pkg:maven/io.github.kotlinmania.spring.boot.spring-boot-actuator@3.3.0-SNAPSHOT",
       "metadataType": "java-archive",
       "metadata": {
         "virtualPath": "/sbom-test-gradle-0.0.1-SNAPSHOT.jar:BOOT-INF/lib/spring-boot-actuator-3.3.0-SNAPSHOT.jar",
@@ -4906,7 +4906,7 @@
           "source": "syft-generated"
         }
       ],
-      "purl": "pkg:maven/org.springframework.boot/spring-boot-actuator-autoconfigure@3.3.0-SNAPSHOT",
+      "purl": "pkg:maven/io.github.kotlinmania.spring.boot.spring-boot-actuator-autoconfigure@3.3.0-SNAPSHOT",
       "metadataType": "java-archive",
       "metadata": {
         "virtualPath": "/sbom-test-gradle-0.0.1-SNAPSHOT.jar:BOOT-INF/lib/spring-boot-actuator-autoconfigure-3.3.0-SNAPSHOT.jar",
@@ -5065,7 +5065,7 @@
           "source": "syft-generated"
         }
       ],
-      "purl": "pkg:maven/org.springframework.boot/spring-boot-autoconfigure@3.3.0-SNAPSHOT",
+      "purl": "pkg:maven/io.github.kotlinmania.spring.boot.spring-boot-autoconfigure@3.3.0-SNAPSHOT",
       "metadataType": "java-archive",
       "metadata": {
         "virtualPath": "/sbom-test-gradle-0.0.1-SNAPSHOT.jar:BOOT-INF/lib/spring-boot-autoconfigure-3.3.0-SNAPSHOT.jar",
@@ -5248,7 +5248,7 @@
           "source": "syft-generated"
         }
       ],
-      "purl": "pkg:maven/org.springframework.boot/spring-boot-jarmode-layertools@3.3.0-SNAPSHOT",
+      "purl": "pkg:maven/io.github.kotlinmania.spring.boot.spring-boot-jarmode-layertools@3.3.0-SNAPSHOT",
       "metadataType": "java-archive",
       "metadata": {
         "virtualPath": "/sbom-test-gradle-0.0.1-SNAPSHOT.jar:BOOT-INF/lib/spring-boot-jarmode-layertools-3.3.0-SNAPSHOT.jar",

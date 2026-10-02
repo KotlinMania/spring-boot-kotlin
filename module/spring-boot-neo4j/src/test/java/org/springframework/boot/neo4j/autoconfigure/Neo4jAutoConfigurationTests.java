@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.neo4j.autoconfigure;
+package io.github.kotlinmania.spring.boot.neo4j.autoconfigure;
 
 import java.io.File;
 import java.io.IOException;
@@ -32,13 +32,13 @@ import org.neo4j.driver.Config;
 import org.neo4j.driver.Config.ConfigBuilder;
 import org.neo4j.driver.Driver;
 
-import org.springframework.boot.autoconfigure.AutoConfigurations;
-import org.springframework.boot.context.properties.source.InvalidConfigurationPropertyValueException;
-import org.springframework.boot.neo4j.autoconfigure.Neo4jAutoConfiguration.PropertiesNeo4jConnectionDetails;
-import org.springframework.boot.neo4j.autoconfigure.Neo4jProperties.Authentication;
-import org.springframework.boot.neo4j.autoconfigure.Neo4jProperties.Security.TrustStrategy;
-import org.springframework.boot.test.context.FilteredClassLoader;
-import org.springframework.boot.test.context.runner.ApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurations;
+import io.github.kotlinmania.spring.boot.context.properties.source.InvalidConfigurationPropertyValueException;
+import io.github.kotlinmania.spring.boot.neo4j.autoconfigure.Neo4jAutoConfiguration.PropertiesNeo4jConnectionDetails;
+import io.github.kotlinmania.spring.boot.neo4j.autoconfigure.Neo4jProperties.Authentication;
+import io.github.kotlinmania.spring.boot.neo4j.autoconfigure.Neo4jProperties.Security.TrustStrategy;
+import io.github.kotlinmania.spring.boot.test.context.FilteredClassLoader;
+import io.github.kotlinmania.spring.boot.test.context.runner.ApplicationContextRunner;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatExceptionOfType;

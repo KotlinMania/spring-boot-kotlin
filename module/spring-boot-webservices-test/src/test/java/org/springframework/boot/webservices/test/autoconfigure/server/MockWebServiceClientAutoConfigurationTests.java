@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.webservices.test.autoconfigure.server;
+package io.github.kotlinmania.spring.boot.webservices.test.autoconfigure.server;
 
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.autoconfigure.AutoConfigurations;
-import org.springframework.boot.test.context.FilteredClassLoader;
-import org.springframework.boot.test.context.runner.WebApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurations;
+import io.github.kotlinmania.spring.boot.test.context.FilteredClassLoader;
+import io.github.kotlinmania.spring.boot.test.context.runner.WebApplicationContextRunner;
 import org.springframework.ws.test.server.MockWebServiceClient;
 
 import static org.assertj.core.api.Assertions.assertThat;

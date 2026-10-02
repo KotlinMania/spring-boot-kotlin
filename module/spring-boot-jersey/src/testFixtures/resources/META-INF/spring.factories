@@ -1,2 +1,2 @@
-org.springframework.boot.actuate.endpoint.web.test.WebEndpointInfrastructureProvider=\
-org.springframework.boot.jersey.actuate.endpoint.web.test.JerseyWebEndpointInfrastructureProvider
+io.github.kotlinmania.spring.boot.actuate.endpoint.web.test.WebEndpointInfrastructureProvider=\
+io.github.kotlinmania.spring.boot.jersey.actuate.endpoint.web.test.JerseyWebEndpointInfrastructureProvider

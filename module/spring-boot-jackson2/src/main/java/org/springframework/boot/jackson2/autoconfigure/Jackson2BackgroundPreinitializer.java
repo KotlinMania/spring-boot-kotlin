@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.jackson2.autoconfigure;
+package io.github.kotlinmania.spring.boot.jackson2.autoconfigure;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import org.springframework.boot.autoconfigure.preinitialize.BackgroundPreinitializer;
+import io.github.kotlinmania.spring.boot.autoconfigure.preinitialize.BackgroundPreinitializer;
 
 /**
  * {@link BackgroundPreinitializer} for Jackson 2.

@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.testing.springbootapplications.autoconfiguredspringrestdocs.withwebtestclient
+package io.github.kotlinmania.spring.boot.docs.testing.springbootapplications.autoconfiguredspringrestdocs.withwebtestclient
 
-import org.springframework.boot.restdocs.test.autoconfigure.RestDocsWebTestClientConfigurationCustomizer
-import org.springframework.boot.test.context.TestConfiguration
+import io.github.kotlinmania.spring.boot.restdocs.test.autoconfigure.RestDocsWebTestClientConfigurationCustomizer
+import io.github.kotlinmania.spring.boot.test.context.TestConfiguration
 import org.springframework.restdocs.webtestclient.WebTestClientRestDocumentationConfigurer
 
 @TestConfiguration(proxyBeanMethods = false)

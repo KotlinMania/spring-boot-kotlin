@@ -19,6 +19,6 @@
  * {@link org.springframework.web.client.RestTemplate}.
  */
 @NullMarked
-package org.springframework.boot.resttestclient;
+package io.github.kotlinmania.spring.boot.resttestclient;
 
 import org.jspecify.annotations.NullMarked;

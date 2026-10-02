@@ -18,6 +18,6 @@
  * Auto-configuration for Spring Data Neo4j.
  */
 @NullMarked
-package org.springframework.boot.data.neo4j.autoconfigure;
+package io.github.kotlinmania.spring.boot.data.neo4j.autoconfigure;
 
 import org.jspecify.annotations.NullMarked;

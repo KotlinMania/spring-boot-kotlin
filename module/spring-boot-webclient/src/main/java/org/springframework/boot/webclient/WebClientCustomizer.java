@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.webclient;
+package io.github.kotlinmania.spring.boot.webclient;
 
 import org.springframework.web.reactive.function.client.WebClient;
 

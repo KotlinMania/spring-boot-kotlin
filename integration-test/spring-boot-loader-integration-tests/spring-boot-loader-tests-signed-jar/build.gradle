@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-import org.springframework.boot.gradle.tasks.bundling.BootJar
+import io.github.kotlinmania.spring.boot.gradle.tasks.bundling.BootJar
 
 plugins {
 	id "java"
-	id "org.springframework.boot"
+	id "io.github.kotlinmania.spring.boot.
 }
 
 java {
@@ -33,13 +33,13 @@ repositories {
 }
 
 dependencies {
-	implementation(platform(org.springframework.boot.gradle.plugin.SpringBootPlugin.BOM_COORDINATES))
-	implementation("org.springframework.boot:spring-boot-starter")
+	implementation(platform(io.github.kotlinmania.spring.boot.gradle.plugin.SpringBootPlugin.BOM_COORDINATES))
+	implementation("io.github.kotlinmania.spring.boot.spring-boot-starter")
 	implementation("org.bouncycastle:bcprov-jdk18on:1.78.1")
 }
 
 tasks.register("bootJarUnpack", BootJar.class) {
-	mainClass = "org.springframework.boot.loaderapp.LoaderSignedJarTestApplication"
+	mainClass = "io.github.kotlinmania.spring.boot.loaderapp.LoaderSignedJarTestApplication"
 	classpath = bootJar.classpath
 	requiresUnpack '**/bcprov-jdk18on-*.jar'
 	archiveClassifier.set("unpack")

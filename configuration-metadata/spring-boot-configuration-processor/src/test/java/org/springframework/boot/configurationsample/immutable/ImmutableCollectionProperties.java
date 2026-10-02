@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.configurationsample.immutable;
+package io.github.kotlinmania.spring.boot.configurationsample.immutable;
 
 import java.time.Duration;
 import java.util.List;
 
-import org.springframework.boot.configurationsample.TestDefaultValue;
+import io.github.kotlinmania.spring.boot.configurationsample.TestDefaultValue;
 
 /**
  * Simple immutable properties with collections types and defaults.

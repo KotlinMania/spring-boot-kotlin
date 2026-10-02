@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.howto.messaging.disabletransactedjmssession;
+package io.github.kotlinmania.spring.boot.docs.howto.messaging.disabletransactedjmssession;
 
 import jakarta.jms.ConnectionFactory;
 
-import org.springframework.boot.jms.ConnectionFactoryUnwrapper;
-import org.springframework.boot.jms.autoconfigure.DefaultJmsListenerContainerFactoryConfigurer;
+import io.github.kotlinmania.spring.boot.jms.ConnectionFactoryUnwrapper;
+import io.github.kotlinmania.spring.boot.jms.autoconfigure.DefaultJmsListenerContainerFactoryConfigurer;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.jms.config.DefaultJmsListenerContainerFactory;

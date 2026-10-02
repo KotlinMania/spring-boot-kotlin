@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.howto.jersey.springsecurity;
+package io.github.kotlinmania.spring.boot.docs.howto.jersey.springsecurity;
 
 class Endpoint {
 

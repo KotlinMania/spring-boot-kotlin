@@ -13,11 +13,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.springframework.boot.docs.testing.testcontainers.springbeans
+package io.github.kotlinmania.spring.boot.docs.testing.testcontainers.springbeans
 
 import org.junit.jupiter.api.Test
 import org.springframework.beans.factory.annotation.Autowired
-import org.springframework.boot.test.context.SpringBootTest
+import io.github.kotlinmania.spring.boot.test.context.SpringBootTest
 import org.springframework.context.annotation.Import
 import org.testcontainers.mongodb.MongoDBContainer
 

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.autoconfigureprocessor;
+package io.github.kotlinmania.spring.boot.autoconfigureprocessor;
 
 import java.io.IOException;
 import java.io.OutputStreamWriter;
@@ -54,14 +54,14 @@ import javax.tools.StandardLocation;
  * @author Moritz Halbritter
  * @since 1.5.0
  */
-@SupportedAnnotationTypes({ "org.springframework.boot.autoconfigure.condition.ConditionalOnClass",
-		"org.springframework.boot.autoconfigure.condition.ConditionalOnBean",
-		"org.springframework.boot.autoconfigure.condition.ConditionalOnSingleCandidate",
-		"org.springframework.boot.autoconfigure.condition.ConditionalOnWebApplication",
-		"org.springframework.boot.autoconfigure.AutoConfigureBefore",
-		"org.springframework.boot.autoconfigure.AutoConfigureAfter",
-		"org.springframework.boot.autoconfigure.AutoConfigureOrder",
-		"org.springframework.boot.autoconfigure.AutoConfiguration" })
+@SupportedAnnotationTypes({ "io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnClass",
+		"io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnBean",
+		"io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnSingleCandidate",
+		"io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnWebApplication",
+		"io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigureBefore",
+		"io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigureAfter",
+		"io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigureOrder",
+		"io.github.kotlinmania.spring.boot.autoconfigure.AutoConfiguration" })
 public class AutoConfigureAnnotationProcessor extends AbstractProcessor {
 
 	protected static final String PROPERTIES_PATH = "META-INF/spring-autoconfigure-metadata.properties";
@@ -82,7 +82,7 @@ public class AutoConfigureAnnotationProcessor extends AbstractProcessor {
 	}
 
 	private void addConditionPropertyGenerators(List<PropertyGenerator> generators) {
-		String annotationPackage = "org.springframework.boot.autoconfigure.condition";
+		String annotationPackage = "io.github.kotlinmania.spring.boot.autoconfigure.condition";
 		generators.add(PropertyGenerator.of(annotationPackage, "ConditionalOnClass")
 			.withAnnotation(new OnClassConditionValueExtractor()));
 		generators.add(PropertyGenerator.of(annotationPackage, "ConditionalOnBean")
@@ -94,7 +94,7 @@ public class AutoConfigureAnnotationProcessor extends AbstractProcessor {
 	}
 
 	private void addAutoConfigurePropertyGenerators(List<PropertyGenerator> generators) {
-		String annotationPackage = "org.springframework.boot.autoconfigure";
+		String annotationPackage = "io.github.kotlinmania.spring.boot.autoconfigure";
 		generators.add(PropertyGenerator.of(annotationPackage, "AutoConfigureBefore", true)
 			.withAnnotation(ValueExtractor.allFrom("value", "name"))
 			.withAnnotation("AutoConfiguration", ValueExtractor.allFrom("before", "beforeName")));

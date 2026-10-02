@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.testing.springbootapplications.autoconfiguredspringrestdocs.withwebtestclient
+package io.github.kotlinmania.spring.boot.docs.testing.springbootapplications.autoconfiguredspringrestdocs.withwebtestclient
 
-import org.springframework.boot.test.context.TestConfiguration
-import org.springframework.boot.webtestclient.autoconfigure.WebTestClientBuilderCustomizer
+import io.github.kotlinmania.spring.boot.test.context.TestConfiguration
+import io.github.kotlinmania.spring.boot.webtestclient.autoconfigure.WebTestClientBuilderCustomizer
 import org.springframework.context.annotation.Bean
 import org.springframework.restdocs.webtestclient.WebTestClientRestDocumentation
 import org.springframework.test.web.reactive.server.WebTestClient

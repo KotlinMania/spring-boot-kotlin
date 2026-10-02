@@ -15,4 +15,8 @@
  */
 package org.springframework.boot.build.architecture.nullmarked.notannotated
 
-class TestClass 
+package io.github.kotlinmania.spring.boot.build.architecture.nullmarked.notannotated;
+
+public class TestClass {
+
+}

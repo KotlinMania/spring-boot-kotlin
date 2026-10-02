@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.h2console.autoconfigure;
+package io.github.kotlinmania.spring.boot.h2console.autoconfigure;
 
 import org.junit.jupiter.api.Test;
 

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docker.compose.core;
+package io.github.kotlinmania.spring.boot.docker.compose.core;
 
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
@@ -24,11 +24,11 @@ import java.util.Map;
 
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.docker.compose.core.DockerCliInspectResponse.Config;
-import org.springframework.boot.docker.compose.core.DockerCliInspectResponse.ExposedPort;
-import org.springframework.boot.docker.compose.core.DockerCliInspectResponse.HostConfig;
-import org.springframework.boot.docker.compose.core.DockerCliInspectResponse.HostPort;
-import org.springframework.boot.docker.compose.core.DockerCliInspectResponse.NetworkSettings;
+import io.github.kotlinmania.spring.boot.docker.compose.core.DockerCliInspectResponse.Config;
+import io.github.kotlinmania.spring.boot.docker.compose.core.DockerCliInspectResponse.ExposedPort;
+import io.github.kotlinmania.spring.boot.docker.compose.core.DockerCliInspectResponse.HostConfig;
+import io.github.kotlinmania.spring.boot.docker.compose.core.DockerCliInspectResponse.HostPort;
+import io.github.kotlinmania.spring.boot.docker.compose.core.DockerCliInspectResponse.NetworkSettings;
 import org.springframework.core.io.ClassPathResource;
 
 import static org.assertj.core.api.Assertions.assertThat;

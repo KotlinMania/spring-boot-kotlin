@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.pulsar.docker.compose;
+package io.github.kotlinmania.spring.boot.pulsar.docker.compose;
 
-import org.springframework.boot.docker.compose.core.ConnectionPorts;
-import org.springframework.boot.docker.compose.core.RunningService;
-import org.springframework.boot.docker.compose.service.connection.DockerComposeConnectionDetailsFactory;
-import org.springframework.boot.docker.compose.service.connection.DockerComposeConnectionSource;
-import org.springframework.boot.pulsar.autoconfigure.PulsarConnectionDetails;
+import io.github.kotlinmania.spring.boot.docker.compose.core.ConnectionPorts;
+import io.github.kotlinmania.spring.boot.docker.compose.core.RunningService;
+import io.github.kotlinmania.spring.boot.docker.compose.service.connection.DockerComposeConnectionDetailsFactory;
+import io.github.kotlinmania.spring.boot.docker.compose.service.connection.DockerComposeConnectionSource;
+import io.github.kotlinmania.spring.boot.pulsar.autoconfigure.PulsarConnectionDetails;
 
 /**
  * {@link DockerComposeConnectionDetailsFactory} to create {@link PulsarConnectionDetails}

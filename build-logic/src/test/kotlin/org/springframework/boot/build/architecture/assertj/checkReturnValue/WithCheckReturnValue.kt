@@ -15,8 +15,7 @@
  */
 package org.springframework.boot.build.architecture.assertj.checkReturnValue
 
-import org.assertj.core.api.AbstractAssert
-import org.springframework.lang.CheckReturnValue
+package io.github.kotlinmania.spring.boot.build.architecture.assertj.checkReturnValue;
 
 class WithCheckReturnValue internal constructor() :
     AbstractAssert<WithCheckReturnValue?, Any?>(null, WithCheckReturnValue::class.java) {

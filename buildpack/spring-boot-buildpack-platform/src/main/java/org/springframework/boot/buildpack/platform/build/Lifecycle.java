@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.buildpack.platform.build;
+package io.github.kotlinmania.spring.boot.buildpack.platform.build;
 
 import java.io.Closeable;
 import java.io.IOException;
@@ -27,19 +27,19 @@ import java.util.function.Consumer;
 import com.sun.jna.Platform;
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.buildpack.platform.build.Cache.Bind;
-import org.springframework.boot.buildpack.platform.docker.ApiVersion;
-import org.springframework.boot.buildpack.platform.docker.DockerApi;
-import org.springframework.boot.buildpack.platform.docker.LogUpdateEvent;
-import org.springframework.boot.buildpack.platform.docker.configuration.ResolvedDockerHost;
-import org.springframework.boot.buildpack.platform.docker.type.Binding;
-import org.springframework.boot.buildpack.platform.docker.type.ContainerConfig;
-import org.springframework.boot.buildpack.platform.docker.type.ContainerContent;
-import org.springframework.boot.buildpack.platform.docker.type.ContainerReference;
-import org.springframework.boot.buildpack.platform.docker.type.ContainerStatus;
-import org.springframework.boot.buildpack.platform.docker.type.ImageReference;
-import org.springframework.boot.buildpack.platform.docker.type.VolumeName;
-import org.springframework.boot.buildpack.platform.io.TarArchive;
+import io.github.kotlinmania.spring.boot.buildpack.platform.build.Cache.Bind;
+import io.github.kotlinmania.spring.boot.buildpack.platform.docker.ApiVersion;
+import io.github.kotlinmania.spring.boot.buildpack.platform.docker.DockerApi;
+import io.github.kotlinmania.spring.boot.buildpack.platform.docker.LogUpdateEvent;
+import io.github.kotlinmania.spring.boot.buildpack.platform.docker.configuration.ResolvedDockerHost;
+import io.github.kotlinmania.spring.boot.buildpack.platform.docker.type.Binding;
+import io.github.kotlinmania.spring.boot.buildpack.platform.docker.type.ContainerConfig;
+import io.github.kotlinmania.spring.boot.buildpack.platform.docker.type.ContainerContent;
+import io.github.kotlinmania.spring.boot.buildpack.platform.docker.type.ContainerReference;
+import io.github.kotlinmania.spring.boot.buildpack.platform.docker.type.ContainerStatus;
+import io.github.kotlinmania.spring.boot.buildpack.platform.docker.type.ImageReference;
+import io.github.kotlinmania.spring.boot.buildpack.platform.docker.type.VolumeName;
+import io.github.kotlinmania.spring.boot.buildpack.platform.io.TarArchive;
 import org.springframework.util.Assert;
 import org.springframework.util.FileSystemUtils;
 

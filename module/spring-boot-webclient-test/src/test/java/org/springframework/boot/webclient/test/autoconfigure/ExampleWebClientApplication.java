@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.webclient.test.autoconfigure;
+package io.github.kotlinmania.spring.boot.webclient.test.autoconfigure;
 
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.context.properties.ConfigurationPropertiesScan;
+import io.github.kotlinmania.spring.boot.autoconfigure.SpringBootApplication;
+import io.github.kotlinmania.spring.boot.context.properties.ConfigurationPropertiesScan;
 
 /**
  * Example {@link SpringBootApplication @SpringBootApplication} used with

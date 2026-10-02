@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.graphql.test.autoconfigure;
+package io.github.kotlinmania.spring.boot.graphql.test.autoconfigure;
 
 import java.io.IOException;
 import java.util.List;
@@ -27,7 +27,7 @@ import org.junit.jupiter.api.Test;
 import reactor.core.publisher.Mono;
 import tools.jackson.databind.module.SimpleModule;
 
-import org.springframework.boot.graphql.autoconfigure.GraphQlSourceBuilderCustomizer;
+import io.github.kotlinmania.spring.boot.graphql.autoconfigure.GraphQlSourceBuilderCustomizer;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.FilterType;
 import org.springframework.core.type.classreading.MetadataReader;

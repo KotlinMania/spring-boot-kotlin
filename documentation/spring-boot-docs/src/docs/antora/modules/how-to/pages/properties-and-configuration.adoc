@@ -98,7 +98,7 @@ To use Spring property placeholders together with automatic expansion, escape th
 [[howto.properties-and-configuration.externalize-configuration]]
 == Externalize the Configuration of SpringApplication
 
-A javadoc:org.springframework.boot.SpringApplication[] has bean property setters, so you can use its Java API as you create the application to modify its behavior.
+A javadoc:io.github.kotlinmania.spring.boot.SpringApplication[] has bean property setters, so you can use its Java API as you create the application to modify its behavior.
 Alternatively, you can externalize the configuration by setting properties in `+spring.main.*+`.
 For example, in `application.properties`, you might have the following settings:
 
@@ -113,11 +113,11 @@ spring:
 Then the Spring Boot banner is not printed on startup, and the application is not starting an embedded web server.
 
 Properties defined in external configuration override and replace the values specified with the Java API, with the notable exception of the primary sources.
-Primary sources are those provided to the javadoc:org.springframework.boot.SpringApplication[] constructor:
+Primary sources are those provided to the javadoc:io.github.kotlinmania.spring.boot.SpringApplication[] constructor:
 
 include-code::application/MyApplication[]
 
-Or to `sources(...)` method of a javadoc:org.springframework.boot.builder.SpringApplicationBuilder[]:
+Or to `sources(...)` method of a javadoc:io.github.kotlinmania.spring.boot.builder.SpringApplicationBuilder[]:
 
 include-code::builder/MyApplication[]
 
@@ -154,7 +154,7 @@ You can also provide the following System properties (or environment variables) 
 No matter what you set in the environment, Spring Boot always loads `application.properties` as described above.
 By default, if YAML is used, then files with the '`.yaml`' and '`.yml`' extensions are also added to the list.
 
-TIP: If you want detailed information about the files that are being loaded you can xref:reference:features/logging.adoc#features.logging.log-levels[set the logging level] of `org.springframework.boot.context.config` to `trace`.
+TIP: If you want detailed information about the files that are being loaded you can xref:reference:features/logging.adoc#features.logging.log-levels[set the logging level] of `io.github.kotlinmania.spring.boot.context.config` to `trace`.
 
 
 
@@ -302,8 +302,8 @@ Later values override earlier values.
 Spring Boot binds external properties from `application.properties` (or YAML files and other places) into an application at runtime.
 There is not (and technically cannot be) an exhaustive list of all supported properties in a single location, because contributions can come from additional jar files on your classpath.
 
-A running application with the Actuator features has a `configprops` endpoint that shows all the bound and bindable properties available through javadoc:org.springframework.boot.context.properties.ConfigurationProperties[format=annotation].
+A running application with the Actuator features has a `configprops` endpoint that shows all the bound and bindable properties available through javadoc:io.github.kotlinmania.spring.boot.context.properties.ConfigurationProperties[format=annotation].
 
 The appendix includes an xref:appendix:application-properties/index.adoc[`application.properties`] example with a list of the most common properties supported by Spring Boot.
-The definitive list comes from searching the source code for javadoc:org.springframework.boot.context.properties.ConfigurationProperties[format=annotation] and javadoc:org.springframework.beans.factory.annotation.Value[format=annotation] annotations as well as the occasional use of javadoc:org.springframework.boot.context.properties.bind.Binder[].
+The definitive list comes from searching the source code for javadoc:io.github.kotlinmania.spring.boot.context.properties.ConfigurationProperties[format=annotation] and javadoc:org.springframework.beans.factory.annotation.Value[format=annotation] annotations as well as the occasional use of javadoc:io.github.kotlinmania.spring.boot.context.properties.bind.Binder[].
 For more about the exact ordering of loading properties, see xref:reference:features/external-config.adoc[].

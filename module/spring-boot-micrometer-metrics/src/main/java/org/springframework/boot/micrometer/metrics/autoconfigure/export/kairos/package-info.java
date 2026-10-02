@@ -18,6 +18,6 @@
  * Support for exporting actuator metrics to KairosDB.
  */
 @NullMarked
-package org.springframework.boot.micrometer.metrics.autoconfigure.export.kairos;
+package io.github.kotlinmania.spring.boot.micrometer.metrics.autoconfigure.export.kairos;
 
 import org.jspecify.annotations.NullMarked;

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.http.codec;
+package io.github.kotlinmania.spring.boot.http.codec;
 
 import org.springframework.http.codec.CodecConfigurer;
 

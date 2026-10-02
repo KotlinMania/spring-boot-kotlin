@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.sql.init;
+package io.github.kotlinmania.spring.boot.sql.init;
 
 /**
  * Supported database initialization modes.

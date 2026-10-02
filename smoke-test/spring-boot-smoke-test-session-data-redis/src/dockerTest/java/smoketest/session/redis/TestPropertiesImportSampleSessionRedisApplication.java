@@ -18,9 +18,9 @@ package smoketest.session.redis;
 
 import com.redis.testcontainers.RedisContainer;
 
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.testcontainers.context.ImportTestcontainers;
-import org.springframework.boot.testsupport.container.TestImage;
+import io.github.kotlinmania.spring.boot.SpringApplication;
+import io.github.kotlinmania.spring.boot.testcontainers.context.ImportTestcontainers;
+import io.github.kotlinmania.spring.boot.testsupport.container.TestImage;
 import org.springframework.test.context.DynamicPropertyRegistry;
 import org.springframework.test.context.DynamicPropertySource;
 

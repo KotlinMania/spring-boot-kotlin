@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.test.context
+package io.github.kotlinmania.spring.boot.test.context
 
 import org.assertj.core.api.Assertions.assertThatIllegalStateException
 import org.junit.jupiter.api.Test
-import org.springframework.boot.test.context.SpringBootTest.UseMainMethod
+import io.github.kotlinmania.spring.boot.test.context.SpringBootTest.UseMainMethod
 import org.springframework.test.context.TestContext
 import org.springframework.test.context.TestContextManager
 

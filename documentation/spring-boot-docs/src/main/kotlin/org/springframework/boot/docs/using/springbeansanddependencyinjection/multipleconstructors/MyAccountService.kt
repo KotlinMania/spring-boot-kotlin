@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.using.springbeansanddependencyinjection.multipleconstructors
+package io.github.kotlinmania.spring.boot.docs.using.springbeansanddependencyinjection.multipleconstructors
 
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Service

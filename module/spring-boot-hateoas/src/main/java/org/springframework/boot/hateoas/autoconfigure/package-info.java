@@ -18,6 +18,6 @@
  * Auto-configuration for Spring HATEOAS.
  */
 @NullMarked
-package org.springframework.boot.hateoas.autoconfigure;
+package io.github.kotlinmania.spring.boot.hateoas.autoconfigure;
 
 import org.jspecify.annotations.NullMarked;

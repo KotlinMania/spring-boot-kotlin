@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.resttestclient
+package io.github.kotlinmania.spring.boot.resttestclient
 
 import org.springframework.core.ParameterizedTypeReference
 import org.springframework.http.HttpEntity

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.configurationmetadata;
+package io.github.kotlinmania.spring.boot.configurationmetadata;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -99,12 +99,12 @@ class ConfigurationMetadataRepositoryJsonBuilderTests extends AbstractConfigurat
 			ConfigurationMetadataGroup group = repo.getAllGroups().get("spring.foo");
 			assertThat(group.getProperties()).containsOnlyKeys(allKeys);
 			assertThat(group.getSources()).containsOnlyKeys("org.acme.Foo", "org.acme.Foo2",
-					"org.springframework.boot.FooProperties");
+					"io.github.kotlinmania.spring.boot.FooProperties");
 			assertThat(group.getSources().get("org.acme.Foo").getProperties()).containsOnlyKeys("spring.foo.name",
 					"spring.foo.description");
 			assertThat(group.getSources().get("org.acme.Foo2").getProperties()).containsOnlyKeys("spring.foo.enabled",
 					"spring.foo.type");
-			assertThat(group.getSources().get("org.springframework.boot.FooProperties").getProperties())
+			assertThat(group.getSources().get("io.github.kotlinmania.spring.boot.FooProperties").getProperties())
 				.containsOnlyKeys("spring.foo.name", "spring.foo.counter");
 		}
 	}
@@ -119,10 +119,10 @@ class ConfigurationMetadataRepositoryJsonBuilderTests extends AbstractConfigurat
 			assertThat(repo.getAllGroups()).containsOnlyKeys("spring.foo");
 			ConfigurationMetadataGroup group = repo.getAllGroups().get("spring.foo");
 			assertThat(group.getProperties()).containsOnlyKeys(allKeys);
-			assertThat(group.getSources()).containsOnlyKeys("org.acme.Foo", "org.springframework.boot.FooProperties");
+			assertThat(group.getSources()).containsOnlyKeys("org.acme.Foo", "io.github.kotlinmania.spring.boot.FooProperties");
 			assertThat(group.getSources().get("org.acme.Foo").getProperties()).containsOnlyKeys("spring.foo.name",
 					"spring.foo.description", "spring.foo.enabled", "spring.foo.type");
-			assertThat(group.getSources().get("org.springframework.boot.FooProperties").getProperties())
+			assertThat(group.getSources().get("io.github.kotlinmania.spring.boot.FooProperties").getProperties())
 				.containsOnlyKeys("spring.foo.name", "spring.foo.counter");
 		}
 	}
@@ -187,11 +187,11 @@ class ConfigurationMetadataRepositoryJsonBuilderTests extends AbstractConfigurat
 
 	private void validateFoo(ConfigurationMetadataRepository repo) {
 		ConfigurationMetadataGroup group = repo.getAllGroups().get("spring.foo");
-		contains(group.getSources(), "org.acme.Foo", "org.springframework.boot.FooProperties");
+		contains(group.getSources(), "org.acme.Foo", "io.github.kotlinmania.spring.boot.FooProperties");
 		ConfigurationMetadataSource source = group.getSources().get("org.acme.Foo");
 		contains(source.getProperties(), "spring.foo.name", "spring.foo.description");
 		assertThat(source.getProperties()).hasSize(2);
-		ConfigurationMetadataSource source2 = group.getSources().get("org.springframework.boot.FooProperties");
+		ConfigurationMetadataSource source2 = group.getSources().get("io.github.kotlinmania.spring.boot.FooProperties");
 		contains(source2.getProperties(), "spring.foo.name", "spring.foo.counter");
 		assertThat(source2.getProperties()).hasSize(2);
 		validatePropertyHints(repo.getAllProperties().get("spring.foo.name"), 0, 0);
@@ -201,11 +201,11 @@ class ConfigurationMetadataRepositoryJsonBuilderTests extends AbstractConfigurat
 
 	private void validateBar(ConfigurationMetadataRepository repo) {
 		ConfigurationMetadataGroup group = repo.getAllGroups().get("spring.bar");
-		contains(group.getSources(), "org.acme.Bar", "org.springframework.boot.BarProperties");
+		contains(group.getSources(), "org.acme.Bar", "io.github.kotlinmania.spring.boot.BarProperties");
 		ConfigurationMetadataSource source = group.getSources().get("org.acme.Bar");
 		contains(source.getProperties(), "spring.bar.name", "spring.bar.description");
 		assertThat(source.getProperties()).hasSize(2);
-		ConfigurationMetadataSource source2 = group.getSources().get("org.springframework.boot.BarProperties");
+		ConfigurationMetadataSource source2 = group.getSources().get("io.github.kotlinmania.spring.boot.BarProperties");
 		contains(source2.getProperties(), "spring.bar.name", "spring.bar.counter");
 		assertThat(source2.getProperties()).hasSize(2);
 		validatePropertyHints(repo.getAllProperties().get("spring.bar.name"), 0, 0);

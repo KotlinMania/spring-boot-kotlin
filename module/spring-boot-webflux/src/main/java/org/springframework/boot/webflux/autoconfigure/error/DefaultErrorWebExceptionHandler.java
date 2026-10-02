@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.webflux.autoconfigure.error;
+package io.github.kotlinmania.spring.boot.webflux.autoconfigure.error;
 
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
@@ -27,12 +27,12 @@ import org.jspecify.annotations.Nullable;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
-import org.springframework.boot.autoconfigure.web.ErrorProperties;
-import org.springframework.boot.autoconfigure.web.WebProperties.Resources;
-import org.springframework.boot.web.error.ErrorAttributeOptions;
-import org.springframework.boot.web.error.ErrorAttributeOptions.Include;
-import org.springframework.boot.webflux.error.DefaultErrorAttributes;
-import org.springframework.boot.webflux.error.ErrorAttributes;
+import io.github.kotlinmania.spring.boot.autoconfigure.web.ErrorProperties;
+import io.github.kotlinmania.spring.boot.autoconfigure.web.WebProperties.Resources;
+import io.github.kotlinmania.spring.boot.web.error.ErrorAttributeOptions;
+import io.github.kotlinmania.spring.boot.web.error.ErrorAttributeOptions.Include;
+import io.github.kotlinmania.spring.boot.webflux.error.DefaultErrorAttributes;
+import io.github.kotlinmania.spring.boot.webflux.error.ErrorAttributes;
 import org.springframework.context.ApplicationContext;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.InvalidMediaTypeException;

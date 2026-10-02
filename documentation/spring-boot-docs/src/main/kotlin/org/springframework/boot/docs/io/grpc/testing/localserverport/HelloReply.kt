@@ -1,4 +1,4 @@
-package org.springframework.boot.docs.io.grpc.testing.localserverport
+package io.github.kotlinmania.spring.boot.docs.io.grpc.testing.localserverport
 
 interface HelloReply {
 

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.r2dbc;
+package io.github.kotlinmania.spring.boot.r2dbc;
 
 import java.time.Duration;
 import java.util.ArrayList;
@@ -35,7 +35,7 @@ import io.r2dbc.spi.ValidationDepth;
 import org.jspecify.annotations.Nullable;
 import org.reactivestreams.Publisher;
 
-import org.springframework.boot.context.properties.PropertyMapper;
+import io.github.kotlinmania.spring.boot.context.properties.PropertyMapper;
 import org.springframework.util.Assert;
 import org.springframework.util.ClassUtils;
 

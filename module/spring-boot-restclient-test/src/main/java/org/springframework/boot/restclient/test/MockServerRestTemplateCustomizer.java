@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.restclient.test;
+package io.github.kotlinmania.spring.boot.restclient.test;
 
 import java.util.Collections;
 import java.util.Map;
@@ -24,8 +24,8 @@ import java.util.function.Supplier;
 import org.jspecify.annotations.Nullable;
 
 import org.springframework.beans.BeanUtils;
-import org.springframework.boot.restclient.RestTemplateBuilder;
-import org.springframework.boot.restclient.RestTemplateCustomizer;
+import io.github.kotlinmania.spring.boot.restclient.RestTemplateBuilder;
+import io.github.kotlinmania.spring.boot.restclient.RestTemplateCustomizer;
 import org.springframework.http.client.BufferingClientHttpRequestFactory;
 import org.springframework.test.web.client.MockRestServiceServer;
 import org.springframework.test.web.client.MockRestServiceServer.MockRestServiceServerBuilder;

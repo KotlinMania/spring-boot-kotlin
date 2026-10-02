@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.security.web.servlet;
+package io.github.kotlinmania.spring.boot.security.web.servlet;
 
 import java.lang.Thread.UncaughtExceptionHandler;
 import java.util.ArrayList;

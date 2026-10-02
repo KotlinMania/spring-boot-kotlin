@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.test.context.filter;
+package io.github.kotlinmania.spring.boot.test.context.filter;
 
 import org.junit.jupiter.api.Test;
 

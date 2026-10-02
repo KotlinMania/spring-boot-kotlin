@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.actuate.scheduling;
+package io.github.kotlinmania.spring.boot.actuate.scheduling;
 
 import java.time.Duration;
 import java.time.Instant;
@@ -27,16 +27,16 @@ import org.junit.jupiter.api.Test;
 import org.springframework.aot.hint.MemberCategory;
 import org.springframework.aot.hint.RuntimeHints;
 import org.springframework.aot.hint.predicate.RuntimeHintsPredicates;
-import org.springframework.boot.actuate.scheduling.ScheduledTasksEndpoint.CronTaskDescriptor;
-import org.springframework.boot.actuate.scheduling.ScheduledTasksEndpoint.CustomTriggerTaskDescriptor;
-import org.springframework.boot.actuate.scheduling.ScheduledTasksEndpoint.FixedDelayTaskDescriptor;
-import org.springframework.boot.actuate.scheduling.ScheduledTasksEndpoint.FixedRateTaskDescriptor;
-import org.springframework.boot.actuate.scheduling.ScheduledTasksEndpoint.LastExecution;
-import org.springframework.boot.actuate.scheduling.ScheduledTasksEndpoint.NextExecution;
-import org.springframework.boot.actuate.scheduling.ScheduledTasksEndpoint.ScheduledTasksDescriptor;
-import org.springframework.boot.actuate.scheduling.ScheduledTasksEndpoint.ScheduledTasksEndpointRuntimeHints;
-import org.springframework.boot.actuate.scheduling.ScheduledTasksEndpoint.TaskDescriptor;
-import org.springframework.boot.test.context.runner.ApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.actuate.scheduling.ScheduledTasksEndpoint.CronTaskDescriptor;
+import io.github.kotlinmania.spring.boot.actuate.scheduling.ScheduledTasksEndpoint.CustomTriggerTaskDescriptor;
+import io.github.kotlinmania.spring.boot.actuate.scheduling.ScheduledTasksEndpoint.FixedDelayTaskDescriptor;
+import io.github.kotlinmania.spring.boot.actuate.scheduling.ScheduledTasksEndpoint.FixedRateTaskDescriptor;
+import io.github.kotlinmania.spring.boot.actuate.scheduling.ScheduledTasksEndpoint.LastExecution;
+import io.github.kotlinmania.spring.boot.actuate.scheduling.ScheduledTasksEndpoint.NextExecution;
+import io.github.kotlinmania.spring.boot.actuate.scheduling.ScheduledTasksEndpoint.ScheduledTasksDescriptor;
+import io.github.kotlinmania.spring.boot.actuate.scheduling.ScheduledTasksEndpoint.ScheduledTasksEndpointRuntimeHints;
+import io.github.kotlinmania.spring.boot.actuate.scheduling.ScheduledTasksEndpoint.TaskDescriptor;
+import io.github.kotlinmania.spring.boot.test.context.runner.ApplicationContextRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.scheduling.Trigger;

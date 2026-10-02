@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.buildpack.platform.docker.configuration;
+package io.github.kotlinmania.spring.boot.buildpack.platform.docker.configuration;
 
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
@@ -23,10 +23,10 @@ import java.util.function.Function;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.buildpack.platform.docker.configuration.DockerConfigurationMetadata.Auth;
-import org.springframework.boot.buildpack.platform.docker.configuration.DockerConfigurationMetadata.DockerConfig;
-import org.springframework.boot.buildpack.platform.docker.type.ImageReference;
-import org.springframework.boot.buildpack.platform.system.Environment;
+import io.github.kotlinmania.spring.boot.buildpack.platform.docker.configuration.DockerConfigurationMetadata.Auth;
+import io.github.kotlinmania.spring.boot.buildpack.platform.docker.configuration.DockerConfigurationMetadata.DockerConfig;
+import io.github.kotlinmania.spring.boot.buildpack.platform.docker.type.ImageReference;
+import io.github.kotlinmania.spring.boot.buildpack.platform.system.Environment;
 import org.springframework.util.Assert;
 import org.springframework.util.StringUtils;
 

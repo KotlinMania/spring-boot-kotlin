@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.liquibase.autoconfigure;
+package io.github.kotlinmania.spring.boot.liquibase.autoconfigure;
 
 import java.lang.reflect.Method;
 

@@ -4,7 +4,7 @@
 Spring Boot lets you externalize your configuration so that you can work with the same application code in different environments.
 You can use a variety of external configuration sources including Java properties files, YAML files, environment variables, and command-line arguments.
 
-Property values can be injected directly into your beans by using the javadoc:org.springframework.beans.factory.annotation.Value[format=annotation] annotation, accessed through Spring's javadoc:org.springframework.core.env.Environment[] abstraction, or be xref:features/external-config.adoc#features.external-config.typesafe-configuration-properties[bound to structured objects] through javadoc:org.springframework.boot.context.properties.ConfigurationProperties[format=annotation].
+Property values can be injected directly into your beans by using the javadoc:org.springframework.beans.factory.annotation.Value[format=annotation] annotation, accessed through Spring's javadoc:org.springframework.core.env.Environment[] abstraction, or be xref:features/external-config.adoc#features.external-config.typesafe-configuration-properties[bound to structured objects] through javadoc:io.github.kotlinmania.spring.boot.context.properties.ConfigurationProperties[format=annotation].
 
 Spring Boot uses a very particular javadoc:org.springframework.core.env.PropertySource[] order that is designed to allow sensible overriding of values.
 Later property sources can override the values defined in earlier ones.
@@ -12,12 +12,12 @@ Later property sources can override the values defined in earlier ones.
 [[features.external-config.order]]
 Sources are considered in the following order:
 
-. Default properties (specified by setting javadoc:org.springframework.boot.SpringApplication#setDefaultProperties(java.util.Map)[]).
+. Default properties (specified by setting javadoc:io.github.kotlinmania.spring.boot.SpringApplication#setDefaultProperties(java.util.Map)[]).
 . javadoc:org.springframework.context.annotation.PropertySource[format=annotation] annotations on your javadoc:org.springframework.context.annotation.Configuration[format=annotation] classes.
   Please note that such property sources are not added to the javadoc:org.springframework.core.env.Environment[] until the application context is being refreshed.
   This is too late to configure certain properties such as `+logging.*+` and `+spring.main.*+` which are read before refresh begins.
 . Config data (such as `application.properties` files).
-. A javadoc:org.springframework.boot.env.RandomValuePropertySource[] that has properties only in `+random.*+`.
+. A javadoc:io.github.kotlinmania.spring.boot.env.RandomValuePropertySource[] that has properties only in `+random.*+`.
 . OS environment variables.
 . Java System properties (`System.getProperties()`).
 . JNDI attributes from `java:comp/env`.
@@ -26,7 +26,7 @@ Sources are considered in the following order:
 . Properties from `SPRING_APPLICATION_JSON` (inline JSON embedded in an environment variable or system property).
 . Command line arguments.
 . `properties` attribute on your tests.
-  Available on javadoc:org.springframework.boot.test.context.SpringBootTest[format=annotation] and the xref:testing/spring-boot-applications.adoc#testing.spring-boot-applications.autoconfigured-tests[test annotations for testing a particular slice of your application].
+  Available on javadoc:io.github.kotlinmania.spring.boot.test.context.SpringBootTest[format=annotation] and the xref:testing/spring-boot-applications.adoc#testing.spring-boot-applications.autoconfigured-tests[test annotations for testing a particular slice of your application].
 . javadoc:org.springframework.test.context.DynamicPropertySource[format=annotation] annotations in your tests.
 . javadoc:org.springframework.test.context.TestPropertySource[format=annotation] annotations on your tests.
 . xref:using/devtools.adoc#using.devtools.globalsettings[Devtools global settings properties] in the `$HOME/.config/spring-boot` directory when devtools is active.
@@ -63,7 +63,7 @@ See the xref:actuator/endpoints.adoc[Production ready features] section for deta
 [[features.external-config.command-line-args]]
 == Accessing Command Line Properties
 
-By default, javadoc:org.springframework.boot.SpringApplication[] converts any command line option arguments (that is, arguments starting with `--`, such as `--server.port=9000`) to a `property` and adds them to the Spring javadoc:org.springframework.core.env.Environment[].
+By default, javadoc:io.github.kotlinmania.spring.boot.SpringApplication[] converts any command line option arguments (that is, arguments starting with `--`, such as `--server.port=9000`) to a `property` and adds them to the Spring javadoc:org.springframework.core.env.Environment[].
 As mentioned previously, command line properties always take precedence over file-based property sources.
 
 If you do not want command line properties to be added to the javadoc:org.springframework.core.env.Environment[], you can disable them by using `SpringApplication.setAddCommandLineProperties(false)`.
@@ -190,14 +190,14 @@ These default values can then be overridden at runtime with a different file loc
 [[features.external-config.files.optional-prefix]]
 === Optional Locations
 
-By default, when a specified config data location does not exist, Spring Boot will throw a javadoc:org.springframework.boot.context.config.ConfigDataLocationNotFoundException[] and your application will not start.
+By default, when a specified config data location does not exist, Spring Boot will throw a javadoc:io.github.kotlinmania.spring.boot.context.config.ConfigDataLocationNotFoundException[] and your application will not start.
 
 If you want to specify a location, but you do not mind if it does not always exist, you can use the `optional:` prefix.
 You can use this prefix with the `spring.config.location` and `spring.config.additional-location` properties, as well as with xref:features/external-config.adoc#features.external-config.files.importing[`spring.config.import`] declarations.
 
 For example, a `spring.config.import` value of `optional:file:./myconfig.properties` allows your application to start, even if the `myconfig.properties` file is missing.
 
-If you want to ignore all javadoc:org.springframework.boot.context.config.ConfigDataLocationNotFoundException[] errors and always continue to start your application, you can use the `spring.config.on-not-found` property.
+If you want to ignore all javadoc:io.github.kotlinmania.spring.boot.context.config.ConfigDataLocationNotFoundException[] errors and always continue to start your application, you can use the `spring.config.on-not-found` property.
 Set the value to `ignore` using `SpringApplication.setDefaultProperties(...)` or with a system/environment variable.
 
 
@@ -383,7 +383,7 @@ By default you can import Java Properties, YAML and xref:features/external-confi
 Third-party jars can offer support for additional technologies (there is no requirement for files to be local).
 For example, you can imagine config data being from external stores such as Consul, Apache ZooKeeper or Netflix Archaius.
 
-If you want to support your own locations, see the javadoc:org.springframework.boot.context.config.ConfigDataLocationResolver[] and javadoc:org.springframework.boot.context.config.ConfigDataLoader[] classes in the `org.springframework.boot.context.config` package.
+If you want to support your own locations, see the javadoc:io.github.kotlinmania.spring.boot.context.config.ConfigDataLocationResolver[] and javadoc:io.github.kotlinmania.spring.boot.context.config.ConfigDataLoader[] classes in the `io.github.kotlinmania.spring.boot.context.config` package.
 ====
 
 
@@ -578,7 +578,7 @@ Assuming that the `username` property has not been set elsewhere, `app.descripti
 [NOTE]
 ====
 You should always refer to property names in the placeholder using their canonical form (kebab-case using only lowercase letters).
-This will allow Spring Boot to use the same logic as it does when xref:features/external-config.adoc#features.external-config.typesafe-configuration-properties.relaxed-binding[relaxed binding] javadoc:org.springframework.boot.context.properties.ConfigurationProperties[format=annotation].
+This will allow Spring Boot to use the same logic as it does when xref:features/external-config.adoc#features.external-config.typesafe-configuration-properties.relaxed-binding[relaxed binding] javadoc:io.github.kotlinmania.spring.boot.context.properties.ConfigurationProperties[format=annotation].
 
 For example, `${demo.item-price}` will pick up `demo.item-price` and `demo.itemPrice` forms from the `application.properties` file, as well as `DEMO_ITEMPRICE` from the system environment.
 If you use `${demo.itemPrice}` instead, it will pick up the `demo.itemPrice` form from the `application.properties` file, as well as `DEMO_ITEMPRICE` from the system environment, but `demo.item-price` would not be considered.
@@ -654,7 +654,7 @@ The following activation properties are available:
 | A profile expression that must match for the document to be active, or a list of profile expressions of which at least one must match for the document to be active.
 
 | `on-cloud-platform`
-| The javadoc:org.springframework.boot.cloud.CloudPlatform[] that must be detected for the document to be active.
+| The javadoc:io.github.kotlinmania.spring.boot.cloud.CloudPlatform[] that must be detected for the document to be active.
 |===
 
 For example, the following specifies that the second document is only active when running on Kubernetes, and only when either the "`prod`" or "`staging`" profiles are active:
@@ -678,7 +678,7 @@ myotherprop: "sometimes-set"
 == Encrypting Properties
 
 Spring Boot does not provide any built-in support for encrypting property values, however, it does provide the hook points necessary to modify values contained in the Spring javadoc:org.springframework.core.env.Environment[].
-The javadoc:org.springframework.boot.EnvironmentPostProcessor[] interface allows you to manipulate the javadoc:org.springframework.core.env.Environment[] before the application starts.
+The javadoc:io.github.kotlinmania.spring.boot.EnvironmentPostProcessor[] interface allows you to manipulate the javadoc:org.springframework.core.env.Environment[] before the application starts.
 See xref:how-to:application.adoc#howto.application.customize-the-environment-or-application-context[] for details.
 
 If you need a secure way to store credentials and passwords, the https://cloud.spring.io/spring-cloud-vault/[Spring Cloud Vault] project provides support for storing externalized configuration in https://www.vaultproject.io/[HashiCorp Vault].
@@ -689,7 +689,7 @@ If you need a secure way to store credentials and passwords, the https://cloud.s
 == Working With YAML
 
 https://yaml.org[YAML] is a superset of JSON and, as such, is a convenient format for specifying hierarchical configuration data.
-The javadoc:org.springframework.boot.SpringApplication[] class automatically supports YAML as an alternative to properties whenever you have the https://github.com/snakeyaml/snakeyaml[SnakeYAML] library on your classpath.
+The javadoc:io.github.kotlinmania.spring.boot.SpringApplication[] class automatically supports YAML as an alternative to properties whenever you have the https://github.com/snakeyaml/snakeyaml[SnakeYAML] library on your classpath.
 
 NOTE: If you use starters, SnakeYAML is automatically provided by `spring-boot-starter`.
 
@@ -742,7 +742,7 @@ my.servers[0]=dev.example.com
 my.servers[1]=another.example.com
 ----
 
-TIP: Properties that use the `[index]` notation can be bound to Java javadoc:java.util.List[] or javadoc:java.util.Set[] objects using Spring Boot's javadoc:org.springframework.boot.context.properties.bind.Binder[] class.
+TIP: Properties that use the `[index]` notation can be bound to Java javadoc:java.util.List[] or javadoc:java.util.Set[] objects using Spring Boot's javadoc:io.github.kotlinmania.spring.boot.context.properties.bind.Binder[] class.
 For more details see the xref:features/external-config.adoc#features.external-config.typesafe-configuration-properties[] section below.
 
 WARNING: YAML files cannot be loaded by using the javadoc:org.springframework.context.annotation.PropertySource[format=annotation] or javadoc:org.springframework.test.context.TestPropertySource[format=annotation] annotations.
@@ -756,14 +756,14 @@ So, in the case that you need to load values that way, you need to use a propert
 Spring Framework provides two convenient classes that can be used to load YAML documents.
 The javadoc:org.springframework.beans.factory.config.YamlPropertiesFactoryBean[] loads YAML as javadoc:java.util.Properties[] and the javadoc:org.springframework.beans.factory.config.YamlMapFactoryBean[] loads YAML as a javadoc:java.util.Map[].
 
-You can also use the javadoc:org.springframework.boot.env.YamlPropertySourceLoader[] class if you want to load YAML as a Spring javadoc:org.springframework.core.env.PropertySource[].
+You can also use the javadoc:io.github.kotlinmania.spring.boot.env.YamlPropertySourceLoader[] class if you want to load YAML as a Spring javadoc:org.springframework.core.env.PropertySource[].
 
 
 
 [[features.external-config.random-values]]
 == Configuring Random Values
 
-The javadoc:org.springframework.boot.env.RandomValuePropertySource[] is useful for injecting random values (for example, into secrets or test cases).
+The javadoc:io.github.kotlinmania.spring.boot.env.RandomValuePropertySource[] is useful for injecting random values (for example, into secrets or test cases).
 It can produce integers, longs, uuids, or strings, as shown in the following example:
 
 [configprops%novalidate,yaml]
@@ -787,7 +787,7 @@ If `max` is provided, then `value` is the minimum value and `max` is the maximum
 
 Spring Boot supports setting a prefix for environment properties.
 This is useful if the system environment is shared by multiple Spring Boot applications with different configuration requirements.
-The prefix for system environment properties can be set directly on javadoc:org.springframework.boot.SpringApplication[] by calling the `setEnvironmentPrefix(...)` method before the application is run.
+The prefix for system environment properties can be set directly on javadoc:io.github.kotlinmania.spring.boot.SpringApplication[] by calling the `setEnvironmentPrefix(...)` method before the application is run.
 
 For example, if you set the prefix to `input`, a property such as `remote.timeout` will be resolved as `INPUT_REMOTE_TIMEOUT` in the system environment.
 
@@ -818,13 +818,13 @@ The preceding POJO defines the following properties:
 * `my.service.enabled`, with a value of `false` by default.
 * `my.service.remote-address`, with a type that can be coerced from javadoc:java.lang.String[].
 * `my.service.security.username`, with a nested "security" object whose name is determined by the name of the property.
-  In particular, the type is not used at all there and could have been javadoc:org.springframework.boot.security.autoconfigure.SecurityProperties[].
+  In particular, the type is not used at all there and could have been javadoc:io.github.kotlinmania.spring.boot.security.autoconfigure.SecurityProperties[].
 * `my.service.security.password`.
 * `my.service.security.roles`, with a collection of javadoc:java.lang.String[] that defaults to `USER`.
 
-TIP: To use a reserved keyword in the name of a property, such as `my.service.import`, use the javadoc:org.springframework.boot.context.properties.bind.Name[format=annotation] annotation on the property's field.
+TIP: To use a reserved keyword in the name of a property, such as `my.service.import`, use the javadoc:io.github.kotlinmania.spring.boot.context.properties.bind.Name[format=annotation] annotation on the property's field.
 
-NOTE: The properties that map to javadoc:org.springframework.boot.context.properties.ConfigurationProperties[format=annotation] classes available in Spring Boot, which are configured through properties files, YAML files, environment variables, and other mechanisms, are public API but the accessors (getters/setters) of the class itself are not meant to be used directly.
+NOTE: The properties that map to javadoc:io.github.kotlinmania.spring.boot.context.properties.ConfigurationProperties[format=annotation] classes available in Spring Boot, which are configured through properties files, YAML files, environment variables, and other mechanisms, are public API but the accessors (getters/setters) of the class itself are not meant to be used directly.
 
 [NOTE]
 ====
@@ -852,7 +852,7 @@ include-code::MyProperties[]
 
 In this setup, the presence of a single parameterized constructor implies that constructor binding should be used.
 This means that the binder will find a constructor with the parameters that you wish to have bound.
-If your class has multiple constructors, the javadoc:org.springframework.boot.context.properties.bind.ConstructorBinding[format=annotation] annotation can be used to specify which constructor to use for constructor binding.
+If your class has multiple constructors, the javadoc:io.github.kotlinmania.spring.boot.context.properties.bind.ConstructorBinding[format=annotation] annotation can be used to specify which constructor to use for constructor binding.
 
 To opt-out of constructor binding for a class, the parameterized constructor must be annotated with javadoc:org.springframework.beans.factory.annotation.Autowired[format=annotation] or made `private`.
 Kotlin developers can use an empty primary constructor to opt-out of constructor binding.
@@ -862,28 +862,28 @@ For example:
 include-code::primaryconstructor/MyProperties[]
 
 Constructor binding can be used with records.
-Unless your record has multiple constructors, there is no need to use javadoc:org.springframework.boot.context.properties.bind.ConstructorBinding[format=annotation].
+Unless your record has multiple constructors, there is no need to use javadoc:io.github.kotlinmania.spring.boot.context.properties.bind.ConstructorBinding[format=annotation].
 
 Nested members of a constructor bound class (such as `Security` in the example above) will also be bound through their constructor.
 
-NOTE: To use constructor binding the class must be enabled using javadoc:org.springframework.boot.context.properties.EnableConfigurationProperties[format=annotation] or configuration property scanning.
+NOTE: To use constructor binding the class must be enabled using javadoc:io.github.kotlinmania.spring.boot.context.properties.EnableConfigurationProperties[format=annotation] or configuration property scanning.
 You cannot use constructor binding with beans that are created by the regular Spring mechanisms (for example javadoc:org.springframework.stereotype.Component[format=annotation] beans, beans created by using javadoc:org.springframework.context.annotation.Bean[format=annotation] methods or beans loaded by using javadoc:org.springframework.context.annotation.Import[format=annotation])
 
 NOTE: To use constructor binding the class must be compiled with `-parameters`.
 This will happen automatically if you use Spring Boot's Gradle plugin or if you use Maven and `spring-boot-starter-parent`.
 
-NOTE: The use of javadoc:java.util.Optional[] with javadoc:org.springframework.boot.context.properties.ConfigurationProperties[format=annotation] is not recommended as it is primarily intended for use as a return type.
+NOTE: The use of javadoc:java.util.Optional[] with javadoc:io.github.kotlinmania.spring.boot.context.properties.ConfigurationProperties[format=annotation] is not recommended as it is primarily intended for use as a return type.
 As such, it is not well-suited to configuration property injection.
 For consistency with properties of other types, if you do declare an javadoc:java.util.Optional[] property and it has no value, `null` rather than an empty javadoc:java.util.Optional[] will be bound.
 
-TIP: To use a reserved keyword in the name of a property, such as `my.service.import`, use the javadoc:org.springframework.boot.context.properties.bind.Name[format=annotation] annotation on the constructor parameter.
+TIP: To use a reserved keyword in the name of a property, such as `my.service.import`, use the javadoc:io.github.kotlinmania.spring.boot.context.properties.bind.Name[format=annotation] annotation on the constructor parameter.
 
 
 
 [[features.external-config.typesafe-configuration-properties.constructor-binding.default-values]]
 ==== @DefaultValue and Binding
 
-Default values can be specified using javadoc:org.springframework.boot.context.properties.bind.DefaultValue[format=annotation] on constructor parameters and record components.
+Default values can be specified using javadoc:io.github.kotlinmania.spring.boot.context.properties.bind.DefaultValue[format=annotation] on constructor parameters and record components.
 The conversion service will be applied to coerce the annotation's javadoc:java.lang.String[] value to the target type of a missing property.
 
 In the `MyProperties` example above, you can see the nested `Security` class uses `@DefaultValue("USER")` for the `roles` parameter.
@@ -940,7 +940,7 @@ my.service.security=
 Will be bound as `new MyProperties(true, null, new Security(null, null, List.of("USER")))`
 ====
 
-If you want to always bind a non-null instance of `Security`, even when properties are missing, you can use an empty javadoc:org.springframework.boot.context.properties.bind.DefaultValue[format=annotation] annotation:
+If you want to always bind a non-null instance of `Security`, even when properties are missing, you can use an empty javadoc:io.github.kotlinmania.spring.boot.context.properties.bind.DefaultValue[format=annotation] annotation:
 
 include-code::nonnull/MyProperties[tag=*]
 
@@ -963,18 +963,18 @@ If you need to query the javadoc:org.springframework.core.env.Environment[] for 
 [[features.external-config.typesafe-configuration-properties.enabling-annotated-types]]
 === Enabling @ConfigurationProperties-annotated Types
 
-Spring Boot provides infrastructure to bind javadoc:org.springframework.boot.context.properties.ConfigurationProperties[format=annotation] types and register them as beans.
+Spring Boot provides infrastructure to bind javadoc:io.github.kotlinmania.spring.boot.context.properties.ConfigurationProperties[format=annotation] types and register them as beans.
 You can either enable configuration properties on a class-by-class basis or enable configuration property scanning that works in a similar manner to component scanning.
 
-Sometimes, classes annotated with javadoc:org.springframework.boot.context.properties.ConfigurationProperties[format=annotation] might not be suitable for scanning, for example, if you're developing your own auto-configuration or you want to enable them conditionally.
-In these cases, specify the list of types to process using the javadoc:org.springframework.boot.context.properties.EnableConfigurationProperties[format=annotation] annotation.
+Sometimes, classes annotated with javadoc:io.github.kotlinmania.spring.boot.context.properties.ConfigurationProperties[format=annotation] might not be suitable for scanning, for example, if you're developing your own auto-configuration or you want to enable them conditionally.
+In these cases, specify the list of types to process using the javadoc:io.github.kotlinmania.spring.boot.context.properties.EnableConfigurationProperties[format=annotation] annotation.
 This can be done on any javadoc:org.springframework.context.annotation.Configuration[format=annotation] class, as shown in the following example:
 
 include-code::MyConfiguration[]
 include-code::SomeProperties[]
 
-To use configuration property scanning, add the javadoc:org.springframework.boot.context.properties.ConfigurationPropertiesScan[format=annotation] annotation to your application.
-Typically, it is added to the main application class that is annotated with javadoc:org.springframework.boot.autoconfigure.SpringBootApplication[format=annotation] but it can be added to any javadoc:org.springframework.context.annotation.Configuration[format=annotation] class.
+To use configuration property scanning, add the javadoc:io.github.kotlinmania.spring.boot.context.properties.ConfigurationPropertiesScan[format=annotation] annotation to your application.
+Typically, it is added to the main application class that is annotated with javadoc:io.github.kotlinmania.spring.boot.autoconfigure.SpringBootApplication[format=annotation] but it can be added to any javadoc:org.springframework.context.annotation.Configuration[format=annotation] class.
 By default, scanning will occur from the package of the class that declares the annotation.
 If you want to define specific packages to scan, you can do so as shown in the following example:
 
@@ -982,13 +982,13 @@ include-code::MyApplication[]
 
 [NOTE]
 ====
-When the javadoc:org.springframework.boot.context.properties.ConfigurationProperties[format=annotation] bean is registered using configuration property scanning or through javadoc:org.springframework.boot.context.properties.EnableConfigurationProperties[format=annotation], the bean has a conventional name: `<prefix>-<fqn>`, where `<prefix>` is the environment key prefix specified in the javadoc:org.springframework.boot.context.properties.ConfigurationProperties[format=annotation] annotation and `<fqn>` is the fully qualified name of the bean.
+When the javadoc:io.github.kotlinmania.spring.boot.context.properties.ConfigurationProperties[format=annotation] bean is registered using configuration property scanning or through javadoc:io.github.kotlinmania.spring.boot.context.properties.EnableConfigurationProperties[format=annotation], the bean has a conventional name: `<prefix>-<fqn>`, where `<prefix>` is the environment key prefix specified in the javadoc:io.github.kotlinmania.spring.boot.context.properties.ConfigurationProperties[format=annotation] annotation and `<fqn>` is the fully qualified name of the bean.
 If the annotation does not provide any prefix, only the fully qualified name of the bean is used.
 
 Assuming that it is in the `com.example.app` package, the bean name of the `SomeProperties` example above is `some.properties-com.example.app.SomeProperties`.
 ====
 
-We recommend that javadoc:org.springframework.boot.context.properties.ConfigurationProperties[format=annotation] only deal with the environment and, in particular, does not inject other beans from the context.
+We recommend that javadoc:io.github.kotlinmania.spring.boot.context.properties.ConfigurationProperties[format=annotation] only deal with the environment and, in particular, does not inject other beans from the context.
 For corner cases, setter injection can be used or any of the `*Aware` interfaces provided by the framework (such as javadoc:org.springframework.context.EnvironmentAware[] if you need access to the javadoc:org.springframework.core.env.Environment[]).
 If you still want to inject other beans using the constructor, the configuration properties bean must be annotated with javadoc:org.springframework.stereotype.Component[format=annotation] and use JavaBean-based property binding.
 
@@ -997,7 +997,7 @@ If you still want to inject other beans using the constructor, the configuration
 [[features.external-config.typesafe-configuration-properties.using-annotated-types]]
 === Using @ConfigurationProperties-annotated Types
 
-This style of configuration works particularly well with the javadoc:org.springframework.boot.SpringApplication[] external YAML configuration, as shown in the following example:
+This style of configuration works particularly well with the javadoc:io.github.kotlinmania.spring.boot.SpringApplication[] external YAML configuration, as shown in the following example:
 
 [source,yaml]
 ----
@@ -1011,11 +1011,11 @@ my:
       - "ADMIN"
 ----
 
-To work with javadoc:org.springframework.boot.context.properties.ConfigurationProperties[format=annotation] beans, you can inject them in the same way as any other bean, as shown in the following example:
+To work with javadoc:io.github.kotlinmania.spring.boot.context.properties.ConfigurationProperties[format=annotation] beans, you can inject them in the same way as any other bean, as shown in the following example:
 
 include-code::MyService[]
 
-TIP: Using javadoc:org.springframework.boot.context.properties.ConfigurationProperties[format=annotation] also lets you generate metadata files that can be used by IDEs to offer auto-completion for your own keys.
+TIP: Using javadoc:io.github.kotlinmania.spring.boot.context.properties.ConfigurationProperties[format=annotation] also lets you generate metadata files that can be used by IDEs to offer auto-completion for your own keys.
 See the xref:specification:configuration-metadata/index.adoc[appendix] for details.
 
 
@@ -1023,10 +1023,10 @@ See the xref:specification:configuration-metadata/index.adoc[appendix] for detai
 [[features.external-config.typesafe-configuration-properties.third-party-configuration]]
 === Third-party Configuration
 
-As well as using javadoc:org.springframework.boot.context.properties.ConfigurationProperties[format=annotation] to annotate a class, you can also use it on public javadoc:org.springframework.context.annotation.Bean[format=annotation] methods.
+As well as using javadoc:io.github.kotlinmania.spring.boot.context.properties.ConfigurationProperties[format=annotation] to annotate a class, you can also use it on public javadoc:org.springframework.context.annotation.Bean[format=annotation] methods.
 Doing so can be particularly useful when you want to bind properties to third-party components that are outside of your control.
 
-To configure a bean from the javadoc:org.springframework.core.env.Environment[] properties, add javadoc:org.springframework.boot.context.properties.ConfigurationProperties[format=annotation] to its bean registration, as shown in the following example:
+To configure a bean from the javadoc:org.springframework.core.env.Environment[] properties, add javadoc:io.github.kotlinmania.spring.boot.context.properties.ConfigurationProperties[format=annotation] to its bean registration, as shown in the following example:
 
 include-code::ThirdPartyConfiguration[]
 
@@ -1037,10 +1037,10 @@ Any JavaBean property defined with the `another` prefix is mapped onto that `Ano
 [[features.external-config.typesafe-configuration-properties.relaxed-binding]]
 === Relaxed Binding
 
-Spring Boot uses some relaxed rules for binding javadoc:org.springframework.core.env.Environment[] properties to javadoc:org.springframework.boot.context.properties.ConfigurationProperties[format=annotation] beans, so there does not need to be an exact match between the javadoc:org.springframework.core.env.Environment[] property name and the bean property name.
+Spring Boot uses some relaxed rules for binding javadoc:org.springframework.core.env.Environment[] properties to javadoc:io.github.kotlinmania.spring.boot.context.properties.ConfigurationProperties[format=annotation] beans, so there does not need to be an exact match between the javadoc:org.springframework.core.env.Environment[] property name and the bean property name.
 Common examples where this is useful include dash-separated environment properties (for example, `context-path` binds to `contextPath`), and capitalized environment properties (for example, `PORT` binds to `port`).
 
-As an example, consider the following javadoc:org.springframework.boot.context.properties.ConfigurationProperties[format=annotation] class:
+As an example, consider the following javadoc:io.github.kotlinmania.spring.boot.context.properties.ConfigurationProperties[format=annotation] class:
 
 include-code::MyPersonProperties[]
 
@@ -1169,7 +1169,7 @@ When setting `MY_PROPS_VALUES_KEY=VALUE`, the `values` javadoc:java.util.Map[] c
 ==== Caching
 
 Relaxed binding uses a cache to improve performance. By default, this caching is only applied to immutable property sources.
-To customize this behavior, for example to enable caching for mutable property sources, use javadoc:org.springframework.boot.context.properties.source.ConfigurationPropertyCaching[].
+To customize this behavior, for example to enable caching for mutable property sources, use javadoc:io.github.kotlinmania.spring.boot.context.properties.source.ConfigurationPropertyCaching[].
 
 
 
@@ -1268,8 +1268,8 @@ NOTE: The preceding merging rules apply to properties from all property sources,
 [[features.external-config.typesafe-configuration-properties.conversion]]
 === Properties Conversion
 
-Spring Boot attempts to coerce the external application properties to the right type when it binds to the javadoc:org.springframework.boot.context.properties.ConfigurationProperties[format=annotation] beans.
-If you need custom type conversion, you can provide a javadoc:org.springframework.core.convert.ConversionService[] bean (with a bean named `conversionService`) or custom property editors (through a javadoc:org.springframework.beans.factory.config.CustomEditorConfigurer[] bean) or custom converters (with bean definitions annotated as javadoc:org.springframework.boot.context.properties.ConfigurationPropertiesBinding[format=annotation]).
+Spring Boot attempts to coerce the external application properties to the right type when it binds to the javadoc:io.github.kotlinmania.spring.boot.context.properties.ConfigurationProperties[format=annotation] beans.
+If you need custom type conversion, you can provide a javadoc:org.springframework.core.convert.ConversionService[] bean (with a bean named `conversionService`) or custom property editors (through a javadoc:org.springframework.beans.factory.config.CustomEditorConfigurer[] bean) or custom converters (with bean definitions annotated as javadoc:io.github.kotlinmania.spring.boot.context.properties.ConfigurationPropertiesBinding[format=annotation]).
 
 [NOTE]
 ====
@@ -1277,7 +1277,7 @@ Beans used for property conversion are requested very early during the applicati
 Typically, any dependency that you require may not be fully initialized at creation time.
 ====
 
-TIP: You may want to rename your custom javadoc:org.springframework.core.convert.ConversionService[] if it is not required for configuration keys coercion and only rely on custom converters qualified with javadoc:org.springframework.boot.context.properties.ConfigurationPropertiesBinding[format=annotation].
+TIP: You may want to rename your custom javadoc:org.springframework.core.convert.ConversionService[] if it is not required for configuration keys coercion and only rely on custom converters qualified with javadoc:io.github.kotlinmania.spring.boot.context.properties.ConfigurationPropertiesBinding[format=annotation].
 When qualifying a `@Bean` method with `@ConfigurationPropertiesBinding`, the method should be `static` to avoid "`bean is not eligible for getting processed by all BeanPostProcessors`" warnings.
 
 
@@ -1288,7 +1288,7 @@ When qualifying a `@Bean` method with `@ConfigurationPropertiesBinding`, the met
 Spring Boot has dedicated support for expressing durations.
 If you expose a javadoc:java.time.Duration[] property, the following formats in application properties are available:
 
-* A regular `long` representation (using milliseconds as the default unit unless a javadoc:org.springframework.boot.convert.DurationUnit[format=annotation] has been specified)
+* A regular `long` representation (using milliseconds as the default unit unless a javadoc:io.github.kotlinmania.spring.boot.convert.DurationUnit[format=annotation] has been specified)
 * The standard ISO-8601 format {apiref-openjdk}/java.base/java/time/Duration.html#parse(java.lang.CharSequence)[used by javadoc:java.time.Duration[]]
 * A more readable format where the value and the unit are coupled (`10s` means 10 seconds)
 
@@ -1310,14 +1310,14 @@ These are:
 * `h` for hours
 * `d` for days
 
-The default unit is milliseconds and can be overridden using javadoc:org.springframework.boot.convert.DurationUnit[format=annotation] as illustrated in the sample above.
+The default unit is milliseconds and can be overridden using javadoc:io.github.kotlinmania.spring.boot.convert.DurationUnit[format=annotation] as illustrated in the sample above.
 
 If you prefer to use constructor binding, the same properties can be exposed, as shown in the following example:
 
 include-code::constructorbinding/MyProperties[]
 
 
-TIP: If you are upgrading a javadoc:java.lang.Long[] property, make sure to define the unit (using javadoc:org.springframework.boot.convert.DurationUnit[format=annotation]) if it is not milliseconds.
+TIP: If you are upgrading a javadoc:java.lang.Long[] property, make sure to define the unit (using javadoc:io.github.kotlinmania.spring.boot.convert.DurationUnit[format=annotation]) if it is not milliseconds.
 Doing so gives a transparent upgrade path while supporting a much richer format.
 
 
@@ -1328,7 +1328,7 @@ Doing so gives a transparent upgrade path while supporting a much richer format.
 In addition to durations, Spring Boot can also work with javadoc:java.time.Period[] type.
 The following formats can be used in application properties:
 
-* A regular `int` representation (using days as the default unit unless a javadoc:org.springframework.boot.convert.PeriodUnit[format=annotation] has been specified)
+* A regular `int` representation (using days as the default unit unless a javadoc:io.github.kotlinmania.spring.boot.convert.PeriodUnit[format=annotation] has been specified)
 * The standard ISO-8601 format {apiref-openjdk}/java.base/java/time/Period.html#parse(java.lang.CharSequence)[used by javadoc:java.time.Period[]]
 * A simpler format where the value and the unit pairs are coupled (`1y3d` means 1 year and 3 days)
 
@@ -1349,7 +1349,7 @@ NOTE: The javadoc:java.time.Period[] type never actually stores the number of we
 Spring Framework has a javadoc:org.springframework.util.unit.DataSize[] value type that expresses a size in bytes.
 If you expose a javadoc:org.springframework.util.unit.DataSize[] property, the following formats in application properties are available:
 
-* A regular `long` representation (using bytes as the default unit unless a javadoc:org.springframework.boot.convert.DataSizeUnit[format=annotation] has been specified)
+* A regular `long` representation (using bytes as the default unit unless a javadoc:io.github.kotlinmania.spring.boot.convert.DataSizeUnit[format=annotation] has been specified)
 * A more readable format where the value and the unit are coupled (`10MB` means 10 megabytes)
 
 Consider the following example:
@@ -1368,13 +1368,13 @@ These are:
 * `GB` for gigabytes
 * `TB` for terabytes
 
-The default unit is bytes and can be overridden using javadoc:org.springframework.boot.convert.DataSizeUnit[format=annotation] as illustrated in the sample above.
+The default unit is bytes and can be overridden using javadoc:io.github.kotlinmania.spring.boot.convert.DataSizeUnit[format=annotation] as illustrated in the sample above.
 
 If you prefer to use constructor binding, the same properties can be exposed, as shown in the following example:
 
 include-code::constructorbinding/MyProperties[]
 
-TIP: If you are upgrading a javadoc:java.lang.Long[] property, make sure to define the unit (using javadoc:org.springframework.boot.convert.DataSizeUnit[format=annotation]) if it is not bytes.
+TIP: If you are upgrading a javadoc:java.lang.Long[] property, make sure to define the unit (using javadoc:io.github.kotlinmania.spring.boot.convert.DataSizeUnit[format=annotation]) if it is not bytes.
 Doing so gives a transparent upgrade path while supporting a much richer format.
 
 
@@ -1398,7 +1398,7 @@ NOTE: The `Resource` property can also be used to provide the path to the resour
 [[features.external-config.typesafe-configuration-properties.validation]]
 === @ConfigurationProperties Validation
 
-Spring Boot attempts to validate javadoc:org.springframework.boot.context.properties.ConfigurationProperties[format=annotation] classes whenever they are annotated with Spring's javadoc:org.springframework.validation.annotation.Validated[format=annotation] annotation.
+Spring Boot attempts to validate javadoc:io.github.kotlinmania.spring.boot.context.properties.ConfigurationProperties[format=annotation] classes whenever they are annotated with Spring's javadoc:org.springframework.validation.annotation.Validated[format=annotation] annotation.
 You can use JSR-303 `jakarta.validation` constraint annotations directly on your configuration class.
 To do so, ensure that a compliant JSR-303 implementation is on your classpath and then add constraint annotations to your fields, as shown in the following example:
 
@@ -1416,7 +1416,7 @@ The javadoc:org.springframework.context.annotation.Bean[format=annotation] metho
 The configuration properties validator is created very early in the application's lifecycle, and declaring the javadoc:org.springframework.context.annotation.Bean[format=annotation] method as static lets the bean be created without having to instantiate the javadoc:org.springframework.context.annotation.Configuration[format=annotation] class.
 Doing so avoids any problems that may be caused by early instantiation.
 
-TIP: The `spring-boot-actuator` module includes an endpoint that exposes all javadoc:org.springframework.boot.context.properties.ConfigurationProperties[format=annotation] beans.
+TIP: The `spring-boot-actuator` module includes an endpoint that exposes all javadoc:io.github.kotlinmania.spring.boot.context.properties.ConfigurationProperties[format=annotation] beans.
 Point your web browser to `/actuator/configprops` or use the equivalent JMX endpoint.
 See the xref:actuator/endpoints.adoc[Production ready features] section for details.
 
@@ -1426,7 +1426,7 @@ See the xref:actuator/endpoints.adoc[Production ready features] section for deta
 === @ConfigurationProperties vs. @Value
 
 The javadoc:org.springframework.beans.factory.annotation.Value[format=annotation] annotation is a core container feature, and it does not provide the same features as type-safe configuration properties.
-The following table summarizes the features that are supported by javadoc:org.springframework.boot.context.properties.ConfigurationProperties[format=annotation] and javadoc:org.springframework.beans.factory.annotation.Value[format=annotation]:
+The following table summarizes the features that are supported by javadoc:io.github.kotlinmania.spring.boot.context.properties.ConfigurationProperties[format=annotation] and javadoc:org.springframework.beans.factory.annotation.Value[format=annotation]:
 
 [cols="4,2,2"]
 |===
@@ -1449,13 +1449,13 @@ The following table summarizes the features that are supported by javadoc:org.sp
 [NOTE]
 ====
 If you do want to use javadoc:org.springframework.beans.factory.annotation.Value[format=annotation], we recommend that you refer to property names using their canonical form (kebab-case using only lowercase letters).
-This will allow Spring Boot to use the same logic as it does when xref:features/external-config.adoc#features.external-config.typesafe-configuration-properties.relaxed-binding[relaxed binding] javadoc:org.springframework.boot.context.properties.ConfigurationProperties[format=annotation].
+This will allow Spring Boot to use the same logic as it does when xref:features/external-config.adoc#features.external-config.typesafe-configuration-properties.relaxed-binding[relaxed binding] javadoc:io.github.kotlinmania.spring.boot.context.properties.ConfigurationProperties[format=annotation].
 
 For example, `@Value("${demo.item-price}")` will pick up `demo.item-price` and `demo.itemPrice` forms from the `application.properties` file, as well as `DEMO_ITEMPRICE` from the system environment.
 If you use `@Value("${demo.itemPrice}")` instead, it will pickup the `demo.itemPrice` form from the `application.properties` file, as well as `DEMO_ITEMPRICE` from the system environment, but `demo.item-price` would not be considered.
 ====
 
-If you define a set of configuration keys for your own components, we recommend you group them in a POJO annotated with javadoc:org.springframework.boot.context.properties.ConfigurationProperties[format=annotation].
+If you define a set of configuration keys for your own components, we recommend you group them in a POJO annotated with javadoc:io.github.kotlinmania.spring.boot.context.properties.ConfigurationProperties[format=annotation].
 Doing so will provide you with structured, type-safe object that you can inject into your own beans.
 
 `SpEL` expressions from  xref:features/external-config.adoc#features.external-config.files[application property files] are not processed at time of parsing these files and populating the environment.

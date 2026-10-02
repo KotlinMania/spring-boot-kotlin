@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docker.compose.lifecycle;
+package io.github.kotlinmania.spring.boot.docker.compose.lifecycle;
 
 import java.time.Duration;
 import java.util.Collections;
@@ -22,7 +22,7 @@ import java.util.Collections;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.docker.compose.core.DockerCompose;
+import io.github.kotlinmania.spring.boot.docker.compose.core.DockerCompose;
 
 import static org.mockito.BDDMockito.then;
 import static org.mockito.Mockito.mock;

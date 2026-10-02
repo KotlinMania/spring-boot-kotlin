@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.jpa;
+package io.github.kotlinmania.spring.boot.jpa;
 
 import java.util.Collections;
 import java.util.Map;

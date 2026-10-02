@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.actuate.management;
+package io.github.kotlinmania.spring.boot.actuate.management;
 
 import java.lang.management.ManagementFactory;
 import java.lang.management.ThreadInfo;
@@ -22,9 +22,9 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.function.Function;
 
-import org.springframework.boot.actuate.endpoint.OperationResponseBody;
-import org.springframework.boot.actuate.endpoint.annotation.Endpoint;
-import org.springframework.boot.actuate.endpoint.annotation.ReadOperation;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.OperationResponseBody;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.annotation.Endpoint;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.annotation.ReadOperation;
 
 /**
  * {@link Endpoint @Endpoint} to expose thread info.

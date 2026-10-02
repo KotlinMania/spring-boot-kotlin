@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.actuate.web.exchanges;
+package io.github.kotlinmania.spring.boot.actuate.web.exchanges;
 
 import java.util.List;
 import java.util.Map;

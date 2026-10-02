@@ -18,6 +18,6 @@
  * Core interfaces and classes for working with Docker Compose.
  */
 @NullMarked
-package org.springframework.boot.docker.compose.core;
+package io.github.kotlinmania.spring.boot.docker.compose.core;
 
 import org.jspecify.annotations.NullMarked;

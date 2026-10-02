@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.howto.webserver.discoverport
+package io.github.kotlinmania.spring.boot.docs.howto.webserver.discoverport
 
-import org.springframework.boot.test.context.SpringBootTest
-import org.springframework.boot.test.context.SpringBootTest.WebEnvironment
-import org.springframework.boot.test.web.server.LocalServerPort
+import io.github.kotlinmania.spring.boot.test.context.SpringBootTest
+import io.github.kotlinmania.spring.boot.test.context.SpringBootTest.WebEnvironment
+import io.github.kotlinmania.spring.boot.test.web.server.LocalServerPort
 
 @SpringBootTest(webEnvironment = WebEnvironment.RANDOM_PORT)
 class MyWebIntegrationTests {

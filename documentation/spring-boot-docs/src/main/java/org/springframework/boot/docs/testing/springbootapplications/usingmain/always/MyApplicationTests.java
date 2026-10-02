@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.testing.springbootapplications.usingmain.always;
+package io.github.kotlinmania.spring.boot.docs.testing.springbootapplications.usingmain.always;
 
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.boot.test.context.SpringBootTest.UseMainMethod;
+import io.github.kotlinmania.spring.boot.test.context.SpringBootTest;
+import io.github.kotlinmania.spring.boot.test.context.SpringBootTest.UseMainMethod;
 
 @SpringBootTest(useMainMethod = UseMainMethod.ALWAYS)
 class MyApplicationTests {

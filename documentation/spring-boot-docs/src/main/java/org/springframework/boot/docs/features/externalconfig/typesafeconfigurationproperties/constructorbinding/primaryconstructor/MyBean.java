@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.features.externalconfig.typesafeconfigurationproperties.constructorbinding.primaryconstructor;
+package io.github.kotlinmania.spring.boot.docs.features.externalconfig.typesafeconfigurationproperties.constructorbinding.primaryconstructor;
 
 class MyBean {
 

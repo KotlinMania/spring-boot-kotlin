@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.hateoas.autoconfigure;
+package io.github.kotlinmania.spring.boot.hateoas.autoconfigure;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -22,8 +22,8 @@ import java.util.Map;
 import org.junit.jupiter.api.Test;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.SpringBootConfiguration;
-import org.springframework.boot.webmvc.test.autoconfigure.WebMvcTest;
+import io.github.kotlinmania.spring.boot.SpringBootConfiguration;
+import io.github.kotlinmania.spring.boot.webmvc.test.autoconfigure.WebMvcTest;
 import org.springframework.context.annotation.Import;
 import org.springframework.hateoas.EntityModel;
 import org.springframework.hateoas.Link;

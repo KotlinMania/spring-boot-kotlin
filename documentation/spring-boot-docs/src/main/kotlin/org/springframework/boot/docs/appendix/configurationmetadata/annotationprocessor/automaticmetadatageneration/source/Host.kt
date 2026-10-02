@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.appendix.configurationmetadata.annotationprocessor.automaticmetadatageneration.source
+package io.github.kotlinmania.spring.boot.docs.appendix.configurationmetadata.annotationprocessor.automaticmetadatageneration.source
 
-import org.springframework.boot.context.properties.ConfigurationPropertiesSource
+import io.github.kotlinmania.spring.boot.context.properties.ConfigurationPropertiesSource
 
 @ConfigurationPropertiesSource
 class Host {

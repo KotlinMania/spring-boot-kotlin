@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.security.test.autoconfigure.webmvc;
+package io.github.kotlinmania.spring.boot.security.test.autoconfigure.webmvc;
 
 import java.io.IOException;
 import java.security.Principal;
@@ -26,7 +26,7 @@ import jakarta.servlet.ServletRequest;
 import jakarta.servlet.ServletResponse;
 import jakarta.servlet.http.HttpServletRequest;
 
-import org.springframework.boot.security.autoconfigure.web.servlet.SecurityFilterProperties;
+import io.github.kotlinmania.spring.boot.security.autoconfigure.web.servlet.SecurityFilterProperties;
 import org.springframework.core.Ordered;
 
 /**

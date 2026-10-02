@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.r2dbc.autoconfigure.observation;
+package io.github.kotlinmania.spring.boot.r2dbc.autoconfigure.observation;
 
 import io.micrometer.observation.ObservationRegistry;
 import io.r2dbc.proxy.ProxyConnectionFactory;
@@ -26,13 +26,13 @@ import io.r2dbc.spi.ConnectionFactoryOptions;
 import org.jspecify.annotations.Nullable;
 
 import org.springframework.beans.factory.ObjectProvider;
-import org.springframework.boot.autoconfigure.AutoConfiguration;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
-import org.springframework.boot.context.properties.EnableConfigurationProperties;
-import org.springframework.boot.r2dbc.OptionsCapableConnectionFactory;
-import org.springframework.boot.r2dbc.autoconfigure.ProxyConnectionFactoryCustomizer;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.EnableAutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnBean;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnClass;
+import io.github.kotlinmania.spring.boot.context.properties.EnableConfigurationProperties;
+import io.github.kotlinmania.spring.boot.r2dbc.OptionsCapableConnectionFactory;
+import io.github.kotlinmania.spring.boot.r2dbc.autoconfigure.ProxyConnectionFactoryCustomizer;
 import org.springframework.context.annotation.Bean;
 import org.springframework.core.annotation.Order;
 
@@ -44,7 +44,7 @@ import org.springframework.core.annotation.Order;
  * @since 4.0.0
  */
 @AutoConfiguration(
-		afterName = "org.springframework.boot.micrometer.observation.autoconfigure.ObservationAutoConfiguration")
+		afterName = "io.github.kotlinmania.spring.boot.micrometer.observation.autoconfigure.ObservationAutoConfiguration")
 @ConditionalOnClass({ ConnectionFactory.class, ProxyConnectionFactory.class, ObservationRegistry.class })
 @ConditionalOnBean(ObservationRegistry.class)
 @EnableConfigurationProperties(R2dbcObservationProperties.class)

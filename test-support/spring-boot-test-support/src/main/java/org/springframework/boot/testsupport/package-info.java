@@ -17,4 +17,4 @@
 /**
  * Internal support classes used in Spring Boot tests.
  */
-package org.springframework.boot.testsupport;
+package io.github.kotlinmania.spring.boot.testsupport;

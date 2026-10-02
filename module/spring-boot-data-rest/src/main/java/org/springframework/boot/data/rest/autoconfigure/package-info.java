@@ -18,6 +18,6 @@
  * Auto-configuration for Spring Data REST.
  */
 @NullMarked
-package org.springframework.boot.data.rest.autoconfigure;
+package io.github.kotlinmania.spring.boot.data.rest.autoconfigure;
 
 import org.jspecify.annotations.NullMarked;

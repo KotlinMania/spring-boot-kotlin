@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.devtools.remote.client;
+package io.github.kotlinmania.spring.boot.devtools.remote.client;
 
 import java.net.InetSocketAddress;
 import java.net.Proxy.Type;
@@ -31,23 +31,23 @@ import org.jspecify.annotations.Nullable;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.ObjectProvider;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnBooleanProperty;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
-import org.springframework.boot.context.properties.EnableConfigurationProperties;
-import org.springframework.boot.devtools.autoconfigure.DevToolsProperties;
-import org.springframework.boot.devtools.autoconfigure.DevToolsProperties.Restart;
-import org.springframework.boot.devtools.autoconfigure.RemoteDevToolsProperties;
-import org.springframework.boot.devtools.autoconfigure.RemoteDevToolsProperties.Proxy;
-import org.springframework.boot.devtools.autoconfigure.TriggerFileFilter;
-import org.springframework.boot.devtools.classpath.ClassPathChangedEvent;
-import org.springframework.boot.devtools.classpath.ClassPathFileSystemWatcher;
-import org.springframework.boot.devtools.classpath.ClassPathRestartStrategy;
-import org.springframework.boot.devtools.classpath.PatternClassPathRestartStrategy;
-import org.springframework.boot.devtools.filewatch.FileSystemWatcher;
-import org.springframework.boot.devtools.filewatch.FileSystemWatcherFactory;
-import org.springframework.boot.devtools.restart.DefaultRestartInitializer;
-import org.springframework.boot.devtools.restart.RestartScope;
-import org.springframework.boot.devtools.restart.Restarter;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnBooleanProperty;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnMissingBean;
+import io.github.kotlinmania.spring.boot.context.properties.EnableConfigurationProperties;
+import io.github.kotlinmania.spring.boot.devtools.autoconfigure.DevToolsProperties;
+import io.github.kotlinmania.spring.boot.devtools.autoconfigure.DevToolsProperties.Restart;
+import io.github.kotlinmania.spring.boot.devtools.autoconfigure.RemoteDevToolsProperties;
+import io.github.kotlinmania.spring.boot.devtools.autoconfigure.RemoteDevToolsProperties.Proxy;
+import io.github.kotlinmania.spring.boot.devtools.autoconfigure.TriggerFileFilter;
+import io.github.kotlinmania.spring.boot.devtools.classpath.ClassPathChangedEvent;
+import io.github.kotlinmania.spring.boot.devtools.classpath.ClassPathFileSystemWatcher;
+import io.github.kotlinmania.spring.boot.devtools.classpath.ClassPathRestartStrategy;
+import io.github.kotlinmania.spring.boot.devtools.classpath.PatternClassPathRestartStrategy;
+import io.github.kotlinmania.spring.boot.devtools.filewatch.FileSystemWatcher;
+import io.github.kotlinmania.spring.boot.devtools.filewatch.FileSystemWatcherFactory;
+import io.github.kotlinmania.spring.boot.devtools.restart.DefaultRestartInitializer;
+import io.github.kotlinmania.spring.boot.devtools.restart.RestartScope;
+import io.github.kotlinmania.spring.boot.devtools.restart.Restarter;
 import org.springframework.context.ApplicationListener;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -65,7 +65,7 @@ import org.springframework.util.StringUtils;
  *
  * @author Phillip Webb
  * @since 1.3.0
- * @see org.springframework.boot.devtools.RemoteSpringApplication
+ * @see io.github.kotlinmania.spring.boot.devtools.RemoteSpringApplication
  */
 @Configuration(proxyBeanMethods = false)
 @EnableConfigurationProperties(DevToolsProperties.class)
@@ -151,14 +151,14 @@ public class RemoteClientConfiguration implements InitializingBean {
 		@Bean
 		@RestartScope
 		@ConditionalOnMissingBean
-		org.springframework.boot.devtools.livereload.LiveReloadServer liveReloadServer() {
-			return new org.springframework.boot.devtools.livereload.LiveReloadServer(
+		io.github.kotlinmania.spring.boot.devtools.livereload.LiveReloadServer liveReloadServer() {
+			return new io.github.kotlinmania.spring.boot.devtools.livereload.LiveReloadServer(
 					this.properties.getLivereload().getPort(), Restarter.getInstance().getThreadFactory());
 		}
 
 		@Bean
 		ApplicationListener<ClassPathChangedEvent> liveReloadTriggeringClassPathChangedEventListener(
-				org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer optionalLiveReloadServer) {
+				io.github.kotlinmania.spring.boot.devtools.autoconfigure.OptionalLiveReloadServer optionalLiveReloadServer) {
 			return (event) -> {
 				String url = this.remoteUrl + this.properties.getRemote().getContextPath();
 				this.executor.execute(
@@ -167,9 +167,9 @@ public class RemoteClientConfiguration implements InitializingBean {
 		}
 
 		@Bean
-		org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer optionalLiveReloadServer(
-				ObjectProvider<org.springframework.boot.devtools.livereload.LiveReloadServer> liveReloadServer) {
-			return new org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer(
+		io.github.kotlinmania.spring.boot.devtools.autoconfigure.OptionalLiveReloadServer optionalLiveReloadServer(
+				ObjectProvider<io.github.kotlinmania.spring.boot.devtools.livereload.LiveReloadServer> liveReloadServer) {
+			return new io.github.kotlinmania.spring.boot.devtools.autoconfigure.OptionalLiveReloadServer(
 					liveReloadServer.getIfAvailable());
 		}
 

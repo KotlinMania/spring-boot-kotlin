@@ -14,17 +14,17 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.cassandra.autoconfigure.health;
+package io.github.kotlinmania.spring.boot.cassandra.autoconfigure.health;
 
 import com.datastax.oss.driver.api.core.CqlSession;
 
-import org.springframework.boot.autoconfigure.AutoConfiguration;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
-import org.springframework.boot.cassandra.autoconfigure.CassandraAutoConfiguration;
-import org.springframework.boot.cassandra.autoconfigure.health.CassandraHealthContributorConfigurations.CassandraDriverConfiguration;
-import org.springframework.boot.cassandra.health.CassandraDriverHealthIndicator;
-import org.springframework.boot.health.autoconfigure.contributor.ConditionalOnEnabledHealthIndicator;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.EnableAutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnClass;
+import io.github.kotlinmania.spring.boot.cassandra.autoconfigure.CassandraAutoConfiguration;
+import io.github.kotlinmania.spring.boot.cassandra.autoconfigure.health.CassandraHealthContributorConfigurations.CassandraDriverConfiguration;
+import io.github.kotlinmania.spring.boot.cassandra.health.CassandraDriverHealthIndicator;
+import io.github.kotlinmania.spring.boot.health.autoconfigure.contributor.ConditionalOnEnabledHealthIndicator;
 import org.springframework.context.annotation.Import;
 
 /**

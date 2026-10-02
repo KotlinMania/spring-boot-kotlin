@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.hibernate.autoconfigure;
+package io.github.kotlinmania.spring.boot.hibernate.autoconfigure;
 
 import java.io.File;
 import java.io.IOException;
@@ -65,38 +65,38 @@ import org.springframework.aot.hint.TypeReference;
 import org.springframework.aot.hint.predicate.RuntimeHintsPredicates;
 import org.springframework.beans.factory.BeanCreationException;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.autoconfigure.AutoConfigurations;
-import org.springframework.boot.autoconfigure.TestAutoConfigurationPackage;
-import org.springframework.boot.autoconfigure.task.TaskExecutionAutoConfiguration;
-import org.springframework.boot.flyway.autoconfigure.FlywayAutoConfiguration;
-import org.springframework.boot.hibernate.SpringImplicitNamingStrategy;
-import org.springframework.boot.hibernate.autoconfigure.HibernateJpaAutoConfigurationTests.JpaUsingApplicationListenerConfiguration.EventCapturingApplicationListener;
-import org.springframework.boot.hibernate.autoconfigure.HibernateJpaConfiguration.HibernateRuntimeHints;
-import org.springframework.boot.hibernate.autoconfigure.mapping.NonAnnotatedEntity;
-import org.springframework.boot.hibernate.autoconfigure.test.city.City;
-import org.springframework.boot.hibernate.autoconfigure.test.country.Country;
-import org.springframework.boot.jdbc.DataSourceBuilder;
-import org.springframework.boot.jdbc.autoconfigure.DataSourceAutoConfiguration;
-import org.springframework.boot.jdbc.autoconfigure.DataSourceInitializationAutoConfiguration;
-import org.springframework.boot.jdbc.autoconfigure.DataSourceTransactionManagerAutoConfiguration;
-import org.springframework.boot.jdbc.autoconfigure.XADataSourceAutoConfiguration;
-import org.springframework.boot.jpa.EntityManagerFactoryBuilder;
-import org.springframework.boot.jpa.autoconfigure.BootstrapExecutorRequiredException;
-import org.springframework.boot.jpa.autoconfigure.EntityManagerFactoryBuilderCustomizer;
-import org.springframework.boot.jpa.autoconfigure.JpaBaseConfiguration;
-import org.springframework.boot.jpa.autoconfigure.JpaProperties;
-import org.springframework.boot.liquibase.autoconfigure.LiquibaseAutoConfiguration;
-import org.springframework.boot.sql.init.dependency.DependsOnDatabaseInitialization;
-import org.springframework.boot.test.context.assertj.AssertableApplicationContext;
-import org.springframework.boot.test.context.runner.ApplicationContextRunner;
-import org.springframework.boot.test.context.runner.ContextConsumer;
-import org.springframework.boot.test.context.runner.WebApplicationContextRunner;
-import org.springframework.boot.testsupport.BuildOutput;
-import org.springframework.boot.testsupport.classpath.resources.WithResource;
-import org.springframework.boot.transaction.autoconfigure.TransactionAutoConfiguration;
-import org.springframework.boot.transaction.autoconfigure.TransactionManagerCustomizationAutoConfiguration;
-import org.springframework.boot.transaction.jta.autoconfigure.JtaAutoConfiguration;
-import org.springframework.boot.web.servlet.FilterRegistrationBean;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurations;
+import io.github.kotlinmania.spring.boot.autoconfigure.TestAutoConfigurationPackage;
+import io.github.kotlinmania.spring.boot.autoconfigure.task.TaskExecutionAutoConfiguration;
+import io.github.kotlinmania.spring.boot.flyway.autoconfigure.FlywayAutoConfiguration;
+import io.github.kotlinmania.spring.boot.hibernate.SpringImplicitNamingStrategy;
+import io.github.kotlinmania.spring.boot.hibernate.autoconfigure.HibernateJpaAutoConfigurationTests.JpaUsingApplicationListenerConfiguration.EventCapturingApplicationListener;
+import io.github.kotlinmania.spring.boot.hibernate.autoconfigure.HibernateJpaConfiguration.HibernateRuntimeHints;
+import io.github.kotlinmania.spring.boot.hibernate.autoconfigure.mapping.NonAnnotatedEntity;
+import io.github.kotlinmania.spring.boot.hibernate.autoconfigure.test.city.City;
+import io.github.kotlinmania.spring.boot.hibernate.autoconfigure.test.country.Country;
+import io.github.kotlinmania.spring.boot.jdbc.DataSourceBuilder;
+import io.github.kotlinmania.spring.boot.jdbc.autoconfigure.DataSourceAutoConfiguration;
+import io.github.kotlinmania.spring.boot.jdbc.autoconfigure.DataSourceInitializationAutoConfiguration;
+import io.github.kotlinmania.spring.boot.jdbc.autoconfigure.DataSourceTransactionManagerAutoConfiguration;
+import io.github.kotlinmania.spring.boot.jdbc.autoconfigure.XADataSourceAutoConfiguration;
+import io.github.kotlinmania.spring.boot.jpa.EntityManagerFactoryBuilder;
+import io.github.kotlinmania.spring.boot.jpa.autoconfigure.BootstrapExecutorRequiredException;
+import io.github.kotlinmania.spring.boot.jpa.autoconfigure.EntityManagerFactoryBuilderCustomizer;
+import io.github.kotlinmania.spring.boot.jpa.autoconfigure.JpaBaseConfiguration;
+import io.github.kotlinmania.spring.boot.jpa.autoconfigure.JpaProperties;
+import io.github.kotlinmania.spring.boot.liquibase.autoconfigure.LiquibaseAutoConfiguration;
+import io.github.kotlinmania.spring.boot.sql.init.dependency.DependsOnDatabaseInitialization;
+import io.github.kotlinmania.spring.boot.test.context.assertj.AssertableApplicationContext;
+import io.github.kotlinmania.spring.boot.test.context.runner.ApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.test.context.runner.ContextConsumer;
+import io.github.kotlinmania.spring.boot.test.context.runner.WebApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.testsupport.BuildOutput;
+import io.github.kotlinmania.spring.boot.testsupport.classpath.resources.WithResource;
+import io.github.kotlinmania.spring.boot.transaction.autoconfigure.TransactionAutoConfiguration;
+import io.github.kotlinmania.spring.boot.transaction.autoconfigure.TransactionManagerCustomizationAutoConfiguration;
+import io.github.kotlinmania.spring.boot.transaction.jta.autoconfigure.JtaAutoConfiguration;
+import io.github.kotlinmania.spring.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.context.ApplicationEvent;
 import org.springframework.context.ApplicationListener;
 import org.springframework.context.ConfigurableApplicationContext;
@@ -710,7 +710,7 @@ class HibernateJpaAutoConfigurationTests {
 									 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 									 xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence/orm https://www.oracle.com/webfolder/technetwork/jsc/xml/ns/persistence/orm_2_1.xsd"
 									 version="2.1">
-						<entity class="org.springframework.boot.hibernate.autoconfigure.mapping.NonAnnotatedEntity">
+						<entity class="io.github.kotlinmania.spring.boot.hibernate.autoconfigure.mapping.NonAnnotatedEntity">
 							<table name="NON_ANNOTATED"/>
 							<attributes>
 								<id name="id">
@@ -1249,7 +1249,7 @@ class HibernateJpaAutoConfigurationTests {
 					<?xml version="1.0" encoding="UTF-8"?>
 					<persistence version="2.0" xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence https://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
 						<persistence-unit name="manually-configured">
-							<class>org.springframework.boot.jpa.autoconfigure.test.city.City</class>
+							<class>io.github.kotlinmania.spring.boot.jpa.autoconfigure.test.city.City</class>
 							<exclude-unlisted-classes>true</exclude-unlisted-classes>
 						</persistence-unit>
 					</persistence>

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.micrometer.metrics.autoconfigure.export.ganglia;
+package io.github.kotlinmania.spring.boot.micrometer.metrics.autoconfigure.export.ganglia;
 
 import io.micrometer.ganglia.GangliaConfig;
 import org.junit.jupiter.api.Test;

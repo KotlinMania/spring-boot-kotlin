@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.data.nosql.couchbase.repositories;
+package io.github.kotlinmania.spring.boot.docs.data.nosql.couchbase.repositories;
 
 import org.springframework.data.couchbase.core.CouchbaseTemplate;
 import org.springframework.stereotype.Component;

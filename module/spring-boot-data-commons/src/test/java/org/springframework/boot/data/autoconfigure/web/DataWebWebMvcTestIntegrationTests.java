@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.data.autoconfigure.web;
+package io.github.kotlinmania.spring.boot.data.autoconfigure.web;
 
 import org.junit.jupiter.api.Test;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.SpringBootConfiguration;
-import org.springframework.boot.data.autoconfigure.web.DataWebWebMvcTestIntegrationTests.PageableController;
-import org.springframework.boot.webmvc.test.autoconfigure.WebMvcTest;
+import io.github.kotlinmania.spring.boot.SpringBootConfiguration;
+import io.github.kotlinmania.spring.boot.data.autoconfigure.web.DataWebWebMvcTestIntegrationTests.PageableController;
+import io.github.kotlinmania.spring.boot.webmvc.test.autoconfigure.WebMvcTest;
 import org.springframework.context.annotation.Import;
 import org.springframework.data.domain.Pageable;
 import org.springframework.test.web.servlet.assertj.MockMvcTester;

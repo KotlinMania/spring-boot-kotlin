@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.devtools.autoconfigure;
+package io.github.kotlinmania.spring.boot.devtools.autoconfigure;
 
 import java.io.File;
 import java.util.Collections;
@@ -32,21 +32,21 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 
 import org.springframework.beans.factory.NoSuchBeanDefinitionException;
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.ImportAutoConfiguration;
-import org.springframework.boot.autoconfigure.web.WebProperties;
-import org.springframework.boot.autoconfigure.web.WebProperties.Resources;
-import org.springframework.boot.devtools.classpath.ClassPathChangedEvent;
-import org.springframework.boot.devtools.classpath.ClassPathFileSystemWatcher;
-import org.springframework.boot.devtools.livereload.LiveReloadServer;
-import org.springframework.boot.devtools.restart.FailureHandler;
-import org.springframework.boot.devtools.restart.MockRestartInitializer;
-import org.springframework.boot.devtools.restart.MockRestarter;
-import org.springframework.boot.devtools.restart.Restarter;
-import org.springframework.boot.freemarker.autoconfigure.FreeMarkerAutoConfiguration;
-import org.springframework.boot.tomcat.TomcatWebServer;
-import org.springframework.boot.tomcat.autoconfigure.servlet.TomcatServletWebServerAutoConfiguration;
-import org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext;
+import io.github.kotlinmania.spring.boot.SpringApplication;
+import io.github.kotlinmania.spring.boot.autoconfigure.ImportAutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.web.WebProperties;
+import io.github.kotlinmania.spring.boot.autoconfigure.web.WebProperties.Resources;
+import io.github.kotlinmania.spring.boot.devtools.classpath.ClassPathChangedEvent;
+import io.github.kotlinmania.spring.boot.devtools.classpath.ClassPathFileSystemWatcher;
+import io.github.kotlinmania.spring.boot.devtools.livereload.LiveReloadServer;
+import io.github.kotlinmania.spring.boot.devtools.restart.FailureHandler;
+import io.github.kotlinmania.spring.boot.devtools.restart.MockRestartInitializer;
+import io.github.kotlinmania.spring.boot.devtools.restart.MockRestarter;
+import io.github.kotlinmania.spring.boot.devtools.restart.Restarter;
+import io.github.kotlinmania.spring.boot.freemarker.autoconfigure.FreeMarkerAutoConfiguration;
+import io.github.kotlinmania.spring.boot.tomcat.TomcatWebServer;
+import io.github.kotlinmania.spring.boot.tomcat.autoconfigure.servlet.TomcatServletWebServerAutoConfiguration;
+import io.github.kotlinmania.spring.boot.web.server.servlet.context.ServletWebServerApplicationContext;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

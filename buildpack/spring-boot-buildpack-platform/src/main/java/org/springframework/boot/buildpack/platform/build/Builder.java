@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.buildpack.platform.build;
+package io.github.kotlinmania.spring.boot.buildpack.platform.build;
 
 import java.io.IOException;
 import java.util.List;
@@ -22,22 +22,22 @@ import java.util.function.Consumer;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.buildpack.platform.docker.DockerApi;
-import org.springframework.boot.buildpack.platform.docker.DockerLog;
-import org.springframework.boot.buildpack.platform.docker.ImagePlatform;
-import org.springframework.boot.buildpack.platform.docker.TotalProgressEvent;
-import org.springframework.boot.buildpack.platform.docker.TotalProgressPullListener;
-import org.springframework.boot.buildpack.platform.docker.TotalProgressPushListener;
-import org.springframework.boot.buildpack.platform.docker.UpdateListener;
-import org.springframework.boot.buildpack.platform.docker.configuration.DockerRegistryAuthentication;
-import org.springframework.boot.buildpack.platform.docker.configuration.ResolvedDockerHost;
-import org.springframework.boot.buildpack.platform.docker.transport.DockerEngineException;
-import org.springframework.boot.buildpack.platform.docker.type.Binding;
-import org.springframework.boot.buildpack.platform.docker.type.Image;
-import org.springframework.boot.buildpack.platform.docker.type.ImageArchive;
-import org.springframework.boot.buildpack.platform.docker.type.ImageReference;
-import org.springframework.boot.buildpack.platform.io.IOBiConsumer;
-import org.springframework.boot.buildpack.platform.io.TarArchive;
+import io.github.kotlinmania.spring.boot.buildpack.platform.docker.DockerApi;
+import io.github.kotlinmania.spring.boot.buildpack.platform.docker.DockerLog;
+import io.github.kotlinmania.spring.boot.buildpack.platform.docker.ImagePlatform;
+import io.github.kotlinmania.spring.boot.buildpack.platform.docker.TotalProgressEvent;
+import io.github.kotlinmania.spring.boot.buildpack.platform.docker.TotalProgressPullListener;
+import io.github.kotlinmania.spring.boot.buildpack.platform.docker.TotalProgressPushListener;
+import io.github.kotlinmania.spring.boot.buildpack.platform.docker.UpdateListener;
+import io.github.kotlinmania.spring.boot.buildpack.platform.docker.configuration.DockerRegistryAuthentication;
+import io.github.kotlinmania.spring.boot.buildpack.platform.docker.configuration.ResolvedDockerHost;
+import io.github.kotlinmania.spring.boot.buildpack.platform.docker.transport.DockerEngineException;
+import io.github.kotlinmania.spring.boot.buildpack.platform.docker.type.Binding;
+import io.github.kotlinmania.spring.boot.buildpack.platform.docker.type.Image;
+import io.github.kotlinmania.spring.boot.buildpack.platform.docker.type.ImageArchive;
+import io.github.kotlinmania.spring.boot.buildpack.platform.docker.type.ImageReference;
+import io.github.kotlinmania.spring.boot.buildpack.platform.io.IOBiConsumer;
+import io.github.kotlinmania.spring.boot.buildpack.platform.io.TarArchive;
 import org.springframework.util.Assert;
 import org.springframework.util.StringUtils;
 

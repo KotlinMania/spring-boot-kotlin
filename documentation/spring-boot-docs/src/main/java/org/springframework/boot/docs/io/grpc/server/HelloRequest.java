@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.io.grpc.server;
+package io.github.kotlinmania.spring.boot.docs.io.grpc.server;
 
 interface HelloRequest {
 

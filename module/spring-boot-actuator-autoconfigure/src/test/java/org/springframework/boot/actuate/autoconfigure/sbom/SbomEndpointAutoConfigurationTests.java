@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.actuate.autoconfigure.sbom;
+package io.github.kotlinmania.spring.boot.actuate.autoconfigure.sbom;
 
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.actuate.sbom.SbomEndpoint;
-import org.springframework.boot.actuate.sbom.SbomEndpointWebExtension;
-import org.springframework.boot.autoconfigure.AutoConfigurations;
-import org.springframework.boot.test.context.runner.ApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.actuate.sbom.SbomEndpoint;
+import io.github.kotlinmania.spring.boot.actuate.sbom.SbomEndpointWebExtension;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurations;
+import io.github.kotlinmania.spring.boot.test.context.runner.ApplicationContextRunner;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

@@ -18,6 +18,6 @@
  * Auto-configuration support classes for HTTP Service Clients.
  */
 @NullMarked
-package org.springframework.boot.http.client.autoconfigure.service;
+package io.github.kotlinmania.spring.boot.http.client.autoconfigure.service;
 
 import org.jspecify.annotations.NullMarked;

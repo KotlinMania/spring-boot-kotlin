@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.webservices.client;
+package io.github.kotlinmania.spring.boot.webservices.client;
 
 import java.net.URI;
 import java.util.Collection;

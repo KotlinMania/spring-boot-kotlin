@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.reactor.netty.autoconfigure;
+package io.github.kotlinmania.spring.boot.reactor.netty.autoconfigure;
 
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
-import org.springframework.boot.web.server.test.AutoConfigureWebServer;
+import io.github.kotlinmania.spring.boot.autoconfigure.EnableAutoConfiguration;
+import io.github.kotlinmania.spring.boot.web.server.test.AutoConfigureWebServer;
 
 /**
  * {@link EnableAutoConfiguration Auto-configuration} for Jetty

@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.restdocs.test.autoconfigure;
+package io.github.kotlinmania.spring.boot.restdocs.test.autoconfigure;
 
 import org.jspecify.annotations.Nullable;
 
 import org.springframework.beans.factory.InitializingBean;
-import org.springframework.boot.context.properties.PropertyMapper;
-import org.springframework.boot.webmvc.test.autoconfigure.MockMvcBuilderCustomizer;
+import io.github.kotlinmania.spring.boot.context.properties.PropertyMapper;
+import io.github.kotlinmania.spring.boot.webmvc.test.autoconfigure.MockMvcBuilderCustomizer;
 import org.springframework.restdocs.mockmvc.MockMvcRestDocumentationConfigurer;
 import org.springframework.restdocs.mockmvc.RestDocumentationResultHandler;
 import org.springframework.restdocs.mockmvc.UriConfigurer;

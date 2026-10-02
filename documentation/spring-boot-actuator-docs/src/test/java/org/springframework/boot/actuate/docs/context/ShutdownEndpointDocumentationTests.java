@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.actuate.docs.context;
+package io.github.kotlinmania.spring.boot.actuate.docs.context;
 
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.actuate.context.ShutdownEndpoint;
-import org.springframework.boot.actuate.docs.MockMvcEndpointDocumentationTests;
+import io.github.kotlinmania.spring.boot.actuate.context.ShutdownEndpoint;
+import io.github.kotlinmania.spring.boot.actuate.docs.MockMvcEndpointDocumentationTests;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

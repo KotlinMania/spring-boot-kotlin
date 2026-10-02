@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.test.autoconfigure.json;
+package io.github.kotlinmania.spring.boot.test.autoconfigure.json;
 
 import org.junit.jupiter.api.Test;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.json.test.autoconfigure.app.ExampleJsonApplication;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.boot.test.json.BasicJsonTester;
+import io.github.kotlinmania.spring.boot.json.test.autoconfigure.app.ExampleJsonApplication;
+import io.github.kotlinmania.spring.boot.test.context.SpringBootTest;
+import io.github.kotlinmania.spring.boot.test.json.BasicJsonTester;
 import org.springframework.test.context.ContextConfiguration;
 
 import static org.assertj.core.api.Assertions.assertThat;

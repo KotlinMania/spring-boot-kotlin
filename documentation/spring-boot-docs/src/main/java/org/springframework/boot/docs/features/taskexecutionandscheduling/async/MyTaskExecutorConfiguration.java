@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.features.taskexecutionandscheduling.async;
+package io.github.kotlinmania.spring.boot.docs.features.taskexecutionandscheduling.async;
 
 import java.util.concurrent.Executor;
 import java.util.concurrent.ExecutorService;

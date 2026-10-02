@@ -19,7 +19,7 @@ package smoketest.profile;
 import org.junit.jupiter.api.Test;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
+import io.github.kotlinmania.spring.boot.test.context.SpringBootTest;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -28,10 +28,10 @@ import static org.assertj.core.api.Assertions.assertThat;
 class AttributeInjectionTests {
 
 	@Autowired(required = false)
-	private org.springframework.boot.webmvc.error.ErrorAttributes errorAttributesServlet;
+	private io.github.kotlinmania.spring.boot.webmvc.error.ErrorAttributes errorAttributesServlet;
 
 	@Autowired(required = false)
-	private org.springframework.boot.webflux.error.ErrorAttributes errorAttributesReactive;
+	private io.github.kotlinmania.spring.boot.webflux.error.ErrorAttributes errorAttributesReactive;
 
 	@Test
 	void contextLoads() {

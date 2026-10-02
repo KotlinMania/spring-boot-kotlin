@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.features.springapplication.fluentbuilderapi;
+package io.github.kotlinmania.spring.boot.docs.features.springapplication.fluentbuilderapi;
 
-import org.springframework.boot.Banner;
-import org.springframework.boot.builder.SpringApplicationBuilder;
+import io.github.kotlinmania.spring.boot.Banner;
+import io.github.kotlinmania.spring.boot.builder.SpringApplicationBuilder;
 
 public class MyApplication {
 

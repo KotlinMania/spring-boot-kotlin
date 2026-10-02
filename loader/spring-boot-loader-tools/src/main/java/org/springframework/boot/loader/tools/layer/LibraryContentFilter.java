@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.loader.tools.layer;
+package io.github.kotlinmania.spring.boot.loader.tools.layer;
 
 import java.util.regex.Pattern;
 
-import org.springframework.boot.loader.tools.Library;
-import org.springframework.boot.loader.tools.LibraryCoordinates;
+import io.github.kotlinmania.spring.boot.loader.tools.Library;
+import io.github.kotlinmania.spring.boot.loader.tools.LibraryCoordinates;
 import org.springframework.util.Assert;
 
 /**

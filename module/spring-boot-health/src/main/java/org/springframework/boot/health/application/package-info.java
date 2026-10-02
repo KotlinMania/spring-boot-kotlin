@@ -18,6 +18,6 @@
  * Health indicators providing information about an application.
  */
 @NullMarked
-package org.springframework.boot.health.application;
+package io.github.kotlinmania.spring.boot.health.application;
 
 import org.jspecify.annotations.NullMarked;

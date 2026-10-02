@@ -18,6 +18,6 @@
  * Classes related to the auto-configuration of a servlet web server using Tomcat.
  */
 @NullMarked
-package org.springframework.boot.tomcat.autoconfigure.servlet;
+package io.github.kotlinmania.spring.boot.tomcat.autoconfigure.servlet;
 
 import org.jspecify.annotations.NullMarked;

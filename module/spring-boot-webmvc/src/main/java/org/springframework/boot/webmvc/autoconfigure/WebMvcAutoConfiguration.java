@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.webmvc.autoconfigure;
+package io.github.kotlinmania.spring.boot.webmvc.autoconfigure;
 
 import java.time.Duration;
 import java.util.List;
@@ -35,37 +35,37 @@ import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.ListableBeanFactory;
 import org.springframework.beans.factory.NoSuchBeanDefinitionException;
 import org.springframework.beans.factory.ObjectProvider;
-import org.springframework.boot.autoconfigure.AutoConfiguration;
-import org.springframework.boot.autoconfigure.AutoConfigureOrder;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnBooleanProperty;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingFilterBean;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnWebApplication;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnWebApplication.Type;
-import org.springframework.boot.autoconfigure.task.TaskExecutionAutoConfiguration;
-import org.springframework.boot.autoconfigure.template.TemplateAvailabilityProviders;
-import org.springframework.boot.autoconfigure.web.ConditionalOnEnabledResourceChain;
-import org.springframework.boot.autoconfigure.web.WebProperties;
-import org.springframework.boot.autoconfigure.web.WebProperties.Resources;
-import org.springframework.boot.autoconfigure.web.WebProperties.Resources.Chain.Strategy;
-import org.springframework.boot.autoconfigure.web.WebResourcesRuntimeHints;
-import org.springframework.boot.autoconfigure.web.format.DateTimeFormatters;
-import org.springframework.boot.autoconfigure.web.format.WebConversionService;
-import org.springframework.boot.context.properties.EnableConfigurationProperties;
-import org.springframework.boot.context.properties.PropertyMapper;
-import org.springframework.boot.convert.ApplicationConversionService;
-import org.springframework.boot.http.converter.autoconfigure.ServerHttpMessageConvertersCustomizer;
-import org.springframework.boot.servlet.filter.OrderedFormContentFilter;
-import org.springframework.boot.servlet.filter.OrderedHiddenHttpMethodFilter;
-import org.springframework.boot.servlet.filter.OrderedRequestContextFilter;
-import org.springframework.boot.validation.autoconfigure.ValidatorAdapter;
-import org.springframework.boot.web.servlet.ServletRegistrationBean;
-import org.springframework.boot.webmvc.autoconfigure.WebMvcProperties.Apiversion;
-import org.springframework.boot.webmvc.autoconfigure.WebMvcProperties.Apiversion.Use;
-import org.springframework.boot.webmvc.autoconfigure.WebMvcProperties.Format;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigureOrder;
+import io.github.kotlinmania.spring.boot.autoconfigure.EnableAutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnBean;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnBooleanProperty;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnClass;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnMissingBean;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnMissingFilterBean;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnWebApplication;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnWebApplication.Type;
+import io.github.kotlinmania.spring.boot.autoconfigure.task.TaskExecutionAutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.template.TemplateAvailabilityProviders;
+import io.github.kotlinmania.spring.boot.autoconfigure.web.ConditionalOnEnabledResourceChain;
+import io.github.kotlinmania.spring.boot.autoconfigure.web.WebProperties;
+import io.github.kotlinmania.spring.boot.autoconfigure.web.WebProperties.Resources;
+import io.github.kotlinmania.spring.boot.autoconfigure.web.WebProperties.Resources.Chain.Strategy;
+import io.github.kotlinmania.spring.boot.autoconfigure.web.WebResourcesRuntimeHints;
+import io.github.kotlinmania.spring.boot.autoconfigure.web.format.DateTimeFormatters;
+import io.github.kotlinmania.spring.boot.autoconfigure.web.format.WebConversionService;
+import io.github.kotlinmania.spring.boot.context.properties.EnableConfigurationProperties;
+import io.github.kotlinmania.spring.boot.context.properties.PropertyMapper;
+import io.github.kotlinmania.spring.boot.convert.ApplicationConversionService;
+import io.github.kotlinmania.spring.boot.http.converter.autoconfigure.ServerHttpMessageConvertersCustomizer;
+import io.github.kotlinmania.spring.boot.servlet.filter.OrderedFormContentFilter;
+import io.github.kotlinmania.spring.boot.servlet.filter.OrderedHiddenHttpMethodFilter;
+import io.github.kotlinmania.spring.boot.servlet.filter.OrderedRequestContextFilter;
+import io.github.kotlinmania.spring.boot.validation.autoconfigure.ValidatorAdapter;
+import io.github.kotlinmania.spring.boot.web.servlet.ServletRegistrationBean;
+import io.github.kotlinmania.spring.boot.webmvc.autoconfigure.WebMvcProperties.Apiversion;
+import io.github.kotlinmania.spring.boot.webmvc.autoconfigure.WebMvcProperties.Apiversion.Use;
+import io.github.kotlinmania.spring.boot.webmvc.autoconfigure.WebMvcProperties.Format;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.EmbeddedValueResolverAware;
 import org.springframework.context.ResourceLoaderAware;
@@ -155,7 +155,7 @@ import org.springframework.web.util.UrlPathHelper;
  * @since 4.0.0
  */
 @AutoConfiguration(after = { DispatcherServletAutoConfiguration.class, TaskExecutionAutoConfiguration.class },
-		afterName = "org.springframework.boot.validation.autoconfigure.ValidationAutoConfiguration")
+		afterName = "io.github.kotlinmania.spring.boot.validation.autoconfigure.ValidationAutoConfiguration")
 @ConditionalOnWebApplication(type = Type.SERVLET)
 @ConditionalOnClass({ Servlet.class, DispatcherServlet.class, WebMvcConfigurer.class })
 @ConditionalOnMissingBean(WebMvcConfigurationSupport.class)
@@ -588,7 +588,7 @@ public final class WebMvcAutoConfiguration {
 		@Override
 		public Validator mvcValidator() {
 			if (!ClassUtils.isPresent("jakarta.validation.Validator", getClass().getClassLoader())
-					|| !ClassUtils.isPresent("org.springframework.boot.validation.autoconfigure.ValidatorAdapter",
+					|| !ClassUtils.isPresent("io.github.kotlinmania.spring.boot.validation.autoconfigure.ValidatorAdapter",
 							getClass().getClassLoader())) {
 				return super.mvcValidator();
 			}
@@ -742,7 +742,7 @@ public final class WebMvcAutoConfiguration {
 		@Override
 		public void registerHints(RuntimeHints hints, @Nullable ClassLoader classLoader) {
 			hints.reflection()
-				.registerType(TypeReference.of("org.springframework.boot.validation.autoconfigure.ValidatorAdapter"));
+				.registerType(TypeReference.of("io.github.kotlinmania.spring.boot.validation.autoconfigure.ValidatorAdapter"));
 		}
 
 	}

@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.testing.utilities.testpropertyvalues
+package io.github.kotlinmania.spring.boot.docs.testing.utilities.testpropertyvalues
 
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Test
-import org.springframework.boot.test.util.TestPropertyValues
+import io.github.kotlinmania.spring.boot.test.util.TestPropertyValues
 import org.springframework.mock.env.MockEnvironment
 
 class MyEnvironmentTests {

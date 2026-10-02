@@ -18,6 +18,6 @@
  * Support classes for Reactor integration.
  */
 @NullMarked
-package org.springframework.boot.reactor;
+package io.github.kotlinmania.spring.boot.reactor;
 
 import org.jspecify.annotations.NullMarked;

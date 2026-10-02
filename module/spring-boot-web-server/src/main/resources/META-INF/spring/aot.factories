@@ -1,2 +1,2 @@
 org.springframework.aot.hint.RuntimeHintsRegistrar=\
-org.springframework.boot.web.server.MimeMappings$MimeMappingsRuntimeHints
+io.github.kotlinmania.spring.boot.web.server.MimeMappings$MimeMappingsRuntimeHints

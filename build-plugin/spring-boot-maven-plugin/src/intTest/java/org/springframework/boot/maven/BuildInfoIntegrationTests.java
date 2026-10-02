@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.maven;
+package io.github.kotlinmania.spring.boot.maven;
 
 import java.io.File;
 import java.io.FileReader;
@@ -28,7 +28,7 @@ import org.assertj.core.api.AssertProvider;
 import org.junit.jupiter.api.TestTemplate;
 import org.junit.jupiter.api.extension.ExtendWith;
 
-import org.springframework.boot.maven.MavenBuild.ProjectCallback;
+import io.github.kotlinmania.spring.boot.maven.MavenBuild.ProjectCallback;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -44,7 +44,7 @@ class BuildInfoIntegrationTests {
 	@TestTemplate
 	void buildInfoPropertiesAreGenerated(MavenBuild mavenBuild) {
 		mavenBuild.project("build-info")
-			.execute(buildInfo((buildInfo) -> assertThat(buildInfo).hasBuildGroup("org.springframework.boot.maven.it")
+			.execute(buildInfo((buildInfo) -> assertThat(buildInfo).hasBuildGroup("io.github.kotlinmania.spring.boot.maven.it")
 				.hasBuildArtifact("build-info")
 				.hasBuildName("Generate build info")
 				.hasBuildVersion("0.0.1.BUILD-SNAPSHOT")
@@ -54,7 +54,7 @@ class BuildInfoIntegrationTests {
 	@TestTemplate
 	void generatedBuildInfoIncludesAdditionalProperties(MavenBuild mavenBuild) {
 		mavenBuild.project("build-info-additional-properties")
-			.execute(buildInfo((buildInfo) -> assertThat(buildInfo).hasBuildGroup("org.springframework.boot.maven.it")
+			.execute(buildInfo((buildInfo) -> assertThat(buildInfo).hasBuildGroup("io.github.kotlinmania.spring.boot.maven.it")
 				.hasBuildArtifact("build-info-additional-properties")
 				.hasBuildName("Generate build info with additional properties")
 				.hasBuildVersion("0.0.1.BUILD-SNAPSHOT")
@@ -67,7 +67,7 @@ class BuildInfoIntegrationTests {
 	@TestTemplate
 	void generatedBuildInfoUsesCustomBuildTime(MavenBuild mavenBuild) {
 		mavenBuild.project("build-info-custom-build-time")
-			.execute(buildInfo((buildInfo) -> assertThat(buildInfo).hasBuildGroup("org.springframework.boot.maven.it")
+			.execute(buildInfo((buildInfo) -> assertThat(buildInfo).hasBuildGroup("io.github.kotlinmania.spring.boot.maven.it")
 				.hasBuildArtifact("build-info-custom-build-time")
 				.hasBuildName("Generate build info with custom build time")
 				.hasBuildVersion("0.0.1.BUILD-SNAPSHOT")
@@ -77,7 +77,7 @@ class BuildInfoIntegrationTests {
 	@TestTemplate
 	void generatedBuildInfoReproducible(MavenBuild mavenBuild) {
 		mavenBuild.project("build-info-reproducible")
-			.execute(buildInfo((buildInfo) -> assertThat(buildInfo).hasBuildGroup("org.springframework.boot.maven.it")
+			.execute(buildInfo((buildInfo) -> assertThat(buildInfo).hasBuildGroup("io.github.kotlinmania.spring.boot.maven.it")
 				.hasBuildArtifact("build-reproducible")
 				.hasBuildName("Generate build info with build time from project.build.outputTimestamp")
 				.hasBuildVersion("0.0.1.BUILD-SNAPSHOT")
@@ -87,7 +87,7 @@ class BuildInfoIntegrationTests {
 	@TestTemplate
 	void generatedBuildInfoReproducibleEpochSeconds(MavenBuild mavenBuild) {
 		mavenBuild.project("build-info-reproducible-epoch-seconds")
-			.execute(buildInfo((buildInfo) -> assertThat(buildInfo).hasBuildGroup("org.springframework.boot.maven.it")
+			.execute(buildInfo((buildInfo) -> assertThat(buildInfo).hasBuildGroup("io.github.kotlinmania.spring.boot.maven.it")
 				.hasBuildArtifact("build-reproducible-epoch-seconds")
 				.hasBuildName("Generate build info with build time from project.build.outputTimestamp")
 				.hasBuildVersion("0.0.1.BUILD-SNAPSHOT")
@@ -98,7 +98,7 @@ class BuildInfoIntegrationTests {
 	void buildInfoPropertiesAreGeneratedToCustomOutputLocation(MavenBuild mavenBuild) {
 		mavenBuild.project("build-info-custom-file")
 			.execute(buildInfo("target/build.info",
-					(buildInfo) -> assertThat(buildInfo).hasBuildGroup("org.springframework.boot.maven.it")
+					(buildInfo) -> assertThat(buildInfo).hasBuildGroup("io.github.kotlinmania.spring.boot.maven.it")
 						.hasBuildArtifact("build-info-custom-file")
 						.hasBuildName("Generate custom build info")
 						.hasBuildVersion("0.0.1.BUILD-SNAPSHOT")
@@ -108,7 +108,7 @@ class BuildInfoIntegrationTests {
 	@TestTemplate
 	void whenBuildTimeIsDisabledIfDoesNotAppearInGeneratedBuildInfo(MavenBuild mavenBuild) {
 		mavenBuild.project("build-info-disable-build-time")
-			.execute(buildInfo((buildInfo) -> assertThat(buildInfo).hasBuildGroup("org.springframework.boot.maven.it")
+			.execute(buildInfo((buildInfo) -> assertThat(buildInfo).hasBuildGroup("io.github.kotlinmania.spring.boot.maven.it")
 				.hasBuildArtifact("build-info-disable-build-time")
 				.hasBuildName("Generate build info with disabled build time")
 				.hasBuildVersion("0.0.1.BUILD-SNAPSHOT")
@@ -118,7 +118,7 @@ class BuildInfoIntegrationTests {
 	@TestTemplate
 	void whenBuildTimeIsExcludedIfDoesNotAppearInGeneratedBuildInfo(MavenBuild mavenBuild) {
 		mavenBuild.project("build-info-exclude-build-time")
-			.execute(buildInfo((buildInfo) -> assertThat(buildInfo).hasBuildGroup("org.springframework.boot.maven.it")
+			.execute(buildInfo((buildInfo) -> assertThat(buildInfo).hasBuildGroup("io.github.kotlinmania.spring.boot.maven.it")
 				.hasBuildArtifact("build-info-exclude-build-time")
 				.hasBuildName("Generate build info with excluded build time")
 				.hasBuildVersion("0.0.1.BUILD-SNAPSHOT")

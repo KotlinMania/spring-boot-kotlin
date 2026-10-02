@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.web.server.servlet.context;
+package io.github.kotlinmania.spring.boot.web.server.servlet.context;
 
 import java.util.Map;
 
@@ -24,8 +24,8 @@ import org.jspecify.annotations.Nullable;
 import org.springframework.beans.factory.annotation.AnnotatedBeanDefinition;
 import org.springframework.beans.factory.support.BeanDefinitionBuilder;
 import org.springframework.beans.factory.support.BeanDefinitionRegistry;
-import org.springframework.boot.web.server.servlet.WebListenerRegistrar;
-import org.springframework.boot.web.server.servlet.WebListenerRegistry;
+import io.github.kotlinmania.spring.boot.web.server.servlet.WebListenerRegistrar;
+import io.github.kotlinmania.spring.boot.web.server.servlet.WebListenerRegistry;
 
 /**
  * Handler for {@link WebListener @WebListener}-annotated classes.

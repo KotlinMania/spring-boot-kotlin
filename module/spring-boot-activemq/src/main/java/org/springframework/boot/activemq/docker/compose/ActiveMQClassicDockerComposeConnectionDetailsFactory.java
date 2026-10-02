@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.activemq.docker.compose;
+package io.github.kotlinmania.spring.boot.activemq.docker.compose;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.activemq.autoconfigure.ActiveMQConnectionDetails;
-import org.springframework.boot.docker.compose.core.RunningService;
-import org.springframework.boot.docker.compose.service.connection.DockerComposeConnectionDetailsFactory;
-import org.springframework.boot.docker.compose.service.connection.DockerComposeConnectionSource;
+import io.github.kotlinmania.spring.boot.activemq.autoconfigure.ActiveMQConnectionDetails;
+import io.github.kotlinmania.spring.boot.docker.compose.core.RunningService;
+import io.github.kotlinmania.spring.boot.docker.compose.service.connection.DockerComposeConnectionDetailsFactory;
+import io.github.kotlinmania.spring.boot.docker.compose.service.connection.DockerComposeConnectionSource;
 
 /**
  * {@link DockerComposeConnectionDetailsFactory} to create

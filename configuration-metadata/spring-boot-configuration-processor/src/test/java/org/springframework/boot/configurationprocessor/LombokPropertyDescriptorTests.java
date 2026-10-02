@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.configurationprocessor;
+package io.github.kotlinmania.spring.boot.configurationprocessor;
 
 import javax.lang.model.element.ElementKind;
 import javax.lang.model.element.ExecutableElement;
@@ -23,15 +23,15 @@ import javax.lang.model.element.VariableElement;
 
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.configurationsample.lombok.LombokDefaultValueProperties;
-import org.springframework.boot.configurationsample.lombok.LombokDeprecatedSingleProperty;
-import org.springframework.boot.configurationsample.lombok.LombokExplicitProperties;
-import org.springframework.boot.configurationsample.lombok.LombokInnerClassProperties;
-import org.springframework.boot.configurationsample.lombok.LombokSimpleDataProperties;
-import org.springframework.boot.configurationsample.lombok.LombokSimpleProperties;
-import org.springframework.boot.configurationsample.lombok.LombokSimpleValueProperties;
-import org.springframework.boot.configurationsample.simple.SimpleProperties;
-import org.springframework.boot.configurationsample.specific.InnerClassProperties;
+import io.github.kotlinmania.spring.boot.configurationsample.lombok.LombokDefaultValueProperties;
+import io.github.kotlinmania.spring.boot.configurationsample.lombok.LombokDeprecatedSingleProperty;
+import io.github.kotlinmania.spring.boot.configurationsample.lombok.LombokExplicitProperties;
+import io.github.kotlinmania.spring.boot.configurationsample.lombok.LombokInnerClassProperties;
+import io.github.kotlinmania.spring.boot.configurationsample.lombok.LombokSimpleDataProperties;
+import io.github.kotlinmania.spring.boot.configurationsample.lombok.LombokSimpleProperties;
+import io.github.kotlinmania.spring.boot.configurationsample.lombok.LombokSimpleValueProperties;
+import io.github.kotlinmania.spring.boot.configurationsample.simple.SimpleProperties;
+import io.github.kotlinmania.spring.boot.configurationsample.specific.InnerClassProperties;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -188,7 +188,7 @@ class LombokPropertyDescriptorTests extends PropertyDescriptorTests {
 					getter, null, field, null);
 			assertItemMetadata(metadataEnv, property).isGroup()
 				.hasName("test.third")
-				.hasType("org.springframework.boot.configurationsample.lombok.SimpleLombokPojo")
+				.hasType("io.github.kotlinmania.spring.boot.configurationsample.lombok.SimpleLombokPojo")
 				.hasSourceType(LombokInnerClassProperties.class)
 				.hasSourceMethod("getThird()")
 				.hasNoDescription()
@@ -203,7 +203,7 @@ class LombokPropertyDescriptorTests extends PropertyDescriptorTests {
 			LombokPropertyDescriptor property = createPropertyDescriptor(ownerElement, "first");
 			assertItemMetadata(metadataEnv, property).isGroup()
 				.hasName("test.first")
-				.hasType("org.springframework.boot.configurationsample.lombok.LombokInnerClassProperties$Foo")
+				.hasType("io.github.kotlinmania.spring.boot.configurationsample.lombok.LombokInnerClassProperties$Foo")
 				.hasSourceType(LombokInnerClassProperties.class)
 				.hasSourceMethod(null)
 				.hasNoDescription()
@@ -223,10 +223,10 @@ class LombokPropertyDescriptorTests extends PropertyDescriptorTests {
 	@Test
 	@SuppressWarnings("deprecation")
 	void lombokDeprecatedPropertyOnClass() {
-		process(org.springframework.boot.configurationsample.lombok.LombokDeprecatedProperties.class,
+		process(io.github.kotlinmania.spring.boot.configurationsample.lombok.LombokDeprecatedProperties.class,
 				(roundEnv, metadataEnv) -> {
 					TypeElement ownerElement = roundEnv.getRootElement(
-							org.springframework.boot.configurationsample.lombok.LombokDeprecatedProperties.class);
+							io.github.kotlinmania.spring.boot.configurationsample.lombok.LombokDeprecatedProperties.class);
 					LombokPropertyDescriptor property = createPropertyDescriptor(ownerElement, "name");
 					assertItemMetadata(metadataEnv, property).isProperty().isDeprecatedWithNoInformation();
 				});

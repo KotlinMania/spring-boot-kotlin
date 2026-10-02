@@ -1,1 +1,1 @@
-org.springframework.boot.netty.autoconfigure.NettyAutoConfiguration
+io.github.kotlinmania.spring.boot.netty.autoconfigure.NettyAutoConfiguration

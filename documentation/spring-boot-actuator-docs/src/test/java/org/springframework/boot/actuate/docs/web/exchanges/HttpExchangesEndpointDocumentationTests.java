@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.actuate.docs.web.exchanges;
+package io.github.kotlinmania.spring.boot.actuate.docs.web.exchanges;
 
 import java.net.URI;
 import java.security.Principal;
@@ -29,13 +29,13 @@ import java.util.UUID;
 
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.actuate.docs.MockMvcEndpointDocumentationTests;
-import org.springframework.boot.actuate.web.exchanges.HttpExchange;
-import org.springframework.boot.actuate.web.exchanges.HttpExchangeRepository;
-import org.springframework.boot.actuate.web.exchanges.HttpExchangesEndpoint;
-import org.springframework.boot.actuate.web.exchanges.Include;
-import org.springframework.boot.actuate.web.exchanges.RecordableHttpRequest;
-import org.springframework.boot.actuate.web.exchanges.RecordableHttpResponse;
+import io.github.kotlinmania.spring.boot.actuate.docs.MockMvcEndpointDocumentationTests;
+import io.github.kotlinmania.spring.boot.actuate.web.exchanges.HttpExchange;
+import io.github.kotlinmania.spring.boot.actuate.web.exchanges.HttpExchangeRepository;
+import io.github.kotlinmania.spring.boot.actuate.web.exchanges.HttpExchangesEndpoint;
+import io.github.kotlinmania.spring.boot.actuate.web.exchanges.Include;
+import io.github.kotlinmania.spring.boot.actuate.web.exchanges.RecordableHttpRequest;
+import io.github.kotlinmania.spring.boot.actuate.web.exchanges.RecordableHttpResponse;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpHeaders;

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.security.saml2.relyingparty;
+package io.github.kotlinmania.spring.boot.docs.security.saml2.relyingparty;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

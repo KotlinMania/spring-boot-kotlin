@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.jackson.autoconfigure;
+package io.github.kotlinmania.spring.boot.jackson.autoconfigure;
 
 import tools.jackson.dataformat.cbor.CBORMapper.Builder;
 import tools.jackson.dataformat.xml.XmlMapper;

@@ -16,8 +16,8 @@
 
 plugins {
 	id 'java'
-	id 'org.springframework.boot'
-	id 'org.springframework.boot.aot'
+	id 'io.github.kotlinmania.spring.boot.
+	id 'io.github.kotlinmania.spring.boot.aot'
 }
 
 apply plugin: 'org.graalvm.buildtools.native'

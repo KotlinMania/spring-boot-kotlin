@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.jpa.test.autoconfigure
+package io.github.kotlinmania.spring.boot.jpa.test.autoconfigure
 
 /**
  * Extension for [TestEntityManager.find] providing a `find<MyEntity>(...)`

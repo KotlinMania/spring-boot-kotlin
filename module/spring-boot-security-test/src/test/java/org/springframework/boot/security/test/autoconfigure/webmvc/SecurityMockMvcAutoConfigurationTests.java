@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.security.test.autoconfigure.webmvc;
+package io.github.kotlinmania.spring.boot.security.test.autoconfigure.webmvc;
 
 import java.util.concurrent.Executor;
 import java.util.function.Function;
@@ -24,11 +24,11 @@ import org.junit.jupiter.api.Test;
 import org.mockito.ArgumentCaptor;
 import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 
-import org.springframework.boot.autoconfigure.AutoConfigurations;
-import org.springframework.boot.security.test.autoconfigure.webmvc.SecurityMockMvcAutoConfiguration.SecurityMockMvcBuilderCustomizer;
-import org.springframework.boot.test.context.FilteredClassLoader;
-import org.springframework.boot.test.context.runner.ApplicationContextRunner;
-import org.springframework.boot.webmvc.test.autoconfigure.MockMvcHtmlUnitDriverCustomizer;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurations;
+import io.github.kotlinmania.spring.boot.security.test.autoconfigure.webmvc.SecurityMockMvcAutoConfiguration.SecurityMockMvcBuilderCustomizer;
+import io.github.kotlinmania.spring.boot.test.context.FilteredClassLoader;
+import io.github.kotlinmania.spring.boot.test.context.runner.ApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.webmvc.test.autoconfigure.MockMvcHtmlUnitDriverCustomizer;
 import org.springframework.security.concurrent.DelegatingSecurityContextExecutor;
 import org.springframework.security.test.web.servlet.request.SecurityMockMvcRequestPostProcessors;
 import org.springframework.security.web.context.AbstractSecurityWebApplicationInitializer;

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.web.graphql.transports.rsocket
+package io.github.kotlinmania.spring.boot.docs.web.graphql.transports.rsocket
 
 import org.springframework.graphql.client.RSocketGraphQlClient
 import org.springframework.stereotype.Component

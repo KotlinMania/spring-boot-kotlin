@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.health.registry;
+package io.github.kotlinmania.spring.boot.health.registry;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.health.contributor.ReactiveHealthContributor;
-import org.springframework.boot.health.contributor.ReactiveHealthContributors;
+import io.github.kotlinmania.spring.boot.health.contributor.ReactiveHealthContributor;
+import io.github.kotlinmania.spring.boot.health.contributor.ReactiveHealthContributors;
 
 /**
  * A mutable registry of {@link ReactiveHealthContributor reactive health contributors}.

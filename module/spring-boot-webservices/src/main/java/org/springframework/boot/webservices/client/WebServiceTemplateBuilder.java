@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.webservices.client;
+package io.github.kotlinmania.spring.boot.webservices.client;
 
 import java.net.URI;
 import java.util.Arrays;
@@ -28,7 +28,7 @@ import javax.xml.transform.TransformerFactory;
 import org.jspecify.annotations.Nullable;
 
 import org.springframework.beans.BeanUtils;
-import org.springframework.boot.context.properties.PropertyMapper;
+import io.github.kotlinmania.spring.boot.context.properties.PropertyMapper;
 import org.springframework.oxm.Marshaller;
 import org.springframework.oxm.Unmarshaller;
 import org.springframework.util.Assert;

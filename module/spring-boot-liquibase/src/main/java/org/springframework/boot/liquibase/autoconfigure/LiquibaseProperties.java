@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.liquibase.autoconfigure;
+package io.github.kotlinmania.spring.boot.liquibase.autoconfigure;
 
 import java.io.File;
 import java.util.List;
@@ -26,7 +26,7 @@ import liquibase.integration.spring.SpringLiquibase;
 import liquibase.ui.UIServiceEnum;
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.context.properties.ConfigurationProperties;
+import io.github.kotlinmania.spring.boot.context.properties.ConfigurationProperties;
 import org.springframework.util.Assert;
 
 /**

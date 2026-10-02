@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.mustache.servlet.view;
+package io.github.kotlinmania.spring.boot.mustache.servlet.view;
 
 import java.util.Locale;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.testsupport.classpath.resources.WithResource;
+import io.github.kotlinmania.spring.boot.testsupport.classpath.resources.WithResource;
 import org.springframework.context.support.GenericApplicationContext;
 import org.springframework.mock.web.MockServletContext;
 import org.springframework.web.servlet.View;

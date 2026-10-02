@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.actuate.endpoint.web;
+package io.github.kotlinmania.spring.boot.actuate.endpoint.web;
 
 import java.util.Collections;
 import java.util.List;
 
-import org.springframework.boot.actuate.endpoint.ExposableEndpoint;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.ExposableEndpoint;
 
 /**
  * Interface that can be implemented by an {@link ExposableEndpoint} that is mapped to a

@@ -15,7 +15,7 @@
  */
 package org.springframework.boot.build
 
-import org.gradle.kotlin.dsl.*
+package io.github.kotlinmania.spring.boot.build;
 
 import org.gradle.api.Action
 import org.gradle.api.model.ObjectFactory

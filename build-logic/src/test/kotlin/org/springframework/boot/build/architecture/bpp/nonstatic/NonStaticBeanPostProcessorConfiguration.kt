@@ -15,8 +15,19 @@
  */
 package org.springframework.boot.build.architecture.bpp.nonstatic
 
-import org.springframework.beans.factory.config.BeanPostProcessor
-import org.springframework.context.annotation.Bean
+package io.github.kotlinmania.spring.boot.build.architecture.bpp.nonstatic;
+
+import org.springframework.beans.factory.config.BeanPostProcessor;
+import org.springframework.context.annotation.Bean;
+
+class NonStaticBeanPostProcessorConfiguration {
+
+	@Bean
+	BeanPostProcessor nonStaticBeanPostProcessor() {
+		return new BeanPostProcessor() {
+
+		};
+	}
 
 internal class NonStaticBeanPostProcessorConfiguration {
     @Bean

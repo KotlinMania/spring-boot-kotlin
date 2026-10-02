@@ -56,8 +56,8 @@ Spring Boot provides an idiomatic way to run an application with `runApplication
 
 [source,kotlin]
 ----
-import org.springframework.boot.autoconfigure.SpringBootApplication
-import org.springframework.boot.runApplication
+import io.github.kotlinmania.spring.boot.autoconfigure.SpringBootApplication
+import io.github.kotlinmania.spring.boot.runApplication
 
 @SpringBootApplication
 class MyApplication
@@ -85,7 +85,7 @@ runApplication<MyApplication>(*args) {
 Kotlin {url-kotlin-docs}/extensions.html[extensions] provide the ability to extend existing classes with additional functionality.
 The Spring Boot Kotlin API makes use of these extensions to add new Kotlin specific conveniences to existing APIs.
 
-javadoc:org.springframework.boot.resttestclient.TestRestTemplate[] extensions, similar to those provided by Spring Framework for javadoc:org.springframework.web.client.RestOperations[] in Spring Framework, are provided.
+javadoc:io.github.kotlinmania.spring.boot.resttestclient.TestRestTemplate[] extensions, similar to those provided by Spring Framework for javadoc:org.springframework.web.client.RestOperations[] in Spring Framework, are provided.
 Among other things, the extensions make it possible to take advantage of Kotlin reified type parameters.
 
 
@@ -107,7 +107,7 @@ TIP: `org.jetbrains.kotlinx:kotlinx-coroutines-reactor` dependency is provided b
 
 [[features.kotlin.configuration-properties]]
 == @ConfigurationProperties
-javadoc:org.springframework.boot.context.properties.ConfigurationProperties[format=annotation] when used in combination with xref:features/external-config.adoc#features.external-config.typesafe-configuration-properties.constructor-binding[constructor binding] supports data classes with immutable `val` properties as shown in the following example:
+javadoc:io.github.kotlinmania.spring.boot.context.properties.ConfigurationProperties[format=annotation] when used in combination with xref:features/external-config.adoc#features.external-config.typesafe-configuration-properties.constructor-binding[constructor binding] supports data classes with immutable `val` properties as shown in the following example:
 
 [source,kotlin]
 ----

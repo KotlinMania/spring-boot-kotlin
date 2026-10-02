@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.jooq.autoconfigure;
+package io.github.kotlinmania.spring.boot.jooq.autoconfigure;
 
 import org.flywaydb.core.Flyway;
 import org.jooq.DSLContext;
@@ -23,11 +23,11 @@ import org.jooq.impl.DefaultDSLContext;
 import org.junit.jupiter.api.Test;
 
 import org.springframework.beans.factory.config.BeanDefinition;
-import org.springframework.boot.autoconfigure.AutoConfigurations;
-import org.springframework.boot.flyway.autoconfigure.FlywayAutoConfiguration;
-import org.springframework.boot.flyway.autoconfigure.FlywayMigrationInitializer;
-import org.springframework.boot.jdbc.autoconfigure.EmbeddedDataSourceConfiguration;
-import org.springframework.boot.test.context.runner.ApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurations;
+import io.github.kotlinmania.spring.boot.flyway.autoconfigure.FlywayAutoConfiguration;
+import io.github.kotlinmania.spring.boot.flyway.autoconfigure.FlywayMigrationInitializer;
+import io.github.kotlinmania.spring.boot.jdbc.autoconfigure.EmbeddedDataSourceConfiguration;
+import io.github.kotlinmania.spring.boot.test.context.runner.ApplicationContextRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.Ordered;

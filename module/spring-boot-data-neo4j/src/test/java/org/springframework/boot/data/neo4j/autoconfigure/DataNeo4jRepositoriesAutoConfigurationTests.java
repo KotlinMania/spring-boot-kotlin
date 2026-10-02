@@ -14,19 +14,19 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.data.neo4j.autoconfigure;
+package io.github.kotlinmania.spring.boot.data.neo4j.autoconfigure;
 
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.autoconfigure.AutoConfigurations;
-import org.springframework.boot.autoconfigure.TestAutoConfigurationPackage;
-import org.springframework.boot.data.neo4j.domain.city.City;
-import org.springframework.boot.data.neo4j.domain.city.CityRepository;
-import org.springframework.boot.data.neo4j.domain.city.ReactiveCityRepository;
-import org.springframework.boot.data.neo4j.domain.country.CountryRepository;
-import org.springframework.boot.data.neo4j.domain.country.ReactiveCountryRepository;
-import org.springframework.boot.data.neo4j.domain.empty.EmptyPackage;
-import org.springframework.boot.test.context.runner.ApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurations;
+import io.github.kotlinmania.spring.boot.autoconfigure.TestAutoConfigurationPackage;
+import io.github.kotlinmania.spring.boot.data.neo4j.domain.city.City;
+import io.github.kotlinmania.spring.boot.data.neo4j.domain.city.CityRepository;
+import io.github.kotlinmania.spring.boot.data.neo4j.domain.city.ReactiveCityRepository;
+import io.github.kotlinmania.spring.boot.data.neo4j.domain.country.CountryRepository;
+import io.github.kotlinmania.spring.boot.data.neo4j.domain.country.ReactiveCountryRepository;
+import io.github.kotlinmania.spring.boot.data.neo4j.domain.empty.EmptyPackage;
+import io.github.kotlinmania.spring.boot.test.context.runner.ApplicationContextRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.neo4j.core.transaction.Neo4jTransactionManager;

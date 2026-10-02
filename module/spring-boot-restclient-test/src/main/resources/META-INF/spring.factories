@@ -1,4 +1,4 @@
 # Spring Test Execution Listeners
 org.springframework.test.context.TestExecutionListener=\
-org.springframework.boot.restclient.test.autoconfigure.MockRestServiceServerResetTestExecutionListener
+io.github.kotlinmania.spring.boot.restclient.test.autoconfigure.MockRestServiceServerResetTestExecutionListener
 

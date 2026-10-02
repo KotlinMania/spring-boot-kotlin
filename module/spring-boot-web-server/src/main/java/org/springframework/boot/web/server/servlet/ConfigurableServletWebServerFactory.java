@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.web.server.servlet;
+package io.github.kotlinmania.spring.boot.web.server.servlet;
 
 import java.io.File;
 import java.nio.charset.Charset;
@@ -25,11 +25,11 @@ import java.util.Map;
 import jakarta.servlet.ServletContext;
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.web.server.ConfigurableWebServerFactory;
-import org.springframework.boot.web.server.Cookie.SameSite;
-import org.springframework.boot.web.server.MimeMappings;
-import org.springframework.boot.web.server.WebServerFactoryCustomizer;
-import org.springframework.boot.web.servlet.ServletContextInitializer;
+import io.github.kotlinmania.spring.boot.web.server.ConfigurableWebServerFactory;
+import io.github.kotlinmania.spring.boot.web.server.Cookie.SameSite;
+import io.github.kotlinmania.spring.boot.web.server.MimeMappings;
+import io.github.kotlinmania.spring.boot.web.server.WebServerFactoryCustomizer;
+import io.github.kotlinmania.spring.boot.web.servlet.ServletContextInitializer;
 
 /**
  * A configurable {@link ServletWebServerFactory}.

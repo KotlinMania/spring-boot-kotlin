@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.elasticsearch.health;
+package io.github.kotlinmania.spring.boot.elasticsearch.health;
 
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
@@ -28,8 +28,8 @@ import org.apache.hc.core5.http.ContentType;
 import org.apache.hc.core5.http.io.entity.BasicHttpEntity;
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.health.contributor.Health;
-import org.springframework.boot.health.contributor.Status;
+import io.github.kotlinmania.spring.boot.health.contributor.Health;
+import io.github.kotlinmania.spring.boot.health.contributor.Status;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.entry;
@@ -58,7 +58,7 @@ class ElasticsearchRestClientHealthIndicatorTests {
 		given(response.getStatusCode()).willReturn(200);
 		given(response.getEntity()).willReturn(httpEntity);
 		given(this.restClient.performRequest(any(Request.class))).willReturn(response);
-		org.springframework.boot.health.contributor.Health health = this.elasticsearchRestClientHealthIndicator
+		io.github.kotlinmania.spring.boot.health.contributor.Health health = this.elasticsearchRestClientHealthIndicator
 			.health();
 		assertThat(health.getStatus()).isEqualTo(Status.UP);
 		assertHealthDetailsWithStatus(health.getDetails(), "green");

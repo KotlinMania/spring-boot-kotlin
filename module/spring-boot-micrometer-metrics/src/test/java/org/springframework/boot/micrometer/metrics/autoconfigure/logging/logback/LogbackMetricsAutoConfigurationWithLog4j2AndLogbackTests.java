@@ -14,15 +14,15 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.micrometer.metrics.autoconfigure.logging.logback;
+package io.github.kotlinmania.spring.boot.micrometer.metrics.autoconfigure.logging.logback;
 
 import io.micrometer.core.instrument.binder.logging.LogbackMetrics;
 import io.micrometer.core.instrument.simple.SimpleMeterRegistry;
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.autoconfigure.AutoConfigurations;
-import org.springframework.boot.test.context.runner.ApplicationContextRunner;
-import org.springframework.boot.testsupport.logging.ConfigureClasspathToPreferLog4j2;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurations;
+import io.github.kotlinmania.spring.boot.test.context.runner.ApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.testsupport.logging.ConfigureClasspathToPreferLog4j2;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

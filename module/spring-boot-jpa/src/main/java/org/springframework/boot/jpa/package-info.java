@@ -18,6 +18,6 @@
  * JPA Support classes.
  */
 @NullMarked
-package org.springframework.boot.jpa;
+package io.github.kotlinmania.spring.boot.jpa;
 
 import org.jspecify.annotations.NullMarked;

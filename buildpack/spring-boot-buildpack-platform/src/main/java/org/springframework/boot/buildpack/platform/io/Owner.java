@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.buildpack.platform.io;
+package io.github.kotlinmania.spring.boot.buildpack.platform.io;
 
 /**
  * A user and group ID that can be used to indicate file ownership.

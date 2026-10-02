@@ -18,6 +18,6 @@
  * Classes used to support layer customization.
  */
 @NullMarked
-package org.springframework.boot.loader.tools.layer;
+package io.github.kotlinmania.spring.boot.loader.tools.layer;
 
 import org.jspecify.annotations.NullMarked;

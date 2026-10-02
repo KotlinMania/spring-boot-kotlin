@@ -14,17 +14,17 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.security.autoconfigure.web.servlet;
+package io.github.kotlinmania.spring.boot.security.autoconfigure.web.servlet;
 
 import jakarta.servlet.http.HttpServletRequest;
 import org.assertj.core.api.AssertDelegateTarget;
 import org.jspecify.annotations.Nullable;
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.h2console.autoconfigure.H2ConsoleProperties;
-import org.springframework.boot.testsupport.classpath.ClassPathExclusions;
-import org.springframework.boot.web.server.autoconfigure.ServerProperties;
-import org.springframework.boot.web.server.context.WebServerApplicationContext;
+import io.github.kotlinmania.spring.boot.h2console.autoconfigure.H2ConsoleProperties;
+import io.github.kotlinmania.spring.boot.testsupport.classpath.ClassPathExclusions;
+import io.github.kotlinmania.spring.boot.web.server.autoconfigure.ServerProperties;
+import io.github.kotlinmania.spring.boot.web.server.context.WebServerApplicationContext;
 import org.springframework.context.support.GenericApplicationContext;
 import org.springframework.mock.web.MockHttpServletRequest;
 import org.springframework.mock.web.MockServletContext;
@@ -65,7 +65,7 @@ class PathRequestTests {
 	}
 
 	@Test
-	@ClassPathExclusions(packages = "org.springframework.boot.web.server.context")
+	@ClassPathExclusions(packages = "io.github.kotlinmania.spring.boot.web.server.context")
 	void toH2ConsoleWhenNoWebServerContextClassPresent() {
 		assertThatExceptionOfType(NoClassDefFoundError.class)
 			.isThrownBy(() -> WebServerApplicationContext.class.getName());

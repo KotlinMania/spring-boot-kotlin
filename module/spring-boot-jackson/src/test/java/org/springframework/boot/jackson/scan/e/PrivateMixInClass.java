@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.jackson.scan.e;
+package io.github.kotlinmania.spring.boot.jackson.scan.e;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.jackson.JacksonMixin;
-import org.springframework.boot.jackson.types.Name;
-import org.springframework.boot.jackson.types.NameAndAge;
+import io.github.kotlinmania.spring.boot.jackson.JacksonMixin;
+import io.github.kotlinmania.spring.boot.jackson.types.Name;
+import io.github.kotlinmania.spring.boot.jackson.types.NameAndAge;
 
 @JacksonMixin(type = { Name.class, NameAndAge.class })
 class PrivateMixInClass {

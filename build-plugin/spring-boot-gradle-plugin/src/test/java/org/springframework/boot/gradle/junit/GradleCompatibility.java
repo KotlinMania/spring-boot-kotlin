@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.gradle.junit;
+package io.github.kotlinmania.spring.boot.gradle.junit;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Inherited;
@@ -26,7 +26,7 @@ import org.junit.jupiter.api.TestTemplate;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.junit.jupiter.api.extension.Extension;
 
-import org.springframework.boot.testsupport.gradle.testkit.GradleBuild;
+import io.github.kotlinmania.spring.boot.testsupport.gradle.testkit.GradleBuild;
 
 /**
  * {@link Extension} that runs {@link TestTemplate templated tests} against multiple

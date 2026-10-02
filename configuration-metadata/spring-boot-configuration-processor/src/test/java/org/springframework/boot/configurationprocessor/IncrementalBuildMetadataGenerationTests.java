@@ -14,16 +14,16 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.configurationprocessor;
+package io.github.kotlinmania.spring.boot.configurationprocessor;
 
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.configurationprocessor.metadata.ConfigurationMetadata;
-import org.springframework.boot.configurationprocessor.metadata.Metadata;
-import org.springframework.boot.configurationsample.incremental.BarProperties;
-import org.springframework.boot.configurationsample.incremental.FooProperties;
-import org.springframework.boot.configurationsample.incremental.RenamedBarProperties;
-import org.springframework.boot.configurationsample.simple.ClassWithNestedProperties;
+import io.github.kotlinmania.spring.boot.configurationprocessor.metadata.ConfigurationMetadata;
+import io.github.kotlinmania.spring.boot.configurationprocessor.metadata.Metadata;
+import io.github.kotlinmania.spring.boot.configurationsample.incremental.BarProperties;
+import io.github.kotlinmania.spring.boot.configurationsample.incremental.FooProperties;
+import io.github.kotlinmania.spring.boot.configurationsample.incremental.RenamedBarProperties;
+import io.github.kotlinmania.spring.boot.configurationsample.simple.ClassWithNestedProperties;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

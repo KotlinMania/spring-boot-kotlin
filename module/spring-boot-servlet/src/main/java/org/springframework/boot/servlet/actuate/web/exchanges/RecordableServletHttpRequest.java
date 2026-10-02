@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.servlet.actuate.web.exchanges;
+package io.github.kotlinmania.spring.boot.servlet.actuate.web.exchanges;
 
 import java.net.URI;
 import java.net.URISyntaxException;
@@ -27,7 +27,7 @@ import java.util.Map;
 
 import jakarta.servlet.http.HttpServletRequest;
 
-import org.springframework.boot.actuate.web.exchanges.RecordableHttpRequest;
+import io.github.kotlinmania.spring.boot.actuate.web.exchanges.RecordableHttpRequest;
 import org.springframework.util.StringUtils;
 import org.springframework.web.util.UriUtils;
 

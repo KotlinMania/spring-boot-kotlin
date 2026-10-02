@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.security.saml2.autoconfigure;
+package io.github.kotlinmania.spring.boot.security.saml2.autoconfigure;
 
 import java.io.InputStream;
 import java.security.PrivateKey;
@@ -27,14 +27,14 @@ import java.util.function.Consumer;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
-import org.springframework.boot.context.properties.PropertyMapper;
-import org.springframework.boot.security.saml2.autoconfigure.Saml2RelyingPartyProperties.AssertingParty;
-import org.springframework.boot.security.saml2.autoconfigure.Saml2RelyingPartyProperties.AssertingParty.Verification;
-import org.springframework.boot.security.saml2.autoconfigure.Saml2RelyingPartyProperties.Decryption;
-import org.springframework.boot.security.saml2.autoconfigure.Saml2RelyingPartyProperties.Registration;
-import org.springframework.boot.security.saml2.autoconfigure.Saml2RelyingPartyProperties.Registration.Signing;
-import org.springframework.boot.ssl.pem.PemContent;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnMissingBean;
+import io.github.kotlinmania.spring.boot.context.properties.PropertyMapper;
+import io.github.kotlinmania.spring.boot.security.saml2.autoconfigure.Saml2RelyingPartyProperties.AssertingParty;
+import io.github.kotlinmania.spring.boot.security.saml2.autoconfigure.Saml2RelyingPartyProperties.AssertingParty.Verification;
+import io.github.kotlinmania.spring.boot.security.saml2.autoconfigure.Saml2RelyingPartyProperties.Decryption;
+import io.github.kotlinmania.spring.boot.security.saml2.autoconfigure.Saml2RelyingPartyProperties.Registration;
+import io.github.kotlinmania.spring.boot.security.saml2.autoconfigure.Saml2RelyingPartyProperties.Registration.Signing;
+import io.github.kotlinmania.spring.boot.ssl.pem.PemContent;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Conditional;
 import org.springframework.context.annotation.Configuration;

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.jetty.reactive;
+package io.github.kotlinmania.spring.boot.jetty.reactive;
 
 import java.net.ConnectException;
 import java.net.InetAddress;
@@ -31,14 +31,14 @@ import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.mockito.InOrder;
 
-import org.springframework.boot.jetty.JettyAccess;
-import org.springframework.boot.jetty.JettyServerCustomizer;
-import org.springframework.boot.jetty.JettyWebServer;
-import org.springframework.boot.web.server.Shutdown;
-import org.springframework.boot.web.server.Ssl;
-import org.springframework.boot.web.server.Ssl.ServerNameSslBundle;
-import org.springframework.boot.web.server.reactive.AbstractReactiveWebServerFactoryTests;
-import org.springframework.boot.web.server.reactive.ConfigurableReactiveWebServerFactory;
+import io.github.kotlinmania.spring.boot.jetty.JettyAccess;
+import io.github.kotlinmania.spring.boot.jetty.JettyServerCustomizer;
+import io.github.kotlinmania.spring.boot.jetty.JettyWebServer;
+import io.github.kotlinmania.spring.boot.web.server.Shutdown;
+import io.github.kotlinmania.spring.boot.web.server.Ssl;
+import io.github.kotlinmania.spring.boot.web.server.Ssl.ServerNameSslBundle;
+import io.github.kotlinmania.spring.boot.web.server.reactive.AbstractReactiveWebServerFactoryTests;
+import io.github.kotlinmania.spring.boot.web.server.reactive.ConfigurableReactiveWebServerFactory;
 import org.springframework.http.server.reactive.HttpHandler;
 import org.springframework.web.reactive.function.client.WebClient;
 

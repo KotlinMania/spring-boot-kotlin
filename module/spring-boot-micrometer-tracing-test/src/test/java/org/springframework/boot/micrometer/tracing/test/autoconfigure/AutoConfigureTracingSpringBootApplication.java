@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.micrometer.tracing.test.autoconfigure;
+package io.github.kotlinmania.spring.boot.micrometer.tracing.test.autoconfigure;
 
-import org.springframework.boot.SpringBootConfiguration;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
+import io.github.kotlinmania.spring.boot.SpringBootConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.EnableAutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.SpringBootApplication;
 
 /**
  * Example {@link SpringBootApplication @SpringBootApplication} for use with

@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.data.nosql.redis.receiving.custom
+package io.github.kotlinmania.spring.boot.docs.data.nosql.redis.receiving.custom
 
-import org.springframework.boot.data.redis.autoconfigure.RedisMessageListenerContainerConfigurer
+import io.github.kotlinmania.spring.boot.data.redis.autoconfigure.RedisMessageListenerContainerConfigurer
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
 import org.springframework.data.redis.connection.RedisConnectionFactory

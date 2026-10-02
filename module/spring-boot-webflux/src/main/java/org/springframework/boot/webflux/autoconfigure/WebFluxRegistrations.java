@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.webflux.autoconfigure;
+package io.github.kotlinmania.spring.boot.webflux.autoconfigure;
 
 import org.jspecify.annotations.Nullable;
 
@@ -31,7 +31,7 @@ import org.springframework.web.reactive.result.method.annotation.RequestMappingH
  *
  * @author Artsiom Yudovin
  * @since 4.0.0
- * @see org.springframework.boot.webflux.autoconfigure.WebFluxAutoConfiguration.EnableWebFluxConfiguration
+ * @see io.github.kotlinmania.spring.boot.webflux.autoconfigure.WebFluxAutoConfiguration.EnableWebFluxConfiguration
  */
 public interface WebFluxRegistrations {
 

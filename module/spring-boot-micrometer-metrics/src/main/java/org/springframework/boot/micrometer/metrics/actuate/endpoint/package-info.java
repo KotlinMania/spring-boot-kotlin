@@ -18,6 +18,6 @@
  * Actuator endpoint for metrics.
  */
 @NullMarked
-package org.springframework.boot.micrometer.metrics.actuate.endpoint;
+package io.github.kotlinmania.spring.boot.micrometer.metrics.actuate.endpoint;
 
 import org.jspecify.annotations.NullMarked;

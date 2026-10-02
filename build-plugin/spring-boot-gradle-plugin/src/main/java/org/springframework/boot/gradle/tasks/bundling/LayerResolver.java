@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.gradle.tasks.bundling;
+package io.github.kotlinmania.spring.boot.gradle.tasks.bundling;
 
 import java.io.File;
 
@@ -22,10 +22,10 @@ import org.gradle.api.file.FileCopyDetails;
 import org.gradle.api.specs.Spec;
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.gradle.tasks.bundling.ResolvedDependencies.DependencyDescriptor;
-import org.springframework.boot.loader.tools.Layer;
-import org.springframework.boot.loader.tools.Library;
-import org.springframework.boot.loader.tools.LibraryCoordinates;
+import io.github.kotlinmania.spring.boot.gradle.tasks.bundling.ResolvedDependencies.DependencyDescriptor;
+import io.github.kotlinmania.spring.boot.loader.tools.Layer;
+import io.github.kotlinmania.spring.boot.loader.tools.Library;
+import io.github.kotlinmania.spring.boot.loader.tools.LibraryCoordinates;
 
 /**
  * Resolver backed by a {@link LayeredSpec} that provides the destination {@link Layer}

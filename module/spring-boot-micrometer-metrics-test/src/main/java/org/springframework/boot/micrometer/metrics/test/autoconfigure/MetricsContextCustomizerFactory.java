@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.micrometer.metrics.test.autoconfigure;
+package io.github.kotlinmania.spring.boot.micrometer.metrics.test.autoconfigure;
 
 import java.util.List;
 import java.util.Objects;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.test.util.TestPropertyValues;
+import io.github.kotlinmania.spring.boot.test.util.TestPropertyValues;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.core.env.Environment;
 import org.springframework.test.context.ContextConfigurationAttributes;

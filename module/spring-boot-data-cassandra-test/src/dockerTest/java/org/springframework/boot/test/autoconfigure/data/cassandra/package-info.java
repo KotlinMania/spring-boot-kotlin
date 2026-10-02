@@ -15,6 +15,6 @@
  */
 
 @NullMarked
-package org.springframework.boot.test.autoconfigure.data.cassandra;
+package io.github.kotlinmania.spring.boot.test.autoconfigure.data.cassandra;
 
 import org.jspecify.annotations.NullMarked;

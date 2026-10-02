@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.restclient.autoconfigure;
+package io.github.kotlinmania.spring.boot.restclient.autoconfigure;
 
 import java.util.Collection;
 import java.util.List;
@@ -22,12 +22,12 @@ import java.util.function.BiFunction;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.http.client.ClientHttpRequestFactoryBuilder;
-import org.springframework.boot.http.client.HttpClientSettings;
-import org.springframework.boot.http.converter.autoconfigure.ClientHttpMessageConvertersCustomizer;
-import org.springframework.boot.restclient.RestTemplateBuilder;
-import org.springframework.boot.restclient.RestTemplateCustomizer;
-import org.springframework.boot.restclient.RestTemplateRequestCustomizer;
+import io.github.kotlinmania.spring.boot.http.client.ClientHttpRequestFactoryBuilder;
+import io.github.kotlinmania.spring.boot.http.client.HttpClientSettings;
+import io.github.kotlinmania.spring.boot.http.converter.autoconfigure.ClientHttpMessageConvertersCustomizer;
+import io.github.kotlinmania.spring.boot.restclient.RestTemplateBuilder;
+import io.github.kotlinmania.spring.boot.restclient.RestTemplateCustomizer;
+import io.github.kotlinmania.spring.boot.restclient.RestTemplateRequestCustomizer;
 import org.springframework.http.converter.HttpMessageConverters;
 import org.springframework.http.converter.HttpMessageConverters.ClientBuilder;
 import org.springframework.util.ObjectUtils;

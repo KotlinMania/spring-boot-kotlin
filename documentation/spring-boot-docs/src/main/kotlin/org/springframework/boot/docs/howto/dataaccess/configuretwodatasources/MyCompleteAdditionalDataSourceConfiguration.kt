@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.howto.dataaccess.configuretwodatasources
+package io.github.kotlinmania.spring.boot.docs.howto.dataaccess.configuretwodatasources
 
 import com.zaxxer.hikari.HikariDataSource
 
 import org.springframework.beans.factory.annotation.Qualifier
-import org.springframework.boot.context.properties.ConfigurationProperties
-import org.springframework.boot.jdbc.autoconfigure.DataSourceProperties
+import io.github.kotlinmania.spring.boot.context.properties.ConfigurationProperties
+import io.github.kotlinmania.spring.boot.jdbc.autoconfigure.DataSourceProperties
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
 

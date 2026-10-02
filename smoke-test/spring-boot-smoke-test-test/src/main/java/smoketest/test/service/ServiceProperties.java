@@ -16,7 +16,7 @@
 
 package smoketest.test.service;
 
-import org.springframework.boot.context.properties.ConfigurationProperties;
+import io.github.kotlinmania.spring.boot.context.properties.ConfigurationProperties;
 
 /**
  * Properties for the service.

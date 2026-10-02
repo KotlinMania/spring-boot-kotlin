@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.http.client;
+package io.github.kotlinmania.spring.boot.http.client;
 
 import java.time.Duration;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.ssl.SslBundle;
+import io.github.kotlinmania.spring.boot.ssl.SslBundle;
 
 /**
  * Settings that can be applied when creating an imperative or reactive HTTP client.

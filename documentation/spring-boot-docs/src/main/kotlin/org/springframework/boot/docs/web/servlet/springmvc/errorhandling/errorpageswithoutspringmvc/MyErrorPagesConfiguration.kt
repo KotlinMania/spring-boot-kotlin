@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.web.servlet.springmvc.errorhandling.errorpageswithoutspringmvc
+package io.github.kotlinmania.spring.boot.docs.web.servlet.springmvc.errorhandling.errorpageswithoutspringmvc
 
-import org.springframework.boot.web.error.ErrorPage
-import org.springframework.boot.web.error.ErrorPageRegistrar
-import org.springframework.boot.web.error.ErrorPageRegistry
+import io.github.kotlinmania.spring.boot.web.error.ErrorPage
+import io.github.kotlinmania.spring.boot.web.error.ErrorPageRegistrar
+import io.github.kotlinmania.spring.boot.web.error.ErrorPageRegistry
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
 import org.springframework.http.HttpStatus

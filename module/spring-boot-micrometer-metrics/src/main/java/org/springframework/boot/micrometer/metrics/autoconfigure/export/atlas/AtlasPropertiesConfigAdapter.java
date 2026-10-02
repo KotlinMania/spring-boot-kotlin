@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.micrometer.metrics.autoconfigure.export.atlas;
+package io.github.kotlinmania.spring.boot.micrometer.metrics.autoconfigure.export.atlas;
 
 import java.time.Duration;
 
 import com.netflix.spectator.atlas.AtlasConfig;
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.micrometer.metrics.autoconfigure.export.properties.PropertiesConfigAdapter;
+import io.github.kotlinmania.spring.boot.micrometer.metrics.autoconfigure.export.properties.PropertiesConfigAdapter;
 
 /**
  * Adapter to convert {@link AtlasProperties} to an {@link AtlasConfig}.

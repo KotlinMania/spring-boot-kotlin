@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.loader.net.protocol.jar;
+package io.github.kotlinmania.spring.boot.loader.net.protocol.jar;
 
 import java.io.File;
 import java.io.IOException;
@@ -24,7 +24,7 @@ import java.util.jar.Manifest;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipFile;
 
-import org.springframework.boot.loader.ref.Cleaner;
+import io.github.kotlinmania.spring.boot.loader.ref.Cleaner;
 
 /**
  * A {@link JarFile} subclass returned from a {@link JarUrlConnection}.

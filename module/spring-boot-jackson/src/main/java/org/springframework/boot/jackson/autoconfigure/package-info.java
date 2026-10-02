@@ -18,6 +18,6 @@
  * Auto-configuration for Jackson.
  */
 @NullMarked
-package org.springframework.boot.jackson.autoconfigure;
+package io.github.kotlinmania.spring.boot.jackson.autoconfigure;
 
 import org.jspecify.annotations.NullMarked;

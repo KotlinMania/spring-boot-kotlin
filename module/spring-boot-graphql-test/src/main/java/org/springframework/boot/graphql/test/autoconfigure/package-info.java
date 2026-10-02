@@ -18,6 +18,6 @@
  * Auto-configuration for GraphQL testing.
  */
 @NullMarked
-package org.springframework.boot.graphql.test.autoconfigure;
+package io.github.kotlinmania.spring.boot.graphql.test.autoconfigure;
 
 import org.jspecify.annotations.NullMarked;

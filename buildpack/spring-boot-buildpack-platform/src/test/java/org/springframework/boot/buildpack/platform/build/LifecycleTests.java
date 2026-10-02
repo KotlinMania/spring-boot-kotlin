@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.buildpack.platform.build;
+package io.github.kotlinmania.spring.boot.buildpack.platform.build;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
@@ -38,24 +38,24 @@ import org.skyscreamer.jsonassert.JSONAssert;
 import tools.jackson.databind.JsonNode;
 import tools.jackson.databind.node.ArrayNode;
 
-import org.springframework.boot.buildpack.platform.docker.DockerApi;
-import org.springframework.boot.buildpack.platform.docker.DockerApi.ContainerApi;
-import org.springframework.boot.buildpack.platform.docker.DockerApi.ImageApi;
-import org.springframework.boot.buildpack.platform.docker.DockerApi.VolumeApi;
-import org.springframework.boot.buildpack.platform.docker.ImagePlatform;
-import org.springframework.boot.buildpack.platform.docker.configuration.DockerConnectionConfiguration;
-import org.springframework.boot.buildpack.platform.docker.configuration.ResolvedDockerHost;
-import org.springframework.boot.buildpack.platform.docker.type.Binding;
-import org.springframework.boot.buildpack.platform.docker.type.ContainerConfig;
-import org.springframework.boot.buildpack.platform.docker.type.ContainerContent;
-import org.springframework.boot.buildpack.platform.docker.type.ContainerReference;
-import org.springframework.boot.buildpack.platform.docker.type.ContainerStatus;
-import org.springframework.boot.buildpack.platform.docker.type.ImageReference;
-import org.springframework.boot.buildpack.platform.docker.type.VolumeName;
-import org.springframework.boot.buildpack.platform.io.IOConsumer;
-import org.springframework.boot.buildpack.platform.io.TarArchive;
-import org.springframework.boot.buildpack.platform.json.SharedJsonMapper;
-import org.springframework.boot.testsupport.junit.BooleanValueSource;
+import io.github.kotlinmania.spring.boot.buildpack.platform.docker.DockerApi;
+import io.github.kotlinmania.spring.boot.buildpack.platform.docker.DockerApi.ContainerApi;
+import io.github.kotlinmania.spring.boot.buildpack.platform.docker.DockerApi.ImageApi;
+import io.github.kotlinmania.spring.boot.buildpack.platform.docker.DockerApi.VolumeApi;
+import io.github.kotlinmania.spring.boot.buildpack.platform.docker.ImagePlatform;
+import io.github.kotlinmania.spring.boot.buildpack.platform.docker.configuration.DockerConnectionConfiguration;
+import io.github.kotlinmania.spring.boot.buildpack.platform.docker.configuration.ResolvedDockerHost;
+import io.github.kotlinmania.spring.boot.buildpack.platform.docker.type.Binding;
+import io.github.kotlinmania.spring.boot.buildpack.platform.docker.type.ContainerConfig;
+import io.github.kotlinmania.spring.boot.buildpack.platform.docker.type.ContainerContent;
+import io.github.kotlinmania.spring.boot.buildpack.platform.docker.type.ContainerReference;
+import io.github.kotlinmania.spring.boot.buildpack.platform.docker.type.ContainerStatus;
+import io.github.kotlinmania.spring.boot.buildpack.platform.docker.type.ImageReference;
+import io.github.kotlinmania.spring.boot.buildpack.platform.docker.type.VolumeName;
+import io.github.kotlinmania.spring.boot.buildpack.platform.io.IOConsumer;
+import io.github.kotlinmania.spring.boot.buildpack.platform.io.TarArchive;
+import io.github.kotlinmania.spring.boot.buildpack.platform.json.SharedJsonMapper;
+import io.github.kotlinmania.spring.boot.testsupport.junit.BooleanValueSource;
 import org.springframework.util.FileCopyUtils;
 
 import static org.assertj.core.api.Assertions.assertThat;

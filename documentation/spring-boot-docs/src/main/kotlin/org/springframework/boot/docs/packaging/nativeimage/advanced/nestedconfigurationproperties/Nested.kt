@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.packaging.nativeimage.advanced.nestedconfigurationproperties
+package io.github.kotlinmania.spring.boot.docs.packaging.nativeimage.advanced.nestedconfigurationproperties
 
 class Nested {
 }

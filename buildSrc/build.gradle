@@ -1,0 +1,191 @@
+/*
+ * Copyright 2012-present the original author or authors.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      https://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+plugins {
+	id "java-gradle-plugin"
+	id "io.spring.javaformat" version "${javaFormatVersion}"
+	id "checkstyle"
+	id "eclipse"
+	id "org.jetbrains.dokka" version "2.1.0"
+}
+
+repositories {
+	mavenCentral()
+	spring.mavenRepositoriesFor("${springFrameworkVersion}")
+	gradlePluginPortal()
+	maven { url = "https://repo.spring.io/snapshot" }
+}
+
+java {
+	sourceCompatibility = 17
+	targetCompatibility = 17
+}
+
+checkstyle {
+	toolVersion = "${checkstyleToolVersion}"
+}
+
+dependencies {
+	checkstyle("com.puppycrawl.tools:checkstyle:${checkstyle.toolVersion}")
+	checkstyle("io.spring.javaformat:spring-javaformat-checkstyle:${javaFormatVersion}")
+
+	implementation(platform("com.fasterxml.jackson:jackson-bom:${jackson2Version}"))
+	implementation(platform("tools.jackson:jackson-bom:${jacksonVersion}"))
+	implementation(platform("org.springframework:spring-framework-bom:${springFrameworkVersion}"))
+	implementation("com.github.node-gradle:gradle-node-plugin:7.1.0")
+	implementation("com.google.protobuf:protobuf-gradle-plugin:${protobufGradlePluginVersion}")
+	implementation("com.gradle:develocity-gradle-plugin:4.2.2")
+	implementation("com.tngtech.archunit:archunit:1.4.1")
+	implementation("commons-codec:commons-codec:${commonsCodecVersion}")
+	implementation("de.undercouch.download:de.undercouch.download.gradle.plugin:5.5.0")
+	implementation("org.jetbrains.dokka:dokka-gradle-plugin:2.1.0")
+	implementation("dev.detekt:detekt-gradle-plugin:2.0.0-alpha.0")
+	implementation("io.spring.gradle.antora:spring-antora-plugin:0.0.1")
+	implementation("io.spring.javaformat:spring-javaformat-gradle-plugin:${javaFormatVersion}")
+	implementation("io.spring.nohttp:nohttp-gradle:0.0.11")
+	implementation("org.apache.httpcomponents.client5:httpclient5:5.3.1")
+	implementation("org.apache.maven:maven-artifact:${mavenVersion}")
+	implementation("org.antora:gradle-antora-plugin:1.0.0")
+	implementation("org.jetbrains.kotlin:kotlin-gradle-plugin:${kotlinVersion}")
+	implementation("org.springframework:spring-context")
+	implementation("org.springframework:spring-core")
+	implementation("org.springframework:spring-web")
+	implementation("org.yaml:snakeyaml:${snakeYamlVersion}")
+	implementation("io.spring.gradle.nullability:nullability-plugin:${nullabilityPluginVersion}")
+	implementation("tools.jackson.core:jackson-databind")
+
+	testImplementation(platform("org.junit:junit-bom:${junitJupiterVersion}"))
+	testImplementation("org.assertj:assertj-core:${assertjVersion}")
+	testImplementation("org.hamcrest:hamcrest:${hamcrestVersion}")
+	testImplementation("org.junit.jupiter:junit-jupiter")
+	testImplementation("org.mockito:mockito-core:${mockitoVersion}")
+	testImplementation("org.springframework:spring-test")
+
+	testRuntimeOnly("org.junit.platform:junit-platform-launcher")
+}
+
+configurations.all {
+	exclude group:"org.slf4j", module:"slf4j-api"
+	exclude group:"ch.qos.logback", module:"logback-classic"
+	exclude group:"ch.qos.logback", module:"logback-core"
+
+	resolutionStrategy.cacheChangingModulesFor 0, "minutes"
+}
+
+gradlePlugin {
+	plugins {
+		aggregatorPlugin {
+			id = "io.github.kotlinmania.spring.boot.aggregator"
+			implementationClass = "io.github.kotlinmania.spring.boot.build.aggregation.AggregatorPlugin"
+		}
+		annotationProcessorPlugin {
+			id = "io.github.kotlinmania.spring.boot.annotation-processor"
+			implementationClass = "io.github.kotlinmania.spring.boot.build.processors.AnnotationProcessorPlugin"
+		}
+		antoraAggregatedPlugin {
+			id = "io.github.kotlinmania.spring.boot.antora-contributor"
+			implementationClass = "io.github.kotlinmania.spring.boot.build.antora.AntoraContributorPlugin"
+		}
+		antoraAggregatorPlugin {
+			id = "io.github.kotlinmania.spring.boot.antora-dependencies"
+			implementationClass = "io.github.kotlinmania.spring.boot.build.antora.AntoraDependenciesPlugin"
+		}
+		architecturePlugin {
+			id = "io.github.kotlinmania.spring.boot.architecture"
+			implementationClass = "io.github.kotlinmania.spring.boot.build.architecture.ArchitecturePlugin"
+		}
+		autoConfigurationPlugin {
+			id = "io.github.kotlinmania.spring.boot.auto-configuration"
+			implementationClass = "io.github.kotlinmania.spring.boot.build.autoconfigure.AutoConfigurationPlugin"
+		}
+		bomPlugin {
+			id = "io.github.kotlinmania.spring.boot.bom"
+			implementationClass = "io.github.kotlinmania.spring.boot.build.bom.BomPlugin"
+		}
+		configurationMetadataPlugin {
+			id = "io.github.kotlinmania.spring.boot.configuration-metadata"
+			implementationClass = "io.github.kotlinmania.spring.boot.build.context.properties.ConfigurationMetadataPlugin"
+		}
+		configurationPropertiesPlugin {
+			id = "io.github.kotlinmania.spring.boot.configuration-properties"
+			implementationClass = "io.github.kotlinmania.spring.boot.build.context.properties.ConfigurationPropertiesPlugin"
+		}
+		conventionsPlugin {
+			id = "io.github.kotlinmania.spring.boot.conventions"
+			implementationClass = "io.github.kotlinmania.spring.boot.build.ConventionsPlugin"
+		}
+		deployedPlugin {
+			id = "io.github.kotlinmania.spring.boot.deployed"
+			implementationClass = "io.github.kotlinmania.spring.boot.build.DeployedPlugin"
+		}
+		dockerTestPlugin {
+			id = "io.github.kotlinmania.spring.boot.docker-test"
+			implementationClass = "io.github.kotlinmania.spring.boot.build.test.DockerTestPlugin"
+		}
+		integrationTestPlugin {
+			id = "io.github.kotlinmania.spring.boot.integration-test"
+			implementationClass = "io.github.kotlinmania.spring.boot.build.test.IntegrationTestPlugin"
+		}
+		mavenPluginPlugin {
+			id = "io.github.kotlinmania.spring.boot.maven-plugin"
+			implementationClass = "io.github.kotlinmania.spring.boot.build.mavenplugin.MavenPluginPlugin"
+		}
+		mavenRepositoryPlugin {
+			id = "io.github.kotlinmania.spring.boot.maven-repository"
+			implementationClass = "io.github.kotlinmania.spring.boot.build.MavenRepositoryPlugin"
+		}
+		optionalDependenciesPlugin {
+			id = "io.github.kotlinmania.spring.boot.optional-dependencies"
+			implementationClass = "io.github.kotlinmania.spring.boot.build.optional.OptionalDependenciesPlugin"
+		}
+		starterPlugin {
+			id = "io.github.kotlinmania.spring.boot.starter"
+			implementationClass = "io.github.kotlinmania.spring.boot.build.starters.StarterPlugin"
+		}
+		systemTestPlugin {
+			id = "io.github.kotlinmania.spring.boot.system-test"
+			implementationClass = "io.github.kotlinmania.spring.boot.build.test.SystemTestPlugin"
+		}
+		testAutoConfigurationPlugin {
+			id = "io.github.kotlinmania.spring.boot.test-auto-configuration"
+			implementationClass = "io.github.kotlinmania.spring.boot.build.test.autoconfigure.TestAutoConfigurationPlugin"
+		}
+		testFailuresPlugin {
+			id = "io.github.kotlinmania.spring.boot.test-failures"
+			implementationClass = "io.github.kotlinmania.spring.boot.build.testing.TestFailuresPlugin"
+		}
+		testSlicePlugin {
+			id = "io.github.kotlinmania.spring.boot.test-slice"
+			implementationClass = "io.github.kotlinmania.spring.boot.build.test.autoconfigure.TestSlicePlugin"
+		}
+	}
+}
+
+test {
+	useJUnitPlatform()
+}
+
+eclipse {
+	jdt {
+		file {
+			withProperties {
+				it["org.eclipse.jdt.core.compiler.ignoreUnnamedModuleForSplitPackage"] = "enabled"
+			}
+		}
+	}
+}
+
+jar.dependsOn check

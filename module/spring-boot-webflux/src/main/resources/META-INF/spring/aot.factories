@@ -1,2 +1,2 @@
 org.springframework.aot.hint.RuntimeHintsRegistrar=\
-org.springframework.boot.webflux.WebFluxWebApplicationTypeDeducer$WebFluxWebApplicationTypeDeducerRuntimeHints
+io.github.kotlinmania.spring.boot.webflux.WebFluxWebApplicationTypeDeducer$WebFluxWebApplicationTypeDeducerRuntimeHints

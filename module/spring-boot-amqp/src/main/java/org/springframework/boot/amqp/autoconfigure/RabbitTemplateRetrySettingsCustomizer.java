@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.amqp.autoconfigure;
+package io.github.kotlinmania.spring.boot.amqp.autoconfigure;
 
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.core.retry.RetryTemplate;

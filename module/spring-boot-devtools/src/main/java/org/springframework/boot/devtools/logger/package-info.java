@@ -18,6 +18,6 @@
  * Devtools specific logging concerns.
  */
 @NullMarked
-package org.springframework.boot.devtools.logger;
+package io.github.kotlinmania.spring.boot.devtools.logger;
 
 import org.jspecify.annotations.NullMarked;

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.hibernate;
+package io.github.kotlinmania.spring.boot.hibernate;
 
 import jakarta.transaction.TransactionManager;
 import jakarta.transaction.UserTransaction;

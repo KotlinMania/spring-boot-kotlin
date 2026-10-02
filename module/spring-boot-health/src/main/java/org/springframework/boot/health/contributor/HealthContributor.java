@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.health.contributor;
+package io.github.kotlinmania.spring.boot.health.contributor;
 
 /**
  * Contributes health information, either directly ({@link HealthIndicator}) or via other

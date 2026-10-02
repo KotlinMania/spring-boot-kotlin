@@ -16,9 +16,9 @@
 
 /**
  * Test annotations support for
- * {@link org.springframework.boot.context.TypeExcludeFilter}.
+ * {@link io.github.kotlinmania.spring.boot.context.TypeExcludeFilter}.
  */
 @NullMarked
-package org.springframework.boot.test.context.filter.annotation;
+package io.github.kotlinmania.spring.boot.test.context.filter.annotation;
 
 import org.jspecify.annotations.NullMarked;

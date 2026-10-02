@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.data.jpa.autoconfigure;
+package io.github.kotlinmania.spring.boot.data.jpa.autoconfigure;
 
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.data.jpa.autoconfigure.domain.country.CountryRepository;
+import io.github.kotlinmania.spring.boot.data.jpa.autoconfigure.domain.country.CountryRepository;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.tomcat.servlet;
+package io.github.kotlinmania.spring.boot.tomcat.servlet;
 
 import java.io.File;
 import java.io.IOException;
@@ -80,23 +80,23 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.InOrder;
 
-import org.springframework.boot.ssl.DefaultSslBundleRegistry;
-import org.springframework.boot.testsupport.classpath.resources.WithPackageResources;
-import org.springframework.boot.testsupport.junit.EnabledOnLocale;
-import org.springframework.boot.testsupport.system.CapturedOutput;
-import org.springframework.boot.tomcat.ConnectorStartFailedException;
-import org.springframework.boot.tomcat.TomcatAccess;
-import org.springframework.boot.tomcat.TomcatConnectorCustomizer;
-import org.springframework.boot.tomcat.TomcatContextCustomizer;
-import org.springframework.boot.tomcat.TomcatEmbeddedContext;
-import org.springframework.boot.tomcat.TomcatProtocolHandlerCustomizer;
-import org.springframework.boot.tomcat.TomcatWebServer;
-import org.springframework.boot.web.server.PortInUseException;
-import org.springframework.boot.web.server.Shutdown;
-import org.springframework.boot.web.server.Ssl;
-import org.springframework.boot.web.server.WebServerException;
-import org.springframework.boot.web.server.servlet.AbstractServletWebServerFactoryTests;
-import org.springframework.boot.web.server.servlet.ConfigurableServletWebServerFactory;
+import io.github.kotlinmania.spring.boot.ssl.DefaultSslBundleRegistry;
+import io.github.kotlinmania.spring.boot.testsupport.classpath.resources.WithPackageResources;
+import io.github.kotlinmania.spring.boot.testsupport.junit.EnabledOnLocale;
+import io.github.kotlinmania.spring.boot.testsupport.system.CapturedOutput;
+import io.github.kotlinmania.spring.boot.tomcat.ConnectorStartFailedException;
+import io.github.kotlinmania.spring.boot.tomcat.TomcatAccess;
+import io.github.kotlinmania.spring.boot.tomcat.TomcatConnectorCustomizer;
+import io.github.kotlinmania.spring.boot.tomcat.TomcatContextCustomizer;
+import io.github.kotlinmania.spring.boot.tomcat.TomcatEmbeddedContext;
+import io.github.kotlinmania.spring.boot.tomcat.TomcatProtocolHandlerCustomizer;
+import io.github.kotlinmania.spring.boot.tomcat.TomcatWebServer;
+import io.github.kotlinmania.spring.boot.web.server.PortInUseException;
+import io.github.kotlinmania.spring.boot.web.server.Shutdown;
+import io.github.kotlinmania.spring.boot.web.server.Ssl;
+import io.github.kotlinmania.spring.boot.web.server.WebServerException;
+import io.github.kotlinmania.spring.boot.web.server.servlet.AbstractServletWebServerFactoryTests;
+import io.github.kotlinmania.spring.boot.web.server.servlet.ConfigurableServletWebServerFactory;
 import org.springframework.core.io.ByteArrayResource;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.support.PropertiesLoaderUtils;

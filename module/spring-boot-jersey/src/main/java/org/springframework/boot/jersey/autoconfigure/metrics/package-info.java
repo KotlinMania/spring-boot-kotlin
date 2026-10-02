@@ -18,6 +18,6 @@
  * Auto-configuration for Jersey metrics.
  */
 @NullMarked
-package org.springframework.boot.jersey.autoconfigure.metrics;
+package io.github.kotlinmania.spring.boot.jersey.autoconfigure.metrics;
 
 import org.jspecify.annotations.NullMarked;

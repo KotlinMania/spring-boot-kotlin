@@ -30,11 +30,11 @@ app:
 
 Assuming that `SomeDataSource` has regular JavaBean properties for the URL, the username, and the pool size, these settings are bound automatically before the javadoc:javax.sql.DataSource[] is made available to other components.
 
-Spring Boot also provides a utility builder class, called javadoc:org.springframework.boot.jdbc.DataSourceBuilder[], that can be used to create one of the standard data sources (if it is on the classpath).
+Spring Boot also provides a utility builder class, called javadoc:io.github.kotlinmania.spring.boot.jdbc.DataSourceBuilder[], that can be used to create one of the standard data sources (if it is on the classpath).
 The builder can detect which one to use based on what is available on the classpath.
 It also auto-detects the driver based on the JDBC URL.
 
-The following example shows how to create a data source by using a javadoc:org.springframework.boot.jdbc.DataSourceBuilder[]:
+The following example shows how to create a data source by using a javadoc:io.github.kotlinmania.spring.boot.jdbc.DataSourceBuilder[]:
 
 include-code::builder/MyDataSourceConfiguration[]
 
@@ -57,7 +57,7 @@ app:
 However, there is a catch due to the method's javadoc:javax.sql.DataSource[] return type.
 This hides the actual type of the connection pool so no configuration property metadata is generated for your custom javadoc:javax.sql.DataSource[] and no auto-completion is available in your IDE.
 To address this problem, use the builder's `type(Class)` method to specify the type of javadoc:javax.sql.DataSource[] to be built and update the method's return type.
-For example, the following shows how to create a javadoc:com.zaxxer.hikari.HikariDataSource[] with javadoc:org.springframework.boot.jdbc.DataSourceBuilder[]:
+For example, the following shows how to create a javadoc:com.zaxxer.hikari.HikariDataSource[] with javadoc:io.github.kotlinmania.spring.boot.jdbc.DataSourceBuilder[]:
 
 include-code::simple/MyDataSourceConfiguration[]
 
@@ -74,15 +74,15 @@ app:
     pool-size: 30
 ----
 
-To address this problem, make use of javadoc:org.springframework.boot.jdbc.autoconfigure.DataSourceProperties[] which will handle the `url` to `jdbc-url` translation for you.
-You can initialize a javadoc:org.springframework.boot.jdbc.DataSourceBuilder[] from the state of any javadoc:org.springframework.boot.jdbc.autoconfigure.DataSourceProperties[] object using its `initializeDataSourceBuilder()` method.
-You could inject the javadoc:org.springframework.boot.jdbc.autoconfigure.DataSourceProperties[] that Spring Boot creates automatically, however, that would split your configuration across `+spring.datasource.*+` and `+app.datasource.*+`.
-To avoid this, define a custom javadoc:org.springframework.boot.jdbc.autoconfigure.DataSourceProperties[] with a custom configuration properties prefix, as shown in the following example:
+To address this problem, make use of javadoc:io.github.kotlinmania.spring.boot.jdbc.autoconfigure.DataSourceProperties[] which will handle the `url` to `jdbc-url` translation for you.
+You can initialize a javadoc:io.github.kotlinmania.spring.boot.jdbc.DataSourceBuilder[] from the state of any javadoc:io.github.kotlinmania.spring.boot.jdbc.autoconfigure.DataSourceProperties[] object using its `initializeDataSourceBuilder()` method.
+You could inject the javadoc:io.github.kotlinmania.spring.boot.jdbc.autoconfigure.DataSourceProperties[] that Spring Boot creates automatically, however, that would split your configuration across `+spring.datasource.*+` and `+app.datasource.*+`.
+To avoid this, define a custom javadoc:io.github.kotlinmania.spring.boot.jdbc.autoconfigure.DataSourceProperties[] with a custom configuration properties prefix, as shown in the following example:
 
 include-code::configurable/MyDataSourceConfiguration[]
 
 This setup is equivalent to what Spring Boot does for you by default, except that the pool's type is specified in code and its settings are exposed as `app.datasource.configuration.*` properties.
-javadoc:org.springframework.boot.jdbc.autoconfigure.DataSourceProperties[] takes care of the `url` to `jdbc-url` translation, so you can configure it as follows:
+javadoc:io.github.kotlinmania.spring.boot.jdbc.autoconfigure.DataSourceProperties[] takes care of the `url` to `jdbc-url` translation, so you can configure it as follows:
 
 [configprops%novalidate,yaml]
 ----
@@ -97,7 +97,7 @@ app:
 
 Note that, as the custom configuration specifies in code that Hikari should be used, `app.datasource.type` will have no effect.
 
-As described in xref:reference:data/sql.adoc#data.sql.datasource.connection-pool[], javadoc:org.springframework.boot.jdbc.DataSourceBuilder[] supports several different connection pools.
+As described in xref:reference:data/sql.adoc#data.sql.datasource.connection-pool[], javadoc:io.github.kotlinmania.spring.boot.jdbc.DataSourceBuilder[] supports several different connection pools.
 To use a pool other than Hikari, add it to the classpath, use the `type(Class)` method to specify the pool class to use, and update the javadoc:org.springframework.context.annotation.Bean[format=annotation] method's return type to match.
 This will also provide you with configuration property metadata for the specific connection pool that you've chosen.
 
@@ -150,7 +150,7 @@ include-code::MyCompleteAdditionalDataSourceConfiguration[]
 The preceding example configures the additional data source with the same logic as Spring Boot would use in auto-configuration.
 Note that the `app.datasource.configuration.*` properties provide advanced settings based on the chosen implementation.
 
-As with xref:how-to:data-access.adoc#howto.data-access.configure-custom-datasource[configuring a single custom javadoc:javax.sql.DataSource[]], the type of one or both of the javadoc:javax.sql.DataSource[] beans can be customized using the `type(Class)` method on javadoc:org.springframework.boot.jdbc.DataSourceBuilder[].
+As with xref:how-to:data-access.adoc#howto.data-access.configure-custom-datasource[configuring a single custom javadoc:javax.sql.DataSource[]], the type of one or both of the javadoc:javax.sql.DataSource[] beans can be customized using the `type(Class)` method on javadoc:io.github.kotlinmania.spring.boot.jdbc.DataSourceBuilder[].
 See xref:reference:data/sql.adoc#data.sql.datasource.connection-pool[] for details of the supported types.
 
 
@@ -159,7 +159,7 @@ See xref:reference:data/sql.adoc#data.sql.datasource.connection-pool[] for detai
 == Use Spring Data Repositories
 
 Spring Data can create implementations of javadoc:org.springframework.data.repository.Repository[] interfaces of various flavors.
-Spring Boot handles all of that for you, as long as those javadoc:org.springframework.data.repository.Repository[] implementations are included in one of the xref:reference:using/auto-configuration.adoc#using.auto-configuration.packages[auto-configuration packages], typically the package (or a sub-package) of your main application class that is annotated with javadoc:org.springframework.boot.autoconfigure.SpringBootApplication[format=annotation] or javadoc:org.springframework.boot.autoconfigure.EnableAutoConfiguration[format=annotation].
+Spring Boot handles all of that for you, as long as those javadoc:org.springframework.data.repository.Repository[] implementations are included in one of the xref:reference:using/auto-configuration.adoc#using.auto-configuration.packages[auto-configuration packages], typically the package (or a sub-package) of your main application class that is annotated with javadoc:io.github.kotlinmania.spring.boot.autoconfigure.SpringBootApplication[format=annotation] or javadoc:io.github.kotlinmania.spring.boot.autoconfigure.EnableAutoConfiguration[format=annotation].
 
 For many applications, all you need is to put the right Spring Data dependencies on your classpath.
 There is a `spring-boot-starter-data-jpa` for JPA, `spring-boot-starter-data-mongodb` for Mongodb, and various other starters for supported technologies.
@@ -176,7 +176,7 @@ For more about Spring Data, see the {url-spring-data-site}[Spring Data project p
 == Separate @Entity Definitions from Spring Configuration
 
 Spring Boot determines the location of your javadoc:jakarta.persistence.Entity[format=annotation] definitions by scanning the xref:reference:using/auto-configuration.adoc#using.auto-configuration.packages[auto-configuration packages].
-For more control, use the javadoc:org.springframework.boot.persistence.autoconfigure.EntityScan[format=annotation] annotation, as shown in the following example:
+For more control, use the javadoc:io.github.kotlinmania.spring.boot.persistence.autoconfigure.EntityScan[format=annotation] annotation, as shown in the following example:
 
 include-code::MyApplication[]
 
@@ -229,7 +229,7 @@ For example, if you want to configure Hibernate's batch size you must use `+spri
 If you use other forms, such as `batchSize` or `batch-size`, Hibernate will not apply the setting.
 ====
 
-TIP: If you need to apply advanced customization to Hibernate properties, consider registering a javadoc:org.springframework.boot.hibernate.autoconfigure.HibernatePropertiesCustomizer[] bean that will be invoked prior to creating the javadoc:jakarta.persistence.EntityManagerFactory[].
+TIP: If you need to apply advanced customization to Hibernate properties, consider registering a javadoc:io.github.kotlinmania.spring.boot.hibernate.autoconfigure.HibernatePropertiesCustomizer[] bean that will be invoked prior to creating the javadoc:jakarta.persistence.EntityManagerFactory[].
 This takes precedence over anything that is applied by the auto-configuration.
 
 
@@ -275,7 +275,7 @@ Hibernate {url-hibernate-userguide}#caching[second-level cache] can be configure
 Rather than configuring Hibernate to lookup the cache provider again, it is better to provide the one that is available in the context whenever possible.
 
 To do this with JCache, first make sure that `org.hibernate.orm:hibernate-jcache` is available on the classpath.
-Then, add a javadoc:org.springframework.boot.hibernate.autoconfigure.HibernatePropertiesCustomizer[] bean as shown in the following example:
+Then, add a javadoc:io.github.kotlinmania.spring.boot.hibernate.autoconfigure.HibernatePropertiesCustomizer[] bean as shown in the following example:
 
 include-code::MyHibernateSecondLevelCacheConfiguration[]
 
@@ -290,7 +290,7 @@ For details, see {url-hibernate-userguide}#caching-provider-jcache[the Hibernate
 
 By default, Spring Boot registers a javadoc:org.hibernate.resource.beans.container.spi.BeanContainer[] implementation that uses the javadoc:org.springframework.beans.factory.BeanFactory[] so that converters and entity listeners can use regular dependency injection.
 
-You can disable or tune this behavior by registering a javadoc:org.springframework.boot.hibernate.autoconfigure.HibernatePropertiesCustomizer[] that removes or changes the `hibernate.resource.beans.container` property.
+You can disable or tune this behavior by registering a javadoc:io.github.kotlinmania.spring.boot.hibernate.autoconfigure.HibernatePropertiesCustomizer[] that removes or changes the `hibernate.resource.beans.container` property.
 
 
 
@@ -301,7 +301,7 @@ To take full control of the configuration of the javadoc:jakarta.persistence.Ent
 Spring Boot auto-configuration switches off its entity manager in the presence of a bean of that type.
 
 NOTE: When you create a bean for javadoc:org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean[] yourself, any customization that was applied during the creation of the auto-configured javadoc:org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean[] is lost.
-Make sure to use the auto-configured javadoc:org.springframework.boot.jpa.EntityManagerFactoryBuilder[] to retain JPA and vendor properties.
+Make sure to use the auto-configured javadoc:io.github.kotlinmania.spring.boot.jpa.EntityManagerFactoryBuilder[] to retain JPA and vendor properties.
 This is particularly important if you were relying on `spring.jpa.*` properties for configuring things like the naming strategy or the DDL mode.
 
 
@@ -311,7 +311,7 @@ This is particularly important if you were relying on `spring.jpa.*` properties 
 
 If you need to use JPA against multiple datasources, you likely need one javadoc:jakarta.persistence.EntityManagerFactory[] per datasource.
 The javadoc:org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean[] from Spring ORM allows you to configure an javadoc:jakarta.persistence.EntityManagerFactory[] for your needs.
-You can also reuse javadoc:org.springframework.boot.jpa.autoconfigure.JpaProperties[] to bind settings for a second javadoc:jakarta.persistence.EntityManagerFactory[].
+You can also reuse javadoc:io.github.kotlinmania.spring.boot.jpa.autoconfigure.JpaProperties[] to bind settings for a second javadoc:jakarta.persistence.EntityManagerFactory[].
 Building upon xref:how-to:data-access.adoc#howto.data-access.configure-two-datasources[the example for configuring a second javadoc:javax.sql.DataSource[]], a second javadoc:jakarta.persistence.EntityManagerFactory[] can be defined as shown in the following example:
 
 include-code::MyAdditionalEntityManagerFactoryConfiguration[]
@@ -390,7 +390,7 @@ If you want to configure a component that JPA uses, then you need to ensure that
 When the component is auto-configured, Spring Boot takes care of this for you.
 For example, when Flyway is auto-configured, Hibernate is configured to depend on Flyway so that Flyway has a chance to initialize the database before Hibernate tries to use it.
 
-If you are configuring a component yourself, you can use an javadoc:org.springframework.boot.jpa.autoconfigure.EntityManagerFactoryDependsOnPostProcessor[] subclass as a convenient way of setting up the necessary dependencies.
+If you are configuring a component yourself, you can use an javadoc:io.github.kotlinmania.spring.boot.jpa.autoconfigure.EntityManagerFactoryDependsOnPostProcessor[] subclass as a convenient way of setting up the necessary dependencies.
 For example, if you use Hibernate Search with Elasticsearch as its index manager, any javadoc:jakarta.persistence.EntityManagerFactory[] beans must be configured to depend on the `elasticsearchClient` bean, as shown in the following example:
 
 include-code::ElasticsearchEntityManagerFactoryDependsOnPostProcessor[]
@@ -403,4 +403,4 @@ include-code::ElasticsearchEntityManagerFactoryDependsOnPostProcessor[]
 If you need to use jOOQ with multiple data sources, you should create your own javadoc:org.jooq.DSLContext[] for each one.
 See {code-spring-boot-jooq-src}/autoconfigure/JooqAutoConfiguration.java[`JooqAutoConfiguration`] for more details.
 
-TIP: In particular, javadoc:org.springframework.boot.jooq.autoconfigure.ExceptionTranslatorExecuteListener[] and javadoc:org.springframework.boot.jooq.autoconfigure.SpringTransactionProvider[] can be reused to provide similar features to what the auto-configuration does with a single javadoc:javax.sql.DataSource[].
+TIP: In particular, javadoc:io.github.kotlinmania.spring.boot.jooq.autoconfigure.ExceptionTranslatorExecuteListener[] and javadoc:io.github.kotlinmania.spring.boot.jooq.autoconfigure.SpringTransactionProvider[] can be reused to provide similar features to what the auto-configuration does with a single javadoc:javax.sql.DataSource[].

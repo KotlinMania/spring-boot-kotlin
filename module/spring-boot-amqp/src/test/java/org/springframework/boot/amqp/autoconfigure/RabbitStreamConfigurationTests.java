@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.amqp.autoconfigure;
+package io.github.kotlinmania.spring.boot.amqp.autoconfigure;
 
 import java.time.Duration;
 import java.util.List;
@@ -34,13 +34,13 @@ import org.springframework.amqp.rabbit.config.ContainerCustomizer;
 import org.springframework.amqp.rabbit.listener.RabbitListenerContainerFactory;
 import org.springframework.amqp.rabbit.listener.RabbitListenerEndpointRegistry;
 import org.springframework.amqp.support.converter.MessageConverter;
-import org.springframework.boot.amqp.autoconfigure.RabbitStreamConfiguration.PropertiesRabbitStreamConnectionDetails;
-import org.springframework.boot.autoconfigure.AutoConfigurations;
-import org.springframework.boot.autoconfigure.ssl.SslAutoConfiguration;
-import org.springframework.boot.ssl.NoSuchSslBundleException;
-import org.springframework.boot.ssl.SslBundle;
-import org.springframework.boot.ssl.SslBundles;
-import org.springframework.boot.test.context.runner.ApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.amqp.autoconfigure.RabbitStreamConfiguration.PropertiesRabbitStreamConnectionDetails;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurations;
+import io.github.kotlinmania.spring.boot.autoconfigure.ssl.SslAutoConfiguration;
+import io.github.kotlinmania.spring.boot.ssl.NoSuchSslBundleException;
+import io.github.kotlinmania.spring.boot.ssl.SslBundle;
+import io.github.kotlinmania.spring.boot.ssl.SslBundles;
+import io.github.kotlinmania.spring.boot.test.context.runner.ApplicationContextRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
@@ -352,7 +352,7 @@ class RabbitStreamConfigurationTests {
 	@Test
 	void whenStreamSslBundleIsConfiguredThenTlsIsUsed() {
 		this.contextRunner.withPropertyValues("spring.rabbitmq.stream.ssl.bundle=test-bundle",
-				"spring.ssl.bundle.jks.test-bundle.keystore.location=classpath:org/springframework/boot/amqp/autoconfigure/test.jks",
+				"spring.ssl.bundle.jks.test-bundle.keystore.location=classpath:io.github.kotlinmania.spring.boot.amqp/autoconfigure/test.jks",
 				"spring.ssl.bundle.jks.test-bundle.keystore.password=secret")
 			.run((context) -> {
 				assertThat(context).hasNotFailed();
@@ -388,7 +388,7 @@ class RabbitStreamConfigurationTests {
 	void whenConnectionDetailsSslBundleIsProvidedThenTlsIsUsedWithoutProperties() {
 		this.contextRunner.withUserConfiguration(CustomConnectionDetails.class)
 			.withPropertyValues(
-					"spring.ssl.bundle.jks.test-bundle.keystore.location=classpath:org/springframework/boot/amqp/autoconfigure/test.jks",
+					"spring.ssl.bundle.jks.test-bundle.keystore.location=classpath:io.github.kotlinmania.spring.boot.amqp/autoconfigure/test.jks",
 					"spring.ssl.bundle.jks.test-bundle.keystore.password=secret")
 			.run((context) -> {
 				assertThat(context).hasNotFailed();

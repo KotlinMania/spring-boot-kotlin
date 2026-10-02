@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.configurationprocessor.metadata;
+package io.github.kotlinmania.spring.boot.configurationprocessor.metadata;
 
 import java.util.Locale;
 
-import org.springframework.boot.configurationprocessor.support.ConventionUtils;
+import io.github.kotlinmania.spring.boot.configurationprocessor.support.ConventionUtils;
 
 /**
  * A group or property meta-data item from some {@link ConfigurationMetadata}.

@@ -1,11 +1,11 @@
 # Failure Analyzers
-org.springframework.boot.diagnostics.FailureAnalyzer=\
-org.springframework.boot.jpa.autoconfigure.BootstrapExecutorRequiredFailureAnalyzer
+io.github.kotlinmania.spring.boot.diagnostics.FailureAnalyzer=\
+io.github.kotlinmania.spring.boot.jpa.autoconfigure.BootstrapExecutorRequiredFailureAnalyzer
 
 # Database Initializer Detectors
-org.springframework.boot.sql.init.dependency.DatabaseInitializerDetector=\
-org.springframework.boot.jpa.JpaDatabaseInitializerDetector
+io.github.kotlinmania.spring.boot.sql.init.dependency.DatabaseInitializerDetector=\
+io.github.kotlinmania.spring.boot.jpa.JpaDatabaseInitializerDetector
 
 # Depends On Database Initialization Detectors
-org.springframework.boot.sql.init.dependency.DependsOnDatabaseInitializationDetector=\
-org.springframework.boot.jpa.JpaDependsOnDatabaseInitializationDetector
+io.github.kotlinmania.spring.boot.sql.init.dependency.DependsOnDatabaseInitializationDetector=\
+io.github.kotlinmania.spring.boot.jpa.JpaDependsOnDatabaseInitializationDetector

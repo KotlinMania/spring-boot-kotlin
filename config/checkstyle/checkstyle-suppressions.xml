@@ -36,9 +36,9 @@
 	<suppress files="Ansi.*\.java" checks="JavadocStyle" />
 	<suppress files="LogLevel\.java" checks="JavadocVariable" />
 	<suppress files="HelpMojo\.java" checks=".*"/>
-	<suppress files="[\\/]org.springframework.boot.cli.json[\\/].*\.java$" checks=".*" />
-	<suppress files="[\\/]org.springframework.boot.configurationmetadata.json[\\/].*\.java$" checks=".*" />
-	<suppress files="[\\/]org.springframework.boot.configurationprocessor.json[\\/].*\.java$" checks=".*" />
+	<suppress files="[\\/]io.github.kotlinmania.spring.boot.cli.json[\\/].*\.java$" checks=".*" />
+	<suppress files="[\\/]io.github.kotlinmania.spring.boot.configurationmetadata.json[\\/].*\.java$" checks=".*" />
+	<suppress files="[\\/]io.github.kotlinmania.spring.boot.configurationprocessor.json[\\/].*\.java$" checks=".*" />
 	<suppress files="TripType\.java" checks="JavadocVariable" />
 	<suppress files="Rating\.java" checks="JavadocVariable" />
 	<suppress files="Direction\.java" checks="JavadocVariable" />

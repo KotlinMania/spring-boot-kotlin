@@ -18,6 +18,6 @@
  * JMX support for actuator endpoints.
  */
 @NullMarked
-package org.springframework.boot.actuate.endpoint.jmx;
+package io.github.kotlinmania.spring.boot.actuate.endpoint.jmx;
 
 import org.jspecify.annotations.NullMarked;

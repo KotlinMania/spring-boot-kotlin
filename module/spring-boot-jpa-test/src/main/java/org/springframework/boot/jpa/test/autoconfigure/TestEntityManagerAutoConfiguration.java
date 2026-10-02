@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.jpa.test.autoconfigure;
+package io.github.kotlinmania.spring.boot.jpa.test.autoconfigure;
 
 import jakarta.persistence.EntityManagerFactory;
 
-import org.springframework.boot.autoconfigure.AutoConfiguration;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnClass;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.context.annotation.Bean;
 
 /**
@@ -30,7 +30,7 @@ import org.springframework.context.annotation.Bean;
  * @since 4.0.0
  * @see AutoConfigureTestEntityManager
  */
-@AutoConfiguration(afterName = "org.springframework.boot.hibernate.autoconfigure.HibernateJpaAutoConfiguration")
+@AutoConfiguration(afterName = "io.github.kotlinmania.spring.boot.hibernate.autoconfigure.HibernateJpaAutoConfiguration")
 @ConditionalOnClass({ EntityManagerFactory.class })
 public final class TestEntityManagerAutoConfiguration {
 

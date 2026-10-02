@@ -1,1 +1,1 @@
-org.springframework.boot.session.data.redis.autoconfigure.SessionDataRedisAutoConfiguration
+io.github.kotlinmania.spring.boot.session.data.redis.autoconfigure.SessionDataRedisAutoConfiguration

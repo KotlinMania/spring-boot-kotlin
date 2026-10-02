@@ -15,8 +15,17 @@
  */
 package org.springframework.boot.build.architecture.resources.loads
 
-import org.springframework.util.ResourceUtils
-import java.io.FileNotFoundException
+package io.github.kotlinmania.spring.boot.build.architecture.resources.loads;
+
+import java.io.FileNotFoundException;
+
+import org.springframework.util.ResourceUtils;
+
+public class ResourceUtilsResourceLoader {
+
+	void getResource() throws FileNotFoundException {
+		ResourceUtils.getURL("gradle.properties");
+	}
 
 class ResourceUtilsResourceLoader {
     @get:Throws(FileNotFoundException::class)

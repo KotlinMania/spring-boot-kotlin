@@ -18,6 +18,6 @@
  * Auto-configuration for OAuth2 resource server web security.
  */
 @NullMarked
-package org.springframework.boot.security.oauth2.server.resource.autoconfigure.web;
+package io.github.kotlinmania.spring.boot.security.oauth2.server.resource.autoconfigure.web;
 
 import org.jspecify.annotations.NullMarked;

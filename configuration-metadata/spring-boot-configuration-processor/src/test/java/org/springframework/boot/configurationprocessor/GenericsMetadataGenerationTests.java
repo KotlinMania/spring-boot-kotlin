@@ -14,20 +14,20 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.configurationprocessor;
+package io.github.kotlinmania.spring.boot.configurationprocessor;
 
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.configurationprocessor.metadata.ConfigurationMetadata;
-import org.springframework.boot.configurationprocessor.metadata.Metadata;
-import org.springframework.boot.configurationsample.generic.AbstractGenericProperties;
-import org.springframework.boot.configurationsample.generic.ComplexGenericProperties;
-import org.springframework.boot.configurationsample.generic.ConcreteBuilderProperties;
-import org.springframework.boot.configurationsample.generic.GenericConfig;
-import org.springframework.boot.configurationsample.generic.SimpleGenericProperties;
-import org.springframework.boot.configurationsample.generic.UnresolvedGenericProperties;
-import org.springframework.boot.configurationsample.generic.UpperBoundGenericPojo;
-import org.springframework.boot.configurationsample.generic.WildcardConfig;
+import io.github.kotlinmania.spring.boot.configurationprocessor.metadata.ConfigurationMetadata;
+import io.github.kotlinmania.spring.boot.configurationprocessor.metadata.Metadata;
+import io.github.kotlinmania.spring.boot.configurationsample.generic.AbstractGenericProperties;
+import io.github.kotlinmania.spring.boot.configurationsample.generic.ComplexGenericProperties;
+import io.github.kotlinmania.spring.boot.configurationsample.generic.ConcreteBuilderProperties;
+import io.github.kotlinmania.spring.boot.configurationsample.generic.GenericConfig;
+import io.github.kotlinmania.spring.boot.configurationsample.generic.SimpleGenericProperties;
+import io.github.kotlinmania.spring.boot.configurationsample.generic.UnresolvedGenericProperties;
+import io.github.kotlinmania.spring.boot.configurationsample.generic.UpperBoundGenericPojo;
+import io.github.kotlinmania.spring.boot.configurationsample.generic.WildcardConfig;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -87,17 +87,17 @@ class GenericsMetadataGenerationTests extends AbstractMetadataGenerationTests {
 	void genericTypes() {
 		ConfigurationMetadata metadata = compile(GenericConfig.class);
 		assertThat(metadata).has(Metadata.withGroup("generic")
-			.ofType("org.springframework.boot.configurationsample.generic.GenericConfig"));
+			.ofType("io.github.kotlinmania.spring.boot.configurationsample.generic.GenericConfig"));
 		assertThat(metadata).has(Metadata.withGroup("generic.foo")
-			.ofType("org.springframework.boot.configurationsample.generic.GenericConfig$Foo"));
+			.ofType("io.github.kotlinmania.spring.boot.configurationsample.generic.GenericConfig$Foo"));
 		assertThat(metadata).has(Metadata.withGroup("generic.foo.bar")
-			.ofType("org.springframework.boot.configurationsample.generic.GenericConfig$Bar"));
+			.ofType("io.github.kotlinmania.spring.boot.configurationsample.generic.GenericConfig$Bar"));
 		assertThat(metadata).has(Metadata.withGroup("generic.foo.bar.biz")
-			.ofType("org.springframework.boot.configurationsample.generic.GenericConfig$Bar$Biz"));
+			.ofType("io.github.kotlinmania.spring.boot.configurationsample.generic.GenericConfig$Bar$Biz"));
 		assertThat(metadata)
 			.has(Metadata.withProperty("generic.foo.name").ofType(String.class).fromSource(GenericConfig.Foo.class));
 		assertThat(metadata).has(Metadata.withProperty("generic.foo.string-to-bar")
-			.ofType("java.util.Map<java.lang.String,org.springframework.boot.configurationsample.generic.GenericConfig$Bar<java.lang.Integer>>")
+			.ofType("java.util.Map<java.lang.String,io.github.kotlinmania.spring.boot.configurationsample.generic.GenericConfig$Bar<java.lang.Integer>>")
 			.fromSource(GenericConfig.Foo.class));
 		assertThat(metadata).has(Metadata.withProperty("generic.foo.string-to-integer")
 			.ofType("java.util.Map<java.lang.String,java.lang.Integer>")

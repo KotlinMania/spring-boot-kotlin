@@ -18,6 +18,6 @@
  * Auto-configuration classes for RSocket integration with GraphQL.
  */
 @NullMarked
-package org.springframework.boot.graphql.autoconfigure.rsocket;
+package io.github.kotlinmania.spring.boot.graphql.autoconfigure.rsocket;
 
 import org.jspecify.annotations.NullMarked;

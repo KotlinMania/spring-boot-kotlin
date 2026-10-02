@@ -18,6 +18,6 @@
  * Tomcat metrics.
  */
 @NullMarked
-package org.springframework.boot.tomcat.metrics;
+package io.github.kotlinmania.spring.boot.tomcat.metrics;
 
 import org.jspecify.annotations.NullMarked;

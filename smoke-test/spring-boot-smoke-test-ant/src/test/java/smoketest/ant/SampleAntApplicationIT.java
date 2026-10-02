@@ -22,7 +22,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.loader.tools.JavaExecutable;
+import io.github.kotlinmania.spring.boot.loader.tools.JavaExecutable;
 import org.springframework.util.FileCopyUtils;
 
 import static org.assertj.core.api.Assertions.assertThat;

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.mongodb.autoconfigure;
+package io.github.kotlinmania.spring.boot.mongodb.autoconfigure;
 
 import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
@@ -24,9 +24,9 @@ import java.util.List;
 import com.mongodb.ConnectionString;
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.mongodb.autoconfigure.MongoProperties.Ssl;
-import org.springframework.boot.ssl.SslBundle;
-import org.springframework.boot.ssl.SslBundles;
+import io.github.kotlinmania.spring.boot.mongodb.autoconfigure.MongoProperties.Ssl;
+import io.github.kotlinmania.spring.boot.ssl.SslBundle;
+import io.github.kotlinmania.spring.boot.ssl.SslBundles;
 import org.springframework.util.Assert;
 import org.springframework.util.StringUtils;
 

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.testcontainers.context;
+package io.github.kotlinmania.spring.boot.testcontainers.context;
 
 import java.lang.reflect.Method;
 import java.lang.reflect.Modifier;

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.test.system;
+package io.github.kotlinmania.spring.boot.test.system;
 
 /**
  * Provides access to {@link System#out System.out} and {@link System#err System.err}

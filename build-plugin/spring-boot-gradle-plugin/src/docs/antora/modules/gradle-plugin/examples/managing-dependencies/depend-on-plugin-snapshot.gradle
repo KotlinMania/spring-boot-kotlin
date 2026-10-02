@@ -6,6 +6,6 @@ buildscript {
 	}
 
 	dependencies {
-		classpath 'org.springframework.boot:spring-boot-gradle-plugin:{version-spring-boot}'
+		classpath 'io.github.kotlinmania.spring.boot.spring-boot-gradle-plugin:{version-spring-boot}'
 	}
 }

@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.health.actuate.endpoint;
+package io.github.kotlinmania.spring.boot.health.actuate.endpoint;
 
 import org.junit.jupiter.api.Test;
 import tools.jackson.databind.MapperFeature;
 import tools.jackson.databind.json.JsonMapper;
 
-import org.springframework.boot.health.contributor.Health;
+import io.github.kotlinmania.spring.boot.health.contributor.Health;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

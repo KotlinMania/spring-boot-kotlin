@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.session.actuate.endpoint;
+package io.github.kotlinmania.spring.boot.session.actuate.endpoint;
 
 import java.time.Instant;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-import org.springframework.boot.actuate.endpoint.OperationResponseBody;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.OperationResponseBody;
 import org.springframework.session.Session;
 
 /**

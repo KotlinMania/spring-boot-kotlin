@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.cache.actuate.endpoint;
+package io.github.kotlinmania.spring.boot.cache.actuate.endpoint;
 
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
-import org.springframework.boot.actuate.endpoint.web.test.WebEndpointTest;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.web.test.WebEndpointTest;
 import org.springframework.cache.Cache;
 import org.springframework.cache.CacheManager;
 import org.springframework.cache.concurrent.ConcurrentMapCacheManager;

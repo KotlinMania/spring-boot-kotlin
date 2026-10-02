@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.devtools.tests;
+package io.github.kotlinmania.spring.boot.devtools.tests;
 
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import org.springframework.boot.devtools.tests.JvmLauncher.LaunchedJvm;
+import io.github.kotlinmania.spring.boot.devtools.tests.JvmLauncher.LaunchedJvm;
 import org.springframework.util.StringUtils;
 
 /**

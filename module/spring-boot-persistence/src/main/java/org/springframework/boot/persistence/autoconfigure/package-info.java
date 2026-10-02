@@ -18,6 +18,6 @@
  * General purpose domain annotations and classes.
  */
 @NullMarked
-package org.springframework.boot.persistence.autoconfigure;
+package io.github.kotlinmania.spring.boot.persistence.autoconfigure;
 
 import org.jspecify.annotations.NullMarked;

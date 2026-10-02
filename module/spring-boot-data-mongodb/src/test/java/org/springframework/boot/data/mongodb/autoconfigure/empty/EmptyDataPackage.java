@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.data.mongodb.autoconfigure.empty;
+package io.github.kotlinmania.spring.boot.data.mongodb.autoconfigure.empty;
 
 public class EmptyDataPackage {
 

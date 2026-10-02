@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.configurationprocessor.metadata;
+package io.github.kotlinmania.spring.boot.configurationprocessor.metadata;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -22,8 +22,8 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
-import org.springframework.boot.configurationprocessor.metadata.ItemMetadata.ItemType;
-import org.springframework.boot.configurationprocessor.support.ConventionUtils;
+import io.github.kotlinmania.spring.boot.configurationprocessor.metadata.ItemMetadata.ItemType;
+import io.github.kotlinmania.spring.boot.configurationprocessor.support.ConventionUtils;
 
 /**
  * Configuration meta-data.

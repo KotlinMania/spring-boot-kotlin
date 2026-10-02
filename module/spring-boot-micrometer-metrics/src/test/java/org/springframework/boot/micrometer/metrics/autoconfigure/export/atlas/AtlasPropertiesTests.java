@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.micrometer.metrics.autoconfigure.export.atlas;
+package io.github.kotlinmania.spring.boot.micrometer.metrics.autoconfigure.export.atlas;
 
 import com.netflix.spectator.atlas.AtlasConfig;
 import org.junit.jupiter.api.Test;

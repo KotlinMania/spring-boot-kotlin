@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.actuate.docs.scheduling;
+package io.github.kotlinmania.spring.boot.actuate.docs.scheduling;
 
 import java.time.Instant;
 import java.util.Collection;
@@ -22,8 +22,8 @@ import java.util.regex.Pattern;
 
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.actuate.docs.MockMvcEndpointDocumentationTests;
-import org.springframework.boot.actuate.scheduling.ScheduledTasksEndpoint;
+import io.github.kotlinmania.spring.boot.actuate.docs.MockMvcEndpointDocumentationTests;
+import io.github.kotlinmania.spring.boot.actuate.scheduling.ScheduledTasksEndpoint;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.restdocs.payload.FieldDescriptor;

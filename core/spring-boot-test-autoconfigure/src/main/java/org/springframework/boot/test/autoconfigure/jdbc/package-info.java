@@ -18,6 +18,6 @@
  * Auto-configuration for core JDBC test concerns.
  */
 @NullMarked
-package org.springframework.boot.test.autoconfigure.jdbc;
+package io.github.kotlinmania.spring.boot.test.autoconfigure.jdbc;
 
 import org.jspecify.annotations.NullMarked;

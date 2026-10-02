@@ -18,8 +18,8 @@ package smoketest.layout;
 
 import java.io.File;
 
-import org.springframework.boot.loader.tools.Layout;
-import org.springframework.boot.loader.tools.LayoutFactory;
+import io.github.kotlinmania.spring.boot.loader.tools.Layout;
+import io.github.kotlinmania.spring.boot.loader.tools.LayoutFactory;
 
 public class SampleLayoutFactory implements LayoutFactory {
 

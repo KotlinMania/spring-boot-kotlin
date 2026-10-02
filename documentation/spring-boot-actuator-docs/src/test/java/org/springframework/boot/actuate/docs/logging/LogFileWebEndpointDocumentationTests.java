@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.actuate.docs.logging;
+package io.github.kotlinmania.spring.boot.actuate.docs.logging;
 
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.actuate.docs.MockMvcEndpointDocumentationTests;
-import org.springframework.boot.actuate.logging.LogFileWebEndpoint;
-import org.springframework.boot.logging.LogFile;
+import io.github.kotlinmania.spring.boot.actuate.docs.MockMvcEndpointDocumentationTests;
+import io.github.kotlinmania.spring.boot.actuate.logging.LogFileWebEndpoint;
+import io.github.kotlinmania.spring.boot.logging.LogFile;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpStatus;
@@ -56,7 +56,7 @@ class LogFileWebEndpointDocumentationTests extends MockMvcEndpointDocumentationT
 		LogFileWebEndpoint endpoint() {
 			MockEnvironment environment = new MockEnvironment();
 			environment.setProperty("logging.file.name",
-					"src/test/resources/org/springframework/boot/actuate/docs/logging/sample.log");
+					"src/test/resources/io.github.kotlinmania.spring.boot.actuate/docs/logging/sample.log");
 			return new LogFileWebEndpoint(LogFile.get(environment), null);
 		}
 

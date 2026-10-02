@@ -1,5 +1,5 @@
-org.springframework.boot.autoconfigure.ssl.SslAutoConfiguration
-org.springframework.boot.data.redis.autoconfigure.DataRedisAutoConfiguration
-org.springframework.boot.data.redis.autoconfigure.DataRedisReactiveAutoConfiguration
-org.springframework.boot.data.redis.autoconfigure.DataRedisRepositoriesAutoConfiguration
-optional:org.springframework.boot.testcontainers.service.connection.ServiceConnectionAutoConfiguration
+io.github.kotlinmania.spring.boot.autoconfigure.ssl.SslAutoConfiguration
+io.github.kotlinmania.spring.boot.data.redis.autoconfigure.DataRedisAutoConfiguration
+io.github.kotlinmania.spring.boot.data.redis.autoconfigure.DataRedisReactiveAutoConfiguration
+io.github.kotlinmania.spring.boot.data.redis.autoconfigure.DataRedisRepositoriesAutoConfiguration
+optional:io.github.kotlinmania.spring.boot.testcontainers.service.connection.ServiceConnectionAutoConfiguration

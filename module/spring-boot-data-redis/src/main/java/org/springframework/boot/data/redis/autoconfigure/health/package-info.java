@@ -18,6 +18,6 @@
  * Auto-configuration for Spring Data Redis health.
  */
 @NullMarked
-package org.springframework.boot.data.redis.autoconfigure.health;
+package io.github.kotlinmania.spring.boot.data.redis.autoconfigure.health;
 
 import org.jspecify.annotations.NullMarked;

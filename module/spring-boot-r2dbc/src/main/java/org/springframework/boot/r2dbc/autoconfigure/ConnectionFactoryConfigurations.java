@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.r2dbc.autoconfigure;
+package io.github.kotlinmania.spring.boot.r2dbc.autoconfigure;
 
 import java.util.List;
 
@@ -24,18 +24,18 @@ import io.r2dbc.spi.ConnectionFactory;
 import org.jspecify.annotations.Nullable;
 
 import org.springframework.beans.factory.ObjectProvider;
-import org.springframework.boot.autoconfigure.condition.ConditionOutcome;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnBooleanProperty;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
-import org.springframework.boot.autoconfigure.condition.SpringBootCondition;
-import org.springframework.boot.context.properties.PropertyMapper;
-import org.springframework.boot.context.properties.bind.BindResult;
-import org.springframework.boot.context.properties.bind.Bindable;
-import org.springframework.boot.context.properties.bind.Binder;
-import org.springframework.boot.r2dbc.ConnectionFactoryDecorator;
-import org.springframework.boot.r2dbc.EmbeddedDatabaseConnection;
-import org.springframework.boot.r2dbc.autoconfigure.R2dbcProperties.Pool;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionOutcome;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnBooleanProperty;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnClass;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnMissingBean;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.SpringBootCondition;
+import io.github.kotlinmania.spring.boot.context.properties.PropertyMapper;
+import io.github.kotlinmania.spring.boot.context.properties.bind.BindResult;
+import io.github.kotlinmania.spring.boot.context.properties.bind.Bindable;
+import io.github.kotlinmania.spring.boot.context.properties.bind.Binder;
+import io.github.kotlinmania.spring.boot.r2dbc.ConnectionFactoryDecorator;
+import io.github.kotlinmania.spring.boot.r2dbc.EmbeddedDatabaseConnection;
+import io.github.kotlinmania.spring.boot.r2dbc.autoconfigure.R2dbcProperties.Pool;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Condition;
 import org.springframework.context.annotation.ConditionContext;
@@ -65,7 +65,7 @@ abstract class ConnectionFactoryConfigurations {
 			List<ConnectionFactoryOptionsBuilderCustomizer> optionsCustomizers,
 			List<ConnectionFactoryDecorator> decorators) {
 		try {
-			return org.springframework.boot.r2dbc.ConnectionFactoryBuilder
+			return io.github.kotlinmania.spring.boot.r2dbc.ConnectionFactoryBuilder
 				.withOptions(new ConnectionFactoryOptionsInitializer().initialize(properties, connectionDetails,
 						() -> EmbeddedDatabaseConnection.get(classLoader)))
 				.configure((options) -> {

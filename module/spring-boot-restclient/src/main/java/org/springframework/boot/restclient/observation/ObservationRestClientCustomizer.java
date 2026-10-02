@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.restclient.observation;
+package io.github.kotlinmania.spring.boot.restclient.observation;
 
 import io.micrometer.observation.ObservationRegistry;
 
-import org.springframework.boot.restclient.RestClientCustomizer;
+import io.github.kotlinmania.spring.boot.restclient.RestClientCustomizer;
 import org.springframework.http.client.observation.ClientRequestObservationConvention;
 import org.springframework.util.Assert;
 import org.springframework.web.client.RestClient.Builder;

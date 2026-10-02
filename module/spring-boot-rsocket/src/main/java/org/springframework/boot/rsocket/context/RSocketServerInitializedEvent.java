@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.rsocket.context;
+package io.github.kotlinmania.spring.boot.rsocket.context;
 
-import org.springframework.boot.rsocket.server.RSocketServer;
+import io.github.kotlinmania.spring.boot.rsocket.server.RSocketServer;
 import org.springframework.context.ApplicationEvent;
 
 /**

@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.howto.dataaccess.usemultipleentitymanagers
+package io.github.kotlinmania.spring.boot.docs.howto.dataaccess.usemultipleentitymanagers
 
 import org.springframework.beans.factory.annotation.Qualifier
-import org.springframework.boot.context.properties.ConfigurationProperties
-import org.springframework.boot.jpa.EntityManagerFactoryBuilder
-import org.springframework.boot.jpa.autoconfigure.JpaProperties
+import io.github.kotlinmania.spring.boot.context.properties.ConfigurationProperties
+import io.github.kotlinmania.spring.boot.jpa.EntityManagerFactoryBuilder
+import io.github.kotlinmania.spring.boot.jpa.autoconfigure.JpaProperties
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
 import org.springframework.orm.jpa.JpaVendorAdapter

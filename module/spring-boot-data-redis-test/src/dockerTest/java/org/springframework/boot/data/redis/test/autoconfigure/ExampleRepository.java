@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.data.redis.test.autoconfigure;
+package io.github.kotlinmania.spring.boot.data.redis.test.autoconfigure;
 
 import org.springframework.data.repository.CrudRepository;
 

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.loader.nio.file;
+package io.github.kotlinmania.spring.boot.loader.nio.file;
 
 import java.io.IOException;
 import java.net.URI;
@@ -40,7 +40,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
 
-import org.springframework.boot.loader.net.protocol.nested.NestedLocation;
+import io.github.kotlinmania.spring.boot.loader.net.protocol.nested.NestedLocation;
 
 /**
  * {@link FileSystemProvider} implementation for {@link NestedLocation nested} jar files.

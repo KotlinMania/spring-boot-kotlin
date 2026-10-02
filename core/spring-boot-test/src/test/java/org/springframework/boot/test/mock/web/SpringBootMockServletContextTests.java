@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.test.mock.web;
+package io.github.kotlinmania.spring.boot.test.mock.web;
 
 import java.io.File;
 import java.net.MalformedURLException;
@@ -26,7 +26,7 @@ import jakarta.servlet.ServletContext;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 
-import org.springframework.boot.test.context.SpringBootContextLoader;
+import io.github.kotlinmania.spring.boot.test.context.SpringBootContextLoader;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.test.annotation.DirtiesContext;
 import org.springframework.test.context.ContextConfiguration;

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.loader.jar;
+package io.github.kotlinmania.spring.boot.loader.jar;
 
 import java.io.File;
 import java.io.IOException;
@@ -28,9 +28,9 @@ import java.util.Set;
 import java.util.WeakHashMap;
 import java.util.zip.Inflater;
 
-import org.springframework.boot.loader.ref.Cleaner;
-import org.springframework.boot.loader.zip.ZipContent;
-import org.springframework.boot.loader.zip.ZipContent.Kind;
+import io.github.kotlinmania.spring.boot.loader.ref.Cleaner;
+import io.github.kotlinmania.spring.boot.loader.zip.ZipContent;
+import io.github.kotlinmania.spring.boot.loader.zip.ZipContent.Kind;
 
 /**
  * Resources created managed and cleaned by a {@link NestedJarFile} instance and suitable

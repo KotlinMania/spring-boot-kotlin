@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.resttestclient;
+package io.github.kotlinmania.spring.boot.resttestclient;
 
 import java.io.IOException;
 import java.lang.reflect.Method;
@@ -34,14 +34,14 @@ import org.assertj.core.extractor.Extractors;
 import org.jspecify.annotations.Nullable;
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.http.client.ClientHttpRequestFactoryBuilder;
-import org.springframework.boot.http.client.HttpClientSettings;
-import org.springframework.boot.http.client.HttpCookieHandling;
-import org.springframework.boot.http.client.HttpRedirects;
-import org.springframework.boot.restclient.RestTemplateBuilder;
-import org.springframework.boot.resttestclient.TestRestTemplate.HttpClientOption;
-import org.springframework.boot.test.http.server.LocalTestWebServer;
-import org.springframework.boot.test.http.server.LocalTestWebServer.Scheme;
+import io.github.kotlinmania.spring.boot.http.client.ClientHttpRequestFactoryBuilder;
+import io.github.kotlinmania.spring.boot.http.client.HttpClientSettings;
+import io.github.kotlinmania.spring.boot.http.client.HttpCookieHandling;
+import io.github.kotlinmania.spring.boot.http.client.HttpRedirects;
+import io.github.kotlinmania.spring.boot.restclient.RestTemplateBuilder;
+import io.github.kotlinmania.spring.boot.resttestclient.TestRestTemplate.HttpClientOption;
+import io.github.kotlinmania.spring.boot.test.http.server.LocalTestWebServer;
+import io.github.kotlinmania.spring.boot.test.http.server.LocalTestWebServer.Scheme;
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;

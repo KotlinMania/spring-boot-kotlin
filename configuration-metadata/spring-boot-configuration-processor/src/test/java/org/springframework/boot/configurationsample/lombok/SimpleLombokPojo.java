@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.configurationsample.lombok;
+package io.github.kotlinmania.spring.boot.configurationsample.lombok;
 
 import lombok.Data;
 

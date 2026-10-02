@@ -4,8 +4,8 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd">
 
 	<bean name="servletContainerFactory"
-		class="org.springframework.boot.web.server.servlet.MockServletWebServerFactory" />
+		class="io.github.kotlinmania.spring.boot.web.server.servlet.MockServletWebServerFactory" />
 
-	<bean name="servlet" class="org.springframework.boot.web.servlet.mock.MockServlet"/>
+	<bean name="servlet" class="io.github.kotlinmania.spring.boot.web.servlet.mock.MockServlet"/>
 
 </beans>

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.gradle.plugin;
+package io.github.kotlinmania.spring.boot.gradle.plugin;
 
 import java.util.LinkedHashSet;
 import java.util.Set;
@@ -32,7 +32,7 @@ import org.gradle.api.plugins.JavaPlugin;
 import org.gradle.api.plugins.JavaPluginExtension;
 import org.gradle.api.tasks.SourceSetContainer;
 
-import org.springframework.boot.gradle.tasks.bundling.BootJar;
+import io.github.kotlinmania.spring.boot.gradle.tasks.bundling.BootJar;
 
 /**
  * {@link Action} that is executed in response to the {@link NativeImagePlugin} being

@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.howto.dataaccess.separateentitydefinitionsfromspringconfiguration
+package io.github.kotlinmania.spring.boot.docs.howto.dataaccess.separateentitydefinitionsfromspringconfiguration
 
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration
-import org.springframework.boot.persistence.autoconfigure.EntityScan
+import io.github.kotlinmania.spring.boot.autoconfigure.EnableAutoConfiguration
+import io.github.kotlinmania.spring.boot.persistence.autoconfigure.EntityScan
 import org.springframework.context.annotation.Configuration
 
 @Configuration(proxyBeanMethods = false)

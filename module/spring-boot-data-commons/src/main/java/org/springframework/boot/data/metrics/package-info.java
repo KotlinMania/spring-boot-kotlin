@@ -18,6 +18,6 @@
  * Spring Data repository metrics.
  */
 @NullMarked
-package org.springframework.boot.data.metrics;
+package io.github.kotlinmania.spring.boot.data.metrics;
 
 import org.jspecify.annotations.NullMarked;

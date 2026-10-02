@@ -14,21 +14,21 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.jms.autoconfigure.health;
+package io.github.kotlinmania.spring.boot.jms.autoconfigure.health;
 
 import jakarta.jms.ConnectionFactory;
 
 import org.springframework.beans.factory.config.ConfigurableListableBeanFactory;
-import org.springframework.boot.autoconfigure.AutoConfiguration;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
-import org.springframework.boot.health.autoconfigure.contributor.CompositeHealthContributorConfiguration;
-import org.springframework.boot.health.autoconfigure.contributor.ConditionalOnEnabledHealthIndicator;
-import org.springframework.boot.health.contributor.HealthContributor;
-import org.springframework.boot.jms.autoconfigure.JmsAutoConfiguration;
-import org.springframework.boot.jms.health.JmsHealthIndicator;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.EnableAutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnBean;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnClass;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnMissingBean;
+import io.github.kotlinmania.spring.boot.health.autoconfigure.contributor.CompositeHealthContributorConfiguration;
+import io.github.kotlinmania.spring.boot.health.autoconfigure.contributor.ConditionalOnEnabledHealthIndicator;
+import io.github.kotlinmania.spring.boot.health.contributor.HealthContributor;
+import io.github.kotlinmania.spring.boot.jms.autoconfigure.JmsAutoConfiguration;
+import io.github.kotlinmania.spring.boot.jms.health.JmsHealthIndicator;
 import org.springframework.context.annotation.Bean;
 
 /**

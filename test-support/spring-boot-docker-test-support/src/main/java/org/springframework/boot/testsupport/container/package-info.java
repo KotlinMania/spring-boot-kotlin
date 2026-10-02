@@ -17,4 +17,4 @@
 /**
  * Support for testing with Testcontainers.
  */
-package org.springframework.boot.testsupport.container;
+package io.github.kotlinmania.spring.boot.testsupport.container;

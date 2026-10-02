@@ -1,6 +1,6 @@
 plugins {
 	id 'java'
-	id 'org.springframework.boot' version '{version-spring-boot}'
+	id 'io.github.kotlinmania.spring.boot. version '{version-spring-boot}'
 }
 
 // tag::configure-bom[]
@@ -8,7 +8,7 @@ apply plugin: 'io.spring.dependency-management'
 
 dependencyManagement {
 	imports {
-		mavenBom org.springframework.boot.gradle.plugin.SpringBootPlugin.BOM_COORDINATES
+		mavenBom io.github.kotlinmania.spring.boot.gradle.plugin.SpringBootPlugin.BOM_COORDINATES
 	}
 }
 // end::configure-bom[]
@@ -16,7 +16,7 @@ dependencyManagement {
 dependencyManagement {
 	resolutionStrategy {
 		eachDependency {
-			if (it.requested.group == 'org.springframework.boot') {
+			if (it.requested.group == 'io.github.kotlinmania.spring.boot.) {
 				it.useVersion 'TEST-SNAPSHOT'
 			}
 		}

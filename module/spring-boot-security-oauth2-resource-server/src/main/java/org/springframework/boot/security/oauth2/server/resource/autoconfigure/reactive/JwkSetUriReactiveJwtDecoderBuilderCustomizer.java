@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.security.oauth2.server.resource.autoconfigure.reactive;
+package io.github.kotlinmania.spring.boot.security.oauth2.server.resource.autoconfigure.reactive;
 
 import org.springframework.security.oauth2.jwt.NimbusReactiveJwtDecoder.JwkSetUriReactiveJwtDecoderBuilder;
 import org.springframework.security.oauth2.jwt.ReactiveJwtDecoder;

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.integration.actuate.endpoint;
+package io.github.kotlinmania.spring.boot.integration.actuate.endpoint;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -23,7 +23,7 @@ import java.util.Map;
 
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.integration.actuate.endpoint.IntegrationGraphEndpoint.GraphDescriptor;
+import io.github.kotlinmania.spring.boot.integration.actuate.endpoint.IntegrationGraphEndpoint.GraphDescriptor;
 import org.springframework.integration.graph.Graph;
 import org.springframework.integration.graph.IntegrationGraphServer;
 import org.springframework.integration.graph.IntegrationNode;

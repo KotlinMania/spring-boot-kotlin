@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.gradle.tasks.bundling;
+package io.github.kotlinmania.spring.boot.gradle.tasks.bundling;
 
 import java.io.File;
 import java.util.Collections;
@@ -50,7 +50,7 @@ import org.jspecify.annotations.Nullable;
 @DisableCachingByDefault(because = "Not worth caching")
 public abstract class BootJar extends Jar implements BootArchive {
 
-	private static final String LAUNCHER = "org.springframework.boot.loader.launch.JarLauncher";
+	private static final String LAUNCHER = "io.github.kotlinmania.spring.boot.loader.launch.JarLauncher";
 
 	private static final String CLASSES_DIRECTORY = "BOOT-INF/classes/";
 

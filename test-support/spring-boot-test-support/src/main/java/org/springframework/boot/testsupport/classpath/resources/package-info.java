@@ -17,4 +17,4 @@
 /**
  * Custom JUnit extension for testing with resources.
  */
-package org.springframework.boot.testsupport.classpath.resources;
+package io.github.kotlinmania.spring.boot.testsupport.classpath.resources;

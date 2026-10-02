@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.loader.nio.file;
+package io.github.kotlinmania.spring.boot.loader.nio.file;
 
 import java.io.IOError;
 import java.io.IOException;
@@ -31,8 +31,8 @@ import java.nio.file.WatchKey;
 import java.nio.file.WatchService;
 import java.util.Objects;
 
-import org.springframework.boot.loader.net.protocol.nested.NestedLocation;
-import org.springframework.boot.loader.zip.ZipContent;
+import io.github.kotlinmania.spring.boot.loader.net.protocol.nested.NestedLocation;
+import io.github.kotlinmania.spring.boot.loader.zip.ZipContent;
 
 /**
  * {@link Path} implementation for {@link NestedLocation nested} jar files.

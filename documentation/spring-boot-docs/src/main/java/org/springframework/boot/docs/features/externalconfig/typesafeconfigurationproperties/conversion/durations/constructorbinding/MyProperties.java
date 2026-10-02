@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.features.externalconfig.typesafeconfigurationproperties.conversion.durations.constructorbinding;
+package io.github.kotlinmania.spring.boot.docs.features.externalconfig.typesafeconfigurationproperties.conversion.durations.constructorbinding;
 
 import java.time.Duration;
 import java.time.temporal.ChronoUnit;
 
-import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.boot.context.properties.bind.DefaultValue;
-import org.springframework.boot.convert.DurationUnit;
+import io.github.kotlinmania.spring.boot.context.properties.ConfigurationProperties;
+import io.github.kotlinmania.spring.boot.context.properties.bind.DefaultValue;
+import io.github.kotlinmania.spring.boot.convert.DurationUnit;
 
 @ConfigurationProperties("my")
 public class MyProperties {

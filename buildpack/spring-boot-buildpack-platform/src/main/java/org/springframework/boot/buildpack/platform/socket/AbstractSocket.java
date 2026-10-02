@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.buildpack.platform.socket;
+package io.github.kotlinmania.spring.boot.buildpack.platform.socket;
 
 import java.io.IOException;
 import java.net.InetAddress;

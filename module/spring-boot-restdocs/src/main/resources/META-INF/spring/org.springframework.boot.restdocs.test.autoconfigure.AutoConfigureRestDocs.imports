@@ -1,1 +1,1 @@
-org.springframework.boot.restdocs.test.autoconfigure.RestDocsAutoConfiguration
+io.github.kotlinmania.spring.boot.restdocs.test.autoconfigure.RestDocsAutoConfiguration

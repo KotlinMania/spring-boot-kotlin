@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.configurationprocessor.metadata;
+package io.github.kotlinmania.spring.boot.configurationprocessor.metadata;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -29,10 +29,10 @@ import java.util.Map;
 import java.util.Set;
 import java.util.TreeSet;
 
-import org.springframework.boot.configurationprocessor.json.JSONArray;
-import org.springframework.boot.configurationprocessor.json.JSONException;
-import org.springframework.boot.configurationprocessor.json.JSONObject;
-import org.springframework.boot.configurationprocessor.metadata.ItemMetadata.ItemType;
+import io.github.kotlinmania.spring.boot.configurationprocessor.json.JSONArray;
+import io.github.kotlinmania.spring.boot.configurationprocessor.json.JSONException;
+import io.github.kotlinmania.spring.boot.configurationprocessor.json.JSONObject;
+import io.github.kotlinmania.spring.boot.configurationprocessor.metadata.ItemMetadata.ItemType;
 
 /**
  * Marshaller to read and write {@link ConfigurationMetadata} as JSON.

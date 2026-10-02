@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.jarmode.tools;
+package io.github.kotlinmania.spring.boot.jarmode.tools;
 
 import java.util.Iterator;
 import java.util.zip.ZipEntry;
 
-import org.springframework.boot.loader.jarmode.JarModeErrorException;
+import io.github.kotlinmania.spring.boot.loader.jarmode.JarModeErrorException;
 
 /**
  * Provides information about the jar layers.

@@ -14,16 +14,16 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.resttestclient.autoconfigure;
+package io.github.kotlinmania.spring.boot.resttestclient.autoconfigure;
 
 import org.springframework.beans.factory.ObjectProvider;
-import org.springframework.boot.autoconfigure.AutoConfiguration;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
-import org.springframework.boot.restclient.RestTemplateBuilder;
-import org.springframework.boot.resttestclient.TestRestTemplate;
-import org.springframework.boot.resttestclient.TestRestTemplate.HttpClientOption;
-import org.springframework.boot.test.http.server.LocalTestWebServer;
-import org.springframework.boot.test.http.server.LocalTestWebServer.Scheme;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnMissingBean;
+import io.github.kotlinmania.spring.boot.restclient.RestTemplateBuilder;
+import io.github.kotlinmania.spring.boot.resttestclient.TestRestTemplate;
+import io.github.kotlinmania.spring.boot.resttestclient.TestRestTemplate.HttpClientOption;
+import io.github.kotlinmania.spring.boot.test.http.server.LocalTestWebServer;
+import io.github.kotlinmania.spring.boot.test.http.server.LocalTestWebServer.Scheme;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
 
@@ -36,7 +36,7 @@ import org.springframework.context.annotation.Bean;
 @AutoConfiguration
 final class TestRestTemplateTestAutoConfiguration {
 
-	@Bean(name = "org.springframework.boot.resttestclient.TestRestTemplate")
+	@Bean(name = "io.github.kotlinmania.spring.boot.resttestclient.TestRestTemplate")
 	@ConditionalOnMissingBean
 	TestRestTemplate testRestTemplate(ObjectProvider<RestTemplateBuilder> builderProvider,
 			ApplicationContext applicationContext) {

@@ -18,6 +18,6 @@
  * Mock web classes specific to Spring Boot.
  */
 @NullMarked
-package org.springframework.boot.test.mock.web;
+package io.github.kotlinmania.spring.boot.test.mock.web;
 
 import org.jspecify.annotations.NullMarked;

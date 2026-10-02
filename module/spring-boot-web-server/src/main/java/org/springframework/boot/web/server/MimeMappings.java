@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.web.server;
+package io.github.kotlinmania.spring.boot.web.server;
 
 import java.io.IOException;
 import java.util.Collection;
@@ -398,7 +398,7 @@ public sealed class MimeMappings implements Iterable<MimeMappings.Mapping> {
 		@Override
 		public void registerHints(RuntimeHints hints, @Nullable ClassLoader classLoader) {
 			hints.resources()
-				.registerPattern("org/springframework/boot/web/server/" + DefaultMimeMappings.MIME_MAPPINGS_PROPERTIES);
+				.registerPattern("io.github.kotlinmania.spring.boot.web/server/" + DefaultMimeMappings.MIME_MAPPINGS_PROPERTIES);
 		}
 
 	}

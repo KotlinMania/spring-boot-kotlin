@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.webmvc.test.autoconfigure.mockmvc;
+package io.github.kotlinmania.spring.boot.webmvc.test.autoconfigure.mockmvc;
 
 import tools.jackson.core.JsonGenerator;
 import tools.jackson.databind.SerializationContext;
 
-import org.springframework.boot.jackson.JacksonComponent;
-import org.springframework.boot.jackson.ObjectValueSerializer;
+import io.github.kotlinmania.spring.boot.jackson.JacksonComponent;
+import io.github.kotlinmania.spring.boot.jackson.ObjectValueSerializer;
 
 /**
  * {@link ObjectValueSerializer} for {@link ExampleResult}.

@@ -24,8 +24,8 @@ import smoketest.grpcservertest.proto.HelloRequest;
 import smoketest.grpcservertest.proto.HelloWorldGrpc;
 import smoketest.grpcservertest.proto.HelloWorldGrpc.HelloWorldBlockingStub;
 
-import org.springframework.boot.grpc.test.autoconfigure.LocalGrpcServerPort;
-import org.springframework.boot.test.context.SpringBootTest;
+import io.github.kotlinmania.spring.boot.grpc.test.autoconfigure.LocalGrpcServerPort;
+import io.github.kotlinmania.spring.boot.test.context.SpringBootTest;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.data.jpa.autoconfigure.domain.country;
+package io.github.kotlinmania.spring.boot.data.jpa.autoconfigure.domain.country;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.repository.history.RevisionRepository;

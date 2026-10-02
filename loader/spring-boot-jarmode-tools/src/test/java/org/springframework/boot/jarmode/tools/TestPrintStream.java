@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.jarmode.tools;
+package io.github.kotlinmania.spring.boot.jarmode.tools;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
@@ -27,7 +27,7 @@ import org.assertj.core.api.AbstractAssert;
 import org.assertj.core.api.AssertProvider;
 import org.assertj.core.api.Assertions;
 
-import org.springframework.boot.jarmode.tools.TestPrintStream.PrintStreamAssert;
+import io.github.kotlinmania.spring.boot.jarmode.tools.TestPrintStream.PrintStreamAssert;
 import org.springframework.util.FileCopyUtils;
 
 /**

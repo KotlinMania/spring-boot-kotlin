@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.configurationprocessor;
+package io.github.kotlinmania.spring.boot.configurationprocessor;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -41,10 +41,10 @@ import javax.lang.model.type.TypeKind;
 import javax.lang.model.type.TypeMirror;
 import javax.lang.model.util.Elements;
 
-import org.springframework.boot.configurationprocessor.ConfigurationPropertiesSourceResolver.SourceMetadata;
-import org.springframework.boot.configurationprocessor.fieldvalues.FieldValuesParser;
-import org.springframework.boot.configurationprocessor.fieldvalues.javac.JavaCompilerFieldValuesParser;
-import org.springframework.boot.configurationprocessor.metadata.ItemDeprecation;
+import io.github.kotlinmania.spring.boot.configurationprocessor.ConfigurationPropertiesSourceResolver.SourceMetadata;
+import io.github.kotlinmania.spring.boot.configurationprocessor.fieldvalues.FieldValuesParser;
+import io.github.kotlinmania.spring.boot.configurationprocessor.fieldvalues.javac.JavaCompilerFieldValuesParser;
+import io.github.kotlinmania.spring.boot.configurationprocessor.metadata.ItemDeprecation;
 
 /**
  * Provide utilities to detect and validate configuration properties.

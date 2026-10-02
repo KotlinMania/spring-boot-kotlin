@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.devtools.restart;
+package io.github.kotlinmania.spring.boot.devtools.restart;
 
 import java.beans.Introspector;
 import java.lang.Thread.UncaughtExceptionHandler;
@@ -42,11 +42,11 @@ import org.jspecify.annotations.Nullable;
 
 import org.springframework.beans.CachedIntrospectionResults;
 import org.springframework.beans.factory.ObjectFactory;
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.devtools.restart.FailureHandler.Outcome;
-import org.springframework.boot.devtools.restart.classloader.ClassLoaderFiles;
-import org.springframework.boot.devtools.restart.classloader.RestartClassLoader;
-import org.springframework.boot.logging.DeferredLog;
+import io.github.kotlinmania.spring.boot.SpringApplication;
+import io.github.kotlinmania.spring.boot.devtools.restart.FailureHandler.Outcome;
+import io.github.kotlinmania.spring.boot.devtools.restart.classloader.ClassLoaderFiles;
+import io.github.kotlinmania.spring.boot.devtools.restart.classloader.RestartClassLoader;
+import io.github.kotlinmania.spring.boot.logging.DeferredLog;
 import org.springframework.cglib.core.ClassNameReader;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.support.GenericApplicationContext;

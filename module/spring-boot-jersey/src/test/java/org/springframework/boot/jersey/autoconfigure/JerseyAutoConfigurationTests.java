@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.jersey.autoconfigure;
+package io.github.kotlinmania.spring.boot.jersey.autoconfigure;
 
 import java.util.Collections;
 
@@ -25,12 +25,12 @@ import jakarta.servlet.ServletException;
 import org.glassfish.jersey.server.ResourceConfig;
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.autoconfigure.AutoConfigurations;
-import org.springframework.boot.jersey.autoconfigure.JerseyAutoConfiguration.JerseyWebApplicationInitializer;
-import org.springframework.boot.test.context.FilteredClassLoader;
-import org.springframework.boot.test.context.runner.WebApplicationContextRunner;
-import org.springframework.boot.testsupport.classpath.ClassPathExclusions;
-import org.springframework.boot.web.servlet.FilterRegistrationBean;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurations;
+import io.github.kotlinmania.spring.boot.jersey.autoconfigure.JerseyAutoConfiguration.JerseyWebApplicationInitializer;
+import io.github.kotlinmania.spring.boot.test.context.FilteredClassLoader;
+import io.github.kotlinmania.spring.boot.test.context.runner.WebApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.testsupport.classpath.ClassPathExclusions;
+import io.github.kotlinmania.spring.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.mock.web.MockServletContext;
@@ -79,7 +79,7 @@ class JerseyAutoConfigurationTests {
 	void whenJaxbIsAvailableTheObjectMapperIsCustomizedWithAnAnnotationIntrospector() {
 		this.contextRunner
 			.withConfiguration(AutoConfigurations
-				.of(org.springframework.boot.jackson2.autoconfigure.Jackson2AutoConfiguration.class))
+				.of(io.github.kotlinmania.spring.boot.jackson2.autoconfigure.Jackson2AutoConfiguration.class))
 			.run((context) -> {
 				ObjectMapper objectMapper = context.getBean(ObjectMapper.class);
 				assertThat(objectMapper.getSerializationConfig()
@@ -95,7 +95,7 @@ class JerseyAutoConfigurationTests {
 	void whenJaxbIsNotAvailableTheObjectMapperCustomizationBacksOff() {
 		this.contextRunner
 			.withConfiguration(AutoConfigurations
-				.of(org.springframework.boot.jackson2.autoconfigure.Jackson2AutoConfiguration.class))
+				.of(io.github.kotlinmania.spring.boot.jackson2.autoconfigure.Jackson2AutoConfiguration.class))
 			.withClassLoader(new FilteredClassLoader("jakarta.xml.bind.annotation"))
 			.run((context) -> {
 				ObjectMapper objectMapper = context.getBean(ObjectMapper.class);
@@ -112,7 +112,7 @@ class JerseyAutoConfigurationTests {
 	void whenJacksonJaxbModuleIsNotAvailableTheObjectMapperCustomizationBacksOff() {
 		this.contextRunner
 			.withConfiguration(AutoConfigurations
-				.of(org.springframework.boot.jackson2.autoconfigure.Jackson2AutoConfiguration.class))
+				.of(io.github.kotlinmania.spring.boot.jackson2.autoconfigure.Jackson2AutoConfiguration.class))
 			.withClassLoader(new FilteredClassLoader(JakartaXmlBindAnnotationIntrospector.class))
 			.run((context) -> {
 				ObjectMapper objectMapper = context.getBean(ObjectMapper.class);

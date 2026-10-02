@@ -15,6 +15,10 @@
  */
 package org.springframework.boot.build.architecture.tangled
 
-object TangledOne {
-    val ID: String = TangledTwo::class.java.name + "One"
-}
+/**
+ * Auto-configuration for SendGrid.
+ */
+@NullMarked
+package io.github.kotlinmania.spring.boot.sendgrid.autoconfigure;
+
+import org.jspecify.annotations.NullMarked;

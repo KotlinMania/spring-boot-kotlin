@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.actuator.metrics.export.graphite
+package io.github.kotlinmania.spring.boot.docs.actuator.metrics.export.graphite
 
 import io.micrometer.core.instrument.Clock
 import io.micrometer.core.instrument.Meter

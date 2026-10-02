@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.servlet.autoconfigure;
+package io.github.kotlinmania.spring.boot.servlet.autoconfigure;
 
 import jakarta.servlet.MultipartConfigElement;
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.boot.context.properties.PropertyMapper;
-import org.springframework.boot.servlet.MultipartConfigFactory;
+import io.github.kotlinmania.spring.boot.context.properties.ConfigurationProperties;
+import io.github.kotlinmania.spring.boot.context.properties.PropertyMapper;
+import io.github.kotlinmania.spring.boot.servlet.MultipartConfigFactory;
 import org.springframework.util.unit.DataSize;
 
 /**

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.loader.launch;
+package io.github.kotlinmania.spring.boot.loader.launch;
 
 /**
  * {@link Launcher} for JAR based archives. This launcher assumes that dependency jars are

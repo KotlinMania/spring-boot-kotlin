@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.loader.jar;
+package io.github.kotlinmania.spring.boot.loader.jar;
 
 import java.util.Collections;
 import java.util.Set;
 import java.util.TreeSet;
 import java.util.function.IntFunction;
 
-import org.springframework.boot.loader.zip.ZipContent;
+import io.github.kotlinmania.spring.boot.loader.zip.ZipContent;
 
 /**
  * Info obtained from a {@link ZipContent} instance relating to the directories listed

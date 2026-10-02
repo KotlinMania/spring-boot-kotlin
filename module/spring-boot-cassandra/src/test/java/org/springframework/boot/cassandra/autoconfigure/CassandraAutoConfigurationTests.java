@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.cassandra.autoconfigure;
+package io.github.kotlinmania.spring.boot.cassandra.autoconfigure;
 
 import java.time.Duration;
 import java.util.Collections;
@@ -33,12 +33,12 @@ import com.datastax.oss.driver.internal.core.session.throttling.RateLimitingRequ
 import org.junit.jupiter.api.Test;
 
 import org.springframework.beans.factory.BeanCreationException;
-import org.springframework.boot.autoconfigure.AutoConfigurations;
-import org.springframework.boot.autoconfigure.ssl.SslAutoConfiguration;
-import org.springframework.boot.cassandra.autoconfigure.CassandraAutoConfiguration.PropertiesCassandraConnectionDetails;
-import org.springframework.boot.ssl.NoSuchSslBundleException;
-import org.springframework.boot.test.context.runner.ApplicationContextRunner;
-import org.springframework.boot.testsupport.classpath.resources.WithPackageResources;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurations;
+import io.github.kotlinmania.spring.boot.autoconfigure.ssl.SslAutoConfiguration;
+import io.github.kotlinmania.spring.boot.cassandra.autoconfigure.CassandraAutoConfiguration.PropertiesCassandraConnectionDetails;
+import io.github.kotlinmania.spring.boot.ssl.NoSuchSslBundleException;
+import io.github.kotlinmania.spring.boot.test.context.runner.ApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.testsupport.classpath.resources.WithPackageResources;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -378,7 +378,7 @@ class CassandraAutoConfigurationTests {
 
 	@Test
 	void driverConfigLoaderWithConfigComplementSettings() {
-		String configLocation = "org/springframework/boot/cassandra/autoconfigure/simple.conf";
+		String configLocation = "io.github.kotlinmania.spring.boot.cassandra/autoconfigure/simple.conf";
 		this.contextRunner
 			.withPropertyValues("spring.cassandra.session-name=testcluster",
 					"spring.cassandra.config=" + configLocation)
@@ -397,7 +397,7 @@ class CassandraAutoConfigurationTests {
 
 	@Test // gh-31238
 	void driverConfigLoaderWithConfigOverridesDefaults() {
-		String configLocation = "org/springframework/boot/cassandra/autoconfigure/override-defaults.conf";
+		String configLocation = "io.github.kotlinmania.spring.boot.cassandra/autoconfigure/override-defaults.conf";
 		this.contextRunner.withPropertyValues("spring.cassandra.config=" + configLocation).run((context) -> {
 			DriverExecutionProfile actual = context.getBean(DriverConfigLoader.class)
 				.getInitialConfig()
@@ -432,7 +432,7 @@ class CassandraAutoConfigurationTests {
 
 	@Test
 	void driverConfigLoaderWithConfigCreateProfiles() {
-		String configLocation = "org/springframework/boot/cassandra/autoconfigure/profiles.conf";
+		String configLocation = "io.github.kotlinmania.spring.boot.cassandra/autoconfigure/profiles.conf";
 		this.contextRunner.withPropertyValues("spring.cassandra.config=" + configLocation).run((context) -> {
 			assertThat(context).hasSingleBean(DriverConfigLoader.class);
 			DriverConfig driverConfig = context.getBean(DriverConfigLoader.class).getInitialConfig();

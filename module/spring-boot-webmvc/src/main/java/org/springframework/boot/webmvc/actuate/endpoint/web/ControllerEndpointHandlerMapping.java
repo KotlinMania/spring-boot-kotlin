@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.webmvc.actuate.endpoint.web;
+package io.github.kotlinmania.spring.boot.webmvc.actuate.endpoint.web;
 
 import java.lang.reflect.Method;
 import java.util.Collection;
@@ -27,10 +27,10 @@ import java.util.Set;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.actuate.endpoint.Access;
-import org.springframework.boot.actuate.endpoint.EndpointAccessResolver;
-import org.springframework.boot.actuate.endpoint.web.EndpointMapping;
-import org.springframework.boot.actuate.endpoint.web.annotation.ExposableControllerEndpoint;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.Access;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.EndpointAccessResolver;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.web.EndpointMapping;
+import io.github.kotlinmania.spring.boot.actuate.endpoint.web.annotation.ExposableControllerEndpoint;
 import org.springframework.util.Assert;
 import org.springframework.util.CollectionUtils;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -44,9 +44,9 @@ import org.springframework.web.util.pattern.PathPatternParser;
 
 /**
  * {@link HandlerMapping} that exposes
- * {@link org.springframework.boot.actuate.endpoint.web.annotation.ControllerEndpoint @ControllerEndpoint}
+ * {@link io.github.kotlinmania.spring.boot.actuate.endpoint.web.annotation.ControllerEndpoint @ControllerEndpoint}
  * and
- * {@link org.springframework.boot.actuate.endpoint.web.annotation.RestControllerEndpoint @RestControllerEndpoint}
+ * {@link io.github.kotlinmania.spring.boot.actuate.endpoint.web.annotation.RestControllerEndpoint @RestControllerEndpoint}
  * annotated endpoints over Spring MVC.
  *
  * @author Phillip Webb

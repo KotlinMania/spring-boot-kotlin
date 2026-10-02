@@ -19,11 +19,11 @@ package smoketest.bootstrapregistry.external.svn;
 import java.util.Collections;
 import java.util.List;
 
-import org.springframework.boot.context.config.ConfigDataLocation;
-import org.springframework.boot.context.config.ConfigDataLocationNotFoundException;
-import org.springframework.boot.context.config.ConfigDataLocationResolver;
-import org.springframework.boot.context.config.ConfigDataLocationResolverContext;
-import org.springframework.boot.context.config.ConfigDataResourceNotFoundException;
+import io.github.kotlinmania.spring.boot.context.config.ConfigDataLocation;
+import io.github.kotlinmania.spring.boot.context.config.ConfigDataLocationNotFoundException;
+import io.github.kotlinmania.spring.boot.context.config.ConfigDataLocationResolver;
+import io.github.kotlinmania.spring.boot.context.config.ConfigDataLocationResolverContext;
+import io.github.kotlinmania.spring.boot.context.config.ConfigDataResourceNotFoundException;
 
 /**
  * {@link ConfigDataLocationResolver} for subversion.

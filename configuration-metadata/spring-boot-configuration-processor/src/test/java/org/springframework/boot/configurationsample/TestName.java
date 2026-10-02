@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.configurationsample;
+package io.github.kotlinmania.spring.boot.configurationsample;
 
 import java.lang.annotation.Documented;
 import java.lang.annotation.ElementType;

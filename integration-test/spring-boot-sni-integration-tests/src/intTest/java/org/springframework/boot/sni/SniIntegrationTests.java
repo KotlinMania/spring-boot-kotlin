@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.sni;
+package io.github.kotlinmania.spring.boot.sni;
 
 import java.io.File;
 import java.time.Duration;

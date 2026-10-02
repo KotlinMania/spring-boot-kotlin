@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.webclient.test.autoconfigure;
+package io.github.kotlinmania.spring.boot.webclient.test.autoconfigure;
 
 import java.io.IOException;
 import java.io.UncheckedIOException;
@@ -22,7 +22,7 @@ import java.io.UncheckedIOException;
 import okhttp3.mockwebserver.MockWebServer;
 
 import org.springframework.beans.factory.DisposableBean;
-import org.springframework.boot.webclient.WebClientCustomizer;
+import io.github.kotlinmania.spring.boot.webclient.WebClientCustomizer;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.reactive.function.client.WebClient;

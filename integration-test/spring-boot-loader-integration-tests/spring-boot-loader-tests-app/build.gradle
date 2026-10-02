@@ -16,7 +16,7 @@
 
 plugins {
 	id "java"
-	id "org.springframework.boot"
+	id "io.github.kotlinmania.spring.boot.
 }
 
 java {
@@ -31,7 +31,7 @@ repositories {
 }
 
 dependencies {
-	implementation(platform(org.springframework.boot.gradle.plugin.SpringBootPlugin.BOM_COORDINATES))
-	implementation("org.springframework.boot:spring-boot-starter-webmvc")
+	implementation(platform(io.github.kotlinmania.spring.boot.gradle.plugin.SpringBootPlugin.BOM_COORDINATES))
+	implementation("io.github.kotlinmania.spring.boot.spring-boot-starter-webmvc")
 	implementation("org.webjars:jquery:3.5.0")
 }

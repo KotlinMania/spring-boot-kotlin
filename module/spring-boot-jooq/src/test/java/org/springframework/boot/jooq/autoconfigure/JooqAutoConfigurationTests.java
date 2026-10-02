@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.jooq.autoconfigure;
+package io.github.kotlinmania.spring.boot.jooq.autoconfigure;
 
 import javax.sql.DataSource;
 
@@ -34,10 +34,10 @@ import org.jooq.impl.DefaultDSLContext;
 import org.jooq.impl.DefaultExecuteListenerProvider;
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.autoconfigure.AutoConfigurations;
-import org.springframework.boot.jdbc.DataSourceBuilder;
-import org.springframework.boot.test.context.FilteredClassLoader;
-import org.springframework.boot.test.context.runner.ApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurations;
+import io.github.kotlinmania.spring.boot.jdbc.DataSourceBuilder;
+import io.github.kotlinmania.spring.boot.test.context.FilteredClassLoader;
+import io.github.kotlinmania.spring.boot.test.context.runner.ApplicationContextRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.annotation.Order;
@@ -227,7 +227,7 @@ class JooqAutoConfigurationTests {
 	@Test
 	void shouldLoadSettingsFromConfigPropertyThroughJaxb() {
 		this.contextRunner.withUserConfiguration(JooqDataSourceConfiguration.class)
-			.withPropertyValues("spring.jooq.config=classpath:org/springframework/boot/jooq/autoconfigure/settings.xml")
+			.withPropertyValues("spring.jooq.config=classpath:io.github.kotlinmania.spring.boot.jooq/autoconfigure/settings.xml")
 			.run((context) -> {
 				assertThat(context).hasSingleBean(Settings.class);
 				Settings settings = context.getBean(Settings.class);
@@ -239,7 +239,7 @@ class JooqAutoConfigurationTests {
 	void shouldNotProvideSettingsIfJaxbIsMissing() {
 		this.contextRunner.withUserConfiguration(JooqDataSourceConfiguration.class)
 			.withClassLoader(new FilteredClassLoader("jakarta.xml.bind"))
-			.withPropertyValues("spring.jooq.config=classpath:org/springframework/boot/autoconfigure/jooq/settings.xml")
+			.withPropertyValues("spring.jooq.config=classpath:io.github.kotlinmania.spring.boot.autoconfigure/jooq/settings.xml")
 			.run((context) -> assertThat(context).hasFailed()
 				.getFailure()
 				.hasRootCauseInstanceOf(JaxbNotAvailableException.class));

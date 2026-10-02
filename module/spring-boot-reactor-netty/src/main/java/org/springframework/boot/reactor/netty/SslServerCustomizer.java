@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.reactor.netty;
+package io.github.kotlinmania.spring.boot.reactor.netty;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -31,10 +31,10 @@ import reactor.netty.tcp.SslProvider;
 import reactor.netty.tcp.SslProvider.GenericSslContextSpec;
 import reactor.netty.tcp.SslProvider.SslContextSpec;
 
-import org.springframework.boot.ssl.SslBundle;
-import org.springframework.boot.ssl.SslOptions;
-import org.springframework.boot.web.server.Http2;
-import org.springframework.boot.web.server.Ssl;
+import io.github.kotlinmania.spring.boot.ssl.SslBundle;
+import io.github.kotlinmania.spring.boot.ssl.SslOptions;
+import io.github.kotlinmania.spring.boot.web.server.Http2;
+import io.github.kotlinmania.spring.boot.web.server.Ssl;
 
 /**
  * {@link NettyServerCustomizer} that configures SSL for the given Reactor Netty server

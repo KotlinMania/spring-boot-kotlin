@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.configurationprocessor.fieldvalues;
+package io.github.kotlinmania.spring.boot.configurationprocessor.fieldvalues;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -31,7 +31,7 @@ import javax.lang.model.element.TypeElement;
 
 import org.junit.jupiter.api.Test;
 
-import org.springframework.boot.configurationsample.fieldvalues.FieldValues;
+import io.github.kotlinmania.spring.boot.configurationsample.fieldvalues.FieldValues;
 import org.springframework.core.test.tools.SourceFile;
 import org.springframework.core.test.tools.TestCompiler;
 
@@ -116,7 +116,7 @@ public abstract class AbstractFieldValuesProcessorTests {
 		assertThat(values.get("memberSelectInt")).isNull();
 	}
 
-	@SupportedAnnotationTypes({ "org.springframework.boot.configurationsample.TestConfigurationProperties" })
+	@SupportedAnnotationTypes({ "io.github.kotlinmania.spring.boot.configurationsample.TestConfigurationProperties" })
 	@SupportedSourceVersion(SourceVersion.RELEASE_6)
 	private final class TestProcessor extends AbstractProcessor {
 

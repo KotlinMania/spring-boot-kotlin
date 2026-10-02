@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.health.autoconfigure.application;
+package io.github.kotlinmania.spring.boot.health.autoconfigure.application;
 
 import java.time.Duration;
 
-import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.boot.health.application.SslHealthIndicator;
+import io.github.kotlinmania.spring.boot.context.properties.ConfigurationProperties;
+import io.github.kotlinmania.spring.boot.health.application.SslHealthIndicator;
 
 /**
  * External configuration properties for {@link SslHealthIndicator}.

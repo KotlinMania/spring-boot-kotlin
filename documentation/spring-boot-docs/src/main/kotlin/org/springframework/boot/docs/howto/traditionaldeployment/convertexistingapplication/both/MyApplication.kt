@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.howto.traditionaldeployment.convertexistingapplication.both
+package io.github.kotlinmania.spring.boot.docs.howto.traditionaldeployment.convertexistingapplication.both
 
-import org.springframework.boot.Banner
-import org.springframework.boot.autoconfigure.SpringBootApplication
-import org.springframework.boot.builder.SpringApplicationBuilder
-import org.springframework.boot.web.servlet.support.SpringBootServletInitializer
+import io.github.kotlinmania.spring.boot.Banner
+import io.github.kotlinmania.spring.boot.autoconfigure.SpringBootApplication
+import io.github.kotlinmania.spring.boot.builder.SpringApplicationBuilder
+import io.github.kotlinmania.spring.boot.web.servlet.support.SpringBootServletInitializer
 
 @SpringBootApplication
 class MyApplication : SpringBootServletInitializer() {

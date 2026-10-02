@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.actuate.autoconfigure.info;
+package io.github.kotlinmania.spring.boot.actuate.autoconfigure.info;
 
-import org.springframework.boot.actuate.autoconfigure.OnEndpointElementCondition;
+import io.github.kotlinmania.spring.boot.actuate.autoconfigure.OnEndpointElementCondition;
 
 /**
  * Controls the fallback behavior when the primary property that controls whether an info

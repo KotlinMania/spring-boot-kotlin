@@ -18,6 +18,6 @@
  * Auto-configuration for OAuth2 resource server reactive web security.
  */
 @NullMarked
-package org.springframework.boot.security.oauth2.server.resource.autoconfigure.web.reactive;
+package io.github.kotlinmania.spring.boot.security.oauth2.server.resource.autoconfigure.web.reactive;
 
 import org.jspecify.annotations.NullMarked;

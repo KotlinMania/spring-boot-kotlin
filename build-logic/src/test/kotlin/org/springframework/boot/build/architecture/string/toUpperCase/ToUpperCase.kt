@@ -15,7 +15,16 @@
  */
 package org.springframework.boot.build.architecture.string.toUpperCase
 
-import java.util.*
+package io.github.kotlinmania.spring.boot.build.architecture.string.toUpperCaseWithLocale;
+
+import java.util.Locale;
+
+class ToUpperCaseWithLocale {
+
+	void exampleMethod() {
+		String test = "Object must not be null";
+		System.out.println(test.toUpperCase(Locale.ROOT));
+	}
 
 internal class ToUpperCase {
     fun exampleMethod() {

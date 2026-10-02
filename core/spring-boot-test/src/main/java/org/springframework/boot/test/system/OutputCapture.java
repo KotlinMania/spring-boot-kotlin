@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.test.system;
+package io.github.kotlinmania.spring.boot.test.system;
 
 import java.io.IOException;
 import java.io.OutputStream;
@@ -29,8 +29,8 @@ import java.util.function.Predicate;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.ansi.AnsiOutput;
-import org.springframework.boot.ansi.AnsiOutput.Enabled;
+import io.github.kotlinmania.spring.boot.ansi.AnsiOutput;
+import io.github.kotlinmania.spring.boot.ansi.AnsiOutput.Enabled;
 import org.springframework.util.Assert;
 import org.springframework.util.ClassUtils;
 
@@ -341,7 +341,7 @@ class OutputCapture implements CapturedOutput {
 		}
 
 		static @Nullable AnsiOutputState saveAndDisable() {
-			if (!ClassUtils.isPresent("org.springframework.boot.ansi.AnsiOutput",
+			if (!ClassUtils.isPresent("io.github.kotlinmania.spring.boot.ansi.AnsiOutput",
 					OutputCapture.class.getClassLoader())) {
 				return null;
 			}

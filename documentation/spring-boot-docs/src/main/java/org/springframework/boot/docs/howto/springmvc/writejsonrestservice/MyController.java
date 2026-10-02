@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.howto.springmvc.writejsonrestservice;
+package io.github.kotlinmania.spring.boot.docs.howto.springmvc.writejsonrestservice;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;

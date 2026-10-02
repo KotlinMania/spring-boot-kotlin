@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.graphql.autoconfigure.rsocket;
+package io.github.kotlinmania.spring.boot.graphql.autoconfigure.rsocket;
 
 import java.net.URI;
 import java.time.Duration;
@@ -24,27 +24,27 @@ import graphql.schema.idl.TypeRuntimeWiring;
 import org.junit.jupiter.api.Test;
 import tools.jackson.databind.json.JsonMapper;
 
-import org.springframework.boot.autoconfigure.AutoConfigurations;
-import org.springframework.boot.autoconfigure.context.PropertyPlaceholderAutoConfiguration;
-import org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener;
-import org.springframework.boot.graphql.autoconfigure.GraphQlAutoConfiguration;
-import org.springframework.boot.graphql.autoconfigure.GraphQlTestDataFetchers;
-import org.springframework.boot.jackson.autoconfigure.JacksonAutoConfiguration;
-import org.springframework.boot.logging.LogLevel;
-import org.springframework.boot.reactor.netty.NettyReactiveWebServerFactory;
-import org.springframework.boot.reactor.netty.NettyRouteProvider;
-import org.springframework.boot.rsocket.autoconfigure.RSocketMessagingAutoConfiguration;
-import org.springframework.boot.rsocket.autoconfigure.RSocketServerAutoConfiguration;
-import org.springframework.boot.rsocket.autoconfigure.RSocketStrategiesAutoConfiguration;
-import org.springframework.boot.rsocket.context.RSocketPortInfoApplicationContextInitializer;
-import org.springframework.boot.test.context.FilteredClassLoader;
-import org.springframework.boot.test.context.runner.ReactiveWebApplicationContextRunner;
-import org.springframework.boot.testsupport.classpath.resources.WithResource;
-import org.springframework.boot.web.server.context.ServerPortInfoApplicationContextInitializer;
-import org.springframework.boot.web.server.reactive.context.AnnotationConfigReactiveWebServerApplicationContext;
-import org.springframework.boot.webflux.autoconfigure.HttpHandlerAutoConfiguration;
-import org.springframework.boot.webflux.autoconfigure.WebFluxAutoConfiguration;
-import org.springframework.boot.webflux.autoconfigure.error.ErrorWebFluxAutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfigurations;
+import io.github.kotlinmania.spring.boot.autoconfigure.context.PropertyPlaceholderAutoConfiguration;
+import io.github.kotlinmania.spring.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener;
+import io.github.kotlinmania.spring.boot.graphql.autoconfigure.GraphQlAutoConfiguration;
+import io.github.kotlinmania.spring.boot.graphql.autoconfigure.GraphQlTestDataFetchers;
+import io.github.kotlinmania.spring.boot.jackson.autoconfigure.JacksonAutoConfiguration;
+import io.github.kotlinmania.spring.boot.logging.LogLevel;
+import io.github.kotlinmania.spring.boot.reactor.netty.NettyReactiveWebServerFactory;
+import io.github.kotlinmania.spring.boot.reactor.netty.NettyRouteProvider;
+import io.github.kotlinmania.spring.boot.rsocket.autoconfigure.RSocketMessagingAutoConfiguration;
+import io.github.kotlinmania.spring.boot.rsocket.autoconfigure.RSocketServerAutoConfiguration;
+import io.github.kotlinmania.spring.boot.rsocket.autoconfigure.RSocketStrategiesAutoConfiguration;
+import io.github.kotlinmania.spring.boot.rsocket.context.RSocketPortInfoApplicationContextInitializer;
+import io.github.kotlinmania.spring.boot.test.context.FilteredClassLoader;
+import io.github.kotlinmania.spring.boot.test.context.runner.ReactiveWebApplicationContextRunner;
+import io.github.kotlinmania.spring.boot.testsupport.classpath.resources.WithResource;
+import io.github.kotlinmania.spring.boot.web.server.context.ServerPortInfoApplicationContextInitializer;
+import io.github.kotlinmania.spring.boot.web.server.reactive.context.AnnotationConfigReactiveWebServerApplicationContext;
+import io.github.kotlinmania.spring.boot.webflux.autoconfigure.HttpHandlerAutoConfiguration;
+import io.github.kotlinmania.spring.boot.webflux.autoconfigure.WebFluxAutoConfiguration;
+import io.github.kotlinmania.spring.boot.webflux.autoconfigure.error.ErrorWebFluxAutoConfiguration;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.graphql.client.RSocketGraphQlClient;
@@ -114,7 +114,7 @@ class GraphQlRSocketAutoConfigurationTests {
 	void usesJackson2WhenItIsPreferred() {
 		this.contextRunner.withPropertyValues("spring.graphql.rsocket.preferred-json-mapper=jackson2")
 			.withConfiguration(AutoConfigurations
-				.of(org.springframework.boot.jackson2.autoconfigure.Jackson2AutoConfiguration.class))
+				.of(io.github.kotlinmania.spring.boot.jackson2.autoconfigure.Jackson2AutoConfiguration.class))
 			.run((context) -> assertThat(context).hasBean("jackson2JsonEncoderSupplier"));
 	}
 
@@ -125,7 +125,7 @@ class GraphQlRSocketAutoConfigurationTests {
 		this.contextRunner
 			.withClassLoader(new FilteredClassLoader(Thread.currentThread().getContextClassLoader(), JsonMapper.class))
 			.withConfiguration(AutoConfigurations
-				.of(org.springframework.boot.jackson2.autoconfigure.Jackson2AutoConfiguration.class))
+				.of(io.github.kotlinmania.spring.boot.jackson2.autoconfigure.Jackson2AutoConfiguration.class))
 			.withInitializer(ConditionEvaluationReportLoggingListener.forLogLevel(LogLevel.INFO))
 			.run((context) -> assertThat(context).hasBean("jackson2JsonEncoderSupplier"));
 	}

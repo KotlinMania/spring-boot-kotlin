@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.jackson2;
+package io.github.kotlinmania.spring.boot.jackson2;
 
 import java.io.IOException;
 
@@ -25,7 +25,7 @@ import com.fasterxml.jackson.databind.DeserializationContext;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.SerializerProvider;
 
-import org.springframework.boot.jackson2.types.NameAndAge;
+import io.github.kotlinmania.spring.boot.jackson2.types.NameAndAge;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

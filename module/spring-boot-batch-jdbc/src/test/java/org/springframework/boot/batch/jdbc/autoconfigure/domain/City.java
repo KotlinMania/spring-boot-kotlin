@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.batch.jdbc.autoconfigure.domain;
+package io.github.kotlinmania.spring.boot.batch.jdbc.autoconfigure.domain;
 
 import java.io.Serializable;
 

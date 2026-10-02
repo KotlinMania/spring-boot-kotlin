@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.http.codec.autoconfigure;
+package io.github.kotlinmania.spring.boot.http.codec.autoconfigure;
 
 import org.jspecify.annotations.Nullable;
 
-import org.springframework.boot.context.properties.ConfigurationProperties;
+import io.github.kotlinmania.spring.boot.context.properties.ConfigurationProperties;
 import org.springframework.util.unit.DataSize;
 
 /**

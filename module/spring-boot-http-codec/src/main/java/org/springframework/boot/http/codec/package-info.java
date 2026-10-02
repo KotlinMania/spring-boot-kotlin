@@ -18,6 +18,6 @@
  * Support for web-based codecs.
  */
 @NullMarked
-package org.springframework.boot.http.codec;
+package io.github.kotlinmania.spring.boot.http.codec;
 
 import org.jspecify.annotations.NullMarked;

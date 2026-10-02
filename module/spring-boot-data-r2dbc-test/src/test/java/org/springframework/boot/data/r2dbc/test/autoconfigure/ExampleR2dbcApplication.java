@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.data.r2dbc.test.autoconfigure;
+package io.github.kotlinmania.spring.boot.data.r2dbc.test.autoconfigure;
 
-import org.springframework.boot.autoconfigure.SpringBootApplication;
+import io.github.kotlinmania.spring.boot.autoconfigure.SpringBootApplication;
 
 /**
  * Example {@link SpringBootApplication} used with {@link DataR2dbcTest} tests.

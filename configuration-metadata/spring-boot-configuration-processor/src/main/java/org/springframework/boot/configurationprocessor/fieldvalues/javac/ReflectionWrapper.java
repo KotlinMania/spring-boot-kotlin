@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.configurationprocessor.fieldvalues.javac;
+package io.github.kotlinmania.spring.boot.configurationprocessor.fieldvalues.javac;
 
 import java.lang.reflect.Method;
 

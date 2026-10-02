@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package org.springframework.boot.docs.features.developingautoconfiguration.conditionannotations.beanconditions
+package io.github.kotlinmania.spring.boot.docs.features.developingautoconfiguration.conditionannotations.beanconditions
 
-import org.springframework.boot.autoconfigure.AutoConfiguration
-import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean
+import io.github.kotlinmania.spring.boot.autoconfigure.AutoConfiguration
+import io.github.kotlinmania.spring.boot.autoconfigure.condition.ConditionalOnMissingBean
 import org.springframework.context.annotation.Bean
 
 @AutoConfiguration

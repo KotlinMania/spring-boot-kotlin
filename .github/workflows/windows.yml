@@ -13,6 +13,9 @@ jobs:
     permissions:
       contents: read
     steps:
+      - name: Enable long paths for the upstream Spring Boot sources
+        run: git config --global core.longpaths true
+
       - name: Checkout
         uses: actions/checkout@v6
 

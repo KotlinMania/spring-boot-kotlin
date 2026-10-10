@@ -425,12 +425,7 @@ kotlin {
         addToXcf()
     }
 
-    // iosX64: Intel Mac simulator. Tier 3 in Kotlin/Native but NOT deprecated —
-    // Apple still ships x86_64 iOS simulator runtimes, so it is always built.
-    iosX64 {
-        configureBenchmarkCompilation()
-        addToXcf(static = true)
-    }
+    // Apple targets use ARM64 only under the supported-platform policy.
 
     // Other native — Tier 1/2
     linuxX64 { configureBenchmarkCompilation() }
@@ -492,6 +487,41 @@ kotlin {
     }
 
     sourceSets {
+        // These translated modules use Spring/JPA/HTTP JVM APIs. Keep their
+        // implementation and tests on JVM; the KMP targets retain their own roots.
+        jvmMain {
+            kotlin.srcDirs(
+                "module/spring-boot-sendgrid/src/main/kotlin",
+                "module/spring-boot-jpa-test/src/main/kotlin",
+                "module/spring-boot-resttestclient/src/main/kotlin",
+            )
+            resources.srcDir("module/spring-boot-sendgrid/src/main/resources")
+            dependencies {
+                api(project.dependencies.platform(libs.spring.boot.dependencies))
+                implementation(libs.spring.boot.autoconfigure)
+                api(libs.spring.boot.jpa.test)
+                api(libs.spring.boot.resttestclient)
+                implementation(libs.spring.boot.restclient)
+                api(libs.spring.orm)
+                api(libs.spring.web)
+                api(libs.sendgrid.java)
+                api(libs.jakarta.persistence.api)
+            }
+        }
+        jvmTest {
+            kotlin.srcDirs(
+                "module/spring-boot-sendgrid/src/test/kotlin",
+                "module/spring-boot-jpa-test/src/test/kotlin",
+            )
+            dependencies {
+                implementation(project.dependencies.platform(libs.spring.boot.dependencies))
+                implementation(libs.spring.boot.test)
+                implementation(libs.junit.jupiter)
+                implementation(libs.assertj.core)
+                implementation(libs.mockito.junit.jupiter)
+                implementation(kotlin("test-junit5"))
+            }
+        }
         commonMain.dependencies {
             implementation(commonMainDependencyBundle)
         }
@@ -537,6 +567,10 @@ if (benchmarkEnabled) {
 // ============================================================================
 // Test logging
 // ============================================================================
+tasks.named<org.gradle.api.tasks.testing.Test>("jvmTest") {
+    useJUnitPlatform()
+}
+
 tasks.withType<AbstractTestTask>().configureEach {
     testLogging {
         events(
@@ -1084,7 +1118,6 @@ val nativeTargetNames =
         "androidNativeX64",
         "iosArm64",
         "iosSimulatorArm64",
-        "iosX64",
         "linuxArm64",
         "linuxX64",
         "macosArm64",

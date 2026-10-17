@@ -1,7 +1,7 @@
 [versions]
 springBootRuntime = "4.1.1"
 sendgrid = "4.10.3"
-kotlin = "2.4.20"
+kotlin = "2.4.21"
 coroutines = "1.11.0"
 serialization = "1.11.0"
 datetime = "0.8.0"
